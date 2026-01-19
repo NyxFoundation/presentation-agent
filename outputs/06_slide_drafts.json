@@ -1,0 +1,336 @@
+{
+  "slide_drafts": [
+    {
+      "slide_id": "SL01",
+      "action_title": "A 4-week exploratory meeting can unlock cross-entity AI research with zero budget commitment",
+      "bullets": [
+        "Decision requested: approve a cross-entity exploratory meeting within 4 weeks",
+        "Participants: Sony Group, SGE, and Startale/Soneium—designate one owner per entity",
+        "Outcome: align on 2-3 research questions each entity wants answered before any pilot commitment",
+        "Commitment level: time only; no budget allocation required until scoping confirms fit"
+      ],
+      "speaker_notes": "This proposal asks for alignment, not funding. A single 30-60 minute workshop lets each entity define what they need to learn before committing resources. Exit ramps are built in at every stage.",
+      "visual_spec": {
+        "type": "flowchart",
+        "data_requirements": [
+          "Stages: Exploratory Meeting → Scoping Phase → Pilot → Partnership",
+          "Exit ramps annotated at each transition",
+          "Time indicators: 4 weeks to meeting, TBD for subsequent phases"
+        ],
+        "annotations": [
+          "Convey: low-risk entry with clear off-ramps at each stage",
+          "Highlight 'zero budget' entry point"
+        ]
+      },
+      "todo": [
+        "Finalize 30-60 minute workshop agenda template",
+        "Define participation tier options (observer → co-designer) with responsibilities"
+      ]
+    },
+    {
+      "slide_id": "SL02",
+      "action_title": "AI agents are making economic decisions without empirical grounding—and the cost of inaction is losing research credibility",
+      "bullets": [
+        "Enterprise AI agent adoption: 25% (2025) → 50% (2027) per Deloitte; 40%+ apps embed conversational AI by 2026 per Gartner",
+        "Current research gap: ABIDES-Economist, LLM Economist, and AI Economist use synthetic rewards—limited external validity under real incentives",
+        "Blind spots: collusion, manipulation, and incentive hacking remain poorly understood empirically",
+        "First-mover risk: competitors may establish research benchmarks and standards first"
+      ],
+      "speaker_notes": "The pace of AI agent deployment is outstripping our empirical understanding. Existing simulations lack real stakes, so we do not know how agents behave when outcomes matter. Whoever builds the auditable benchmark first shapes the field.",
+      "visual_spec": {
+        "type": "bar_chart",
+        "data_requirements": [
+          "X-axis: Years (2025, 2026, 2027)",
+          "Y-axis: Adoption percentage",
+          "Series 1: Deloitte AI agent adoption (25% → 50%)",
+          "Series 2: Gartner conversational AI in enterprise apps (40%+ by 2026)"
+        ],
+        "annotations": [
+          "Research lags deployment: annotation showing gap between deployment curve and empirical understanding",
+          "Source citations: Gartner 2024-04-01, Deloitte 2024-12-05"
+        ]
+      },
+      "todo": [
+        "Confirm Gartner forecast URL still accessible (2024-04-01 press release)",
+        "Summarize ABIDES/LLM/AI Economist limitations in 1-sentence footnote"
+      ]
+    },
+    {
+      "slide_id": "SL03",
+      "action_title": "SGE's learner-centered evaluation mission requires understanding how AI agents behave under real incentives",
+      "bullets": [
+        "Isozu (2025): AI shifts education from memorization to evaluating and applying information; AI agents may handle 'teach & assess'",
+        "SGE priority: real-time, multi-dimensional, learner-centered evaluation",
+        "Gap: no auditable testbed exists to study agent behaviors that affect learner interactions",
+        "Risk: deploying AI in education without empirical grounding undermines learner and institutional trust"
+      ],
+      "speaker_notes": "Chairman Isozu frames the future of education as moving beyond memorization—but that future requires understanding how AI agents behave when stakes are real. This proposal provides that empirical foundation.",
+      "visual_spec": {
+        "type": "quote_card",
+        "data_requirements": [
+          "Primary quote: 'AI can do what AI is good at, humans should do what AI cannot' (Isozu, Hakuhodo 2025-06-11)",
+          "Secondary element: alignment arrow connecting quote to 'auditable AI agent research'"
+        ],
+        "annotations": [
+          "Convey: proposal aligns with SGE's stated vision",
+          "Source citation: Hakuhodo Media Environment Institute, 2025-06-11"
+        ]
+      },
+      "todo": [
+        "Obtain explicit permission to quote Isozu interview in external materials",
+        "Confirm SGE '300 years ahead' mission statement wording from official source"
+      ]
+    },
+    {
+      "slide_id": "SL04",
+      "action_title": "The AI Agent Economy Competition creates auditable datasets and institution-design frameworks under real incentives",
+      "bullets": [
+        "Format: humans submit agents pre-launch; agents autonomously transact on a private chain; on-chain logs enable reproducibility",
+        "Research outputs: auditable datasets, institution-design frameworks, peer-reviewed publications",
+        "Key design principles: human-in-the-loop rule design, explicit governance boundaries, learner-centered evaluation alignment",
+        "Out of scope: building participant agents, mainnet deployment, commitments beyond pilot phase"
+      ],
+      "speaker_notes": "This is a research sandbox, not a product launch. Participants submit agents once; the competition generates data we can study. Human oversight governs rules and access. We are not deploying to production or asking for long-term commitments.",
+      "visual_spec": {
+        "type": "flow_diagram",
+        "data_requirements": [
+          "Flow: Agent Submission → Private Chain Execution → On-Chain Logs → Research Outputs",
+          "Governance layer: 'Human-in-the-Loop' bar above the flow",
+          "Out of scope callout: greyed boxes for 'Build agents' and 'Mainnet'"
+        ],
+        "annotations": [
+          "Convey: controlled research environment with explicit boundaries",
+          "Highlight reproducibility from on-chain logs"
+        ]
+      },
+      "todo": [
+        "Draft 1-page competition mechanics document",
+        "Prepare sample research questions tailored to each entity's priorities"
+      ]
+    },
+    {
+      "slide_id": "SL05",
+      "action_title": "Nyx Foundation's #1 Ethereum audit ranking demonstrates the blockchain security expertise this project requires",
+      "bullets": [
+        "Fusaka audit: 17 vulnerabilities reported, #1 by report count (contest: 2025-09-15 to 2025-10-13; announced 2025-12-24)",
+        "Track record: tamper-resistant system design aligns with SGE's 2017 blockchain credential work",
+        "Operational model: Nyx Foundation owns operations unless jointly agreed; minimal burden on partner entities",
+        "Funding: private research foundation supported by donations, grants, and sponsorships"
+      ],
+      "speaker_notes": "Nyx Foundation has demonstrated Ethereum security expertise at the highest level—ranking first in the Fusaka audit contest. This is the same domain expertise required to build a secure, auditable agent economy platform.",
+      "visual_spec": {
+        "type": "credential_card",
+        "data_requirements": [
+          "Organization: Nyx Foundation",
+          "Achievement: #1 Ethereum Fusaka Audit (17 vulnerabilities)",
+          "Date: 2025-12-24 announcement",
+          "Relevant experience: blockchain security, research infrastructure"
+        ],
+        "annotations": [
+          "Convey: proven security expertise for this domain",
+          "Source citation: PR TIMES 2025-12-24"
+        ]
+      },
+      "todo": [
+        "Confirm Sony/SGE 2017 blockchain education press release URL",
+        "Clarify Nyx Foundation funding model details if partners require disclosure"
+      ]
+    },
+    {
+      "slide_id": "SL06",
+      "action_title": "Real incentives and auditable logs differentiate this testbed from synthetic simulations and opaque corporate sandboxes",
+      "bullets": [
+        "Synthetic simulations (ABIDES/LLM/AI Economist): no real stakes → limited external validity",
+        "Corporate sandboxes: opaque execution, non-reproducible, no third-party verification",
+        "This proposal: prize competition (16M JPY) creates meaningful stakes; private chain provides tamper-resistant, reproducible logs",
+        "Participation benchmark: Google ADK Hackathon attracted 10,400+ participants and 477 projects"
+      ],
+      "speaker_notes": "Existing approaches either lack real incentives or lack transparency. This proposal combines both: meaningful prizes drive realistic behavior, and on-chain logs enable independent verification. The Google ADK Hackathon shows large-scale agent-building events are feasible.",
+      "visual_spec": {
+        "type": "comparison_table",
+        "data_requirements": [
+          "Columns: Synthetic Simulations | Corporate Sandboxes | AI Agent Economy Competition",
+          "Rows: Incentive Realism, Reproducibility, Third-Party Verification",
+          "Values: Low/None/High with color coding"
+        ],
+        "annotations": [
+          "Convey: this proposal uniquely combines incentive realism with auditability",
+          "Sources: Google Cloud Blog 2025-09-02, ARC Prize (arcprize.org)"
+        ]
+      },
+      "todo": [
+        "Finalize comparison table data with citations",
+        "Add ARC Prize ($1M) as prize-scale reference"
+      ]
+    },
+    {
+      "slide_id": "SL07",
+      "action_title": "Modular participation tiers let each entity engage at their comfort level with clear exit gates",
+      "bullets": [
+        "Tiers: Observer → Advisor → Co-Designer → Sponsor (increasing involvement, not lock-in)",
+        "Each entity designates one owner; Nyx Foundation handles day-to-day operations",
+        "September 2025 target is internal and adjustable; pilot validates feasibility before larger commitments",
+        "Exit gates defined per phase: each transition requires explicit sign-off to continue"
+      ],
+      "speaker_notes": "No entity needs to commit beyond their comfort level. Observer status means visibility with minimal effort. Sponsor status means co-design rights and research priority. Every phase has an exit gate—no one is locked in.",
+      "visual_spec": {
+        "type": "swimlane_diagram",
+        "data_requirements": [
+          "Lanes: Observer, Advisor, Co-Designer, Sponsor",
+          "Icons: eye (observe), speech bubble (advise), pencil (co-design), star (sponsor)",
+          "Timeline: Design Phase → Pilot → Competition → Research (with exit markers)"
+        ],
+        "annotations": [
+          "Convey: flexibility and explicit off-ramps",
+          "Highlight: 'Exit gate' markers at phase transitions"
+        ]
+      },
+      "todo": [
+        "Define tier responsibilities in detail (1-pager)",
+        "Document explicit exit criteria per phase"
+      ]
+    },
+    {
+      "slide_id": "SL08",
+      "action_title": "Research outputs inform SGE's AI-in-education roadmap and Startale/Soneium's trust-infrastructure positioning",
+      "bullets": [
+        "SGE: datasets and frameworks support learner-centered AI evaluation R&D",
+        "Startale/Soneium: private chain testbed demonstrates trust-infrastructure capabilities without speculative optics",
+        "Sony Group: frontier AI governance research positions the group at the responsible-AI frontier",
+        "All entities: reusable research assets (publications, datasets) and talent pipeline via competition participation"
+      ],
+      "speaker_notes": "Each entity gets distinct value. SGE advances its AI-in-education research. Startale/Soneium demonstrates trust infrastructure without crypto baggage. Sony Group leads on responsible AI governance. Everyone benefits from shared research assets.",
+      "visual_spec": {
+        "type": "synergy_table",
+        "data_requirements": [
+          "Columns: Entity | Their Priority | How This Proposal Delivers",
+          "Rows: SGE (learner-centered AI), Startale/Soneium (trust infrastructure), Sony Group (responsible AI)"
+        ],
+        "annotations": [
+          "Convey: clear strategic fit for each entity",
+          "No speculative/financial framing"
+        ]
+      },
+      "todo": [
+        "Validate mapping against each entity's public priorities",
+        "Obtain SGE AI-in-education roadmap reference if available"
+      ]
+    },
+    {
+      "slide_id": "SL09",
+      "action_title": "Private chain design eliminates speculation risk; sandbox isolation converts harmful behaviors into research data",
+      "bullets": [
+        "Private chain: authenticated agent-only transactions, no public token, no speculation pathway",
+        "Sandbox isolation: rate limits, kill-switches, and circuit-breakers contain agent misbehavior",
+        "Brand/legal review gates: governance sign-off required at each phase before progression",
+        "Research value: emergent harmful behaviors (collusion, manipulation) become valuable research data through post-hoc analysis"
+      ],
+      "speaker_notes": "The private chain has no token that can be traded externally—there is no speculation risk. If agents misbehave, sandbox controls contain them, and we extract research insights. Brand and legal teams sign off before each phase proceeds.",
+      "visual_spec": {
+        "type": "layered_security_diagram",
+        "data_requirements": [
+          "Layers (bottom to top): Private Chain (no token) → Sandbox Isolation → Kill-Switches → Brand/Legal Gates → Research Output",
+          "Icons for each layer representing security control type"
+        ],
+        "annotations": [
+          "Convey: defense-in-depth with explicit governance checkpoints",
+          "Highlight: 'No public token' and 'Brand/Legal gates'"
+        ]
+      },
+      "todo": [
+        "Document security controls in detail (sandbox, rate limits, multi-validator, kill-switches)",
+        "Confirm external audit plan and timeline (target: before September 2025)"
+      ]
+    },
+    {
+      "slide_id": "SL10",
+      "action_title": "Explicit governance boundaries define what is automated, what requires human approval, and what is out of scope",
+      "bullets": [
+        "Human-in-the-loop: rule design, dataset access control, disclosure policy decisions",
+        "Automated: agent transaction execution within defined rules, log collection, metrics computation",
+        "Out of scope: building participant agents, mainnet deployment, long-term commitments beyond pilot",
+        "Data governance: explicit access control, defined retention policy, third-party review before any public release"
+      ],
+      "speaker_notes": "We are explicit about boundaries. Humans design rules and control data access. Agents execute within those rules. We are not building agents for participants, deploying to mainnet, or asking for commitments beyond the pilot phase.",
+      "visual_spec": {
+        "type": "governance_boundary_table",
+        "data_requirements": [
+          "Columns: Automated | Human-Approved | Out of Scope",
+          "Rows: Rule design, Transaction execution, Data access, Disclosure, Agent building, Mainnet deployment",
+          "Checkmarks/X marks per cell"
+        ],
+        "annotations": [
+          "Convey: clear accountability and scope limits",
+          "Highlight: human control over sensitive decisions"
+        ]
+      },
+      "todo": [
+        "Draft data governance model document (access control, retention, auditability)",
+        "Extract and attach risk register summary (exploitation, instability, manipulation, legal)"
+      ]
+    },
+    {
+      "slide_id": "SL11",
+      "action_title": "16M JPY prize pool and phased cost structure minimize financial risk while maximizing research leverage",
+      "bullets": [
+        "Prize pool: 16M JPY (1st: 10M, 2nd: 4M, 3rd: 1M, special awards: 1M) per internal notes",
+        "Platform and operations costs: defined during scoping phase; no commitment until scope confirmed",
+        "Entry cost: exploratory meeting requires time only—no budget commitment",
+        "ROI: reusable research assets (datasets, frameworks, publications), positioning at AI-agent frontier, talent pipeline"
+      ],
+      "speaker_notes": "The prize pool is sized to create meaningful incentives without excessive financial exposure. Platform costs are defined only after scoping confirms fit. The first step—an exploratory meeting—costs nothing but time.",
+      "visual_spec": {
+        "type": "cost_benefit_table",
+        "data_requirements": [
+          "Columns: Investment Item | Amount/Estimate | Expected Return",
+          "Rows: Prize pool (16M JPY), Platform/ops (TBD in scoping), Exploratory meeting (time only)",
+          "Returns: Research assets, frontier positioning, talent pipeline"
+        ],
+        "annotations": [
+          "Convey: low entry cost, defined ROI pathways",
+          "Source: internal notes for prize pool"
+        ]
+      },
+      "todo": [
+        "Estimate platform/ops costs for scoping discussion",
+        "Develop cost comparison to alternative research approaches if available"
+      ]
+    },
+    {
+      "slide_id": "SL12",
+      "action_title": "Next step: approve the exploratory meeting, designate owners, and align on research questions within 4 weeks",
+      "bullets": [
+        "Decision requested: approve cross-entity exploratory meeting within 4 weeks",
+        "Action required: designate one owner per entity (Sony Group, SGE, Startale/Soneium)",
+        "Preparation: each entity identifies 2-3 research questions they want answered",
+        "Workshop format: 30-60 minute session with decision tree and exit ramps reviewed"
+      ],
+      "speaker_notes": "The ask is simple: approve a meeting, designate owners, and come prepared with research questions. From there, we scope together, pilot together, and decide together—with exit ramps at every stage.",
+      "visual_spec": {
+        "type": "timeline",
+        "data_requirements": [
+          "Milestones: Today → 4-Week Meeting → Scoping Phase → Pilot Decision",
+          "Exit ramp annotations at each transition",
+          "Owner designation callout at first milestone"
+        ],
+        "annotations": [
+          "Convey: clear next steps with low commitment",
+          "Highlight: exit ramps available at every stage"
+        ]
+      },
+      "todo": [
+        "Finalize workshop agenda draft",
+        "Prepare sample research questions per entity to seed discussion"
+      ]
+    }
+  ],
+  "quality_checklist": {
+    "bullets_concise_concrete": true,
+    "no_unfounded_assertions": true,
+    "unknowns_routed_to_todo": true,
+    "notes_speakable": true,
+    "notes_reflect_audience_priorities": true,
+    "visual_spec_required_for_all": true,
+    "json_only": true
+  }
+}

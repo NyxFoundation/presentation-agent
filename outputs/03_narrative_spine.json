@@ -1,0 +1,85 @@
+{
+  "narrative_model": "SPARKLINE",
+  "spine": [
+    {
+      "beat": "WHAT_IS",
+      "intent": "Establish the current gap: AI agents increasingly handle economic decisions, yet the field lacks empirical testbeds with real incentives to study emergent behaviors—leaving learner-AI interaction design and institutional controls under-researched.",
+      "notes": "Open with education/governance framing, not market hype. Anchor in the 'evaluation redesign' theme Isozu emphasizes (AI era shifts from memorization to evaluating information). Mention that most existing studies rely on synthetic rewards with limited external validity."
+    },
+    {
+      "beat": "PAIN_IMPACT",
+      "intent": "Name the cost of inaction: without rigorous empirical data on AI-agent behaviors under incentives, organizations risk deploying AI in education and governance without understanding failure modes (collusion, manipulation, incentive hacking).",
+      "notes": "Tie directly to audience concern: SGE's learner-centered evaluation work could be undermined by opaque AI behaviors. Cite forecasts (Gartner 40%+ conversational AI by 2026; Deloitte 25%→50% agent adoption) as context for urgency, not hype. By end of slide 2, decision request should be clear."
+    },
+    {
+      "beat": "DECISION_REQUEST_PREVIEW",
+      "intent": "State the ask early: approve a cross-entity exploratory meeting within 4 weeks to assess fit and designate owners for a joint AI-agent research testbed—low commitment, clear exit gates.",
+      "notes": "Per brief: the ask is 'proceed to scoping meeting vs decline', not immediate budget. This satisfies the 'opening two slides = problem + decision request' rule. Emphasize modular participation tiers (observer → advisor → co-designer → sponsor)."
+    },
+    {
+      "beat": "WHAT_COULD_BE",
+      "intent": "Paint the ideal state: a controlled, auditable on-chain competition where AI agents transact under real incentives—generating reusable datasets, institution-design frameworks, and research outputs that inform SGE's AI-in-education roadmap and Startale/Soneium's trust-infrastructure positioning.",
+      "notes": "Mirror audience language: 'learner-centered evaluation', 'human-in-the-loop coaching', 'auditability + governance'. Show how research outputs feed directly into SGE's interests (AI role-splitting, evaluation redesign) and Startale/Soneium's infra mission."
+    },
+    {
+      "beat": "PROPOSAL_OVERVIEW",
+      "intent": "Introduce the AI Agent Economy Competition: humans submit agents pre-launch; agents autonomously transact on a private chain; on-chain logs enable reproducibility and third-party verification; prize pool incentivizes participation; research outputs are shared per disclosure policy.",
+      "notes": "Keep concise. Emphasize private chain (no public token, no speculation) to preempt brand/regulatory objection. Mention human-in-the-loop rule design and explicit governance boundaries."
+    },
+    {
+      "beat": "WHY_NOW",
+      "intent": "Establish temporal urgency: (1) AI agent adoption is accelerating (cite forecasts); (2) first-mover advantage in defining research benchmarks; (3) September 2025 internal target aligns with pilot feasibility window.",
+      "notes": "Avoid hype; use forecasts as planning signals. Reference that other organizations may define standards first if SGE/Sony Group waits. Mention pilot phase validates feasibility before any large commitment."
+    },
+    {
+      "beat": "PROOF_EVIDENCE",
+      "intent": "Build credibility: (1) Nyx Foundation's Fusaka audit record (17 vulnerabilities, #1 by report count); (2) participation benchmarks (Google ADK Hackathon 10,400+ participants); (3) landscape context (existing agent-economy research lacks real-stakes incentives).",
+      "notes": "Use citation-backed evidence only. For landscape, acknowledge research sims exist (ABIDES-Economist, LLM Economist, AI Economist) but note they use synthetic rewards. Avoid 'world first' without proof."
+    },
+    {
+      "beat": "FEASIBILITY_FIT",
+      "intent": "Show operational viability: modular participation tiers minimize burden; private chain + sandbox isolation + kill-switches address security; alignment with SGE's blockchain credential work and Startale/Soneium infra creates synergy.",
+      "notes": "Address 'operational load' objection. Mention that SGE can start as observer/advisor if build timeline slips. Highlight existing SGE blockchain work (2017 learning-record system) as complementary, not redundant."
+    },
+    {
+      "beat": "RISK_MITIGATION",
+      "intent": "Directly counter objections: (1) private chain = no public token, no speculation, brand-safe; (2) sandbox + kill-switches convert emergent harmful behaviors into research data, not uncontrolled risk; (3) brand/legal review gates built into phased approach; (4) governance model explicit on human-in-the-loop rule design.",
+      "notes": "Address each likely objection from the brief: 'tech for tech's sake' (answer: educational theory-of-change), 'crypto risk' (answer: private chain, no speculation), 'who owns operations' (answer: Nyx Foundation unless jointly agreed), 'September timeline' (answer: internal target, adjustable)."
+    },
+    {
+      "beat": "COST_ROI",
+      "intent": "Frame investment as low-commitment entry with clear returns: (1) exploratory meeting costs only time; (2) research outputs (datasets, frameworks, publications) are reusable assets; (3) strategic positioning at AI-agent frontier; (4) exit gates each phase if value not demonstrated.",
+      "notes": "Do not quote specific budget numbers unless confirmed. Emphasize strategic positioning over near-term revenue. For SGE: research outputs inform AI-in-education roadmap. For Startale/Soneium: trust-infrastructure positioning."
+    },
+    {
+      "beat": "CALL_TO_ACTION",
+      "intent": "Request: approve cross-entity exploratory meeting within 4 weeks; designate one owner per entity (Sony Group, SGE, Startale/Soneium); align on 2-3 research questions each entity wants answered; define pilot participation level (observer → advisor → co-designer → sponsor).",
+      "notes": "Provide concrete next steps: 30-60 minute workshop agenda, decision tree with exit ramps. Success = meeting scheduled + owners designated; failure path documented for future outreach. MOU/LOI within 8 weeks if proceeding."
+    }
+  ],
+  "opening_two_slides_goal": [
+    "Slide 1 (WHAT_IS + PAIN): Establish that AI agents are increasingly deployed in decisions, yet empirical testbeds with real incentives are missing—creating blind spots in understanding emergent behaviors (collusion, manipulation) that directly affect learner-AI interaction design and governance.",
+    "Slide 2 (DECISION_REQUEST_PREVIEW): State the ask: approve a 4-week exploratory meeting to assess whether co-sponsoring/co-designing an AI-agent research competition can generate reusable assets for SGE's AI-in-education roadmap and Startale/Soneium's trust-infrastructure mission—with participation tiers enabling low-commitment entry and clear exit gates."
+  ],
+  "quality_checklist": {
+    "flow_covers_urgency_proposal_proof_request": true,
+    "each_beat_maps_to_one_slide": true,
+    "decision_request_clear_by_first_two_slides": true,
+    "json_only": true
+  },
+  "audience_guardrails_applied": {
+    "opens_with_mission_education_impact": true,
+    "avoids_market_hype_opening": true,
+    "hits_decision_criteria_early": [
+      "Educational-outcome alignment",
+      "Human-AI role clarity",
+      "Data governance and trust",
+      "Feasibility and operational load"
+    ],
+    "reserves_beats_for": [
+      "Data governance (RISK_MITIGATION)",
+      "Out-of-scope boundaries (PROPOSAL_OVERVIEW, RISK_MITIGATION)",
+      "Low-commitment entry paths (COST_ROI, CALL_TO_ACTION)"
+    ]
+  }
+}

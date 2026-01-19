@@ -1,0 +1,171 @@
+{
+  "toc": [
+    {
+      "section_id": "S1",
+      "title": "The Problem: AI Agents Acting Without Empirical Grounding",
+      "purpose": "Establish urgency—AI agents are increasingly deployed in economic decisions, yet the industry lacks real-stakes testbeds to study emergent behaviors (collusion, manipulation, incentive hacking), creating blind spots for learner-AI interaction design and governance.",
+      "subpoints": [
+        "Growing AI agent adoption in education and enterprise (Gartner 40%+ by 2026; Deloitte 25%→50%)",
+        "Existing research relies on synthetic rewards with limited external validity (ABIDES-Economist, LLM Economist, AI Economist)",
+        "Cost of inaction: delayed understanding of failure modes undermines SGE's learner-centered evaluation work and Sony Group's governance stance",
+        "Why this matters now: first-mover advantage in defining research benchmarks; competitors may set standards first"
+      ]
+    },
+    {
+      "section_id": "S2",
+      "title": "The Proposal: AI Agent Economy Competition",
+      "purpose": "Describe what is being proposed—a controlled on-chain testbed where AI agents transact under real incentives, generating auditable datasets and institution-design frameworks.",
+      "subpoints": [
+        "Competition format: humans submit agents pre-launch; agents autonomously transact on a private chain; on-chain logs enable reproducibility",
+        "Research outputs: auditable datasets, institution-design frameworks, publications",
+        "Key design principles: human-in-the-loop rule design, explicit governance boundaries, learner-centered evaluation alignment",
+        "What is out of scope: building participant agents, mainnet deployment, long-term commitments beyond pilot"
+      ]
+    },
+    {
+      "section_id": "S3",
+      "title": "Proof: Credibility and Differentiation",
+      "purpose": "Build confidence that the proposal is credible and differentiated from alternatives.",
+      "subpoints": [
+        "Nyx Foundation track record: 17 vulnerabilities reported in Ethereum Fusaka audit (#1 by report count)",
+        "Participation benchmarks: Google ADK Hackathon (10,400+ participants, 477 projects); ARC Prize ($1M) as prize benchmark",
+        "Differentiation from alternatives: auditable on-chain logs vs opaque corporate sandboxes; real incentives vs synthetic-reward simulations",
+        "Alignment with SGE's blockchain credential work (2017 learning-record system) and Startale/Soneium trust-infrastructure mission"
+      ]
+    },
+    {
+      "section_id": "S4",
+      "title": "Feasibility and Fit",
+      "purpose": "Demonstrate operational viability and strategic alignment across Sony Group, SGE, and Startale/Soneium.",
+      "subpoints": [
+        "Modular participation tiers minimize burden: observer → advisor → co-designer → sponsor",
+        "Private chain + sandbox isolation + kill-switches address security and integrity concerns",
+        "September 2025 target is internal and adjustable; pilot phase validates feasibility before any large commitment",
+        "Strategic synergy: research outputs inform SGE's AI-in-education roadmap; trust-infrastructure positioning for Startale/Soneium",
+        "Operating model clarity: Nyx Foundation owns operations unless jointly agreed; each entity designates one owner"
+      ]
+    },
+    {
+      "section_id": "S5",
+      "title": "Risk Handling and Governance",
+      "purpose": "Directly counter likely objections and demonstrate that risks are managed, not ignored.",
+      "subpoints": [
+        "Brand/regulatory safety: private chain with no public token, no speculation; brand/legal review gates built into phased approach",
+        "Data governance: human-in-the-loop rule design, access control for datasets, explicit disclosure policy",
+        "Security controls: sandbox isolation, kill-switches, multi-validator enforcement, external audit plan before September 2025",
+        "Emergent harmful behaviors become research data, not uncontrolled risk (post-hoc analysis framework)",
+        "Exit gates: each phase has explicit exit criteria if value not demonstrated"
+      ]
+    },
+    {
+      "section_id": "S6",
+      "title": "Investment, ROI, and Decision Request",
+      "purpose": "Frame the low-commitment entry, strategic returns, and specific next steps.",
+      "subpoints": [
+        "Low-commitment entry: exploratory meeting costs only time; no budget commitment until pilot scope agreed",
+        "Strategic returns: reusable research assets (datasets, frameworks, publications); positioning at AI-agent frontier; talent pipeline via participation",
+        "Cost structure overview: 16M JPY prize pool (internal notes); platform/ops costs to be defined in scoping phase",
+        "Decision request: approve cross-entity exploratory meeting within 4 weeks; designate one owner per entity; align on 2-3 research questions each entity wants answered",
+        "Next step: 30-60 minute workshop agenda with decision tree and exit ramps"
+      ]
+    }
+  ],
+  "argument_tree": {
+    "root": "A cross-entity exploratory meeting should be approved within 4 weeks to assess whether co-sponsoring or co-designing the AI Agent Economy Competition—a controlled on-chain testbed studying AI behavior under real incentives—can generate reusable research assets (auditable datasets, institution-design frameworks) that inform SGE's AI-in-education roadmap, Startale/Soneium's trust-infrastructure positioning, and Sony Group's frontier AI governance stance, with participation tiers (observer to co-designer) enabling low-commitment entry and clear exit gates.",
+    "branches": [
+      {
+        "claim": "Current pain: The industry lacks empirical testbeds to study how AI agents behave under real economic incentives; most simulations use synthetic rewards, limiting generalizability and leaving emergent risks (collusion, manipulation) poorly understood.",
+        "because": [
+          "Existing agent-economy research (ABIDES-Economist, LLM Economist, AI Economist) uses synthetic environments without meaningful stakes",
+          "Lack of auditable, reproducible execution logs limits third-party verification and research validity",
+          "Enterprise AI agent adoption is accelerating (Gartner 40%+ by 2026; Deloitte 25%→50%), making empirical grounding urgent"
+        ],
+        "evidence": [
+          "ABIDES-Economist (arXiv 2024-03-10): multi-agent economic simulation with synthetic rewards",
+          "LLM Economist (OpenReview): multi-agent economic simulation with LLM-based agents, synthetic environment",
+          "AI Economist (Salesforce): multi-agent economic simulation for policy design, no real-stakes incentives",
+          "Gartner forecast: 40%+ of enterprise apps embed conversational AI by 2026 (press release 2024-04-01)",
+          "Deloitte forecast: AI agents adoption from 25% (2025) to 50% (2027) (press release 2024-12-05)"
+        ]
+      },
+      {
+        "claim": "Solution validity: A private-chain competition with auditable logs, human-in-the-loop rule design, and explicit governance boundaries uniquely combines incentive realism, reproducibility, and safety controls—directly aligned with SGE's learner-centered evaluation priorities and Startale/Soneium's trust-infrastructure mission.",
+        "because": [
+          "Private blockchain provides tamper-resistant logs enabling reproducibility and third-party verification",
+          "Competition format with prize money creates meaningful stakes that reveal more realistic behaviors",
+          "Human-in-the-loop rule design and explicit governance boundaries address algorithmic dominance concerns",
+          "Alignment with SGE's stated priorities: real-time, multi-dimensional, learner-centered evaluation (Isozu 2025 interview)"
+        ],
+        "evidence": [
+          "Sony/SGE blockchain for education data (2017): tamper-resistant registration and access control",
+          "Isozu interview (2025-06-11): AI era shifts from memorization to evaluating information; AI agents may handle 'teach & assess' while humans focus on facilitation",
+          "Prize competition benchmark: Google ADK Hackathon (10,400+ participants, 477 projects)",
+          "Prize benchmark: ARC Prize ($1M Grand Prize); Netflix Prize ($1M, historical reference)"
+        ]
+      },
+      {
+        "claim": "Feasibility: Nyx Foundation has demonstrated Ethereum security credibility (17 vulnerabilities reported in Fusaka audit, #1 by report count); modular participation tiers and staged pilot phases minimize operational burden for each entity; September 2025 target is internal and adjustable.",
+        "because": [
+          "Nyx Foundation's Fusaka audit performance demonstrates blockchain security expertise",
+          "Modular tiers (observer → advisor → co-designer → sponsor) allow low-commitment entry",
+          "Staged approach with pilot phase validates feasibility before large commitments",
+          "Each entity can participate at their comfort level and exit at defined gates"
+        ],
+        "evidence": [
+          "Nyx Foundation Fusaka audit: 17 vulnerabilities reported, #1 by report count (PR TIMES 2025-12-24; contest window 2025-09-15 to 2025-10-13)",
+          "Participation tiers defined in proposal: observer, advisor, co-designer, sponsor",
+          "Phase structure: Design & Sponsor Alignment → Pilot → Public Competition → Post-Competition Research",
+          "Exit criteria defined per phase in proposal plan"
+        ]
+      },
+      {
+        "claim": "Risk handling: Private chain (no public token, no speculation), sandbox isolation with kill-switches, brand/legal review gates, and post-hoc analysis of harmful behaviors convert risk into research data—not uncontrolled exposure.",
+        "because": [
+          "Private chain avoids regulatory/brand risks associated with public tokens and speculation",
+          "Sandbox isolation and kill-switches contain agent misbehavior and enable safe termination",
+          "Brand/legal review gates at each phase ensure governance sign-off before progression",
+          "Emergent harmful behaviors (collusion, manipulation) become valuable research data through post-hoc analysis"
+        ],
+        "evidence": [
+          "Private chain design: authenticated agent-only TX, no mainnet deployment",
+          "Security controls: sandbox isolation, rate limits, multi-validator checks, kill-switches (per proposal feasibility)",
+          "Risk register includes: exploitation attempts, platform instability, manipulation/collusion, legal/regulatory uncertainty—each with mitigation",
+          "External audit plan: timeline and scope for third-party review before September 2025"
+        ]
+      }
+    ]
+  },
+  "quality_checklist": {
+    "approval_topics_covered": {
+      "impact": "S1 (problem/urgency), S3 (proof/differentiation)",
+      "feasibility": "S4 (operational viability, strategic fit)",
+      "risk": "S5 (governance, security, brand safety, exit gates)",
+      "cost": "S6 (investment framing, cost structure overview)",
+      "plan": "S4 (participation tiers, pilot phases), S6 (next steps, decision request)"
+    },
+    "section_count": 6,
+    "no_major_gaps_or_redundancies": true,
+    "evidence_items_real_or_buildable": true,
+    "json_only": true
+  },
+  "audience_guardrails_applied": {
+    "aligned_with_decision_criteria": [
+      "Educational-outcome alignment (S1, S2, S3: learner-centered evaluation, AI-human role clarity)",
+      "Human-AI role clarity (S2, S5: human-in-the-loop rule design, governance boundaries)",
+      "Data governance and trust (S5: access control, disclosure policy, audit plan)",
+      "Feasibility and operational load (S4: modular tiers, owner designation, operating model)"
+    ],
+    "addresses_likely_objections": [
+      "Tech for tech's sake → educational theory-of-change in S1, S2",
+      "Crypto/speculation risk → private chain, no token in S5",
+      "Operational burden → modular tiers, pilot-first in S4",
+      "Data governance concerns → explicit controls in S5"
+    ],
+    "includes_required_sections_for_ai_agent_proposals": [
+      "Data governance (S5)",
+      "Human-in-the-loop boundaries (S2, S5)",
+      "Out of scope (S2)",
+      "Brand/legal risk handling (S5)"
+    ]
+  }
+}

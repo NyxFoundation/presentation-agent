@@ -26,6 +26,10 @@ src: ./slides/SL05.md
 ---
 
 ---
+src: ./slides/SL05b.md
+---
+
+---
 src: ./slides/SL06.md
 ---
 
@@ -35,6 +39,10 @@ src: ./slides/SL07.md
 
 ---
 src: ./slides/SL08.md
+---
+
+---
+src: ./slides/SL08b.md
 ---
 
 ---

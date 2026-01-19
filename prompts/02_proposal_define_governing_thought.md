@@ -2,8 +2,8 @@
 ---
 Description: Define the one-sentence governing thought for a proposal deck and derive 3–5 supporting claims. Includes proposal-specific phrasing (decision request + scope + expected impact + timeline).
 Usage: `/02_proposal_define_governing_thought DECISION_BRIEF=<path|json> RAW_IDEAS=<string>`
-Example: `/02_proposal_define_governing_thought DECISION_BRIEF="outputs/01_decision_brief.json" RAW_IDEAS="一次対応逼迫。FAQと社内BotをPoCし効果検証したい。情シスはセキュリティ懸念。"`
-Language: Japanese (output).
+Example: `/02_proposal_define_governing_thought DECISION_BRIEF="outputs/01_decision_brief.json" RAW_IDEAS="First-response capacity is strained. Want to PoC FAQ + internal bot and validate impact. IT team has security concerns."`
+Language: English (output).
 Execution hint: The governing thought becomes the “deck headline.” Every slide must support it.
 ---
 
@@ -15,10 +15,10 @@ You are an elite proposal editor who converts ideas into an approval-ready thesi
 
 Produce:
 
-* governing_thought: one sentence enabling approval
-* key_claims: 3–5 pillars
-* supporting_evidence_needed: evidence plan
-* alternatives_considered: 2 alternatives (pressure test)
+- governing_thought: one sentence enabling approval
+- key_claims: 3–5 pillars
+- supporting_evidence_needed: evidence plan
+- alternatives_considered: 2 alternatives (pressure test)
 
 ## Inputs
 
@@ -31,29 +31,29 @@ Produce:
 
 Use this template unless it clearly doesn’t fit:
 
-* 「[提案]により[成果/効果]を[期間]で実現できるため、[意思決定]を承認すべき」
+- “[Proposal] will deliver [outcome/impact] within [timeline], therefore [decision] should be approved.”
   Add, if possible:
-* 対象範囲（部署/プロセス）
-* コスト上限 or 予算枠（不明ならTODOへ）
+- Scope (teams/processes)
+- Cost cap or budget window (if unknown, send to TODO)
 
 ### Step 2: Derive 3–5 Key Claims (No Overlap)
 
-Proposal-friendly default claim categories（必要に応じて取捨選択）：
+Proposal-friendly default claim categories (use as needed):
 
-1. 現状の痛み（機会損失/コスト）
-2. 解決策の妥当性（なぜこれか）
-3. 実現性（人/技術/期限）
-4. リスク/セキュリティ対応
-5. コスト妥当性/ROI
+1. Current pain (opportunity loss/cost)
+2. Solution validity (why this)
+3. Feasibility (people/tech/timeline)
+4. Risk/security handling
+5. Cost soundness/ROI
 
 ### Step 3: Evidence Plan
 
-* 主要な証拠を列挙（数値、比較、事例、PoC設計、リスク評価）
+- List the key evidence (numbers, comparisons, examples, PoC design, risk assessment)
 
 ### Step 4: Pressure-Test
 
-* 代替案2つ（例：現状維持、外注、別プロダクト、段階導入）
-* tradeoffs を短く
+- Provide two alternatives (e.g., status quo, outsourcing, different product, phased rollout)
+- Summarize tradeoffs briefly
 
 ## Output Format
 
@@ -73,16 +73,16 @@ Save the output to `outputs/02_governing_thought.json` as **JSON only**:
 
 ## Quality Checklist
 
-* [ ] governing_thought が1文で承認判断できる
-* [ ] 3〜5の柱が重複しない
-* [ ] 証拠が「測れる/示せる」
-* [ ] 代替案が現実的
-* [ ] JSONのみ
+* [ ] Governing thought is one sentence and enables a decision
+* [ ] 3–5 claims without overlap
+* [ ] Evidence is measurable or demonstrable
+* [ ] Alternatives are realistic
+* [ ] JSON only
 
 ## Web Search Guidance
 
 Use web search to:
 
-1. 代替案の相場コスト/効果
-2. ベンチマーク値（改善率の妥当性）
-3. 競合/類似ソリューション比較
+1. Benchmark cost/impact of alternatives
+2. Benchmark improvement rates for plausibility
+3. Compare competitors/alternatives

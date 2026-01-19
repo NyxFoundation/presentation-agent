@@ -2,8 +2,8 @@
 ---
 Description: Draft proposal deck slide content (bullets + notes + visual specs). Prioritize concrete metrics, decision-oriented phrasing, and explicit next actions. Flag unknowns as TODO.
 Usage: `/06_proposal_draft_slides SLIDE_PLAN=<path|json> AVAILABLE_FACTS=<string> TONE=<string>`
-Example: `/06_proposal_draft_slides SLIDE_PLAN="outputs/05_slide_plan.json" AVAILABLE_FACTS="月1200件/初動24h/一次対応工数280h" TONE="社内向け・フォーマル"`
-Language: Japanese (output).
+Example: `/06_proposal_draft_slides SLIDE_PLAN="outputs/05_slide_plan.json" AVAILABLE_FACTS="1,200 tickets per month / first response 24h / 280h first-tier effort" TONE="Internal, formal"`
+Language: English (output).
 Execution hint: Keep bullets tight. If you don’t have numbers, create TODOs rather than hand-waving.
 ---
 
@@ -15,10 +15,10 @@ You are a proposal deck writer who produces crisp content executives can trust.
 
 For each slide:
 
-* bullets (3–5)
-* speaker_notes (60–120字)
-* visual_spec (if needed)
-* todo (missing data)
+- bullets (3–5)
+- speaker_notes (60–120 characters/words)
+- visual_spec (if needed)
+- todo (missing data)
 
 ## Inputs
 
@@ -30,22 +30,22 @@ For each slide:
 
 ### Step 1: Bullets (Concrete + Decision-Oriented)
 
-* 3〜5点、短文化
-* 可能なら数値（現状/目標/差分）
-* 提案のスライドは “意思決定に必要な情報” を優先
+- 3–5 concise points
+- Include numbers when possible (current/target/delta)
+- On proposal slides, prioritize “information needed for a decision”
 
 ### Step 2: Notes (Talk Track)
 
-* 60〜120字で補足（読み上げで筋が通る）
+- Add 60–120 characters/words of supporting notes (coherent when spoken)
 
 ### Step 3: Visual Specs
 
-* data_requirements に必要な項目（列/系列/比較対象）
-* annotations に “言わせたい結論” の注釈
+- In data_requirements list needed items (columns/series/comparators)
+- In annotations, state the conclusion you want the visual to convey
 
 ### Step 4: TODO Discipline
 
-* 不明点は todo に落とす（推測で断言しない）
+- Push unknowns into todo (do not assert on guesses)
 
 ## Output Format
 
@@ -72,15 +72,15 @@ Save the output to `outputs/06_slide_drafts.json` as **JSON only**:
 
 ## Quality Checklist
 
-* [ ] bullets が短く具体（数値/固有名詞）
-* [ ] 断言が根拠なしになっていない（TODOで逃がしている）
-* [ ] notes が読み上げ可能
-* [ ] JSONのみ
+* [ ] Bullets are concise and concrete (numbers/proper nouns)
+* [ ] No unfounded assertions (unknowns routed to TODO)
+* [ ] Notes are speakable
+* [ ] JSON only
 
 ## Web Search Guidance
 
 Use web search to:
 
-1. ベンチマーク（改善率）確認
-2. 事例の一次情報（公式）確保
-3. 用語・規制の最新確認
+1. Validate benchmarks (improvement rates)
+2. Source primary/official examples
+3. Confirm latest terminology and regulations

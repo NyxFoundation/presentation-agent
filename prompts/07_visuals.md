@@ -20,6 +20,7 @@ For each visual:
 - declutter
 - focus
 - revised_visual_spec
+- Prefer concrete chart/table/diagram specs that can be rendered in Slidev; avoid text-only visuals.
 
 ## Inputs
 

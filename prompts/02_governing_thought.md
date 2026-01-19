@@ -27,6 +27,12 @@ Produce:
 
 ## Process
 
+### Step 0: Audience/Context Guardrails
+
+- Use `outputs/00_audience.json` if present to align the governing thought and claims with audience decision criteria (e.g., learner-centered outcomes, governance/guardrails, operational feasibility, low-commitment entry paths).
+- Avoid tech-first or market-hype governing thoughts; anchor on mission/education impact and safety/governance when AI/agent/blockchain is involved.
+- Include human-in-the-loop boundaries and “what is out of scope” in claims when relevant.
+
 ### Step 1: Write the Governing Thought (Approval-Ready)
 
 Use this template unless it clearly doesn’t fit:

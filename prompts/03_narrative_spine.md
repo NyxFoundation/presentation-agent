@@ -23,6 +23,12 @@ Select narrative_model (default SPARKLINE) and output a beat spine suitable for 
 
 ## Process
 
+### Step 0: Audience/Context Guardrails
+
+- If `outputs/00_audience.json` exists, ensure the spine hits their decision criteria and objections early (e.g., education outcomes, human-in-the-loop boundaries, governance/safety, operational feasibility).
+- Avoid opening with market hype; open with mission/education impact and why-now rooted in learner/safety or governance gaps when AI/agent/blockchain is involved.
+- Reserve beats for data governance, out-of-scope boundaries, and low-commitment entry paths if the audience is cautious.
+
 ### Step 1: Default to Sparkline
 
 Use SPARKLINE beats (adjust count but keep order):

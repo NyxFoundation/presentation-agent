@@ -27,6 +27,12 @@ Create:
 
 ## Process
 
+### Step 0: Audience/Context Guardrails
+
+- If `outputs/00_audience.json` exists, align sections and subpoints with the audience’s decision criteria and objections (e.g., learner-centered outcomes, governance/guardrails, operational feasibility for education leaders).
+- When AI/agent/blockchain is involved, ensure TOC includes data governance, human-in-the-loop boundaries, what is out of scope, and brand/legal risk handling; avoid tech-first or market-hype framing.
+- Prioritize education/mission impact and safety over generic market sizing.
+
 ### Step 1: Proposal TOC Defaults (3–6 sections)
 
 Prefer these section intents (merge if too many):

@@ -6,9 +6,41 @@ info: |
 transition: slide-left
 mdc: true
 colorSchema: 'light'
-src: ./slides/01-title.md
+src: ./slides/SL01.md
 ---
-<!-- 
+
 ---
-src: ./slides/02-llm-agent-potential.md
---- -->
+src: ./slides/SL02.md
+---
+
+---
+src: ./slides/SL03.md
+---
+
+---
+src: ./slides/SL04.md
+---
+
+---
+src: ./slides/SL05.md
+---
+
+---
+src: ./slides/SL06.md
+---
+
+---
+src: ./slides/SL07.md
+---
+
+---
+src: ./slides/SL08.md
+---
+
+---
+src: ./slides/SL09.md
+---
+
+---
+src: ./slides/SL10.md
+---

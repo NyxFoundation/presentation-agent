@@ -1,9 +1,9 @@
 
 ---
 Description: Final QA and export of a proposal deck into Slidev Markdown files under `slides/` (one file per slide). Ensures a strong opening, proof coverage, and explicit approval request. Returns a manifest of file paths and contents.
-Usage: `/09_export_slidev REVISED_SLIDE_PLAN=<path|json> SLIDE_DRAFTS=<path|json> CHART_EDITS=<path|json> SLIDEV_THEME=<string>`
-Example: `/09_export_slidev REVISED_SLIDE_PLAN="outputs/08_edits.json" SLIDE_DRAFTS="outputs/06_slide_drafts.json" CHART_EDITS="outputs/07_chart_edits.json" SLIDEV_THEME="default"`
-Language: English (slide content).
+Usage: `/09_export_slidev REVISED_SLIDE_PLAN=<path|json> SLIDE_DRAFTS=<path|json> CHART_EDITS=<path|json> SLIDEV_THEME=<string> FONT=<string> BACKGROUND_COLOR=<string> LANGUAGE=<string>`
+Example: `/09_export_slidev REVISED_SLIDE_PLAN="outputs/08_edits.json" SLIDE_DRAFTS="outputs/06_slide_drafts.json" CHART_EDITS="outputs/07_chart_edits.json" SLIDEV_THEME="default" FONT="Inter" BACKGROUND_COLOR="#0d0d0d" LANGUAGE="English"`
+Language: English (slide content) unless LANGUAGE overrides.
 Execution hint: This is the last step that generates actual Slidev files. Keep slide text minimal; put explanations in speaker notes.
 ---
 
@@ -24,6 +24,12 @@ You are the QA lead and Slidev exporter for proposal decks.
 
 - Generate Slidev Markdown per slide under `slides/`
 - Return a manifest with `path` + `content`
+- Style constraints:
+  - Use font: `{{FONT}}`
+  - Use dark base background `{{BACKGROUND_COLOR}}` with minimal red/green accents
+  - Title and thank-you slides should use the `cover` layout
+  - Slide language: `{{LANGUAGE}}`
+  - Place citations/references at the bottom-left of the slide they support
 
 ## Inputs
 
@@ -52,11 +58,17 @@ For each slide:
   * bullets
   * optional blockquote for visual note (keep short)
   * speaker notes in HTML comment
+  * Apply layout `cover` for title and thank-you slides; otherwise default
+  * Use `theme: {{SLIDEV_THEME}}`, font `{{FONT}}`, background `{{BACKGROUND_COLOR}}`, language `{{LANGUAGE}}`
+  * Place references/citations at bottom-left of the slide they support (concise)
 
 Frontmatter template:
 
-* layout: default
+* layout: default (override with `cover` on title/thank-you)
 * theme: `{{SLIDEV_THEME}}` (default if not specified)
+* font: `{{FONT}}` (if supported in your environment)
+* background: `{{BACKGROUND_COLOR}}`
+* language: `{{LANGUAGE}}`
 
 ## Output Format
 

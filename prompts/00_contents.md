@@ -20,6 +20,7 @@ You must:
 * Normalize and de-duplicate ideas
 * Identify missing information as TODOs (do not guess)
 * Flag assumptions separately from facts
+* Populate `proposal_inputs` seeds (context, raw_ideas, governing_thought_seed, key_claims_seed, available_facts, raw_data_or_charts) using facts or TODOs
 
 ## Inputs
 
@@ -71,6 +72,14 @@ Save the output to `outputs/00_contents.json` as **JSON only**:
 
 ```json
 {
+  "proposal_inputs": {
+    "context": "",
+    "raw_ideas": "",
+    "governing_thought_seed": "",
+    "key_claims_seed": [""],
+    "available_facts": "",
+    "raw_data_or_charts": ""
+  },
   "source": {
     "introduction_path": "{{INTRODUCTION}}",
     "extracted_at": "YYYY-MM-DD"
@@ -217,6 +226,7 @@ Save the output to `outputs/00_contents.json` as **JSON only**:
 
 Before finalizing, verify:
 
+* [ ] proposal_inputs (context/raw_ideas/governing_thought_seed/key_claims_seed/available_facts/raw_data_or_charts) are populated or TODO-labeled
 * [ ] No invented facts: everything is either explicit, hypothesis-labeled, or TODO
 * [ ] All proposal slots are filled with at least placeholders or TODOs
 * [ ] Technical concepts are translated into plain English and linked to business value

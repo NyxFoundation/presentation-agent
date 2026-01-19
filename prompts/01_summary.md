@@ -1,8 +1,8 @@
 
 ---
-Description: Define the decision context and success criteria for a proposal deck. Identify decision-maker, decision request, evaluation criteria, constraints, objections, and research TODOs. Proposal defaults are included (ROI, feasibility, risk, plan).
-Usage: `/01_summary DOC_TYPE=<string> AUDIENCE=<string> DECISION_NEEDED=<string> CONSTRAINTS=<string> CONTEXT=<string>`
-Example: `/01_summary DOC_TYPE="Proposal deck" AUDIENCE="Business GM, IT lead" DECISION_NEEDED="PoC budget approval" CONSTRAINTS="10 slides, due in 2 weeks, internal" CONTEXT="Inquiry volume spiking, response delays causing visible opportunity loss"`
+Description: Define the decision context and success criteria for a proposal deck. Identify decision-maker, decision request, evaluation criteria, constraints, objections, and research TODOs. Proposal defaults are included (ROI, feasibility, risk, plan). Prefer pulling doc_type/audience/decision_needed from `outputs/00_audience.json` and context from `outputs/00_contents.json`.
+Usage: `/01_summary AUDIENCE_BRIEF=<path|json> CONTENT_BRIEF=<path|json> CONSTRAINTS=<string>`
+Example: `/01_summary AUDIENCE_BRIEF="outputs/00_audience.json" CONTENT_BRIEF="outputs/00_contents.json" CONSTRAINTS="10 slides, due in 2 weeks, internal"`
 Language: English (output).
 Execution hint: Run this first. This output drives the governing thought, storyline, and slide plan for the entire proposal deck.
 ---
@@ -23,11 +23,9 @@ From the given inputs, produce a **Decision Brief** tailored for proposal decks 
 
 ## Inputs
 
-1. **DOC_TYPE** (`{{DOC_TYPE}}`): Usually “proposal deck”
-2. **AUDIENCE** (`{{AUDIENCE}}`): Expected decision-maker(s) and stakeholders
-3. **DECISION_NEEDED** (`{{DECISION_NEEDED}}`): e.g., budget approval, PoC go/no-go, prioritization
-4. **CONSTRAINTS** (`{{CONSTRAINTS}}`): Slide count, deadline, tone, no-go items, etc.
-5. **CONTEXT** (`{{CONTEXT}}`): Background, problems, urgency cues
+1. **AUDIENCE_BRIEF** (`{{AUDIENCE_BRIEF}}`): Path/JSON (prefer `outputs/00_audience.json`) that includes `proposal_inputs.doc_type`, `proposal_inputs.audience`, and `proposal_inputs.decision_needed`
+2. **CONTENT_BRIEF** (`{{CONTENT_BRIEF}}`): Path/JSON (prefer `outputs/00_contents.json`) that includes `proposal_inputs.context` and any additional background
+3. **CONSTRAINTS** (`{{CONSTRAINTS}}`): Slide count, deadline, tone, no-go items, etc.
 
 ## Process
 

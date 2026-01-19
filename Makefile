@@ -3,21 +3,20 @@ PROMPTS_DIR ?= prompts
 OUTPUT_DIR ?= outputs
 LOG_DIR ?= $(OUTPUT_DIR)/logs
 
-# Input variables for prompts
-DOC_TYPE ?= Proposal deck
-AUDIENCE ?= Executive reviewers
-DECISION_NEEDED ?= Approval for PoC
+# Input variables for prompts (many are overridden from 00_audience/00_contents outputs)
+PERSON_NAME ?= Taro Yamada
+COMPANY ?= Company Name
+INTRODUCTION ?= inputs/introduction.md
 CONSTRAINTS ?= 10 slides, 5-minute briefing, internal audience
-CONTEXT ?= Describe the background, problem, and urgency
-RAW_IDEAS ?= Key idea fragments for the governing thought
-GOVERNING_THOUGHT ?= One-sentence governing thought
-KEY_CLAIMS ?= ["Claim 1", "Claim 2", "Claim 3"]
-AVAILABLE_FACTS ?=
 TONE ?= Internal, formal
-RAW_DATA_OR_CHARTS ?=
 SLIDEV_THEME ?= default
+FONT ?= BIZ UDPMincho
+BACKGROUND_COLOR ?= White
+LANGUAGE ?= English
 
 # Output files
+AUDIENCE_OUT := $(OUTPUT_DIR)/00_audience.json
+CONTENTS_OUT := $(OUTPUT_DIR)/00_contents.json
 SUMMARY_OUT := $(OUTPUT_DIR)/01_decision_brief.json
 GOV_OUT := $(OUTPUT_DIR)/02_governing_thought.json
 SPINE_OUT := $(OUTPUT_DIR)/03_narrative_spine.json
@@ -33,12 +32,14 @@ export CLAUDE_CODE_PERMISSIONS := bypassPermissions
 export CLAUDE_CODE_MAX_OUTPUT_TOKENS := 100000
 CLAUDE_FLAGS ?= --dangerously-skip-permissions --output-format json
 
-.PHONY: all init clean summary governing_thought narrative_spine toc_tree slide_plan slide_drafts visuals approval_edit export_slidev help
+.PHONY: all init clean audience contents summary governing_thought narrative_spine toc_tree slide_plan slide_drafts visuals approval_edit export_slidev help
 
 all: export_slidev
 
 help:
 	@echo "Presentation pipeline targets:"
+	@echo "  audience          - Run prompts/00_audience.md"
+	@echo "  contents          - Run prompts/00_contents.md"
 	@echo "  summary           - Run prompts/01_summary.md"
 	@echo "  governing_thought - Run prompts/02_governing_thought.md"
 	@echo "  narrative_spine   - Run prompts/03_narrative_spine.md"
@@ -76,15 +77,80 @@ print(tpl)
 PY
 endef
 
+# Helpers to read values from JSON outputs with fallbacks
+define json_or_default
+python - <<'PY'
+import json, sys, pathlib
+path = pathlib.Path("$(1)")
+fallback = $(2)
+try:
+    data = json.loads(path.read_text())
+    val = data
+    for part in "$(3)".split("."):
+        if isinstance(val, dict):
+            val = val.get(part, "")
+        else:
+            val = ""
+    if isinstance(val, (list, dict)):
+        import json as j
+        print(j.dumps(val, ensure_ascii=False))
+    elif isinstance(val, str) and val.strip():
+        print(val.strip())
+    else:
+        print(fallback)
+except Exception:
+    print(fallback)
+PY
+endef
+
 # -------------------------------------------------------------------
 # Pipeline steps
 # -------------------------------------------------------------------
 
+audience: $(AUDIENCE_OUT)
+$(AUDIENCE_OUT): $(PROMPTS_DIR)/00_audience.md | init
+	@echo "Running 00_audience..."
+	@START_TIME=$$(date +%s); \
+	prompt="$$( $(call render_prompt,$<,{ '{{PERSON_NAME}}': \"$(PERSON_NAME)\", '{{COMPANY}}': \"$(COMPANY)\" }) )"; \
+	claude $(CLAUDE_FLAGS) -p "$$prompt" > $(LOG_DIR)/00_audience.json; \
+	END_TIME=$$(date +%s); \
+	DURATION=$$((END_TIME - START_TIME)); \
+	INPUT_TOKENS=$$(grep -o '"input_tokens":[0-9]*' $(LOG_DIR)/00_audience.json | head -1 | cut -d: -f2); \
+	OUTPUT_TOKENS=$$(grep -o '"output_tokens":[0-9]*' $(LOG_DIR)/00_audience.json | head -1 | cut -d: -f2); \
+	COST=$$(grep -o '"total_cost_usd":[0-9.]*' $(LOG_DIR)/00_audience.json | head -1 | cut -d: -f2); \
+	if [ -f "$(AUDIENCE_OUT)" ]; then \
+		echo "Finished 00_audience (Time: $${DURATION}s | Tokens: In=$$INPUT_TOKENS, Out=$$OUTPUT_TOKENS | Cost: \$$$$COST)"; \
+	else \
+		echo "Warning: $(AUDIENCE_OUT) not found (Time: $${DURATION}s | Tokens: In=$$INPUT_TOKENS, Out=$$OUTPUT_TOKENS | Cost: \$$$$COST)"; \
+	fi
+
+contents: $(CONTENTS_OUT)
+$(CONTENTS_OUT): $(PROMPTS_DIR)/00_contents.md | init
+	@echo "Running 00_contents..."
+	@START_TIME=$$(date +%s); \
+	prompt="$$( $(call render_prompt,$<,{ '{{INTRODUCTION}}': \"$(INTRODUCTION)\" }) )"; \
+	claude $(CLAUDE_FLAGS) -p "$$prompt" > $(LOG_DIR)/00_contents.json; \
+	END_TIME=$$(date +%s); \
+	DURATION=$$((END_TIME - START_TIME)); \
+	INPUT_TOKENS=$$(grep -o '"input_tokens":[0-9]*' $(LOG_DIR)/00_contents.json | head -1 | cut -d: -f2); \
+	OUTPUT_TOKENS=$$(grep -o '"output_tokens":[0-9]*' $(LOG_DIR)/00_contents.json | head -1 | cut -d: -f2); \
+	COST=$$(grep -o '"total_cost_usd":[0-9.]*' $(LOG_DIR)/00_contents.json | head -1 | cut -d: -f2); \
+	if [ -f "$(CONTENTS_OUT)" ]; then \
+		echo "Finished 00_contents (Time: $${DURATION}s | Tokens: In=$$INPUT_TOKENS, Out=$$OUTPUT_TOKENS | Cost: \$$$$COST)"; \
+	else \
+		echo "Warning: $(CONTENTS_OUT) not found (Time: $${DURATION}s | Tokens: In=$$INPUT_TOKENS, Out=$$OUTPUT_TOKENS | Cost: \$$$$COST)"; \
+	fi
+
 summary: $(SUMMARY_OUT)
-$(SUMMARY_OUT): $(PROMPTS_DIR)/01_summary.md | init
+$(SUMMARY_OUT): $(PROMPTS_DIR)/01_summary.md $(AUDIENCE_OUT) $(CONTENTS_OUT) | init
 	@echo "Running 01_summary..."
 	@START_TIME=$$(date +%s); \
-	prompt="$$( $(call render_prompt,$<,{ '{{DOC_TYPE}}': \"$(DOC_TYPE)\", '{{AUDIENCE}}': \"$(AUDIENCE)\", '{{DECISION_NEEDED}}': \"$(DECISION_NEEDED)\", '{{CONSTRAINTS}}': \"$(CONSTRAINTS)\", '{{CONTEXT}}': \"$(CONTEXT)\" }) )"; \
+	doc_type="$$( $(call json_or_default,$(AUDIENCE_OUT),"\"Proposal deck\"","proposal_inputs.doc_type") )"; \
+	audience="$$( $(call json_or_default,$(AUDIENCE_OUT),"\"Executive reviewers\"","proposal_inputs.audience") )"; \
+	decision_needed="$$( $(call json_or_default,$(AUDIENCE_OUT),"\"Approval for PoC\"","proposal_inputs.decision_needed") )"; \
+	context="$$( $(call json_or_default,$(CONTENTS_OUT),"\"Describe the background, problem, and urgency\"","proposal_inputs.context") )"; \
+	prompt="$$( $(call render_prompt,$<,{ '{{AUDIENCE_BRIEF}}': \"$(AUDIENCE_OUT)\", '{{CONTENT_BRIEF}}': \"$(CONTENTS_OUT)\", '{{CONSTRAINTS}}': \"$(CONSTRAINTS)\" }) )"; \
+	prompt="$$prompt\n\nAudience defaults (from $(AUDIENCE_OUT)): doc_type=$$doc_type; audience=$$audience; decision_needed=$$decision_needed\nContent defaults (from $(CONTENTS_OUT)): context=$$context"; \
 	claude $(CLAUDE_FLAGS) -p "$$prompt" > $(LOG_DIR)/01_summary.json; \
 	END_TIME=$$(date +%s); \
 	DURATION=$$((END_TIME - START_TIME)); \
@@ -98,10 +164,12 @@ $(SUMMARY_OUT): $(PROMPTS_DIR)/01_summary.md | init
 	fi
 
 governing_thought: $(GOV_OUT)
-$(GOV_OUT): $(PROMPTS_DIR)/02_governing_thought.md $(SUMMARY_OUT) | init
+$(GOV_OUT): $(PROMPTS_DIR)/02_governing_thought.md $(SUMMARY_OUT) $(CONTENTS_OUT) | init
 	@echo "Running 02_governing_thought..."
 	@START_TIME=$$(date +%s); \
-	prompt="$$( $(call render_prompt,$<,{ '{{DECISION_BRIEF}}': \"$(SUMMARY_OUT)\", '{{RAW_IDEAS}}': \"$(RAW_IDEAS)\" }) )"; \
+	raw_ideas="$$( $(call json_or_default,$(CONTENTS_OUT),"\"Key idea fragments for the governing thought\"","proposal_inputs.raw_ideas") )"; \
+	prompt="$$( $(call render_prompt,$<,{ '{{DECISION_BRIEF}}': \"$(SUMMARY_OUT)\", '{{CONTENT_BRIEF}}': \"$(CONTENTS_OUT)\" }) )"; \
+	prompt="$$prompt\n\nRaw ideas (from $(CONTENTS_OUT)): $$raw_ideas"; \
 	claude $(CLAUDE_FLAGS) -p "$$prompt" > $(LOG_DIR)/02_governing_thought.json; \
 	END_TIME=$$(date +%s); \
 	DURATION=$$((END_TIME - START_TIME)); \
@@ -115,10 +183,12 @@ $(GOV_OUT): $(PROMPTS_DIR)/02_governing_thought.md $(SUMMARY_OUT) | init
 	fi
 
 narrative_spine: $(SPINE_OUT)
-$(SPINE_OUT): $(PROMPTS_DIR)/03_narrative_spine.md $(SUMMARY_OUT) $(GOV_OUT) | init
+$(SPINE_OUT): $(PROMPTS_DIR)/03_narrative_spine.md $(SUMMARY_OUT) $(GOV_OUT) $(CONTENTS_OUT) | init
 	@echo "Running 03_narrative_spine..."
 	@START_TIME=$$(date +%s); \
-	prompt="$$( $(call render_prompt,$<,{ '{{DECISION_BRIEF}}': \"$(SUMMARY_OUT)\", '{{GOVERNING_THOUGHT}}': \"$(GOVERNING_THOUGHT)\", '{{KEY_CLAIMS}}': \"$(KEY_CLAIMS)\" }) )"; \
+	gov="$$( $(call json_or_default,$(CONTENTS_OUT),"\"One-sentence governing thought\"","proposal_inputs.governing_thought_seed") )"; \
+	key_claims="$$( $(call json_or_default,$(CONTENTS_OUT),"[\\\"Claim 1\\\", \\\"Claim 2\\\", \\\"Claim 3\\\"]","proposal_inputs.key_claims_seed") )"; \
+	prompt="$$( $(call render_prompt,$<,{ '{{DECISION_BRIEF}}': \"$(SUMMARY_OUT)\", '{{GOVERNING_THOUGHT}}': \"$$gov\", '{{KEY_CLAIMS}}': \"$$key_claims\" }) )"; \
 	claude $(CLAUDE_FLAGS) -p "$$prompt" > $(LOG_DIR)/03_narrative_spine.json; \
 	END_TIME=$$(date +%s); \
 	DURATION=$$((END_TIME - START_TIME)); \
@@ -166,10 +236,11 @@ $(PLAN_OUT): $(PROMPTS_DIR)/05_slide_plan.md $(TOC_OUT) | init
 	fi
 
 slide_drafts: $(DRAFT_OUT)
-$(DRAFT_OUT): $(PROMPTS_DIR)/06_slide_drafts.md $(PLAN_OUT) | init
+$(DRAFT_OUT): $(PROMPTS_DIR)/06_slide_drafts.md $(PLAN_OUT) $(CONTENTS_OUT) | init
 	@echo "Running 06_slide_drafts..."
 	@START_TIME=$$(date +%s); \
-	prompt="$$( $(call render_prompt,$<,{ '{{SLIDE_PLAN}}': \"$(PLAN_OUT)\", '{{AVAILABLE_FACTS}}': \"$(AVAILABLE_FACTS)\", '{{TONE}}': \"$(TONE)\" }) )"; \
+	avail="$$( $(call json_or_default,$(CONTENTS_OUT),"\"\"","proposal_inputs.available_facts") )"; \
+	prompt="$$( $(call render_prompt,$<,{ '{{SLIDE_PLAN}}': \"$(PLAN_OUT)\", '{{AVAILABLE_FACTS}}': \"$$avail\", '{{TONE}}': \"$(TONE)\", '{{LANGUAGE}}': \"$(LANGUAGE)\" }) )"; \
 	claude $(CLAUDE_FLAGS) -p "$$prompt" > $(LOG_DIR)/06_slide_drafts.json; \
 	END_TIME=$$(date +%s); \
 	DURATION=$$((END_TIME - START_TIME)); \
@@ -183,10 +254,11 @@ $(DRAFT_OUT): $(PROMPTS_DIR)/06_slide_drafts.md $(PLAN_OUT) | init
 	fi
 
 visuals: $(CHART_OUT)
-$(CHART_OUT): $(PROMPTS_DIR)/07_visuals.md $(DRAFT_OUT) | init
+$(CHART_OUT): $(PROMPTS_DIR)/07_visuals.md $(DRAFT_OUT) $(CONTENTS_OUT) | init
 	@echo "Running 07_visuals..."
 	@START_TIME=$$(date +%s); \
-	prompt="$$( $(call render_prompt,$<,{ '{{SLIDE_DRAFTS}}': \"$(DRAFT_OUT)\", '{{RAW_DATA_OR_CHARTS}}': \"$(RAW_DATA_OR_CHARTS)\" }) )"; \
+	raw_data="$$( $(call json_or_default,$(CONTENTS_OUT),"\"\"","proposal_inputs.raw_data_or_charts") )"; \
+	prompt="$$( $(call render_prompt,$<,{ '{{SLIDE_DRAFTS}}': \"$(DRAFT_OUT)\", '{{RAW_DATA_OR_CHARTS}}': \"$$raw_data\", '{{LANGUAGE}}': \"$(LANGUAGE)\" }) )"; \
 	claude $(CLAUDE_FLAGS) -p "$$prompt" > $(LOG_DIR)/07_visuals.json; \
 	END_TIME=$$(date +%s); \
 	DURATION=$$((END_TIME - START_TIME)); \
@@ -220,7 +292,7 @@ export_slidev: $(MANIFEST_OUT)
 $(MANIFEST_OUT): $(PROMPTS_DIR)/09_export_slidev.md $(EDITS_OUT) $(DRAFT_OUT) $(CHART_OUT) | init
 	@echo "Running 09_export_slidev..."
 	@START_TIME=$$(date +%s); \
-	prompt="$$( $(call render_prompt,$<,{ '{{REVISED_SLIDE_PLAN}}': \"$(EDITS_OUT)\", '{{SLIDE_DRAFTS}}': \"$(DRAFT_OUT)\", '{{CHART_EDITS}}': \"$(CHART_OUT)\", '{{SLIDEV_THEME}}': \"$(SLIDEV_THEME)\" }) )"; \
+	prompt="$$( $(call render_prompt,$<,{ '{{REVISED_SLIDE_PLAN}}': \"$(EDITS_OUT)\", '{{SLIDE_DRAFTS}}': \"$(DRAFT_OUT)\", '{{CHART_EDITS}}': \"$(CHART_OUT)\", '{{SLIDEV_THEME}}': \"$(SLIDEV_THEME)\", '{{FONT}}': \"$(FONT)\", '{{BACKGROUND_COLOR}}': \"$(BACKGROUND_COLOR)\", '{{LANGUAGE}}': \"$(LANGUAGE)\" }) )"; \
 	claude $(CLAUDE_FLAGS) -p "$$prompt" > $(LOG_DIR)/09_export_slidev.json; \
 	END_TIME=$$(date +%s); \
 	DURATION=$$((END_TIME - START_TIME)); \
@@ -232,3 +304,6 @@ $(MANIFEST_OUT): $(PROMPTS_DIR)/09_export_slidev.md $(EDITS_OUT) $(DRAFT_OUT) $(
 	else \
 		echo "Warning: $(MANIFEST_OUT) not found (Time: $${DURATION}s | Tokens: In=$$INPUT_TOKENS, Out=$$OUTPUT_TOKENS | Cost: \$$$$COST)"; \
 	fi
+# Provide fallbacks for governing thought and key claims in 02/03 if seeds are empty
+EMPTY_GOV_SEED := "One-sentence governing thought"
+EMPTY_KEY_CLAIMS := "[\"Claim 1\", \"Claim 2\", \"Claim 3\"]"

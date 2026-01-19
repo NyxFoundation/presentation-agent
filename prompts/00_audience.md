@@ -20,6 +20,9 @@ Given a person’s **name** and **company**, conduct web research and produce an
 - Likely decision criteria and objections
 - Likely interests and priorities
 - Communication preferences and meeting style
+- Proposal-level defaults (doc_type, audience string, decision_needed)
+
+Also populate `proposal_inputs` (doc_type, audience, decision_needed) with evidence-backed defaults suitable for the deck.
 
 Important: Do **not** output private/personal data (home address, private contact info, family details, etc.). Only use publicly available professional information.
 
@@ -93,6 +96,11 @@ Save the output to `outputs/00_audience.json` as **JSON only**:
 
 ```json
 {
+  "proposal_inputs": {
+    "doc_type": "Proposal deck",
+    "audience": "Executive reviewers",
+    "decision_needed": "Approval for PoC"
+  },
   "input": {
     "person_name": "{{PERSON_NAME}}",
     "company": "{{COMPANY}}"
@@ -217,6 +225,7 @@ Save the output to `outputs/00_audience.json` as **JSON only**:
     }
   ],
   "notes_for_next_prompts": [
+    "Use proposal_inputs.doc_type, audience, decision_needed as defaults for 01",
     "Reflect decision_criteria weighting in 01 and onward",
     "For 05 action titles, lead with the evaluation axis this person values (e.g., ROI/risk)"
   ]
@@ -227,6 +236,7 @@ Save the output to `outputs/00_audience.json` as **JSON only**:
 
 Before finalizing, verify:
 
+* [ ] proposal_inputs (doc_type, audience, decision_needed) are populated
 * [ ] Same-name exclusion is handled (identity.confidence is reasonable)
 * [ ] Role/scope are clear enough to infer decision types
 * [ ] Recent signals are prioritized; not anchored on stale info

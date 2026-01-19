@@ -1,9 +1,10 @@
 
 ---
 Description: Draft proposal deck slide content (bullets + notes + visual specs). Prioritize concrete metrics, decision-oriented phrasing, and explicit next actions. Flag unknowns as TODO.
-Usage: `/06_slide_drafts SLIDE_PLAN=<path|json> AVAILABLE_FACTS=<string> TONE=<string>`
-Example: `/06_slide_drafts SLIDE_PLAN="outputs/05_slide_plan.json" AVAILABLE_FACTS="1,200 tickets per month / first response 24h / 280h first-tier effort" TONE="Internal, formal"`
-Language: English (output).
+Usage: `/06_slide_drafts SLIDE_PLAN=<path|json> AVAILABLE_FACTS=<string|path> TONE=<string> LANGUAGE=<string>`
+Example: `/06_slide_drafts SLIDE_PLAN="outputs/05_slide_plan.json" AVAILABLE_FACTS="outputs/00_contents.json" TONE="Internal, formal" LANGUAGE="English"`
+Tip: Prefer passing `outputs/00_contents.json` for AVAILABLE_FACTS to reuse proposal_inputs.available_facts. If LANGUAGE is `ja`, translate English (except proper nouns) to Japanese/Katakana; replace jargon with common terms or add a short explanation on first mention.
+Language: English (output) unless LANGUAGE is `ja`.
 Execution hint: Keep bullets tight. If you don’t have numbers, create TODOs rather than hand-waving.
 ---
 
@@ -25,6 +26,7 @@ For each slide:
 1. **SLIDE_PLAN** (`{{SLIDE_PLAN}}`)
 2. **AVAILABLE_FACTS** (`{{AVAILABLE_FACTS}}`)
 3. **TONE** (`{{TONE}}`)
+4. **LANGUAGE** (`{{LANGUAGE}}`): If `ja`, translate English (except proper nouns) to Japanese/Katakana; replace jargon with common terms or add a brief explanation at first use.
 
 ## Process
 
@@ -83,4 +85,4 @@ Use web search to:
 
 1. Validate benchmarks (improvement rates)
 2. Source primary/official examples
-3. Confirm latest terminology and regulations
+3. Confirm latest terminology and regulations (if LANGUAGE is `ja`, translate English terms except proper nouns and provide first-use explanations for jargon)

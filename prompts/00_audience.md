@@ -1,7 +1,8 @@
+
 ---
 Description: Research a specific audience member (name + company) via web search to build an Audience Brief for proposal decks. Summarize role, responsibilities, recent activities, decision patterns, interests, and communication preferences. All inferences must be evidence-grounded and expressed as hypotheses with confidence.
-Usage: `/00_audience PERSON_NAME=<string> COMPANY=<string>`
-Example: `/00_audience PERSON_NAME="Satya Nadella" COMPANY="Microsoft"`
+Usage: `/00_audience PERSON_NAME=<string|comma-list> COMPANY=<string|comma-list>`
+Example: `/00_audience PERSON_NAME="Satya Nadella,Tim Cook" COMPANY="Microsoft,Apple"`
 Language: English (output). Keep it concise and executive-focused.
 Execution hint: Run this before 01. The Audience Brief refines decision criteria, objections, slide emphasis, tone, and proof strategy.
 ---------------------------------------------------------------------------------------------------------------------------------------
@@ -28,8 +29,8 @@ Important: Do **not** output private/personal data (home address, private contac
 
 ## Inputs
 
-1. **PERSON_NAME** (`{{PERSON_NAME}}`): Audience name
-2. **COMPANY** (`{{COMPANY}}`): Company name
+1. **PERSON_NAME** (`{{PERSON_NAME}}`): Audience name(s). Supports comma-separated list aligned with COMPANY.
+2. **COMPANY** (`{{COMPANY}}`): Company name(s). Supports comma-separated list aligned with PERSON_NAME.
 
 ## Process
 
@@ -41,6 +42,7 @@ Important: Do **not** output private/personal data (home address, private contac
    * Alignment of title/department/experience
    * Speaking records (if needed)
 3. If uncertain, list up to 3 candidates, pick the most likely, and note reasons and uncertainty.
+4. If PERSON_NAME/COMPANY are comma-separated lists, repeat steps 1–3 for each aligned pair.
 
 ### Step 2: Role & Scope (What They Own)
 
@@ -101,120 +103,124 @@ Save the output to `outputs/00_audience.json` as **JSON only**:
     "audience": "Executive reviewers",
     "decision_needed": "Approval for PoC"
   },
-  "input": {
-    "person_name": "{{PERSON_NAME}}",
-    "company": "{{COMPANY}}"
-  },
-  "identity": {
-    "matched_person": {
-      "full_name": "",
-      "company": "",
-      "current_title": "",
-      "org_unit": "",
-      "location_or_region": ""
-    },
-    "disambiguation_notes": "",
-    "confidence": "high|medium|low",
-    "other_candidates": [
-      {
-        "full_name": "",
-        "reason_possible": "",
-        "why_not_selected": ""
-      }
-    ]
-  },
-  "role_scope": {
-    "summary": "",
-    "responsibilities": [""],
-    "typical_decisions": [""],
-    "stakeholders_they_influence": [""],
-    "budget_or_approval_signals": [""]
-  },
-  "recent_activity": {
-    "time_window": "last_18_months",
-    "highlights": [
-      {
-        "date": "YYYY-MM-DD",
-        "type": "press|keynote|interview|earnings|blog|social|other",
-        "headline": "",
-        "why_it_matters": "",
-        "source_ids": ["S1"]
-      }
-    ]
-  },
-  "audience_hypotheses": {
-    "decision_criteria": [
-      {
-        "hypothesis": "",
-        "evidence": "",
-        "source_ids": ["S1"],
-        "confidence": "high|medium|low"
-      }
-    ],
-    "likely_objections": [
-      {
-        "hypothesis": "",
-        "evidence": "",
-        "source_ids": ["S2"],
-        "confidence": "high|medium|low"
-      }
-    ],
-    "interests_priorities": {
-      "near_term": [
-        {
-          "hypothesis": "",
+  "audiences": [
+    {
+      "input": {
+        "person_name": "{{PERSON_NAME}}",
+        "company": "{{COMPANY}}"
+      },
+      "identity": {
+        "matched_person": {
+          "full_name": "",
+          "company": "",
+          "current_title": "",
+          "org_unit": "",
+          "location_or_region": ""
+        },
+        "disambiguation_notes": "",
+        "confidence": "high|medium|low",
+        "other_candidates": [
+          {
+            "full_name": "",
+            "reason_possible": "",
+            "why_not_selected": ""
+          }
+        ]
+      },
+      "role_scope": {
+        "summary": "",
+        "responsibilities": [""],
+        "typical_decisions": [""],
+        "stakeholders_they_influence": [""],
+        "budget_or_approval_signals": [""]
+      },
+      "recent_activity": {
+        "time_window": "last_18_months",
+        "highlights": [
+          {
+            "date": "YYYY-MM-DD",
+            "type": "press|keynote|interview|earnings|blog|social|other",
+            "headline": "",
+            "why_it_matters": "",
+            "source_ids": ["S1"]
+          }
+        ]
+      },
+      "audience_hypotheses": {
+        "decision_criteria": [
+          {
+            "hypothesis": "",
+            "evidence": "",
+            "source_ids": ["S1"],
+            "confidence": "high|medium|low"
+          }
+        ],
+        "likely_objections": [
+          {
+            "hypothesis": "",
+            "evidence": "",
+            "source_ids": ["S2"],
+            "confidence": "high|medium|low"
+          }
+        ],
+        "interests_priorities": {
+          "near_term": [
+            {
+              "hypothesis": "",
+              "evidence": "",
+              "source_ids": ["S3"],
+              "confidence": "high|medium|low"
+            }
+          ],
+          "mid_long_term": [
+            {
+              "hypothesis": "",
+              "evidence": "",
+              "source_ids": ["S4"],
+              "confidence": "high|medium|low"
+            }
+          ]
+        },
+        "communication_preferences": [
+          {
+            "hypothesis": "",
+            "evidence": "",
+            "source_ids": ["S5"],
+            "confidence": "high|medium|low"
+          }
+        ],
+        "risk_posture": {
+          "hypothesis": "conservative|balanced|experimental",
           "evidence": "",
-          "source_ids": ["S3"],
+          "source_ids": ["S6"],
           "confidence": "high|medium|low"
         }
-      ],
-      "mid_long_term": [
-        {
-          "hypothesis": "",
-          "evidence": "",
-          "source_ids": ["S4"],
-          "confidence": "high|medium|low"
+      },
+      "proposal_deck_guidance": {
+        "emphasize_slides": [
+          {
+            "slide_intent": "ROI|Risk|Plan|Feasibility|Comparison|Proof|CTA",
+            "why": "",
+            "proof_assets_to_prepare": [""],
+            "confidence": "high|medium|low"
+          }
+        ],
+        "hooks_for_opening": [
+          {
+            "hook": "",
+            "why_it_lands": "",
+            "source_ids": ["S1"],
+            "confidence": "high|medium|low"
+          }
+        ],
+        "phrasing_and_tone": {
+          "recommended_tone": "",
+          "do": [""],
+          "avoid": [""]
         }
-      ]
-    },
-    "communication_preferences": [
-      {
-        "hypothesis": "",
-        "evidence": "",
-        "source_ids": ["S5"],
-        "confidence": "high|medium|low"
       }
-    ],
-    "risk_posture": {
-      "hypothesis": "conservative|balanced|experimental",
-      "evidence": "",
-      "source_ids": ["S6"],
-      "confidence": "high|medium|low"
     }
-  },
-  "proposal_deck_guidance": {
-    "emphasize_slides": [
-      {
-        "slide_intent": "ROI|Risk|Plan|Feasibility|Comparison|Proof|CTA",
-        "why": "",
-        "proof_assets_to_prepare": [""],
-        "confidence": "high|medium|low"
-      }
-    ],
-    "hooks_for_opening": [
-      {
-        "hook": "",
-        "why_it_lands": "",
-        "source_ids": ["S1"],
-        "confidence": "high|medium|low"
-      }
-    ],
-    "phrasing_and_tone": {
-      "recommended_tone": "",
-      "do": [""],
-      "avoid": [""]
-    }
-  },
+  ],
   "sources": [
     {
       "source_id": "S1",
@@ -237,7 +243,7 @@ Save the output to `outputs/00_audience.json` as **JSON only**:
 Before finalizing, verify:
 
 * [ ] proposal_inputs (doc_type, audience, decision_needed) are populated
-* [ ] Same-name exclusion is handled (identity.confidence is reasonable)
+* [ ] Same-name exclusion is handled (identity.confidence is reasonable) for each entry
 * [ ] Role/scope are clear enough to infer decision types
 * [ ] Recent signals are prioritized; not anchored on stale info
 * [ ] Traits/leanings are hypotheses with evidence + confidence

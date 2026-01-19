@@ -60,7 +60,28 @@ For each technical concept:
 * Capture business value linkage (latency, cost, reliability, security, operations, compliance)
 * Capture required resources (data, infra, people, integrations)
 
-### Step 4: Consistency Checks
+### Step 4: Stakeholder Synergy & Governance (Multi-Party Proposals)
+
+If the proposal involves multiple stakeholders (organizations, partners, sponsors):
+
+**Stakeholder Synergy:**
+* For each stakeholder, document:
+  * `stakeholder_name`: The organization/entity
+  * `value_proposition`: What they gain from participating
+  * `reason_for_inclusion`: Why this specific stakeholder is essential (not just "nice to have")
+* If the synergy rationale is unclear or missing, create a TODO.
+
+**Governance Model:**
+* Define who makes the final decision (`final_decision_maker`)
+* Draft a RACI matrix for key responsibilities:
+  * R = Responsible (does the work)
+  * A = Accountable (final authority)
+  * C = Consulted (provides input)
+  * I = Informed (kept updated)
+* Define the escalation path for disputes or blockers
+* If governance details are missing, create explicit TODOs rather than leaving them vague.
+
+### Step 5: Consistency Checks
 
 * Ensure terminology is consistent (same names for the same things)
 * Remove duplicates
@@ -84,6 +105,13 @@ Save the output to `outputs/00_contents.json` as **JSON only**:
     "introduction_path": "{{INTRODUCTION}}",
     "extracted_at": "YYYY-MM-DD"
   },
+  "stakeholder_synergy": [
+    {
+      "stakeholder_name": "",
+      "value_proposition": "",
+      "reason_for_inclusion": ""
+    }
+  ],
   "executive_summary": {
     "one_liner": "",
     "target_audience": "",
@@ -160,7 +188,17 @@ Save the output to `outputs/00_contents.json` as **JSON only**:
       "operations": [""]
     },
     "dependencies": [""],
-    "open_questions": [""]
+    "open_questions": [""],
+    "governance_model": {
+      "final_decision_maker": "",
+      "raci_draft": [
+        {
+          "entity": "",
+          "responsibility": "R|A|C|I"
+        }
+      ],
+      "escalation_path": ""
+    }
   },
   "plan": {
     "phases": [
@@ -229,6 +267,8 @@ Before finalizing, verify:
 * [ ] proposal_inputs (context/raw_ideas/governing_thought_seed/key_claims_seed/available_facts/raw_data_or_charts) are populated or TODO-labeled
 * [ ] No invented facts: everything is either explicit, hypothesis-labeled, or TODO
 * [ ] All proposal slots are filled with at least placeholders or TODOs
+* [ ] **stakeholder_synergy** is populated for multi-party proposals with clear value propositions and inclusion rationale
+* [ ] **governance_model** includes final_decision_maker, RACI draft, and escalation_path (or explicit TODOs)
 * [ ] Technical concepts are translated into plain English and linked to business value
 * [ ] Duplicates removed; terminology is consistent
 * [ ] Output is valid JSON only and matches the schema

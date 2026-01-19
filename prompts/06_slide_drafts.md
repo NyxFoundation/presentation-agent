@@ -38,27 +38,52 @@ For each slide:
 - Explicitly state human-in-the-loop boundaries, what is out of scope, and data governance (access control, retention, auditability) where relevant.
 - When positioning “competition” formats, clarify research/sandbox intent and distance from crypto/speculation claims.
 
-### Step 1: Bullets (Concrete + Decision-Oriented)
+### Step 1: Compliance & Tone Check (NEW)
+
+Before drafting any slide content:
+- Review all text for inappropriate or overly casual language (e.g., "bet," "gamble," "harmful behavior is valuable data," "賭け金").
+- Rephrase from the perspective of a risk-averse executive.
+- All claims must be defensible and professional.
+- Avoid sensationalism, hype, or language that could be seen as reckless.
+- When discussing AI agents, data collection, or potentially sensitive topics:
+  - Frame risks as "research opportunities" or "governance challenges," not as features.
+  - Emphasize safety guardrails and human oversight.
+  - Avoid language that could imply endorsement of harmful or unethical behavior.
+
+### Step 2: Bullets (Concrete + Decision-Oriented)
 
 - 3–5 concise points
 - Include numbers when possible (current/target/delta)
-- On proposal slides, prioritize “information needed for a decision”
+- On proposal slides, prioritize "information needed for a decision"
 - Organization/credibility slides should explicitly state who is hosting, track record, and why they are qualified
 - Minimize text-heavy slides; bias toward visuals (charts/tables/diagrams) that can be rendered from the visual_spec
 
-### Step 2: Notes (Talk Track)
+### Step 3: Notes (Talk Track)
 
 - Add 60–120 characters/words of supporting notes (coherent when spoken)
 
-### Step 3: Visual Specs
+### Step 4: Visual Specs
 
 - In data_requirements list needed items (columns/series/comparators)
 - In annotations, state the conclusion you want the visual to convey
 
-### Step 4: TODO Discipline
+### Step 5: TODO Discipline & Severity Assessment (ENHANCED)
 
+**Basic TODO Discipline:**
 - Push unknowns into todo (do not assert on guesses)
 - Add TODOs for missing guardrails (data governance, safety reviews, legal stance) instead of hand-waving.
+
+**Severity Assessment (NEW):**
+For each item in `todo`, add a `severity` field:
+- `high`: Blocks a go/no-go decision (e.g., total cost, final decision-maker, legal review status, budget approval ceiling)
+- `medium`: Important but not blocking (e.g., exact timeline, detailed breakdown, specific metrics)
+- `low`: Nice-to-have (e.g., additional examples, polish items)
+
+**Gating Mechanism (NEW):**
+If any slide has a `todo` with `severity: high`:
+- Prepend the `action_title` with `[DRAFT - CRITICAL INFO MISSING]`
+- Add a note in `speaker_notes` explaining what information is required before this slide can be finalized.
+- This ensures incomplete slides are never mistaken for finished work.
 
 ## Output Format
 
@@ -77,7 +102,12 @@ Save the output to `outputs/06_slide_drafts.json` as **JSON only**:
         "data_requirements": ["..."],
         "annotations": ["..."]
       },
-      "todo": ["..."]
+      "todo": [
+        {
+          "item": "Description of missing information",
+          "severity": "high|medium|low"
+        }
+      ]
     }
   ]
 }
@@ -85,8 +115,12 @@ Save the output to `outputs/06_slide_drafts.json` as **JSON only**:
 
 ## Quality Checklist
 
+* [ ] **Compliance check passed**: No inappropriate language (e.g., "bet," "gamble," "harmful behavior is valuable data")
+* [ ] All claims are defensible and professional (risk-averse executive perspective)
 * [ ] Bullets are concise and concrete (numbers/proper nouns)
 * [ ] No unfounded assertions (unknowns routed to TODO)
+* [ ] **TODO severity assigned**: Each TODO item has a severity (high/medium/low)
+* [ ] **Gating applied**: Slides with high-severity TODOs are marked `[DRAFT - CRITICAL INFO MISSING]`
 * [ ] Notes are speakable and reflect audience priorities (education impact + governance for AI/agent topics)
 * [ ] JSON only
 

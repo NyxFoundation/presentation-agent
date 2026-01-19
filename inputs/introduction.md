@@ -56,12 +56,15 @@ AIエージェントのみが参加する「AIエージェント経済」をオ�
 
 ### 2.3 Education / Community / Academia
 - ZK Tokyo（6週間の教育＋プロダクト開発サマープログラム）
+  - https://www.youtube.com/@zk-tokyo
   - ETHTokyoで毎年複数チームが上位入賞
   - 今年で4年目
   - 初年・3年目はVitalikがデモに来訪
   - 今年は東大ブロックチェーン寄附講座と共同開催
 - DEPCON（東大ブロックチェーン寄附講座とのイベント）
+  - ​https://luma.com/g64yev2s
 - DEPCON Hakodate
+  - https://luma.com/51q0qyhl
   - SCIS2026（国内最大級の暗号・セキュリティ学会）サイドイベント
   - 2026-01-29 函館で開催
   - 参加者例：大学教授、学生、研究所、Ethereum Foundation、台湾Ethereumコミュニティ

@@ -42,7 +42,21 @@ Use this template unless it clearly doesn’t fit:
 - Scope (teams/processes)
 - Cost cap or budget window (if unknown, send to TODO)
 
-### Step 2: Derive 3–5 Key Claims (No Overlap)
+### Step 2: Define Explicit Ask & Goal-Ask Relationship (NEW)
+
+**Explicit Ask:**
+* State the specific, concrete action or decision requested from the audience.
+* Be precise: "Approve a 4-week exploratory meeting" is better than "Support our initiative."
+* Example: "Approve a 4-week exploratory meeting to assess strategic fit before committing resources."
+
+**Goal-Ask Relationship:**
+* Explain how the explicit_ask connects to the larger strategic goal.
+* Clarify why approving this specific ask is a logical, low-risk first step.
+* Example: "The exploratory meeting is the first low-commitment step toward co-designing the AI Agent Economy Competition, allowing each entity to validate strategic fit before committing resources."
+
+This ensures the decision-maker understands both "what am I deciding now" AND "what does this lead to."
+
+### Step 3: Derive 3–5 Key Claims (No Overlap)
 
 Proposal-friendly default claim categories (use as needed):
 
@@ -52,11 +66,11 @@ Proposal-friendly default claim categories (use as needed):
 4. Risk/security handling
 5. Cost soundness/ROI
 
-### Step 3: Evidence Plan
+### Step 4: Evidence Plan
 
 - List the key evidence (numbers, comparisons, examples, PoC design, risk assessment)
 
-### Step 4: Pressure-Test
+### Step 5: Pressure-Test
 
 - Provide two alternatives (e.g., status quo, outsourcing, different product, phased rollout)
 - Summarize tradeoffs briefly
@@ -68,6 +82,8 @@ Save the output to `outputs/02_governing_thought.json` as **JSON only**:
 ```json
 {
   "governing_thought": "...",
+  "explicit_ask": "The specific, concrete action or decision requested from the audience in this proposal.",
+  "goal_ask_relationship": "How the explicit_ask connects to the larger strategic goal. Explains why approving this specific ask is a logical first step toward the ultimate objective.",
   "key_claims": ["...", "...", "..."],
   "supporting_evidence_needed": ["..."],
   "alternatives_considered": [
@@ -80,6 +96,8 @@ Save the output to `outputs/02_governing_thought.json` as **JSON only**:
 ## Quality Checklist
 
 * [ ] Governing thought is one sentence and enables a decision
+* [ ] **explicit_ask** is specific and concrete (not vague like "support our initiative")
+* [ ] **goal_ask_relationship** clearly explains how the ask leads to the larger goal
 * [ ] 3–5 claims without overlap
 * [ ] Evidence is measurable or demonstrable
 * [ ] Alternatives are realistic

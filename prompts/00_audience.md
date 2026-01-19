@@ -62,7 +62,7 @@ Important: Do **not** output private/personal data (home address, private contac
 4. If PERSON_NAME/COMPANY are comma-separated lists, repeat steps 1–3 for each aligned pair.
 5. If a single PERSON_NAME is associated with multiple companies, still keep the single aligned pair as input; record additional affiliations inside `role_scope.summary` and `identity.disambiguation_notes` only if supported.
 
-### Step 2: Role & Scope (What They Own)
+### Step 2: Role & Scope (What They Own + Decision Authority)
 
 * Summarize current title and remit (P/L, tech/business/corporate scope, regions) based on **primary sources first**.
 * Infer typical decisions (investments, vendor selection, PoC approvals, risk tolerance, prioritization) using:
@@ -74,6 +74,16 @@ Important: Do **not** output private/personal data (home address, private contac
   * **responsibilities** (what they officially do)
   * **typical_decisions** (what they likely decide)
 * If budget authority is not explicit, describe it cautiously as **influence signals**, not ownership.
+
+**Decision Authority Hypothesis (NEW):**
+* Estimate the ceiling of their approval power based on role and public signals.
+* Example: "Can likely approve pilots up to $50k and 3 months, but requires VP sign-off for larger commitments."
+* This helps calibrate the size and scope of the ask in subsequent proposal steps.
+
+**Expected Role in Proposal (NEW):**
+* Define what specific action we need from this person.
+* Example: "Be the internal champion and introduce us to the Startale/Soneium team."
+* This clarifies the "ask" and ensures the proposal is targeted appropriately.
 
 ### Step 3: Recent Activities & Public Signals (Recency-Weighted)
 
@@ -207,7 +217,15 @@ Save the output to `outputs/00_audience.json` as **JSON only**:
         "responsibilities": [""],
         "typical_decisions": [""],
         "stakeholders_they_influence": [""],
-        "budget_or_approval_signals": [""]
+        "budget_or_approval_signals": [""],
+        "decision_authority_hypothesis": {
+          "description": "Based on role and public signals, what is the ceiling of their approval power?",
+          "estimate": ""
+        },
+        "expected_role_in_proposal": {
+          "description": "What specific action do we need from this person?",
+          "expected_action": ""
+        }
       },
       "recent_activity": {
         "time_window": "last_18_months",
@@ -340,6 +358,8 @@ Before finalizing, verify:
 * [ ] proposal_inputs (doc_type, audience, decision_needed) are populated and conservative if uncertain
 * [ ] Same-name exclusion is handled (identity.confidence is reasonable) for each entry
 * [ ] Role/scope are grounded primarily in official sources
+* [ ] **decision_authority_hypothesis** is populated with a realistic estimate of approval ceiling
+* [ ] **expected_role_in_proposal** clearly defines the specific action needed from this person
 * [ ] Recent signals prioritize last 12–18 months; older items are labeled as context
 * [ ] Hypotheses include evidence + source_ids + calibrated confidence (Step 4)
 * [ ] No private info (addresses, personal contacts, family, etc.)

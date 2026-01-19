@@ -46,7 +46,18 @@ You are the QA lead and Slidev exporter for proposal decks.
 - If the first two slides are weak, minimally adjust order/titles
 - If a slide holds multiple claims, merge or split (respecting constraints)
 
-### Step 2: Slidev File Generation (One Slide = One File)
+### Step 2: Visual Placeholder Generation (NEW)
+
+If a slide draft contains a `visual_spec` with a `type` other than `none`:
+1. Remove any raw visual instruction text (e.g., `> Visual: ...` blockquotes).
+2. Insert a Markdown image link to a placeholder:
+   `![Visual: {type} - {annotations}](https://via.placeholder.com/800x400.png?text={type})`
+3. Add a comment below: `<!-- TODO: Replace with actual visual -->`
+4. If the visual_spec includes data_requirements, include them in the comment for reference.
+
+This ensures no raw visual instructions remain in the final output, maintaining a professional appearance.
+
+### Step 3: Slidev File Generation (One Slide = One File)
 
 For each slide:
 
@@ -56,7 +67,7 @@ For each slide:
   * frontmatter
   * `# Action Title`
   * bullets
-  * optional blockquote for visual note (keep short)
+  * visual placeholder (if applicable, from Step 2)
   * speaker notes in HTML comment
   * Apply layout `cover` for title and thank-you slides; otherwise default
   * Use `theme: {{SLIDEV_THEME}}`, font `{{FONT}}`, background `{{BACKGROUND_COLOR}}`, language `{{LANGUAGE}}`
@@ -95,6 +106,8 @@ Save the output to `outputs/09_slidev_manifest.json` as **JSON only**:
 * [ ] Impact/feasibility/risk/cost are covered
 * [ ] One message per slide
 * [ ] One file = one slide (under slides/)
+* [ ] **No raw visual instructions** (e.g., `> Visual: ...`) remain in the final Markdown content
+* [ ] Visual placeholders are properly formatted with TODO comments for replacement
 * [ ] JSON only (manifest)
 * [ ] Slidev Markdown is valid
 

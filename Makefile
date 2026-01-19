@@ -7,8 +7,8 @@ LOG_DIR ?= $(OUTPUT_DIR)/logs
 PERSON_NAME ?= 礒津政明
 COMPANY ?= ソニーグループ株式会社,株式会社ソニー・グローバルエデュケーション,ソニーネットワークコミュニケーションズ株式会社,S.BLOX株式会社,Soneium,Startale
 INTRODUCTION ?= inputs/introduction.md
-CONSTRAINTS ?= 10 slides, 5-minute briefing, internal audience
-TONE ?= Internal, formal
+CONSTRAINTS ?= 15 slides, 15-minute
+TONE ?= casual
 SLIDEV_THEME ?= default
 FONT ?= BIZ UDPMincho
 BACKGROUND_COLOR ?= White
@@ -26,19 +26,22 @@ DRAFT_OUT := $(OUTPUT_DIR)/06_slide_drafts.json
 CHART_OUT := $(OUTPUT_DIR)/07_chart_edits.json
 EDITS_OUT := $(OUTPUT_DIR)/08_edits.json
 MANIFEST_OUT := $(OUTPUT_DIR)/09_slidev_manifest.json
+REVIEW_OUT := $(OUTPUT_DIR)/10_executive_review.json
 
 # Claude configuration
 export CLAUDE_CODE_PERMISSIONS := bypassPermissions
 export CLAUDE_CODE_MAX_OUTPUT_TOKENS := 100000
 CLAUDE_FLAGS ?= --dangerously-skip-permissions --output-format json
 
-.PHONY: all init clean audience contents summary governing_thought narrative_spine toc_tree slide_plan slide_drafts visuals approval_edit export_slidev help
+.PHONY: all init clean audience contents summary governing_thought narrative_spine toc_tree slide_plan slide_drafts visuals approval_edit export_slidev executive_review help
 
-all: export_slidev
+all: executive_review
 
 help:
-	@echo "Targets: audience, contents, summary, governing_thought, narrative_spine, toc_tree, slide_plan, slide_drafts, visuals, approval_edit, export_slidev"
+	@echo "Targets: audience, contents, summary, governing_thought, narrative_spine, toc_tree, slide_plan, slide_drafts, visuals, approval_edit, export_slidev, executive_review"
 	@echo "Edit Makefile variables (PERSON_NAME, COMPANY, INTRODUCTION, CONSTRAINTS, TONE, LANGUAGE, FONT, BACKGROUND_COLOR, SLIDEV_THEME) before running."
+	@echo ""
+	@echo "Pipeline: audience -> contents -> summary -> governing_thought -> narrative_spine -> toc_tree -> slide_plan -> slide_drafts -> visuals -> approval_edit -> export_slidev -> executive_review"
 
 init:
 	@mkdir -p $(OUTPUT_DIR) $(LOG_DIR)
@@ -126,3 +129,10 @@ $(MANIFEST_OUT): $(PROMPTS_DIR)/09_export_slidev.md $(EDITS_OUT) $(DRAFT_OUT) $(
 	@prompt="$$(sed -e 's|{{REVISED_SLIDE_PLAN}}|$(EDITS_OUT)|g' -e 's|{{SLIDE_DRAFTS}}|$(DRAFT_OUT)|g' -e 's|{{CHART_EDITS}}|$(CHART_OUT)|g' -e 's|{{SLIDEV_THEME}}|$(SLIDEV_THEME)|g' -e 's|{{FONT}}|$(FONT)|g' -e 's|{{BACKGROUND_COLOR}}|$(BACKGROUND_COLOR)|g' -e 's|{{LANGUAGE}}|$(LANGUAGE)|g' $<)"; \
 	claude $(CLAUDE_FLAGS) -p "$$prompt" > $(LOG_DIR)/09_export_slidev.json; \
 	if [ -f "$(MANIFEST_OUT)" ]; then echo "Finished 09_export_slidev"; else echo "Warning: $(MANIFEST_OUT) not found"; fi
+
+executive_review: $(REVIEW_OUT)
+$(REVIEW_OUT): $(PROMPTS_DIR)/10_executive_review.md $(MANIFEST_OUT) $(DRAFT_OUT) $(GOV_OUT) $(AUDIENCE_OUT) | init
+	@echo "Running 10_executive_review..."
+	@prompt="$$(sed -e 's|{{SLIDEV_MANIFEST}}|$(MANIFEST_OUT)|g' -e 's|{{SLIDE_DRAFTS}}|$(DRAFT_OUT)|g' -e 's|{{GOVERNING_THOUGHT}}|$(GOV_OUT)|g' -e 's|{{AUDIENCE_BRIEF}}|$(AUDIENCE_OUT)|g' $<)"; \
+	claude $(CLAUDE_FLAGS) -p "$$prompt" > $(LOG_DIR)/10_executive_review.json; \
+	if [ -f "$(REVIEW_OUT)" ]; then echo "Finished 10_executive_review"; else echo "Warning: $(REVIEW_OUT) not found"; fi

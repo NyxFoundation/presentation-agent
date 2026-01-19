@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+:root {
+  --slidev-theme-primary: #000000 !important;
+  --slidev-theme-default: #000000;
+  --slidev-theme-accent: #000000;
+}
+
+/* ===== Force light mode - white background for slide content only ===== */
+.slidev-layout {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
+
+/* Global font settings */
+.slidev-layout,
+.slidev-page,
+p,
+span,
+div,
+li,
+a,
+td,
+th {
+  font-family: 'Noto Sans JP', 'BIZ UDPMincho', sans-serif !important;
+  color: #000000;
+}
+
+/* ===== H1 Title Styling - スタイリッシュな黒タイトル ===== */
+.slidev-layout h1 {
+  font-family: 'BIZ UDPMincho', serif !important;
+  color: #000000 !important;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #000000;
+  display: inline-block;
+}
+
+/* H2-H6 styling */
+.slidev-layout h2 {
+  font-family: 'BIZ UDPMincho', serif !important;
+  color: #000000 !important;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.slidev-layout h3 {
+  font-family: 'BIZ UDPMincho', serif !important;
+  color: #1a1a1a !important;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.slidev-layout h4,
+.slidev-layout h5,
+.slidev-layout h6 {
+  font-family: 'Noto Sans JP', sans-serif !important;
+  color: #333333 !important;
+  font-weight: 500;
+}
+
+/* ===== Cover/Intro layouts - タイトルは下線なし ===== */
+.slidev-layout.cover h1,
+.slidev-layout.intro h1 {
+  border-bottom: none;
+  display: block;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* ===== Table styling ===== */
+.slidev-layout table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.slidev-layout th {
+  background: #f5f5f5;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid #000000;
+}
+
+.slidev-layout td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.slidev-layout tr:hover {
+  background: #fafafa;
+}
+
+/* ===== Code blocks ===== */
+.slidev-layout pre {
+  background: #f8f8f8 !important;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.slidev-layout code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ===== Lists ===== */
+.slidev-layout ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.slidev-layout li {
+  margin-bottom: 0.25rem;
+  line-height: 1.6;
+}
+
+/* ===== Links ===== */
+.slidev-layout a {
+  color: #000000 !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.slidev-layout a:hover {
+  opacity: 0.7;
+}
+
+/* ===== Strong/Bold ===== */
+.slidev-layout strong {
+  font-weight: 700;
+  color: #000000;
+}
+
+/* ===== Page number styling ===== */
+.slidev-page:not(.slidev-layout-cover) .slidev-page-number {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Noto Sans JP', sans-serif !important;
+  font-size: 12px;
+  color: #666666;
+}
+
+/* Hide page number on cover layout */
+.slidev-layout-cover .slidev-page-number {
+  display: none !important;
+}
+
+/* ===== Global logo in bottom-right ===== */
+.nyx-global-logo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.nyx-global-logo img {
+  width: 100px;
+  height: auto;
+  opacity: 0.8;
+}
+
+/* ===== Mermaid diagrams ===== */
+.mermaid {
+  background: transparent !important;
+}
+
+/* ===== Blockquote ===== */
+.slidev-layout blockquote {
+  border-left: 3px solid #000000;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: #444444;
+}
+
+/* ===== Horizontal rule ===== */
+.slidev-layout hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 1.5rem 0;
+}

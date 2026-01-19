@@ -1,8 +1,8 @@
 
 ---
 Description: Draft proposal deck slide content (bullets + notes + visual specs). Prioritize concrete metrics, decision-oriented phrasing, and explicit next actions. Flag unknowns as TODO.
-Usage: `/06_proposal_draft_slides SLIDE_PLAN=<path|json> AVAILABLE_FACTS=<string> TONE=<string>`
-Example: `/06_proposal_draft_slides SLIDE_PLAN="outputs/05_slide_plan.json" AVAILABLE_FACTS="1,200 tickets per month / first response 24h / 280h first-tier effort" TONE="Internal, formal"`
+Usage: `/06_slide_drafts SLIDE_PLAN=<path|json> AVAILABLE_FACTS=<string> TONE=<string>`
+Example: `/06_slide_drafts SLIDE_PLAN="outputs/05_slide_plan.json" AVAILABLE_FACTS="1,200 tickets per month / first response 24h / 280h first-tier effort" TONE="Internal, formal"`
 Language: English (output).
 Execution hint: Keep bullets tight. If you don’t have numbers, create TODOs rather than hand-waving.
 ---

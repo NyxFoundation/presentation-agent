@@ -1,8 +1,8 @@
 
 ---
 Description: Optimize proposal visuals by clarifying takeaway, removing clutter, and adding focus cues. Update the visual spec so it can be generated or drawn consistently.
-Usage: `/07_proposal_optimize_visuals SLIDE_DRAFTS=<path|json> RAW_DATA_OR_CHARTS=<string>`
-Example: `/07_proposal_optimize_visuals SLIDE_DRAFTS="outputs/06_slide_drafts.json" RAW_DATA_OR_CHARTS="Existing trend chart available"`
+Usage: `/07_visuals SLIDE_DRAFTS=<path|json> RAW_DATA_OR_CHARTS=<string>`
+Example: `/07_visuals SLIDE_DRAFTS="outputs/06_slide_drafts.json" RAW_DATA_OR_CHARTS="Existing trend chart available"`
 Language: English (output).
 Execution hint: Editing only—do not change claims. Make the visual prove the existing claim.
 ---

@@ -1,8 +1,8 @@
 
 ---
 Description: Build a proposal-specific TOC and argument tree that covers justification, feasibility, risks, plan, and ROI. Ensures objections and alternatives are explicitly addressed.
-Usage: `/04_proposal_build_toc_tree NARRATIVE_SPINE=<path|json> GOVERNING_THOUGHT=<string> KEY_CLAIMS=<json>`
-Example: `/04_proposal_build_toc_tree NARRATIVE_SPINE="outputs/03_narrative_spine.json" GOVERNING_THOUGHT="..." KEY_CLAIMS='["...", "..."]'`
+Usage: `/04_toc_tree NARRATIVE_SPINE=<path|json> GOVERNING_THOUGHT=<string> KEY_CLAIMS=<json>`
+Example: `/04_toc_tree NARRATIVE_SPINE="outputs/03_narrative_spine.json" GOVERNING_THOUGHT="..." KEY_CLAIMS='["...", "..."]'`
 Language: English (output).
 Execution hint: This is where you ensure no “approval questions” are left unanswered.
 ---

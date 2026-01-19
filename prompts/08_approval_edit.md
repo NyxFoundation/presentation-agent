@@ -1,8 +1,8 @@
 
 ---
 Description: Edit proposal deck for density and approval-readiness. Merge redundancies, tighten language, enforce constraints, and produce a revised slide plan plus an edit log.
-Usage: `/08_proposal_edit_for_approval SLIDE_PLAN=<path|json> SLIDE_DRAFTS=<path|json> CONSTRAINTS=<string>`
-Example: `/08_proposal_edit_for_approval SLIDE_PLAN="outputs/05_slide_plan.json" SLIDE_DRAFTS="outputs/06_slide_drafts.json" CONSTRAINTS="Within 10 slides, 5-minute readout, internal audience"`
+Usage: `/08_approval_edit SLIDE_PLAN=<path|json> SLIDE_DRAFTS=<path|json> CONSTRAINTS=<string>`
+Example: `/08_approval_edit SLIDE_PLAN="outputs/05_slide_plan.json" SLIDE_DRAFTS="outputs/06_slide_drafts.json" CONSTRAINTS="Within 10 slides, 5-minute readout, internal audience"`
 Language: English (output).
 Execution hint: Prefer deleting/merging. Keep the deck “answer-first” and executive skim-friendly.
 ---

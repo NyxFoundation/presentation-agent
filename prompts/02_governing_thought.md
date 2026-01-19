@@ -1,8 +1,8 @@
 
 ---
 Description: Define the one-sentence governing thought for a proposal deck and derive 3–5 supporting claims. Includes proposal-specific phrasing (decision request + scope + expected impact + timeline).
-Usage: `/02_proposal_define_governing_thought DECISION_BRIEF=<path|json> RAW_IDEAS=<string>`
-Example: `/02_proposal_define_governing_thought DECISION_BRIEF="outputs/01_decision_brief.json" RAW_IDEAS="First-response capacity is strained. Want to PoC FAQ + internal bot and validate impact. IT team has security concerns."`
+Usage: `/02_governing_thought DECISION_BRIEF=<path|json> RAW_IDEAS=<string>`
+Example: `/02_governing_thought DECISION_BRIEF="outputs/01_decision_brief.json" RAW_IDEAS="First-response capacity is strained. Want to PoC FAQ + internal bot and validate impact. IT team has security concerns."`
 Language: English (output).
 Execution hint: The governing thought becomes the “deck headline.” Every slide must support it.
 ---

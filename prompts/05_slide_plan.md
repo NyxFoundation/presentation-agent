@@ -1,8 +1,8 @@
 
 ---
 Description: Create a proposal deck slide plan with assertion headlines, evidence needs, and visuals. Includes a recommended default slide sequence for proposals (Why→What→Proof→How→Plan→Risk/Cost→CTA).
-Usage: `/05_proposal_create_slide_plan TOC_TREE=<path|json> CONSTRAINTS=<string>`
-Example: `/05_proposal_create_slide_plan TOC_TREE="outputs/04_toc_argument_tree.json" CONSTRAINTS="10 slides, 5-minute briefing, internal audience"`
+Usage: `/05_slide_plan TOC_TREE=<path|json> CONSTRAINTS=<string>`
+Example: `/05_slide_plan TOC_TREE="outputs/04_toc_argument_tree.json" CONSTRAINTS="10 slides, 5-minute briefing, internal audience"`
 Language: English (output).
 Execution hint: Action titles must be “claims” that can stand alone when skimmed.
 ---

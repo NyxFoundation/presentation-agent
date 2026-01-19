@@ -1,8 +1,8 @@
 
 ---
 Description: Build the proposal deck narrative using Sparkline by default (What is ↔ What could be), culminating in a clear call-to-action. Ensures the first two slides establish urgency and the decision request.
-Usage: `/03_proposal_build_narrative_spine DECISION_BRIEF=<path|json> GOVERNING_THOUGHT=<string> KEY_CLAIMS=<json>`
-Example: `/03_proposal_build_narrative_spine DECISION_BRIEF="outputs/01_decision_brief.json" GOVERNING_THOUGHT="..." KEY_CLAIMS='["...", "..."]'`
+Usage: `/03_narrative_spine DECISION_BRIEF=<path|json> GOVERNING_THOUGHT=<string> KEY_CLAIMS=<json>`
+Example: `/03_narrative_spine DECISION_BRIEF="outputs/01_decision_brief.json" GOVERNING_THOUGHT="..." KEY_CLAIMS='["...", "..."]'`
 Language: English (output).
 Execution hint: Proposal decks should default to Sparkline unless the deck is purely informational.
 ---

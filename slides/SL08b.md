@@ -6,17 +6,68 @@ background: White
 
 # この研究の独自性：各層で得られる知見と強み
 
-| 層 | 研究の強み | 得られる知見 |
-|----|------------|-------------|
-| **L0** | 再現性・検証可能性 | 全データが第三者検証可能 |
-| **L1** | 外生/内生の両方を実験可能 | 制度介入実験＋創発条件の同定 |
-| **L2** | AI専用の制度設計を評価 | AI-institution design基盤 |
+<div class="grid grid-cols-3 gap-4 mt-4">
+  <div class="bg-green-50 rounded-xl p-4 border border-green-200">
+    <div class="flex items-center gap-2 mb-2">
+      <span class="bg-green-500 text-white font-bold px-2 py-1 rounded text-sm">L0</span>
+      <span class="font-bold text-green-800">ブロックチェーン層</span>
+    </div>
+    <div class="text-sm mt-2">
+      <div class="text-gray-600 mb-1">研究の強み:</div>
+      <div class="font-semibold">再現性・検証可能性</div>
+    </div>
+    <div class="text-sm mt-2">
+      <div class="text-gray-600 mb-1">得られる知見:</div>
+      <div>全データが第三者検証可能</div>
+    </div>
+  </div>
+  <div class="bg-blue-50 rounded-xl p-4 border border-blue-200">
+    <div class="flex items-center gap-2 mb-2">
+      <span class="bg-blue-500 text-white font-bold px-2 py-1 rounded text-sm">L1</span>
+      <span class="font-bold text-blue-800">制度・ルール層</span>
+    </div>
+    <div class="text-sm mt-2">
+      <div class="text-gray-600 mb-1">研究の強み:</div>
+      <div class="font-semibold">外生/内生の両方を実験可能</div>
+    </div>
+    <div class="text-sm mt-2">
+      <div class="text-gray-600 mb-1">得られる知見:</div>
+      <div>制度介入実験＋創発条件の同定</div>
+    </div>
+  </div>
+  <div class="bg-purple-50 rounded-xl p-4 border border-purple-200">
+    <div class="flex items-center gap-2 mb-2">
+      <span class="bg-purple-500 text-white font-bold px-2 py-1 rounded text-sm">L2</span>
+      <span class="font-bold text-purple-800">AIエージェント層</span>
+    </div>
+    <div class="text-sm mt-2">
+      <div class="text-gray-600 mb-1">研究の強み:</div>
+      <div class="font-semibold">AI専用の制度設計を評価</div>
+    </div>
+    <div class="text-sm mt-2">
+      <div class="text-gray-600 mb-1">得られる知見:</div>
+      <div>AI-institution design基盤</div>
+    </div>
+  </div>
+</div>
 
-### 特にユニークな点
-
-- **制度と主体の不可分性**: 制度効果は主体アーキテクチャに依存
-- **操作変数の自由度**: AI-onlyなら能力・性格・倫理観を操作可能
-- **データの希少性**: 実験データ自体が貴重な論文・技術資産に
+<div class="mt-4">
+  <div class="font-bold mb-2">✨ 特にユニークな点</div>
+  <div class="grid grid-cols-3 gap-3 text-sm">
+    <div class="bg-amber-50 rounded-lg p-3 border border-amber-200">
+      <div class="font-semibold text-amber-800">制度と主体の不可分性</div>
+      <div class="text-xs text-gray-600 mt-1">制度効果は主体アーキテクチャに依存</div>
+    </div>
+    <div class="bg-amber-50 rounded-lg p-3 border border-amber-200">
+      <div class="font-semibold text-amber-800">操作変数の自由度</div>
+      <div class="text-xs text-gray-600 mt-1">AI-onlyなら能力・性格・倫理観を操作可能</div>
+    </div>
+    <div class="bg-amber-50 rounded-lg p-3 border border-amber-200">
+      <div class="font-semibold text-amber-800">データの希少性</div>
+      <div class="text-xs text-gray-600 mt-1">実験データ自体が貴重な論文・技術資産に</div>
+    </div>
+  </div>
+</div>
 
 <!--
 この研究がなぜ学術的に価値があるのか—制度設計と主体設計が切り離せないという論点です。

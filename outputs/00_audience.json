@@ -1,0 +1,552 @@
+{
+  "proposal_inputs": {
+    "doc_type": "Proposal deck",
+    "audience": "Sony Group education/blockchain executive with cross-company influence (Sony Global Education, Sony Block Solutions Labs/Startale)",
+    "decision_needed": "Exploratory meeting / alignment on next steps for potential collaboration in education-blockchain or Web3 infrastructure space"
+  },
+  "audiences": [
+    {
+      "input": {
+        "person_name": "礒津政明",
+        "company": "ソニーグループ株式会社,株式会社ソニー・グローバルエデュケーション,ソニーネットワークコミュニケーションズ株式会社,S.BLOX株式会社,Soneium,Startale"
+      },
+      "identity": {
+        "matched_person": {
+          "full_name": "礒津政明 (Masaaki Isozu)",
+          "company": "Sony Group Corporation / Sony Global Education / Startale Labs (Director)",
+          "current_title": "Chairman, Sony Global Education Inc. / Director, Startale Labs / Corporate Distinguished Engineer, Sony Group",
+          "org_unit": "Education business (Sony Global Education) and Web3/Blockchain initiatives (Startale Labs/Sony Block Solutions Labs)",
+          "location_or_region": "Tokyo, Japan"
+        },
+        "disambiguation_notes": "Identity confirmed via multiple sources: (1) Official Gentosha Gold Online author profile confirming Chairman of Sony Global Education since June 2022, (2) ZoomInfo/RocketReach listing him as Corporate Distinguished Engineer at Sony Group with prior roles at Sony Network Communications and S.BLOX Inc., (3) Gate.io article confirming him as Director at Startale Labs alongside Jun Watanabe, Sota Watanabe, and others. Note: Sony Global Education's current President/CEO is Naoki Kato (加藤直樹) as of recent website check; Isozu transitioned to Chairman role in June 2022. S.BLOX's current Representative Director is Jun Watanabe (渡辺潤), not Isozu—Isozu's connection appears to be through Startale Labs directorship and prior Sony Network Communications roles.",
+        "confidence": "high",
+        "other_candidates": []
+      },
+      "role_scope": {
+        "summary": "Masaaki Isozu is the founding Chairman of Sony Global Education (SGE), the first education company within Sony Group, established in 2015. He served as President/CEO until June 2022, then transitioned to Chairman. He also serves as a Director at Startale Labs (the Web3 infrastructure company that co-developed Soneium with Sony) and holds the title of Corporate Distinguished Engineer at Sony Group. His career spans 20+ years at Sony, starting as a software engineer in 2000, moving to Sony Computer Science Laboratory (Sony CSL) in 2012 for new business incubation, then founding SGE in 2015. He has deep expertise in education technology, blockchain applications in education, and STEAM/programming education. He is also an outside director at Choshi Electric Railway and serves on Z-kai's scholarship selection committee.",
+        "responsibilities": [
+          "Chairman of Sony Global Education—strategic oversight and vision for Sony's education business",
+          "Director at Startale Labs—governance and strategic direction for Sony's Web3/blockchain joint venture partner",
+          "Corporate Distinguished Engineer at Sony Group—technical leadership and thought leadership across Sony",
+          "Education Futurist—public speaking, authorship, and advocacy for future-oriented education",
+          "Board member (external) at Choshi Electric Railway"
+        ],
+        "typical_decisions": [
+          "Strategic partnerships and business development for education technology",
+          "Product vision and roadmap for education offerings (KOOV, LOGIQ LABO, blockchain credentials)",
+          "Cross-company collaboration within Sony Group (connecting education with Web3/blockchain initiatives)",
+          "External partnerships with educational institutions, government bodies, and publishers",
+          "Investment and incubation recommendations for education-adjacent ventures"
+        ],
+        "stakeholders_they_influence": [
+          "Sony Global Education leadership and product teams",
+          "Sony Group senior executives on education and blockchain strategy",
+          "Startale Labs leadership (as Director)",
+          "Educational institutions and government policy makers (MEXT advisory role)",
+          "Publishing and EdTech partners (Z-kai, Shichida Education, etc.)"
+        ],
+        "budget_or_approval_signals": [
+          "As Chairman (not CEO), likely has strategic influence rather than direct operational budget control",
+          "Founded and built SGE from scratch in 2015, demonstrating entrepreneurial authority within Sony",
+          "Director role at Startale suggests board-level influence on joint venture decisions",
+          "Distinguished Engineer title indicates senior technical credibility across Sony Group"
+        ],
+        "decision_authority_hypothesis": {
+          "description": "Based on his Chairman role (vs. active CEO) and Director positions, Isozu likely has strong influence on strategic direction and partnership decisions but may require alignment with current operational leadership (CEO Naoki Kato at SGE, Jun Watanabe at Startale/Sony Block Solutions Labs) for execution. He can likely champion and introduce proposals but final budget/resource commitments may need CEO/operational sign-off.",
+          "estimate": "Can likely advocate for and introduce partnership opportunities, approve exploratory collaborations, and influence strategic priorities. Execution-level commitments (budget allocation, resource deployment) likely require alignment with current CEOs. Best positioned as internal champion and door-opener to relevant teams."
+        },
+        "expected_role_in_proposal": {
+          "description": "What specific action do we need from this person?",
+          "expected_action": "Be the internal champion who validates the strategic fit of the proposal, introduces us to operational decision-makers at Sony Global Education (CEO Kato) and/or Startale/Soneium team (CEO Sota Watanabe, Chairman Jun Watanabe), and advocates for pursuing the collaboration within Sony Group."
+        }
+      },
+      "recent_activity": {
+        "time_window": "last_18_months",
+        "highlights": [
+          {
+            "date": "2024-04-01",
+            "type": "press",
+            "headline": "Sony Global Education launches KOOV Entry Kit for programming beginners",
+            "why_it_matters": "Shows continued investment in expanding KOOV product line and lowering barriers to entry for programming education",
+            "source_ids": ["S1"]
+          },
+          {
+            "date": "2024-05-07",
+            "type": "press",
+            "headline": "Sony Global Education launches KOOV Plus subscription service",
+            "why_it_matters": "Indicates shift toward recurring revenue model and digital content delivery (CREATE by KOOV, VIRTUAL KOOV, Typing Race)",
+            "source_ids": ["S1"]
+          },
+          {
+            "date": "2024-07-01",
+            "type": "press",
+            "headline": "Shichida Education and Sony Global Education launch 'with LOGIQ LABO' app for young children",
+            "why_it_matters": "Partnership expansion showing SGE's B2B2C strategy and AI-powered personalized learning focus",
+            "source_ids": ["S1"]
+          },
+          {
+            "date": "2024-08-23",
+            "type": "press",
+            "headline": "Sony Block Solutions Labs announces Soneium blockchain development",
+            "why_it_matters": "Major Web3 initiative that Isozu is connected to as Startale Director; represents Sony's serious entry into public blockchain infrastructure",
+            "source_ids": ["S2", "S3"]
+          },
+          {
+            "date": "2025-01-14",
+            "type": "press",
+            "headline": "Soneium mainnet launches on Ethereum Layer 2",
+            "why_it_matters": "Milestone for Sony's blockchain strategy; Isozu's directorship at Startale connects him to this ecosystem",
+            "source_ids": ["S4"]
+          },
+          {
+            "date": "2022-08-01",
+            "type": "other",
+            "headline": "Published '2040 Education no Mirai' (The Future of Education in 2040)",
+            "why_it_matters": "Authored book articulating his vision for education technology, Web3, metaverse, and blockchain in education; endorsed by former Sony CEO Kazuo Hirai",
+            "source_ids": ["S5", "S6"]
+          }
+        ]
+      },
+      "audience_hypotheses": {
+        "decision_criteria": [
+          {
+            "hypothesis": "Prioritizes long-term educational impact over short-term ROI—values '300-year vision' for education transformation",
+            "evidence": "SGE's stated vision is '300年先の未来をつくる教育' (Creating education for 300 years in the future). His book and interviews consistently emphasize generational impact over immediate returns.",
+            "source_ids": ["S5", "S6", "S7"],
+            "confidence": "high"
+          },
+          {
+            "hypothesis": "Values technology that enhances human individuality rather than replacing it—sees AI and blockchain as complementary tools for human development",
+            "evidence": "Stated in interviews: 'Humans are versatile beings...their imperfections are what make them so interesting. We aim for coexistence of AI and its optimal solutions with humans and their diverse sensibilities.' Also: 'History proves that innovation is created from versatility. It is not possible to replace human individuality.'",
+            "source_ids": ["S8"],
+            "confidence": "high"
+          },
+          {
+            "hypothesis": "Prefers solutions with clear educational data sovereignty and portability benefits—blockchain for credential verification and lifelong learning records",
+            "evidence": "Developed blockchain-based education platform with IBM; stated 'We want to keep life-long learning records...securely in the cloud forever' and 'Based on blockchain technology, this information becomes a valuable asset.'",
+            "source_ids": ["S9", "S10"],
+            "confidence": "high"
+          },
+          {
+            "hypothesis": "Receptive to solutions that bridge Web2 and Web3 for mainstream adoption—interested in practical blockchain applications, not speculation",
+            "evidence": "Soneium is explicitly positioned to 'link Web2 and Web3' and bring blockchain to everyday life. SGE's blockchain work focuses on practical education use cases (credentials, learning records), not crypto trading.",
+            "source_ids": ["S2", "S3", "S9"],
+            "confidence": "medium"
+          },
+          {
+            "hypothesis": "Values global scalability and cross-border applicability—interested in solutions that work across education systems internationally",
+            "evidence": "SGE's products (KOOV, Global Math Challenge) operate globally; blockchain credential work explicitly aimed at cross-border verification. His book discusses overseas education models.",
+            "source_ids": ["S5", "S9", "S11"],
+            "confidence": "medium"
+          }
+        ],
+        "likely_objections": [
+          {
+            "hypothesis": "May question whether the proposal aligns with Sony's existing blockchain strategy (Soneium ecosystem)",
+            "evidence": "Sony has invested significantly in Soneium as their Layer 2 blockchain; any competing or disconnected blockchain approach may face scrutiny for strategic fit.",
+            "source_ids": ["S2", "S4"],
+            "confidence": "high"
+          },
+          {
+            "hypothesis": "May be skeptical of solutions that prioritize speculation over educational utility",
+            "evidence": "His statements consistently emphasize practical educational applications of blockchain, not financial speculation. SGE's blockchain work focuses on credentials and learning data, not tokens.",
+            "source_ids": ["S9", "S10"],
+            "confidence": "high"
+          },
+          {
+            "hypothesis": "May require evidence of working implementations and real-world educational impact",
+            "evidence": "SGE has conducted field trials with Fujitsu and educational institutions; preference for concrete proof over theoretical promise.",
+            "source_ids": ["S12"],
+            "confidence": "medium"
+          },
+          {
+            "hypothesis": "May question operational complexity and integration burden for education institutions",
+            "evidence": "SGE's products emphasize ease of use and accessibility (KOOV Entry Kit, lowering barriers); would likely question if a solution creates adoption friction.",
+            "source_ids": ["S1"],
+            "confidence": "medium"
+          },
+          {
+            "hypothesis": "May need clarity on how proposal fits with existing Sony Group relationships and partnerships",
+            "evidence": "SGE has established partnerships (Z-kai, Shichida, IBM, Fujitsu); any proposal would need to complement rather than conflict with these relationships.",
+            "source_ids": ["S11", "S12"],
+            "confidence": "medium"
+          },
+          {
+            "hypothesis": "May be concerned about data privacy and security for student information",
+            "evidence": "Blockchain work explicitly focused on 'secure' sharing and 'verified, trustworthy information'; data security is a stated priority.",
+            "source_ids": ["S9", "S10"],
+            "confidence": "medium"
+          },
+          {
+            "hypothesis": "May question whether timing is right given Soneium's recent mainnet launch and ongoing ecosystem development",
+            "evidence": "Soneium mainnet launched January 2025; team likely focused on ecosystem growth and partner onboarding. New initiatives may compete for attention.",
+            "source_ids": ["S4"],
+            "confidence": "medium"
+          }
+        ],
+        "interests_priorities": {
+          "near_term": [
+            {
+              "hypothesis": "Growing Soneium ecosystem with meaningful applications and partners",
+              "evidence": "Soneium mainnet launched January 2025; Startale App in closed beta; active recruitment of ecosystem partners through Soneium Spark incubation program.",
+              "source_ids": ["S4", "S13"],
+              "confidence": "high"
+            },
+            {
+              "hypothesis": "Expanding KOOV and LOGIQ LABO market penetration in Japan and globally",
+              "evidence": "Recent launches of KOOV Entry Kit, KOOV Plus, and with LOGIQ LABO partnership show active product expansion.",
+              "source_ids": ["S1"],
+              "confidence": "high"
+            },
+            {
+              "hypothesis": "Demonstrating practical blockchain applications in education (credentials, learning records)",
+              "evidence": "Long-standing focus on education blockchain since 2016; field trials with Fujitsu; IBM partnership for credential management.",
+              "source_ids": ["S9", "S10", "S12"],
+              "confidence": "high"
+            },
+            {
+              "hypothesis": "Connecting Sony Group's education and blockchain initiatives for synergy",
+              "evidence": "His unique position as Chairman of SGE and Director at Startale positions him to bridge these domains.",
+              "source_ids": ["S2", "S14"],
+              "confidence": "medium"
+            }
+          ],
+          "mid_long_term": [
+            {
+              "hypothesis": "Realizing the '2040 Education Vision'—AI, blockchain, metaverse integration in education",
+              "evidence": "His book '2040 Education no Mirai' outlines a comprehensive vision for education transformation through technology.",
+              "source_ids": ["S5", "S6"],
+              "confidence": "high"
+            },
+            {
+              "hypothesis": "Establishing Sony as a leader in education technology globally",
+              "evidence": "Founded SGE as Sony's first education company; consistent messaging about bringing Sony's technology strengths to education.",
+              "source_ids": ["S7", "S11"],
+              "confidence": "high"
+            },
+            {
+              "hypothesis": "Creating interoperable, portable learning credentials that work across borders and institutions",
+              "evidence": "Blockchain education work explicitly aimed at cross-border credential verification and lifelong learning records.",
+              "source_ids": ["S9", "S10"],
+              "confidence": "medium"
+            },
+            {
+              "hypothesis": "Fostering 'strategic learning ability' and creativity in students for VUCA era",
+              "evidence": "Interviews emphasize 'self-directed learning' and 'programming-like thinking' as essential 21st century skills.",
+              "source_ids": ["S7", "S15"],
+              "confidence": "medium"
+            }
+          ]
+        },
+        "communication_preferences": [
+          {
+            "hypothesis": "Prefers vision-led discussions that connect to long-term educational impact",
+            "evidence": "His public communications consistently lead with vision ('300 years', '2040 Education') rather than technical specs or near-term metrics.",
+            "source_ids": ["S5", "S6", "S7"],
+            "confidence": "high"
+          },
+          {
+            "hypothesis": "Appreciates concrete examples and working prototypes over theoretical proposals",
+            "evidence": "SGE's approach involves building products (KOOV, blockchain platform) and conducting field trials; his engineering background suggests preference for tangible demonstrations.",
+            "source_ids": ["S1", "S12"],
+            "confidence": "medium"
+          },
+          {
+            "hypothesis": "Values intellectual discourse and thought partnership over transactional pitches",
+            "evidence": "Active as author, speaker, and government advisory committee member; engages in educational philosophy discussions rather than just product marketing.",
+            "source_ids": ["S5", "S15"],
+            "confidence": "medium"
+          },
+          {
+            "hypothesis": "Comfortable with technical depth given engineering background, but leads with educational mission",
+            "evidence": "Tokyo Tech Master's degree, 20+ years as software engineer at Sony, but public messaging always frames technology in service of education.",
+            "source_ids": ["S7", "S14"],
+            "confidence": "medium"
+          }
+        ],
+        "risk_posture": {
+          "hypothesis": "balanced",
+          "evidence": "Founded a new business (SGE) within Sony, showing entrepreneurial risk-taking. However, his approach involves building working products, conducting field trials, and partnering with established institutions (IBM, Fujitsu, government) rather than pure speculation. Blockchain work focuses on practical applications, not financial speculation. This suggests a 'balanced' posture: willing to pursue innovative directions but through methodical, evidence-based execution.",
+          "source_ids": ["S7", "S9", "S12"],
+          "confidence": "medium"
+        }
+      },
+      "proposal_deck_guidance": {
+        "emphasize_slides": [
+          {
+            "slide_intent": "Proof",
+            "why": "Isozu values concrete demonstrations and working implementations; showing actual educational impact or pilot results will resonate with his preference for evidence-based innovation.",
+            "proof_assets_to_prepare": ["Case study from education sector implementation", "Demo or prototype of blockchain-based learning record/credential system", "Pilot data showing student outcomes or adoption metrics"],
+            "confidence": "high"
+          },
+          {
+            "slide_intent": "ROI",
+            "why": "Frame ROI in terms of educational impact (student outcomes, reach, accessibility) rather than pure financial returns—aligns with his '300-year vision' orientation.",
+            "proof_assets_to_prepare": ["Impact metrics on learning outcomes", "Global scalability potential", "Student/institution adoption trajectory"],
+            "confidence": "high"
+          },
+          {
+            "slide_intent": "Feasibility",
+            "why": "Given his engineering background and SGE's focus on practical implementation, demonstrating technical feasibility and integration path will address likely objections.",
+            "proof_assets_to_prepare": ["Technical architecture diagram", "Integration points with existing systems (Soneium, KOOV ecosystem)", "Implementation timeline with clear milestones"],
+            "confidence": "medium"
+          },
+          {
+            "slide_intent": "Comparison",
+            "why": "Position against alternatives in the education-blockchain space to demonstrate differentiation and why this solution fits Sony's strategic direction.",
+            "proof_assets_to_prepare": ["Competitive landscape analysis", "Soneium ecosystem fit analysis", "Differentiation from existing SGE/IBM blockchain work"],
+            "confidence": "medium"
+          },
+          {
+            "slide_intent": "CTA",
+            "why": "Propose a clear, low-risk next step (e.g., exploratory meeting with Startale/Soneium team, pilot scope discussion) that matches his role as champion/introducer rather than operational decision-maker.",
+            "proof_assets_to_prepare": ["Proposed pilot scope and timeline", "Resource requirements summary", "Specific ask for introduction/championing"],
+            "confidence": "medium"
+          }
+        ],
+        "hooks_for_opening": [
+          {
+            "hook": "Connect to his '300-year education vision'—position the proposal as a building block for long-term educational transformation",
+            "why_it_lands": "His stated vision is '300年先の未来をつくる教育'; framing that resonates with this generational perspective will capture attention.",
+            "source_ids": ["S5", "S6", "S7"],
+            "confidence": "high"
+          },
+          {
+            "hook": "Reference the Soneium ecosystem opportunity—position as complementary to Sony's blockchain strategy rather than competing",
+            "why_it_lands": "As Startale Director, he is invested in Soneium's success; proposals that strengthen the ecosystem will be more welcome than alternatives.",
+            "source_ids": ["S2", "S4"],
+            "confidence": "high"
+          },
+          {
+            "hook": "Lead with educational data sovereignty and student empowerment—align with his stated belief that learning records should be 'valuable assets' controlled by students",
+            "why_it_lands": "He has explicitly stated that blockchain makes learning data 'a valuable asset' and wants students to 'have control over their academic progress record.'",
+            "source_ids": ["S9", "S10"],
+            "confidence": "high"
+          },
+          {
+            "hook": "Emphasize human-AI coexistence—frame technology as enhancing human individuality rather than replacing it",
+            "why_it_lands": "He has stated 'We aim for coexistence of AI and its optimal solutions with humans and their diverse sensibilities' and values human 'imperfections.'",
+            "source_ids": ["S8"],
+            "confidence": "medium"
+          }
+        ],
+        "phrasing_and_tone": {
+          "recommended_tone": "Visionary but grounded; intellectually engaged but practical; mission-driven rather than transactional",
+          "do": [
+            "Lead with educational impact and long-term vision",
+            "Connect to Soneium ecosystem and Sony's blockchain strategy",
+            "Show concrete examples, pilots, or working prototypes",
+            "Frame technology in service of education, not as an end itself",
+            "Acknowledge and build on SGE's existing blockchain work (IBM, Fujitsu partnerships)",
+            "Position the ask as an exploratory collaboration rather than a closed deal"
+          ],
+          "avoid": [
+            "Pure financial ROI framing without educational impact",
+            "Speculative token economics or crypto-native language",
+            "Positioning as alternative to Soneium rather than complementary",
+            "Overly transactional or salesy tone",
+            "Ignoring existing Sony partnerships and ecosystem",
+            "Asking for large commitments without established relationship"
+          ]
+        },
+        "pitch_frames": {
+          "education_frame": {
+            "emphasize": [
+              "Long-term educational transformation (2040 vision alignment)",
+              "Student data sovereignty and portable credentials",
+              "STEAM/programming education enhancement",
+              "AI-human coexistence in learning",
+              "Global scalability and cross-border credential verification"
+            ],
+            "avoid": [
+              "Short-term financial metrics without educational context",
+              "Complex technical jargon without educational benefit explanation",
+              "Proposals that don't connect to existing KOOV/LOGIQ LABO ecosystem"
+            ],
+            "best_proof_style": ["case_study", "demo", "numbers"]
+          },
+          "web3_infra_frame": {
+            "emphasize": [
+              "Soneium ecosystem complementarity and integration",
+              "Practical blockchain applications (not speculation)",
+              "Web2-Web3 bridge for mainstream adoption",
+              "Developer-friendly and user-friendly design",
+              "Security and data privacy for sensitive education data"
+            ],
+            "avoid": [
+              "Positioning as alternative blockchain to Soneium",
+              "Token speculation or financial trading use cases",
+              "Complex DeFi mechanics without clear education utility",
+              "Technical complexity that creates adoption barriers"
+            ],
+            "best_proof_style": ["benchmark", "security", "ecosystem"]
+          },
+          "corporate_frame": {
+            "emphasize": [
+              "Strategic fit with Sony Group's education and blockchain initiatives",
+              "Partnership approach that complements existing relationships (IBM, Fujitsu, Z-kai)",
+              "Sony brand alignment and quality standards",
+              "Risk-managed pilot approach with clear milestones",
+              "Cross-division synergy potential (SGE + Startale/Soneium)"
+            ],
+            "avoid": [
+              "Proposals that conflict with existing Sony partnerships",
+              "Unrealistic commitments without pilot validation",
+              "Approaches that bypass operational leadership",
+              "Brand risk or reputational concerns"
+            ],
+            "best_proof_style": ["strategic_fit", "governance", "risk"]
+          }
+        }
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "S1",
+      "title": "Sony Global Education Press Releases 2024",
+      "publisher": "PR TIMES / Sony Global Education",
+      "date": "2024-04-01",
+      "url": "https://prtimes.jp/main/html/searchrlp/company_id/32729",
+      "source_tier": "primary",
+      "notes": "Official press releases for KOOV Entry Kit (April 2024), KOOV Plus (May 2024), with LOGIQ LABO (July 2024)"
+    },
+    {
+      "source_id": "S2",
+      "title": "Sony, Electronics Pioneer Behind Walkman, Starts Own Blockchain 'Soneium'",
+      "publisher": "CoinDesk",
+      "date": "2024-08-23",
+      "url": "https://www.coindesk.com/tech/2024/08/23/sony-electronics-pioneer-behind-walkman-starts-own-blockchain-soneium",
+      "source_tier": "reputable",
+      "notes": "Major media coverage of Soneium announcement"
+    },
+    {
+      "source_id": "S3",
+      "title": "Soneium: How SONY is Using Blockchain to Link Web2 and Web3",
+      "publisher": "Gate.io Learn / insights4vc",
+      "date": "2024-08-01",
+      "url": "https://www.gate.com/learn/articles/soneium-how-sony-is-using-blockchain-to-link-web2-and-web3/4285",
+      "source_tier": "secondary",
+      "notes": "Detailed analysis confirming Isozu as Startale Labs Director; ownership structure and team details"
+    },
+    {
+      "source_id": "S4",
+      "title": "Soneium Mainnet Launch Announcement",
+      "publisher": "CoinDesk Japan",
+      "date": "2025-01-14",
+      "url": "https://www.coindeskjapan.com/270359/",
+      "source_tier": "reputable",
+      "notes": "Coverage of Soneium mainnet launch on Ethereum Layer 2"
+    },
+    {
+      "source_id": "S5",
+      "title": "2040 Education no Mirai (2040 教育のミライ)",
+      "publisher": "Jitsumu Kyoiku Shuppan (実務教育出版)",
+      "date": "2022-08-01",
+      "url": "https://www.amazon.co.jp/2040-教育のミライ-礒津政明/dp/4788903121",
+      "source_tier": "primary",
+      "notes": "Authored book by Isozu outlining his education-technology vision; endorsed by former Sony CEO Kazuo Hirai"
+    },
+    {
+      "source_id": "S6",
+      "title": "Book Review: 2040 Education no Mirai",
+      "publisher": "Sentan Kyoiku Online (先端教育オンライン)",
+      "date": "2022-09-01",
+      "url": "https://www.sentankyo.jp/articles/bc75b01f-ac8b-459c-8d14-fec4abe85c46",
+      "source_tier": "reputable",
+      "notes": "Review summarizing book's key themes on Web3, metaverse, blockchain in education"
+    },
+    {
+      "source_id": "S7",
+      "title": "Masaaki Isozu Author Profile",
+      "publisher": "Gentosha Gold Online (幻冬舎ゴールドオンライン)",
+      "date": "2022-01-01",
+      "url": "https://gentosha-go.com/ud/authors/63071e14a53aef70c4000001",
+      "source_tier": "reputable",
+      "notes": "Official author profile with detailed biography confirming current role as Chairman of Sony Global Education"
+    },
+    {
+      "source_id": "S8",
+      "title": "Sony Global Education President Masaaki Isozu Talks Blockchain",
+      "publisher": "Sony Reconsidered (Medium)",
+      "date": "2017-08-01",
+      "url": "https://sonyreconsidered.com/sony-global-education-president-masaaki-isozu-talks-blockchain-b32878ba9c9b",
+      "source_tier": "secondary",
+      "notes": "Interview quotes on AI-human coexistence and education philosophy"
+    },
+    {
+      "source_id": "S9",
+      "title": "Sony wants to digitize education records using the blockchain",
+      "publisher": "TechCrunch",
+      "date": "2017-08-09",
+      "url": "https://techcrunch.com/2017/08/09/sony-education-blockchain/",
+      "source_tier": "reputable",
+      "notes": "Coverage of Sony-IBM blockchain education platform with Isozu quotes"
+    },
+    {
+      "source_id": "S10",
+      "title": "Sony and Sony Global Education Develop New System Built on IBM Blockchain",
+      "publisher": "PR Newswire (Sony official)",
+      "date": "2017-08-09",
+      "url": "https://www.prnewswire.com/news-releases/sony-and-sony-global-education-develop-a-new-system-to-manage-students-learning-data-built-on-ibm-blockchain-300501707.html",
+      "source_tier": "primary",
+      "notes": "Official press release on blockchain education platform development"
+    },
+    {
+      "source_id": "S11",
+      "title": "Z-kai and Sony Global Education Comprehensive Business Partnership",
+      "publisher": "EdTech Zine",
+      "date": "2020-03-01",
+      "url": "https://edtechzine.jp/article/detail/3795",
+      "source_tier": "reputable",
+      "notes": "Partnership announcement showing B2B2C strategy"
+    },
+    {
+      "source_id": "S12",
+      "title": "Fujitsu and Sony Global Education Initiate Blockchain Field Trials",
+      "publisher": "Fujitsu Global",
+      "date": "2019-02-27",
+      "url": "https://www.fujitsu.com/global/about/resources/news/press-releases/2019/0227-01.html",
+      "source_tier": "primary",
+      "notes": "Official press release on education blockchain field trial"
+    },
+    {
+      "source_id": "S13",
+      "title": "Soneium Spark Incubation Program",
+      "publisher": "Startale",
+      "date": "2024-09-01",
+      "url": "https://startale.com/en/blog/sony-block-solutions-labs-present-soneium-spark-incubation-program",
+      "source_tier": "primary",
+      "notes": "Official announcement of Soneium ecosystem incubation program"
+    },
+    {
+      "source_id": "S14",
+      "title": "Masaaki Isozu Profile - ZoomInfo/RocketReach",
+      "publisher": "ZoomInfo/RocketReach",
+      "date": "2024-01-01",
+      "url": "https://rocketreach.co/masaaki-isozu-email_12022287",
+      "source_tier": "secondary",
+      "notes": "Business profile listing Corporate Distinguished Engineer title and multi-company affiliations"
+    },
+    {
+      "source_id": "S15",
+      "title": "Programming-like Thinking Interview",
+      "publisher": "Z-kai Programming Education",
+      "date": "2020-01-01",
+      "url": "https://www.zkai.co.jp/programming/interview/post/116",
+      "source_tier": "reputable",
+      "notes": "Interview on KOOV and programming education philosophy"
+    }
+  ],
+  "notes_for_next_prompts": [
+    "Use proposal_inputs.doc_type, audience, decision_needed as defaults for 01",
+    "Isozu is currently Chairman (not CEO) of Sony Global Education—CEO is Naoki Kato; position ask accordingly as 'champion/introducer' rather than final decision-maker",
+    "S.BLOX's Representative Director is Jun Watanabe, not Isozu—Isozu's blockchain connection is through Startale Labs directorship",
+    "Frame proposals as Soneium ecosystem-complementary; avoid positioning as alternative blockchain",
+    "Lead with educational impact and long-term vision; avoid pure financial ROI framing",
+    "For 05 action titles, lead with educational transformation impact (his stated values)",
+    "Key objection to preempt: strategic fit with Soneium ecosystem",
+    "Preferred proof style: case studies, demos, working implementations over theoretical proposals",
+    "His engineering background (Tokyo Tech, 20+ years at Sony as software engineer) means technical depth is welcome but should serve educational mission framing"
+  ]
+}

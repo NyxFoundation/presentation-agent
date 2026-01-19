@@ -1,0 +1,608 @@
+{
+  "proposal_inputs": {
+    "context": "Nyx Foundation, an Ethereum-focused private research organization funded by over 60M JPY from 30+ donors, proposes hosting a competition (16M JPY prize pool) to build an on-chain AI Agent Economy where only AI agents participate, trade real assets, and enable observation of emergent economic behaviors, institutions, and norms.",
+    "raw_ideas": "Build a closed economy exclusively for AI agents on blockchain; participants (humans) develop prompt sets for agents; agents execute real asset transactions; competition format with live commentary; use blockchain for security, verifiability, and decentralized honeypot distribution; layer model (L0: execution physics, L1: institutions/norms, L2: AI agents); research questions around norm emergence, cartel formation, institution-agent interaction.",
+    "governing_thought_seed": "An AI-only economy on-chain provides a unique research sandbox to observe emergent economic behaviors and test institution designs that cannot be studied in traditional academic or corporate settings due to ethical/regulatory constraints.",
+    "key_claims_seed": [
+      "Autonomous AI agents cannot hold traditional payment instruments, making crypto a viable alternative",
+      "Blockchain provides verifiable, tamper-proof execution and state history for AI agent actions",
+      "This experiment enables research impossible in Google/universities due to ethics review and accounting constraints",
+      "The experimental data itself becomes a valuable academic and technical asset"
+    ],
+    "available_facts": "Prize pool: 16M JPY (1st: 10M, 2nd: 4M, 3rd: 1M, special prizes); Target date: September 2025; Target participants: 100+ teams; Response time limit: 60s; Private chain with authenticated AI agents only; Nyx Foundation funded by 60M+ JPY from 30+ donors; 17 vulnerabilities reported in Fusaka audit contest; ZK Tokyo in 4th year with Vitalik visits; Research house in Hongo (5 residents), lab under construction in Nanto (30-person capacity).",
+    "raw_data_or_charts": "TODO: Provide historical data on ZK Tokyo participation/outcomes; TODO: Provide Fusaka audit contest metrics; TODO: Provide financial breakdown for 16M JPY prize distribution logistics."
+  },
+  "source": {
+    "introduction_path": "inputs/introduction.md",
+    "extracted_at": "2026-01-19"
+  },
+  "stakeholder_synergy": [
+    {
+      "stakeholder_name": "Nyx Foundation",
+      "value_proposition": "Advances Ethereum ecosystem research, generates unique experimental data for publications, strengthens reputation as frontier research organization",
+      "reason_for_inclusion": "Organizer and operator; has infrastructure (research house, lab), track record (ZK Tokyo, security audits), and community credibility"
+    },
+    {
+      "stakeholder_name": "Sponsor (Target: e.g., Sony/Soneium)",
+      "value_proposition": "Co-design competition rules; joint research credit; potential integration with sponsor platforms (e.g., Soneium chain for AI-generated art); educational content for brand alignment",
+      "reason_for_inclusion": "Provides funding and strategic direction; enables 'game design that is both entertaining and economically meaningful'"
+    },
+    {
+      "stakeholder_name": "University of Tokyo Blockchain Endowed Course",
+      "value_proposition": "Academic credibility, student engagement, potential co-authorship on research outputs",
+      "reason_for_inclusion": "Existing collaboration partner (DEPCON, ZK Tokyo co-hosting); bridges academic and practitioner communities"
+    },
+    {
+      "stakeholder_name": "TODO: Additional sponsors or partners",
+      "value_proposition": "TODO: Define value proposition per sponsor type",
+      "reason_for_inclusion": "TODO: Identify specific sponsors and their strategic fit"
+    }
+  ],
+  "executive_summary": {
+    "one_liner": "Host a 16M JPY competition where AI agents autonomously trade real assets on a private blockchain, enabling unprecedented research into emergent economic behaviors and AI-native institution design.",
+    "target_audience": "Corporate sponsors interested in AI/blockchain research, particularly those seeking joint research opportunities and innovative brand positioning (e.g., Sony/Soneium)",
+    "decision_request": "Sponsor the competition with funding and/or co-design the rules for joint research credit",
+    "why_now": "AI agents performing autonomous transactions is becoming inevitable; traditional payment systems exclude autonomous agents; crypto provides a viable alternative; this is a first-mover research opportunity before the space matures"
+  },
+  "problem": {
+    "current_state": "Autonomous AI agents (not tied to human identities) cannot hold credit cards or traditional payment instruments, limiting their ability to participate in economic transactions",
+    "pain_points": [
+      "No systematic framework to study AI agent economic behavior at scale",
+      "Existing simulations lack real-asset stakes, reducing behavioral realism",
+      "Ethics review and accounting constraints prevent Google/universities from running crypto-based AI experiments",
+      "Institution design for AI economies is under-theorized; current institutions assume human participants"
+    ],
+    "root_causes": [
+      "Traditional payment systems require human identity verification",
+      "Academic and corporate research environments have regulatory constraints on financial experiments",
+      "AI-native institution design is a nascent field with limited empirical data"
+    ],
+    "who_is_affected": [
+      "AI/ML researchers studying agent behavior",
+      "Economists studying market dynamics and institution design",
+      "Blockchain developers building AI-compatible infrastructure",
+      "Policymakers needing empirical data on AI economic participation"
+    ]
+  },
+  "impact": {
+    "cost_of_inaction": [
+      "Missed opportunity to establish leadership in AI agent economy research",
+      "Lack of empirical data delays development of AI-native institution designs",
+      "Competitors may capture first-mover advantage in this emerging research area"
+    ],
+    "metrics_current": [
+      {
+        "name": "Existing AI economy research papers with real-asset experiments",
+        "value": "TODO: Research current literature count",
+        "notes": "Expected to be near zero due to regulatory constraints",
+        "evidence": "hypothesis"
+      },
+      {
+        "name": "Nyx Foundation security audit findings",
+        "value": "17 vulnerabilities reported in Fusaka audit",
+        "notes": "Demonstrates technical credibility",
+        "evidence": "explicit"
+      }
+    ]
+  },
+  "future_state": {
+    "goals": [
+      "Run a successful competition with 100+ participating teams",
+      "Generate unique research data on AI agent economic behavior",
+      "Publish findings on norm emergence, cartel formation, and institution design",
+      "Establish Nyx Foundation as a leader in AI agent economy research",
+      "Create reusable on-chain infrastructure for future AI economy experiments"
+    ],
+    "success_metrics": [
+      {
+        "name": "Number of participating teams",
+        "target": "100+",
+        "notes": "Explicit target from notes",
+        "evidence": "explicit"
+      },
+      {
+        "name": "Research publications produced",
+        "target": "TODO: Define target number",
+        "notes": "Experimental data expected to yield papers",
+        "evidence": "hypothesis"
+      },
+      {
+        "name": "Sponsor engagement",
+        "target": "TODO: Define number of sponsors or funding target",
+        "notes": "Primary ask is sponsorship",
+        "evidence": "hypothesis"
+      }
+    ]
+  },
+  "proposal": {
+    "solution_name": "AI Agent Economy Competition",
+    "solution_overview": "A blockchain-based competition where only AI agents participate in a closed economy, trading real assets (custom tokens on a private chain). Human participants develop agent prompts; agents execute transactions autonomously; the agent with the highest reward at competition end wins the prize.",
+    "key_capabilities": [
+      "Private blockchain with authenticated AI agent-only transaction submission",
+      "Customizable game rules: resource allocation, reward functions, role assignments",
+      "Real-time visualization and live commentary for spectator engagement",
+      "Verifiable state history via on-chain records (third-party auditable)",
+      "Layered architecture (L0: execution, L1: institutions, L2: agents) enabling controlled experiments"
+    ],
+    "in_scope": [
+      "Competition platform development (private chain, validator logic, agent authentication)",
+      "Rule design framework (environment, state variables, reward functions)",
+      "Live streaming and visualization infrastructure",
+      "Prize distribution (16M JPY total)",
+      "Post-competition data analysis and research publication"
+    ],
+    "out_of_scope": [
+      "Mainnet deployment (private chain only for this competition)",
+      "Human participant trading (AI agents only)",
+      "Long-term platform maintenance beyond competition period (unless separately funded)"
+    ],
+    "assumptions": [
+      "Sponsors will co-design rules to ensure the game is both entertaining and economically meaningful",
+      "100+ teams will register if prize pool and topic are compelling",
+      "60-second response time limit is sufficient for meaningful agent decision-making",
+      "Private chain security measures will prevent exploitation by agents"
+    ]
+  },
+  "differentiation": {
+    "why_this": [
+      "Real-asset stakes create more realistic agent behavior than pure simulations",
+      "Blockchain provides verifiable, tamper-proof execution history",
+      "Regulatory constraints make this infeasible for Google, universities, or traditional research institutions",
+      "Nyx Foundation has proven Ethereum expertise (17 vulnerabilities in Fusaka audit, ZK Tokyo track record)",
+      "Layered L0/L1/L2 framework enables systematic institution design research"
+    ],
+    "alternatives": [
+      {
+        "name": "Traditional simulation (no real assets)",
+        "summary": "Run AI agents in a simulated economy without real stakes",
+        "pros": [
+          "Simpler to implement",
+          "No regulatory concerns"
+        ],
+        "cons": [
+          "Agent behavior may differ without real stakes",
+          "Less compelling as a competition"
+        ],
+        "notes": "Does not achieve the research goal of studying real economic behavior"
+      },
+      {
+        "name": "Academic research grant",
+        "summary": "Pursue traditional academic funding for AI economy research",
+        "pros": [
+          "Academic credibility",
+          "Established funding pathways"
+        ],
+        "cons": [
+          "Ethics review likely blocks crypto asset experiments",
+          "Slower timeline",
+          "Less flexibility in experiment design"
+        ],
+        "notes": "Nyx Foundation can bypass constraints that universities face"
+      },
+      {
+        "name": "Mainnet deployment",
+        "summary": "Run the competition on Ethereum mainnet",
+        "pros": [
+          "Maximum realism",
+          "Existing infrastructure"
+        ],
+        "cons": [
+          "Security risks with real assets",
+          "Gas costs",
+          "Regulatory exposure"
+        ],
+        "notes": "Private chain chosen for controlled environment; mainnet is a future consideration"
+      }
+    ],
+    "competitive_or_status_quo_comparison": [
+      "Status quo: No large-scale AI agent economy experiments with real assets exist",
+      "Competitor risk: Large tech companies could attempt similar experiments but face regulatory constraints",
+      "Nyx Foundation advantage: Agile private research organization with Ethereum expertise and community trust"
+    ]
+  },
+  "proof": {
+    "evidence_available": [
+      {
+        "type": "benchmark",
+        "summary": "17 vulnerabilities reported in Fusaka Ethereum client audit contest",
+        "location_in_notes": "Section 2.1 White-hat hacking / security",
+        "confidence": "high"
+      },
+      {
+        "type": "case_study",
+        "summary": "ZK Tokyo: 4 years of summer programs with Vitalik visits, ETHTokyo top finishes",
+        "location_in_notes": "Section 2.3 Education / Community / Academia",
+        "confidence": "high"
+      },
+      {
+        "type": "other",
+        "summary": "Nyx Foundation funded by 60M+ JPY from 30+ donors",
+        "location_in_notes": "Section 1.1 Basic Info",
+        "confidence": "high"
+      },
+      {
+        "type": "theory",
+        "summary": "L0/L1/L2 layered framework for AI economy design",
+        "location_in_notes": "Section 7 Conceptual Layers",
+        "confidence": "medium"
+      }
+    ],
+    "evidence_needed": [
+      "TODO: Pilot/prototype results demonstrating agent behavior in test environment",
+      "TODO: Benchmark data on AI agent response times to validate 60s limit",
+      "TODO: Security audit of private chain infrastructure before launch",
+      "TODO: Comparison data showing why blockchain is more secure than centralized alternatives"
+    ]
+  },
+  "feasibility": {
+    "delivery_model": "build",
+    "requirements": {
+      "people": [
+        "Blockchain developers for private chain and validator implementation",
+        "Game designers for rule framework and reward function design",
+        "Frontend developers for visualization and live streaming",
+        "Security researchers for audit and penetration testing",
+        "Operations team for competition management and support"
+      ],
+      "systems": [
+        "Private blockchain infrastructure (authenticated agent-only transactions)",
+        "Validator nodes (multiple validators for rule enforcement)",
+        "Live streaming platform",
+        "Agent submission and authentication system"
+      ],
+      "data": [
+        "All transaction and state data recorded on-chain",
+        "Agent prompt submissions (stored securely until competition start)",
+        "Real-time telemetry for visualization"
+      ],
+      "security_compliance": [
+        "Agent authentication to prevent unauthorized transaction submission",
+        "Multiple validators to check rule compliance",
+        "Penalty system for rule violations",
+        "TODO: Define specific security audit requirements",
+        "TODO: Clarify regulatory compliance for prize distribution"
+      ],
+      "operations": [
+        "Competition registration and team management",
+        "Live commentary and streaming during competition",
+        "Prize distribution logistics",
+        "Post-competition data release and research publication"
+      ]
+    },
+    "dependencies": [
+      "Sponsor commitment for co-design and funding",
+      "Sufficient team registrations (target: 100+ teams)",
+      "Private chain infrastructure readiness by September 2025",
+      "TODO: Confirm lab construction timeline in Nanto (30-person capacity)"
+    ],
+    "open_questions": [
+      "How far should rules go (social constraints vs. natural principles only)?",
+      "How to assign roles (initial assignment vs. behavior-based vs. fluid)?",
+      "Should physical space/distance be modeled?",
+      "Should norm emergence be allowed? How to handle information asymmetry?",
+      "Should governance/policy be exogenous or endogenous?",
+      "Should environment evolve through eras (hunter-gatherer → agricultural → industrial → information)?"
+    ],
+    "governance_model": {
+      "final_decision_maker": "TODO: Define (likely Nyx Foundation leadership with sponsor input)",
+      "raci_draft": [
+        {
+          "entity": "Nyx Foundation",
+          "responsibility": "R"
+        },
+        {
+          "entity": "Nyx Foundation Leadership",
+          "responsibility": "A"
+        },
+        {
+          "entity": "Sponsor(s)",
+          "responsibility": "C"
+        },
+        {
+          "entity": "University of Tokyo Blockchain Course",
+          "responsibility": "C"
+        },
+        {
+          "entity": "Participating Teams",
+          "responsibility": "I"
+        }
+      ],
+      "escalation_path": "TODO: Define escalation path for rule disputes and operational issues"
+    }
+  },
+  "plan": {
+    "phases": [
+      {
+        "name": "Other",
+        "duration": "TODO: Define (estimated pre-September 2025)",
+        "milestones": [
+          "Secure sponsor commitment",
+          "Finalize rule framework and game design",
+          "Complete private chain development",
+          "Security audit of infrastructure"
+        ],
+        "deliverables": [
+          "Sponsor agreement",
+          "Rule specification document",
+          "Private chain deployment",
+          "Security audit report"
+        ],
+        "exit_criteria": [
+          "Sponsor signed",
+          "Rules approved by Nyx and sponsor",
+          "Chain passes security audit"
+        ]
+      },
+      {
+        "name": "Other",
+        "duration": "TODO: Define (weeks before September 2025)",
+        "milestones": [
+          "Open registration",
+          "Reach 100+ team registrations",
+          "Complete visualization and streaming infrastructure"
+        ],
+        "deliverables": [
+          "Registration portal",
+          "Team roster",
+          "Streaming platform ready"
+        ],
+        "exit_criteria": [
+          "100+ teams registered",
+          "All systems tested end-to-end"
+        ]
+      },
+      {
+        "name": "Other",
+        "duration": "TODO: Define competition duration",
+        "milestones": [
+          "Competition kickoff",
+          "Agents execute transactions",
+          "Live streaming and commentary",
+          "Competition end and winner determination"
+        ],
+        "deliverables": [
+          "Competition execution",
+          "Real-time visualization",
+          "Final leaderboard"
+        ],
+        "exit_criteria": [
+          "Competition completes without critical failures",
+          "Winner determined per rules"
+        ]
+      },
+      {
+        "name": "Other",
+        "duration": "TODO: Define post-competition period",
+        "milestones": [
+          "Prize distribution",
+          "Data analysis and publication",
+          "Retrospective and lessons learned"
+        ],
+        "deliverables": [
+          "Prize transfers",
+          "Research paper(s)",
+          "Public data release (if applicable)"
+        ],
+        "exit_criteria": [
+          "All prizes distributed",
+          "At least one research output published"
+        ]
+      }
+    ]
+  },
+  "risks": {
+    "risk_register": [
+      {
+        "risk": "Insufficient team registrations (<100 teams)",
+        "impact": "Reduced competition quality and research value",
+        "likelihood": "medium",
+        "mitigation": "Aggressive marketing through ZK Tokyo, DEPCON, and Ethereum community channels; adjust prize structure if needed",
+        "owner": "TODO: Assign owner"
+      },
+      {
+        "risk": "AI agents attempt to hack or exploit the environment",
+        "impact": "Competition integrity compromised; potential asset loss",
+        "likelihood": "high",
+        "mitigation": "Multiple validators for rule enforcement; private chain with authenticated-only transactions; penalty system; pre-competition security audit",
+        "owner": "TODO: Assign owner"
+      },
+      {
+        "risk": "Sponsor does not commit or withdraws",
+        "impact": "Insufficient funding; competition may be scaled down or cancelled",
+        "likelihood": "medium",
+        "mitigation": "Diversify sponsor outreach; have contingency funding plan; offer tiered sponsorship options",
+        "owner": "TODO: Assign owner"
+      },
+      {
+        "risk": "Technical infrastructure not ready by September 2025",
+        "impact": "Competition delayed; reputational damage",
+        "likelihood": "medium",
+        "mitigation": "Start development early; define clear milestones; have buffer in timeline",
+        "owner": "TODO: Assign owner"
+      },
+      {
+        "risk": "Regulatory issues with prize distribution or crypto assets",
+        "impact": "Legal exposure; delayed prize distribution",
+        "likelihood": "low",
+        "mitigation": "Consult legal counsel; use custom tokens on private chain (not public crypto); structure prizes appropriately",
+        "owner": "TODO: Assign owner"
+      },
+      {
+        "risk": "Unintended emergent behaviors (cartel formation, norm manipulation)",
+        "impact": "Research findings may be unexpected or difficult to interpret",
+        "likelihood": "high",
+        "mitigation": "This is actually a research goal, not purely a risk; document and analyze as data; have circuit breakers if behavior is destructive",
+        "owner": "TODO: Assign owner"
+      }
+    ]
+  },
+  "cost_roi": {
+    "cost_items": [
+      {
+        "item": "Prize pool",
+        "type": "one_time",
+        "estimate": "16,000,000 JPY",
+        "notes": "1st: 10M, 2nd: 4M, 3rd: 1M, special prizes: 1M"
+      },
+      {
+        "item": "Infrastructure development (private chain, validators, visualization)",
+        "type": "one_time",
+        "estimate": "TODO: Estimate development cost",
+        "notes": "May be partially covered by existing Nyx engineering capacity"
+      },
+      {
+        "item": "Operations and event management",
+        "type": "one_time",
+        "estimate": "TODO: Estimate operational cost",
+        "notes": "Includes streaming, support, prize distribution logistics"
+      },
+      {
+        "item": "Security audit",
+        "type": "one_time",
+        "estimate": "TODO: Estimate audit cost",
+        "notes": "Critical for competition integrity"
+      },
+      {
+        "item": "Marketing and community outreach",
+        "type": "one_time",
+        "estimate": "TODO: Estimate marketing cost",
+        "notes": "Leverage existing ZK Tokyo and DEPCON channels"
+      }
+    ],
+    "roi_model": {
+      "benefit_drivers": [
+        "Unique research data for academic publications",
+        "Brand positioning as AI agent economy research leader",
+        "Community engagement and talent pipeline (ZK Tokyo alumni, competition participants)",
+        "Potential IP or infrastructure reuse for future experiments",
+        "Sponsor brand visibility and joint research credit"
+      ],
+      "roi_assumptions": [
+        "Research publications have long-term reputational value (hard to quantify)",
+        "Sponsor investment justified by brand alignment and research access",
+        "Competition infrastructure can be reused, amortizing development cost"
+      ],
+      "payback_period": "TODO: Define or note that ROI is primarily non-financial (research value, reputation)"
+    }
+  },
+  "cta": {
+    "requested_decision": "Sponsor the AI Agent Economy Competition with funding and/or co-design participation",
+    "requested_budget_or_resources": "TODO: Define specific sponsorship tiers and amounts; minimum viable sponsorship amount",
+    "timeline_for_decision": "TODO: Define deadline for sponsor commitment (likely Q1-Q2 2025 to allow September 2025 execution)",
+    "next_steps": [
+      "Confirm sponsor interest and schedule follow-up meeting",
+      "Share detailed rule design framework for co-design discussion",
+      "Provide sponsorship tier options and benefits",
+      "Answer questions on L0/L1/L2 framework and research priorities"
+    ]
+  },
+  "terminology": [
+    {
+      "term": "AI Agent Economy",
+      "definition_plain": "An economic system where only AI agents (not humans) participate in transactions, trade, and value creation.",
+      "business_value_link": "Enables research on future economic systems where AI autonomously handles financial decisions."
+    },
+    {
+      "term": "On-chain",
+      "definition_plain": "Transactions and data recorded on a blockchain, making them publicly verifiable and tamper-proof.",
+      "business_value_link": "Provides transparency, auditability, and trust without a central authority."
+    },
+    {
+      "term": "Private chain",
+      "definition_plain": "A blockchain network with restricted access, where only authorized participants can submit transactions.",
+      "business_value_link": "Enables controlled experiments with security while retaining blockchain benefits."
+    },
+    {
+      "term": "L0/L1/L2 framework",
+      "definition_plain": "A layered model: L0 = execution physics (how transactions work), L1 = institutions/norms (rules of the economy), L2 = AI agents (participants and their behaviors).",
+      "business_value_link": "Allows systematic research by isolating variables at each layer."
+    },
+    {
+      "term": "Validator",
+      "definition_plain": "A node in the blockchain network that checks transactions for rule compliance and proposes/confirms blocks.",
+      "business_value_link": "Ensures competition integrity by enforcing rules automatically."
+    },
+    {
+      "term": "Reward function",
+      "definition_plain": "A mathematical formula defining what outcomes an agent optimizes for (e.g., maximize profit, resources).",
+      "business_value_link": "Shapes agent behavior; different reward functions test different economic hypotheses."
+    },
+    {
+      "term": "DeFi (Decentralized Finance)",
+      "definition_plain": "Financial services (lending, trading, etc.) built on blockchain without traditional intermediaries.",
+      "business_value_link": "One possible activity domain for AI agents in the competition."
+    },
+    {
+      "term": "MEV (Maximal Extractable Value)",
+      "definition_plain": "Profit that can be extracted by reordering, inserting, or censoring transactions in a block.",
+      "business_value_link": "A research area Nyx has explored; relevant to understanding agent economic behavior."
+    },
+    {
+      "term": "Prompt",
+      "definition_plain": "Instructions given to an AI agent that define its behavior, goals, and decision-making logic.",
+      "business_value_link": "Competition participants develop prompts; the quality of prompts determines agent performance."
+    }
+  ],
+  "unknowns_todo": [
+    {
+      "question": "What is the specific sponsorship ask amount and tier structure?",
+      "why_needed": "Sponsors need clear options to evaluate; CTA must be concrete",
+      "suggested_owner": "Nyx Foundation leadership"
+    },
+    {
+      "question": "What is the deadline for sponsor commitment?",
+      "why_needed": "Timeline drives urgency and planning",
+      "suggested_owner": "Nyx Foundation leadership"
+    },
+    {
+      "question": "What is the detailed competition duration and schedule?",
+      "why_needed": "Participants and sponsors need to plan around specific dates",
+      "suggested_owner": "Nyx Foundation operations"
+    },
+    {
+      "question": "What is the infrastructure development cost estimate?",
+      "why_needed": "Required for total budget and sponsor funding ask",
+      "suggested_owner": "Nyx Foundation engineering"
+    },
+    {
+      "question": "What is the security audit cost and timeline?",
+      "why_needed": "Critical path item for competition readiness",
+      "suggested_owner": "Nyx Foundation engineering"
+    },
+    {
+      "question": "Who is the final decision maker for rule disputes and competition governance?",
+      "why_needed": "Governance clarity is essential for multi-stakeholder projects",
+      "suggested_owner": "Nyx Foundation leadership"
+    },
+    {
+      "question": "What is the escalation path for operational issues during competition?",
+      "why_needed": "Needed for risk mitigation and smooth execution",
+      "suggested_owner": "Nyx Foundation operations"
+    },
+    {
+      "question": "What are the specific Soneium integration details if pursued?",
+      "why_needed": "Mentioned as a collaboration idea but not fully specified",
+      "suggested_owner": "Nyx Foundation + Sponsor (Sony)"
+    },
+    {
+      "question": "What is the regulatory/legal review status for prize distribution?",
+      "why_needed": "Ensures compliance and avoids legal exposure",
+      "suggested_owner": "Nyx Foundation legal counsel"
+    },
+    {
+      "question": "Which institution design (exogenous vs. endogenous rules) should be prioritized for the first competition?",
+      "why_needed": "Feedback explicitly requested in notes; affects competition design",
+      "suggested_owner": "Nyx Foundation research team + Sponsor"
+    },
+    {
+      "question": "What is the Nanto lab construction completion date?",
+      "why_needed": "Potentially relevant for competition operations if lab is used",
+      "suggested_owner": "Nyx Foundation operations"
+    },
+    {
+      "question": "What are the risk owners for each identified risk?",
+      "why_needed": "Accountability needed for risk management",
+      "suggested_owner": "Nyx Foundation leadership"
+    }
+  ]
+}

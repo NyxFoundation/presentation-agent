@@ -1,0 +1,395 @@
+{
+  "chart_edits": [
+    {
+      "slide_id": "SL01",
+      "intended_takeaway": "This 4-week exploration phase is low-commitment with a clear exit gate before any real investment.",
+      "declutter": [
+        "Remove Build/Execute/Analyze phases from flowchart—only show Explore and Co-Design with exit gate between",
+        "Remove decision criteria details from visual—keep in speaker notes",
+        "Limit to 3 elements maximum: Explore box, Exit Gate, Co-Design box"
+      ],
+      "focus": [
+        "Highlight 'YOU ARE HERE' marker on Explore phase with distinct color",
+        "Add bold annotation: '4 weeks, meetings only' directly on Explore box",
+        "Use red/green gate icon between phases to signal go/no-go decision point"
+      ],
+      "revised_visual_spec": {
+        "type": "flowchart",
+        "data_requirements": [
+          "Box 1: 'Explore' (highlighted, with '4 weeks' label)",
+          "Gate icon between boxes (diamond shape)",
+          "Box 2: 'Co-Design' (grayed/faded to show future state)",
+          "Current position indicator: 'YOU ARE HERE' arrow pointing to Explore"
+        ],
+        "annotations": [
+          "'Meetings only—no dev commitment' label on Explore box",
+          "'Exit if no fit' label on gate"
+        ],
+        "style_notes": "Use 2-color palette: blue for current phase, gray for future. Gate in orange."
+      }
+    },
+    {
+      "slide_id": "SL02",
+      "intended_takeaway": "Universities and corporations are structurally blocked from this research, creating a unique opportunity gap.",
+      "declutter": [
+        "Remove third 'Research Opportunity Space' column—redundant with the gap itself",
+        "Remove detailed barrier lists—use simple icons (lock/block symbol)",
+        "Use only 2 columns with a clear gap between them"
+      ],
+      "focus": [
+        "Position Nyx Foundation logo/name in the visible gap between blocked columns",
+        "Add 'BLOCKED' labels with X marks above University and Corporation columns",
+        "Use arrow pointing to gap with label 'Nyx operates here'"
+      ],
+      "revised_visual_spec": {
+        "type": "diagram",
+        "data_requirements": [
+          "Column 1: 'University' with lock icon, label 'IRB/Ethics blocks crypto'",
+          "Column 2: 'Tech Corporation' with lock icon, label 'Accounting rules block crypto'",
+          "Center gap: Nyx Foundation positioned in open space",
+          "Visual barrier (wall/fence) on left and right columns"
+        ],
+        "annotations": [
+          "'Structural barriers' header above blocked columns",
+          "'Research opportunity' label pointing to Nyx in gap"
+        ],
+        "style_notes": "Use red X or lock icons for blocked areas. Green/open styling for Nyx position."
+      }
+    },
+    {
+      "slide_id": "SL03",
+      "intended_takeaway": "The research window is 2025-2027; by 2040, curriculum designers need this empirical data.",
+      "declutter": [
+        "Remove intermediate years from timeline—show only 3 key points: 2025, 2027-2030, 2040",
+        "Remove detailed regulatory framework descriptions",
+        "Use simple dot-and-line timeline instead of complex graphic"
+      ],
+      "focus": [
+        "Highlight '2025: NOW' with distinct marker and 'Act here' callout",
+        "Add closing bracket visual for 2027-2030 showing 'Window closing'",
+        "Connect 2040 education outcome with dashed arrow back to 2025 decision"
+      ],
+      "revised_visual_spec": {
+        "type": "timeline",
+        "data_requirements": [
+          "Point 1: '2025' (NOW marker, highlighted)",
+          "Point 2: '2027-2030' with 'Regulations lock in' label",
+          "Point 3: '2040' with 'Curriculum needs data' label",
+          "Bracket spanning 2025-2027 labeled 'Research window'"
+        ],
+        "annotations": [
+          "'First-mover window' bracket over 2025-2027",
+          "'Decision point: TODAY' callout at 2025"
+        ],
+        "style_notes": "Horizontal timeline. Use green for open window, red gradient as it closes toward 2030."
+      }
+    },
+    {
+      "slide_id": "SL04",
+      "intended_takeaway": "Nyx Foundation has delivered across funding, security, community, and academia—not just talk.",
+      "declutter": [
+        "Remove supporting detail text under each metric—headline numbers speak for themselves",
+        "Use 4-icon grid instead of detailed table",
+        "Remove any percentages or secondary metrics"
+      ],
+      "focus": [
+        "Make each headline metric the largest text element in its quadrant",
+        "Use recognizable icons: money bag, shield, people, graduation cap",
+        "Order by impact: Funding → Security → Community → Academic"
+      ],
+      "revised_visual_spec": {
+        "type": "grid",
+        "data_requirements": [
+          "Quadrant 1: Icon + '60M+ JPY' + 'Funding from 30+ donors'",
+          "Quadrant 2: Icon + '17 Vulnerabilities' + 'Fusaka audit'",
+          "Quadrant 3: Icon + '4 Years' + 'ZK Tokyo with Vitalik'",
+          "Quadrant 4: Icon + 'UTokyo' + 'Blockchain course partner'"
+        ],
+        "annotations": [
+          "No additional annotations needed—metrics are self-evident"
+        ],
+        "style_notes": "2x2 grid layout. Large bold numbers. Consistent icon style. Single accent color."
+      }
+    },
+    {
+      "slide_id": "SL05",
+      "intended_takeaway": "The L0/L1/L2 framework enables controlled manipulation at each layer with human oversight throughout.",
+      "declutter": [
+        "Remove 'Data output flowing to Educational/Research Findings' arrow—separate concern",
+        "Remove '100+ teams' detail—belongs elsewhere",
+        "Simplify to exactly 3 horizontal layers plus oversight bar"
+      ],
+      "focus": [
+        "Add 'HUMAN OVERSIGHT' bar spanning the full width at top",
+        "Label each layer clearly: L2 Agents, L1 Rules, L0 Blockchain",
+        "Add manipulation indicators (toggles/switches) at each layer edge"
+      ],
+      "revised_visual_spec": {
+        "type": "layered_diagram",
+        "data_requirements": [
+          "Top bar: 'HUMAN OVERSIGHT' (full width, distinct color)",
+          "Layer L2: 'AI Agents' with agent icons",
+          "Layer L1: 'Institutions/Rules' with gear/rule icons",
+          "Layer L0: 'Execution/Blockchain' with chain/block icons",
+          "Manipulation toggles on right side of each layer"
+        ],
+        "annotations": [
+          "'Can intervene at any layer' pointing to toggles",
+          "'Controlled research sandbox' label at bottom"
+        ],
+        "style_notes": "Stacked horizontal bars. Human oversight in blue at top. Layers in progressively lighter shades below."
+      }
+    },
+    {
+      "slide_id": "SL06",
+      "intended_takeaway": "This complements Soneium by feeding developers and research into the ecosystem, not competing with it.",
+      "declutter": [
+        "Remove 'SGE Curriculum Design' flow—separate from Soneium story",
+        "Simplify to 2 elements: Private Research Chain and Soneium, with clear relationship",
+        "Remove detailed 'Soneium Spark' intermediate step"
+      ],
+      "focus": [
+        "Use 'feeds into' arrow from Research Chain to Soneium (not bidirectional)",
+        "Label the arrow: 'Developers + Learnings'",
+        "Position Soneium larger/higher to show it as the main ecosystem"
+      ],
+      "revised_visual_spec": {
+        "type": "relationship_diagram",
+        "data_requirements": [
+          "Circle 1 (smaller): 'Private Research Chain' with 'Controlled sandbox' subtitle",
+          "Circle 2 (larger): 'Soneium Ecosystem' with 'Public mainnet' subtitle",
+          "Arrow from Circle 1 to Circle 2 labeled 'Developers + Research'"
+        ],
+        "annotations": [
+          "'Complements, not competes' header",
+          "'Talent pipeline' label along arrow"
+        ],
+        "style_notes": "Soneium circle in Sony brand color. Research chain in neutral. Arrow shows one-way value flow."
+      }
+    },
+    {
+      "slide_id": "SL07",
+      "intended_takeaway": "Real-stakes blockchain research is superior to simulation on behavioral realism and verifiability.",
+      "declutter": [
+        "Reduce comparison dimensions from 4 to 2: Behavioral Realism, Verifiability",
+        "Remove 'Academic Novelty' and 'Policy Relevance' rows—derivative of the first two",
+        "Use checkmark/X instead of ratings or text descriptions"
+      ],
+      "focus": [
+        "Highlight 'Real-stakes Blockchain' column with background color",
+        "Use large ✓ and ✗ symbols instead of small checkmarks",
+        "Add 'THIS PROPOSAL' label pointing to the winning column"
+      ],
+      "revised_visual_spec": {
+        "type": "comparison_table",
+        "data_requirements": [
+          "Header row: blank, 'Simulation Only', 'Real-stakes Blockchain'",
+          "Row 1: 'Behavioral Realism', ✗, ✓",
+          "Row 2: 'Verifiable Audit Trail', ✗, ✓"
+        ],
+        "annotations": [
+          "'Our approach' arrow pointing to right column"
+        ],
+        "style_notes": "2-column comparison. Right column highlighted. Large symbols for quick scanning."
+      }
+    },
+    {
+      "slide_id": "SL08",
+      "intended_takeaway": "Only the Nyx + Sony partnership can check all four boxes: research capability, education, reach, and execution.",
+      "declutter": [
+        "Remove 'Optimal position?' column—redundant when checkmarks tell the story",
+        "Simplify to 3 capability columns maximum",
+        "Remove detailed explanations in cells—use only ✓/✗"
+      ],
+      "focus": [
+        "Highlight 'Nyx + Sony' row with background color",
+        "Use checkmarks that visually accumulate—reader counts to see the winner",
+        "Add '✓✓✓ Only option with all capabilities' annotation at Nyx+Sony row"
+      ],
+      "revised_visual_spec": {
+        "type": "comparison_table",
+        "data_requirements": [
+          "Header row: blank, 'Can do AI+crypto research', 'Has education reach', 'Has ecosystem'",
+          "Row 1: 'University', ✗, ✓, ✗",
+          "Row 2: 'Corporation', ✗, ✗, ✓",
+          "Row 3: 'Nyx alone', ✓, ✗, ✗",
+          "Row 4: 'Nyx + Sony' (highlighted), ✓, ✓, ✓"
+        ],
+        "annotations": [
+          "'Complete capability set' label pointing to bottom row"
+        ],
+        "style_notes": "Bottom row in accent color. All ✓ in green, ✗ in red/gray."
+      }
+    },
+    {
+      "slide_id": "SL09",
+      "intended_takeaway": "Human researchers have real-time control at every level—this is not autonomous AI in the wild.",
+      "declutter": [
+        "Remove detailed penalty system description",
+        "Consolidate to 3 layers only: Human Control, Rule Framework, Agent Execution",
+        "Remove upward data flow arrows—focus on downward control"
+      ],
+      "focus": [
+        "Make 'HUMAN CONTROL' layer visually dominant (largest, at top)",
+        "Add intervention arrows pointing DOWN from human layer to each lower layer",
+        "Label arrows: 'Pause', 'Adjust', 'Terminate'"
+      ],
+      "revised_visual_spec": {
+        "type": "control_diagram",
+        "data_requirements": [
+          "Top layer (largest): 'HUMAN RESEARCHERS' with 'Real-time monitoring' subtitle",
+          "Middle layer: 'RULE CONSTRAINTS' with 'Validator enforcement' subtitle",
+          "Bottom layer: 'AI AGENTS' with 'Private chain only' subtitle",
+          "Downward arrows from top to each layer"
+        ],
+        "annotations": [
+          "Intervention labels on arrows: 'Pause', 'Adjust', 'Terminate'",
+          "'Full control retained' header"
+        ],
+        "style_notes": "Inverted pyramid or top-heavy stack. Human layer in blue, others progressively smaller/lighter."
+      }
+    },
+    {
+      "slide_id": "SL10",
+      "intended_takeaway": "This is a controlled research experiment with clear boundaries—not a crypto product launch.",
+      "declutter": [
+        "Remove detailed 'In Scope' list—focus on what's excluded",
+        "Use simple IN/OUT visual instead of nested circles",
+        "Remove data governance details—too granular for visual"
+      ],
+      "focus": [
+        "List OUT OF SCOPE items prominently with strike-through or X styling",
+        "Use red/stop coloring for excluded items",
+        "Single 'IN SCOPE' box: 'Private research chain with custom tokens'"
+      ],
+      "revised_visual_spec": {
+        "type": "scope_boundary",
+        "data_requirements": [
+          "Left side (green): 'IN SCOPE' - 'Private research chain, Custom tokens, Academic output'",
+          "Right side (red/gray): 'OUT OF SCOPE' - 'Public mainnet', 'Crypto speculation', 'Human trading', 'Long-term platform'"
+        ],
+        "annotations": [
+          "'Research, not product' header",
+          "Clear vertical boundary line between sections"
+        ],
+        "style_notes": "Two-column layout with clear divider. Green left side, red/gray right side with strikethrough text."
+      }
+    },
+    {
+      "slide_id": "SL11",
+      "intended_takeaway": "Each phase has an exit gate—commitment increases only after validation at each stage.",
+      "declutter": [
+        "Remove milestone deliverables from visual—keep in speaker notes",
+        "Show only 5 phase names and 4 exit gates between them",
+        "Remove date details except September 2025 for Execute phase"
+      ],
+      "focus": [
+        "Highlight Phase 1 'Explore' with 'YOU ARE HERE' marker",
+        "Make exit gates visually prominent (diamond/gate icons between each phase)",
+        "Size phases to show increasing commitment: small → medium → large"
+      ],
+      "revised_visual_spec": {
+        "type": "phased_timeline",
+        "data_requirements": [
+          "Phase 1: 'Explore' (4 wks) - highlighted with 'NOW' marker",
+          "Gate 1: Exit option",
+          "Phase 2: 'Co-Design' (TBD)",
+          "Gate 2: Exit option",
+          "Phase 3: 'Build' (TBD)",
+          "Gate 3: Exit option",
+          "Phase 4: 'Execute' (Sept 2025)",
+          "Gate 4: Exit option",
+          "Phase 5: 'Analyze'"
+        ],
+        "annotations": [
+          "'Exit if no fit' label on first gate",
+          "Increasing size/commitment indicator"
+        ],
+        "style_notes": "Horizontal flow. Phase boxes grow in size left to right. Gates in orange. First phase in accent color."
+      }
+    },
+    {
+      "slide_id": "SL12",
+      "intended_takeaway": "Every key risk has a specific, actionable mitigation—this is not hand-waving.",
+      "declutter": [
+        "Remove 'Likelihood' and 'Residual Risk' columns—focus on Risk → Mitigation pairing",
+        "Reduce to 4 rows (one per risk category)",
+        "Remove color coding—use consistent styling"
+      ],
+      "focus": [
+        "Use arrow or '→' between Risk and Mitigation columns",
+        "Bold the mitigation strategy to show it's the answer",
+        "Order by priority: Regulatory, Security, Participation, Timeline"
+      ],
+      "revised_visual_spec": {
+        "type": "risk_mitigation_table",
+        "data_requirements": [
+          "Header: 'Risk', '→', 'Mitigation'",
+          "Row 1: 'Regulatory', →, 'Private chain + legal counsel'",
+          "Row 2: 'Security', →, 'Multi-validator + audit'",
+          "Row 3: 'Participation', →, 'Nyx community (4+ years)'",
+          "Row 4: 'Timeline', →, 'Phased approach + buffers'"
+        ],
+        "annotations": [
+          "'Specific mitigation for each risk' header"
+        ],
+        "style_notes": "Clean 2-column table with arrows. Mitigations in bold. No color coding needed."
+      }
+    },
+    {
+      "slide_id": "SL13",
+      "intended_takeaway": "16M JPY investment yields educational research data and ecosystem value—not financial return.",
+      "declutter": [
+        "Remove TBD items from visual—acknowledge in speaker notes only",
+        "Simplify to: Investment (16M JPY) → Outputs (3-4 key items)",
+        "Remove detailed flow diagram complexity"
+      ],
+      "focus": [
+        "Show single input: '16M JPY Prize Pool' (the confirmed number)",
+        "Fan out to 3 outputs: Research Data, Academic Publications, Developer Pipeline",
+        "Add 'ROI = Research Value' label to clarify framing"
+      ],
+      "revised_visual_spec": {
+        "type": "input_output_diagram",
+        "data_requirements": [
+          "Input box: '16M JPY Prize Pool' (confirmed amount)",
+          "Output 1: 'Research Data' (unique empirical findings)",
+          "Output 2: 'Academic Publications' (peer-reviewed papers)",
+          "Output 3: 'Developer Pipeline' (ecosystem talent)"
+        ],
+        "annotations": [
+          "'Educational ROI, not financial' label",
+          "Arrow from input fanning to multiple outputs"
+        ],
+        "style_notes": "Left-to-right flow. Single input, multiple outputs. Clean arrow connections."
+      }
+    },
+    {
+      "slide_id": "SL14",
+      "intended_takeaway": "The ask is simple: approve 4 weeks of meetings and introduce us to the operational stakeholders.",
+      "declutter": [
+        "Remove detailed timeline—focus on immediate actions only",
+        "Reduce to 2-3 action items maximum",
+        "Remove 'owner' assignments from visual—keep in speaker notes"
+      ],
+      "focus": [
+        "Number the actions clearly: 1, 2, 3",
+        "Make Action 1 'Approve exploratory phase' the most prominent",
+        "Add checkbox styling to suggest actionability"
+      ],
+      "revised_visual_spec": {
+        "type": "action_list",
+        "data_requirements": [
+          "Action 1 (checkbox): 'Approve 4-week exploratory meetings' - TODAY",
+          "Action 2 (checkbox): 'Introduce to CEO Kato & Sota Watanabe' - Within 1 week",
+          "Action 3 (checkbox): 'Schedule first meeting' - Within 2 weeks"
+        ],
+        "annotations": [
+          "'Minimal commitment to start' footer",
+          "'Go/No-go decision at week 4' endpoint indicator"
+        ],
+        "style_notes": "Vertical checklist format. Large checkboxes. Action 1 highlighted as primary ask."
+      }
+    }
+  ]
+}

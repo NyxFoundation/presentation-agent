@@ -1,0 +1,157 @@
+{
+  "edits": [
+    {
+      "slide_id": "SL02+SL03",
+      "change_type": "merge",
+      "before": "SL02: 'AI agents are becoming autonomous economic actors, but no rigorous empirical research exists' + SL03: 'Policymakers designing AI institutions will operate blind without empirical data from controlled experiments'",
+      "after": "Merged slide: 'AI agents are becoming economic actors, but policymakers and educators lack empirical data to guide them'",
+      "reason": "Both slides address the problem/gap. SL02 establishes the research gap; SL03 explains consequences. Combined into single problem statement with 'so what' built in. Reduces redundant setup."
+    },
+    {
+      "slide_id": "SL06+SL07",
+      "change_type": "merge",
+      "before": "SL06: 'This research can showcase Soneium ecosystem while generating unique educational data' + SL07: 'Real-asset stakes create more realistic AI behavior than pure simulations'",
+      "after": "Merged slide: 'Real-asset blockchain research generates unique data while showcasing Soneium ecosystem potential'",
+      "reason": "Both slides justify the approach. SL07's research value argument strengthens SL06's Soneium fit. Combined: one slide on 'why this approach works for both parties.'"
+    },
+    {
+      "slide_id": "SL08",
+      "change_type": "rewrite",
+      "before": "'Nyx can execute where Google, OpenAI, and universities face regulatory barriers'",
+      "after": "'Only a private research foundation like Nyx can run this experiment—universities and corporations face structural barriers'",
+      "reason": "Tighten title to be more assertion-forward. Original implies comparison; rewrite states the unique positioning directly."
+    },
+    {
+      "slide_id": "SL09+SL10",
+      "change_type": "merge",
+      "before": "SL09: 'Human researchers monitor and can intervene—AI agents operate within defined rule constraints' + SL10: 'Private chain with custom tokens eliminates public crypto speculation and brand risk'",
+      "after": "Merged slide: 'Human oversight, private chain, and custom tokens ensure controlled research—not crypto speculation'",
+      "reason": "Both address governance/safety concerns. Human-in-the-loop (SL09) and brand protection (SL10) are two sides of same objection handler. Single slide addresses 'is this safe/risky?'"
+    },
+    {
+      "slide_id": "SL11",
+      "change_type": "rewrite",
+      "before": "'A phased roadmap from exploratory meetings to September 2025 competition includes clear exit gates'",
+      "after": "'Phased roadmap with exit gates: explore (4 weeks) → co-design → build → execute (Sept 2025)'",
+      "reason": "Add phase names to title for executive skim. Risk content from SL12 absorbed into this slide's notes."
+    },
+    {
+      "slide_id": "SL12",
+      "change_type": "delete",
+      "before": "'Key risks have specific mitigations: regulatory (private chain), security (audit), participation (Nyx community)'",
+      "after": "Deleted—content absorbed into SL11 roadmap slide",
+      "reason": "Separate risk slide is defensive. Better to address risks inline with each phase's exit criteria. Key mitigations (private chain, audit, community) already referenced elsewhere."
+    },
+    {
+      "slide_id": "SL13+SL14",
+      "change_type": "merge",
+      "before": "SL13: '[DRAFT] 16M JPY prize pool investment generates unique educational research data as the primary ROI' + SL14: 'Next step: Approve exploratory meetings and introduce operational stakeholders for co-design'",
+      "after": "Merged slide: 'The ask: Approve 4-week exploratory meetings (16M JPY prize pool; operations TBD in co-design)'",
+      "reason": "Executive audiences want ask + cost on same slide. ROI discussion merged into CTA. Budget note preserved but de-emphasized since co-design will refine."
+    },
+    {
+      "slide_id": "SL01",
+      "change_type": "rewrite",
+      "before": "'A 4-week exploratory meeting can validate whether this AI research collaboration fits Sony's education and Soneium strategy'",
+      "after": "'Request: 4-week exploratory meetings to validate AI research collaboration with Sony's education and Soneium strategy'",
+      "reason": "Shorten and make imperative. Executive opener should be direct ask, not conditional statement."
+    },
+    {
+      "slide_id": "SL04",
+      "change_type": "rewrite",
+      "before": "'Nyx Foundation has proven execution capability in Ethereum ecosystem research and education'",
+      "after": "'Nyx has 4 years of Ethereum research credibility: 60M+ JPY raised, UTokyo partnership, ZK Tokyo community'",
+      "reason": "Add proof points to title. Executives skim titles; key metrics should be visible without reading bullets."
+    },
+    {
+      "slide_id": "SL05",
+      "change_type": "rewrite",
+      "before": "'The AI Agent Economy Competition creates a blockchain-based research platform where AI agents autonomously trade real assets'",
+      "after": "'The proposal: 100+ teams, AI agents trading on private blockchain, L0/L1/L2 research framework'",
+      "reason": "Make title more scannable. Key elements (team count, private blockchain, framework) should be in title."
+    }
+  ],
+  "revised_slide_plan": [
+    {
+      "slide_no": 1,
+      "slide_id": "SL01",
+      "action_title": "Request: 4-week exploratory meetings to validate AI research collaboration with Sony's education and Soneium strategy",
+      "purpose": "Answer-first opener—state the ask immediately",
+      "visual_suggestion": "Decision flowchart: Explore → Co-Design → Build → Execute with exit gates"
+    },
+    {
+      "slide_no": 2,
+      "slide_id": "SL02-03",
+      "action_title": "AI agents are becoming economic actors, but policymakers and educators lack empirical data to guide them",
+      "purpose": "Establish problem + consequence in single slide",
+      "visual_suggestion": "Gap diagram showing blocked institutions (universities, corporations) with Nyx in opportunity space"
+    },
+    {
+      "slide_no": 3,
+      "slide_id": "SL04",
+      "action_title": "Nyx has 4 years of Ethereum research credibility: 60M+ JPY raised, UTokyo partnership, ZK Tokyo community",
+      "purpose": "Establish credibility before proposal",
+      "visual_suggestion": "Four-quadrant credibility card with headline metrics"
+    },
+    {
+      "slide_no": 4,
+      "slide_id": "SL05",
+      "action_title": "The proposal: 100+ teams, AI agents trading on private blockchain, L0/L1/L2 research framework",
+      "purpose": "Introduce what we will do",
+      "visual_suggestion": "Three-layer framework diagram: L0 (blockchain) → L1 (rules) → L2 (agents)"
+    },
+    {
+      "slide_no": 5,
+      "slide_id": "SL06-07",
+      "action_title": "Real-asset blockchain research generates unique data while showcasing Soneium ecosystem potential",
+      "purpose": "Research value + Soneium fit in one slide",
+      "visual_suggestion": "Comparison table: simulation-only vs. real-stakes research + Soneium integration pathway"
+    },
+    {
+      "slide_no": 6,
+      "slide_id": "SL08",
+      "action_title": "Only a private research foundation like Nyx can run this experiment—universities and corporations face structural barriers",
+      "purpose": "Why Nyx, why now, why partner",
+      "visual_suggestion": "2x2 matrix: institution type vs. can conduct research / has education ecosystem"
+    },
+    {
+      "slide_no": 7,
+      "slide_id": "SL09-10",
+      "action_title": "Human oversight, private chain, and custom tokens ensure controlled research—not crypto speculation",
+      "purpose": "Address governance and brand risk concerns",
+      "visual_suggestion": "Governance layers diagram with scope boundary (in-scope vs. out-of-scope)"
+    },
+    {
+      "slide_no": 8,
+      "slide_id": "SL11",
+      "action_title": "Phased roadmap with exit gates: explore (4 weeks) → co-design → build → execute (Sept 2025)",
+      "purpose": "Timeline with de-risking structure and key mitigations",
+      "visual_suggestion": "Timeline with 5 phases, exit gates, risk mitigations annotated at each phase"
+    },
+    {
+      "slide_no": 9,
+      "slide_id": "SL13-14",
+      "action_title": "The ask: Approve 4-week exploratory meetings (16M JPY prize pool; operations TBD in co-design)",
+      "purpose": "CTA with cost transparency and clear next steps",
+      "visual_suggestion": "Next steps card with 3 action items + investment summary"
+    }
+  ],
+  "quality_checklist": {
+    "storyline_works_from_titles_alone": {
+      "status": "pass",
+      "notes": "9 titles form clear narrative: Ask → Problem → Credibility → Proposal → Value → Why us → Safety → Plan → Ask again"
+    },
+    "reduced_redundancy_fits_constraints": {
+      "status": "pass",
+      "notes": "Reduced from 14 to 9 slides. 9 slides × ~1.5 min = 13.5 min, well within 15-minute constraint"
+    },
+    "cta_clear": {
+      "status": "pass",
+      "notes": "CTA bookends deck (SL01 opener, SL13-14 closer). Ask is specific: 4-week exploratory meetings, introduce to CEO Kato and Sota Watanabe"
+    },
+    "json_only": {
+      "status": "pass",
+      "notes": "Output is valid JSON"
+    }
+  }
+}

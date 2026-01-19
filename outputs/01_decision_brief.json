@@ -1,0 +1,99 @@
+{
+  "clarifying_questions": [
+    "What specific Soneium integration is envisioned—should the competition run on Soneium L2, or is a separate private chain preferred with potential future migration?",
+    "What sponsorship tier and funding amount is being requested from Sony (co-design partner, title sponsor, research collaborator)?",
+    "Is there a specific timeline for the exploratory meeting decision, or is this an open-ended relationship-building conversation?",
+    "What educational content or student engagement component could be included to align with Sony Global Education's mission?",
+    "Are there existing Nyx-Sony relationships or prior conversations to reference?"
+  ],
+  "decision_brief": {
+    "doc_type": "Proposal deck",
+    "primary_decider": "Masaaki Isozu (Chairman, Sony Global Education; Director, Startale Labs; Corporate Distinguished Engineer, Sony Group)",
+    "secondary_stakeholders": [
+      "Naoki Kato (President/CEO, Sony Global Education) — operational approval if collaboration proceeds",
+      "Jun Watanabe (Chairman, Startale / Representative Director, S.BLOX) — Soneium ecosystem decisions",
+      "Sota Watanabe (CEO, Startale Labs) — technical and ecosystem partnership decisions",
+      "Sony Group blockchain strategy team — corporate alignment"
+    ],
+    "decision_needed": "Agree to an exploratory meeting to discuss potential collaboration between Nyx Foundation and Sony (SGE/Soneium) on the AI Agent Economy Competition—specifically to assess strategic fit, identify co-design opportunities, and determine next steps for a formal partnership proposal",
+    "decision_criteria": [
+      "Strategic fit with Soneium ecosystem (complementary vs. competing blockchain approach)",
+      "Educational research value (alignment with SGE's mission and Isozu's '300-year education vision')",
+      "Feasibility of integration (technical compatibility with Sony blockchain infrastructure)",
+      "ROI framing as educational/research impact rather than pure financial return",
+      "Risk profile (security, regulatory, reputational) acceptable for Sony brand",
+      "Operational complexity and resource requirements",
+      "Differentiation from existing initiatives (IBM/Fujitsu blockchain partnerships)",
+      "Scalability and potential for future collaboration beyond this competition"
+    ],
+    "success_definition": [
+      "Isozu agrees to schedule a follow-up meeting within 2 weeks of receiving the proposal",
+      "Isozu introduces Nyx to at least one operational decision-maker (Kato at SGE or Sota Watanabe at Startale)",
+      "Sony expresses interest in at least one collaboration mode: co-design, sponsorship, or research partnership",
+      "Competition design discussion advances to include Soneium ecosystem integration options",
+      "No immediate objection raised on strategic misalignment with Sony blockchain strategy",
+      "Clear next steps documented with assigned owners and target dates"
+    ],
+    "likely_objections": [
+      {
+        "objection": "This doesn't align with Soneium's current ecosystem priorities post-mainnet launch",
+        "counter_hypothesis": "Position the competition as an early Soneium ecosystem showcase—AI agents on Soneium demonstrates practical blockchain utility beyond crypto trading, aligning with Sony's 'everyday life' blockchain vision"
+      },
+      {
+        "objection": "Crypto-based competition may carry reputational/regulatory risk for Sony brand",
+        "counter_hypothesis": "Emphasize private chain with custom tokens (not public crypto), controlled environment, and research focus; Nyx has established security credibility (17 vulnerabilities found in Fusaka audit)"
+      },
+      {
+        "objection": "No clear educational component—why would Sony Global Education care?",
+        "counter_hypothesis": "Frame as educational research infrastructure: studying emergent AI economic behavior informs future education design; potential for student participation via University of Tokyo partnership"
+      },
+      {
+        "objection": "This is speculative/theoretical rather than practical",
+        "counter_hypothesis": "Offer to run a small pilot or proof-of-concept demo before full commitment; Nyx has track record of execution (ZK Tokyo 4 years, security audits, DEPCON)"
+      },
+      {
+        "objection": "Why Nyx? What credibility do they have for this scale of project?",
+        "counter_hypothesis": "Nyx Foundation: 60M+ JPY funding, 30+ donors, 17 vulnerabilities in Fusaka audit, ZK Tokyo with Vitalik visits, University of Tokyo collaboration—proven Ethereum ecosystem credibility"
+      },
+      {
+        "objection": "Timing is wrong—Soneium mainnet just launched; team is focused elsewhere",
+        "counter_hypothesis": "September 2025 target gives 8+ months; early engagement allows co-design that fits Soneium roadmap; competition can serve as ecosystem growth catalyst"
+      },
+      {
+        "objection": "Unclear what Sony gets in return for sponsorship",
+        "counter_hypothesis": "Offer clear value: joint research credit, competition co-design rights, brand visibility in emerging AI-blockchain space, unique experimental data access, Soneium ecosystem showcase"
+      }
+    ],
+    "constraints": [
+      "15 slides maximum",
+      "15-minute presentation time",
+      "Exploratory meeting ask (not full commitment request)",
+      "Must frame as Soneium-complementary, not competing blockchain",
+      "Lead with educational/research impact, not financial ROI",
+      "Position Isozu as champion/introducer, not final operational decision-maker",
+      "Avoid speculative token economics or crypto-native jargon"
+    ],
+    "assumptions": [
+      "Isozu has influence to champion proposals internally but requires operational CEO alignment for execution",
+      "Sony's blockchain strategy is centered on Soneium; any proposal must integrate or complement this",
+      "Isozu values long-term educational transformation over short-term ROI metrics",
+      "A working prototype or demo would significantly strengthen the proposal but may not be ready",
+      "University of Tokyo collaboration adds academic credibility that resonates with Isozu's profile",
+      "September 2025 timeline is achievable if sponsor commitment secured by Q2 2025"
+    ],
+    "todo_research": [
+      "[NUMBERS] Current state of AI agent economy research: count of papers with real-asset experiments (expected near zero)",
+      "[NUMBERS] Soneium ecosystem metrics: number of dApps, transaction volume, developer count post-mainnet",
+      "[NUMBERS] ZK Tokyo historical participation data: teams, attendees, notable outcomes per year",
+      "[NUMBERS] Benchmark: typical improvement in research output from competition-based vs. grant-based funding",
+      "[COMPARISONS] Alternative AI economy research platforms/competitions globally (if any exist)",
+      "[COMPARISONS] How Soneium positions vs. other L2s for non-financial use cases",
+      "[COMPARISONS] Sony Global Education's existing blockchain credential work (IBM partnership) scope and status",
+      "[EXAMPLES] Case studies of successful research competitions in blockchain/AI space (ETHGlobal, etc.)",
+      "[EXAMPLES] Instances where Sony has sponsored external research initiatives or competitions",
+      "[EXAMPLES] Academic papers on emergent AI behavior in economic simulations (cite 2-3 relevant works)",
+      "[RISK] Regulatory requirements for prize distribution in Japan for crypto-adjacent competitions",
+      "[RISK] Security audit standards required for Sony partnership (SOC2, ISO 27001, or similar)"
+    ]
+  }
+}

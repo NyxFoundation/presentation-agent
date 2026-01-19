@@ -1,0 +1,298 @@
+{
+  "slide_plan": [
+    {
+      "slide_no": 1,
+      "slide_id": "SL01",
+      "section_id": "S6",
+      "action_title": "A 4-week exploratory meeting can validate whether this AI research collaboration fits Sony's education and Soneium strategy",
+      "purpose": "Present the conclusion and approval request upfront—low-commitment entry point for assessing strategic fit",
+      "key_points": [
+        "Request: Approve 4-week exploratory meeting series",
+        "Goal: Validate strategic alignment between Nyx Foundation's AI Agent Economy Competition and Sony's education/blockchain initiatives",
+        "Decision pathway: If alignment confirmed, proceed to co-design phase; if not, graceful exit with minimal investment"
+      ],
+      "evidence_needed": [
+        "Clear articulation of what 4 weeks will deliver",
+        "Specific meeting agenda topics for strategic fit validation",
+        "Named stakeholders for operational follow-up (CEO Kato at SGE, Sota Watanabe at Startale)"
+      ],
+      "visual_suggestion": "Decision flowchart showing exploratory phase → co-design → build → execute with exit gates at each stage"
+    },
+    {
+      "slide_no": 2,
+      "slide_id": "SL02",
+      "section_id": "S1",
+      "action_title": "AI agents are becoming autonomous economic actors, but no rigorous empirical research exists",
+      "purpose": "Establish the research gap and urgency—why action is needed now",
+      "key_points": [
+        "Current state: AI agents increasingly perform autonomous transactions in real-world contexts",
+        "Research gap: Near-zero academic papers study AI agent economy with real-asset stakes",
+        "Root cause: University ethics review and corporate accounting constraints block crypto-based AI experiments"
+      ],
+      "evidence_needed": [
+        "Literature search confirming gap in real-asset AI economy research",
+        "IRB/ethics review analysis showing why universities cannot run these experiments",
+        "Examples of Google, OpenAI not publishing despite resources (regulatory explanation)"
+      ],
+      "visual_suggestion": "Gap diagram: three columns (academic institutions, corporations, opportunity space) showing why each can't capture this research—Nyx positioned in the gap"
+    },
+    {
+      "slide_no": 3,
+      "slide_id": "SL03",
+      "section_id": "S1",
+      "action_title": "Policymakers designing AI institutions will operate blind without empirical data from controlled experiments",
+      "purpose": "Connect the research gap to educational mission and cost of inaction—frame as 2040 education impact",
+      "key_points": [
+        "Cost of inaction: Future curriculum on AI ethics, economic literacy, and institution design lacks empirical foundation",
+        "First-mover window: Opportunity exists now before space matures and data becomes contested",
+        "2040 vision alignment: Research findings directly inform how we educate humans to coexist with autonomous AI systems"
+      ],
+      "evidence_needed": [
+        "Connection to Isozu's '2040 Education' vision and curriculum design needs",
+        "Timeline showing narrowing research window",
+        "Policy relevance: governments and institutions seeking empirical guidance"
+      ],
+      "visual_suggestion": "Timeline showing 2025 (research opportunity) → 2030 (window closes) → 2040 (curriculum impact), with decision point highlighted"
+    },
+    {
+      "slide_no": 4,
+      "slide_id": "SL04",
+      "section_id": "S3",
+      "action_title": "Nyx Foundation has proven execution capability in Ethereum ecosystem research and education",
+      "purpose": "Establish credibility—who we are and why we can execute",
+      "key_points": [
+        "Funding credibility: 60M+ JPY raised from 30+ donors for research operations",
+        "Technical capability: 17 vulnerabilities reported in Ethereum Fusaka audit contest",
+        "Community track record: ZK Tokyo in 4th year with Vitalik participation; ETHTokyo top finishes",
+        "Academic partnerships: University of Tokyo blockchain course collaboration"
+      ],
+      "evidence_needed": [
+        "Donor and funding metrics",
+        "Audit contest results and security research credentials",
+        "ZK Tokyo event photos/participation data",
+        "University of Tokyo collaboration documentation"
+      ],
+      "visual_suggestion": "Credibility badge card: four quadrants showing funding, security research, community events, academic partnerships—each with headline metric"
+    },
+    {
+      "slide_no": 5,
+      "slide_id": "SL05",
+      "section_id": "S2",
+      "action_title": "The AI Agent Economy Competition creates a blockchain-based research platform where AI agents autonomously trade real assets",
+      "purpose": "Introduce the proposal—what we will do",
+      "key_points": [
+        "Competition format: 100+ teams, AI agents trade custom tokens on private chain",
+        "Research value: L0/L1/L2 framework enables systematic study of emergent norms and AI economic behavior",
+        "Private chain: Controlled research environment, not public crypto speculation",
+        "Educational output: Data informs future curriculum on AI ethics and economic literacy"
+      ],
+      "evidence_needed": [
+        "L0/L1/L2 framework specification diagram",
+        "Competition mechanics overview",
+        "Private chain architecture vs. public Soneium distinction"
+      ],
+      "visual_suggestion": "Three-layer framework diagram: L0 (execution physics/blockchain) → L1 (institutions/rules) → L2 (AI agents), showing how each layer can be experimentally manipulated"
+    },
+    {
+      "slide_no": 6,
+      "slide_id": "SL06",
+      "section_id": "S2",
+      "action_title": "This research can showcase Soneium ecosystem while generating unique educational data",
+      "purpose": "Connect to Sony strategic priorities—Soneium ecosystem fit and education mission alignment",
+      "key_points": [
+        "Soneium complementarity: Private chain for research with potential future Soneium L2 integration pathway",
+        "Beyond crypto trading: Demonstrates blockchain utility for research and education—aligned with 'everyday life' blockchain vision",
+        "Educational mission fit: Experimental data feeds back into 2040 curriculum design goals",
+        "Ecosystem showcase: Competition participants as potential Soneium builders"
+      ],
+      "evidence_needed": [
+        "Soneium ecosystem analysis post-mainnet (January 2025 launch)",
+        "Integration pathway options for future Soneium connection",
+        "ETHGlobal precedent: hackathon-to-ecosystem pipeline examples"
+      ],
+      "visual_suggestion": "Ecosystem diagram showing Soneium mainnet, private research chain, and integration pathway with developer flow from competition → Soneium Spark → ecosystem builders"
+    },
+    {
+      "slide_no": 7,
+      "slide_id": "SL07",
+      "section_id": "S2",
+      "action_title": "Real-asset stakes create more realistic AI behavior than pure simulations",
+      "purpose": "Establish research value proposition—why this approach generates unique data",
+      "key_points": [
+        "Behavioral economics insight: Agents optimize differently when outcomes matter",
+        "Verifiable execution: Blockchain provides tamper-proof history for academic analysis",
+        "Research questions enabled: Norm emergence, cartel formation, institution-agent interaction",
+        "Academic legitimacy: Builds on NeurIPS/ICML multi-agent research"
+      ],
+      "evidence_needed": [
+        "Behavioral economics literature on stakes effects",
+        "2-3 academic papers on emergent AI behavior in multi-agent systems",
+        "Comparison: simulation-based vs. real-stakes experimental design"
+      ],
+      "visual_suggestion": "Comparison table: Simulation-only research vs. Real-stakes research, comparing behavioral realism, verifiability, academic novelty, and policy relevance"
+    },
+    {
+      "slide_no": 8,
+      "slide_id": "SL08",
+      "section_id": "S3",
+      "action_title": "Nyx can execute where Google, OpenAI, and universities face regulatory barriers",
+      "purpose": "Alternatives comparison—why Sony should collaborate with Nyx vs. other options",
+      "key_points": [
+        "Why not universities: Ethics review boards require human subject protocols blocking real-asset AI experiments",
+        "Why not tech giants: Corporate accounting rules prohibit holding/distributing crypto for research",
+        "Why not go alone: Sony collaboration adds education expertise, ecosystem reach, and strategic credibility",
+        "Nyx advantage: Private research organization status bypasses constraints"
+      ],
+      "evidence_needed": [
+        "IRB requirement analysis for major research universities",
+        "Corporate policy examples blocking crypto research",
+        "Value-add from Sony partnership (SGE education expertise, Soneium ecosystem, brand credibility)"
+      ],
+      "visual_suggestion": "2x2 matrix: Institution type (University, Corporation, Research Foundation, Sony Partnership) vs. Can conduct real-asset AI research? / Has education ecosystem? — Nyx+Sony in optimal quadrant"
+    },
+    {
+      "slide_no": 9,
+      "slide_id": "SL09",
+      "section_id": "S4",
+      "action_title": "Human researchers monitor and can intervene—AI agents operate within defined rule constraints",
+      "purpose": "Address governance and safety concerns—human-in-the-loop boundaries",
+      "key_points": [
+        "Human-in-the-loop: Researchers monitor real-time and can intervene; agents not 'released into the wild'",
+        "Rule constraints: AI agents operate within pre-defined behavioral boundaries",
+        "Authenticated agents only: Private chain with verified participants",
+        "Security architecture: Multiple validators, agent authentication, penalty systems, pre-competition audit"
+      ],
+      "evidence_needed": [
+        "Human oversight mechanism specification",
+        "Agent behavioral constraint framework",
+        "Security audit requirements and validator architecture"
+      ],
+      "visual_suggestion": "Governance diagram: Human oversight layer → Rule constraint layer → AI agent layer, showing intervention points and authentication gates"
+    },
+    {
+      "slide_no": 10,
+      "slide_id": "SL10",
+      "section_id": "S4",
+      "action_title": "Private chain with custom tokens eliminates public crypto speculation and brand risk",
+      "purpose": "Address brand/legal concerns—what is out of scope and risk mitigation",
+      "key_points": [
+        "Out of scope: Public mainnet deployment, human participant trading, long-term platform maintenance, public crypto speculation",
+        "Brand protection: Private chain, custom tokens (not public crypto), legal counsel engaged",
+        "Data governance: Verifiable on-chain records enable academic audit and transparency",
+        "Structured prize distribution: Legal compliance framework"
+      ],
+      "evidence_needed": [
+        "Private chain technical architecture",
+        "Legal counsel engagement confirmation",
+        "Prize distribution compliance framework"
+      ],
+      "visual_suggestion": "Scope boundary diagram: Inner circle (in scope: research competition, private chain, academic output) vs. Outer area (out of scope: public mainnet, speculation, human trading)"
+    },
+    {
+      "slide_no": 11,
+      "slide_id": "SL11",
+      "section_id": "S5",
+      "action_title": "A phased roadmap from exploratory meetings to September 2025 competition includes clear exit gates",
+      "purpose": "Present the plan—milestones and timeline with de-risking structure",
+      "key_points": [
+        "Phase 1 (Now): 4-week exploratory meetings to validate strategic fit",
+        "Phase 2 (If aligned): Co-design period—joint rule framework, Soneium integration options",
+        "Phase 3 (Build): Infrastructure development, security audit, registration portal",
+        "Phase 4 (Execute): September 2025 competition with 100+ teams, live streaming",
+        "Phase 5 (Analyze): Research publication, data release, retrospective on emergent behaviors",
+        "Exit conditions: Clear criteria at each phase to continue or gracefully exit"
+      ],
+      "evidence_needed": [
+        "Detailed milestone dates for each phase",
+        "Exit criteria specification at each gate",
+        "Resource requirements per phase"
+      ],
+      "visual_suggestion": "Timeline/roadmap with 5 phases, exit gate markers between phases, and September 2025 competition milestone highlighted"
+    },
+    {
+      "slide_no": 12,
+      "slide_id": "SL12",
+      "section_id": "S6",
+      "action_title": "Key risks have specific mitigations: regulatory (private chain), security (audit), participation (Nyx community)",
+      "purpose": "Risk acknowledgment and mitigation strategies",
+      "key_points": [
+        "Regulatory risk: Private chain with custom tokens, legal counsel engaged",
+        "Security risk: Multi-validator architecture, pre-competition security audit",
+        "Participation risk: Nyx community channels, ZK Tokyo alumni network, ETHTokyo connections",
+        "Timeline risk: Early start, milestone buffers built in"
+      ],
+      "evidence_needed": [
+        "Legal counsel engagement status",
+        "Security audit plan and vendor options",
+        "Participation pipeline estimate from community channels"
+      ],
+      "visual_suggestion": "Risk matrix table: Risk category | Likelihood | Impact | Mitigation strategy | Residual risk level"
+    },
+    {
+      "slide_no": 13,
+      "slide_id": "SL13",
+      "section_id": "S6",
+      "action_title": "16M JPY prize pool investment generates unique educational research data as the primary ROI",
+      "purpose": "Cost transparency and ROI framing—educational impact rather than financial return",
+      "key_points": [
+        "Prize pool: 16M JPY (development and operations costs refined during co-design)",
+        "ROI framing: Educational research value and ecosystem showcase—not financial return",
+        "Data as asset: Research findings become academic and curriculum design resource",
+        "Soneium benefit: Ecosystem showcase, developer pipeline, practical blockchain demonstration"
+      ],
+      "evidence_needed": [
+        "Budget breakdown for prize pool vs. operations",
+        "Educational impact metrics projection",
+        "Comparable research competition ROI examples"
+      ],
+      "visual_suggestion": "ROI diagram: Investment (prize pool, operations) → Outputs (research data, publications, curriculum input, ecosystem showcase, developer pipeline)"
+    },
+    {
+      "slide_no": 14,
+      "slide_id": "SL14",
+      "section_id": "S6",
+      "action_title": "Next step: Approve exploratory meetings and introduce operational stakeholders for co-design",
+      "purpose": "Clear CTA with specific asks and immediate next steps",
+      "key_points": [
+        "The ask: Approve 4-week exploratory meeting series to assess strategic fit",
+        "Isozu's role: Champion and introducer to operational decision-makers",
+        "Stakeholder connections needed: CEO Kato at SGE, Sota Watanabe at Startale",
+        "Timeline: Schedule follow-up within 2 weeks",
+        "Commitment level: Minimal (meetings only, no development work in exploratory phase)"
+      ],
+      "evidence_needed": [
+        "Proposed meeting schedule for 4-week exploration",
+        "Specific agenda items per meeting",
+        "Contact facilitation request format"
+      ],
+      "visual_suggestion": "Next steps card: Three action items with owner and date—(1) Approve exploratory phase, (2) Introduce to CEO Kato/Watanabe, (3) Schedule first meeting within 2 weeks"
+    }
+  ],
+  "estimated_total_slides": 14,
+  "quality_checklist": {
+    "order_follows_proposal_logic": {
+      "status": "pass",
+      "notes": "CTA summary → Problem/Gap → Credibility → Proposal → Impact → Alternatives → Governance → Plan → Risks → Cost/ROI → CTA"
+    },
+    "story_can_be_followed_from_titles_alone": {
+      "status": "pass",
+      "notes": "All titles are assertion claims that can be skimmed for narrative: exploratory meeting → research gap exists → credibility → competition design → Soneium fit → research value → alternatives → governance → scope limits → roadmap → risks → ROI → next steps"
+    },
+    "education_mission_and_governance_explicit": {
+      "status": "pass",
+      "notes": "Education/2040 vision referenced in SL03, SL05, SL06; Governance/human-in-the-loop in SL09, SL10; Out of scope in SL10"
+    },
+    "one_message_per_slide": {
+      "status": "pass",
+      "notes": "Each slide has single assertion headline with supporting points"
+    },
+    "visual_suggestion_per_slide": {
+      "status": "pass",
+      "notes": "All 14 slides have specific visual suggestions (diagrams, tables, timelines, cards)"
+    },
+    "audience_alignment": {
+      "status": "pass",
+      "notes": "Leads with mission/education impact; governance/guardrails explicit; avoids hype-y market stats; positions Isozu as champion/introducer; Soneium complementarity emphasized"
+    }
+  }
+}

@@ -1,144 +1,179 @@
-# Nyx Foundation プレゼンテーション作成AIエージェント
+# Presentation Agent
 
-提案資料に特化した資料作成をサポートしてくれます
+## 概要
 
-## エージェントフロー概要
+本パイプラインは、世界最高峰のコンサルティングファーム（McKinsey, BCG）の論理的厳密性と、伝説的なプレゼンター（Steve Jobs, Nancy Duarte）の感情的影響力を融合させた、理想的なプレゼンテーション資料作成エージェントです。
 
-プロンプトと Makefile で提案資料を自動生成します。
+## 設計思想
+
+本パイプラインは、以下の3つの原則を核としています。
+
+1.  **戦略主導 (Strategy-First):** コンテンツ作成に着手する前に、「なぜ話すのか」「誰に話すのか」「何を伝えたいのか」を徹底的に定義します。
+2.  **論理と感情の融合 (Logic & Emotion):** ピラミッド原則に基づく論理構造と、Sparklineのような物語構造を明確に分離し、意図的に組み合わせます。
+3.  **反復的な具体化 (Iterative Refinement):** 抽象的なアイデアから具体的な成果物へと段階的に具体化し、品質を段階的に向上させます。
+
+## パイプライン構成
+
+パイプラインは4つのフェーズ、9つのステップで構成されます。
 
 ```
-inputs/introduction.md  -> /00_contents -> 00_contents.json
-           ^            -> /00_audience -> 00_audience.json
-           |                  |
-           |                  v
-           +-> make summary -> 01_decision_brief.json
-                -> 02_governing_thought.json
-                -> 03_narrative_spine.json
-                -> 04_toc_argument_tree.json
-                -> 05_slide_plan.json
-                -> 06_slide_drafts.json
-                -> 07_chart_edits.json
-                -> 08_edits.json
-                -> 09_slidev_manifest.json (slides/ 配下のMDを生成)
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          PHASE 1: FOUNDATION                                │
+│                        (戦略・理解フェーズ)                                   │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  ┌───────────────┐    ┌───────────────┐    ┌───────────────┐              │
+│  │ 01. Context   │───▶│ 02. Audience  │───▶│ 03. Core      │              │
+│  │    Analysis   │    │    Persona    │    │    Strategy   │              │
+│  └───────────────┘    └───────────────┘    └───────────────┘              │
+│       ↓ RAW_INPUT          ↓ PERSON_NAME        ↓ PURPOSE                  │
+│                            ↓ COMPANY            ↓ CORE_MESSAGE             │
+│                                                 ↓ NARRATIVE_ARCHETYPE      │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         PHASE 2: ARCHITECTURE                               │
+│                        (構造・論証フェーズ)                                   │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  ┌───────────────────────┐    ┌───────────────────────┐                    │
+│  │ 04. Governing         │───▶│ 05. Narrative         │                    │
+│  │     Argument          │    │     Blueprint         │                    │
+│  │ (Pyramid Principle)   │    │ (Action Titles)       │                    │
+│  └───────────────────────┘    └───────────────────────┘                    │
+│       ↓ GOVERNING_THOUGHT          ↓ SLIDE-BY-SLIDE OUTLINE                │
+│       ↓ KEY_CLAIMS                                                         │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           PHASE 3: CONTENT                                  │
+│                     (コンテンツ・ビジュアルフェーズ)                           │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  ┌───────────────────────┐    ┌───────────────────────┐                    │
+│  │ 06. Slide             │───▶│ 07. Visual            │                    │
+│  │     Drafting          │    │     Design            │                    │
+│  │ (Bullets & Notes)     │    │ (Charts & Diagrams)   │                    │
+│  └───────────────────────┘    └───────────────────────┘                    │
+│       ↓ KEY_POINTS                 ↓ VISUAL_SPEC                           │
+│       ↓ SPEAKER_NOTES              ↓ TAKEAWAY                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        PHASE 4: POLISH & EXPORT                             │
+│                       (レビュー・エクスポートフェーズ)                         │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  ┌───────────────────────┐    ┌───────────────────────┐                    │
+│  │ 08. Executive         │───▶│ 09. Final             │                    │
+│  │     Review            │    │     Export            │                    │
+│  │ (Murder Board)        │    │ (Slidev Markdown)     │                    │
+│  └───────────────────────┘    └───────────────────────┘                    │
+│       ↓ VERDICT                    ↓ SLIDEV FILES                          │
+│       ↓ REMEDIATION_PLAN                                                   │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-## スライド資料生成手順
+## 各ステップの詳細
 
-#### 0. このレポジトリをクローンしてください
+| Step | Name | Description | Key Output |
+|---|---|---|---|
+| 01 | Context Analysis | ユーザーの断片的な入力を構造化された情報に整理 | `Context_Brief.json` |
+| 02 | Audience Persona | ターゲットオーディエンスの詳細なペルソナを構築 | `Audience_Persona.json` |
+| 03 | Core Strategy | プレゼンの目的、コアメッセージ、ナラティブ構造を決定 | `Core_Strategy.json` |
+| 04 | Governing Argument | ピラミッド原則に基づく論理構造を構築 | `Governing_Argument.json` |
+| 05 | Narrative Blueprint | スライドごとのAction Titleを設計 | `Narrative_Blueprint.json` |
+| 06 | Slide Drafting | 各スライドの箇条書きとスピーカーノートを作成 | `Slide_Drafts.json` |
+| 07 | Visual Design | 各スライドのビジュアル（チャート、図）を設計 | `Visual_Designs.json` |
+| 08 | Executive Review | 決裁者の視点から最終レビューを実施 | `Executive_Review.json` |
+| 09 | Final Export | レビュー結果を反映し、Slidev形式でエクスポート | `Final_Export.json` |
+
+## 使い方
+
+### 1. セットアップ
 
 ```bash
-git clone git@github.com:NyxFoundation/presentation-agent
+# リポジトリをクローン
+git clone <repository_url>
 cd presentation-agent
-git checkout -b <資料タイトル or 顧客名など> # 資料ごとに新たなブランチを切ること
 ```
 
-#### 1. インプットを準備  
+### 2. 入力ファイルの準備
 
-以下ファイルを編集してください。
-- `inputs/introduction.md` に提案の生メモを記載。
-- `Makefile` 冒頭の変数を編集して、PERSON_NAME/COMPANY、INTRODUCTION、CONSTRAINTS、TONE、LANGUAGE、FONT、BACKGROUND_COLOR、SLIDEV_THEME などを設定。
+`inputs/introduction.md` にプレゼンテーションの元ネタを記述します。
 
-#### 2. コンテンツの抽出
 ```bash
-make contents
-make audience
+# テンプレートを編集
+vim inputs/introduction.md
 ```
 
-#### 3. 全体生成（推奨）  
+### 3. Makefile の設定
+
+`Makefile` の先頭にある変数を編集します。
+
+```makefile
+# --- User Inputs (Edit these for your presentation) ---
+PERSON_NAME ?= 礒津政明
+COMPANY ?= ソニーグループ株式会社
+RAW_INPUT ?= inputs/introduction.md
+CONSTRAINTS ?= 15 slides max, 15-minute presentation
+```
+
+### 4. パイプラインの実行
 
 ```bash
+# 全ステップを実行
 make all
+
+# または、個別のステップを実行
+make context_analysis
+make audience_persona
+# ...
 ```
 
-make helpから各コマンドを参照し、各プロセスを個別実行することも可能。
+### 5. 出力の確認
 
-#### 4. Slidevを立ち上げ
+- 各ステップの出力は `outputs/` ディレクトリに保存されます。
+- 最終的なSlidevファイルのマニフェストは `outputs/09_Final_Export.json` に出力されます。
+
+### 6. Slidevの実行
 
 ```bash
-bun install
+bun i
 bun dev
 ```
 
-visit <http://localhost:3030>
+http://localhost:3030 へ
 
-## Slidevについて
-
-#### 基本
-
-1. **slides.md** と **slides/** を編集してスライドを作成
-2. 保存すると自動でリロードされる
-
-#### 画像の使用
-
-画像は `public/images/` に格納:
+## ディレクトリ構成
 
 ```
-public/
-└── images/
-    ├── logo.png
-    └── screenshot.jpg
+.
+├── Makefile                    # パイプラインオーケストレーター
+├── README.md                   # 本ファイル
+├── prompts/                    # プロンプトファイル
+│   ├── 01_Context_Analysis.md
+│   ├── 02_Audience_Persona.md
+│   ├── 03_Core_Strategy.md
+│   ├── 04_Governing_Argument.md
+│   ├── 05_Narrative_Blueprint.md
+│   ├── 06_Slide_Drafting.md
+│   ├── 07_Visual_Design.md
+│   ├── 08_Executive_Review.md
+│   └── 09_Final_Export.md
+├── inputs/                     # ユーザー入力
+│   └── introduction.md
+├── outputs/                    # 生成された中間ファイル
+│   ├── 01_Context_Brief.json
+│   ├── ...
+│   └── logs/                   # Claude CLI のログ
+└── slides/                     # 最終的なSlidevファイル
 ```
 
-スライド内での参照:
+## 参考にした手法
 
-```md
-![説明](/images/logo.png)
-```
-
-#### レイアウト
-
-```yaml
----
-layout: cover      # カバーページ
----
-
----
-layout: two-cols   # 2カラム
----
-
-左側のコンテンツ
-
-::right::
-
-右側のコンテンツ
-```
-
-#### Mermaid図
-
-````md
-```mermaid {scale: 0.6}
-flowchart LR
-    A[Start] --> B[End]
-```
-````
-
-#### 数式 (KaTeX)
-
-```md
-インライン: $E = mc^2$
-
-ブロック:
-$$
-\sum_{i=1}^{n} x_i
-$$
-```
-
-#### スタイリング (UnoCSS)
-
-```html
-<div class="grid grid-cols-2 gap-4">
-  <div class="bg-blue-50 p-4 rounded">左</div>
-  <div class="bg-green-50 p-4 rounded">右</div>
-</div>
-```
-
-#### PDF出力
-
-```bash
-bun run export
-```
-
-## Documentation
-
-- [Slidev 公式ドキュメント (日本語)](https://ja.sli.dev/)
-- [Slidev Documentation (English)](https://sli.dev/)
+- **McKinsey / BCG**: ピラミッド原則、Action Titles
+- **Barbara Minto**: 「考える技術・書く技術」
+- **Nancy Duarte**: Sparkline、「What Is vs. What Could Be」
+- **Steve Jobs**: シンプルさ、ビジュアル優先、ストーリーテリング
+- **Jeff Bezos**: 6ページメモ、ナラティブ構造
+- **Gene Zelazny**: データビジュアライゼーションの原則

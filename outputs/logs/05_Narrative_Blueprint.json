@@ -1,0 +1,75 @@
+{
+  "step": "05_Narrative_Blueprint",
+  "timestamp": "2026-01-22T00:00:00Z",
+  "inputs": {
+    "governing_argument": "outputs/04_Governing_Argument.json",
+    "core_strategy": "outputs/03_Core_Strategy.json",
+    "constraints": "15 slides max"
+  },
+  "process_log": {
+    "step_1_narrative_arc": {
+      "archetype_used": "Sparkline (Duarte)",
+      "arc_beats_defined": [
+        "The Hook",
+        "What Is - The Crisis Deepens",
+        "What Is - Structural Barriers",
+        "What Is - The Funding Trap",
+        "What Could Be - The Vision",
+        "What Could Be - The Opportunity",
+        "The Bridge - Nyx Foundation Introduction",
+        "The Bridge - Breaking Hierarchies",
+        "The Proof - Sony Alignment",
+        "The Proof - Talent Pipeline",
+        "The Proof - Success Stories",
+        "What Could Be - The Long-Term Vision",
+        "What Is vs What Could Be - The Contrast",
+        "The Call to Action - The Ask",
+        "The Call to Action - The Invitation"
+      ],
+      "rationale": "The Sparkline archetype creates emotional resonance through contrast between 'what is' (painful current state) and 'what could be' (inspiring future). This directly supports the CORE_STRATEGY's goal of appealing to Isotsu-san's visionary mindset while grounding the presentation in the urgency of Japan's research crisis."
+    },
+    "step_2_claim_mapping": {
+      "C1_crisis": "Mapped to opening slides (SL01-SL04, SL13) to establish urgency and the 'what is' foundation",
+      "C2_ethereum_opportunity": "Mapped to vision/opportunity slides (SL04-SL06) to present the alternative funding pathway",
+      "C3_sony_alignment": "Mapped to proof slides (SL09-SL12) to demonstrate strategic business value",
+      "C4_cross_institutional": "Mapped across multiple beats (SL03, SL07-SL08, SL11-SL13) as it's the key differentiator",
+      "C5_action": "Mapped to final call-to-action slides (SL07, SL14-SL15) for concrete next steps"
+    },
+    "step_3_action_titles": {
+      "design_principle": "Each title is a complete, declarative sentence that makes a clear assertion. Titles progress logically from problem ’ opportunity ’ solution ’ proof ’ action.",
+      "story_coherence_check": "The 15 action titles, read in sequence, tell a complete narrative arc from crisis through vision to action."
+    },
+    "step_4_evidence_definition": {
+      "approach": "Evidence requirements are drawn directly from GOVERNING_ARGUMENT evidence_strategy, supplemented with web search verification",
+      "sources_consulted": [
+        "Science/AAAS report on Japan's university rankings",
+        "NISTEP data on paper output decline",
+        "Ethereum Foundation Academic Grants 2025 announcement",
+        "Sony Soneium mainnet launch statistics"
+      ]
+    }
+  },
+  "web_searches_performed": [
+    {
+      "query": "Japan university research rankings decline 2024 2025 statistics global competitiveness",
+      "findings": "Japan fell from 2nd to 5th globally in Web of Science papers; 5th to 12th in top 1% cited papers. University of Tokyo dropped from 19th to 27th in Shanghai Rankings. Experts call it 'lost decades' of research."
+    },
+    {
+      "query": "Ethereum Foundation academic grants 2025 funding research",
+      "findings": "2025 Academic Grants Round: $2M dedicated fund, deadline March 16, 2025. 2024 round received 300 applications from 25 countries, funded 41 projects."
+    },
+    {
+      "query": "Sony Soneium Ethereum L2 2025 statistics users transactions",
+      "findings": "Soneium mainnet launched January 2025. Testnet: 47M+ transactions, 15.4M active wallets, 14M users. Vitalik Buterin endorsed as 'great for businesses *and* users'."
+    }
+  ],
+  "quality_checklist": {
+    "action_titles_tell_complete_story": true,
+    "all_titles_are_full_sentences": true,
+    "slide_purposes_clear_and_aligned": true,
+    "evidence_specific_and_supportive": true,
+    "respects_15_slide_constraint": true,
+    "valid_json": true
+  },
+  "output_file": "outputs/05_Narrative_Blueprint.json"
+}

@@ -1,0 +1,29 @@
+{
+  "core_strategy": {
+    "presentation_purpose": "To inspire attendees to join the Nyx Foundation community and actively pursue Ethereum research collaboration, starting with reviewing the PSE RFP list and connecting with Nyx Foundation for research support.",
+    "core_message": "By uniting Japanese researchers across institutions to collaborate on Ethereum research with global funding support, Nyx Foundation creates a new pathway for nurturing world-class next-generation talent free from traditional hierarchies—transforming Japan's fragmented research landscape into a globally competitive, cooperative ecosystem.",
+    "narrative_archetype": {
+      "selected": "Sparkline (Duarte)",
+      "justification": "Chosen to create emotional resonance by contrasting the painful 'what is' (Japan's declining research funding, isolated researchers, falling global rankings) with the inspiring 'what could be' (a united community producing world-surprising inventions). This archetype appeals directly to Isotsu-san's preference for visionary storytelling combined with long-term thinking, and his core motivation of nurturing next-generation talent who can transcend traditional hierarchies."
+    },
+    "tone_and_manner": {
+      "recommended_tone": "Visionary yet grounded; inspiring but practical; globally ambitious while deeply respectful of the audience's experience.",
+      "dos": [
+        "Share personal stories and concrete examples of researchers who have already collaborated through Nyx Foundation (20+ vulnerability reports as proof of capability)",
+        "Frame the opportunity within a 20+ year vision for Japan's research ecosystem, connecting to Isotsu-san's '300 years into the future' mindset",
+        "Emphasize cross-institutional collaboration that breaks down silos between universities, corporations, and international communities (Taiwan Ethereum Community, Ethereum Foundation)",
+        "Connect Ethereum research to practical applications and talent development, not just abstract academic output",
+        "Acknowledge Sony's existing blockchain investments (Soneium) as aligned infrastructure that makes this collaboration even more relevant",
+        "Highlight the global nature: grant funding from international sources, collaboration with global researchers, producing work that 'surprises the world'"
+      ],
+      "donts": [
+        "Do not present this as purely academic research without practical implementation pathways",
+        "Do not reinforce traditional seniority-based academic hierarchies—emphasize that young, motivated talent can achieve maximum results",
+        "Do not focus on short-term ROI metrics or funding numbers alone without the broader vision of talent cultivation",
+        "Do not be domestically focused—always position this within the global Ethereum research ecosystem",
+        "Do not use excessive technical jargon that obscures the human impact and talent development story",
+        "Do not understate the challenge (declining funding, falling rankings) as this provides the emotional foundation for the 'what is' contrast"
+      ]
+    }
+  }
+}

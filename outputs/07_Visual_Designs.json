@@ -1,0 +1,716 @@
+{
+  "visual_designs": [
+    {
+      "slide_id": "SL01",
+      "visual_spec": {
+        "type": "Multi_Metric_Decline_Chart",
+        "title": "Japan's Research Decline: A 20-Year Trajectory",
+        "chart_type": "Slope_Chart",
+        "data_series": [
+          {
+            "metric": "Global Paper Output Ranking",
+            "start_year": "~2004",
+            "start_value": "2nd",
+            "end_year": "2024",
+            "end_value": "5th",
+            "trend": "decline",
+            "color": "red"
+          },
+          {
+            "metric": "Top 1% Cited Papers Ranking",
+            "start_year": "~2004",
+            "start_value": "5th",
+            "end_year": "2024",
+            "end_value": "12th",
+            "trend": "decline",
+            "color": "dark_red",
+            "annotation": "Now behind Spain & Iran"
+          },
+          {
+            "metric": "U. Tokyo Global Ranking",
+            "start_year": "~2010",
+            "start_value": "19th",
+            "end_year": "2024",
+            "end_value": "27th",
+            "trend": "decline",
+            "color": "orange"
+          }
+        ],
+        "callout_box": {
+          "position": "bottom_right",
+          "text": "Nature Index 2024: -9.0% YoY",
+          "style": "alert"
+        },
+        "annotations": [
+          "Connect start and end points with declining slope lines",
+          "Use downward arrows to emphasize direction",
+          "Gray out background to make decline lines prominent"
+        ],
+        "source": "NISTEP 2024, Nature Index 2024",
+        "takeaway": "Japan's research position is declining on every major metric—quantity, quality, and institutional prestige."
+      }
+    },
+    {
+      "slide_id": "SL02",
+      "visual_spec": {
+        "type": "Combined_Visual",
+        "title": "The Talent Pipeline Is Breaking",
+        "layout": "two_column",
+        "left_panel": {
+          "type": "Bar_Chart_Comparison",
+          "title": "New PhDs per Million Population",
+          "data": [
+            {"country": "Germany", "value": 315, "color": "blue"},
+            {"country": "UK", "value": 313, "color": "blue"},
+            {"country": "Japan", "value": 123, "color": "red", "highlight": true}
+          ],
+          "x_axis_label": "Country",
+          "y_axis_label": "PhDs per Million",
+          "annotation": "Less than half of peer nations"
+        },
+        "right_panel": {
+          "type": "Before_After_Comparison",
+          "title": "Tenured Positions (Under 40)",
+          "data": [
+            {"year": "2007", "value": "23.4%", "visual": "larger_circle"},
+            {"year": "2016", "value": "15.1%", "visual": "smaller_circle", "color": "red"}
+          ],
+          "arrow": "downward",
+          "annotation": "-35% decline in tenure opportunities for young researchers"
+        },
+        "quote_callout": {
+          "text": "'Low-paid, insecure jobs drove talented young researchers out'",
+          "attribution": "— Robert Geller, UTokyo",
+          "position": "bottom_center",
+          "style": "italics"
+        },
+        "source": "MEXT data",
+        "takeaway": "Japan produces fewer PhDs than peers, and those who do enter academia face a rapidly shrinking path to job security."
+      }
+    },
+    {
+      "slide_id": "SL03",
+      "visual_spec": {
+        "type": "Barrier_Diagram",
+        "title": "Structural Barriers to Innovation",
+        "layout": "center_with_barriers",
+        "center_element": {
+          "label": "Japanese Research",
+          "shape": "circle",
+          "icon": "researcher_silhouette"
+        },
+        "barriers": [
+          {
+            "id": "B1",
+            "label": "International Isolation",
+            "detail": "Foreign faculty <5%\n(vs UK ~30%)",
+            "position": "top",
+            "shape": "wall",
+            "color": "dark_gray"
+          },
+          {
+            "id": "B2",
+            "label": "Corporate Hesitancy",
+            "detail": "METI 2012: Companies 'hesitant to collaborate'",
+            "position": "right",
+            "shape": "wall",
+            "color": "dark_gray"
+          },
+          {
+            "id": "B3",
+            "label": "Disciplinary Silos",
+            "detail": "Theory vs. empirical,\nlack of diversity",
+            "position": "bottom",
+            "shape": "wall",
+            "color": "dark_gray"
+          },
+          {
+            "id": "B4",
+            "label": "Institutional Walls",
+            "detail": "Low collaboration with\noutside companies",
+            "position": "left",
+            "shape": "wall",
+            "color": "dark_gray"
+          }
+        ],
+        "visual_style": "Four walls/barriers surrounding center, creating a 'boxed in' effect",
+        "source": "METI 2012, Bank of Japan",
+        "takeaway": "Japanese researchers are boxed in by four structural barriers that prevent the collaboration driving global innovation."
+      }
+    },
+    {
+      "slide_id": "SL04",
+      "visual_spec": {
+        "type": "Dual_Panel_Chart",
+        "title": "Funding Decline Squeezes Research Time",
+        "layout": "left_right",
+        "left_panel": {
+          "type": "Area_Chart_Decline",
+          "title": "National University Operating Grants",
+          "x_axis_label": "Year",
+          "y_axis_label": "Billions (USD)",
+          "data_points": [
+            {"year": "2004", "value": 87, "label": "$87B"},
+            {"year": "2022", "value": 76, "label": "$76B"}
+          ],
+          "shaded_area": "between the two values to show loss",
+          "annotation": {
+            "text": "-13%",
+            "position": "center_of_shaded_area",
+            "style": "large_red_text"
+          },
+          "note": "1% annual cuts mandated by 2004 corporatization law"
+        },
+        "right_panel": {
+          "type": "Pie_Chart_Comparison",
+          "title": "Faculty Research Time",
+          "comparison": [
+            {
+              "year": "2002",
+              "research_pct": 46.5,
+              "other_pct": 53.5,
+              "label": "46.5% Research"
+            },
+            {
+              "year": "2008+",
+              "research_pct": 37.2,
+              "other_pct": 62.8,
+              "label": "37.2% Research",
+              "highlight": true
+            }
+          ],
+          "annotation": "Teaching & admin crowd out discovery"
+        },
+        "source": "Japan Assoc. of National Universities",
+        "takeaway": "A 13% funding cut has forced researchers to spend less time on research and more on teaching and administration."
+      }
+    },
+    {
+      "slide_id": "SL05",
+      "visual_spec": {
+        "type": "World_Map_Ecosystem",
+        "title": "A Global Research Revolution Is Happening",
+        "map_style": "simplified world map with connection points",
+        "center_hub": {
+          "label": "Ethereum Foundation",
+          "location": "center/Switzerland",
+          "icon": "ethereum_logo",
+          "color": "purple"
+        },
+        "connection_points": {
+          "count": "25+",
+          "style": "dots with connecting lines to hub",
+          "distribution": "global spread across continents"
+        },
+        "callout_boxes": [
+          {
+            "position": "top_left",
+            "metric": "300",
+            "label": "Applications received\n(2024 Academic Grants)",
+            "color": "green"
+          },
+          {
+            "position": "top_right",
+            "metric": "$11.6M",
+            "label": "Distributed Q4 2024\n(ESP)",
+            "color": "green"
+          }
+        ],
+        "research_areas_strip": {
+          "position": "bottom",
+          "items": ["Cryptography", "Consensus", "Formal Verification", "Game Theory", "Security"],
+          "style": "horizontal tag strip",
+          "annotation": "Areas matching Japan's expertise"
+        },
+        "japan_highlight": {
+          "position": "Japan on map",
+          "style": "pulsing dot with question mark",
+          "label": "Japan?"
+        },
+        "takeaway": "A trillion-dollar global ecosystem is actively funding research in Japan's areas of expertise—but Japan is notably absent."
+      }
+    },
+    {
+      "slide_id": "SL06",
+      "visual_spec": {
+        "type": "Opportunity_Card",
+        "title": "2025 Academic Grants Round",
+        "layout": "structured_info_card",
+        "header": {
+          "icon": "ethereum_logo",
+          "label": "Ethereum Foundation",
+          "style": "branded_header"
+        },
+        "key_metric": {
+          "value": "$2M",
+          "label": "Dedicated Fund",
+          "position": "prominent_center",
+          "color": "green",
+          "size": "extra_large"
+        },
+        "timeline_strip": {
+          "type": "horizontal_timeline",
+          "events": [
+            {"date": "Jan 20, 2025", "label": "Applications Open", "icon": "start_flag"},
+            {"date": "Mar 24, 2025", "label": "Deadline", "icon": "deadline"},
+            {"date": "~6 weeks later", "label": "Decisions", "icon": "checkmark"}
+          ],
+          "highlight": "We are in this window now"
+        },
+        "eligibility_grid": {
+          "columns": 2,
+          "items": [
+            {"icon": "university", "label": "Universities"},
+            {"icon": "building", "label": "Research Centers"},
+            {"icon": "lightbulb", "label": "Think Tanks"},
+            {"icon": "person", "label": "Individual Researchers"}
+          ]
+        },
+        "requirement_badge": {
+          "text": "Open-Access Output Required",
+          "icon": "open_lock",
+          "style": "badge"
+        },
+        "takeaway": "A $2M funding opportunity is open now through March 24—with decisions in just 6 weeks."
+      }
+    },
+    {
+      "slide_id": "SL07",
+      "visual_spec": {
+        "type": "Bridge_Diagram",
+        "title": "Nyx Foundation: Bridging Japan to the Global Ecosystem",
+        "layout": "bridge_connection",
+        "left_side": {
+          "label": "Japanese Researchers",
+          "elements": [
+            {"icon": "university", "label": "Universities"},
+            {"icon": "building", "label": "Corporations"},
+            {"icon": "person", "label": "Independent Researchers"}
+          ],
+          "position": "island_left",
+          "style": "fragmented"
+        },
+        "right_side": {
+          "label": "Global Ethereum Ecosystem",
+          "elements": [
+            {"icon": "ethereum", "label": "Ethereum Foundation"},
+            {"icon": "taiwan_flag", "label": "Taiwan ETH Community"},
+            {"icon": "shield", "label": "PSE Research Teams"}
+          ],
+          "position": "island_right",
+          "style": "connected"
+        },
+        "bridge": {
+          "label": "Nyx Foundation",
+          "icon": "nyx_logo",
+          "style": "solid_bridge_connecting_both_sides",
+          "color": "primary_brand_color"
+        },
+        "credibility_badge": {
+          "position": "below_bridge",
+          "metric": "20+",
+          "label": "Vulnerability Reports",
+          "subtext": "Demonstrating technical credibility",
+          "icon": "security_shield"
+        },
+        "takeaway": "Nyx Foundation unites fragmented Japanese researchers and connects them to the global Ethereum research ecosystem."
+      }
+    },
+    {
+      "slide_id": "SL08",
+      "visual_spec": {
+        "type": "Comparison_Table",
+        "title": "A New Model for Research Evaluation",
+        "layout": "two_column_comparison",
+        "column_headers": ["Traditional Model", "Nyx / OIST Model"],
+        "rows": [
+          {
+            "dimension": "Evaluation Basis",
+            "traditional": "Rank, seniority, institution",
+            "new": "Contributions: code, research, vulnerability reports",
+            "icon_traditional": "hierarchy",
+            "icon_new": "merit_badge"
+          },
+          {
+            "dimension": "Career Path",
+            "traditional": "Wait your turn, hierarchy barriers",
+            "new": "Talent recognized regardless of age/rank",
+            "icon_traditional": "queue",
+            "icon_new": "rocket"
+          },
+          {
+            "dimension": "Structure",
+            "traditional": "Departmental silos",
+            "new": "No departments, cross-functional",
+            "icon_traditional": "boxes",
+            "icon_new": "network"
+          },
+          {
+            "dimension": "Language",
+            "traditional": "Japanese only",
+            "new": "English as working language",
+            "icon_traditional": "jp_flag",
+            "icon_new": "globe"
+          },
+          {
+            "dimension": "Philosophy",
+            "traditional": "Individual victories, zero-sum",
+            "new": "Winning together through cooperation",
+            "icon_traditional": "single_trophy",
+            "icon_new": "team_celebration"
+          }
+        ],
+        "highlight_column": "new",
+        "oist_reference": {
+          "text": "OIST precedent: 50%+ international faculty, consistently top-ranked for research quality",
+          "position": "bottom_footnote"
+        },
+        "takeaway": "Merit-based evaluation and cross-institutional collaboration—proven at OIST—allows young talent to achieve maximum results."
+      }
+    },
+    {
+      "slide_id": "SL09",
+      "visual_spec": {
+        "type": "Growth_Dashboard",
+        "title": "Soneium: Sony's Strategic Bet on Ethereum",
+        "layout": "metrics_dashboard",
+        "header_banner": {
+          "logo": "sony_soneium_logo",
+          "label": "Layer-2 Blockchain",
+          "launch_date": "Mainnet: January 2025"
+        },
+        "primary_metrics": {
+          "layout": "three_big_numbers",
+          "metrics": [
+            {
+              "value": "100M+",
+              "label": "Transactions",
+              "period": "Q1 2025",
+              "icon": "transaction",
+              "color": "blue"
+            },
+            {
+              "value": "$45M+",
+              "label": "Total Value Locked",
+              "period": "Q1 2025",
+              "icon": "vault",
+              "color": "green"
+            },
+            {
+              "value": "14M+",
+              "label": "Active Wallets",
+              "period": "Testnet",
+              "icon": "wallet",
+              "color": "purple"
+            }
+          ]
+        },
+        "endorsement_quote": {
+          "text": "'A good live demonstration of how launching an Ethereum L2 is great for businesses and users'",
+          "attribution": "— Vitalik Buterin, Ethereum Founder",
+          "style": "highlighted_quote_box",
+          "position": "bottom"
+        },
+        "takeaway": "Soneium is not an experiment—it's a serious infrastructure investment with proven traction that needs world-class research talent."
+      }
+    },
+    {
+      "slide_id": "SL10",
+      "visual_spec": {
+        "type": "Funnel_Pipeline",
+        "title": "Nyx Creates the Talent Pipeline Soneium Needs",
+        "layout": "horizontal_funnel",
+        "funnel_stages": [
+          {
+            "stage": 1,
+            "label": "Japanese Researchers",
+            "sublabel": "Universities & Corps",
+            "width": "widest",
+            "icon": "graduates"
+          },
+          {
+            "stage": 2,
+            "label": "Nyx Foundation",
+            "sublabel": "Training & Collaboration",
+            "width": "medium",
+            "icon": "nyx_logo",
+            "skills_gained": ["Cryptography", "Formal Verification", "Protocol Security"]
+          },
+          {
+            "stage": 3,
+            "label": "Soneium Ecosystem",
+            "sublabel": "Builders & Auditors",
+            "width": "focused",
+            "icon": "soneium_logo"
+          }
+        ],
+        "context_callouts": [
+          {
+            "position": "top_left",
+            "metric": "+20%",
+            "label": "Web3 job growth YoY\n(H1 2024)",
+            "color": "green",
+            "icon": "trending_up"
+          },
+          {
+            "position": "top_right",
+            "metric": "50%",
+            "label": "Projects ship with\nvulnerabilities",
+            "sublabel": "Talent shortage",
+            "color": "red",
+            "icon": "warning"
+          }
+        ],
+        "global_context_bar": {
+          "position": "bottom",
+          "title": "Current Web3 Talent Distribution",
+          "data": [
+            {"region": "US + India + China", "share": "50%", "style": "dominant"},
+            {"region": "Japan", "share": "Under-represented", "style": "gap", "color": "red"}
+          ]
+        },
+        "takeaway": "With chronic talent shortages in Web3 security, Nyx creates upstream researchers who directly feed the Soneium ecosystem."
+      }
+    },
+    {
+      "slide_id": "SL11",
+      "visual_spec": {
+        "type": "Proof_Points_Grid",
+        "title": "This Is Already Working",
+        "layout": "evidence_grid",
+        "primary_proof": {
+          "position": "left_large",
+          "type": "Big_Number",
+          "value": "20+",
+          "label": "Vulnerability Reports",
+          "sublabel": "Submitted to Ethereum clients",
+          "icon": "security_shield",
+          "color": "green",
+          "style": "prominent"
+        },
+        "supporting_evidence": {
+          "position": "right_stack",
+          "items": [
+            {
+              "type": "Trend_Arrow",
+              "label": "International Co-authorship from Japan",
+              "before": "46%",
+              "after": "56%",
+              "period": "2014-2018",
+              "arrow": "upward",
+              "color": "green"
+            },
+            {
+              "type": "Quote_Card",
+              "text": "Nature Index: Japanese universities testing collaboration to counter decline",
+              "source": "Nature Index",
+              "icon": "newspaper"
+            }
+          ]
+        },
+        "bottom_statement": {
+          "text": "Proof of concept established. Now we need scale.",
+          "style": "bold_summary",
+          "position": "bottom_center"
+        },
+        "takeaway": "20+ vulnerability reports and rising international collaboration prove the model works—the next step is scaling it."
+      }
+    },
+    {
+      "slide_id": "SL12",
+      "visual_spec": {
+        "type": "Transformation_Visual",
+        "title": "From Fragmentation to Global Competitiveness",
+        "layout": "before_after_transformation",
+        "before_state": {
+          "position": "left",
+          "label": "Today: Fragmented",
+          "visual": "scattered_dots",
+          "elements": [
+            {"shape": "small_circle", "label": "Isolated researcher"},
+            {"shape": "small_circle", "label": "Competing for shrinking funds"},
+            {"shape": "small_circle", "label": "Institutional silos"}
+          ],
+          "style": "gray, disconnected",
+          "mood": "chaotic"
+        },
+        "transformation_arrow": {
+          "style": "large_curved_arrow",
+          "label": "Cross-institutional collaboration",
+          "icon": "nyx_logo",
+          "position": "center"
+        },
+        "after_state": {
+          "position": "right",
+          "label": "Future: Connected Ecosystem",
+          "visual": "network_graph",
+          "elements": [
+            {"shape": "connected_node", "label": "Global funding access"},
+            {"shape": "connected_node", "label": "Merit-based evaluation"},
+            {"shape": "connected_node", "label": "World-surprising research"}
+          ],
+          "style": "colored, interconnected",
+          "mood": "organized, dynamic"
+        },
+        "timeline_footer": {
+          "text": "Building for the next 20-300 years of Japanese research excellence",
+          "style": "inspirational_subtitle"
+        },
+        "takeaway": "The goal is transformational: converting isolated competition into a connected ecosystem that produces world-class research."
+      }
+    },
+    {
+      "slide_id": "SL13",
+      "visual_spec": {
+        "type": "Fork_in_Road_Diagram",
+        "title": "Two Paths Forward",
+        "layout": "diverging_paths",
+        "starting_point": {
+          "label": "NOW",
+          "icon": "decision_point",
+          "position": "center_left"
+        },
+        "path_a": {
+          "direction": "upper_right",
+          "label": "Path A: Status Quo",
+          "color": "gray_to_dark",
+          "style": "fading_downward",
+          "stages": [
+            {"step": "Isolation", "icon": "wall"},
+            {"step": "Scarcity", "icon": "shrinking_pie"},
+            {"step": "Hierarchy", "icon": "pyramid"},
+            {"step": "Continued Decline", "icon": "downward_arrow"}
+          ],
+          "endpoint": {
+            "label": "Predictable Decline",
+            "style": "dark, small",
+            "icon": "warning"
+          }
+        },
+        "path_b": {
+          "direction": "lower_right",
+          "label": "Path B: Collaboration",
+          "color": "green_gradient",
+          "style": "expanding_upward",
+          "stages": [
+            {"step": "Global Funding", "icon": "money_globe"},
+            {"step": "Merit-Based", "icon": "trophy"},
+            {"step": "Open Networks", "icon": "network"},
+            {"step": "World-Class Output", "icon": "star"}
+          ],
+          "endpoint": {
+            "label": "Global Leadership",
+            "style": "bright, large",
+            "icon": "checkmark"
+          }
+        },
+        "center_callout": {
+          "text": "Inaction is itself a choice",
+          "style": "warning_box",
+          "position": "bottom_center"
+        },
+        "takeaway": "The choice is binary: continue on a predictable path of decline, or actively build a path to global research leadership."
+      }
+    },
+    {
+      "slide_id": "SL14",
+      "visual_spec": {
+        "type": "Action_Card",
+        "title": "Start Here: Review the PSE RFP List",
+        "layout": "single_action_focus",
+        "main_action": {
+          "type": "CTA_Button_Visual",
+          "icon": "document_list",
+          "label": "PSE Research Proposals",
+          "sublabel": "Privacy Stewards of Ethereum",
+          "style": "prominent_clickable_card",
+          "color": "primary_action_color"
+        },
+        "value_proposition": {
+          "position": "above_action",
+          "columns": 3,
+          "items": [
+            {"icon": "checkmark", "text": "Pre-vetted problems"},
+            {"icon": "path", "text": "Clear application pathway"},
+            {"icon": "dollar", "text": "Millions in potential funding"}
+          ]
+        },
+        "support_offered": {
+          "position": "below_action",
+          "header": "Nyx Foundation Support",
+          "items": [
+            {"icon": "guidance", "text": "Application guidance"},
+            {"icon": "mentor", "text": "Technical mentorship"},
+            {"icon": "community", "text": "Community connection"}
+          ],
+          "style": "three_column_icons"
+        },
+        "low_commitment_message": {
+          "text": "Reviewing the list creates optionality—not commitment",
+          "icon": "low_barrier",
+          "position": "bottom",
+          "style": "reassuring_note"
+        },
+        "takeaway": "The first step costs nothing: simply review the PSE RFP list to see if any problems match your research interests."
+      }
+    },
+    {
+      "slide_id": "SL15",
+      "visual_spec": {
+        "type": "Closing_CTA_Layout",
+        "title": "Join Us—Help Nurture the Next Generation",
+        "layout": "centered_invitation",
+        "central_message": {
+          "text": "Produce work that surprises the world",
+          "style": "large_inspirational_text",
+          "position": "top_center"
+        },
+        "action_steps": {
+          "type": "numbered_action_list",
+          "layout": "horizontal_cards",
+          "steps": [
+            {
+              "number": "1",
+              "action": "Connect",
+              "detail": "Join Nyx Foundation community",
+              "icon": "handshake"
+            },
+            {
+              "number": "2",
+              "action": "Explore",
+              "detail": "Review PSE RFP opportunities",
+              "icon": "search"
+            },
+            {
+              "number": "3",
+              "action": "Participate",
+              "detail": "DEPCON Hakodate",
+              "icon": "calendar_event"
+            }
+          ]
+        },
+        "contact_block": {
+          "position": "bottom_center",
+          "elements": [
+            {"type": "website", "placeholder": "[nyx-foundation.org]"},
+            {"type": "discord", "placeholder": "[Discord invite link]"},
+            {"type": "twitter", "placeholder": "[@NyxFoundation]"},
+            {"type": "email", "placeholder": "[contact@nyx-foundation.org]"}
+          ],
+          "style": "contact_icons_row"
+        },
+        "closing_visual": {
+          "type": "community_silhouettes",
+          "description": "Stylized silhouettes of diverse researchers connected by network lines",
+          "mood": "collaborative, forward-looking"
+        },
+        "final_statement": {
+          "text": "The problems are fascinating. The funding is available. The community is welcoming. The only thing missing is you.",
+          "style": "closing_statement",
+          "position": "above_contact"
+        },
+        "takeaway": "Join a community of researchers working together to surprise the world—the only thing missing is you."
+      }
+    }
+  ]
+}

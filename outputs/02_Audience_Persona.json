@@ -1,0 +1,82 @@
+{
+  "audience_persona": {
+    "name": "礒津政明 (Masaaki Isotsu)",
+    "role": "Chairman, Sony Global Education Inc.; Education Futurist; Corporate Distinguished Engineer, Sony Group",
+    "summary": "A visionary technologist and education reformer with deep roots in software engineering and R&D at Sony CSL. He founded Sony's first education company and is a recognized thought leader who authored '2040 Education no Mirai' and coined the term 'Programming-like Thinking' for Japan's Ministry of Education. With personal experience starting programming at age 7, he champions long-term thinking ('300 years into the future'), has pioneered blockchain applications in education, and actively supports nurturing next-generation talent through STEAM education. Sony Group's recent launch of Soneium (Ethereum L2) demonstrates the company's deep commitment to blockchain technology, making him potentially receptive to Ethereum research initiatives.",
+    "motivations_and_priorities": [
+      {
+        "motivation": "Nurturing next-generation talent with 'strategic learning ability' for the VUCA era",
+        "evidence": "Keynote at Luminary Talk vol.12 on 'developing self-directed continuous learning ability'; authored '2040 Education no Mirai' focused on future-ready education"
+      },
+      {
+        "motivation": "Building long-term educational infrastructure using blockchain technology",
+        "evidence": "Led Sony Global Education's development of blockchain-based educational records system with IBM and Fujitsu; member of 'Blockchain x Education Working Group' at the Learning of Tomorrow Association"
+      },
+      {
+        "motivation": "Democratizing access to technology education regardless of traditional academic hierarchies",
+        "evidence": "Created KOOV to enable programming education from elementary school; stated 'creativity is connected to leadership' and emphasizes process over outcomes"
+      },
+      {
+        "motivation": "Creating global platforms that transcend institutional and national boundaries",
+        "evidence": "Launched Global Math Challenge reaching 250,000+ participants from 85 countries; Sony Global Education platform shares student work across countries including China"
+      },
+      {
+        "motivation": "Bridging research innovation to practical applications",
+        "evidence": "Career path from Sony CSL researcher to founding Sony Global Education; transitioned pure research into a viable education business"
+      }
+    ],
+    "potential_biases_and_objections": [
+      {
+        "bias": "May prioritize educational applications over pure research for research's sake",
+        "reasoning": "His career has focused on applied technology for education; may question research that lacks clear practical applications"
+      },
+      {
+        "objection": "What is the concrete pathway from research to practical impact?",
+        "reasoning": "As someone who built practical educational products (KOOV, blockchain records), he values clear implementation roadmaps over abstract research goals"
+      },
+      {
+        "objection": "How does this benefit next-generation talent development in Japan?",
+        "reasoning": "His core mission is nurturing future talent; proposals must align with talent cultivation, not just research output"
+      },
+      {
+        "objection": "Is this sustainable without depending on traditional hierarchical structures?",
+        "reasoning": "He advocates for process-based evaluation and breaking free from 'what was learned in school'; may be skeptical of approaches that reinforce academic seniority systems"
+      },
+      {
+        "objection": "What differentiates this from existing blockchain/crypto initiatives Sony is already pursuing?",
+        "reasoning": "Sony has Soneium (Ethereum L2), Sony Bank stablecoin plans, and partnerships with blockchain companies; needs clear value-add beyond Sony's existing efforts"
+      },
+      {
+        "objection": "Is this truly global in scope or limited to domestic impact?",
+        "reasoning": "He emphasizes that 'business that is globalizing' cannot rely on domestic intuition alone; parochial initiatives may not resonate"
+      }
+    ],
+    "communication_preferences": {
+      "preferred_style": "Visionary yet practical; combines long-term thinking (20-300 year horizons) with concrete implementation examples. Values storytelling and personal experience over pure data.",
+      "likes": [
+        "Long-term vision with concrete near-term actions ('300 years into the future' mindset)",
+        "Personal stories and experiential evidence (shares his own childhood programming experience)",
+        "Global perspective with specific examples across countries",
+        "Focus on human potential and creativity over pure efficiency metrics",
+        "Cross-institutional collaboration that breaks traditional hierarchies",
+        "Process-oriented thinking over outcome-only evaluation"
+      ],
+      "dislikes": [
+        "Short-term ROI-only arguments without broader vision",
+        "Reinforcement of traditional seniority-based academic systems",
+        "Technology for technology's sake without human benefit",
+        "Vendor lock-in or proprietary approaches that limit interoperability",
+        "Purely theoretical research without practical implementation pathway",
+        "Domestic-only thinking that ignores global context"
+      ]
+    },
+    "decision_making_criteria": [
+      "Talent Development Impact: Does this contribute to nurturing next-generation researchers and thinkers who can compete globally?",
+      "Long-term Vision Alignment: Does this fit into a long-term (20+ year) vision for Japan's research ecosystem, not just short-term gains?",
+      "Practical Implementation Path: Is there a clear roadmap from research to real-world application and educational value?",
+      "Cross-Institutional Collaboration: Does this break down silos between academia, industry, and international communities?",
+      "Technology Foundation: Is the underlying technology (Ethereum/blockchain) sound, scalable, and aligned with Sony's existing investments (Soneium)?",
+      "Global Competitiveness: Will this help Japanese researchers produce work that surprises the world and contributes to the global ecosystem?"
+    ]
+  }
+}

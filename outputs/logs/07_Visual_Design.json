@@ -1,0 +1,98 @@
+{
+  "step": "07_Visual_Design",
+  "timestamp": "2026-01-22T00:00:00Z",
+  "input_file": "outputs/06_Slide_Drafts.json",
+  "output_file": "outputs/07_Visual_Designs.json",
+  "slides_processed": 15,
+  "design_decisions": {
+    "SL01": {
+      "message_type": "Trend/Decline over time",
+      "visual_choice": "Slope Chart (Multi-Metric)",
+      "rationale": "Multiple ranking declines are best shown with connected slope lines that visually demonstrate the downward trajectory. A slope chart is more impactful than separate bar charts because it emphasizes direction and magnitude of change simultaneously."
+    },
+    "SL02": {
+      "message_type": "Comparison + Trend",
+      "visual_choice": "Combined Visual (Bar Chart + Before/After)",
+      "rationale": "Two distinct but related messages: (1) Japan vs peers on PhD production (comparison), and (2) tenure decline over time. A combined panel layout tells both stories without overwhelming the audience."
+    },
+    "SL03": {
+      "message_type": "Relationship/Barriers",
+      "visual_choice": "Barrier Diagram",
+      "rationale": "The metaphor of 'walls' and 'silos' demands a visual that literally shows barriers surrounding researchers. This creates an immediate emotional understanding of the 'boxed in' situation."
+    },
+    "SL04": {
+      "message_type": "Trend + Composition",
+      "visual_choice": "Dual Panel (Area Chart + Pie Comparison)",
+      "rationale": "Funding decline is a trend best shown with area chart (the shaded area = lost funding). Research time is a composition problem, so pie charts show how the 'pie' of faculty time has shifted."
+    },
+    "SL05": {
+      "message_type": "Geographic Distribution/Opportunity",
+      "visual_choice": "World Map Ecosystem",
+      "rationale": "The global nature of the Ethereum research ecosystem is best conveyed through a map showing the network spanning 25+ countries. Japan's absence becomes visually obvious and emotionally resonant."
+    },
+    "SL06": {
+      "message_type": "Opportunity Details",
+      "visual_choice": "Structured Info Card",
+      "rationale": "This is an informational slide with specific dates and eligibility criteria. A card layout with clear sections organizes the information for easy scanning while the $2M figure gets prominent display."
+    },
+    "SL07": {
+      "message_type": "Connection/Bridge",
+      "visual_choice": "Bridge Diagram",
+      "rationale": "Nyx Foundation's role as a connector demands a bridge metaphor. Showing fragmented Japanese researchers on one side and the connected global ecosystem on the other, with Nyx as the bridge, creates immediate understanding."
+    },
+    "SL08": {
+      "message_type": "Comparison of Models",
+      "visual_choice": "Comparison Table",
+      "rationale": "Direct comparison between traditional and new approaches is clearest in table format. Each row represents a dimension of difference, allowing the audience to evaluate criteria systematically."
+    },
+    "SL09": {
+      "message_type": "Growth/Metrics",
+      "visual_choice": "Metrics Dashboard",
+      "rationale": "Soneium's traction is best shown through 'big number' metrics. A dashboard layout with three prominent figures creates credibility and urgency simultaneously."
+    },
+    "SL10": {
+      "message_type": "Process/Pipeline",
+      "visual_choice": "Funnel Pipeline",
+      "rationale": "The talent pipeline concept maps directly to a funnel visualization. Researchers flow from broad pool through Nyx training to focused Soneium ecosystem contribution."
+    },
+    "SL11": {
+      "message_type": "Evidence/Proof",
+      "visual_choice": "Proof Points Grid",
+      "rationale": "Multiple evidence points need organized presentation. A big number (20+ reports) as the primary proof, supported by secondary trend data, creates a compelling evidence stack."
+    },
+    "SL12": {
+      "message_type": "Transformation",
+      "visual_choice": "Before/After Transformation",
+      "rationale": "The 'fragmented to connected' narrative is best shown as a before/after visual with a transformation arrow. This creates aspiration and shows the journey."
+    },
+    "SL13": {
+      "message_type": "Choice/Decision",
+      "visual_choice": "Fork in Road Diagram",
+      "rationale": "Two mutually exclusive paths demand a diverging paths visual. This creates urgency and makes the choice feel real and immediate."
+    },
+    "SL14": {
+      "message_type": "Call to Action",
+      "visual_choice": "Action Card",
+      "rationale": "A simple, focused CTA slide needs to minimize distraction. A single prominent action (review PSE list) with supporting value props creates clear next step."
+    },
+    "SL15": {
+      "message_type": "Final CTA/Invitation",
+      "visual_choice": "Closing CTA Layout",
+      "rationale": "The final slide needs emotional resonance plus practical contact info. Numbered action steps make next moves clear, while the community visual creates belonging."
+    }
+  },
+  "visual_principles_applied": [
+    "One message per slide - each visual reinforces a single takeaway",
+    "Right chart for the message - comparisons use bars, trends use lines, processes use flows",
+    "Data-ink ratio - minimize decoration, maximize information",
+    "Annotations over legends - takeaways built into visuals",
+    "Color with purpose - red for problems, green for solutions, gray for status quo"
+  ],
+  "quality_checklist": {
+    "chosen_type_effective": true,
+    "spec_detailed_enough": true,
+    "takeaway_clear": true,
+    "all_slides_accounted": true,
+    "valid_json": true
+  }
+}

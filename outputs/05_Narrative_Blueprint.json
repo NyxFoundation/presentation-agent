@@ -1,0 +1,238 @@
+{
+  "narrative_blueprint": {
+    "narrative_archetype_used": "Sparkline (Duarte)",
+    "estimated_slide_count": 15,
+    "narrative_arc_summary": {
+      "what_is": "Japan's research ecosystem is in structural decline—isolated researchers, falling global rankings, and stagnant funding are eroding the nation's ability to produce world-class talent.",
+      "what_could_be": "A united community of Japanese researchers collaborating globally on Ethereum research, funded by international grants, nurturing next-generation talent free from traditional hierarchies—producing work that surprises the world."
+    },
+    "slides": [
+      {
+        "slide_number": 1,
+        "slide_id": "SL01",
+        "narrative_beat": "The Hook",
+        "action_title": "Japan has endured 'lost decades' in research—and the slide is accelerating.",
+        "purpose": "To immediately establish urgency and emotional stakes, capturing the audience's attention with a bold, uncomfortable truth about Japan's research crisis.",
+        "evidence_needed": [
+          "Japan fell from 2nd to 5th globally in Web of Science paper count (NISTEP data)",
+          "Japan dropped from 5th to 12th in top 1% cited papers—trailing Spain and Iran",
+          "University of Tokyo fell from 19th to 27th in Shanghai Rankings; three universities dropped out of top 100"
+        ],
+        "key_claim_reference": "C1"
+      },
+      {
+        "slide_number": 2,
+        "slide_id": "SL02",
+        "narrative_beat": "What Is - The Crisis Deepens",
+        "action_title": "Young researchers are fleeing academia—and the talent pipeline is breaking.",
+        "purpose": "To humanize the crisis by focusing on the people affected, connecting to Isotsu-san's core mission of nurturing next-generation talent.",
+        "evidence_needed": [
+          "Declining PhD enrollments data",
+          "Statistics on young researchers leaving academia due to insecure, low-paid positions",
+          "Quote from Guojun Sheng (Kumamoto University) on systemic problems"
+        ],
+        "key_claim_reference": "C1"
+      },
+      {
+        "slide_number": 3,
+        "slide_id": "SL03",
+        "narrative_beat": "What Is - Structural Barriers",
+        "action_title": "Traditional hierarchies and institutional silos are strangling innovation.",
+        "purpose": "To diagnose the root cause: it's not just funding—it's culture. This positions Nyx Foundation's cross-institutional model as the solution.",
+        "evidence_needed": [
+          "METI 2012 report: Japanese companies 'hesitant to collaborate' and 'isolating from international R&D'",
+          "Barriers identified: silos between humanities/sciences, theory/empirical, lack of diversity",
+          "Expert view that current ¥10 trillion reforms won't address root problems (too few women, foreigners, fear of change)"
+        ],
+        "key_claim_reference": "C1, C4"
+      },
+      {
+        "slide_number": 4,
+        "slide_id": "SL04",
+        "narrative_beat": "What Is - The Funding Trap",
+        "action_title": "Domestic funding has stagnated—researchers are competing for a shrinking pie.",
+        "purpose": "To establish that the current approach is zero-sum and unsustainable, creating urgency for alternative funding pathways.",
+        "evidence_needed": [
+          "6.4% decline from 2012 peak in domestic research funding",
+          "Impact of 2003 corporatization law on national universities",
+          "Budget cuts forcing reduced research time (Keio physician-scientist data)"
+        ],
+        "key_claim_reference": "C1, C2"
+      },
+      {
+        "slide_number": 5,
+        "slide_id": "SL05",
+        "narrative_beat": "What Could Be - The Vision",
+        "action_title": "But a global research revolution is happening—and Japan can lead it.",
+        "purpose": "To pivot from problem to possibility, introducing the Ethereum ecosystem as an exciting new frontier for research.",
+        "evidence_needed": [
+          "Ethereum Foundation's global research ecosystem growth",
+          "2024 Academic Grants: 300 applications from 25 countries",
+          "Q1 2025 Ecosystem Support Program: $32 million distributed, 63% increase from Q4 2024"
+        ],
+        "key_claim_reference": "C2"
+      },
+      {
+        "slide_number": 6,
+        "slide_id": "SL06",
+        "narrative_beat": "What Could Be - The Opportunity",
+        "action_title": "The Ethereum Foundation offers $2M+ in annual academic grants—and Japanese researchers are perfectly positioned.",
+        "purpose": "To present a concrete, accessible opportunity that bypasses domestic funding constraints.",
+        "evidence_needed": [
+          "2025 Academic Grants Round: $2 million dedicated fund",
+          "2024 round funded 41 projects from researchers worldwide",
+          "Research areas aligned with Sony interests: cryptography, security, consensus, formal verification, game theory",
+          "Application deadline: March 16, 2025"
+        ],
+        "key_claim_reference": "C2"
+      },
+      {
+        "slide_number": 7,
+        "slide_id": "SL07",
+        "narrative_beat": "The Bridge - Nyx Foundation Introduction",
+        "action_title": "Nyx Foundation bridges Japanese researchers to this global ecosystem.",
+        "purpose": "To introduce Nyx Foundation as the solution that connects the vision to reality for Japanese researchers.",
+        "evidence_needed": [
+          "Nyx Foundation's mission and cross-institutional model",
+          "Existing network: Taiwan Ethereum Community, Ethereum Foundation, PSE research teams",
+          "Track record: 20+ vulnerability reports demonstrating credibility and capability"
+        ],
+        "key_claim_reference": "C4, C5"
+      },
+      {
+        "slide_number": 8,
+        "slide_id": "SL08",
+        "narrative_beat": "The Bridge - Breaking Hierarchies",
+        "action_title": "This model empowers young talent—regardless of institutional affiliation or seniority.",
+        "purpose": "To directly address Isotsu-san's core value: talent development free from traditional hierarchies.",
+        "evidence_needed": [
+          "Nyx Foundation operates outside traditional academic hierarchies",
+          "Researchers evaluated on contributions (vulnerability reports, research, code), not rank or age",
+          "OIST precedent: no departments, 50% foreign faculty, English official language—proving silos can be broken",
+          "Connection to Isotsu-san's 'process-based evaluation over outcome-only thinking'"
+        ],
+        "key_claim_reference": "C4"
+      },
+      {
+        "slide_number": 9,
+        "slide_id": "SL09",
+        "narrative_beat": "The Proof - Sony Alignment",
+        "action_title": "Sony's Soneium makes this collaboration even more strategic—and urgent.",
+        "purpose": "To demonstrate that this isn't just academic—it directly supports Sony's blockchain infrastructure investments.",
+        "evidence_needed": [
+          "Soneium mainnet launched January 2025",
+          "Testnet statistics: 47+ million transactions, 15.4 million active wallets, 14 million users",
+          "Vitalik Buterin endorsement: 'great for businesses *and* users'",
+          "Soneium Spark incubator: 32 applications selected from 1,700 applicants"
+        ],
+        "key_claim_reference": "C3"
+      },
+      {
+        "slide_number": 10,
+        "slide_id": "SL10",
+        "narrative_beat": "The Proof - Talent Pipeline",
+        "action_title": "Nyx Foundation creates the talent pipeline Soneium needs to thrive.",
+        "purpose": "To connect the upstream research investment to downstream business value for Sony.",
+        "evidence_needed": [
+          "Web3 talent shortage: job postings grew 20% YoY in H1 2024",
+          "US/India/China control 50% of global Web3 talent pool—Japan underrepresented",
+          "Soneium For All incubator: up to $100,000 funding per project with major partners",
+          "Researchers through Nyx gain skills directly applicable to Soneium ecosystem"
+        ],
+        "key_claim_reference": "C3"
+      },
+      {
+        "slide_number": 11,
+        "slide_id": "SL11",
+        "narrative_beat": "The Proof - Success Stories",
+        "action_title": "This isn't theory—researchers are already producing globally competitive work.",
+        "purpose": "To provide concrete evidence that the model works, building credibility through demonstrated results.",
+        "evidence_needed": [
+          "20+ vulnerability reports already produced through Nyx Foundation collaboration",
+          "Specific examples of researchers who have collaborated",
+          "Nature Index reporting on Japanese universities testing collaboration as response to declining performance",
+          "Connection to Isotsu-san's Global Math Challenge success (250,000 participants from 85 countries)"
+        ],
+        "key_claim_reference": "C3, C4"
+      },
+      {
+        "slide_number": 12,
+        "slide_id": "SL12",
+        "narrative_beat": "What Could Be - The Long-Term Vision",
+        "action_title": "Together, we can transform Japan's fragmented research landscape into a globally competitive ecosystem.",
+        "purpose": "To paint the inspiring future state, connecting to Isotsu-san's 20+ year thinking and '300 years into the future' mindset.",
+        "evidence_needed": [
+          "Vision of cross-institutional collaboration producing world-surprising research",
+          "Long-term ecosystem building: not just grants, but community and culture change",
+          "Connection to '2040 Education no Mirai': developing 'strategic learning ability' professionals for VUCA era"
+        ],
+        "key_claim_reference": "C3, C4"
+      },
+      {
+        "slide_number": 13,
+        "slide_id": "SL13",
+        "narrative_beat": "What Is vs What Could Be - The Contrast",
+        "action_title": "The choice is clear: continue the decline, or pioneer a new path.",
+        "purpose": "To create a decisive moment of contrast between the painful status quo and the inspiring alternative.",
+        "evidence_needed": [
+          "Summary contrast: isolation vs. collaboration, scarcity vs. abundance, hierarchy vs. merit",
+          "Visual representation of two paths",
+          "Rhetorical framing that makes inaction feel like a choice"
+        ],
+        "key_claim_reference": "C1, C4"
+      },
+      {
+        "slide_number": 14,
+        "slide_id": "SL14",
+        "narrative_beat": "The Call to Action - The Ask",
+        "action_title": "Start by reviewing the PSE RFP list—it costs nothing but opens doors to millions in funding.",
+        "purpose": "To present a low-friction, immediately actionable first step that creates optionality.",
+        "evidence_needed": [
+          "PSE (Privacy & Scaling Explorations) RFP list as curated entry point",
+          "Pre-vetted research opportunities with clear application pathways",
+          "Nyx Foundation support: guidance on applications, technical mentorship, global community connection",
+          "Framing: reviewing the list is optionality creation, not commitment"
+        ],
+        "key_claim_reference": "C5"
+      },
+      {
+        "slide_number": 15,
+        "slide_id": "SL15",
+        "narrative_beat": "The Call to Action - The Invitation",
+        "action_title": "Join Nyx Foundation today—and help nurture the next generation of researchers who will surprise the world.",
+        "purpose": "To close with an inspiring invitation that directly echoes Isotsu-san's language and mission.",
+        "evidence_needed": [
+          "Clear next steps: connect with Nyx Foundation, join the community, review PSE RFP list",
+          "Contact information and resources",
+          "Final emotional appeal: producing work that 'surprises the world'",
+          "Connection to Isotsu-san's 'concrete near-term actions within a long-term vision'"
+        ],
+        "key_claim_reference": "C5"
+      }
+    ],
+    "action_title_story_flow": [
+      "Japan has endured 'lost decades' in research—and the slide is accelerating.",
+      "Young researchers are fleeing academia—and the talent pipeline is breaking.",
+      "Traditional hierarchies and institutional silos are strangling innovation.",
+      "Domestic funding has stagnated—researchers are competing for a shrinking pie.",
+      "But a global research revolution is happening—and Japan can lead it.",
+      "The Ethereum Foundation offers $2M+ in annual academic grants—and Japanese researchers are perfectly positioned.",
+      "Nyx Foundation bridges Japanese researchers to this global ecosystem.",
+      "This model empowers young talent—regardless of institutional affiliation or seniority.",
+      "Sony's Soneium makes this collaboration even more strategic—and urgent.",
+      "Nyx Foundation creates the talent pipeline Soneium needs to thrive.",
+      "This isn't theory—researchers are already producing globally competitive work.",
+      "Together, we can transform Japan's fragmented research landscape into a globally competitive ecosystem.",
+      "The choice is clear: continue the decline, or pioneer a new path.",
+      "Start by reviewing the PSE RFP list—it costs nothing but opens doors to millions in funding.",
+      "Join Nyx Foundation today—and help nurture the next generation of researchers who will surprise the world."
+    ],
+    "key_claim_mapping": {
+      "C1": ["SL01", "SL02", "SL03", "SL04", "SL13"],
+      "C2": ["SL04", "SL05", "SL06"],
+      "C3": ["SL09", "SL10", "SL11", "SL12"],
+      "C4": ["SL03", "SL07", "SL08", "SL11", "SL12", "SL13"],
+      "C5": ["SL07", "SL14", "SL15"]
+    }
+  }
+}

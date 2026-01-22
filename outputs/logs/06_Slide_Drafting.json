@@ -1,0 +1,75 @@
+{
+  "step": "06_Slide_Drafting",
+  "timestamp": "2026-01-22T00:00:00Z",
+  "inputs": {
+    "narrative_blueprint": "outputs/05_Narrative_Blueprint.json",
+    "context_brief": "outputs/01_Context_Brief.json",
+    "tone": "Respectfully ambitious and intellectually rigorous."
+  },
+  "process_summary": {
+    "research_conducted": [
+      "Japan research ranking decline NISTEP data 2024",
+      "Japan top 1% cited papers global ranking decline",
+      "Japan PhD enrollment decline young researchers leaving academia",
+      "Japan university research funding cuts corporatization 2004",
+      "University of Tokyo Shanghai Rankings decline",
+      "Ethereum Foundation Academic Grants 2025",
+      "Ethereum Foundation Ecosystem Support Program 2024-2025",
+      "Sony Soneium blockchain mainnet launch statistics",
+      "Vitalik Buterin Soneium endorsement",
+      "Soneium Spark incubator applications",
+      "Web3 blockchain talent shortage 2024",
+      "PSE Privacy Scaling Explorations RFP",
+      "OIST no departments international model",
+      "Japan METI 2012 report collaboration barriers",
+      "Japan Nature Index collaboration declining performance"
+    ],
+    "sources_referenced": [
+      "NISTEP Science and Technology Indicators 2024",
+      "Nature Index 2024/2025 reports",
+      "MEXT PhD enrollment data",
+      "Japan Association of National Universities funding data",
+      "Ethereum Foundation blog and ESP website",
+      "Sony Soneium official blog and press releases",
+      "Times Higher Education university rankings",
+      "Science magazine articles on Japan research decline",
+      "Tiger Research Web3 job market analysis",
+      "METI 2012 and 2019 R&D collaboration reports"
+    ]
+  },
+  "output": {
+    "file": "outputs/06_Slide_Drafts.json",
+    "total_slides": 15,
+    "slides_with_todos": 3
+  },
+  "todos_identified": [
+    {
+      "slide_id": "SL11",
+      "item": "Add 1-2 specific named researcher success stories from Nyx Foundation collaboration",
+      "severity": "Medium"
+    },
+    {
+      "slide_id": "SL14",
+      "item": "Include direct link to PSE RFP list and contact information for Nyx Foundation support",
+      "severity": "High"
+    },
+    {
+      "slide_id": "SL15",
+      "item": "Add specific contact information, website, and Discord/community links for Nyx Foundation",
+      "severity": "High"
+    },
+    {
+      "slide_id": "SL15",
+      "item": "Confirm DEPCON Hakodate date, time, and venue details",
+      "severity": "Medium"
+    }
+  ],
+  "quality_checklist": {
+    "key_points_support_action_titles": true,
+    "bullets_concise_and_scannable": true,
+    "speaker_notes_tell_story_not_repeat_bullets": true,
+    "tone_consistent": true,
+    "content_gaps_logged_as_todos": true,
+    "valid_json": true
+  }
+}

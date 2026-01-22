@@ -1,0 +1,203 @@
+{
+  "slide_drafts": [
+    {
+      "slide_id": "SL01",
+      "action_title": "Japan has endured 'lost decades' in research—and the slide is accelerating.",
+      "key_points": [
+        "- Global paper output ranking: 2nd → 5th in two decades (NISTEP 2024)",
+        "- Top 1% cited papers: 5th → 12th—now trailing Spain and Iran",
+        "- University of Tokyo: 19th → 27th in global rankings; three other top universities dropped out of top 100",
+        "- Nature Index 2024: Japan's adjusted share fell 9.0% year-over-year"
+      ],
+      "speaker_notes": "Let me begin with an uncomfortable truth. Japan's research establishment has endured what many academics now call 'the lost decades.' The numbers tell a stark story. According to NISTEP's latest data, Japan has fallen from second to fifth place globally in total paper output. More concerning is the quality decline: we've dropped from fifth to twelfth place in the world's top 1% most-cited papers—now trailing countries like Spain and Iran. The University of Tokyo has slipped from 19th to 27th in global rankings, and three of our other top universities have dropped out of the top 100 entirely. This is not a temporary setback. The Nature Index confirms that Japan's contribution to high-quality research continues to decline. The question we must ask ourselves is: why is this happening, and what can we do about it?",
+      "todos": []
+    },
+    {
+      "slide_id": "SL02",
+      "action_title": "Young researchers are fleeing academia—and the talent pipeline is breaking.",
+      "key_points": [
+        "- PhD enrollments down 25% over 20 years (MEXT data)",
+        "- Only 123 new PhDs per million population—less than half of UK (313) or Germany (315)",
+        "- Tenured positions for researchers under 40: 23.4% → 15.1% (2007-2016)",
+        "- 'Low-paid, insecure jobs drove talented young researchers out' —Robert Geller, UTokyo"
+      ],
+      "speaker_notes": "Behind these statistics are people—talented young researchers who are making difficult choices about their futures. PhD enrollments have fallen 25% over two decades. Japan now produces only 123 new doctoral recipients per million people—less than half of what the UK or Germany achieve. Why? Because the career path has become untenable. The share of tenured positions for researchers under 40 has dropped from 23% to just 15%. As Professor Robert Geller of the University of Tokyo puts it: 'The creation of a career ladder of low-paid, insecure jobs drove talented young researchers out of academia.' Some who earn PhDs are looking abroad for careers. Others simply choose different paths entirely. We are not just losing rankings—we are losing the people who would write Japan's next chapter in scientific discovery.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL03",
+      "action_title": "Traditional hierarchies and institutional silos are strangling innovation.",
+      "key_points": [
+        "- METI 2012: Japanese companies 'hesitant to collaborate' and 'isolating from international R&D'",
+        "- Foreign faculty at Japanese universities: <5% vs. UK's ~30%",
+        "- Silos between disciplines, theory vs. empirical, lack of diversity identified as barriers",
+        "- Bank of Japan: 'Low levels of collaborative innovation with outside companies and institutions'"
+      ],
+      "speaker_notes": "But funding alone doesn't explain everything. There is a structural problem. A 2012 METI report documented something troubling: Japanese companies were hesitant to collaborate with other entities and were therefore falling behind in open innovation. Japanese universities remain strikingly insular—fewer than 5% of full-time faculty are from abroad, compared to nearly 30% in the UK. Research from the Bank of Japan points to low levels of collaborative innovation with outside companies and institutions. We have built walls where we need bridges—between disciplines, between institutions, between Japan and the rest of the world. These conclusions raised concerns that Japan might be isolating itself from the international R&D collaborations driving global research productivity. The good news is that this is a problem we can solve.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL04",
+      "action_title": "Domestic funding has stagnated—researchers are competing for a shrinking pie.",
+      "key_points": [
+        "- National university operating grants: $87B (2004) → $76B (2022)—13% decline",
+        "- 2004 corporatization law enforced 1% annual cuts to operational support",
+        "- Research time for faculty: 46.5% (2002) → 37.2% (2008), largely unchanged since",
+        "- Competitive grants cannot compensate for cuts to baseline funding"
+      ],
+      "speaker_notes": "The financial picture is equally concerning. When Japan's national universities were corporatized in 2004, the government steadily cut operating funds—from $87 billion in 2004 to $76 billion in 2022, according to the Japan Association of National Universities. That's a 13% decline in real resources. MEXT enforced 1% annual cuts to operational support. The consequence? Faculty research time dropped from 46.5% in 2002 to 37.2% by 2008 and has remained low ever since. More time goes to teaching and administration; less to discovery. While competitive grants have increased, they cannot make up for the erosion of baseline funding. Researchers are competing ever more fiercely for a shrinking pie. This is the 'what is'—a difficult present. But now let me share a vision of what could be.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL05",
+      "action_title": "But a global research revolution is happening—and Japan can lead it.",
+      "key_points": [
+        "- Ethereum Foundation: global research ecosystem spanning 25+ countries",
+        "- 2024 Academic Grants: 300 applications received from researchers worldwide",
+        "- Q4 2024: $11.6M distributed through Ecosystem Support Program",
+        "- Research areas: cryptography, consensus, formal verification, game theory, security"
+      ],
+      "speaker_notes": "There is another story unfolding—one of opportunity. The Ethereum Foundation has built a global research ecosystem that spans over 25 countries. In 2024, their academic grants round received 300 applications from researchers around the world. In Q4 2024 alone, the Ecosystem Support Program distributed $11.6 million to advance the Ethereum ecosystem. The research areas are precisely those where Japan has deep expertise: cryptography, consensus algorithms, formal verification, game theory, and security. This is a trillion-dollar global system actively seeking brilliant minds to solve its most important problems. The funding exists. The problems are intellectually fascinating. The question is: will Japanese researchers be at the table?",
+      "todos": []
+    },
+    {
+      "slide_id": "SL06",
+      "action_title": "The Ethereum Foundation offers $2M+ in annual academic grants—and Japanese researchers are perfectly positioned.",
+      "key_points": [
+        "- 2025 Academic Grants Round: $2 million dedicated fund",
+        "- Application window: January 20 – March 24, 2025",
+        "- Open to: universities, research centers, think tanks, individual researchers",
+        "- Research output must be open-access with permissive licensing"
+      ],
+      "speaker_notes": "Let me be specific about the opportunity. The 2025 Academic Grants Round offers a dedicated fund of $2 million for academic research. The application window runs from January 20th to March 24th, 2025. Applications are open to individual researchers, research centers, universities, and think tanks. Projects should take between 6 to 12 months, and the research output must be open-access. The scope includes economics and game theory, applied and theoretical cryptography, consensus algorithms, protocol design, networking, security, formal verification, and even humanities. These are areas where Japanese researchers have world-class capabilities. The barriers to entry are low. The funding decisions come within six weeks of the deadline. This is not a distant possibility—it is an immediate opportunity.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL07",
+      "action_title": "Nyx Foundation bridges Japanese researchers to this global ecosystem.",
+      "key_points": [
+        "- Mission: unite Japanese researchers across universities, corporations, and backgrounds",
+        "- Active network: Taiwan Ethereum Community, Ethereum Foundation, PSE research teams",
+        "- Track record: 20+ vulnerability reports demonstrating technical credibility",
+        "- Cross-institutional model that transcends traditional boundaries"
+      ],
+      "speaker_notes": "This is where Nyx Foundation enters the picture. Our mission is to unite Japanese researchers—across universities, corporations, and backgrounds—to collaborate on Ethereum research. We have built active connections with the Taiwan Ethereum Community, the Ethereum Foundation, and PSE research teams. Our track record speaks for itself: over 20 vulnerability reports submitted to Ethereum clients, demonstrating both technical depth and the kind of credibility that opens doors in the global ecosystem. We operate on a cross-institutional model that transcends the traditional boundaries holding Japanese research back. We are not another silo. We are a bridge.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL08",
+      "action_title": "This model empowers young talent—regardless of institutional affiliation or seniority.",
+      "key_points": [
+        "- Researchers evaluated on contributions: vulnerability reports, research, code",
+        "- No hierarchy barriers: talent recognized regardless of rank or age",
+        "- OIST precedent: no departments, 50%+ international faculty, English as working language",
+        "- Philosophy: 'winning together through cooperation' rather than individual victories"
+      ],
+      "speaker_notes": "What makes this approach different? We evaluate researchers on their contributions—vulnerability reports, research output, code—not on their institutional rank or seniority. Young, motivated talent can achieve maximum results without being constrained by traditional hierarchies. There is a precedent for this in Japan. OIST—the Okinawa Institute of Science and Technology—operates with no academic departments, over 50% international faculty, and English as the working language. They consistently rank among the highest in Japan for research quality when adjusted for size. The principle is proven: when you break down barriers and evaluate people on merit, innovation flourishes. Our philosophy is simple: winning together through cooperation, rather than individual victories in a zero-sum competition.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL09",
+      "action_title": "Sony's Soneium makes this collaboration even more strategic—and urgent.",
+      "key_points": [
+        "- Soneium mainnet launched January 2025—Sony's Layer-2 blockchain",
+        "- Testnet: 47M+ transactions, 14M+ active wallets",
+        "- Q1 2025: surpassed 100M transactions, $45M+ TVL",
+        "- Vitalik Buterin: 'great for businesses *and* users'"
+      ],
+      "speaker_notes": "For Sony, this collaboration has immediate strategic relevance. Soneium—Sony's Layer-2 blockchain—launched its mainnet in January 2025. The testnet processed over 47 million transactions and engaged more than 14 million active wallets. In just the first quarter after mainnet launch, Soneium surpassed 100 million transactions with over $45 million in total value locked. Ethereum's founder, Vitalik Buterin, endorsed Soneium as 'a good live demonstration of how launching an Ethereum L2 is great for businesses and users.' This is not an experimental side project. This is a serious infrastructure investment. And serious infrastructure requires world-class research talent to build, secure, and evolve.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL10",
+      "action_title": "Nyx Foundation creates the talent pipeline Soneium needs to thrive.",
+      "key_points": [
+        "- Web3 job postings grew 20% YoY in H1 2024",
+        "- Chronic talent shortage: 50% of blockchain projects ship with vulnerabilities",
+        "- US, India, China control 50% of global Web3 talent—Japan underrepresented",
+        "- Nyx researchers gain skills directly applicable to Soneium ecosystem"
+      ],
+      "speaker_notes": "The talent challenge in Web3 is real. Global job postings grew nearly 20% year-over-year in the first half of 2024. Security auditing faces a chronic shortage—50% of blockchain projects still ship with vulnerabilities because there simply aren't enough qualified auditors. Currently, the US, India, and China control about 50% of the global Web3 talent pool. Japan is underrepresented. Nyx Foundation addresses this gap directly. Researchers who collaborate through our network develop skills in cryptography, formal verification, and protocol security that are immediately applicable to the Soneium ecosystem. We create the upstream talent pipeline that downstream products like Soneium need to thrive.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL11",
+      "action_title": "This isn't theory—researchers are already producing globally competitive work.",
+      "key_points": [
+        "- 20+ vulnerability reports submitted through Nyx Foundation collaboration",
+        "- Nature Index: Japanese universities testing collaboration to counter decline",
+        "- International co-authorship from Japan: 46% → 56% (2014-2018)",
+        "- Model proven: merit-based, cross-institutional work produces results"
+      ],
+      "speaker_notes": "This is not just a vision—it is already working. Nyx Foundation collaborators have submitted over 20 vulnerability reports to Ethereum clients. These are real contributions that enhance the security of a trillion-dollar ecosystem. The Nature Index reports that Japanese universities are testing collaboration as a response to declining performance. International co-authorship from Japanese institutions has increased from 46% to 56% since 2014. The evidence is clear: when Japanese researchers engage globally and collaborate across institutional boundaries, they produce excellent work. We have proof of concept. What we need now is scale.",
+      "todos": [
+        {
+          "item": "Add 1-2 specific named researcher success stories from Nyx Foundation collaboration",
+          "severity": "Medium"
+        }
+      ]
+    },
+    {
+      "slide_id": "SL12",
+      "action_title": "Together, we can transform Japan's fragmented research landscape into a globally competitive ecosystem.",
+      "key_points": [
+        "- Vision: cross-institutional collaboration producing world-surprising research",
+        "- Long-term ecosystem building: not just grants, but community and culture change",
+        "- 'Strategic learning ability' for professionals in a VUCA era (2040 Education no Mirai)",
+        "- Building the next 20-300 years of Japanese research excellence"
+      ],
+      "speaker_notes": "The opportunity before us is transformational. We can take Japan's fragmented research landscape—one of isolated researchers competing for shrinking domestic funds—and build a globally competitive ecosystem. This is not just about grants. It is about community and culture change. It is about developing what education researchers call 'strategic learning ability'—the capacity to continuously adapt and contribute in a volatile, uncertain world. We are not thinking in terms of the next fiscal year. We are thinking about the next 20 years, the next century, the next 300 years of Japanese research excellence. The question is whether we will be the ones to build this future, or whether we will watch others build it without us.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL13",
+      "action_title": "The choice is clear: continue the decline, or pioneer a new path.",
+      "key_points": [
+        "- Path A: Isolation → scarcity → hierarchy → continued decline",
+        "- Path B: Collaboration → global funding → merit-based evaluation → world-class output",
+        "- Inaction is itself a choice—with predictable consequences",
+        "- Japan can lead, but only if we act now"
+      ],
+      "speaker_notes": "We face a clear choice. One path continues the status quo: isolation, competition for scarce domestic resources, hierarchies that discourage young talent, and continued decline in global rankings. The other path embraces collaboration: connecting to global funding sources, evaluating researchers on merit rather than seniority, and producing work that surprises the world. Inaction is itself a choice—one with predictable consequences. The Nature Index confirms that Japan's research output continues to fall. The government's ¥10 trillion excellence program has selected only one university so far. Traditional approaches are not working fast enough. Japan can lead in this new frontier, but only if we choose to act.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL14",
+      "action_title": "Start by reviewing the PSE RFP list—it costs nothing but opens doors to millions in funding.",
+      "key_points": [
+        "- PSE (Privacy Stewards of Ethereum): curated research opportunities",
+        "- RFP list: pre-vetted problems with clear application pathways",
+        "- Support available: guidance on applications, technical mentorship, community connection",
+        "- Reviewing the list is optionality creation, not commitment"
+      ],
+      "speaker_notes": "So what is the first step? It costs nothing. The Privacy Stewards of Ethereum—PSE—publish a curated list of research proposals. These are pre-vetted problems that the Ethereum ecosystem needs solved, with clear application pathways. Nyx Foundation offers support: guidance on crafting applications, technical mentorship, and connection to the global research community. Simply reviewing this list creates optionality. It does not commit you to anything. It lets you see whether any of these problems align with your research interests and capabilities. Many of them will. This is a low-friction entry point to millions of dollars in potential funding.",
+      "todos": [
+        {
+          "item": "Include direct link to PSE RFP list and contact information for Nyx Foundation support",
+          "severity": "High"
+        }
+      ]
+    },
+    {
+      "slide_id": "SL15",
+      "action_title": "Join Nyx Foundation today—and help nurture the next generation of researchers who will surprise the world.",
+      "key_points": [
+        "- Next step: connect with Nyx Foundation, join the community",
+        "- Review PSE RFP list for aligned research opportunities",
+        "- Participate in DEPCON Hakodate: break barriers, build connections",
+        "- Together: produce work that surprises the world"
+      ],
+      "speaker_notes": "I want to close with an invitation. Join Nyx Foundation. Connect with our community. Review the PSE RFP list. Participate in gatherings like DEPCON Hakodate, where researchers from universities, corporations, the Ethereum Foundation, and the Taiwan Ethereum community come together to break barriers and build connections. Our goal is not individual recognition—it is collective achievement. We want to nurture the next generation of researchers who will produce work that surprises the world. The problems are fascinating. The funding is available. The community is welcoming. The only thing missing is you. Thank you.",
+      "todos": [
+        {
+          "item": "Add specific contact information, website, and Discord/community links for Nyx Foundation",
+          "severity": "High"
+        },
+        {
+          "item": "Confirm DEPCON Hakodate date, time, and venue details",
+          "severity": "Medium"
+        }
+      ]
+    }
+  ]
+}

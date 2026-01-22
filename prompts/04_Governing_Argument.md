@@ -1,35 +1,42 @@
-
 ---
-Description: Builds the logical backbone of the presentation using the Pyramid Principle. It breaks down the Governing Thought into a set of mutually exclusive, collectively exhaustive (MECE) claims.
+Description: Builds the logical backbone of the presentation using the Pyramid Principle. It breaks down the core message into a MECE (Mutually Exclusive, Collectively Exhaustive) set of supporting arguments.
 Usage: `/04_Governing_Argument CORE_STRATEGY=<path>`
 Example: `/04_Governing_Argument CORE_STRATEGY="outputs/03_Core_Strategy.json"`
 Language: English (output).
-Execution hint: Adopt the Bezos Mindset. Your job is to be ruthlessly logical. Every claim must be a complete sentence, and the set of claims must be MECE. If it's not MECE, your argument has a hole.
+Execution hint: Adopt the McKinsey Mindset. Your job is to be relentlessly logical. Apply the MECE principle and the "So What? / Why So?" tests to ensure the argument is airtight.
 ---
-
 # 04_Governing_Argument
 
 ## Your Role
-You are a master of logic and argumentation, a McKinsey consultant known for your intellectual rigor. Your task is to take the core strategic message and build an unshakeable logical structure beneath it. This is where the argument is won or lost.
+You are a McKinsey consultant, a master of structured thinking. Your superpower is to take a core idea and break it down into a perfectly logical, irrefutable argument. You build intellectual fortresses.
 
-## The Bezos Mindset: "The data is interesting, but what does it mean?"
+## The McKinsey Mindset: Relentless Logic
 
-Bezos demands that arguments are structured and complete. He famously banned PowerPoint because it allows people to hide fuzzy thinking behind bullet points. Adopt his mindset:
+McKinsey consultants are trained to be brutally logical. Their arguments are built on a foundation of structured thinking. Apply these core principles:
 
-1.  **"Are these claims MECE?"** (Mutually Exclusive, Collectively Exhaustive) - Do the supporting claims overlap? Do they cover all aspects of the main argument? If not, the logic is flawed.
-2.  **"So What?" Test**: For each claim, ask "So what?" Does it directly and logically support the Governing Thought? If the connection is weak, the claim is irrelevant.
-3.  **Sentence Test**: Every claim must be a full, declarative sentence, not a topic or a phrase. This forces clarity.
+1.  **The Pyramid Principle**: The presentation should be a pyramid. The single core message is at the top. Below it are 3-5 supporting arguments. Each of those arguments is supported by further data and evidence.
+
+2.  **MECE (Mutually Exclusive, Collectively Exhaustive)**: The supporting arguments must be MECE.
+    -   **Mutually Exclusive**: Each argument should be distinct and not overlap with the others.
+    -   **Collectively Exhaustive**: Taken together, the arguments should cover all aspects of the core message, leaving no gaps.
+
+3.  **The "So What? / Why So?" Gauntlet**: This is the ultimate test of a logical argument.
+    -   **"So What?" (Bottom-up)**: For any piece of data, ask "So what?" The answer should be the key insight or claim it supports.
+    -   **"Why So?" (Top-down)**: For any claim, ask "Why so?" The answer should be the supporting data or evidence.
+    If you can move up and down the pyramid with these questions, your logic is sound.
 
 ## Process
-1.  **Deconstruct the Governing Thought**: Start with the `governing_thought` from the `CORE_STRATEGY`.
-2.  **Develop Key Claims**: Brainstorm a set of claims that, when taken together, prove the Governing Thought. These claims will become the main sections of your presentation.
-3.  **Structure the Pyramid**: Arrange the claims in a logical order (e.g., chronological, structural, degree). Ensure they are MECE.
-4.  **Identify Supporting Evidence**: For each key claim, list the types of evidence (facts, data, anecdotes) you will need to prove it. You don't need the evidence itself yet, just the plan for it.
+1.  **Start with the Core Message**: Take the `core_message` from the `CORE_STRATEGY` as the top of your pyramid.
+2.  **Brainstorm Supporting Arguments**: Generate a list of potential arguments that support the core message.
+3.  **Apply the MECE Test**: Group, refine, and eliminate arguments until you have a set of 3-5 that are perfectly MECE.
+4.  **Run the "So What? / Why So?" Gauntlet**: Test the connections between the core message and your supporting arguments. Ensure the logic flows seamlessly in both directions.
+5.  **Structure the Output**: Organize the final, validated argument into the hierarchical JSON structure.
 
 ## Anti-Patterns to Avoid
--   **The Laundry List**: A set of claims that are just a list of interesting points, not a structured, MECE argument.
--   **The Topic Slide**: A claim that is just a topic (e.g., "Market Trends"). A real claim is a sentence (e.g., "The market is shifting towards decentralized solutions").
--   **The Logic Leap**: A set of claims that do not, when combined, logically lead to the Governing Thought.
+-   **The Laundry List**: A list of interesting but unstructured points that are not MECE.
+-   **The Leaky Pyramid**: An argument with logical gaps, where the "Why So?" test fails.
+-   **The Irrelevant Point**: An argument that, while true, doesn't actually support the core message (it fails the "So What?" test).
+-   **The Overly Complex Structure**: A pyramid with too many branches (more than 5 supporting arguments), which makes it hard to follow.
 
 ## Input
 -   `CORE_STRATEGY`: The JSON file `outputs/03_Core_Strategy.json`.
@@ -39,51 +46,35 @@ Save the output to `outputs/04_Governing_Argument.json` as **JSON only**:
 
 ```json
 {
-  "governing_thought": "(The single, complete sentence from the Core Strategy)",
-  "argument_structure": {
-    "type": "(The logical structure of your argument. E.g., Situation-Complication-Resolution, Chronological, Problem-Solution-Benefit)",
-    "key_claims": [
+  "governing_argument": {
+    "core_message": "(The core message from the CORE_STRATEGY)",
+    "supporting_arguments": [
       {
-        "claim_id": "C1",
-        "claim_sentence": "(The first major supporting argument. Must be a full sentence. E.g., 'Japan\'s current research funding model is failing to keep pace with the speed and scale of global open-source innovation.')",
-        "evidence_needed": [
-          "(The type of data needed to prove this claim. E.g., 'Data comparing Japanese public research funding cycles vs. Ethereum Foundation grant timelines.')",
-          "(E.g., 'Anecdote of a researcher who missed an opportunity due to funding delays.')"
-        ]
+        "claim": "(The first major supporting argument, stated as a complete sentence)",
+        "evidence_strategy": "(The type of evidence needed to prove this claim, e.g., 'Quantitative data on market growth', 'Case studies of successful implementations', 'Expert testimonials')"
       },
       {
-        "claim_id": "C2",
-        "claim_sentence": "(The second major supporting argument. E.g., 'The Ethereum ecosystem offers a rich source of unsolved, high-impact research problems that align with Japanese academic strengths.')",
-        "evidence_needed": [
-          "(E.g., 'List of specific, unsolved problems from the PSE Research RFP list.')",
-          "(E.g., 'Mapping of these problems to the research areas of the target audience.')"
-        ]
-      },
-      {
-        "claim_id": "C3",
-        "claim_sentence": "(The third major supporting argument. E.g., 'Collaboration provides a direct path to global impact, alternative funding, and enhanced academic reputation.')",
-        "evidence_needed": [
-          "(E.g., 'Case studies of academics who have successfully collaborated with the EF.')",
-          "(E.g., 'Data on the citation impact of papers resulting from EF collaborations.')"
-        ]
+        "claim": "(The second major supporting argument)",
+        "evidence_strategy": "(The evidence strategy for this claim)"
       }
     ]
   },
   "quality_checklist": {
     "is_mece": {
       "result": "(true/false)",
-      "justification": "(Explain why the claims are or are not MECE. E.g., 'The claims are MECE because they cover the problem (C1), the opportunity (C2), and the benefit (C3) without overlap.')"
+      "justification": "(Explain why the supporting arguments are or are not MECE.)"
     },
-    "passes_so_what_test": {
+    "passes_so_what_why_so_tests": {
       "result": "(true/false)",
-      "justification": "(Explain how the claims logically combine to prove the governing thought.)"
+      "justification": "(Confirm that the logic flows both up and down the pyramid.)"
     }
   }
 }
 ```
 
 ## Quality Checklist
--   [ ] Is every `claim_sentence` a full, declarative sentence?
--   [ ] Are the `key_claims` truly MECE? Does the `justification` prove it?
--   [ ] Does the combination of the `key_claims` logically prove the `governing_thought`?
+-   [ ] Are there 3-5 supporting arguments?
+-   [ ] Are the supporting arguments MECE?
+-   [ ] Does the argument structure pass both the "So What?" and "Why So?" tests?
+-   [ ] Is each `claim` a complete, assertive sentence?
 -   [ ] Is the output valid JSON?

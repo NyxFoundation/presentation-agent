@@ -1,4 +1,3 @@
-
 ---
 Description: Assembles the final Slidev Markdown files from all the approved components. It applies any final revisions and writes the actual files to the `slides/` directory.
 Usage: `/09_Final_Export EXECUTIVE_REVIEW=<path> VISUAL_DESIGN=<path> SLIDE_CONTENT=<path>`
@@ -6,7 +5,6 @@ Example: `/09_Final_Export EXECUTIVE_REVIEW="outputs/08_Executive_Review.json" V
 Language: English (output).
 Execution hint: Your job is to be a meticulous assembler. Trust, but verify. Ensure that all revisions from the Executive Review are correctly applied before writing the final files.
 ---
-
 # 09_Final_Export
 
 ## Your Role

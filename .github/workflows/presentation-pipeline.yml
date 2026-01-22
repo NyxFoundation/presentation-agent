@@ -44,10 +44,10 @@ jobs:
           which claude || echo "claude not found in PATH"
           claude --version || echo "Failed to get claude version"
 
-      - name: Clean previous outputs
-        run: |
-          rm -rf outputs/*.json slides/*.md || true
-          echo "Cleaned previous outputs"
+      # - name: Clean previous outputs
+      #   run: |
+      #     rm -rf outputs/*.json slides/*.md || true
+      #     echo "Cleaned previous outputs"
 
       - name: Create output directories
         run: make init

@@ -1,0 +1,110 @@
+{
+  "step": "06_Slide_Drafting",
+  "timestamp": "2026-01-22T00:00:00Z",
+  "inputs": {
+    "narrative_blueprint": "outputs/05_Narrative_Blueprint.json",
+    "context_brief": "outputs/01_Context_Brief.json",
+    "tone": "Respectfully ambitious and intellectually rigorous"
+  },
+  "process_summary": {
+    "slides_drafted": 15,
+    "total_key_points": 61,
+    "total_speaker_notes_words": 1847,
+    "todos_identified": 3
+  },
+  "evidence_sources": {
+    "scis_2026": {
+      "source": "IWSEC/SCIS official website",
+      "details": "January 26-30, 2026 at Hakodate Arena, 43rd annual symposium",
+      "url": "https://www.iwsec.org/scis/2026/"
+    },
+    "ethereum_foundation_grants_2025": {
+      "source": "Ethereum Foundation ESP",
+      "details": "$2M fund, deadline March 23, 2025 (extended from March 16), 6-12 month projects",
+      "url": "https://esp.ethereum.foundation/academic-grants"
+    },
+    "ef_grants_2024_results": {
+      "source": "Ethereum Foundation Blog",
+      "details": "41 projects funded from 300 applications (14%), 25 countries represented",
+      "url": "https://blog.ethereum.org/2025/01/17/academic-grants-recipients"
+    },
+    "zkp_market_size": {
+      "source": "Grand View Research",
+      "details": "$1.28B (2024) to $7.59B (2033), 22.1% CAGR",
+      "url": "https://www.grandviewresearch.com/industry-analysis/zero-knowledge-proof-market-report"
+    },
+    "kakenhi_funding_crisis": {
+      "source": "British Council / Nature",
+      "details": "167 associations, 2.08M researchers petitioned July 2024; purchasing power halved since 2013",
+      "urls": [
+        "https://opportunities-insight.britishcouncil.org/short-articles/news/japans-academics-call-doubling-of-research-funding",
+        "https://www.nature.com/articles/d41586-024-00942-8"
+      ]
+    },
+    "kakenhi_fy2025_reform": {
+      "source": "Science Japan / JSPS",
+      "details": "New evaluation factor for international involvement in Scientific Research A, B, C categories",
+      "url": "https://sj.jst.go.jp/news/202503/n0311-01k.html"
+    },
+    "nature_index_japan": {
+      "source": "Nature Index 2024",
+      "details": "Japan 5th globally, -9% year-over-year; UTokyo 23rd, Kyoto 55th",
+      "url": "https://www.nature.com/nature-index/research-leaders/2024/country/all/global"
+    },
+    "japanese_researcher_fc2020": {
+      "source": "Springer/FC 2020",
+      "details": "Suga et al., 'Securing Cryptocurrency Exchange: Building up Standard from Huge Failures'",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-030-54455-3_19"
+    },
+    "pse_ethereum": {
+      "source": "PSE.dev",
+      "details": "Privacy Stewards of Ethereum, formerly Privacy & Scaling Explorations",
+      "url": "https://pse.dev/"
+    },
+    "cryptrec_2024": {
+      "source": "CRYPTREC",
+      "details": "CRYPTREC Ciphers List updated May 2024; Post-Quantum Guidelines published March 2025",
+      "url": "https://www.cryptrec.go.jp/en/"
+    },
+    "post_quantum_zkp": {
+      "source": "IACR ePrint / arXiv",
+      "details": "Lattice-based polynomial commitments 2024; post-quantum ZKP active research area",
+      "urls": [
+        "https://eprint.iacr.org/2024/281",
+        "https://arxiv.org/html/2502.07063v1"
+      ]
+    }
+  },
+  "todos_summary": [
+    {
+      "slide_id": "SL07",
+      "item": "Obtain specific publication details and citations for Emura's smart contract/anonymous wallet research mentioned in the blueprint",
+      "severity": "Medium",
+      "rationale": "The blueprint referenced Emura's research but web search did not return specific results"
+    },
+    {
+      "slide_id": "SL08",
+      "item": "Obtain specific PSE RFP document links with detailed research problem descriptions",
+      "severity": "High",
+      "rationale": "PSE website confirmed but specific RFP document with research problems not found in search"
+    },
+    {
+      "slide_id": "SL12",
+      "item": "Obtain specific examples of vulnerability types discovered by Nyx Foundation",
+      "severity": "Low",
+      "rationale": "Would add credibility but 20+ reports claim is sufficient for core argument"
+    }
+  ],
+  "tone_adherence": {
+    "assessment": "Achieved",
+    "notes": "Speaker notes maintain respectfully ambitious toneconfident about opportunity while acknowledging audience's legitimate concerns about academic legitimacy. Intellectually rigorous through specific data, citations, and logical argumentation. Avoided promotional language in favor of evidence-based persuasion."
+  },
+  "quality_checklist": {
+    "key_points_support_action_titles": true,
+    "bullets_concise_and_scannable": true,
+    "speaker_notes_tell_story_not_repeat_bullets": true,
+    "tone_consistent_with_input": true,
+    "content_gaps_logged_as_todos": true,
+    "output_valid_json": true
+  }
+}

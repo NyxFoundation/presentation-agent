@@ -1,0 +1,88 @@
+{
+  "step": "03_Core_Strategy",
+  "execution_timestamp": "2026-01-22",
+  "inputs": {
+    "context_brief_path": "outputs/01_Context_Brief.json",
+    "audience_persona_path": "outputs/02_Audience_Persona.json"
+  },
+  "process_log": {
+    "step_1_purpose_definition": {
+      "analysis": "Reviewed the call_to_action_draft which asks researchers to 'join the Nyx Foundation community and collaborate on research' and specifically 'review the Ethereum Foundation PSE RFP list'. Cross-referenced with decision_making_criteria which emphasizes: Academic Merit (top venue publications), Funding Clarity (specific amounts/deadlines), Time Investment (fit with existing obligations), and Career Alignment (long-term value).",
+      "key_insight": "The audience needs a specific, measurable actionnot a vague 'join us'. Given their career stage (senior researchers with established agendas), the purpose must be concrete: initiating a specific number of collaborations within a defined timeframe.",
+      "output": "To recruit 3-5 senior cryptography researchers from SCIS2026 attendees to actively engage with Nyx Foundation by reviewing Ethereum Foundation PSE RFP topics and initiating at least one collaborative research project within 3 months."
+    },
+    "step_2_core_message_crafting": {
+      "formula_applied": "By [doing the proposed action], we will achieve [outcome that the audience cares about], which addresses your priority of [audience's stated priority].",
+      "proposed_action": "partnering with Nyx Foundation to pursue Ethereum research grants",
+      "primary_audience_motivation": "Producing high-quality, peer-reviewed research publications (supported by evidence of 140+ papers and 30+ awards from Keita Emura alone)",
+      "secondary_motivation": "Securing international research funding and collaboration opportunities (driven by Japan's ¥140B funding reduction since 2004)",
+      "synthesis": "The core message must bridge: (1) their existing cryptographic expertise, (2) the Ethereum research opportunity with funding, and (3) their publication-driven career goals. It must NOT sound like a sales pitch but rather a logical extension of their existing research trajectory.",
+      "output": "By partnering with Nyx Foundation to pursue Ethereum research grants, you can leverage your existing cryptographic expertise to publish in top international venues and secure alternative fundingaddressing both Japan's research funding crisis and your goal of producing high-impact, peer-reviewed publications."
+    },
+    "step_3_narrative_archetype_selection": {
+      "candidates_evaluated": [
+        {
+          "archetype": "Pyramid Principle (Minto)",
+          "fit_score": "High",
+          "rationale": "Audience communication preferences explicitly state 'Formal, data-driven, and technically rigorous with clear logical structure'. They are senior researchers who value efficiency. Their likes include 'clear problem statements' and 'specific data on funding amounts, deadlines, and success rates'. This strongly aligns with conclusion-first, hierarchical argumentation."
+        },
+        {
+          "archetype": "Sparkline (Duarte)",
+          "fit_score": "Medium",
+          "rationale": "Could work to contrast 'Japan's research isolation' (what is) vs 'global Ethereum research community' (what could be). However, the audience's dislikes include 'marketing jargon' and their preference is for data over emotional engagement. They are not complacent but rather skepticalemotional contrast may backfire."
+        },
+        {
+          "archetype": "Vision-Path-Action (Jobs)",
+          "fit_score": "Low",
+          "rationale": "This is best for revolutionary product launches or bold new directions. The audience is not buying a product; they are evaluating a research collaboration opportunity. A Jobs-style visionary pitch could trigger their 'skepticism toward blockchain hype' bias."
+        }
+      ],
+      "selection": "Pyramid Principle (Minto)",
+      "justification": "Selected because the audience consists of time-constrained senior researchers who prefer formal, data-driven presentations with clear logical structure. They value efficiency and want conclusions upfront with supporting evidence, not emotional storytelling."
+    },
+    "step_4_tone_definition": {
+      "audience_profile_summary": "Senior academics with established reputations (30+ awards, 140+ papers). They serve on government committees (CRYPTREC), organize major conferences (IWSEC, AsiaCCS), and balance industry connections (IIJ, NICT). They are gatekeepers who evaluate proposals constantly.",
+      "tone_derivation": "Must be peer-to-peer, not supplicant-to-authority or vendor-to-customer. The speaker (Nyx Foundation) must position as a technically credible collaborator, not a startup seeking validation. Evidence: 20+ vulnerability reports to Ethereum clients demonstrates technical depth.",
+      "dos_rationale": [
+        "Concrete data requested per decision_making_criteria: 'What are the specific grant amounts, application deadlines, evaluation criteria, and success rates?'",
+        "Acknowledging existing blockchain work per communication likes: 'Acknowledgment of their existing expertise and how it applies to Ethereum research'",
+        "Cryptographic terminology per likes: 'Connections to established cryptographic concepts (zero-knowledge proofs, formal verification, protocol security)'",
+        "Publication rights per decision_making_criteria: 'Will researchers retain full rights to publish findings in academic venues?'",
+        "Venue credibility per Academic Merit criterion: researchers need to see that Ethereum research is publishable at top venues",
+        "Nyx Foundation credibility addresses objection: 'What is the track record of Nyx Foundation in academic research support?'",
+        "Japan funding context addresses motivation: 'Securing international research funding and collaboration opportunities'"
+      ],
+      "donts_rationale": [
+        "No Web3 jargon per dislikes: 'Marketing jargon or cryptocurrency/Web3 buzzwords without technical substance'",
+        "No unsupported claims per dislikes: 'Unsupported claims about market size or financial returns'",
+        "No oversimplification per dislikes: 'Oversimplification of complex cryptographic concepts'",
+        "Not competing with existing grants addresses objection: 'How does this align with our existing research agenda and grant applications?'",
+        "Japan context per dislikes: 'Ignoring Japan-specific research context (CRYPTREC, KAKENHI, NICT ecosystem)'",
+        "No vague CTAs per dislikes: 'Vague calls to action without specific next steps'",
+        "Acknowledging skepticism addresses bias: 'Skepticism toward blockchain hype without rigorous cryptographic foundations'"
+      ]
+    }
+  },
+  "quality_checklist_verification": {
+    "purpose_is_specific_and_measurable": {
+      "status": "PASS",
+      "evidence": "Purpose specifies '3-5 researchers', 'at least one collaborative research project', and '3 months' timeframeall measurable."
+    },
+    "core_message_links_to_audience_motivations": {
+      "status": "PASS",
+      "evidence": "Message directly references 'publish in top international venues' (motivation #1), 'secure alternative funding' (motivation #6), and 'Japan's research funding crisis' (contextual driver)."
+    },
+    "narrative_archetype_justified_and_appropriate": {
+      "status": "PASS",
+      "evidence": "Justification cites specific audience characteristics from persona: 'time-constrained senior researchers', 'formal, data-driven', 'conclusions upfront'."
+    },
+    "tone_guidance_specific_and_actionable": {
+      "status": "PASS",
+      "evidence": "7 specific dos with concrete items (e.g., 'Reference established venues where Ethereum research has been published'), 7 specific don'ts with clear prohibitions."
+    },
+    "output_is_valid_json": {
+      "status": "PASS",
+      "evidence": "File validated as syntactically correct JSON."
+    }
+  }
+}

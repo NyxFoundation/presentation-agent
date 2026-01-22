@@ -1,0 +1,54 @@
+{
+  "context_brief": {
+    "current_state": "Japan's research ecosystem faces severe funding cuts (approximately ¥140 billion cumulative reduction in national university operating grants since 2004), causing fragmentation among researchers, isolation from international research platforms, and a widening gap between academia and industry. Japan's global ranking in paper output has dropped from 2nd to 4th, and Top10% cited papers from 4th to 10th over the past 20 years. Talented researchers work in isolation, and very few Japanese researchers are engaged in Ethereum research despite its massive scale and opportunity.",
+    "problem_or_opportunity": "The structural decline in Japanese research funding has created isolation among researchers and disconnection from global research communities. However, this presents a significant opportunity: Ethereum is a trillion-yen-scale global system with abundant research topics and funding opportunities, yet competition in Japan is minimal. This is an ideal time for Japanese researchers to enter the field and achieve world-leading results.",
+    "proposed_solution": "Nyx Foundation aims to bridge these gaps by: (1) creating gathering spaces like DEPCON Hakodate where diverse stakeholders (university professors, graduate students, corporate researchers, Ethereum Foundation researchers, Taiwan Ethereum community) can connect; (2) actively sharing information about research themes and grants from the Ethereum Foundation and other overseas projects; (3) supporting Japanese researchers to collaborate on globally important problems; and (4) nurturing the next generation of world-class researchers.",
+    "goal_and_vision": "Build a foundation where all Japanese researchers, regardless of affiliation or position, can tackle the 'most important problems' collaboratively. Create an environment where young, motivated talent can achieve maximum impact rather than deferring to seniority. Produce groundbreaking inventions and research outcomes that surprise the world. Develop and launch young researchers onto the global stage. The philosophy is 'win together through cooperation' rather than individual victories.",
+    "call_to_action_draft": "Join the Nyx Foundation community and collaborate on research. As a first step, review the Ethereum Foundation PSE (Privacy and Scaling Explorations) team's RFP list (research themes and grant opportunities). If any topic interests you, contact Nyx Foundation for support in pursuing it. Combine your cryptography and security expertise with Nyx Foundation's Ethereum knowledge to create outstanding research outcomes together.",
+    "key_facts_and_data": {
+      "metrics": [
+        "¥140 billion (約1,400億円) cumulative reduction in national university operating grants since 2004",
+        "Japan's global ranking in paper output: 2nd → 4th (over 20 years)",
+        "Japan's Top10% cited papers ranking: 4th → 10th (over 20 years)",
+        "20+ vulnerability reports by Nyx Foundation to Ethereum client implementations",
+        "1% annual efficiency coefficient reduction since 2004 university corporatization"
+      ],
+      "proper_nouns": [
+        "Nyx Foundation",
+        "Ethereum",
+        "Ethereum Foundation",
+        "DEPCON Hakodate",
+        "SCIS2026",
+        "PSE (Privacy and Scaling Explorations)",
+        "ZK Tokyo",
+        "EVM (Ethereum Virtual Machine)",
+        "Haskell",
+        "NIRA (総合研究開発機構)",
+        "MEXT (文部科学省)",
+        "Taiwan Ethereum Community"
+      ],
+      "key_terminology": [
+        "Research grants (グラント)",
+        "RFP (Request for Proposal)",
+        "Formal verification (形式検証)",
+        "On-chain",
+        "EVM compiler",
+        "Operating grants (運営費交付金)",
+        "Kakenhi (科研費)",
+        "JSPS Research Fellowship (学振)"
+      ]
+    },
+    "information_gaps": [
+      "What is the specific date and duration of DEPCON Hakodate?",
+      "What is the exact number of expected attendees or participants?",
+      "What are the specific research themes or topics that will be discussed at this event?",
+      "What is the budget or funding that Nyx Foundation can provide to researchers?",
+      "What is the timeline or process for researchers to apply for support from Nyx Foundation?",
+      "How many active members does Nyx Foundation currently have?",
+      "What specific past collaborations or research outcomes has Nyx Foundation achieved beyond vulnerability reports?",
+      "What is the speaker's name and role at Nyx Foundation?",
+      "What is the presentation duration and format (slides, demo, Q&A)?",
+      "Are there specific success stories of Japanese researchers who have received Ethereum grants through Nyx Foundation's support?"
+    ]
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "narrative_blueprint": {
+    "narrative_archetype_used": "Pyramid Principle (Minto)",
+    "estimated_slide_count": 15,
+    "narrative_structure": {
+      "description": "The Pyramid Principle leads with the conclusion/recommendation first, then groups supporting arguments logically. For academic audiences, this respects their time and enables them to evaluate evidence against a clear thesis.",
+      "beats": [
+        "1. The Governing Thought (Conclusion First)",
+        "2. Supporting Argument Group A: The Opportunity",
+        "3. Supporting Argument Group B: The Academic Fit",
+        "4. Supporting Argument Group C: The Strategic Imperative",
+        "5. Supporting Argument Group D: The Partnership",
+        "6. The Call to Action"
+      ]
+    },
+    "slides": [
+      {
+        "slide_number": 1,
+        "slide_id": "SL01",
+        "narrative_beat": "Opening / Context Setting",
+        "action_title": "SCIS2026 marks a critical moment for Japanese cryptographers to secure new funding pathways.",
+        "purpose": "To establish context and signal that this presentation addresses a pressing, relevant concern for the audience.",
+        "evidence_needed": [
+          "SCIS2026 / DEPCON Hakodate co-location announcement",
+          "Brief mention of Japan's changing research funding landscape"
+        ]
+      },
+      {
+        "slide_number": 2,
+        "slide_id": "SL02",
+        "narrative_beat": "The Governing Thought (Conclusion First)",
+        "action_title": "Partner with Nyx Foundation to pursue Ethereum research grants: publish in top venues while securing alternative funding.",
+        "purpose": "To present the central recommendation upfront, allowing the audience to evaluate all subsequent evidence against this clear thesis.",
+        "evidence_needed": [
+          "One-sentence summary of the value proposition",
+          "Visual framework showing the dual benefit: publications + funding"
+        ]
+      },
+      {
+        "slide_number": 3,
+        "slide_id": "SL03",
+        "narrative_beat": "Supporting Argument Group A: The Opportunity",
+        "action_title": "The Ethereum Foundation's $2M Academic Grants Round is open now, with applications due March 16, 2025.",
+        "purpose": "To establish the concrete, time-bound opportunity that makes this recommendation actionable.",
+        "evidence_needed": [
+          "EF 2025 Academic Grants Round: $2M fund, March 16 deadline",
+          "6-12 month project duration",
+          "Link to esp.ethereum.foundation/academic-grants"
+        ]
+      },
+      {
+        "slide_number": 4,
+        "slide_id": "SL04",
+        "narrative_beat": "Supporting Argument Group A: The Opportunity",
+        "action_title": "The 2024 round funded 41 projects from 300 applications—a 14% success rate that rewards quality proposals.",
+        "purpose": "To demonstrate the grant's legitimacy and achievable success rate, countering skepticism about application effort.",
+        "evidence_needed": [
+          "2024 round statistics: 41 projects funded, 300 applications, 25 countries",
+          "Q1 2025 data: 14 projects specifically in Cryptography and Zero-Knowledge Proofs",
+          "Comparison to KAKENHI competitive rates for context"
+        ]
+      },
+      {
+        "slide_number": 5,
+        "slide_id": "SL05",
+        "narrative_beat": "Supporting Argument Group A: The Opportunity",
+        "action_title": "The grant explicitly prioritizes Applied and Theoretical Cryptography, Formal Verification, and Protocol Security.",
+        "purpose": "To show direct alignment between the grant's priorities and the audience's existing expertise.",
+        "evidence_needed": [
+          "Full list of EF research areas: Cryptography, Formal Verification, Consensus Algorithms, Protocol Design, Security",
+          "Mapping to SCIS/IWSEC research tracks"
+        ]
+      },
+      {
+        "slide_number": 6,
+        "slide_id": "SL06",
+        "narrative_beat": "Supporting Argument Group B: The Academic Fit",
+        "action_title": "Zero-knowledge proofs, MPC, and FHE are now mainstream at EUROCRYPT, CRYPTO, and CCS.",
+        "purpose": "To counter the misconception that Ethereum research is 'just engineering' by showing top-tier venue acceptance.",
+        "evidence_needed": [
+          "EUROCRYPT 2025 and CRYPTO 2024 publications on ZKP, NIZK, SNARKs",
+          "Berkeley 2025 dissertation: 'Efficient Zero-Knowledge Proofs: Theory and Practice'",
+          "ZKP market valued at $1.28B in 2024, projected $7.59B by 2033"
+        ]
+      },
+      {
+        "slide_number": 7,
+        "slide_id": "SL07",
+        "narrative_beat": "Supporting Argument Group B: The Academic Fit",
+        "action_title": "Japanese cryptographers are already publishing Ethereum-related research in peer-reviewed venues.",
+        "purpose": "To provide social proof from within the audience's own community, reducing perceived risk.",
+        "evidence_needed": [
+          "Emura's smart contract and anonymous wallet research (2024-2025)",
+          "Suga's cryptocurrency exchange security work (FC 2020)",
+          "Other SCIS/IWSEC community examples"
+        ]
+      },
+      {
+        "slide_number": 8,
+        "slide_id": "SL08",
+        "narrative_beat": "Supporting Argument Group B: The Academic Fit",
+        "action_title": "PSE's open problems in formal verification and lightweight cryptography match your existing specializations.",
+        "purpose": "To present specific research problems that align with audience expertise, making the opportunity tangible.",
+        "evidence_needed": [
+          "3-4 specific PSE RFP topics mapped to audience research areas",
+          "Connection to CRYPTREC priorities where applicable",
+          "Example: 'Post-quantum secure ZKP constructions' as shared research frontier"
+        ]
+      },
+      {
+        "slide_number": 9,
+        "slide_id": "SL09",
+        "narrative_beat": "Supporting Argument Group C: The Strategic Imperative",
+        "action_title": "Japan's KAKENHI real purchasing power has halved since 2013 due to inflation and yen depreciation.",
+        "purpose": "To establish the urgency of finding alternative funding by quantifying the domestic funding crisis.",
+        "evidence_needed": [
+          "KAKENHI budget stagnant at ~240 billion yen while applications increase",
+          "Weak yen impact on international collaboration and publication costs",
+          "Nature 2024: Japanese scientists demanding more funding for basic science"
+        ]
+      },
+      {
+        "slide_number": 10,
+        "slide_id": "SL10",
+        "narrative_beat": "Supporting Argument Group C: The Strategic Imperative",
+        "action_title": "167 academic associations representing 2.08 million researchers petitioned for doubled KAKENHI funding in July 2024.",
+        "purpose": "To demonstrate that the funding crisis is recognized at the highest levels of Japanese academia.",
+        "evidence_needed": [
+          "July 2024 petition details: 167 associations, 2.08 million researchers",
+          "RIKEN President Gonokami's statement on budget constraints",
+          "Nature Index: Japan's declining research ranking"
+        ]
+      },
+      {
+        "slide_number": 11,
+        "slide_id": "SL11",
+        "narrative_beat": "Supporting Argument Group C: The Strategic Imperative",
+        "action_title": "FY2025 KAKENHI reform now explicitly rewards 'international involvement'—EF collaboration fulfills this criterion.",
+        "purpose": "To reframe EF grants as complementary to KAKENHI, not competitive, by showing how they enhance domestic applications.",
+        "evidence_needed": [
+          "FY2025 KAKENHI evaluation criteria change: international involvement factor",
+          "How EF collaboration documentation strengthens KAKENHI applications",
+          "Diversified funding as career risk mitigation strategy"
+        ]
+      },
+      {
+        "slide_number": 12,
+        "slide_id": "SL12",
+        "narrative_beat": "Supporting Argument Group D: The Partnership",
+        "action_title": "Nyx Foundation's 20+ vulnerability reports to Ethereum clients demonstrate protocol-level technical credibility.",
+        "purpose": "To establish Nyx's technical competence through verifiable, concrete contributions.",
+        "evidence_needed": [
+          "20+ vulnerability reports to Ethereum clients",
+          "Examples of protocol-level security research",
+          "Distinction from marketing-focused blockchain entities"
+        ]
+      },
+      {
+        "slide_number": 13,
+        "slide_id": "SL13",
+        "narrative_beat": "Supporting Argument Group D: The Partnership",
+        "action_title": "Researchers retain full publication rights and academic freedom—this is a capability exchange, not a grant dependency.",
+        "purpose": "To address the critical concern about academic independence and clarify the partnership structure.",
+        "evidence_needed": [
+          "Explicit partnership terms: publication rights retained, academic freedom preserved",
+          "Role clarification: Nyx provides protocol expertise + grant navigation; researchers lead research agenda",
+          "Comparison to traditional industry-academic collaboration models"
+        ]
+      },
+      {
+        "slide_number": 14,
+        "slide_id": "SL14",
+        "narrative_beat": "The Call to Action",
+        "action_title": "Your next step: review PSE RFP topics and identify one alignment with your current research within 3 months.",
+        "purpose": "To provide a concrete, low-commitment first action that initiates the collaboration.",
+        "evidence_needed": [
+          "PSE RFP topic list with direct links",
+          "Nyx contact information for initial discussions",
+          "DEPCON Hakodate as follow-up opportunity"
+        ]
+      },
+      {
+        "slide_number": 15,
+        "slide_id": "SL15",
+        "narrative_beat": "Closing / Summary",
+        "action_title": "Ethereum research offers a path to both top-tier publications and sustainable funding—Nyx Foundation is ready to partner.",
+        "purpose": "To reinforce the governing thought and leave the audience with a clear, memorable summary of the value proposition.",
+        "evidence_needed": [
+          "One-slide visual summary of dual benefit",
+          "Contact: academic-grants@ethereum.org for EF applications",
+          "Nyx Foundation contact for collaboration discussions"
+        ]
+      }
+    ],
+    "action_title_story_flow": [
+      "SL01: SCIS2026 marks a critical moment for Japanese cryptographers to secure new funding pathways.",
+      "SL02: Partner with Nyx Foundation to pursue Ethereum research grants: publish in top venues while securing alternative funding.",
+      "SL03: The Ethereum Foundation's $2M Academic Grants Round is open now, with applications due March 16, 2025.",
+      "SL04: The 2024 round funded 41 projects from 300 applications—a 14% success rate that rewards quality proposals.",
+      "SL05: The grant explicitly prioritizes Applied and Theoretical Cryptography, Formal Verification, and Protocol Security.",
+      "SL06: Zero-knowledge proofs, MPC, and FHE are now mainstream at EUROCRYPT, CRYPTO, and CCS.",
+      "SL07: Japanese cryptographers are already publishing Ethereum-related research in peer-reviewed venues.",
+      "SL08: PSE's open problems in formal verification and lightweight cryptography match your existing specializations.",
+      "SL09: Japan's KAKENHI real purchasing power has halved since 2013 due to inflation and yen depreciation.",
+      "SL10: 167 academic associations representing 2.08 million researchers petitioned for doubled KAKENHI funding in July 2024.",
+      "SL11: FY2025 KAKENHI reform now explicitly rewards 'international involvement'—EF collaboration fulfills this criterion.",
+      "SL12: Nyx Foundation's 20+ vulnerability reports to Ethereum clients demonstrate protocol-level technical credibility.",
+      "SL13: Researchers retain full publication rights and academic freedom—this is a capability exchange, not a grant dependency.",
+      "SL14: Your next step: review PSE RFP topics and identify one alignment with your current research within 3 months.",
+      "SL15: Ethereum research offers a path to both top-tier publications and sustainable funding—Nyx Foundation is ready to partner."
+    ],
+    "quality_validation": {
+      "story_coherence": "The sequence of action titles forms a complete argument: context → recommendation → opportunity details → academic legitimacy → strategic urgency → partnership terms → call to action.",
+      "all_claims_mapped": {
+        "C1_mapped_to": ["SL03", "SL04", "SL05"],
+        "C2_mapped_to": ["SL06", "SL07", "SL08"],
+        "C3_mapped_to": ["SL09", "SL10", "SL11"],
+        "C4_mapped_to": ["SL12", "SL13"]
+      },
+      "constraint_compliance": "15 slides meets the '15 slides max' constraint exactly.",
+      "archetype_adherence": "Pyramid Principle structure: governing thought (SL02) presented early, followed by four supporting argument groups (A-D), each with 2-3 slides of evidence."
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "audience_persona": {
+    "name": "張一凡, 江村 恵太, 荒木俊輔, Yuji Suga",
+    "role": "Senior Cryptography and Security Researchers at SCIS2026 (Symposium on Cryptography and Information Security, Hakodate)",
+    "summary": "A composite audience of highly accomplished Japanese cryptography and security researchers attending Japan's largest security symposium. This audience combines academic researchers (Keita Emura at Kanazawa University, Shunsuke Araki at Kyushu Institute of Technology) with industry practitioners (Yuji Suga at IIJ). They are driven by technical rigor, peer-reviewed research outcomes, and practical security applications. While deeply knowledgeable in traditional cryptography, they are increasingly engaging with blockchain and Ethereum-related research topics, making them receptive to well-reasoned, evidence-backed proposals for collaborative research—but skeptical of hype-driven or commercially-motivated pitches.",
+    "motivations_and_priorities": [
+      {
+        "motivation": "Producing high-quality, peer-reviewed research publications",
+        "evidence": "Keita Emura has 140+ papers and 30+ best paper awards; all identified researchers have extensive publication records at SCIS, IWSEC, and international venues"
+      },
+      {
+        "motivation": "Advancing practical cryptographic applications with provable security",
+        "evidence": "Emura's research emphasizes 'provably secure' cryptographic designs; Araki focuses on lightweight encryption for IoT security"
+      },
+      {
+        "motivation": "Bridging academia-industry gaps in security research",
+        "evidence": "Suga works at IIJ while serving on CRYPTREC government committees; Emura moved from NICT to academia; both maintain strong industry connections"
+      },
+      {
+        "motivation": "Exploring emerging technologies including blockchain and zero-knowledge proofs",
+        "evidence": "Emura has published on Ethereum smart contracts, anonymous wallet systems, and sealed-bid auctions on blockchain (2024-2025); Suga has published on cryptocurrency exchange security and is an ISO/TC 307 blockchain standards expert"
+      },
+      {
+        "motivation": "Mentoring the next generation of security researchers",
+        "evidence": "All are active in organizing SCIS/IWSEC conferences which include Young Researcher Paper Awards; they regularly supervise graduate students"
+      },
+      {
+        "motivation": "Securing international research funding and collaboration opportunities",
+        "evidence": "Japan's declining research funding (¥140B reduction since 2004) creates pressure to find alternative funding sources; Ethereum Foundation Academic Grants represent a $2M opportunity"
+      }
+    ],
+    "potential_biases_and_objections": [
+      {
+        "bias": "Skepticism toward blockchain hype without rigorous cryptographic foundations",
+        "reasoning": "As formal cryptographers, they prioritize provable security and peer-reviewed research over industry marketing claims; Japanese academic culture has shown documented skepticism toward blockchain's decentralized/unregulated aspects"
+      },
+      {
+        "objection": "What is the specific cryptographic research contribution, not just engineering or application development?",
+        "reasoning": "Their careers are built on theoretical contributions (formal proofs, new schemes, security reductions); they will want to see how Ethereum research fits traditional academic criteria"
+      },
+      {
+        "objection": "How does this align with our existing research agenda and grant applications (KAKENHI, NICT projects)?",
+        "reasoning": "Japanese researchers typically manage multiple funding sources with specific deliverables; any new direction must complement, not compete with, existing obligations"
+      },
+      {
+        "objection": "What is the track record of Nyx Foundation in academic research support?",
+        "reasoning": "Established researchers require evidence of credibility; 20+ vulnerability reports to Ethereum clients is good but they may ask about peer-reviewed publications or formal collaborations"
+      },
+      {
+        "objection": "Is this a long-term research direction or a short-term trend?",
+        "reasoning": "Academic researchers invest years in developing expertise; they are cautious about pivoting to areas that may not sustain long-term career development"
+      },
+      {
+        "objection": "How will intellectual property and publication rights be handled?",
+        "reasoning": "Academic researchers need to publish findings for career advancement; any collaboration must clearly preserve their publication rights"
+      }
+    ],
+    "communication_preferences": {
+      "preferred_style": "Formal, data-driven, and technically rigorous with clear logical structure following standard academic presentation conventions",
+      "likes": [
+        "Clear problem statements with formal definitions",
+        "Evidence-backed claims with citations to peer-reviewed literature",
+        "Technical depth demonstrating understanding of cryptographic primitives",
+        "Concrete examples of open research problems with potential for publications",
+        "Specific data on funding amounts, deadlines, and success rates",
+        "Connections to established cryptographic concepts (zero-knowledge proofs, formal verification, protocol security)",
+        "Acknowledgment of their existing expertise and how it applies to Ethereum research"
+      ],
+      "dislikes": [
+        "Marketing jargon or cryptocurrency/Web3 buzzwords without technical substance",
+        "Unsupported claims about market size or financial returns",
+        "Vague calls to action without specific next steps",
+        "Oversimplification of complex cryptographic concepts",
+        "Presentations that lack technical depth or appear commercially motivated",
+        "Ignoring Japan-specific research context (CRYPTREC, KAKENHI, NICT ecosystem)"
+      ]
+    },
+    "decision_making_criteria": [
+      "Academic Merit: Does this research direction offer opportunities for high-quality publications in top venues (CRYPTO, EUROCRYPT, ASIACRYPT, CCS)?",
+      "Technical Feasibility: Are the proposed research problems well-defined and tractable with current cryptographic techniques?",
+      "Funding Clarity: What are the specific grant amounts, application deadlines, evaluation criteria, and success rates?",
+      "Publication Rights: Will researchers retain full rights to publish findings in academic venues?",
+      "Time Investment: How does this fit with existing teaching, supervision, and research obligations?",
+      "Collaboration Quality: What is the technical caliber of other researchers and institutions involved?",
+      "Career Alignment: Will this expertise be valuable for long-term academic career development in Japan?",
+      "Institutional Support: Can this be aligned with university or research institute priorities?"
+    ],
+    "research_context": {
+      "identified_researchers": {
+        "keita_emura": {
+          "current_role": "Associate Professor, Kanazawa University (since September 2023)",
+          "previous_role": "Research Manager, NICT (2012-2023)",
+          "research_focus": "Provably secure public-key cryptography, privacy-preserving systems",
+          "blockchain_experience": "Published on Ethereum smart contracts, anonymous wallet systems, vanity address generation (2024-2025)",
+          "awards": "30+ awards including multiple SCIS Paper Awards (2012, 2014, 2015, 2017)"
+        },
+        "shunsuke_araki": {
+          "current_role": "Associate Professor, Kyushu Institute of Technology",
+          "research_focus": "Lightweight cryptography for IoT, pairing-based cryptography, pseudo-random sequence generation",
+          "publications": "44 publications with 192 citations"
+        },
+        "yuji_suga": {
+          "current_role": "Senior Engineer, Internet Initiative Japan Inc. (since 2008)",
+          "research_focus": "Cryptographic protocols, secret sharing, blockchain security, visual cryptography",
+          "key_roles": "CRYPTREC Cryptographic Technology Committee member (2016-present), ISO/TC 307 Blockchain Standards Expert (2021-present), ACM AsiaCCS2022 General Co-chair, IWSEC2022 General Co-chair",
+          "blockchain_publications": "Published on cryptocurrency exchange security (FC 2020), Bitcoin applications"
+        },
+        "zhang_yifan": {
+          "note": "No public research profile found in Japanese or English academic databases; may be a less publicly visible researcher or potentially uses an alternative name romanization"
+        }
+      },
+      "venue_context": {
+        "event": "SCIS2026 (Symposium on Cryptography and Information Security)",
+        "location": "Hakodate Arena, Hokkaido, Japan",
+        "dates": "January 26-30, 2026",
+        "significance": "Japan's largest security symposium, 43rd annual edition since 1984",
+        "attendees": "Approximately 600-800 Japanese cryptography and security researchers",
+        "related_event": "DEPCON Hakodate (mentioned in Context Brief as a Nyx Foundation gathering)"
+      }
+    }
+  }
+}

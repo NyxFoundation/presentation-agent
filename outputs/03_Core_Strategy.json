@@ -1,0 +1,31 @@
+{
+  "core_strategy": {
+    "presentation_purpose": "To recruit 3-5 senior cryptography researchers from SCIS2026 attendees to actively engage with Nyx Foundation by reviewing Ethereum Foundation PSE RFP topics and initiating at least one collaborative research project within 3 months.",
+    "core_message": "By partnering with Nyx Foundation to pursue Ethereum research grants, you can leverage your existing cryptographic expertise to publish in top international venues and secure alternative funding—addressing both Japan's research funding crisis and your goal of producing high-impact, peer-reviewed publications.",
+    "narrative_archetype": {
+      "selected": "Pyramid Principle (Minto)",
+      "justification": "Selected because the audience consists of time-constrained senior researchers who prefer formal, data-driven presentations with clear logical structure. They value efficiency and want conclusions upfront with supporting evidence, not emotional storytelling. Their decision-making criteria emphasize academic merit, funding clarity, and technical feasibility—all of which align with the hierarchical, evidence-based structure of the Pyramid Principle."
+    },
+    "tone_and_manner": {
+      "recommended_tone": "Collegially rigorous and respectfully direct—speaking as a fellow researcher offering a concrete opportunity, not a salesperson pitching a product.",
+      "dos": [
+        "Present concrete data on Ethereum Foundation grant amounts, deadlines, and success rates for academic researchers",
+        "Acknowledge the audience's existing blockchain research (Emura's smart contract work, Suga's cryptocurrency exchange security) as a foundation to build upon",
+        "Frame Ethereum research problems in established cryptographic terms (zero-knowledge proofs, formal verification, protocol security)",
+        "Explicitly address publication rights and how collaborations preserve academic freedom",
+        "Reference established venues where Ethereum research has been published (CRYPTO, CCS, EUROCRYPT)",
+        "Position Nyx Foundation's 20+ vulnerability reports as evidence of technical credibility, not marketing material",
+        "Connect the opportunity to Japan's specific research funding challenges that the audience experiences directly"
+      ],
+      "donts": [
+        "Use Web3 marketing jargon or cryptocurrency buzzwords without technical substance",
+        "Make unsupported claims about market size, token values, or financial returns",
+        "Oversimplify or explain basic cryptographic concepts the audience already masters",
+        "Present this as competing with their existing KAKENHI or NICT grant obligations",
+        "Ignore Japan-specific research context (CRYPTREC, SCIS/IWSEC community, academic career structures)",
+        "Make vague promises without specific next steps, contacts, or timelines",
+        "Downplay the audience's potential skepticism about blockchain hype—acknowledge it directly and differentiate"
+      ]
+    }
+  }
+}

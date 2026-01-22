@@ -1,0 +1,210 @@
+{
+  "slide_drafts": [
+    {
+      "slide_id": "SL01",
+      "action_title": "SCIS2026 marks a critical moment for Japanese cryptographers to secure new funding pathways.",
+      "key_points": [
+        "- SCIS2026: January 26-30, 2026 at Hakodate Arena—43rd annual symposium",
+        "- Co-located with DEPCON Hakodate: direct access to Ethereum ecosystem",
+        "- Japan's research funding landscape shifting: new evaluation criteria reward international collaboration",
+        "- Window of opportunity: global interest in Japanese cryptography expertise rising"
+      ],
+      "speaker_notes": "Welcome to SCIS2026. This year's symposium in Hakodate represents more than our 43rd gathering—it marks a strategic inflection point. The co-location with DEPCON Hakodate brings the global Ethereum research community directly to our doorstep. Meanwhile, MEXT's recent reforms to KAKENHI explicitly reward international involvement in research evaluation. These two developments create a rare alignment: global opportunity meeting institutional incentive. The question before us today is how to seize this moment. Let me present a concrete path forward.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL02",
+      "action_title": "Partner with Nyx Foundation to pursue Ethereum research grants: publish in top venues while securing alternative funding.",
+      "key_points": [
+        "- Dual benefit: peer-reviewed publications + non-KAKENHI funding streams",
+        "- Ethereum Foundation's Academic Grants: $2M available for 2025 round",
+        "- Your cryptography expertise directly applicable to open research problems",
+        "- Nyx Foundation: bridge between academic rigor and protocol-level access"
+      ],
+      "speaker_notes": "Here is my central recommendation: partner with Nyx Foundation to pursue Ethereum research grants. This is not a choice between academic publishing and industry funding—it is a path to both. The Ethereum Foundation's Academic Grants program explicitly supports peer-reviewed research in applied and theoretical cryptography. Your existing expertise in zero-knowledge proofs, formal verification, and protocol security maps directly to their research priorities. Nyx Foundation serves as the bridge, providing protocol-level technical access and grant navigation support while you retain full publication rights and academic freedom. In the slides that follow, I will substantiate each element of this recommendation.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL03",
+      "action_title": "The Ethereum Foundation's $2M Academic Grants Round is open now, with applications due March 23, 2025.",
+      "key_points": [
+        "- $2M total fund for 2025 Academic Grants Round (doubled from 2024's $1M)",
+        "- Application deadline: March 23, 2025, 23:59 AoE (extended from March 16)",
+        "- Project duration: 6-12 months with flexibility",
+        "- Open to individuals, teams, and institutions",
+        "- esp.ethereum.foundation/academic-grants"
+      ],
+      "speaker_notes": "Let me be specific about the opportunity. The Ethereum Foundation has just launched their 2025 Academic Grants Round with a dedicated fund of two million US dollars—double last year's allocation. The application window closes on March 23rd. Projects typically run six to twelve months, with flexibility for longer investigations. Applications are open to individual researchers, teams, and institutions. This is the third iteration of the program, and the doubling of funds signals the Foundation's growing commitment to academic research. The direct application link is esp.ethereum.foundation/academic-grants. Now, you might reasonably ask: is this grant realistic for my research? Let me address that with data.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL04",
+      "action_title": "The 2024 round funded 41 projects from 300 applications—a 14% success rate that rewards quality proposals.",
+      "key_points": [
+        "- 2024 results: 41 projects funded from 300 applications (14% acceptance)",
+        "- 2023 comparison: 43 projects from 250 applications across 20 countries",
+        "- Applicants from 25 countries in 2024—demonstrating global reach",
+        "- Comparable to KAKENHI Category C acceptance rates (~25-30%)"
+      ],
+      "speaker_notes": "The 2024 round received 300 applications from researchers in 25 countries and funded 41 projects—a 14% success rate. This is competitive but achievable, especially when compared to KAKENHI's overall acceptance rates. The previous year saw 43 projects funded from 250 applications across 20 countries. What matters here is that these are not lottery odds. Quality proposals with clear alignment to Ethereum's research priorities have a reasonable path to funding. The Foundation is explicitly looking for rigorous academic work, not product development. This is peer-reviewed research with real funding attached. Let me show you exactly what research areas they prioritize.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL05",
+      "action_title": "The grant explicitly prioritizes Applied and Theoretical Cryptography, Formal Verification, and Protocol Security.",
+      "key_points": [
+        "- Applied & Theoretical Cryptography: ZKP, MPC, FHE, signature schemes",
+        "- Formal Verification: smart contract proofs, protocol correctness",
+        "- Security: client engineering, vulnerability research, attack analysis",
+        "- Also included: Consensus Algorithms, Protocol Design, P2P Networking",
+        "- Direct mapping to SCIS/IWSEC research tracks"
+      ],
+      "speaker_notes": "The grant's research areas read like a SCIS program: applied and theoretical cryptography, formal verification, protocol security, consensus algorithms. These are not peripheral topics—they are the core of the Ethereum Foundation's research agenda. If you work on zero-knowledge proofs, multi-party computation, homomorphic encryption, or signature schemes, your expertise is precisely what they seek. If you specialize in formal verification or security analysis, there are open problems waiting for your methods. This is not a pivot to unfamiliar territory—it is an expansion of your existing research into a well-funded domain with global impact. But is this academically respectable? Let me address that concern directly.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL06",
+      "action_title": "Zero-knowledge proofs, MPC, and FHE are now mainstream at EUROCRYPT, CRYPTO, and CCS.",
+      "key_points": [
+        "- EUROCRYPT/CRYPTO 2024-2025: multiple sessions on ZKP, SNARK, NIZK constructions",
+        "- Berkeley 2025 dissertation: 'Efficient Zero-Knowledge Proofs: Theory and Practice'",
+        "- ZKP market: $1.28B (2024) → projected $7.59B by 2033 (22% CAGR)",
+        "- Post-quantum ZKP: active research frontier at major venues",
+        "- $28B+ Total Value Locked in ZK-based rollups on Ethereum"
+      ],
+      "speaker_notes": "Some may wonder whether blockchain-related research is academically serious. The evidence is unambiguous. Zero-knowledge proofs, multi-party computation, and homomorphic encryption now appear regularly at EUROCRYPT, CRYPTO, and CCS—our field's most prestigious venues. Berkeley's 2025 doctoral dissertation series includes work titled 'Efficient Zero-Knowledge Proofs: Theory and Practice.' The ZKP market alone is valued at 1.28 billion dollars and projected to reach 7.6 billion by 2033. More than 28 billion dollars sits locked in ZK-based rollups on Ethereum. This is not fringe research—it is where applied cryptography meets real-world scale. And Japanese cryptographers are already contributing.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL07",
+      "action_title": "Japanese cryptographers are already publishing Ethereum-related research in peer-reviewed venues.",
+      "key_points": [
+        "- Suga et al. (FC 2020): 'Securing Cryptocurrency Exchange' based on Japanese regulator data",
+        "- Nakamura (LayerX/EF grant): Ethereum 2.0 consensus security analysis, IWSEC/SCIS presentations",
+        "- Dr. Cruz (Osaka University): blockchain infrastructure for secure systems",
+        "- Ethereum Foundation grants already awarded to Japanese-affiliated researchers"
+      ],
+      "speaker_notes": "Japanese researchers are not newcomers to this space. At Financial Cryptography 2020, Suga and colleagues published 'Securing Cryptocurrency Exchange,' analyzing data from 32 exchanges investigated by Japanese regulators. Nakamura at LayerX received an Ethereum Foundation Ecosystem Support Program grant and has been presenting Casper and sharding research at IWSEC and SCIS. Dr. Cruz at Osaka University focuses on blockchain infrastructure for secure systems. These are not isolated examples—they represent a growing body of peer-reviewed work from within our community. The path has been proven. What remains is expanding participation.",
+      "todos": [
+        {
+          "item": "Obtain specific publication details and citations for Emura's smart contract/anonymous wallet research mentioned in the blueprint",
+          "severity": "Medium"
+        }
+      ]
+    },
+    {
+      "slide_id": "SL08",
+      "action_title": "PSE's open problems in formal verification and lightweight cryptography match your existing specializations.",
+      "key_points": [
+        "- PSE (Privacy & Scaling Explorations): EF research lab for programmable cryptography",
+        "- Active areas: lattice-based polynomial commitments, post-quantum ZKP, folding schemes",
+        "- ZK Bug Tracker & Bridge Bug Tracker: security research infrastructure",
+        "- Alignment with CRYPTREC: post-quantum transition, formal verification priorities",
+        "- Open-source, publication-friendly: research outputs welcome at academic venues"
+      ],
+      "speaker_notes": "Privacy and Scaling Explorations—PSE—is the Ethereum Foundation's dedicated research lab for programmable cryptography. Their current work includes lattice-based polynomial commitments for post-quantum security, folding-based ZKP systems, and formal verification of protocol primitives. These align directly with CRYPTREC's own priorities around post-quantum transition. PSE maintains the ZK Bug Tracker and Bridge Bug Tracker—systematic security research infrastructure. Critically, their work is open-source and explicitly publication-friendly. This is academic research with protocol-level impact. If your specialization touches formal verification, lightweight cryptography, or post-quantum constructions, there are open problems here with your name on them.",
+      "todos": [
+        {
+          "item": "Obtain specific PSE RFP document links with detailed research problem descriptions",
+          "severity": "High"
+        }
+      ]
+    },
+    {
+      "slide_id": "SL09",
+      "action_title": "Japan's KAKENHI real purchasing power has halved since 2013 due to inflation and yen depreciation.",
+      "key_points": [
+        "- KAKENHI budget stagnant at ~¥240B annually while applications increase",
+        "- Average funding per project: effectively halved since 2013 (inflation + weak yen)",
+        "- Rising costs: international publication fees, conference travel, equipment",
+        "- National university operating grants: ¥140B cumulative reduction since 2004",
+        "- 1% annual efficiency coefficient: systematic budget erosion"
+      ],
+      "speaker_notes": "Now let me address the strategic imperative. Japan's research funding crisis is not speculation—it is arithmetic. The KAKENHI budget has remained around 240 billion yen annually, but the number of applications has grown substantially. Adjusted for inflation and the weakening yen, the average funding per project has effectively halved since 2013. Publication fees, conference travel, and equipment costs have all risen. National university operating grants have been cut by approximately 140 billion yen cumulatively since the 2004 corporatization, with a 1% annual efficiency coefficient that systematically erodes budgets. This is the environment we operate in. The question is not whether to seek alternative funding—it is where.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL10",
+      "action_title": "167 academic associations representing 2.08 million researchers petitioned for doubled KAKENHI funding in July 2024.",
+      "key_points": [
+        "- July 2024 petition: 167 academic associations, 2.08 million researchers",
+        "- Demand: double KAKENHI to ¥480B+ for stable research environment",
+        "- Nature Index 2024: Japan 5th globally but declining 9% year-over-year",
+        "- University of Tokyo: 23rd (down from 21st); Kyoto: 55th (first time outside top 50)",
+        "- Political reality: doubling unlikely under current budget system"
+      ],
+      "speaker_notes": "The severity of this crisis is recognized at the highest levels. In July 2024, 167 academic associations representing 2.08 million researchers petitioned the government to double KAKENHI funding to more than 480 billion yen. The Nature Index 2024 shows Japan's adjusted share declining 9% year-over-year. Both the University of Tokyo and Kyoto University recorded their lowest rankings to date—with Kyoto falling outside the top 50 for the first time since the index began. Yet as RIKEN President Gonokami acknowledged, doubling the budget is unlikely under the current system. The institutional response will be slow. Individual researchers cannot wait. Diversification is not abandonment of domestic funding—it is prudent risk management.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL11",
+      "action_title": "FY2025 KAKENHI reform now explicitly rewards 'international involvement'—EF collaboration fulfills this criterion.",
+      "key_points": [
+        "- FY2025 KAKENHI: new evaluation factor for 'international involvement'",
+        "- Priority funding for projects scoring well on international collaboration",
+        "- Applied to Scientific Research A, B, and C categories",
+        "- EF grant collaboration: documented international partnership for KAKENHI applications",
+        "- Complementary strategy: EF funding strengthens domestic grant competitiveness"
+      ],
+      "speaker_notes": "Here is where the strategic picture becomes clear. MEXT's FY2025 KAKENHI reform explicitly added an evaluation factor for international involvement in research projects. Projects that score well on this criterion receive priority in funding allocation. This applies to Scientific Research categories A, B, and C—the core grant types most of us pursue. An Ethereum Foundation collaboration provides documented international partnership that directly strengthens your KAKENHI applications. This is not an either-or choice. Pursuing EF grants makes you more competitive for domestic funding. The two pathways reinforce each other. Now let me address the partnership structure with Nyx Foundation.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL12",
+      "action_title": "Nyx Foundation's 20+ vulnerability reports to Ethereum clients demonstrate protocol-level technical credibility.",
+      "key_points": [
+        "- 20+ vulnerability reports submitted to Ethereum client implementations",
+        "- Protocol-level security research: consensus, execution, networking layers",
+        "- Direct relationships with Ethereum Foundation research teams",
+        "- Focus: rigorous security analysis, not marketing or speculation",
+        "- Track record of responsible disclosure and technical contribution"
+      ],
+      "speaker_notes": "You may wonder: who is Nyx Foundation, and why should you trust this partnership? Let me be concrete. Nyx Foundation has submitted more than 20 vulnerability reports to Ethereum client implementations. This is not promotional activity—it is protocol-level security research that requires deep technical understanding of consensus mechanisms, execution environments, and networking layers. This track record demonstrates credibility with the Ethereum Foundation's own research teams. Nyx operates in the domain of rigorous security analysis, not blockchain speculation. When we offer to collaborate, we bring genuine technical access and established relationships.",
+      "todos": [
+        {
+          "item": "Obtain specific examples of vulnerability types discovered (e.g., consensus bugs, DoS vectors) for added credibility",
+          "severity": "Low"
+        }
+      ]
+    },
+    {
+      "slide_id": "SL13",
+      "action_title": "Researchers retain full publication rights and academic freedom—this is a capability exchange, not a grant dependency.",
+      "key_points": [
+        "- Full publication rights retained by researchers—no IP restrictions",
+        "- Academic freedom preserved: you define the research agenda",
+        "- Nyx provides: protocol expertise, grant navigation, ecosystem access",
+        "- You provide: cryptographic rigor, formal methods, security analysis",
+        "- Model: capability exchange, not funding dependency"
+      ],
+      "speaker_notes": "The partnership structure is designed for academic integrity. Researchers retain full publication rights—there are no IP restrictions on your work. Academic freedom is preserved: you define the research agenda based on your expertise and interests. Nyx Foundation provides protocol-level expertise, grant application navigation, and access to the Ethereum ecosystem. You bring cryptographic rigor, formal methods, and security analysis capabilities. This is a capability exchange, not a funding dependency. We succeed together when rigorous research produces peer-reviewed publications and advances protocol security. Your academic reputation is the foundation of value—protecting it is our shared interest.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL14",
+      "action_title": "Your next step: review PSE RFP topics and identify one alignment with your current research within 3 months.",
+      "key_points": [
+        "- Step 1: Browse PSE research areas at pse.dev",
+        "- Step 2: Identify one topic overlapping your current research",
+        "- Step 3: Contact Nyx Foundation to discuss collaboration approach",
+        "- Timeline: 3 months to identify alignment (before SCIS2026)",
+        "- Follow-up opportunity: DEPCON Hakodate for direct engagement"
+      ],
+      "speaker_notes": "I am asking for a modest first commitment. Within the next three months—well before the March 23rd EF deadline—review the Privacy and Scaling Explorations research areas at pse.dev. Identify just one topic that overlaps with your current work. Then contact Nyx Foundation to discuss how we might collaborate on an application. This is not a request to abandon your research program. It is an invitation to extend it into a well-funded domain with global impact. DEPCON Hakodate, co-located with SCIS2026, offers a natural opportunity for direct engagement with the Ethereum research community. The door is open.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL15",
+      "action_title": "Ethereum research offers a path to both top-tier publications and sustainable funding—Nyx Foundation is ready to partner.",
+      "key_points": [
+        "- Dual benefit: academic publishing + alternative funding",
+        "- $2M EF Academic Grants: deadline March 23, 2025",
+        "- Your expertise + Ethereum's scale = global research impact",
+        "- Nyx Foundation: technical partner preserving academic freedom",
+        "- Contact: esp.ethereum.foundation (EF) | Nyx Foundation for collaboration"
+      ],
+      "speaker_notes": "Let me close with the essential message. Ethereum research offers Japanese cryptographers a path to both top-tier publications and sustainable funding outside the constraints of domestic budget limitations. The Ethereum Foundation's $2M Academic Grants Round closes March 23rd. Your expertise in zero-knowledge proofs, formal verification, and protocol security aligns precisely with their research priorities. Nyx Foundation stands ready to partner—providing protocol access and grant navigation while preserving your academic freedom and publication rights. The global cryptography landscape is being shaped now. SCIS2026 in Hakodate is our moment to claim a seat at that table. I welcome your questions and look forward to continuing this conversation.",
+      "todos": []
+    }
+  ]
+}

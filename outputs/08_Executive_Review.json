@@ -1,0 +1,96 @@
+{
+  "executive_review": {
+    "verdict": "CONDITIONAL_PASS",
+    "executive_summary": "The presentation makes a compelling structural argument: Ethereum research aligns with your expertise, alternative funding is needed, and international collaboration strengthens KAKENHI applications. The core logic is sound and the call-to-action is appropriately specific. However, several critical claims lack adequate evidence—particularly the '14% success rate rewards quality' spin, the 'purchasing power halved' assertion without citation, and Nyx Foundation's credibility claims that provide no verifiable examples. The visual designs for slides 9 and 11 are too complex for a presentation setting. Most concerning: the March 23, 2025 deadline appears to have already passed if this presentation is for SCIS2026 (January 2026). I would engage with this proposal after the evidence gaps are addressed and the timeline confusion is clarified.",
+    "skim_test_feedback": {
+      "status": "PASS",
+      "comment": "The story flows logically from titles alone: opportunity exists → it matches your expertise → Japan's funding is tight → this helps KAKENHI too → here's the ask. However, the urgency section (slides 9-11) comes late—consider moving funding crisis context earlier to establish stakes before presenting the solution."
+    },
+    "remediation_plan": [
+      {
+        "slide_id": "SL03",
+        "issue_type": "Temporal Inconsistency",
+        "issue_description": "The slide states the deadline is March 23, 2025, but SCIS2026 takes place in January 2026. By presentation time, this deadline will have passed 10 months ago. This creates confusion about whether the opportunity is still relevant.",
+        "recommendation": "If presenting at SCIS2026, update to reference the 2026 Academic Grants Round with its actual deadline. If the 2026 round details are not yet available, acknowledge this and frame the slide as 'the annual grant cycle typically opens in [month]' or provide historical context showing the pattern of annual rounds."
+      },
+      {
+        "slide_id": "SL04",
+        "issue_type": "Argument Strength",
+        "issue_description": "The title claims 14% acceptance 'rewards quality proposals,' but the visual directly shows KAKENHI Category C at 27%—nearly double the success rate. The evidence contradicts the optimistic framing, making the argument appear either naive or misleading.",
+        "recommendation": "Reframe honestly: acknowledge that 14% is competitive, then pivot to *why* this is worth the effort despite lower odds—larger grant sizes, international visibility, KAKENHI synergy. Alternative title: 'At 14% acceptance, EF grants are competitive—but the strategic benefits justify the investment.' Avoid spin that the audience will immediately see through."
+      },
+      {
+        "slide_id": "SL06",
+        "issue_type": "Evidence Quality",
+        "issue_description": "The slide uses commercial metrics (market size projections, TVL) to prove academic legitimacy. As a cryptographer, I do not care about market capitalization—I care about publication quality. 'Multiple sessions' at venues is too vague to be persuasive.",
+        "recommendation": "Replace market data with actual publication counts: 'EUROCRYPT 2024 accepted X papers on ZKP out of Y submissions' or cite specific seminal papers. Remove or minimize the $7.59B market projection—it signals commercial motivation, which triggers my skepticism. Keep the $28B TVL only if framed as 'real-world deployment of cryptographic research.'"
+      },
+      {
+        "slide_id": "SL07",
+        "issue_type": "Evidence Completeness",
+        "issue_description": "The slide mentions Emura's smart contract and anonymous wallet research (from the Audience Persona) but the actual key points do not include this. The TODOs note that 'specific publication details for Emura's research' are missing. This is a missed opportunity to directly acknowledge the audience's existing work.",
+        "recommendation": "Add Emura's specific publications to the slide: 'Emura et al. on Ethereum smart contracts and anonymous wallet systems (2024-2025)'. This demonstrates that you have done your homework and positions the audience as already part of this research community, not newcomers being recruited."
+      },
+      {
+        "slide_id": "SL08",
+        "issue_type": "Evidence Quality",
+        "issue_description": "The TODOs flag that 'specific PSE RFP document links with detailed research problem descriptions' are missing. Without these, the slide makes claims about alignment that cannot be verified. I cannot evaluate whether my expertise actually matches if I cannot see the problems.",
+        "recommendation": "Provide at least 2-3 specific PSE research problem titles with brief descriptions, or include working URLs to the actual RFP documents. Example: 'PSE RFP #12: Efficient polynomial commitment schemes with post-quantum security (see pse.dev/rfp/12)'. Concrete problems are more compelling than category labels."
+      },
+      {
+        "slide_id": "SL09",
+        "issue_type": "Argument Strength",
+        "issue_description": "The title claims purchasing power 'has halved since 2013' but provides no citation or methodology for this calculation. As a researcher, I need to see the source. Is this inflation-adjusted? What exchange rate assumptions? Without citation, this is an assertion, not evidence.",
+        "recommendation": "Add a source citation in the key points or speaker notes: 'Based on [MEXT report / economist's analysis / specific publication].' If no authoritative source exists, soften the claim: 'Effective purchasing power has declined substantially due to inflation and yen depreciation—estimated at 40-50% reduction.'"
+      },
+      {
+        "slide_id": "SL09",
+        "issue_type": "Visual Clarity",
+        "issue_description": "The dual-axis chart with nominal budget (¥B) on one axis and a 'Real Purchasing Power Index' on the other is difficult to interpret. Dual-axis charts are notoriously misleading because the scales are arbitrary—viewers cannot intuitively compare bars to lines with different units.",
+        "recommendation": "Simplify to a single metric: show only the real purchasing power decline as a line chart indexed to 100 in 2013. Add a single annotation showing nominal budget remained flat. Alternatively, use two separate small charts side-by-side rather than overlaying incompatible metrics."
+      },
+      {
+        "slide_id": "SL11",
+        "issue_type": "Visual Clarity",
+        "issue_description": "The five-node circular 'Reinforcement Loop Diagram' is too complex for a presentation slide. Circular dependencies with five nodes and five connections require significant cognitive effort to trace, especially during a time-limited presentation.",
+        "recommendation": "Simplify to a linear three-step flow: 'EF Collaboration → Documents International Involvement → KAKENHI Priority Funding.' The reinforcement loop concept can be mentioned verbally but does not need to be visualized with all nodes. Alternatively, show only the top-level causal chain: EF Grant → International Score → KAKENHI Boost."
+      },
+      {
+        "slide_id": "SL12",
+        "issue_type": "Evidence Quality",
+        "issue_description": "The title claims '20+ vulnerability reports' but provides no verifiable evidence. What types of vulnerabilities? Which Ethereum clients (Geth, Prysm, Lighthouse)? Were any CVEs assigned? The TODOs acknowledge this gap. As presented, I cannot verify this claim at all.",
+        "recommendation": "Provide at least one concrete example: 'Discovered [vulnerability type] in [client name], responsibly disclosed [date], fixed in version X.' Even one specific example with verifiable details is more credible than '20+' without specifics. If confidentiality prevents disclosure, say so explicitly: 'Details under responsible disclosure agreements; reference available upon request.'"
+      },
+      {
+        "slide_id": "SL14",
+        "issue_type": "Call-to-Action Completeness",
+        "issue_description": "The slide asks me to 'Contact Nyx Foundation' but provides no contact method. No email address, no URL, no specific person to reach. This creates friction at the critical moment of conversion.",
+        "recommendation": "Add a specific contact: 'Contact: [name]@nyx.foundation' or 'collaboration@nyx.foundation' or a specific URL 'nyx.foundation/scis2026'. The contact should appear both in the key points and in the speaker notes."
+      },
+      {
+        "slide_id": "SL14",
+        "issue_type": "Persona Alignment",
+        "issue_description": "The speaker notes say this is a 'modest first commitment' but do not address the opportunity cost of waiting. If I am busy (and I am), why should I act within 3 months rather than 6 months? What do I lose by delaying?",
+        "recommendation": "Add urgency framing in speaker notes: 'The next EF Academic Grants round typically opens in [month]—starting now ensures you have time to identify alignment and prepare a strong application. Waiting until the call opens leaves insufficient preparation time for competitive proposals.'"
+      },
+      {
+        "slide_id": "SL15",
+        "issue_type": "Contact Information",
+        "issue_description": "The final slide lists 'Nyx Foundation' under contact but provides no specific contact method. The EF grants link is provided but Nyx contact is missing. This is the last slide the audience sees—it must make follow-up frictionless.",
+        "recommendation": "Add specific Nyx Foundation contact information: email, URL, or both. Format: 'Partnership Inquiries: [email] | nyx.foundation/research'. Consider adding a QR code for mobile scanning during the presentation."
+      },
+      {
+        "slide_id": "GENERAL",
+        "issue_type": "Persona Alignment",
+        "issue_description": "The presentation does not mention whether EF grants can fund PhD students or postdocs. For senior researchers, the ability to support students is a key motivation. This is listed in the Audience Persona ('Mentoring the next generation') but not addressed.",
+        "recommendation": "Add to SL03 or SL05: 'EF grants can support research teams including graduate students' (if true). If funding structure allows student support, this significantly increases appeal to senior researchers who evaluate opportunities partly based on benefit to their lab."
+      },
+      {
+        "slide_id": "GENERAL",
+        "issue_type": "Persona Alignment",
+        "issue_description": "The presentation addresses publication rights but does not mention whether Nyx Foundation can provide letters of collaboration or support for KAKENHI applications. Since slide 11 argues that EF collaboration strengthens KAKENHI, explicitly offering this support would be a concrete value-add.",
+        "recommendation": "Add to SL13 or SL14: 'Nyx Foundation can provide letters of international collaboration for your KAKENHI applications upon request.' This transforms an abstract benefit into a tangible deliverable."
+      }
+    ]
+  }
+}

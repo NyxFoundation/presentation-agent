@@ -1,0 +1,442 @@
+{
+  "visual_designs": [
+    {
+      "slide_id": "SL01",
+      "visual_spec": {
+        "type": "Timeline_Diagram",
+        "title": "SCIS2026: A Strategic Convergence",
+        "components": [
+          {"id": "A", "label": "SCIS2026", "shape": "rectangle", "color": "primary", "subtext": "Jan 26-30, 2026"},
+          {"id": "B", "label": "DEPCON Hakodate", "shape": "rectangle", "color": "accent", "subtext": "Co-located"},
+          {"id": "C", "label": "MEXT KAKENHI Reform", "shape": "rectangle", "color": "accent", "subtext": "International Criteria"},
+          {"id": "D", "label": "Global Interest in Japanese Cryptography", "shape": "rectangle", "color": "accent", "subtext": "Rising"}
+        ],
+        "connections": [
+          {"from": "A", "to": "B", "label": "Direct Access"},
+          {"from": "A", "to": "C", "label": "Policy Alignment"},
+          {"from": "A", "to": "D", "label": "Opportunity"}
+        ],
+        "layout": "hub_and_spoke",
+        "center_element": "A",
+        "annotations": ["Use converging arrows toward center to emphasize confluence of factors"],
+        "takeaway": "Four independent developments are converging at SCIS2026, creating a rare window of opportunity for Japanese cryptographers."
+      }
+    },
+    {
+      "slide_id": "SL02",
+      "visual_spec": {
+        "type": "Venn_Diagram",
+        "title": "The Dual-Benefit Partnership Model",
+        "components": [
+          {"id": "circle1", "label": "Academic Publishing", "items": ["Peer-reviewed papers", "EUROCRYPT/CRYPTO venues", "Research reputation"]},
+          {"id": "circle2", "label": "Ethereum Funding", "items": ["$2M grant pool", "Protocol access", "Global impact"]},
+          {"id": "intersection", "label": "Nyx Foundation Partnership", "items": ["Publication rights retained", "Technical collaboration", "Grant navigation"]}
+        ],
+        "colors": {
+          "circle1": "#3B82F6",
+          "circle2": "#10B981",
+          "intersection": "#8B5CF6"
+        },
+        "takeaway": "Partnering with Nyx Foundation delivers both academic prestige and alternative funding—you do not have to choose."
+      }
+    },
+    {
+      "slide_id": "SL03",
+      "visual_spec": {
+        "type": "Big_Number_with_Timeline",
+        "title": "Ethereum Foundation Academic Grants 2025",
+        "data_point": "$2M",
+        "subtitle": "Total Fund (Doubled from 2024)",
+        "supporting_elements": [
+          {"label": "Deadline", "value": "March 23, 2025", "icon": "calendar"},
+          {"label": "Duration", "value": "6-12 months", "icon": "clock"},
+          {"label": "Open to", "value": "Individuals, Teams, Institutions", "icon": "users"}
+        ],
+        "call_to_action": "esp.ethereum.foundation/academic-grants",
+        "visual_treatment": "Large $2M number centered, with three icon+text pairs below in a row",
+        "takeaway": "The 2025 grant round offers twice the funding of 2024, with applications open now and closing March 23rd."
+      }
+    },
+    {
+      "slide_id": "SL04",
+      "visual_spec": {
+        "type": "Horizontal_Bar_Comparison",
+        "title": "Grant Success Rates: EF vs. KAKENHI",
+        "x_axis_label": "Acceptance Rate (%)",
+        "y_axis_label": "",
+        "data_series": [
+          {"name": "EF Academic Grants 2024", "value": 14, "annotation": "41 of 300 applications"},
+          {"name": "KAKENHI Category C", "value": 27, "annotation": "Typical range: 25-30%"}
+        ],
+        "chart_annotations": [
+          {"text": "Competitive but achievable", "position": "above_bars"},
+          {"text": "25 countries represented in EF applicant pool", "position": "footnote"}
+        ],
+        "colors": ["#8B5CF6", "#64748B"],
+        "takeaway": "At 14% acceptance, the EF grant is competitive—but not dramatically harder than domestic grants, especially for quality proposals."
+      }
+    },
+    {
+      "slide_id": "SL05",
+      "visual_spec": {
+        "type": "Category_Grid",
+        "title": "EF Grant Research Priorities",
+        "layout": "2x3_grid",
+        "categories": [
+          {"id": "1", "name": "Applied Cryptography", "examples": "ZKP, MPC, FHE, Signatures", "icon": "lock", "highlight": true},
+          {"id": "2", "name": "Theoretical Cryptography", "examples": "Foundations, Constructions", "icon": "math", "highlight": true},
+          {"id": "3", "name": "Formal Verification", "examples": "Smart Contracts, Protocol Proofs", "icon": "check-shield", "highlight": true},
+          {"id": "4", "name": "Protocol Security", "examples": "Vulnerability Analysis, Client Engineering", "icon": "shield", "highlight": true},
+          {"id": "5", "name": "Consensus Algorithms", "examples": "BFT, Finality, Incentives", "icon": "network"},
+          {"id": "6", "name": "P2P Networking", "examples": "Gossip Protocols, Discovery", "icon": "nodes"}
+        ],
+        "footer_annotation": "Highlighted categories = Direct mapping to SCIS/IWSEC research tracks",
+        "takeaway": "Four of six EF priority areas directly match the research tracks you already present at SCIS and IWSEC."
+      }
+    },
+    {
+      "slide_id": "SL06",
+      "visual_spec": {
+        "type": "Multi_Panel",
+        "title": "ZKP Research: Academic Mainstream + Market Growth",
+        "panels": [
+          {
+            "panel_id": "left",
+            "type": "text_list",
+            "title": "Top-Tier Venues",
+            "items": [
+              "EUROCRYPT 2024-2025: Multiple ZKP sessions",
+              "CRYPTO: SNARK, NIZK constructions",
+              "CCS: Applied ZK protocols",
+              "Berkeley PhD 2025: 'Efficient ZKP: Theory & Practice'"
+            ],
+            "icon": "academic_cap"
+          },
+          {
+            "panel_id": "right",
+            "type": "line_chart",
+            "title": "ZKP Market Projection",
+            "x_axis_label": "Year",
+            "y_axis_label": "Market Size ($B)",
+            "data_points": [
+              {"year": "2024", "value": 1.28},
+              {"year": "2027", "value": 2.5},
+              {"year": "2030", "value": 4.5},
+              {"year": "2033", "value": 7.59}
+            ],
+            "growth_annotation": "22% CAGR",
+            "source": "Industry Reports"
+          }
+        ],
+        "bottom_callout": {
+          "type": "Big_Number",
+          "value": "$28B+",
+          "label": "Total Value Locked in ZK Rollups on Ethereum"
+        },
+        "takeaway": "ZKP research is now academically mainstream and commercially significant—this is not fringe work."
+      }
+    },
+    {
+      "slide_id": "SL07",
+      "visual_spec": {
+        "type": "Case_Study_Cards",
+        "title": "Japanese Cryptographers in Ethereum Research",
+        "card_layout": "horizontal_row",
+        "cards": [
+          {
+            "researcher": "Suga et al.",
+            "affiliation": "Japanese Institutions",
+            "venue": "Financial Cryptography 2020",
+            "work": "Securing Cryptocurrency Exchange",
+            "note": "Based on Japanese regulator data"
+          },
+          {
+            "researcher": "Nakamura",
+            "affiliation": "LayerX / EF Grant Recipient",
+            "venue": "IWSEC, SCIS",
+            "work": "Ethereum 2.0 Consensus Security",
+            "note": "Active presenter in community"
+          },
+          {
+            "researcher": "Dr. Cruz",
+            "affiliation": "Osaka University",
+            "venue": "Academic Research",
+            "work": "Blockchain Infrastructure for Secure Systems",
+            "note": "Institutional research program"
+          }
+        ],
+        "visual_treatment": "Three cards side by side, each with photo placeholder, name, affiliation badge, and publication detail",
+        "takeaway": "Japanese researchers have already published peer-reviewed Ethereum research at respected venues—this path is proven."
+      }
+    },
+    {
+      "slide_id": "SL08",
+      "visual_spec": {
+        "type": "Topic_Alignment_Matrix",
+        "title": "PSE Research Areas × Your Expertise",
+        "column_headers": ["PSE Open Problems", "SCIS/CRYPTREC Alignment", "Research Opportunity"],
+        "rows": [
+          {
+            "pse_topic": "Lattice-based Polynomial Commitments",
+            "alignment": "Post-quantum transition",
+            "opportunity": "High"
+          },
+          {
+            "pse_topic": "Post-quantum ZKP",
+            "alignment": "CRYPTREC priorities",
+            "opportunity": "High"
+          },
+          {
+            "pse_topic": "Folding Schemes",
+            "alignment": "ZKP optimization",
+            "opportunity": "Medium"
+          },
+          {
+            "pse_topic": "Formal Verification",
+            "alignment": "Protocol correctness",
+            "opportunity": "High"
+          }
+        ],
+        "opportunity_indicators": {
+          "High": {"color": "green", "icon": "checkmark"},
+          "Medium": {"color": "yellow", "icon": "dot"}
+        },
+        "footer_elements": [
+          {"label": "ZK Bug Tracker", "type": "resource_link"},
+          {"label": "Bridge Bug Tracker", "type": "resource_link"}
+        ],
+        "takeaway": "PSE's open problems in post-quantum and formal verification align directly with Japan's CRYPTREC research priorities."
+      }
+    },
+    {
+      "slide_id": "SL09",
+      "visual_spec": {
+        "type": "Dual_Axis_Chart",
+        "title": "KAKENHI Budget vs. Purchasing Power (2013-2024)",
+        "x_axis_label": "Year",
+        "y_axis": {
+          "left": {"label": "Nominal Budget (¥B)", "color": "#3B82F6"},
+          "right": {"label": "Real Purchasing Power Index", "color": "#EF4444"}
+        },
+        "data_series": [
+          {
+            "name": "Nominal KAKENHI Budget",
+            "type": "bar",
+            "values": [{"year": "2013", "value": 240}, {"year": "2018", "value": 240}, {"year": "2024", "value": 240}],
+            "annotation": "Stagnant at ~¥240B"
+          },
+          {
+            "name": "Real Purchasing Power",
+            "type": "line",
+            "values": [{"year": "2013", "value": 100}, {"year": "2018", "value": 75}, {"year": "2024", "value": 50}],
+            "annotation": "Halved due to inflation + yen depreciation"
+          }
+        ],
+        "callout_boxes": [
+          {"text": "¥140B cumulative cut to university grants since 2004", "position": "bottom_left"},
+          {"text": "1% annual efficiency coefficient", "position": "bottom_right"}
+        ],
+        "takeaway": "While the KAKENHI budget appears stable, its real purchasing power has halved—forcing researchers to do more with less."
+      }
+    },
+    {
+      "slide_id": "SL10",
+      "visual_spec": {
+        "type": "Stacked_Evidence",
+        "title": "The Research Funding Crisis: Evidence",
+        "sections": [
+          {
+            "section_id": "petition",
+            "type": "Big_Number",
+            "primary_value": "167",
+            "unit": "Academic Associations",
+            "secondary_value": "2.08M Researchers",
+            "context": "July 2024 petition demanding doubled KAKENHI"
+          },
+          {
+            "section_id": "rankings",
+            "type": "Decline_Indicators",
+            "title": "Nature Index 2024 Rankings",
+            "items": [
+              {"institution": "Japan (Overall)", "position": "5th", "change": "↓9% YoY"},
+              {"institution": "University of Tokyo", "position": "23rd", "change": "↓ from 21st"},
+              {"institution": "Kyoto University", "position": "55th", "change": "First time outside top 50"}
+            ]
+          }
+        ],
+        "bottom_quote": {
+          "text": "Doubling unlikely under current budget system",
+          "attribution": "RIKEN President Gonokami"
+        },
+        "takeaway": "The funding crisis is formally recognized by 2.08 million researchers—but institutional change will be slow, requiring individual action now."
+      }
+    },
+    {
+      "slide_id": "SL11",
+      "visual_spec": {
+        "type": "Reinforcement_Loop_Diagram",
+        "title": "How EF Collaboration Strengthens KAKENHI Applications",
+        "components": [
+          {"id": "A", "label": "EF Grant Application", "shape": "rectangle", "position": "top_left"},
+          {"id": "B", "label": "International Collaboration", "shape": "rectangle", "position": "top_right", "highlight": true},
+          {"id": "C", "label": "FY2025 KAKENHI Reform", "shape": "diamond", "position": "center", "annotation": "New 'International Involvement' criterion"},
+          {"id": "D", "label": "KAKENHI Priority Funding", "shape": "rectangle", "position": "bottom_right"},
+          {"id": "E", "label": "Enhanced Research Capacity", "shape": "rectangle", "position": "bottom_left"}
+        ],
+        "connections": [
+          {"from": "A", "to": "B", "label": "Creates documented partnership"},
+          {"from": "B", "to": "C", "label": "Fulfills criterion"},
+          {"from": "C", "to": "D", "label": "Improves ranking"},
+          {"from": "D", "to": "E", "label": "More resources"},
+          {"from": "E", "to": "A", "label": "Enables more applications", "style": "dashed"}
+        ],
+        "layout": "circular_flow",
+        "color_scheme": "green_for_positive_arrows",
+        "takeaway": "EF collaboration is not an alternative to KAKENHI—it is a strategy that makes you more competitive for domestic funding."
+      }
+    },
+    {
+      "slide_id": "SL12",
+      "visual_spec": {
+        "type": "Credibility_Dashboard",
+        "title": "Nyx Foundation: Technical Track Record",
+        "primary_metric": {
+          "type": "Big_Number",
+          "value": "20+",
+          "label": "Vulnerability Reports to Ethereum Clients"
+        },
+        "supporting_metrics": [
+          {"icon": "layers", "label": "Protocol Layers Covered", "value": "Consensus, Execution, Networking"},
+          {"icon": "handshake", "label": "EF Relationships", "value": "Direct with Research Teams"},
+          {"icon": "shield_check", "label": "Approach", "value": "Responsible Disclosure"}
+        ],
+        "credibility_statement": {
+          "text": "Focus: Rigorous security analysis, not marketing or speculation",
+          "style": "italic_subtitle"
+        },
+        "visual_treatment": "Large number top-center, three icon+stat blocks below, statement at bottom",
+        "takeaway": "Nyx Foundation's 20+ vulnerability disclosures demonstrate protocol-level expertise and established credibility with EF research teams."
+      }
+    },
+    {
+      "slide_id": "SL13",
+      "visual_spec": {
+        "type": "Two_Column_Exchange",
+        "title": "Partnership Structure: Capability Exchange",
+        "columns": [
+          {
+            "header": "You Provide",
+            "icon": "graduation_cap",
+            "color": "#3B82F6",
+            "items": [
+              "Cryptographic rigor",
+              "Formal methods expertise",
+              "Security analysis capabilities",
+              "Academic publication quality"
+            ]
+          },
+          {
+            "header": "Nyx Provides",
+            "icon": "network",
+            "color": "#10B981",
+            "items": [
+              "Protocol-level expertise",
+              "Grant navigation support",
+              "Ecosystem access",
+              "Technical collaboration"
+            ]
+          }
+        ],
+        "center_element": {
+          "type": "shield_badge",
+          "label": "PROTECTED",
+          "items": ["Full Publication Rights", "Academic Freedom", "You Define the Research Agenda"]
+        },
+        "visual_treatment": "Two columns with bidirectional arrows meeting at center shield element",
+        "takeaway": "This is a capability exchange that preserves your academic freedom and publication rights—not a funding dependency."
+      }
+    },
+    {
+      "slide_id": "SL14",
+      "visual_spec": {
+        "type": "Action_Timeline",
+        "title": "Your 3-Step Path Forward",
+        "timeline_type": "horizontal_steps",
+        "steps": [
+          {
+            "step_number": 1,
+            "action": "Browse PSE Research Areas",
+            "detail": "pse.dev",
+            "icon": "search",
+            "timeframe": "This week"
+          },
+          {
+            "step_number": 2,
+            "action": "Identify One Overlap",
+            "detail": "Match to your current research",
+            "icon": "target",
+            "timeframe": "Within 1 month"
+          },
+          {
+            "step_number": 3,
+            "action": "Contact Nyx Foundation",
+            "detail": "Discuss collaboration approach",
+            "icon": "message",
+            "timeframe": "Within 3 months"
+          }
+        ],
+        "milestone": {
+          "label": "EF Deadline",
+          "date": "March 23, 2025",
+          "icon": "flag",
+          "position": "end"
+        },
+        "bonus_callout": {
+          "text": "DEPCON Hakodate: Direct engagement opportunity at SCIS2026",
+          "icon": "calendar_star"
+        },
+        "takeaway": "The ask is modest: identify just one research overlap within 3 months—well before the March 23rd deadline."
+      }
+    },
+    {
+      "slide_id": "SL15",
+      "visual_spec": {
+        "type": "Summary_Slide",
+        "title": "The Opportunity Before You",
+        "layout": "centered_stack",
+        "elements": [
+          {
+            "type": "equation_visual",
+            "components": [
+              {"text": "Your Expertise", "style": "bold"},
+              {"text": "+", "style": "operator"},
+              {"text": "Ethereum Scale", "style": "bold"},
+              {"text": "=", "style": "operator"},
+              {"text": "Global Impact", "style": "bold_accent"}
+            ]
+          },
+          {
+            "type": "key_facts_row",
+            "facts": [
+              {"label": "Grant Pool", "value": "$2M"},
+              {"label": "Deadline", "value": "March 23, 2025"},
+              {"label": "Publication Rights", "value": "100% Retained"}
+            ]
+          },
+          {
+            "type": "contact_block",
+            "items": [
+              {"label": "EF Grants", "value": "esp.ethereum.foundation/academic-grants"},
+              {"label": "Partnership", "value": "Nyx Foundation"}
+            ]
+          }
+        ],
+        "closing_statement": {
+          "text": "SCIS2026 is our moment to claim a seat at the table.",
+          "style": "centered_emphasis"
+        },
+        "takeaway": "Ethereum research offers the rare combination of academic prestige, sustainable funding, and global impact—act by March 23rd."
+      }
+    }
+  ]
+}

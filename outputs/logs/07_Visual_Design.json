@@ -1,0 +1,88 @@
+{
+  "step": "07_Visual_Design",
+  "timestamp": "2026-01-22T00:00:00Z",
+  "input": {
+    "slide_drafts_path": "outputs/06_Slide_Drafts.json",
+    "total_slides": 15
+  },
+  "process": {
+    "step_1_analysis": {
+      "description": "Analyzed core message of each slide to determine visual communication need",
+      "messages_identified": {
+        "SL01": "Convergence of multiple factors creating opportunity",
+        "SL02": "Dual benefit proposition (publishing + funding)",
+        "SL03": "Key funding details and deadline",
+        "SL04": "Comparison of acceptance rates",
+        "SL05": "Category alignment between EF and SCIS",
+        "SL06": "Academic legitimacy + market growth",
+        "SL07": "Proof through existing examples",
+        "SL08": "Research topic alignment matrix",
+        "SL09": "Budget stagnation vs purchasing power decline",
+        "SL10": "Crisis evidence from multiple sources",
+        "SL11": "Reinforcing loop between EF and KAKENHI",
+        "SL12": "Credibility through track record",
+        "SL13": "Capability exchange structure",
+        "SL14": "Clear action steps with timeline",
+        "SL15": "Summary and call to action"
+      }
+    },
+    "step_2_visual_selection": {
+      "description": "Selected optimal visual format for each slide's message type",
+      "visual_types_used": {
+        "Timeline_Diagram": 1,
+        "Venn_Diagram": 1,
+        "Big_Number_with_Timeline": 1,
+        "Horizontal_Bar_Comparison": 1,
+        "Category_Grid": 1,
+        "Multi_Panel": 1,
+        "Case_Study_Cards": 1,
+        "Topic_Alignment_Matrix": 1,
+        "Dual_Axis_Chart": 1,
+        "Stacked_Evidence": 1,
+        "Reinforcement_Loop_Diagram": 1,
+        "Credibility_Dashboard": 1,
+        "Two_Column_Exchange": 1,
+        "Action_Timeline": 1,
+        "Summary_Slide": 1
+      },
+      "rationale": {
+        "avoided_defaults": "No pie charts used; bar charts used sparingly and only for direct comparison",
+        "relationship_focus": "Used Venn diagrams and loop diagrams to show interdependencies",
+        "action_orientation": "Final slides use timeline and summary formats to drive action"
+      }
+    },
+    "step_3_specifications": {
+      "description": "Created detailed specifications for each visual",
+      "specification_elements": [
+        "Component definitions with IDs, labels, shapes, colors",
+        "Connection/relationship mappings",
+        "Data series with specific values where available",
+        "Layout instructions",
+        "Annotation placements",
+        "Color schemes"
+      ]
+    },
+    "step_4_takeaways": {
+      "description": "Wrote explicit takeaway statements for all 15 visuals",
+      "takeaway_pattern": "Each takeaway states the conclusion the audience should draw, not just what the visual shows"
+    }
+  },
+  "output": {
+    "file_path": "outputs/07_Visual_Designs.json",
+    "slides_designed": 15,
+    "visual_types_count": 15
+  },
+  "quality_checklist": {
+    "visual_type_effectiveness": true,
+    "specification_detail": true,
+    "takeaway_clarity": true,
+    "all_slides_covered": true,
+    "valid_json": true
+  },
+  "design_principles_applied": [
+    "Gene Zelazny: Match visual type to message type (comparison, trend, relationship)",
+    "Edward Tufte: Maximize data-ink ratio, avoid chartjunk",
+    "Information hierarchy: Primary message in largest/most prominent element",
+    "Action orientation: Final slides designed to drive specific behavior"
+  ]
+}

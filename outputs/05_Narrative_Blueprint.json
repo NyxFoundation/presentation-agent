@@ -1,0 +1,160 @@
+{
+  "narrative_blueprint": {
+    "narrative_archetype_used": "Hybrid (Sparkline opening + Pyramid Principle body)",
+    "estimated_slide_count": 10,
+    "narrative_arc_overview": {
+      "sparkline_opening": "Establish the emotional contrast between Japan's cryptography heritage and current isolation, creating buy-in through shared recognition of structural challenges.",
+      "pyramid_body": "Present the governing thought supported by four key claims: (1) Ethereum research is rigorous and publishable, (2) Japan's expertise is structurally isolated, (3) EF provides credible partnerships, (4) Nyx Foundation bridges the gap.",
+      "call_to_action": "Concrete next steps for engagement with Nyx Foundation's collaborative network."
+    },
+    "slides": [
+      {
+        "slide_number": 1,
+        "slide_id": "SL01",
+        "narrative_beat": "The Hook - Establish Shared Reality",
+        "action_title": "Japan's cryptography expertise remains world-class, yet our researchers are increasingly isolated from global opportunities.",
+        "purpose": "To establish immediate credibility by acknowledging the audience's expertise while naming the structural problem they experience—creating recognition and emotional buy-in.",
+        "evidence_needed": [
+          "Japan's cryptography strength assessment: 'comparable to the U.S. internationally' (METI 2012)",
+          "NISTEP data: Japan's decline from 4th to 13th globally in Top 10% cited papers (1997-1999 vs. 2017-2023)",
+          "Research output share fell from 7.4% to 4.7% between 2005-2015"
+        ],
+        "key_claim_mapping": "Introduces C2 (Japan's expertise is isolated)"
+      },
+      {
+        "slide_number": 2,
+        "slide_id": "SL02",
+        "narrative_beat": "The Status Quo - The Structural Problem",
+        "action_title": "While global research investment grew 80%, Japan's stagnation has eroded the collaborative infrastructure that once made us formidable.",
+        "purpose": "To deepen the problem statement with concrete data, shifting blame from individual researchers to systemic factors—validating the audience's experience without accusation.",
+        "evidence_needed": [
+          "U.S. and Germany increased university research spending 80% over 20 years; Japan increased only 10%",
+          "2024 Kakenhi signature campaign: 12 major academic associations demanded doubled research funding",
+          "¥140 billion in cumulative funding cuts reference"
+        ],
+        "key_claim_mapping": "Develops C2 (structural isolation evidence)"
+      },
+      {
+        "slide_number": 3,
+        "slide_id": "SL03",
+        "narrative_beat": "The Vision - The Promised Land",
+        "action_title": "A new frontier of cryptographic research has emerged where Japan's expertise could reclaim global influence—if we reconnect.",
+        "purpose": "To pivot from problem to opportunity, introducing Ethereum research as an unexplored pathway to re-engagement with global research networks.",
+        "evidence_needed": [
+          "Ethereum as a trillion-yen-scale system used by millions worldwide",
+          "The emergence of applied cryptography as a high-impact research domain",
+          "Brief mention of unsolved problems awaiting expertise"
+        ],
+        "key_claim_mapping": "Transitions toward C1 (Ethereum as research frontier)"
+      },
+      {
+        "slide_number": 4,
+        "slide_id": "SL04",
+        "narrative_beat": "The Bridge - Governing Thought",
+        "action_title": "Ethereum Foundation's unsolved research problems offer cryptographically rigorous, publishable challenges that align directly with your existing expertise.",
+        "purpose": "To state the governing thought clearly: Ethereum research is legitimate, rigorous, and publishable—directly addressing the primary skepticism the audience may hold.",
+        "evidence_needed": [
+          "Zero-knowledge proof papers from EUROCRYPT (Aurora 2019, Groth16 2016), CRYPTO (Lattice-based SNARKs 2022), ASIACRYPT",
+          "PSE research areas: ZK-SNARKs, FHE, MPC, post-quantum cryptography",
+          "Connection to audience's known specializations"
+        ],
+        "key_claim_mapping": "C1 (Ethereum research is rigorous and publishable)"
+      },
+      {
+        "slide_number": 5,
+        "slide_id": "SL05",
+        "narrative_beat": "The Proof - Evidence of Academic Legitimacy",
+        "action_title": "The distinction between 'theory' and 'practice' has dissolved—Ethereum research now appears in the same top venues where you publish.",
+        "purpose": "To provide concrete publication evidence that overcomes the anticipated counterargument that Ethereum research lacks theoretical depth.",
+        "evidence_needed": [
+          "Specific citations: Aurora (EUROCRYPT 2019), Groth16 (EUROCRYPT 2016), Lattice-based SNARKs (CRYPTO 2022)",
+          "List of cryptographers from top institutions contributing to Ethereum research",
+          "Examples of formal security proofs and novel proof systems emerging from this domain"
+        ],
+        "key_claim_mapping": "Reinforces C1 with publication evidence"
+      },
+      {
+        "slide_number": 6,
+        "slide_id": "SL06",
+        "narrative_beat": "The Proof - Concrete Research Opportunities",
+        "action_title": "The Ethereum Foundation Academic Grants program funds 41 projects annually with dedicated support for cryptography, formal verification, and security research.",
+        "purpose": "To establish EF as a credible, well-funded research partner with scale and selectivity that complements academic obligations.",
+        "evidence_needed": [
+          "2025 Academic Grants Round: $2 million dedicated fund",
+          "2024 round success: 41 projects funded from 300 applications across 25 countries",
+          "6-12 month project timelines designed for academic schedules",
+          "Research domains: Applied/Theoretical Cryptography, Formal Verification, Consensus, Security"
+        ],
+        "key_claim_mapping": "C3 (EF provides credible funded partnerships)"
+      },
+      {
+        "slide_number": 7,
+        "slide_id": "SL07",
+        "narrative_beat": "The Proof - Specific RFP Topics",
+        "action_title": "PSE's research problems—from anonymous signaling to private voting to post-quantum signatures—require exactly the expertise this room possesses.",
+        "purpose": "To make the opportunity concrete and personal by connecting specific RFP topics to the audience's known specializations, demonstrating direct relevance.",
+        "evidence_needed": [
+          "PSE Acceleration Program RFP topics: Semaphore (anonymous signaling), MACI (private voting), Proof of Email (signature verification)",
+          "Post-quantum cryptography requirements",
+          "FHE and MPC research areas",
+          "Reference to Suga-san's ISO/TC307 involvement as proof of blockchain work's legitimacy"
+        ],
+        "key_claim_mapping": "Connects C1 and C3 to audience expertise"
+      },
+      {
+        "slide_number": 8,
+        "slide_id": "SL08",
+        "narrative_beat": "The Bridge - Nyx Foundation's Role",
+        "action_title": "Nyx Foundation provides the collaborative infrastructure to translate Japanese cryptographic expertise into Ethereum research contributions.",
+        "purpose": "To introduce Nyx Foundation as the practical mechanism that reduces friction for engagement—a connector rather than a gatekeeper.",
+        "evidence_needed": [
+          "Nyx Foundation's position as connector to PSE and EF networks",
+          "Understanding of both Japanese academic culture and Ethereum research priorities",
+          "Translation of technical contexts and warm introductions",
+          "Grant application process support"
+        ],
+        "key_claim_mapping": "C4 (Nyx Foundation bridges the gap)"
+      },
+      {
+        "slide_number": 9,
+        "slide_id": "SL09",
+        "narrative_beat": "The Benefit - Graduate Student Development",
+        "action_title": "These collaborations benefit not just individual PIs but entire research groups, offering graduate students globally recognized research opportunities.",
+        "purpose": "To appeal to the audience's responsibility as mentors and research group leaders, making participation beneficial to their broader academic mission.",
+        "evidence_needed": [
+          "Graduate student development opportunities through research collaborations",
+          "Exposure to global research networks for the next generation",
+          "Portfolio-building through contribution to open-source tools used worldwide",
+          "Mutual benefit structure: Japanese researchers gain funded problems; Ethereum gains world-class expertise"
+        ],
+        "key_claim_mapping": "Extends C4 to mentorship benefits"
+      },
+      {
+        "slide_number": 10,
+        "slide_id": "SL10",
+        "narrative_beat": "The Call to Action",
+        "action_title": "Join Nyx Foundation's community to explore these opportunities—the path from isolation to global impact begins with a single conversation.",
+        "purpose": "To provide a clear, low-friction next step that respects their autonomy while opening the door to deeper engagement.",
+        "evidence_needed": [
+          "Concrete next steps: community participation pathways",
+          "Contact information and engagement mechanisms",
+          "Invitation to follow-up conversations with relevant research teams",
+          "Emphasis on preserving full autonomy for direct EF collaboration"
+        ],
+        "key_claim_mapping": "Action enablement for all claims"
+      }
+    ],
+    "action_title_story_sequence": [
+      "Japan's cryptography expertise remains world-class, yet our researchers are increasingly isolated from global opportunities.",
+      "While global research investment grew 80%, Japan's stagnation has eroded the collaborative infrastructure that once made us formidable.",
+      "A new frontier of cryptographic research has emerged where Japan's expertise could reclaim global influence—if we reconnect.",
+      "Ethereum Foundation's unsolved research problems offer cryptographically rigorous, publishable challenges that align directly with your existing expertise.",
+      "The distinction between 'theory' and 'practice' has dissolved—Ethereum research now appears in the same top venues where you publish.",
+      "The Ethereum Foundation Academic Grants program funds 41 projects annually with dedicated support for cryptography, formal verification, and security research.",
+      "PSE's research problems—from anonymous signaling to private voting to post-quantum signatures—require exactly the expertise this room possesses.",
+      "Nyx Foundation provides the collaborative infrastructure to translate Japanese cryptographic expertise into Ethereum research contributions.",
+      "These collaborations benefit not just individual PIs but entire research groups, offering graduate students globally recognized research opportunities.",
+      "Join Nyx Foundation's community to explore these opportunities—the path from isolation to global impact begins with a single conversation."
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "audience_persona": {
+    "target_input": "張一凡,江村 恵太,荒木俊輔,Yuji Suga (金沢大学,筑波大学,茨城大学,NTT社会情報学研究所,イーサリアム財団)",
+    "audience_type": "multiple",
+    "individuals": [
+      {
+        "name": "張一凡 (Yifan Zhang)",
+        "organization": "金沢大学 (Kanazawa University)",
+        "role": "Researcher (limited public information available; likely graduate student or early-career researcher in information security)"
+      },
+      {
+        "name": "江村恵太 (Keita Emura)",
+        "organization": "金沢大学 (Kanazawa University) / Visiting Researcher at AIST",
+        "role": "Associate Professor, Department of Electronics and Information Communications; former Senior Researcher at NICT Cybersecurity Laboratory (2012-2023). Expert in high-function cryptography, searchable encryption, and group signatures."
+      },
+      {
+        "name": "荒木俊輔 (Shunsuke Araki)",
+        "organization": "九州工業大学 (Kyushu Institute of Technology)",
+        "role": "Associate Professor, Faculty of Computer Science and Systems Engineering. Expert in pseudorandom number generation, chaos-based cryptography, IoT security, and blockchain privacy/scalability."
+      },
+      {
+        "name": "須賀祐治 (Yuji Suga)",
+        "organization": "株式会社インターネットイニシアティブ (IIJ)",
+        "role": "Senior Engineer, Security Information Management Office. CRYPTREC member, ISO/TC307 expert, CELLOS secretary. Expert in cryptography, blockchain, and cryptocurrency security."
+      }
+    ],
+    "composite_summary": "A composite audience of established cryptography and security researchers spanning academia and industry. The group includes university professors specializing in theoretical cryptography and applied security (Emura, Araki), and an industry practitioner deeply engaged in cryptographic standards and blockchain security (Suga). They share expertise in cryptography foundations but differ in application focus: Emura emphasizes high-function cryptography and searchable encryption; Araki focuses on pseudorandom generation, IoT security, and blockchain scalability; Suga bridges practical blockchain/cryptocurrency security with standards development. All are active in SCIS and Japanese security research communities.",
+    "motivations_and_priorities": [
+      {
+        "motivation": "Advancing cryptographic research with real-world impact",
+        "evidence": "All individuals have track records of publications addressing practical applications—blockchain security (Emura/Araki/Suga), IoT security (Araki), cryptocurrency key management (Suga)"
+      },
+      {
+        "motivation": "Bridging theoretical cryptography with practical implementation",
+        "evidence": "Emura's research on blockchain-based auction systems; Araki's work on Ethereum lightning networks and digital signatures for CAN protocols; Suga's CRYPTREC TLS guidelines and cryptocurrency exchange security standards"
+      },
+      {
+        "motivation": "Contributing to international cryptographic standards and collaboration",
+        "evidence": "Suga's involvement in ISO/TC307 (blockchain), CRYPTREC; Emura's international publications and conference organizing; Araki's IEEE publications and international workshop organization"
+      },
+      {
+        "motivation": "Supporting next-generation researcher development",
+        "evidence": "All are academics or mentors actively supervising graduate students and publishing with junior researchers"
+      },
+      {
+        "motivation": "Exploring blockchain and Ethereum-related research opportunities",
+        "evidence": "Araki's recent SCIS2024 presentation on 'eltoo protocol for Ethereum lightning network fee reduction'; Suga's expertise in cryptocurrency security and blockchain standardization; Emura's collaborative research on anonymous trust-marking on blockchain systems"
+      }
+    ],
+    "potential_biases_and_objections": [
+      {
+        "bias": "High technical rigor expectations",
+        "reasoning": "As established cryptography researchers with strong publication records (Emura: 143+ papers; Araki: 76 publications), they will scrutinize technical claims and expect formal security proofs or solid theoretical foundations"
+      },
+      {
+        "bias": "Preference for peer-reviewed, academically recognized work",
+        "reasoning": "Academic audience members prioritize research that can be published in venues like SCIS, IWSEC, and international cryptography conferences"
+      },
+      {
+        "objection": "Is this research novel and publishable?",
+        "reasoning": "Academics evaluate opportunities through the lens of potential research output; need to demonstrate that Ethereum research offers publishable problems"
+      },
+      {
+        "objection": "What is the theoretical depth of Ethereum's research problems?",
+        "reasoning": "Cryptography researchers may perceive blockchain/Ethereum as more engineering-focused; need to highlight cryptographically interesting challenges (ZK proofs, post-quantum, formal verification)"
+      },
+      {
+        "objection": "How does this fit with existing research programs and funding?",
+        "reasoning": "Researchers have ongoing KAKENHI projects and institutional obligations; new collaborations must complement existing work"
+      },
+      {
+        "objection": "Is the Ethereum Foundation a credible research partner?",
+        "reasoning": "May need to establish EF's research credentials and grant track record with Japanese researchers"
+      }
+    ],
+    "communication_preferences": {
+      "preferred_style": "Technical, precise, and evidence-based. Use formal academic communication conventions with clear problem statements, methodology descriptions, and security analysis frameworks.",
+      "likes": [
+        "Concrete research problems with clear cryptographic foundations (e.g., zero-knowledge proofs, homomorphic encryption, post-quantum cryptography)",
+        "References to peer-reviewed work and established security models",
+        "Clear explanation of how problems connect to existing cryptography literature",
+        "Specific grant opportunities with defined scope and funding amounts",
+        "Collaborative research opportunities that can lead to co-authored publications",
+        "Technical depth that respects their expertise level"
+      ],
+      "dislikes": [
+        "Marketing or hype language ('revolutionary', 'game-changing')",
+        "Unsubstantiated claims about security or performance",
+        "Oversimplification of complex cryptographic concepts",
+        "Vague promises without concrete research proposals",
+        "Dismissing academic contribution as 'just theory'",
+        "Assuming unfamiliarity with blockchain—they already know the basics"
+      ]
+    },
+    "decision_making_criteria": [
+      "Technical Merit: Does the proposed research address genuine cryptographic challenges with appropriate rigor?",
+      "Research Novelty: Can this work be published in top-tier venues (CRYPTO, EUROCRYPT, ASIACRYPT, SCIS)?",
+      "Practical Impact: Does solving this problem improve real-world security for significant user populations?",
+      "Alignment with Expertise: Does the opportunity leverage their specific cryptographic specializations?",
+      "Funding Viability: Are grant amounts and timelines realistic for academic research?",
+      "Collaboration Quality: Will partners contribute meaningful expertise and maintain research integrity?",
+      "Career Development: Does this opportunity benefit graduate students and early-career researchers in their groups?"
+    ],
+    "audience_diversity_notes": "This audience spans three distinct profiles that the presentation must address: (1) Academic cryptographers (Emura, Araki, possibly Zhang) who prioritize publishable research problems, theoretical rigor, and student training opportunities; (2) Industry practitioner (Suga) who values practical security standards, real-world threat models, and industry-applicable solutions; (3) Varying levels of Ethereum familiarity—Suga has direct blockchain/cryptocurrency expertise and likely knows Ethereum well, while others may be more familiar with cryptographic primitives than Ethereum-specific architecture. The presentation should provide sufficient Ethereum context without being condescending, emphasize cryptographically interesting problems (ZK-SNARKs, post-quantum signatures, formal verification of smart contracts), and clearly articulate how the Ethereum Foundation's RFP topics connect to established cryptography research areas."
+  }
+}

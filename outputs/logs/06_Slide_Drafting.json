@@ -1,0 +1,149 @@
+{
+  "step": "06_Slide_Drafting",
+  "timestamp": "2026-01-22T00:00:00Z",
+  "inputs": {
+    "narrative_blueprint": "outputs/05_Narrative_Blueprint.json",
+    "context_brief": "outputs/01_Context_Brief.json",
+    "tone": "Respectfully ambitious and intellectually rigorous"
+  },
+  "research_conducted": {
+    "japan_research_context": [
+      {
+        "topic": "Japan research funding decline",
+        "key_findings": [
+          "US and Germany increased university research spending 80% over 20 years; Japan only 10%",
+          "¥140 billion cumulative reduction in national university operating grants since 2004",
+          "1% annual efficiency coefficient applied since 2004 corporatization",
+          "2024 Kakenhi campaign: 12 academic associations demanded doubled funding"
+        ],
+        "sources": [
+          "https://www.mdpi.com/2304-6775/13/2/27",
+          "https://sj.jst.go.jp/news/202510/n1007-03k.html",
+          "https://www.nature.com/articles/d41586-024-00942-8"
+        ]
+      },
+      {
+        "topic": "Japan scientific research output decline",
+        "key_findings": [
+          "Japan dropped to 13th globally in Top 10% cited papers (from 4th in late 1990s)",
+          "Japan is the only country in top 10 that experienced decline in annual papers",
+          "Faculty research time fell from 46.5% (2002) to 37.2% (2008)",
+          "NISTEP 2025 confirms 'decline in presence cannot be denied'"
+        ],
+        "sources": [
+          "https://sj.jst.go.jp/news/202309/n0928-03k.html",
+          "https://sj.jst.go.jp/news/202509/n0924-03k.html",
+          "https://www.nippon.com/en/japan-data/h01767/"
+        ]
+      },
+      {
+        "topic": "Japan cryptography infrastructure",
+        "key_findings": [
+          "CRYPTREC comparable to NESSIE (EU) and NIST AES process (US)",
+          "Japanese researchers founded ASIACRYPT in 1990",
+          "CRYPTREC jointly constituted by MIC, METI, NICT, and IPA"
+        ],
+        "sources": [
+          "https://www.cryptrec.go.jp/en/about.html",
+          "https://en.wikipedia.org/wiki/CRYPTREC"
+        ]
+      }
+    ],
+    "ethereum_academic_legitimacy": [
+      {
+        "topic": "Zero-knowledge proof publications",
+        "key_findings": [
+          "Groth16 (EUROCRYPT 2016): foundational pairing-based SNARK",
+          "Aurora (EUROCRYPT 2019): transparent succinct arguments by Ben-Sasson, Chiesa et al.",
+          "Lattice-based SNARKs (CRYPTO 2022): first post-quantum secure publicly-verifiable SNARK"
+        ],
+        "sources": [
+          "https://alinush.github.io/groth16",
+          "https://www.researchgate.net/publication/333081899_Aurora_Transparent_Succinct_Arguments_for_R1CS",
+          "https://link.springer.com/chapter/10.1007/978-3-031-15979-4_4"
+        ]
+      },
+      {
+        "topic": "Ethereum market scale",
+        "key_findings": [
+          "Ethereum market cap: $400+ billion",
+          "Zero-knowledge proof market: $1.28B (2024) projected to $7.59B by 2033",
+          "$28+ billion locked in ZK-based rollups"
+        ],
+        "sources": [
+          "https://coinmarketcap.com/currencies/ethereum/",
+          "https://www.nasdaq.com/articles/prediction-ethereum-will-hit-1-trillion-market-cap-2025"
+        ]
+      }
+    ],
+    "ef_grants_and_pse": [
+      {
+        "topic": "EF Academic Grants",
+        "key_findings": [
+          "2025 round: $2 million dedicated fund, due March 16, 2025",
+          "2024 round: 41 projects funded from 300 applications across 25+ countries",
+          "Domains: Cryptography, Formal Verification, Consensus, Security",
+          "6-12 month project timelines"
+        ],
+        "sources": [
+          "https://esp.ethereum.foundation/academic-grants",
+          "https://blog.ethereum.org/2025/01/17/academic-grants-recipients",
+          "https://blog.ethereum.org/2025/01/21/academic-round-25"
+        ]
+      },
+      {
+        "topic": "PSE research programs",
+        "key_findings": [
+          "PSE rebranded to Privacy Stewards of Ethereum in Sept 2025",
+          "Key projects: Semaphore (anonymous signaling), MACI (private voting), ZK Email",
+          "Acceleration Program supports ZKP, FHE, MPC research through grants and mentorship"
+        ],
+        "sources": [
+          "https://pse.dev/",
+          "https://maci.pse.dev/blog/2024-team-roadmap/",
+          "https://pse.dev/projects/zk-email"
+        ]
+      }
+    ],
+    "fhe_mpc_research": [
+      {
+        "topic": "FHE and MPC in Ethereum",
+        "key_findings": [
+          "Active research on confidential EVM smart contracts using FHE",
+          "New frameworks reduce FHE key material by 40-99.9%",
+          "Integration challenges for MPC in decentralized Proof of Stake systems"
+        ],
+        "sources": [
+          "https://eprint.iacr.org/2025/965",
+          "https://fhe.org/conferences/conference-2025/"
+        ]
+      }
+    ]
+  },
+  "drafting_approach": {
+    "tone_applied": "Respectfully ambitious and intellectually rigorous - acknowledging audience expertise while presenting opportunity without condescension",
+    "bullet_style": "Telegraphic language with specific data points; prioritized concrete metrics over vague assertions",
+    "speaker_notes_style": "Narrative arc with emotional resonance; explains 'why' behind data; provides transitions between slides",
+    "quality_checks_completed": [
+      "Key points provide direct factual support for action titles",
+      "Bullets are concise and easy to scan",
+      "Speaker notes tell coherent story without repeating bullet text",
+      "Tone consistent with 'respectfully ambitious and intellectually rigorous'",
+      "Content gaps logged as prioritized TODOs",
+      "Output is valid JSON"
+    ]
+  },
+  "todos_identified": [
+    {
+      "slide": "SL10",
+      "item": "Obtain specific contact method and URL for Nyx Foundation community engagement",
+      "severity": "Medium"
+    },
+    {
+      "slide": "SL10",
+      "item": "Confirm DEPCON Hakodate event details (date, venue, registration process)",
+      "severity": "Low"
+    }
+  ],
+  "output": "outputs/06_Slide_Drafts.json"
+}

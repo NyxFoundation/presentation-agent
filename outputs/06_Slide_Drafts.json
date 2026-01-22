@@ -1,0 +1,133 @@
+{
+  "slide_drafts": [
+    {
+      "slide_id": "SL01",
+      "action_title": "Japan's cryptography expertise remains world-class, yet our researchers are increasingly isolated from global opportunities.",
+      "key_points": [
+        "- CRYPTREC: Japan maintains cryptographic evaluation infrastructure comparable to NESSIE (EU) and NIST AES (US)",
+        "- ASIACRYPT: Japanese researchers founded Asia's first major cryptography conference in 1990—now one of the world's three leading venues",
+        "- NISTEP 2025: Japan dropped to 13th globally in Top 10% cited papers, down from 4th in the late 1990s",
+        "- Research output share: declined from 7.4% to 4.7% between 2005-2015"
+      ],
+      "speaker_notes": "Thank you for being here today. I want to begin by acknowledging something we all know but rarely confront directly: Japan's cryptography community has built extraordinary capabilities. CRYPTREC stands alongside Europe's NESSIE and America's NIST as a global standard-setter. Japanese researchers founded ASIACRYPT in 1990, creating what became one of the world's three premier cryptography conferences. This is not a room lacking in expertise or achievement.\n\nBut something has changed. The latest NISTEP data tells a troubling story. Japan has fallen from 4th to 13th place globally in high-impact publications. Our share of world research output has declined by nearly 40% in a decade. The talent in this room remains world-class, but the infrastructure that once connected Japanese researchers to global networks has eroded. The question before us today is: how do we rebuild those bridges?",
+      "todos": []
+    },
+    {
+      "slide_id": "SL02",
+      "action_title": "While global research investment grew 80%, Japan's stagnation has eroded the collaborative infrastructure that once made us formidable.",
+      "key_points": [
+        "- 20-year funding gap: US and Germany increased university research spending 80%; Japan increased only 10%",
+        "- ¥140 billion cumulative reduction in national university operating grants since 2004",
+        "- 2024 Kakenhi campaign: 12 major academic associations demanded doubled funding (from ¥240B to ¥480B)",
+        "- Research time erosion: faculty research time fell from 46.5% (2002) to 37.2% (2008), unchanged through 2018"
+      ],
+      "speaker_notes": "The numbers reveal a structural problem, not an individual one. Over the past two decades, the United States and Germany each increased their university research spending by roughly 80%. South Korea increased theirs by 300%. China by over 900%. Japan? Just 10%.\n\nThis isn't abstract. Since 2004, cumulative cuts to national university operating grants have exceeded ¥140 billion. The result? Faculty research time has collapsed—from nearly half of their workweek to barely a third. Last year, twelve major academic associations launched a signature campaign demanding a doubling of Kakenhi funding. They weren't asking for luxury; they were asking for survival.\n\nThe talent hasn't diminished. The infrastructure has. And that infrastructure gap is what keeps Japanese expertise from reaching global opportunities. But today I want to show you one such opportunity that remains wide open.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL03",
+      "action_title": "A new frontier of cryptographic research has emerged where Japan's expertise could reclaim global influence—if we reconnect.",
+      "key_points": [
+        "- Ethereum: a $400+ billion network securing trillions in annual transaction value",
+        "- Zero-knowledge proof market: $1.28 billion (2024), projected to reach $7.59 billion by 2033",
+        "- Applied cryptography now appears in the same venues as theoretical work (EUROCRYPT, CRYPTO, ASIACRYPT)",
+        "- Open problems in ZK-SNARKs, FHE, MPC, and post-quantum cryptography await expert attention"
+      ],
+      "speaker_notes": "Here is the opportunity. Ethereum has evolved into a global financial infrastructure securing hundreds of billions of dollars in value. But more importantly for this audience, it has become a crucible for applied cryptography research at the highest level.\n\nThe zero-knowledge proof market alone is projected to grow from $1.28 billion to nearly $8 billion by 2033. And the problems driving this growth—efficient proof systems, fully homomorphic encryption, secure multi-party computation, post-quantum resistance—these are not engineering puzzles. They are fundamental cryptographic challenges that require exactly the kind of theoretical rigor this room possesses.\n\nThe line between 'theoretical' and 'applied' cryptography has dissolved. The same conferences that publish foundational work—EUROCRYPT, CRYPTO, ASIACRYPT—are now publishing Ethereum-related research. This is not a departure from academic cryptography. It is its newest frontier.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL04",
+      "action_title": "Ethereum Foundation's unsolved research problems offer cryptographically rigorous, publishable challenges that align directly with your existing expertise.",
+      "key_points": [
+        "- PSE research domains: ZK-SNARKs, Fully Homomorphic Encryption (FHE), Multi-Party Computation (MPC), post-quantum cryptography",
+        "- Research impact: $28+ billion locked in ZK-based rollups; 60% of ZKP transactions processed on Ethereum L2s",
+        "- Open problems: lattice-based SNARKs, threshold FHE, collusion-resistant voting, anonymous signaling protocols",
+        "- Academic tradition: formal security proofs, novel proof systems, and rigorous cryptanalysis"
+      ],
+      "speaker_notes": "Let me be specific about what kind of research we're discussing. The Ethereum Foundation's Privacy and Scaling Explorations team—PSE—works on problems that will be immediately familiar to anyone in this room: zero-knowledge proof construction, fully homomorphic encryption schemes, multi-party computation protocols, and post-quantum cryptographic primitives.\n\nThese aren't simplified versions of academic problems. They're the same problems, but with massive real-world stakes. Over $28 billion currently sits in systems secured by zero-knowledge proofs. Any breakthrough in proof efficiency, any advance in FHE performance, any improvement in MPC security—these have immediate, measurable impact.\n\nAnd critically, the research standards remain academic. Formal security proofs. Novel proof systems. Rigorous cryptanalysis. The work is publishable because it meets the same standards you already hold yourselves to.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL05",
+      "action_title": "The distinction between 'theory' and 'practice' has dissolved—Ethereum research now appears in the same top venues where you publish.",
+      "key_points": [
+        "- Groth16 (EUROCRYPT 2016): foundational pairing-based SNARK, now deployed in zkSync and other L2 systems",
+        "- Aurora (EUROCRYPT 2019): transparent succinct arguments with O(log² n) proof size, by Ben-Sasson, Chiesa et al.",
+        "- Lattice-based SNARKs (CRYPTO 2022): first publicly-verifiable, post-quantum secure SNARK construction",
+        "- Contributing institutions: Stanford, MIT, UC Berkeley, EPFL, and researchers across major Ethereum teams"
+      ],
+      "speaker_notes": "If you have any doubt about the academic legitimacy of this work, consider the publication record. Jens Groth's 2016 EUROCRYPT paper on pairing-based arguments—now universally called 'Groth16'—has become the foundation for billions of dollars in deployed infrastructure. The Aurora proof system, published at EUROCRYPT 2019 by Ben-Sasson, Chiesa, and colleagues, introduced transparent arguments that are now standard components in blockchain scaling.\n\nAt CRYPTO 2022, Albrecht and colleagues presented the first lattice-based SNARK that is simultaneously post-quantum secure, publicly verifiable, and recursively composable. This is frontier cryptography, published in the field's top venues.\n\nThe researchers contributing to this ecosystem come from Stanford, MIT, Berkeley, EPFL—the same institutions whose work you already cite. The venues are the same. The rigor is the same. Only the application context is new.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL06",
+      "action_title": "The Ethereum Foundation Academic Grants program funds 41 projects annually with dedicated support for cryptography, formal verification, and security research.",
+      "key_points": [
+        "- 2025 Academic Grants Round: $2 million dedicated fund, proposals due March 16, 2025",
+        "- 2024 results: 41 projects funded from global applicants across 25+ countries",
+        "- Research domains: Applied/Theoretical Cryptography, Formal Verification, Consensus, Security, Economics",
+        "- Project timelines: 6-12 months, designed to fit academic schedules; open-access output required"
+      ],
+      "speaker_notes": "The Ethereum Foundation has created a formal pathway for academic engagement. The Academic Grants program operates annual rounds with dedicated funding—$2 million for the 2025 round alone. Last year, they funded 41 projects from researchers across more than 25 countries.\n\nThe domains align precisely with this audience's expertise: theoretical and applied cryptography, formal verification, consensus mechanisms, security analysis, and the economics of decentralized systems. Project timelines are designed for academic realities—six to twelve months—and the only requirement is that research outputs be open-access.\n\nThis isn't speculative. These grants exist. The 2025 round is accepting proposals through March. The infrastructure for academic participation is already built.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL07",
+      "action_title": "PSE's research problems—from anonymous signaling to private voting to post-quantum signatures—require exactly the expertise this room possesses.",
+      "key_points": [
+        "- Semaphore: anonymous group signaling with double-spend prevention—requires efficient proof construction",
+        "- MACI: minimal anti-collusion infrastructure for private voting—requires formal verification and cryptanalysis",
+        "- ZK Email: privacy-preserving email verification using DKIM signatures—novel protocol design challenge",
+        "- Post-quantum migration: lattice-based proof systems, hash-based signatures, FHE key management"
+      ],
+      "speaker_notes": "Let me make this concrete. PSE maintains active research programs in areas that map directly to Japanese cryptographic strengths.\n\nSemaphore is an anonymous signaling protocol that lets users prove group membership without revealing identity—while preventing double-signaling. The core challenge is efficient zero-knowledge proof construction with robust security guarantees. MACI, the Minimal Anti-Collusion Infrastructure, enables private voting resistant to bribery. It requires formal verification of the cryptographic protocol and systematic cryptanalysis of edge cases.\n\nZK Email allows privacy-preserving verification of email authenticity using existing DKIM signatures—a novel protocol design problem. And the post-quantum migration challenge—moving these systems to lattice-based primitives—is perhaps the most urgent open problem in deployed cryptography today.\n\nThese are not simplified problems. They are frontier research questions with immediate applications.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL08",
+      "action_title": "Nyx Foundation provides the collaborative infrastructure to translate Japanese cryptographic expertise into Ethereum research contributions.",
+      "key_points": [
+        "- Bridge function: connecting Japanese academic researchers with PSE and EF research networks",
+        "- Cultural context: understanding of both Japanese academic culture and Ethereum research priorities",
+        "- Practical support: warm introductions, grant application assistance, technical context translation",
+        "- Track record: 20+ vulnerability reports to Ethereum clients; deep technical credibility"
+      ],
+      "speaker_notes": "This is where Nyx Foundation enters the picture. Our role is straightforward: we reduce the friction between Japanese academic expertise and Ethereum research opportunities.\n\nWe understand both contexts. We know the rhythms of Japanese academic life—the teaching loads, the administrative requirements, the publication pressures. And we have deep connections within the Ethereum research community, including PSE and the broader Ethereum Foundation ecosystem.\n\nConcretely, this means warm introductions to relevant researchers, assistance navigating grant applications, and translation of technical context in both directions. Our team has contributed over 20 vulnerability reports to Ethereum clients. We bring technical credibility alongside cultural understanding.\n\nWe are not gatekeepers. We are connectors. Any researcher who wishes to engage directly with the Ethereum Foundation is welcome to do so. Our goal is simply to make that path easier to find.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL09",
+      "action_title": "These collaborations benefit not just individual PIs but entire research groups, offering graduate students globally recognized research opportunities.",
+      "key_points": [
+        "- Graduate student development: exposure to global research networks and international collaboration",
+        "- Portfolio building: contributions to open-source tools used by millions worldwide",
+        "- Publication pathways: co-authorship on work targeting top cryptography venues",
+        "- Mutual benefit: Japanese expertise addresses Ethereum's hardest problems; researchers gain funded projects"
+      ],
+      "speaker_notes": "I want to speak directly to those of you who lead research groups. The benefits here extend beyond your own work to your students.\n\nEthereum research offers graduate students something increasingly rare: genuine exposure to global research networks. Your students can contribute to open-source cryptographic tools used by millions. They can co-author papers targeting the same top venues where you publish. They gain experience collaborating with international teams in real time.\n\nThis matters for the next generation of Japanese cryptographers. The isolation we discussed at the start of this presentation affects young researchers most acutely. International collaboration early in a career compounds over a lifetime.\n\nThe structure is mutual benefit. Ethereum has genuinely hard problems that require world-class expertise. Japanese cryptographers have that expertise but lack funded avenues to apply it globally. This partnership addresses both needs simultaneously.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL10",
+      "action_title": "Join Nyx Foundation's community to explore these opportunities—the path from isolation to global impact begins with a single conversation.",
+      "key_points": [
+        "- Immediate action: review PSE's Research Request for Proposals (RFP) list for current priority problems",
+        "- Next step: contact Nyx Foundation to discuss your research interests and relevant opportunities",
+        "- Engagement model: we support direct EF collaboration while providing guidance and introductions",
+        "- Upcoming events: EDCON 2025 (Osaka), ZK Tokyo, and DEPCON gatherings create ongoing connection points"
+      ],
+      "speaker_notes": "Let me close with a concrete invitation. If any problem I've described today resonates with your research interests, I encourage you to take one step: review the PSE Research Request for Proposals list. It details the specific problems where contributions would have the greatest impact.\n\nIf you see alignment with your work, reach out to us at Nyx Foundation. We'll help you understand the context, make relevant introductions, and support your engagement—whether that leads to a grant application, a research collaboration, or simply an ongoing conversation.\n\nWe're not asking you to change your research direction. We're offering a bridge to global opportunities that align with work you're already doing. The path from structural isolation to global impact doesn't require transformation. It requires connection.\n\nThank you for your time. I look forward to our conversation.",
+      "todos": [
+        {
+          "item": "Obtain specific contact method and URL for Nyx Foundation community engagement",
+          "severity": "Medium"
+        },
+        {
+          "item": "Confirm DEPCON Hakodate event details (date, venue, registration process)",
+          "severity": "Low"
+        }
+      ]
+    }
+  ]
+}

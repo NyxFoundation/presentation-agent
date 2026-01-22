@@ -1,0 +1,72 @@
+{
+  "step": "04_Governing_Argument",
+  "timestamp": "2026-01-22T00:00:00Z",
+  "inputs": {
+    "core_strategy": "outputs/03_Core_Strategy.json",
+    "audience_persona": "outputs/02_Audience_Persona.json"
+  },
+  "process_notes": {
+    "governing_thought_construction": "Elevated the core_message from Core Strategy into a comprehensive Governing Thought following the structure: 'In light of [critical context], [audience] can [action] by [mechanism], accessing [benefits] that [alignment with expertise].' The critical context emphasizes Japan's documented research decline (4th to 13th in top-cited papers) and structural isolation, creating urgency without being alarmist.",
+    "key_claims_mece_analysis": {
+      "C1_scope": "The opportunity exists and is academically legitimateestablishes that Ethereum research IS cryptography research worthy of top venues",
+      "C2_scope": "The need existsJapan's structural challenges create both urgency and opportunity for external collaboration",
+      "C3_scope": "The partner is credibleEthereum Foundation has the track record and resources to be a legitimate research collaborator",
+      "C4_scope": "The mechanism is practicalNyx Foundation provides the bridge to reduce activation energy for engagement",
+      "mece_verification": "Claims are mutually exclusive (no overlap in scope) and collectively exhaustive (together they answer: What opportunity? Why now? Who is the partner? How do we engage?)"
+    },
+    "audience_alignment": {
+      "decision_criteria_addressed": {
+        "technical_merit": "C1 directly addresses through evidence of publications at CRYPTO/EUROCRYPT/ASIACRYPT",
+        "research_novelty": "C1 addresses through specific RFP topics and unsolved problems",
+        "practical_impact": "Governing Thought includes 'trillion-yen-scale system used by millions'",
+        "expertise_alignment": "C1 explicitly mentions ZK proofs, post-quantum, formal verification matching Emura/Araki/Suga specializations",
+        "funding_viability": "C3 addresses with specific grant amounts ($2M round) and timelines (6-12 months)",
+        "collaboration_quality": "C3 and C4 address through EF track record and Nyx Foundation role",
+        "career_development": "C4 explicitly mentions graduate student opportunities"
+      }
+    }
+  },
+  "web_research_sources": [
+    {
+      "topic": "Ethereum Foundation Academic Grants",
+      "findings": "2025 round launched with $2M fund; 2024 round funded 41 projects from 300 applications across 25 countries; covers cryptography, formal verification, security",
+      "source_urls": [
+        "https://esp.ethereum.foundation/academic-grants",
+        "https://blog.ethereum.org/2025/01/17/academic-grants-recipients",
+        "https://blog.ethereum.org/en/2025/01/21/academic-round-25"
+      ]
+    },
+    {
+      "topic": "ZK Research at Top Venues",
+      "findings": "Multiple Ethereum-relevant ZK papers published at EUROCRYPT (Aurora 2019, Groth16 2016) and CRYPTO (Lattice-based SNARKs 2022)",
+      "source_urls": [
+        "https://arxiv.org/html/2408.00243v1",
+        "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-35.pdf"
+      ]
+    },
+    {
+      "topic": "Japan Research Decline",
+      "findings": "Japan dropped from 4th to 13th in Top 10% cited papers (1997-2023); output share fell from 7.4% to 4.7% (2005-2015); research spending grew only 10% vs 80% in US/Germany",
+      "source_urls": [
+        "https://sj.jst.go.jp/news/202309/n0928-03k.html",
+        "https://www.science.org/content/article/japan-tries-again-stop-its-universities-sliding-down-global-rankings"
+      ]
+    },
+    {
+      "topic": "PSE Research Areas",
+      "findings": "PSE evolved from Applied ZKP (2018) to Privacy Stewards (2025); focuses on ZK-SNARKs, FHE, MPC; runs Acceleration Program with RFPs for Semaphore, MACI, Proof of Email",
+      "source_urls": [
+        "https://pse.dev/",
+        "https://pse.dev/about",
+        "https://github.com/privacy-scaling-explorations/acceleration-program"
+      ]
+    }
+  ],
+  "quality_checklist": {
+    "governing_thought_single_sentence": true,
+    "key_claims_mece": true,
+    "evidence_strategies_specific": true,
+    "rebuttals_strengthen_claims": true,
+    "valid_json": true
+  }
+}

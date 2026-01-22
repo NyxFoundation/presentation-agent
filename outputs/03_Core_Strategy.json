@@ -1,0 +1,35 @@
+{
+  "core_strategy": {
+    "presentation_purpose": "To motivate established cryptography researchers to engage with Nyx Foundation's community and explore Ethereum Foundation PSE Research RFP opportunities as a pathway to world-class, publishable research with real-world impact.",
+    "core_message": "By connecting Japan's isolated cryptography expertise with Ethereum's unsolved research problems through Nyx Foundation's collaborative network, you can access globally significant, publishable research opportunities that leverage your existing specializations while contributing to a trillion-yen-scale system used by millions.",
+    "narrative_archetype": {
+      "selected": "Hybrid (Sparkline opening + Pyramid Principle body)",
+      "justification": "The audience's strong preference for technical rigor and evidence-based communication favors Pyramid Principle structure for the core argument. However, the context's powerful narrative about researcher isolation and Japan's declining research standing (2nd→4th in papers, 4th→10th in high-impact papers) provides essential emotional resonance that can overcome skepticism about 'yet another collaboration proposal.' Opening with a Sparkline-style contrast between Japan's current fragmented state and the potential for collaborative, globally recognized research will create buy-in before presenting the logical case for Ethereum research opportunities."
+    },
+    "tone_and_manner": {
+      "recommended_tone": "Peer-to-peer collegial respect with technical depth and understated enthusiasm.",
+      "dos": [
+        "Present Ethereum research problems in terms of established cryptographic foundations (ZK-SNARKs, post-quantum signatures, formal verification)—connect to their existing expertise",
+        "Reference specific, concrete research opportunities with clear scope (PSE RFP topics)",
+        "Acknowledge their existing expertise level—they understand cryptography; focus on Ethereum-specific context they may lack",
+        "Provide evidence of publishability: cite examples of Ethereum-related papers in top venues (CRYPTO, EUROCRYPT, ASIACRYPT)",
+        "Frame Nyx Foundation as a collaborative partner and connector, not a gatekeeper",
+        "Highlight how participation benefits their graduate students and research groups",
+        "Be honest about the exploratory nature of some research while emphasizing the genuine technical depth"
+      ],
+      "donts": [
+        "Use marketing language or hype terms ('revolutionary', 'game-changing', 'paradigm shift')",
+        "Oversimplify cryptographic concepts—they will notice and lose trust",
+        "Assume unfamiliarity with blockchain fundamentals—especially Suga has deep expertise",
+        "Make vague promises about grants without specific information",
+        "Position this as charity or one-sided—emphasize mutual benefit and collaborative discovery",
+        "Dismiss their potential concern about theoretical depth of Ethereum research",
+        "Rush past their questions about publishability and academic recognition"
+      ]
+    },
+    "emotional_hook": {
+      "element": "The stark contrast between Japan's cryptography heritage (once ranked 2nd globally in research papers) and its current fragmented state—where talented researchers work in isolation, disconnected from global opportunities and each other, while ¥140 billion in cumulative funding cuts have eroded the collaborative infrastructure that once made Japanese research formidable.",
+      "usage": "Open by acknowledging the shared reality: Japan's research community has faced structural challenges that have isolated talented individuals. Briefly reference the funding decline and ranking drops as shared context (not lecturing, but acknowledging a known situation). Then pivot: this isolation is not inevitable—and Ethereum research represents an underexplored frontier where Japan's cryptography expertise could reclaim global leadership. The contrast between 'isolation and decline' and 'connection and global impact' creates the emotional foundation for the logical argument that follows."
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "step": "05_Narrative_Blueprint",
+  "timestamp": "2026-01-22T00:00:00Z",
+  "inputs": {
+    "governing_argument": "outputs/04_Governing_Argument.json",
+    "core_strategy": "outputs/03_Core_Strategy.json",
+    "constraints": "10 slides max, 10-minute presentation"
+  },
+  "process_log": {
+    "step_1_narrative_arc": {
+      "archetype_selected": "Hybrid (Sparkline opening + Pyramid Principle body)",
+      "arc_structure": [
+        "The Hook - Establish Shared Reality (Sparkline: 'What Is')",
+        "The Status Quo - The Structural Problem (Sparkline: Deepening 'What Is')",
+        "The Vision - The Promised Land (Sparkline: 'What Could Be')",
+        "The Bridge - Governing Thought (Pyramid: Central Thesis)",
+        "The Proof - Evidence Sections (Pyramid: Supporting Claims)",
+        "The Call to Action (Both: Resolution)"
+      ],
+      "rationale": "The hybrid structure uses Sparkline's emotional contrast to establish buy-in (Japan's isolation vs. global opportunity), then transitions to Pyramid's logical structure for the core argument. This respects the audience's preference for technical rigor while creating emotional resonance that overcomes skepticism about 'yet another collaboration proposal.'"
+    },
+    "step_2_claim_mapping": {
+      "C1_mapping": "Slides 4, 5, 7 - Core proof of Ethereum research legitimacy",
+      "C2_mapping": "Slides 1, 2 - Opening context about Japan's isolation",
+      "C3_mapping": "Slides 6, 7 - EF credibility and concrete opportunities",
+      "C4_mapping": "Slides 8, 9 - Nyx Foundation as bridge and mutual benefits"
+    },
+    "step_3_slide_decomposition": {
+      "total_slides": 10,
+      "constraint_satisfied": true,
+      "constraint": "10 slides max",
+      "allocation": {
+        "sparkline_opening": 3,
+        "pyramid_body": 6,
+        "call_to_action": 1
+      }
+    },
+    "step_4_evidence_alignment": {
+      "all_key_claims_covered": true,
+      "evidence_sources": [
+        "NISTEP data on Japan's research ranking decline",
+        "METI 2012 cryptography strength assessment",
+        "EUROCRYPT/CRYPTO/ASIACRYPT publications",
+        "EF Academic Grants Round statistics",
+        "PSE research areas and RFP topics",
+        "Kakenhi signature campaign data"
+      ]
+    }
+  },
+  "quality_checklist": {
+    "action_titles_tell_complete_story": true,
+    "all_action_titles_are_full_sentences": true,
+    "each_purpose_is_clear_and_aligned": true,
+    "evidence_needed_is_specific_and_supportive": true,
+    "slide_count_adheres_to_constraints": true,
+    "output_is_valid_json": true
+  },
+  "output": "outputs/05_Narrative_Blueprint.json"
+}

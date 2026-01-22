@@ -20,8 +20,30 @@ SLIDES_DIR ?= slides
 # --- User Inputs (Edit these for your presentation) ---
 
 # Target audience information
-PERSON_NAME ?= 礒津政明
-COMPANY ?= ソニーグループ株式会社
+# Option 1: Use TARGET for flexible audience specification (single or multiple people)
+#   Examples:
+#     - "礒津政明 (ソニーグループ株式会社)"
+#     - "張一凡 (金沢大学), 江村恵太 (筑波大学), 荒木俊輔 (茨城大学)"
+TARGET ?=
+
+# Option 2: Use PERSON_NAME and COMPANY for single-person targeting (legacy)
+PERSON_NAME ?=
+COMPANY ?=
+
+# Resolve TARGET: If TARGET is set, use it. Otherwise, construct from PERSON_NAME and COMPANY.
+ifdef TARGET
+  RESOLVED_TARGET := $(TARGET)
+else
+  ifdef PERSON_NAME
+    ifdef COMPANY
+      RESOLVED_TARGET := $(PERSON_NAME) ($(COMPANY))
+    else
+      RESOLVED_TARGET := $(PERSON_NAME)
+    endif
+  else
+    RESOLVED_TARGET := 山田太郎 (サンプル株式会社)
+  endif
+endif
 
 # Path to the raw introduction/proposal notes
 RAW_INPUT ?= inputs/introduction.md
@@ -103,6 +125,12 @@ help:
 	@echo ""
 	@echo "Configuration:"
 	@echo "  Edit the variables at the top of this Makefile to customize your input."
+	@echo ""
+	@echo "  TARGET      - Target audience (flexible format, supports multiple people)"
+	@echo "                Example: 'John Doe (Company A), Jane Smith (Company B)'"
+	@echo "  PERSON_NAME - Single person name (legacy, use TARGET instead)"
+	@echo "  COMPANY     - Single company name (legacy, use TARGET instead)"
+	@echo "  CONSTRAINTS - Slide/time limits (default: '15 slides max, 15-minute presentation')"
 	@echo "============================================================================"
 
 init:
@@ -126,7 +154,8 @@ $(CONTEXT_OUT): $(PROMPTS_DIR)/01_Context_Analysis.md $(RAW_INPUT) | init
 audience_persona: $(PERSONA_OUT)
 $(PERSONA_OUT): $(PROMPTS_DIR)/02_Audience_Persona.md $(CONTEXT_OUT) | init
 	@echo "[Step 2/9] Audience Persona..."
-	@prompt="$$(sed -e 's|{{PERSON_NAME}}|$(PERSON_NAME)|g' -e 's|{{COMPANY}}|$(COMPANY)|g' -e 's|{{CONTEXT_BRIEF}}|$(CONTEXT_OUT)|g' $<)"; \
+	@echo "  Target: $(RESOLVED_TARGET)"
+	@prompt="$$(sed -e 's|{{TARGET}}|$(RESOLVED_TARGET)|g' -e 's|{{CONTEXT_BRIEF}}|$(CONTEXT_OUT)|g' $<)"; \
 	claude $(CLAUDE_FLAGS) -p "$$prompt" > $(LOG_DIR)/02_Audience_Persona.json
 	@if [ -f "$(PERSONA_OUT)" ]; then echo "[Step 2/9] Complete."; else echo "[Step 2/9] Warning: $(PERSONA_OUT) not found."; fi
 

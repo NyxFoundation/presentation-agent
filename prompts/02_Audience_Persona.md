@@ -1,8 +1,9 @@
 
 ---
 Description: Creates a detailed, actionable persona for the target audience. This step goes beyond simple demographics to understand the audience's motivations, biases, and decision-making processes.
-Usage: `/02_Audience_Persona PERSON_NAME=<string> COMPANY=<string> CONTEXT_BRIEF=<path|json>`
-Example: `/02_Audience_Persona PERSON_NAME="礒津政明" COMPANY="ソニーグループ株式会社" CONTEXT_BRIEF="outputs/01_Context_Brief.json"`
+Usage: `/02_Audience_Persona TARGET=<string> CONTEXT_BRIEF=<path|json>`
+Example: `/02_Audience_Persona TARGET="礒津政明 (ソニーグループ株式会社)" CONTEXT_BRIEF="outputs/01_Context_Brief.json"`
+Example (multiple): `/02_Audience_Persona TARGET="張一凡 (金沢大学), 江村恵太 (筑波大学)" CONTEXT_BRIEF="outputs/01_Context_Brief.json"`
 Language: English (output).
 Execution hint: The goal is to create a psychological profile, not just a job title. This persona will guide the tone, language, and focus of the entire presentation. Use web search extensively to build this profile.
 ---
@@ -13,18 +14,33 @@ You are a corporate strategist and executive profiler. You have a deep understan
 
 ## Task
 
-Based on the **PERSON_NAME**, **COMPANY**, and **CONTEXT_BRIEF**, conduct research and produce a detailed **Audience Persona** in JSON format.
+Based on the **TARGET** and **CONTEXT_BRIEF**, conduct research and produce a detailed **Audience Persona** in JSON format.
+
+**TARGET**: `{{TARGET}}`
+
+The TARGET can be:
+- A single person with affiliation: e.g., "礒津政明 (ソニーグループ株式会社)"
+- Multiple people with affiliations: e.g., "張一凡 (金沢大学), 江村恵太 (筑波大学), 荒木俊輔 (茨城大学)"
+
+For multiple people, create a **composite persona** that represents the shared characteristics and the range of perspectives in the audience. Identify the common ground and note any significant differences.
 
 ## Process
 
+### Step 0: Parse the TARGET
+
+- Parse the `TARGET` string to extract individual people and their affiliations.
+- If multiple people are listed (comma-separated), note all of them.
+- Extract person names and their organizations from the format: "Name (Organization)"
+
 ### Step 1: Initial Research and Scoping
 
-- Use web search to gather information on the `PERSON_NAME` and `COMPANY`.
+- Use web search to gather information on each person and organization in the `TARGET`.
 - Focus on:
-    - The person's current role and past career history.
+    - Each person's current role and past career history.
     - Their public statements, interviews, articles, or social media presence (LinkedIn, X/Twitter).
-    - The company's strategic priorities, recent financial performance, and stated values.
-    - The relationship between the person's role and the topic of the `CONTEXT_BRIEF`.
+    - Each organization's strategic priorities, recent performance, and stated values.
+    - The relationship between each person's role and the topic of the `CONTEXT_BRIEF`.
+- **For multiple people**: Research each person individually, then identify common themes.
 
 ### Step 2: Analyze Motivations and Priorities
 
@@ -52,28 +68,36 @@ Save the output to `outputs/02_Audience_Persona.json` as **JSON only**:
 ```json
 {
   "audience_persona": {
-    "name": "{{PERSON_NAME}}",
-    "role": "e.g., Chief Technology Officer, Sony Group",
-    "summary": "A 2-3 sentence summary of the persona. e.g., A technology-focused executive with a history in R&D, likely motivated by long-term strategic bets over short-term financial gains. Skeptical of hype, but receptive to well-reasoned, data-backed arguments for innovation.",
+    "target_input": "{{TARGET}}",
+    "audience_type": "single | multiple",
+    "individuals": [
+      {
+        "name": "Person Name",
+        "organization": "Organization Name",
+        "role": "e.g., Associate Professor, Kanazawa University"
+      }
+    ],
+    "composite_summary": "A 2-3 sentence summary of the audience. For multiple people, describe the shared profile and note key differences. e.g., Academic researchers and industry practitioners in cryptography and blockchain, motivated by technical rigor and practical impact. Mix of university researchers and industry R&D professionals.",
     "motivations_and_priorities": [
-      {"motivation": "Driving long-term technological advantage", "evidence": "Public statements on R&D investment"},
-      {"motivation": "Attracting and retaining top engineering talent", "evidence": "Company's focus on creating an ideal work environment"}
+      {"motivation": "Advancing research in their field", "evidence": "Publication records and research focus"},
+      {"motivation": "Bridging academia and industry", "evidence": "Collaborative projects and industry partnerships"}
     ],
     "potential_biases_and_objections": [
-      {"bias": "Skepticism towards blockchain technology unless a clear use case is demonstrated", "reasoning": "Common stance for large, established tech companies"},
-      {"objection": "What is the tangible ROI of this competition?", "reasoning": "All corporate decisions require a business case"}
+      {"bias": "Preference for technically rigorous proposals over hype", "reasoning": "Academic background values evidence and methodology"},
+      {"objection": "Is this research novel enough?", "reasoning": "Academics prioritize contribution to the field"}
     ],
     "communication_preferences": {
-      "preferred_style": "Data-driven and analytical, with a clear logical flow.",
-      "likes": ["Clear problem statements", "Evidence-backed claims", "Well-defined metrics"],
-      "dislikes": ["Marketing jargon", "Unsupported assertions", "Vague calls to action"]
+      "preferred_style": "Technical and precise, with clear methodology and evidence.",
+      "likes": ["Technical depth", "Clear research questions", "Reproducible methods"],
+      "dislikes": ["Marketing language", "Unsubstantiated claims", "Oversimplification"]
     },
     "decision_making_criteria": [
-      "Strategic Alignment: Does this fit into Sony's long-term vision?",
-      "Technical Feasibility: Is the proposed technology sound and scalable?",
-      "Resource Impact: What are the demands on our internal teams?",
-      "Brand and Reputation: How will this position us in the market?"
-    ]
+      "Technical Merit: Is the approach sound and novel?",
+      "Research Impact: Does this advance the field?",
+      "Feasibility: Can this be implemented and validated?",
+      "Relevance: Does this align with current research priorities?"
+    ],
+    "audience_diversity_notes": "For multiple people: Note any significant differences in perspective, expertise level, or priorities that the presentation should address. Leave empty for single-person audiences."
   }
 }
 ```
@@ -88,10 +112,13 @@ Save the output to `outputs/02_Audience_Persona.json` as **JSON only**:
 
 ## Web Search Guidance
 
-Extensive web search is **required** for this step. Use queries like:
+Extensive web search is **required** for this step. For each person in the TARGET, use queries like:
 
 - `"[Person's Name]" interview`
-- `"[Person's Name]" [Company] role`
-- `[Company] strategic priorities 2026`
-- `[Company] annual report`
+- `"[Person's Name]" [Organization] role`
+- `"[Person's Name]" research publications` (for academics)
+- `[Organization] strategic priorities 2026`
+- `[Organization] annual report` (for companies)
 - `site:linkedin.com "[Person's Name]"`
+- `site:researchgate.net "[Person's Name]"` (for academics)
+- `site:scholar.google.com "[Person's Name]"` (for academics)

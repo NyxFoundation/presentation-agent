@@ -3,14 +3,18 @@ name: Presentation Pipeline
 on:
   workflow_dispatch:
     inputs:
+      target:
+        description: 'Target audience - flexible format supporting single or multiple people. Examples: "礒津政明 (ソニー)" or "張一凡 (金沢大学), 江村恵太 (筑波大学)"'
+        required: false
+        default: ''
       person_name:
-        description: 'Target audience name'
+        description: '(Legacy) Single person name - use "target" instead for flexibility'
         required: false
-        default: '山田太郎'
+        default: ''
       company:
-        description: 'Target company'
+        description: '(Legacy) Single company name - use "target" instead for flexibility'
         required: false
-        default: 'サンプル株式会社'
+        default: ''
       constraints:
         description: 'Presentation constraints'
         required: false
@@ -40,21 +44,58 @@ jobs:
           which claude || echo "claude not found in PATH"
           claude --version || echo "Failed to get claude version"
 
+      - name: Clean previous outputs
+        run: |
+          rm -rf outputs/*.json slides/*.md || true
+          echo "Cleaned previous outputs"
+
       - name: Create output directories
         run: make init
 
       - name: Run full pipeline
         run: |
-          make all \
-            PERSON_NAME="${{ github.event.inputs.person_name || '山田太郎' }}" \
-            COMPANY="${{ github.event.inputs.company || 'サンプル株式会社' }}" \
-            CONSTRAINTS="${{ github.event.inputs.constraints || '15 slides max, 15-minute presentation' }}"
+          # Determine TARGET: prefer 'target' input, fall back to legacy person_name/company
+          TARGET_INPUT="${{ github.event.inputs.target }}"
+          PERSON_NAME="${{ github.event.inputs.person_name }}"
+          COMPANY="${{ github.event.inputs.company }}"
+
+          if [ -n "$TARGET_INPUT" ]; then
+            echo "Using TARGET: $TARGET_INPUT"
+            make all \
+              TARGET="$TARGET_INPUT" \
+              CONSTRAINTS="${{ github.event.inputs.constraints || '15 slides max, 15-minute presentation' }}"
+          elif [ -n "$PERSON_NAME" ]; then
+            echo "Using legacy PERSON_NAME/COMPANY: $PERSON_NAME / $COMPANY"
+            make all \
+              PERSON_NAME="$PERSON_NAME" \
+              COMPANY="${COMPANY:-サンプル株式会社}" \
+              CONSTRAINTS="${{ github.event.inputs.constraints || '15 slides max, 15-minute presentation' }}"
+          else
+            echo "Using defaults"
+            make all \
+              TARGET="山田太郎 (サンプル株式会社)" \
+              CONSTRAINTS="${{ github.event.inputs.constraints || '15 slides max, 15-minute presentation' }}"
+          fi
 
       - name: Create branch and push generated files
         id: create-branch
         run: |
           BRANCH_NAME="presentation/generated-${{ github.run_id }}-$(date +%Y%m%d-%H%M%S)"
           echo "branch_name=${BRANCH_NAME}" >> $GITHUB_OUTPUT
+
+          # Determine display target for commit message
+          TARGET_INPUT="${{ github.event.inputs.target }}"
+          PERSON_NAME="${{ github.event.inputs.person_name }}"
+          COMPANY="${{ github.event.inputs.company }}"
+
+          if [ -n "$TARGET_INPUT" ]; then
+            DISPLAY_TARGET="$TARGET_INPUT"
+          elif [ -n "$PERSON_NAME" ]; then
+            DISPLAY_TARGET="$PERSON_NAME (${COMPANY:-サンプル株式会社})"
+          else
+            DISPLAY_TARGET="山田太郎 (サンプル株式会社)"
+          fi
+          echo "display_target=${DISPLAY_TARGET}" >> $GITHUB_OUTPUT
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -63,7 +104,7 @@ jobs:
           git add outputs/ slides/
           git commit -m "Generate presentation outputs
 
-          Target: ${{ github.event.inputs.person_name || '山田太郎' }} (${{ github.event.inputs.company || 'サンプル株式会社' }})
+          Target: ${DISPLAY_TARGET}
           Constraints: ${{ github.event.inputs.constraints || '15 slides max, 15-minute presentation' }}
           Run ID: ${{ github.run_id }}"
 
@@ -73,28 +114,26 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh pr create \
-            --title "Presentation: ${{ github.event.inputs.person_name || '山田太郎' }} @ ${{ github.event.inputs.company || 'サンプル株式会社' }}" \
-            --body "$(cat <<'EOF'
-          ## Generated Presentation
+          DISPLAY_TARGET="${{ steps.create-branch.outputs.display_target }}"
 
-          **Target Audience:** ${{ github.event.inputs.person_name || '山田太郎' }}
-          **Company:** ${{ github.event.inputs.company || 'サンプル株式会社' }}
+          gh pr create \
+            --title "Presentation: ${DISPLAY_TARGET}" \
+            --body "## Generated Presentation
+
+          **Target Audience:** ${DISPLAY_TARGET}
           **Constraints:** ${{ github.event.inputs.constraints || '15 slides max, 15-minute presentation' }}
 
           ### Generated Files
-          - `outputs/` - Pipeline intermediate outputs (JSON)
-          - `slides/` - Final Slidev markdown files
+          - \`outputs/\` - Pipeline intermediate outputs (JSON)
+          - \`slides/\` - Final Slidev markdown files
 
           ### Review Checklist
-          - [ ] Review slide content in `slides/`
-          - [ ] Check executive review in `outputs/08_Executive_Review.json`
-          - [ ] Verify visual designs in `outputs/07_Visual_Designs.json`
+          - [ ] Review slide content in \`slides/\`
+          - [ ] Check executive review in \`outputs/08_Executive_Review.json\`
+          - [ ] Verify visual designs in \`outputs/07_Visual_Designs.json\`
 
           ---
-          *Generated by Presentation Pipeline (Run ID: ${{ github.run_id }})*
-          EOF
-          )" \
+          *Generated by Presentation Pipeline (Run ID: ${{ github.run_id }})*" \
             --base main \
             --head "${{ steps.create-branch.outputs.branch_name }}"
 

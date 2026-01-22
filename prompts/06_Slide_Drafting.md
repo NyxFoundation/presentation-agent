@@ -1,10 +1,11 @@
+
 ---
 Description: Fleshes out the Narrative Blueprint by drafting the text-based content for each slide. This step focuses on writing concise, impactful bullet points and compelling speaker notes.
 Usage: `/06_Slide_Drafting NARRATIVE_BLUEPRINT=<path|json> CONTEXT_BRIEF=<path|json> TONE=<string>`
 Example: `/06_Slide_Drafting NARRATIVE_BLUEPRINT="outputs/05_Narrative_Blueprint.json" CONTEXT_BRIEF="outputs/01_Context_Brief.json" TONE="Respectfully ambitious and intellectually rigorous."`
 Language: English (output).
 Execution hint: This is a writing-intensive step. The goal is to translate the logic and structure from the blueprint into clear, persuasive language. Do not worry about visuals yet; focus purely on the words.
----------------------------------------------------------------------------------------------------------------------------------------
+---
 
 ## Role
 

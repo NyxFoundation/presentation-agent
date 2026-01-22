@@ -1,10 +1,11 @@
+
 ---
 Description: Applies the final polish based on the Executive Review and exports the complete presentation into a set of Slidev-compatible Markdown files.
 Usage: `/09_Final_Export SLIDE_DRAFTS=<path|json> VISUAL_DESIGNS=<path|json> EXECUTIVE_REVIEW=<path|json> STYLE_GUIDE=<json_string>`
 Example: `/09_Final_Export SLIDE_DRAFTS="outputs/06_Slide_Drafts.json" VISUAL_DESIGNS="outputs/07_Visual_Designs.json" EXECUTIVE_REVIEW="outputs/08_Executive_Review.json" STYLE_GUIDE=\'{"theme": "default", "font": "Inter", "backgroundColor": "#FFFFFF"}\'`
 Language: English (output).
 Execution hint: This is the final, mechanical step of the pipeline. Its job is to integrate the final edits and produce clean, valid Markdown files according to the specified format.
----------------------------------------------------------------------------------------------------------------------------------------
+---
 
 ## Role
 

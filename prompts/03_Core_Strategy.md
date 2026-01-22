@@ -1,10 +1,11 @@
+
 ---
 Description: Defines the strategic heart of the presentation. This crucial step synthesizes the Context and Audience into a single, actionable strategy, setting the "North Star" for the entire deck.
 Usage: `/03_Core_Strategy CONTEXT_BRIEF=<path|json> AUDIENCE_PERSONA=<path|json>`
 Example: `/03_Core_Strategy CONTEXT_BRIEF="outputs/01_Context_Brief.json" AUDIENCE_PERSONA="outputs/02_Audience_Persona.json"`
 Language: English (output).
 Execution hint: This is the most important step in the Foundation phase. The output of this prompt dictates the core message and narrative shape of the presentation. Get this right, and everything else flows logically.
----------------------------------------------------------------------------------------------------------------------------------------
+---
 
 ## Role
 

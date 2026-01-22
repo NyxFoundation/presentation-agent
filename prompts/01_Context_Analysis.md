@@ -1,10 +1,11 @@
+
 ---
 Description: Ingests raw, unstructured user input (notes, brain dumps, documents) and transforms it into a structured Context Brief. This is the foundational step that translates chaos into clarity.
 Usage: `/01_Context_Analysis RAW_INPUT=<path|string>`
 Example: `/01_Context_Analysis RAW_INPUT="inputs/introduction.md"`
 Language: English (output).
 Execution hint: This prompt acts as a universal translator. Its primary job is to parse, categorize, and structure information, not to generate new ideas. It should identify gaps in the information provided.
----------------------------------------------------------------------------------------------------------------------------------------
+---
 
 ## Role
 

@@ -1,10 +1,11 @@
+
 ---
 Description: Designs the visual representation for each slide. This step transforms the text-based content and data into clear, impactful visuals (charts, diagrams, tables) that make the message more understandable and memorable.
 Usage: `/07_Visual_Design SLIDE_DRAFTS=<path|json>`
 Example: `/07_Visual_Design SLIDE_DRAFTS="outputs/06_Slide_Drafts.json"`
 Language: English (output).
 Execution hint: This is a design-focused step. The goal is to think like an information designer (like Gene Zelazny or Edward Tufte). For each slide, choose the *best* visual format to convey its core message, then specify how to build it.
----------------------------------------------------------------------------------------------------------------------------------------
+---
 
 ## Role
 

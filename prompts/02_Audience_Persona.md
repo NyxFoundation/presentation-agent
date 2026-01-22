@@ -1,10 +1,11 @@
+
 ---
 Description: Creates a detailed, actionable persona for the target audience. This step goes beyond simple demographics to understand the audience's motivations, biases, and decision-making processes.
 Usage: `/02_Audience_Persona PERSON_NAME=<string> COMPANY=<string> CONTEXT_BRIEF=<path|json>`
 Example: `/02_Audience_Persona PERSON_NAME="礒津政明" COMPANY="ソニーグループ株式会社" CONTEXT_BRIEF="outputs/01_Context_Brief.json"`
 Language: English (output).
 Execution hint: The goal is to create a psychological profile, not just a job title. This persona will guide the tone, language, and focus of the entire presentation. Use web search extensively to build this profile.
----------------------------------------------------------------------------------------------------------------------------------------
+---
 
 ## Role
 

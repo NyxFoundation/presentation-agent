@@ -1,10 +1,11 @@
+
 ---
 Description: Creates the narrative and structural blueprint of the presentation. This step maps the logical Key Claims onto the chosen Narrative Archetype, creating a slide-by-slide outline with powerful, assertion-driven Action Titles.
 Usage: `/05_Narrative_Blueprint GOVERNING_ARGUMENT=<path|json> CORE_STRATEGY=<path|json> CONSTRAINTS=<string>`
 Example: `/05_Narrative_Blueprint GOVERNING_ARGUMENT="outputs/04_Governing_Argument.json" CORE_STRATEGY="outputs/03_Core_Strategy.json" CONSTRAINTS="15 slides max"`
 Language: English (output).
 Execution hint: This is where logic meets story. The output is the architectural plan for the deck. The sequence of Action Titles must tell a compelling story on its own, even without the slide content.
----------------------------------------------------------------------------------------------------------------------------------------
+---
 
 ## Role
 

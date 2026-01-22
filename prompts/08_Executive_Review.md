@@ -1,10 +1,11 @@
+
 ---
 Description: Conducts a final, holistic "murder board" review of the complete presentation draft from the perspective of the target decision-maker. This is the ultimate quality gate, designed to find and flag any weakness before the final export.
 Usage: `/08_Executive_Review SLIDE_DRAFTS=<path|json> VISUAL_DESIGNS=<path|json> AUDIENCE_PERSONA=<path|json> CORE_STRATEGY=<path|json>`
 Example: `/08_Executive_Review SLIDE_DRAFTS="outputs/06_Slide_Drafts.json" VISUAL_DESIGNS="outputs/07_Visual_Designs.json" AUDIENCE_PERSONA="outputs/02_Audience_Persona.json" CORE_STRATEGY="outputs/03_Core_Strategy.json"`
 Language: English (output).
 Execution hint: Adopt the mindset of the audience persona. Be skeptical, time-poor, and focused on what matters to *them*. Your job is not to be nice; it's to ensure the presentation succeeds.
----------------------------------------------------------------------------------------------------------------------------------------
+---
 
 ## Role
 

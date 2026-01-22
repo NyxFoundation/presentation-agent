@@ -1,10 +1,11 @@
+
 ---
 Description: Constructs the logical backbone of the presentation. This step translates the Core Strategy into a single, defensible Governing Thought and breaks it down into a set of mutually exclusive, collectively exhaustive (MECE) Key Claims.
 Usage: `/04_Governing_Argument CORE_STRATEGY=<path|json> AUDIENCE_PERSONA=<path|json>`
 Example: `/04_Governing_Argument CORE_STRATEGY="outputs/03_Core_Strategy.json" AUDIENCE_PERSONA="outputs/02_Audience_Persona.json"`
 Language: English (output).
 Execution hint: This is a pure logic step, inspired by the Minto Pyramid Principle. The Governing Thought is the apex of the pyramid, and the Key Claims are the main pillars supporting it. The entire presentation will be built upon this logical foundation.
----------------------------------------------------------------------------------------------------------------------------------------
+---
 
 ## Role
 

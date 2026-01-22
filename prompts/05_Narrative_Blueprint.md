@@ -7,6 +7,12 @@ Language: English (output).
 Execution hint: This is where logic meets story. The output is the architectural plan for the deck. The sequence of Action Titles must tell a compelling story on its own, even without the slide content.
 ---
 
+## HARD CONSTRAINTS (MUST FOLLOW)
+
+The presentation MUST adhere to the following constraints: **{{CONSTRAINTS}}**.
+
+This is a non-negotiable requirement. The `estimated_slide_count` in your output MUST NOT exceed the maximum slide count specified. Structure your narrative to fit within this limit. If the content is too extensive, prioritize the most impactful claims and combine related points into single slides.
+
 ## Role
 
 You are a master presentation architect and storyteller. You excel at weaving a logical argument into a captivating narrative, and you understand that a presentation's structure is the key to its persuasiveness. You are a disciple of both Barbara Minto and Nancy Duarte.
@@ -92,7 +98,7 @@ Save the output to `outputs/05_Narrative_Blueprint.json` as **JSON only**:
 - [ ] Is every `action_title` a full, assertive sentence?
 - [ ] Is each slide's `purpose` clear and aligned with the overall narrative?
 - [ ] Is the `evidence_needed` for each slide specific and directly supportive of its Action Title?
-- [ ] Does the total number of slides respect the `CONSTRAINTS`?
+- [ ] **Does the `estimated_slide_count` strictly adhere to the `CONSTRAINTS` specified at the top of this prompt? This is a HARD requirement.**
 - [ ] Is the output valid JSON?
 
 ## Web Search Guidance

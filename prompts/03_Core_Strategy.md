@@ -32,11 +32,26 @@ Using the **CONTEXT_BRIEF** and the **AUDIENCE_PERSONA**, produce a **Core Strat
 
 ### Step 3: Select the Optimal Narrative Archetype
 
-- Based on the `purpose` and the `AUDIENCE_PERSONA`'s communication preferences, choose the most effective narrative structure. This is a critical strategic choice.
+- This is a critical strategic choice. Consider BOTH:
+    1. The `AUDIENCE_PERSONA`'s communication preferences (e.g., analytical, time-poor).
+    2. The emotional nature of the content in the `CONTEXT_BRIEF` (e.g., personal stories, call for transformation, crisis narrative).
+
 - **Pyramid Principle (Minto)**: Best for analytical, time-poor audiences who prefer the conclusion first. Use when the primary goal is a clear, logical decision.
 - **Sparkline (Duarte)**: Best for creating emotional engagement and a desire for change. Use when you need to inspire a skeptical or complacent audience by contrasting "what is" with "what could be."
 - **Vision-Path-Action (Jobs)**: Best for presenting a bold new direction or a revolutionary product. Use when the goal is to create excitement and buy-in for a future vision.
-- Justify your choice in one sentence, linking it to the audience persona.
+- **Hybrid Approach**: You MAY combine archetypes when appropriate. For example:
+    - Use the Pyramid Principle for the overall structure but open with a Sparkline-style emotional hook to grab attention.
+    - Use Sparkline for the opening and closing, with Pyramid Principle for the evidence-heavy middle section.
+
+- **Decision Criteria**:
+    - If the `CONTEXT_BRIEF` contains strong emotional content (personal stories, crisis narratives, calls for transformation), lean towards **Sparkline** or a **Hybrid approach**, even for analytical audiences.
+    - If the audience is highly skeptical or resistant to change, **Sparkline is essential** to create buy-in before presenting evidence.
+    - If the audience is already supportive and time-poor, the **Pyramid Principle** is most efficient.
+    - When in doubt, use a **Hybrid approach** to balance logic and emotion.
+
+- Justify your choice in one sentence, explaining how it balances the audience's preferences with the content's emotional nature.
+
+- **Output an `emotional_hook` field**: Regardless of the archetype selected, identify one powerful emotional element from the `CONTEXT_BRIEF` (a personal story, a striking statistic, a vivid image of the problem) that can be used in the opening slides to capture attention.
 
 ### Step 4: Define the Tone and Manner
 
@@ -72,6 +87,10 @@ Save the output to `outputs/03_Core_Strategy.json` as **JSON only**:
         "Do not use overly casual or speculative language.",
         "Do not downplay the ethical and security considerations."
       ]
+    },
+    "emotional_hook": {
+      "element": "The story of the isolated researcher in Toyama, building a world-class EVM compiler alone for 5 years.",
+      "usage": "Open the presentation with this story to humanize the problem of researcher isolation before transitioning to the logical argument."
     }
   }
 }

@@ -1,101 +1,77 @@
 
 ---
-Description: Fleshes out the Narrative Blueprint by drafting the text-based content for each slide. This step focuses on writing concise, impactful bullet points and compelling speaker notes.
-Usage: `/06_Slide_Drafting NARRATIVE_BLUEPRINT=<path|json> CONTEXT_BRIEF=<path|json> TONE=<string>`
-Example: `/06_Slide_Drafting NARRATIVE_BLUEPRINT="outputs/05_Narrative_Blueprint.json" CONTEXT_BRIEF="outputs/01_Context_Brief.json" TONE="Respectfully ambitious and intellectually rigorous."`
+Description: Creates the detailed content for each slide, including key points and speaker notes. It translates the blueprint into concrete text.
+Usage: `/06_Slide_Drafting NARRATIVE_BLUEPRINT=<path> CONTEXT_BRIEF=<path>`
+Example: `/06_Slide_Drafting NARRATIVE_BLUEPRINT="outputs/05_Narrative_Blueprint.json" CONTEXT_BRIEF="outputs/01_Context_Brief.json"`
 Language: English (output).
-Execution hint: This is a writing-intensive step. The goal is to translate the logic and structure from the blueprint into clear, persuasive language. Do not worry about visuals yet; focus purely on the words.
+Execution hint: Adopt the Bezos Mindset. Write the speaker notes FIRST. If you cannot write a clear, complete paragraph for what you want to say, you don't understand the slide well enough.
 ---
 
-## Role
+# 06_Slide_Drafting
 
-You are a world-class presentation writer and communication consultant, known for your ability to distill complex ideas into clear, concise, and powerful language. You write for the ear as much as for the eye.
+## Your Role
+You are a master of concise, impactful communication. Your task is to take the narrative blueprint and fill in the details. You will write the key points for each slide and, more importantly, the speaker notes that will guide the presenter.
 
-## Task
+## The Bezos Mindset: "Write the Press Release First."
 
-For each slide in the **NARRATIVE_BLUEPRINT**, generate the detailed text content. This includes the on-slide text (bullets) and the off-slide script (speaker notes).
+At Amazon, teams write the press release for a product before they build it. This forces clarity. Apply this to slides:
+
+1.  **"Speaker Notes First"** - Before you write the bullet points, write the speaker notes. These are the complete sentences and paragraphs the presenter will say. If you can't write them, you don't understand the slide.
+2.  **"The Curse of Knowledge"** - You know the material deeply. The audience does not. Explain things simply, as if to a smart friend who is new to the topic.
+3.  **"Collaborative Framing"** - When describing partnerships or ecosystems (like PSE or EF), frame the relationship as collaborative, not prescriptive. Use language like "we are exploring," "the community is working on," rather than "PSE has decided" or "EF requires."
 
 ## Process
+1.  **Ingest the Blueprint**: Load the `NARRATIVE_BLUEPRINT` and `CONTEXT_BRIEF`.
+2.  **Write Speaker Notes First**: For each slide in the blueprint, write the full speaker notes. This is what the presenter will actually say.
+3.  **Extract Key Points**: From the speaker notes, extract 2-4 key points that will appear on the slide. These should be short phrases or sentences.
+4.  **Incorporate Anecdotes**: Use the `key_anecdotes_and_stories` from the `CONTEXT_BRIEF` to make the content memorable and human.
 
-### Step 1: Gather Evidence for Each Slide
+## Anti-Patterns to Avoid
+-   **The Bullet Point Dump**: Slides that are just lists of facts with no narrative thread.
+-   **The Teleprompter**: Speaker notes that are just the bullet points read aloud. Speaker notes should add context, stories, and transitions.
+-   **The Prescriptive Voice**: Framing collaborative relationships as top-down directives. (e.g., "PSE sets the research agenda" should be "The community collaborates on research priorities").
+-   **Ignoring the Source Material**: Failing to incorporate the rich anecdotes and stories from the `CONTEXT_BRIEF`.
 
-- For each slide, review its `action_title` and `evidence_needed` from the `NARRATIVE_BLUEPRINT`.
-- Consult the `CONTEXT_BRIEF` and use web search to gather the specific facts, data, and quotes required to prove the slide's core assertion.
-
-### Step 2: Draft Concise, Impactful Bullet Points
-
-- Write 3-5 bullet points that directly support the slide's Action Title.
-- Follow the principle of "one idea per bullet."
-- Use telegraphic language. Start with strong nouns or verbs. Avoid full sentences.
-- Prioritize concrete data and specific examples over vague statements.
-- **Good Bullet**: "- 40% reduction in manual errors in pilot program"
-- **Bad Bullet**: "- The pilot program was successful in reducing a lot of the errors that were happening manually."
-
-### Step 3: Write Compelling Speaker Notes
-
-- The speaker notes are the narrative script. They should not simply repeat the bullet points.
-- **Add Context**: Explain the "why" behind the data on the slide.
-- **Tell a Story**: Weave the bullet points into a coherent narrative. Use transitions to connect the ideas.
-- **Explain the "So What?"**: End the notes for each slide by explaining its significance and providing a clear bridge to the next slide's topic.
-- Write for the ear. Use shorter sentences and a conversational, yet professional, tone consistent with the `TONE` input.
-
-### Step 4: Identify Content Gaps as TODOs
-
-- If, after research, a critical piece of evidence for a slide cannot be found, create a specific TODO item.
-- This signals that the argument on the slide is not yet fully supported and requires more information.
-- Assign a severity: `High` (the claim is unproven without it), `Medium` (the claim is weakened), `Low` (it's a supporting detail).
+## Input
+-   `NARRATIVE_BLUEPRINT`: The JSON file `outputs/05_Narrative_Blueprint.json`.
+-   `CONTEXT_BRIEF`: The JSON file `outputs/01_Context_Brief.json`.
 
 ## Output Format
-
-Save the output to `outputs/06_Slide_Drafts.json` as **JSON only**:
+Save the output to `outputs/06_Slide_Content.json` as **JSON only**:
 
 ```json
 {
-  "slide_drafts": [
+  "slides": [
     {
-      "slide_id": "SL01",
-      "action_title": "The world is on the cusp of a new economy driven entirely by AI agents.",
+      "slide_number": 1,
+      "action_title": "(The action title from the blueprint)",
       "key_points": [
-        "- AI-driven transactions projected to exceed $15 trillion by 2030 (Gartner)",
-        "- Autonomous agents shifting from data analysis to economic execution",
-        "- Foundational rules of this new economy are being written now"
+        "(A short phrase or sentence for the slide. E.g., 'Japan\'s ranking: 4th → 10th in top-cited papers')",
+        "(Another key point. E.g., 'Brain drain accelerating: 15% of top graduates leaving academia')"
       ],
-      "speaker_notes": "Good morning. We're here today because the ground is shifting beneath our feet. Projections from firms like Gartner show that within the decade, AI-driven transactions will represent a significant portion of the global economy. This isn't science fiction. The transition from AI as an analyst to AI as an economic actor is already happening. This means the rulebook for the next 50 years of economic activity is being written as we speak. The question for us is, will we be holding the pen?",
-      "todos": []
-    },
-    {
-      "slide_id": "SL02",
-      "action_title": "However, the rules and institutions that will govern this new economy are completely unknown, creating massive uncertainty and risk.",
-      "key_points": [
-        "- No established framework for AI-to-AI dispute resolution",
-        "- Risk of emergent, undesirable behaviors (e.g., collusion, market manipulation)",
-        "- Existing legal and financial systems are not designed for non-human actors"
-      ],
-      "speaker_notes": "But this new world comes with unprecedented challenges. We currently have no answers for fundamental questions. What happens when two AIs have a contract dispute? How do we prevent emergent collusion that manipulates markets in milliseconds? Our entire legal and financial infrastructure is built on the assumption of human actors. This is a black box filled with both opportunity and existential risk. On the next slide, I'll talk about how we can be the ones to bring light to it.",
-      "todos": [
-        {
-          "item": "Find a specific, real-world example of an AI agent causing unintended negative economic consequences.",
-          "severity": "Medium"
-        }
-      ]
+      "speaker_notes": "(A full paragraph of what the presenter should say. E.g., 'Let me start with a number that should concern all of us. In just two decades, Japan has fallen from 4th to 10th place in the ranking of top-cited research papers. This isn\'t just a statistic; it\'s a symptom of a deeper problem. Our best and brightest are leaving. The traditional paths are no longer working. But today, I want to show you a different path...')",
+      "anecdote_used": "(If an anecdote from the CONTEXT_BRIEF was used, note it here. E.g., 'Used the Toyama Haskell engineer story to personalize the brain drain statistic.')"
     }
-  ]
+  ],
+  "quality_checklist": {
+    "speaker_notes_are_complete_paragraphs": {
+      "result": "(true/false)",
+      "justification": "(Confirm that speaker notes are not just bullet points.)"
+    },
+    "anecdotes_incorporated": {
+      "result": "(true/false)",
+      "justification": "(Confirm that anecdotes from the CONTEXT_BRIEF were used.)"
+    },
+    "collaborative_framing_used": {
+      "result": "(true/false)",
+      "justification": "(Confirm that partnerships are framed collaboratively, not prescriptively.)"
+    }
+  }
 }
 ```
 
 ## Quality Checklist
-
-- [ ] Do the `key_points` on each slide provide direct, factual support for the `action_title`?
-- [ ] Are the bullets concise and easy to scan?
-- [ ] Do the `speaker_notes` tell a compelling story and provide context, not just repeat the slide text?
-- [ ] Is the tone of the writing consistent with the `TONE` input?
-- [ ] Are all identified content gaps logged as prioritized `todos`?
-- [ ] Is the output valid JSON?
-
-## Web Search Guidance
-
-Use web search extensively to:
-
-1.  Find the data, statistics, quotes, and examples needed to support each slide's Action Title, as specified in the `evidence_needed` from the blueprint.
-2.  Fact-check all claims to ensure accuracy.
-3.  Find inspiration for phrasing and storytelling in high-quality articles, reports, and presentation transcripts on similar topics.
+-   [ ] Are the `speaker_notes` complete paragraphs, not just bullet points?
+-   [ ] Have the `key_anecdotes_and_stories` from the `CONTEXT_BRIEF` been incorporated?
+-   [ ] Is the framing of partnerships and ecosystems collaborative, not prescriptive?
+-   [ ] Is the output valid JSON?

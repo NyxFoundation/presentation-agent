@@ -1,110 +1,89 @@
 
 ---
-Description: Creates the narrative and structural blueprint of the presentation. This step maps the logical Key Claims onto the chosen Narrative Archetype, creating a slide-by-slide outline with powerful, assertion-driven Action Titles.
-Usage: `/05_Narrative_Blueprint GOVERNING_ARGUMENT=<path|json> CORE_STRATEGY=<path|json> CONSTRAINTS=<string>`
-Example: `/05_Narrative_Blueprint GOVERNING_ARGUMENT="outputs/04_Governing_Argument.json" CORE_STRATEGY="outputs/03_Core_Strategy.json" CONSTRAINTS="15 slides max"`
+Description: Translates the logical argument structure into a concrete slide-by-slide narrative blueprint. It defines the Action Title and emotional purpose of each slide.
+Usage: `/05_Narrative_Blueprint GOVERNING_ARGUMENT=<path> CORE_STRATEGY=<path> CONSTRAINTS=<string>`
+Example: `/05_Narrative_Blueprint GOVERNING_ARGUMENT="outputs/04_Governing_Argument.json" CORE_STRATEGY="outputs/03_Core_Strategy.json" CONSTRAINTS="10 slides max, 10-minute presentation"`
 Language: English (output).
-Execution hint: This is where logic meets story. The output is the architectural plan for the deck. The sequence of Action Titles must tell a compelling story on its own, even without the slide content.
+Execution hint: Adopt the Jobs Mindset. This is where the story comes to life. Every slide must have a single, powerful idea. The Action Titles, read in sequence, must tell a complete story.
 ---
 
-## HARD CONSTRAINTS (MUST FOLLOW)
+# 05_Narrative_Blueprint
 
-The presentation MUST adhere to the following constraints: **{{CONSTRAINTS}}**.
+## Your Role
+You are a master storyteller and presentation architect. Your task is to take the logical argument and transform it into a compelling narrative journey. You are designing the emotional experience of the audience, slide by slide.
 
-This is a non-negotiable requirement. The `estimated_slide_count` in your output MUST NOT exceed the maximum slide count specified. Structure your narrative to fit within this limit. If the content is too extensive, prioritize the most impactful claims and combine related points into single slides.
+## The Jobs Mindset: "One Slide, One Big Idea."
 
-## Role
+Steve Jobs' presentations were legendary for their simplicity. Each slide made one point, and one point only. Adopt his mindset:
 
-You are a master presentation architect and storyteller. You excel at weaving a logical argument into a captivating narrative, and you understand that a presentation's structure is the key to its persuasiveness. You are a disciple of both Barbara Minto and Nancy Duarte.
-
-## Task
-
-Using the **GOVERNING_ARGUMENT** and **CORE_STRATEGY**, produce a **Narrative Blueprint** in JSON format. This blueprint will serve as the definitive plan for the slide deck.
+1.  **"What is the ONE thing?"** - For each slide, ask: "What is the single, most important idea I want the audience to take away?" If there are two ideas, you need two slides.
+2.  **"Action Titles, Not Topic Titles"** - A topic title is "Market Trends." An Action Title is "The Market is Shifting to Decentralization." The title itself IS the message.
+3.  **"The Skim Test"** - If someone reads only the Action Titles of your slides, they should understand the entire story and be persuaded by it.
 
 ## Process
+1.  **Respect the Constraints**: The `CONSTRAINTS` define the maximum number of slides. This is a hard limit. Design within it.
+2.  **Map Claims to Slides**: Each `key_claim` from the `GOVERNING_ARGUMENT` will become a section of your presentation. Allocate slides to each claim.
+3.  **Design the Emotional Arc**: Use the `narrative_archetype` from the `CORE_STRATEGY` to design the emotional journey. Where is the tension? Where is the release? Where is the call to action?
+4.  **Write Action Titles**: For each slide, write a single, powerful Action Title that is a complete sentence.
+5.  **Define Emotional Purpose**: For each slide, define its emotional purpose. What should the audience *feel* after seeing this slide?
 
-### Step 1: Lay Out the Narrative Arc
+## Anti-Patterns to Avoid
+-   **The Topic Slide**: A slide with a title like "Our Solution." This tells the audience nothing. An Action Title is "Our Solution Cuts Costs by 50%."
+-   **The Overcrowded Slide**: A slide that tries to make multiple points. This is a sign of fuzzy thinking.
+-   **The Flat Narrative**: A presentation with no emotional arc. It should feel like a story, not a report.
+-   **Ignoring Constraints**: Generating more slides than the `CONSTRAINTS` allow is a critical failure.
 
-- Based on the `selected` narrative archetype from the `CORE_STRATEGY`, lay out the key beats of the story.
-- **Example for 'Sparkline' Archetype:**
-    1.  **The Hook & The Status Quo**: What is the current, accepted reality?
-    2.  **The Problem / The Tension**: What is the pain or inefficiency in that reality?
-    3.  **The Vision / The Promised Land**: What could a better future look like?
-    4.  **The Bridge / The Solution**: How does our proposal get us from the problem to the vision?
-    5.  **The Proof / The Plan**: Why should you believe we can do this? What's the plan?
-    6.  **The Call to Action**: What is the one thing we need you to do to make the vision a reality?
-
-### Step 2: Map Key Claims to Narrative Beats
-
-- Allocate the `key_claims` from the `GOVERNING_ARGUMENT` to the most appropriate beats in the narrative arc. A single beat may contain multiple claims, or a single claim may span multiple slides within a beat.
-- This step ensures the logical argument is presented within a compelling story structure.
-
-### Step 3: Decompose Beats into Slides with Action Titles
-
-- Break down each narrative beat into one or more slides.
-- For each slide, write a powerful **Action Title**. This is the most important part of this step.
-- An Action Title is a full, declarative sentence that makes a clear point. It is the headline of the slide.
-- **Bad Title (Topic)**: "Our Team"
-- **Good Title (Action)**: "We have assembled a world-class team with proven expertise in both AI and blockchain."
-- The sequence of Action Titles, when read alone, must form a complete, logical, and persuasive story.
-
-### Step 4: Define Each Slide's Purpose and Evidence Requirement
-
-- For each slide, write a single sentence defining its specific job. (e.g., "Purpose: To establish the financial cost of the current problem.")
-- List the specific pieces of evidence (data, facts, quotes) that will be required to prove the Action Title. This is derived from the `evidence_strategy` in the `GOVERNING_ARGUMENT`.
+## Input
+-   `GOVERNING_ARGUMENT`: The JSON file `outputs/04_Governing_Argument.json`.
+-   `CORE_STRATEGY`: The JSON file `outputs/03_Core_Strategy.json`.
+-   `CONSTRAINTS`: A string containing any constraints (e.g., "10 slides max, 10-minute presentation").
 
 ## Output Format
-
 Save the output to `outputs/05_Narrative_Blueprint.json` as **JSON only**:
 
 ```json
 {
-  "narrative_blueprint": {
-    "narrative_archetype_used": "Sparkline",
-    "estimated_slide_count": 12,
-    "slides": [
-      {
-        "slide_number": 1,
-        "slide_id": "SL01",
-        "narrative_beat": "The Hook & The Status Quo",
-        "action_title": "The world is on the cusp of a new economy driven entirely by AI agents.",
-        "purpose": "To establish the context and introduce a major technological shift, creating a sense of importance and scale.",
-        "evidence_needed": ["Gartner/Forrester quote on AI autonomy", "Analyst projection on AI-driven transaction volume"]
-      },
-      {
-        "slide_number": 2,
-        "slide_id": "SL02",
-        "narrative_beat": "The Problem / The Tension",
-        "action_title": "However, the rules and institutions that will govern this new economy are completely unknown, creating massive uncertainty and risk.",
-        "purpose": "To introduce the core problem and create a sense of intellectual tension and urgency.",
-        "evidence_needed": ["List of unanswered questions about AI economic governance", "Example of potential negative emergent behavior"]
-      },
-      {
-        "slide_number": 3,
-        "slide_id": "SL03",
-        "narrative_beat": "The Vision / The Promised Land",
-        "action_title": "We have the opportunity to be the architects of this new world, shaping its foundations for decades to come.",
-        "purpose": "To present a bold, inspiring vision that positions the audience as pioneers.",
-        "evidence_needed": ["Visionary quote about shaping the future", "Image representing a complex, thriving digital economy"]
-      }
-    ]
+  "hard_constraints": {
+    "max_slides": "(The maximum number of slides from the CONSTRAINTS. E.g., 10)",
+    "total_time_minutes": "(The total presentation time from the CONSTRAINTS. E.g., 10)"
+  },
+  "narrative_summary": {
+    "archetype_used": "(The narrative archetype from the Core Strategy. E.g., 'Hybrid: Pyramid Principle with a Sparkline Opening')",
+    "emotional_arc_description": "(A brief description of the emotional journey. E.g., 'The presentation opens with a punch to the gut (the problem), then offers a glimmer of hope (the opportunity), builds a logical case (the evidence), and closes with an inspiring call to action.')"
+  },
+  "slide_blueprint": [
+    {
+      "slide_number": 1,
+      "section": "(The section this slide belongs to. E.g., 'Opening Hook')",
+      "action_title": "(A complete sentence that IS the message. E.g., 'Japan\'s research influence is declining faster than we realize.')",
+      "emotional_purpose": "(What the audience should feel. E.g., 'Concern, a sense of urgency.')",
+      "time_allocation_seconds": "(Estimated time for this slide. E.g., 60)"
+    },
+    {
+      "slide_number": 2,
+      "section": "(E.g., 'Problem Statement (Claim C1)')",
+      "action_title": "(E.g., 'Traditional funding cycles are too slow for the pace of global innovation.')",
+      "emotional_purpose": "(E.g., 'Frustration, recognition of a shared pain.')",
+      "time_allocation_seconds": 60
+    }
+  ],
+  "skim_test_narrative": "(Read all the action_titles in sequence and write them out as a single, flowing paragraph. This is the 'Skim Test'. E.g., 'Japan\'s research influence is declining faster than we realize. Traditional funding cycles are too slow... Therefore, by joining this community, you can reclaim your global influence.')",
+  "quality_checklist": {
+    "slide_count_within_constraint": {
+      "result": "(true/false)",
+      "justification": "(E.g., 'The blueprint contains 10 slides, which is within the 10-slide maximum.')"
+    },
+    "skim_test_passed": {
+      "result": "(true/false)",
+      "justification": "(E.g., 'Reading the action titles in sequence tells a complete, persuasive story.')"
+    }
   }
 }
 ```
 
 ## Quality Checklist
-
-- [ ] Does the sequence of `action_titles` tell a complete and persuasive story from start to finish?
-- [ ] Is every `action_title` a full, assertive sentence?
-- [ ] Is each slide's `purpose` clear and aligned with the overall narrative?
-- [ ] Is the `evidence_needed` for each slide specific and directly supportive of its Action Title?
-- [ ] **Does the `estimated_slide_count` strictly adhere to the `CONSTRAINTS` specified at the top of this prompt? This is a HARD requirement.**
-- [ ] Is the output valid JSON?
-
-## Web Search Guidance
-
-Use web search to:
-
-1.  Find powerful, attention-grabbing statistics or quotes for the opening "Hook" slide.
-2.  Research examples of strong Action Titles from top consulting firms or keynote presentations to refine your own.
-3.  Verify that the evidence you are planning to use is credible and find potential sources for it.
+-   [ ] **Is the `slide_count_within_constraint` true?** (This is the most important check).
+-   [ ] Is every `action_title` a complete, declarative sentence?
+-   [ ] Does the `skim_test_narrative` read as a coherent and persuasive story?
+-   [ ] Does the `emotional_arc_description` reflect a designed emotional journey, not a flat report?
+-   [ ] Is the output valid JSON?

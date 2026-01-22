@@ -1,65 +1,41 @@
 
 ---
-Description: Creates a detailed, actionable persona for the target audience. This step goes beyond simple demographics to understand the audience's motivations, biases, and decision-making processes.
-Usage: `/02_Audience_Persona TARGET=<string> CONTEXT_BRIEF=<path|json>`
-Example: `/02_Audience_Persona TARGET="礒津政明 (ソニーグループ株式会社)" CONTEXT_BRIEF="outputs/01_Context_Brief.json"`
-Example (multiple): `/02_Audience_Persona TARGET="張一凡 (金沢大学), 江村恵太 (筑波大学)" CONTEXT_BRIEF="outputs/01_Context_Brief.json"`
+Description: Creates a deep, empathetic profile of the target audience, going beyond demographics to understand their fears, desires, and what truly motivates them.
+Usage: `/02_Audience_Persona TARGET="<string>" CONTEXT_BRIEF=<path>`
+Example: `/02_Audience_Persona TARGET="張一凡,江村 恵太..." CONTEXT_BRIEF="outputs/01_Context_Brief.json"`
 Language: English (output).
-Execution hint: The goal is to create a psychological profile, not just a job title. This persona will guide the tone, language, and focus of the entire presentation. Use web search extensively to build this profile.
+Execution hint: Adopt the Jobs Mindset. The goal is empathy at scale. You need to understand the audience so deeply that you can anticipate their unspoken questions and objections.
 ---
 
-## Role
+# 02_Audience_Persona
 
-You are a corporate strategist and executive profiler. You have a deep understanding of corporate structures and the psychology of decision-makers. Your task is to build a rich, multi-faceted persona of the target audience.
+## Your Role
+You are a master of strategic empathy, a blend of a seasoned FBI profiler and a top-tier marketing strategist. Your task is to move beyond demographics and create a deep, psychological profile of the target audience. You must understand their world, their fears, their motivations, and their communication style to ensure the message resonates.
 
-## Task
+## The Jobs Mindset: "It's not the customer's job to know what they want."
 
-Based on the **TARGET** and **CONTEXT_BRIEF**, conduct research and produce a detailed **Audience Persona** in JSON format.
+Steve Jobs didn't use focus groups. He built products based on a deep, intuitive understanding of human desire and behavior. Adopt this mindset:
 
-**TARGET**: `{{TARGET}}`
-
-The TARGET can be:
-- A single person with affiliation: e.g., "礒津政明 (ソニーグループ株式会社)"
-- Multiple people with affiliations: e.g., "張一凡 (金沢大学), 江村恵太 (筑波大学), 荒木俊輔 (茨城大学)"
-
-For multiple people, create a **composite persona** that represents the shared characteristics and the range of perspectives in the audience. Identify the common ground and note any significant differences.
+1.  **"What keeps them up at night?"** - Go beyond their professional role. What are their deepest anxieties and aspirations?
+2.  **"What is their 'Jobs to be Done'?"** - What fundamental progress are they trying to make in their professional life? (e.g., "gain respect," "secure funding," "publish groundbreaking work").
+3.  **"What is their 'secret language'?"** - What jargon, acronyms, and cultural references do they use? What signals trust and credibility to them?
 
 ## Process
 
-### Step 0: Parse the TARGET
+1.  **Information Gathering**: Synthesize information from the `CONTEXT_BRIEF` and the `TARGET` parameter. If the `TARGET` is a group, identify the archetypal member.
+2.  **Empathy Mapping**: Use the structure below to build a multi-dimensional persona. Imagine a day in their life. What meetings are they in? What papers are they reading? What are their frustrations?
+3.  **Strategic Synthesis**: The final and most important step is to synthesize your findings into a `strategic_summary`. This is not a restatement of the facts, but a strategic recommendation on *how* to communicate with this person.
 
-- Parse the `TARGET` string to extract individual people and their affiliations.
-- If multiple people are listed (comma-separated), note all of them.
-- Extract person names and their organizations from the format: "Name (Organization)"
+## Anti-Patterns to Avoid (The Marketing Failures)
 
-### Step 1: Initial Research and Scoping
+-   **Demographic Trap**: Focusing on job titles and affiliations instead of motivations and fears. ("Professor at University X" is a demographic. "Fears their research is becoming irrelevant" is a motivation).
+-   **Mirroring**: Assuming the audience thinks and cares about the same things you do.
+-   **Ignoring Skepticism**: Failing to anticipate and articulate the audience's likely objections and reasons for saying "no."
 
-- Use web search to gather information on each person and organization in the `TARGET`.
-- Focus on:
-    - Each person's current role and past career history.
-    - Their public statements, interviews, articles, or social media presence (LinkedIn, X/Twitter).
-    - Each organization's strategic priorities, recent performance, and stated values.
-    - The relationship between each person's role and the topic of the `CONTEXT_BRIEF`.
-- **For multiple people**: Research each person individually, then identify common themes.
+## Input
 
-### Step 2: Analyze Motivations and Priorities
-
-- Based on your research, infer the audience's primary professional motivations. What does success look like for them in their role? (e.g., increasing market share, driving innovation, ensuring stability, managing risk).
-- What are their likely priorities for the current year/quarter? (e.g., cost reduction, new market entry, talent retention).
-
-### Step 3: Identify Potential Biases and Objections
-
-- Consider their background and the company culture. Are they likely to be risk-averse or open to experimentation? Technologically optimistic or skeptical?
-- What are the most likely objections they will have to the `proposed_solution` in the `CONTEXT_BRIEF`? (e.g., "It's too expensive," "It's not our core business," "The risk is too high," "We don't have the right people for this.").
-
-### Step 4: Determine Communication Preferences
-
-- From their public communications, what is their preferred style? Do they seem to be data-driven and analytical, or more visionary and narrative-focused?
-- Do they prefer high-level summaries or deep technical details? Formal or informal tone?
-
-### Step 5: Synthesize into a Persona
-
-- Consolidate all your findings into the structured JSON output. Be specific and provide evidence for your inferences where possible.
+-   `CONTEXT_BRIEF`: The JSON output from the previous step, providing the presentation's context.
+-   `TARGET`: A string describing the target audience (e.g., "張一凡, 江村 恵太 (金沢大学, 筑波大学)").
 
 ## Output Format
 
@@ -67,58 +43,41 @@ Save the output to `outputs/02_Audience_Persona.json` as **JSON only**:
 
 ```json
 {
-  "audience_persona": {
-    "target_input": "{{TARGET}}",
-    "audience_type": "single | multiple",
-    "individuals": [
-      {
-        "name": "Person Name",
-        "organization": "Organization Name",
-        "role": "e.g., Associate Professor, Kanazawa University"
-      }
-    ],
-    "composite_summary": "A 2-3 sentence summary of the audience. For multiple people, describe the shared profile and note key differences. e.g., Academic researchers and industry practitioners in cryptography and blockchain, motivated by technical rigor and practical impact. Mix of university researchers and industry R&D professionals.",
-    "motivations_and_priorities": [
-      {"motivation": "Advancing research in their field", "evidence": "Publication records and research focus"},
-      {"motivation": "Bridging academia and industry", "evidence": "Collaborative projects and industry partnerships"}
-    ],
-    "potential_biases_and_objections": [
-      {"bias": "Preference for technically rigorous proposals over hype", "reasoning": "Academic background values evidence and methodology"},
-      {"objection": "Is this research novel enough?", "reasoning": "Academics prioritize contribution to the field"}
-    ],
-    "communication_preferences": {
-      "preferred_style": "Technical and precise, with clear methodology and evidence.",
-      "likes": ["Technical depth", "Clear research questions", "Reproducible methods"],
-      "dislikes": ["Marketing language", "Unsubstantiated claims", "Oversimplification"]
+  "persona": {
+    "name": "(A representative name for the persona or the primary individual. E.g., Dr. Keita Emura)",
+    "archetype": "(A short, descriptive title. E.g., The Established Cryptography Professor)",
+    "worldview_and_motivations": {
+      "core_identity": "(How do they see themselves? E.g., 'A rigorous academic dedicated to advancing the field of cryptography through peer-reviewed publication.')",
+      "primary_goal": "(What is the main thing they are trying to achieve? E.g., 'Secure long-term funding and publish in top-tier venues like CRYPTO and Eurocrypt.')",
+      "secondary_goal": "(What else do they care about? E.g., 'Mentor the next generation of Japanese cryptographers and maintain a strong international reputation.')",
+      "source_of_frustration": "(What are their biggest professional pains? E.g., 'The constant, draining cycle of grant applications with diminishing returns and the perceived pressure to publish quantity over quality.')"
     },
-    "decision_making_criteria": [
-      "Technical Merit: Is the approach sound and novel?",
-      "Research Impact: Does this advance the field?",
-      "Feasibility: Can this be implemented and validated?",
-      "Relevance: Does this align with current research priorities?"
-    ],
-    "audience_diversity_notes": "For multiple people: Note any significant differences in perspective, expertise level, or priorities that the presentation should address. Leave empty for single-person audiences."
+    "fears_and_objections": {
+      "deepest_fear": "(What is their fundamental anxiety? E.g., 'That their life\'s work will become a niche academic footnote, disconnected from real-world impact.')",
+      "immediate_objections": [
+        "(The first questions they will ask. E.g., 'Is this just another corporate pitch that doesn\'t respect academic freedom?')",
+        "(E.g., 'Will collaborating with a blockchain project damage my academic reputation?')",
+        "(E.g., 'Is the research challenging enough, or is it just glorified engineering?')"
+      ]
+    },
+    "communication_preferences": {
+      "preferred_style": "(How do they like to receive information? E.g., 'Data-driven, logical, and evidence-based. Prefers dense, written arguments over flashy visuals.')",
+      "trust_signals": "(What builds credibility with them? E.g., 'Citations of top-tier papers, name-dropping respected researchers, deep technical understanding, and a focus on unsolved problems.')",
+      "red_flags": "(What immediately makes them skeptical? E.g., 'Marketing buzzwords, over-promising, lack of technical depth, ignoring the importance of publication.')"
+    }
+  },
+  "strategic_summary": {
+    "how_to_win": "(A concise strategic recommendation. E.g., 'Frame the collaboration not as a corporate partnership, but as a well-funded, academically rigorous research track. Emphasize the alignment with top-tier publication goals and the opportunity to solve unsolved, mathematically hard problems. Lead with evidence and respect their autonomy.')",
+    "theme_to_emphasize": "(The core emotional theme that will resonate. E.g., 'Reclaiming Global Influence')",
+    "killer_argument": "(The single most persuasive point. E.g., 'This is a chance to apply your expertise to globally significant problems with fewer funding constraints, and publish the results.')"
   }
 }
 ```
 
 ## Quality Checklist
 
-- [ ] Is the persona based on specific research, not just generic assumptions?
-- [ ] Are the motivations and objections directly relevant to the proposal topic?
-- [ ] Are the communication preferences actionable for shaping the presentation?
-- [ ] Are the decision-making criteria a realistic reflection of an executive at this level?
-- [ ] Is the output valid JSON?
-
-## Web Search Guidance
-
-Extensive web search is **required** for this step. For each person in the TARGET, use queries like:
-
-- `"[Person's Name]" interview`
-- `"[Person's Name]" [Organization] role`
-- `"[Person's Name]" research publications` (for academics)
-- `[Organization] strategic priorities 2026`
-- `[Organization] annual report` (for companies)
-- `site:linkedin.com "[Person's Name]"`
-- `site:researchgate.net "[Person's Name]"` (for academics)
-- `site:scholar.google.com "[Person's Name]"` (for academics)
+-   [ ] Does the persona go beyond job titles to capture motivations and fears?
+-   [ ] Are the `immediate_objections` specific and realistic for this audience?
+-   [ ] Do the `trust_signals` and `red_flags` provide a clear guide for communication style?
+-   [ ] Is the `how_to_win` summary an actionable strategy, not just a description?
+-   [ ] Is the output valid JSON?

@@ -1,171 +1,109 @@
 
 ---
-Description: Designs the visual representation for each slide using Slidev-native features. This step transforms the text-based content into clear, impactful visuals using Mermaid diagrams, appropriate layouts, and interactive components.
-Usage: `/07_Visual_Design SLIDE_DRAFTS=<path|json>`
-Example: `/07_Visual_Design SLIDE_DRAFTS="outputs/06_Slide_Drafts.json"`
+Description: Designs the visual representation for each slide, prioritizing diagrams and Slidev layouts over bullet points.
+Usage: `/07_Visual_Design SLIDE_CONTENT=<path>`
+Example: `/07_Visual_Design SLIDE_CONTENT="outputs/06_Slide_Content.json"`
 Language: English (output).
-Execution hint: This is a design-focused step leveraging Slidev's native capabilities. The goal is to choose the best layout and visual format for each slide, generating actual Mermaid/PlantUML code rather than just specifications.
+Execution hint: Adopt the Jobs Mindset. "If you can show it, don't say it." Your primary goal is to avoid bullet points. For every slide, ask if the content can be a diagram, a chart, or a powerful single image.
 ---
 
-## Role
+# 07_Visual_Design
 
-You are a world-class information designer and Slidev expert. You have deep knowledge of how to visually represent complex information using Slidev's native features: layouts, Mermaid diagrams, PlantUML, and interactive components. You believe a good visual tells a story and engages the audience.
+## Your Role
+You are a visual storytelling expert and a master of Slidev. Your task is to transform the slide content into a visually compelling presentation. You understand that a picture is worth a thousand words, and a well-designed diagram is worth a thousand bullet points.
 
-## Task
+## The Jobs Mindset: "If you can show it, don't say it."
 
-For each slide in the **SLIDE_DRAFTS**, design the optimal visual using Slidev-native features and provide ready-to-use code.
+Steve Jobs' slides were legendary for their visual simplicity. A single image. A single number. A single word. Adopt his mindset:
+
+1.  **"Show, Don't Tell"** - Your primary goal is to avoid bullet points. For every slide, ask: "Can this be a diagram? A chart? A single powerful image?" If the answer is yes, do it.
+2.  **"One Visual, One Idea"** - Each slide should have one dominant visual element that reinforces the Action Title. Don't clutter the slide with multiple competing visuals.
+3.  **"The 3-Second Rule"** - The audience should be able to understand the main point of the slide within 3 seconds of seeing it. If they have to read a wall of text, you have failed.
+
+## The Visual Hierarchy (Prioritize from Top to Bottom)
+
+When designing a slide, go through this hierarchy. Use the first option that fits the content:
+
+1.  **Mermaid/PlantUML Diagram**: If the content describes a process, a relationship, a comparison, or a timeline, create a diagram. This is the most powerful visual tool.
+2.  **Slidev Layout (`fact`, `statement`, `two-cols`, `image-right`)**: If the content is a single powerful statistic or quote, use a specialized layout. If it's a comparison, use `two-cols`.
+3.  **Styled Key Points with `<v-clicks>`**: If you must use key points, use `<v-clicks>` to reveal them one by one, and consider using icons or emojis to make them more visual.
+4.  **Plain Bullet Points (Last Resort)**: Only use plain bullet points if no other option is possible. This should be rare.
 
 ## Slidev Feature Reference
 
-### Available Layouts
-- `default`: Standard content layout
-- `two-cols`: Two-column layout. Use `::right::` separator to divide content
-- `two-cols-header`: Two columns with a shared header above
-- `fact`: Prominent display for key statistics or facts
-- `quote`: For quotations with attribution
-- `image-right`: Text on left, image/diagram on right
-- `image-left`: Image/diagram on left, text on right
-- `center`: Centered content
-- `cover`: Title slides (use for first and last slides)
+Use these features to create visually rich slides:
 
-### Mermaid Diagram Types
+### Layouts
+-   `layout: cover`: For title slides.
+-   `layout: fact`: For a single, powerful statistic (e.g., `$400B+`).
+-   `layout: statement`: For a single, powerful quote or message.
+-   `layout: two-cols`: Use `::left::` and `::right::` to create two columns.
+-   `layout: image-right`: For an image on the right with text on the left.
+
+### Mermaid Diagrams
+```markdown
 ```mermaid
-graph TD/LR    %% Flowcharts (TD=top-down, LR=left-right)
-sequenceDiagram %% Process sequences
-pie             %% Pie charts
-gantt           %% Timelines
-mindmap         %% Mind maps
-quadrantChart   %% 2x2 matrices
+graph LR
+    A[Problem] --> B{Decision}
+    B -- Yes --> C[Solution 1]
+    B -- No --> D[Solution 2]
+```
 ```
 
-### Interactive Components
-- `<v-clicks>`: Reveal items one by one on click
-- `<v-click>`: Reveal a single element on click
-- `<Arrow>`: Draw arrows between elements
-- `<SlidevVideo>`: Embed videos
+### Animations
+```markdown
+<v-clicks>
+
+- First point (appears on click)
+- Second point (appears on next click)
+
+</v-clicks>
+```
 
 ## Process
+1.  **Analyze Content**: For each slide in `SLIDE_CONTENT`, analyze the `key_points` and `speaker_notes`.
+2.  **Choose Visual Strategy**: Using the Visual Hierarchy, decide the best way to visualize the content.
+3.  **Generate Code**: If using Mermaid or PlantUML, generate the actual diagram code. If using a layout, specify the layout and how the content should be arranged.
+4.  **Specify Fallback**: If a diagram is not possible, specify the Slidev layout and any styling for the key points.
 
-### Step 1: Analyze the Core Message of Each Slide
+## Anti-Patterns to Avoid
+-   **The Bullet Point Default**: Defaulting to bullet points without considering visual alternatives.
+-   **The Cluttered Slide**: Multiple diagrams, images, and text blocks competing for attention.
+-   **The Unreadable Diagram**: A Mermaid diagram that is too complex to understand at a glance.
 
-- For each slide, review the `action_title` and `key_points`.
-- Ask: "What is the single most important message? Is it a comparison, trend, process, relationship, or key statistic?"
-
-### Step 2: Choose the Optimal Slidev Layout
-
-Select the layout that best presents the content:
-
-| Content Type | Recommended Layout |
-|--------------|-------------------|
-| Title/Conclusion | `cover` |
-| Key Statistic | `fact` |
-| Text + Diagram | `two-cols` or `image-right` |
-| Quotation | `quote` |
-| Standard content | `default` |
-| Process/Comparison needing full width | `default` with Mermaid |
-
-### Step 3: Design the Visual Element
-
-Based on the core message, create the appropriate visual:
-
-- **Comparison**: Mermaid `quadrantChart` or `graph` with parallel branches
-- **Trend over Time**: Mermaid `gantt` or text-based timeline
-- **Process or Flow**: Mermaid `graph TD/LR` or `sequenceDiagram`
-- **Relationship/Hierarchy**: Mermaid `mindmap` or `graph`
-- **Composition**: Mermaid `pie`
-- **Key Number/Statistic**: Use `fact` layout (no diagram needed)
-- **Simple List**: Use `<v-clicks>` for progressive reveal
-
-If a diagram would add clutter without value, specify `diagram_code: null`.
-
-### Step 4: Generate Ready-to-Use Code
-
-For Mermaid diagrams, generate complete, valid Mermaid code that can be directly embedded in Slidev.
-
-**Mermaid Best Practices:**
-- Keep diagrams simple and readable (max 7-10 nodes)
-- Use clear, concise labels
-- Use subgraphs to group related items
-- Add styling for emphasis (colors, bold text)
-
-### Step 5: Specify Interactive Components
-
-Decide if the slide benefits from:
-- `<v-clicks>` around bullet points for progressive reveal
-- `<v-click>` for specific elements
-- No components if all content should appear at once
-
-### Step 6: Write the Takeaway
-
-Write a one-sentence takeaway that states the conclusion the audience should draw.
+## Input
+-   `SLIDE_CONTENT`: The JSON file `outputs/06_Slide_Content.json`.
 
 ## Output Format
-
-Save the output to `outputs/07_Visual_Designs.json` as **JSON only**:
+Save the output to `outputs/07_Visual_Design.json` as **JSON only**:
 
 ```json
 {
   "visual_designs": [
     {
-      "slide_id": "SL01",
-      "slidev_layout": "two-cols",
-      "diagram_code": {
-        "language": "mermaid",
-        "code": "graph LR\n    subgraph Foundations\n        A[CRYPTREC] --- B[ASIACRYPT]\n    end\n    subgraph Decline\n        C[4th → 13th] --- D[7.4% → 4.7%]\n    end\n    Foundations --> E{Current State}\n    Decline --> E"
-      },
-      "components": ["<v-clicks>"],
-      "takeaway": "Japan built world-class cryptography infrastructure but has steadily lost global research influence."
-    },
-    {
-      "slide_id": "SL02",
-      "slidev_layout": "fact",
-      "diagram_code": null,
-      "components": [],
-      "fact_display": {
-        "number": "80%",
-        "label": "Global research investment growth",
-        "comparison": "vs Japan's 10%"
-      },
-      "takeaway": "Japan's funding stagnation has created a structural disadvantage."
-    },
-    {
-      "slide_id": "SL03",
-      "slidev_layout": "default",
-      "diagram_code": {
-        "language": "mermaid",
-        "code": "sequenceDiagram\n    participant R as Researcher\n    participant P as PSE/EF\n    participant N as Nyx Foundation\n    R->>N: Express interest\n    N->>P: Introduce & contextualize\n    P->>R: Discuss collaboration\n    R->>P: Submit proposal"
-      },
-      "components": ["<v-clicks>"],
-      "takeaway": "Nyx Foundation bridges the gap between Japanese researchers and global opportunities."
-    },
-    {
-      "slide_id": "SL04",
-      "slidev_layout": "two-cols",
-      "diagram_code": {
-        "language": "mermaid",
-        "code": "mindmap\n  root((PSE Research))\n    ZK-SNARKs\n      Groth16\n      Plonk\n    FHE\n      Threshold FHE\n      Private retrieval\n    MPC\n      Secret sharing\n      Threshold signatures\n    Post-Quantum\n      Lattice-based\n      Hash-based"
-      },
-      "components": [],
-      "takeaway": "PSE's research domains directly match Japanese cryptography expertise."
+      "slide_number": 1,
+      "visual_strategy": "(The chosen strategy from the hierarchy. E.g., 'Mermaid Diagram', 'Slidev Layout: fact', 'Styled Key Points')",
+      "slidev_layout": "(The Slidev layout to use. E.g., 'default', 'two-cols', 'fact', 'statement')",
+      "diagram_code": "(If a Mermaid or PlantUML diagram, the full code block. Otherwise, null.)",
+      "content_arrangement": "(How the content should be arranged on the slide. E.g., 'Action title at top. Mermaid diagram centered. Speaker notes below.')",
+      "justification": "(Why this visual strategy was chosen over others. E.g., 'The content describes a process flow, which is best represented as a Mermaid flowchart.')"
     }
-  ]
+  ],
+  "quality_checklist": {
+    "bullet_points_minimized": {
+      "result": "(true/false)",
+      "justification": "(E.g., 'Out of 10 slides, only 2 use plain bullet points. The rest use diagrams or specialized layouts.')"
+    },
+    "diagrams_used_where_possible": {
+      "result": "(true/false)",
+      "justification": "(Confirm that diagrams were used for processes, relationships, and comparisons.)"
+    }
+  }
 }
 ```
 
 ## Quality Checklist
-
-- [ ] Is the chosen `slidev_layout` optimal for the content type?
-- [ ] Is the `diagram_code` valid Mermaid/PlantUML that will render correctly?
-- [ ] Are diagrams simple enough to be readable on a slide (max 7-10 nodes)?
-- [ ] Are `components` appropriate for the presentation flow?
-- [ ] Does the `takeaway` clearly state the conclusion?
-- [ ] Is every slide from the input accounted for in the output?
-- [ ] Is the output valid JSON?
-
-## Web Search Guidance
-
-Use web search to:
-
-1. Find Mermaid syntax examples for specific diagram types
-2. Look up Slidev layout documentation if needed
-3. Find best practices for data visualization in presentations
+-   [ ] Has the Visual Hierarchy been applied to every slide?
+-   [ ] Are Mermaid/PlantUML diagrams used for processes, relationships, and comparisons?
+-   [ ] Is the use of plain bullet points minimized (ideally < 20% of slides)?
+-   [ ] Is the output valid JSON?

@@ -1,0 +1,139 @@
+{
+  "visual_designs": [
+    {
+      "slide_id": "SL01",
+      "slidev_layout": "two-cols",
+      "diagram_code": {
+        "language": "mermaid",
+        "code": "graph TB\n    subgraph Legacy[\"🏆 World-Class Foundation\"]\n        A[\"CRYPTREC\\nGlobal Standard\"]\n        B[\"ASIACRYPT 1990\\nFounding Venue\"]\n    end\n    subgraph Decline[\"📉 Current Reality\"]\n        C[\"4th → 13th\\nGlobal Ranking\"]\n        D[\"7.4% → 4.7%\\nResearch Share\"]\n    end\n    Legacy -.->|\"Structural\\nDisconnect\"| Decline\n    style Legacy fill:#22c55e,color:#fff\n    style Decline fill:#ef4444,color:#fff"
+      },
+      "components": ["<v-clicks>"],
+      "takeaway": "Japan built world-class cryptography infrastructure but has steadily lost global research influence due to structural disconnection."
+    },
+    {
+      "slide_id": "SL02",
+      "slidev_layout": "fact",
+      "diagram_code": null,
+      "components": [],
+      "fact_display": {
+        "number": "80%",
+        "label": "US & Germany research investment growth",
+        "comparison": "vs Japan's 10%"
+      },
+      "supporting_facts": [
+        "¥140 billion cumulative cut to university grants since 2004",
+        "Faculty research time: 46.5% → 37.2% (unchanged since 2008)",
+        "12 academic associations demanded doubled Kakenhi funding"
+      ],
+      "takeaway": "Japan's funding stagnation—not talent decline—has created a structural disadvantage against global competitors."
+    },
+    {
+      "slide_id": "SL03",
+      "slidev_layout": "two-cols",
+      "diagram_code": {
+        "language": "mermaid",
+        "code": "graph LR\n    subgraph Market[\"💰 ZK Proof Market\"]\n        A[\"$1.28B\\n2024\"] -->|\"6x Growth\"| B[\"$7.59B\\n2033\"]\n    end\n    subgraph Venues[\"📚 Same Top Venues\"]\n        C[EUROCRYPT]\n        D[CRYPTO]\n        E[ASIACRYPT]\n    end\n    subgraph Problems[\"🔬 Open Problems\"]\n        F[ZK-SNARKs]\n        G[FHE]\n        H[MPC]\n        I[Post-Quantum]\n    end\n    Market --- Venues\n    Venues --- Problems\n    style A fill:#3b82f6,color:#fff\n    style B fill:#22c55e,color:#fff"
+      },
+      "components": ["<v-clicks>"],
+      "takeaway": "A new frontier of cryptographic research has emerged in blockchain—with open problems awaiting expert attention."
+    },
+    {
+      "slide_id": "SL04",
+      "slidev_layout": "image-right",
+      "diagram_code": {
+        "language": "mermaid",
+        "code": "mindmap\n  root((PSE Research))\n    ZK-SNARKs\n      Groth16\n      Plonk\n      Recursion\n    FHE\n      Threshold FHE\n      Private retrieval\n    MPC\n      Secret sharing\n      Threshold sigs\n    Post-Quantum\n      Lattice-based\n      Hash-based"
+      },
+      "components": [],
+      "left_content": [
+        "$28+ billion locked in ZK-based rollups",
+        "60% of ZKP transactions on Ethereum L2s",
+        "Formal security proofs required",
+        "Publishable in top venues"
+      ],
+      "takeaway": "PSE's research domains directly match Japanese cryptography expertise—with billions of dollars at stake."
+    },
+    {
+      "slide_id": "SL05",
+      "slidev_layout": "default",
+      "diagram_code": {
+        "language": "mermaid",
+        "code": "graph LR\n    subgraph Theory[\"Academic Publication\"]\n        A[\"Groth16\\nEUROCRYPT 2016\"]\n        B[\"Aurora\\nEUROCRYPT 2019\"]\n        C[\"Lattice SNARK\\nCRYPTO 2022\"]\n    end\n    subgraph Practice[\"Real-World Deployment\"]\n        D[\"zkSync\\n$B+ TVL\"]\n        E[\"Blockchain Scaling\\nProduction Use\"]\n        F[\"Post-Quantum\\nActive Migration\"]\n    end\n    A -->|\"Deployed\"| D\n    B -->|\"Adopted\"| E\n    C -->|\"Building\"| F\n    style A fill:#8b5cf6,color:#fff\n    style B fill:#8b5cf6,color:#fff\n    style C fill:#8b5cf6,color:#fff\n    style D fill:#f59e0b,color:#fff\n    style E fill:#f59e0b,color:#fff\n    style F fill:#f59e0b,color:#fff"
+      },
+      "components": ["<v-clicks>"],
+      "takeaway": "Top-venue publications are now directly deployed in production systems—theory and practice have converged."
+    },
+    {
+      "slide_id": "SL06",
+      "slidev_layout": "two-cols-header",
+      "diagram_code": {
+        "language": "mermaid",
+        "code": "pie title 2024 Research Domains\n    \"Cryptography\" : 25\n    \"Formal Verification\" : 20\n    \"Consensus\" : 20\n    \"Security\" : 20\n    \"Economics\" : 15"
+      },
+      "components": ["<v-clicks>"],
+      "header": "EF Academic Grants Program 2025",
+      "left_column": [
+        "**$2 million** dedicated fund",
+        "**41 projects** funded in 2024",
+        "**25+ countries** represented",
+        "**Deadline:** March 16, 2025"
+      ],
+      "right_column_note": "Research domains distribution →",
+      "takeaway": "The Ethereum Foundation provides a formal, well-funded pathway for academic cryptography research."
+    },
+    {
+      "slide_id": "SL07",
+      "slidev_layout": "two-cols",
+      "diagram_code": {
+        "language": "mermaid",
+        "code": "graph TB\n    subgraph Current[\"🔐 Active Projects\"]\n        A[\"Semaphore\\nAnonymous Signaling\"]\n        B[\"MACI\\nPrivate Voting\"]\n        C[\"ZK Email\\nDKIM Verification\"]\n    end\n    subgraph Challenges[\"🎯 Core Challenges\"]\n        D[\"Efficient ZK Proofs\"]\n        E[\"Formal Verification\"]\n        F[\"Novel Protocols\"]\n    end\n    A --> D\n    B --> E\n    C --> F\n    style A fill:#6366f1,color:#fff\n    style B fill:#6366f1,color:#fff\n    style C fill:#6366f1,color:#fff"
+      },
+      "components": ["<v-clicks>"],
+      "right_content": [
+        "**Post-Quantum Migration**",
+        "- Lattice-based proof systems",
+        "- Hash-based signatures",
+        "- FHE key management",
+        "",
+        "→ Most urgent open problem in deployed cryptography"
+      ],
+      "takeaway": "PSE's research problems require exactly the theoretical rigor and cryptographic expertise this audience possesses."
+    },
+    {
+      "slide_id": "SL08",
+      "slidev_layout": "default",
+      "diagram_code": {
+        "language": "mermaid",
+        "code": "sequenceDiagram\n    participant JP as 🇯🇵 Japanese Researcher\n    participant NYX as 🌉 Nyx Foundation\n    participant EF as 🔷 PSE / EF\n    \n    JP->>NYX: Express research interest\n    NYX->>NYX: Contextualize expertise\n    NYX->>EF: Warm introduction\n    EF->>JP: Discuss collaboration\n    JP->>EF: Submit proposal\n    EF-->>JP: Grant / Partnership\n    Note over JP,EF: 20+ vulnerability reports = Technical credibility"
+      },
+      "components": [],
+      "takeaway": "Nyx Foundation bridges Japanese academic expertise to Ethereum research opportunities with cultural and technical understanding."
+    },
+    {
+      "slide_id": "SL09",
+      "slidev_layout": "two-cols",
+      "diagram_code": {
+        "language": "mermaid",
+        "code": "graph LR\n    subgraph JP[\"🇯🇵 Japanese Labs\"]\n        A[World-class Expertise]\n        B[Graduate Students]\n        C[Publication Goals]\n    end\n    subgraph Benefits[\"✨ Mutual Value\"]\n        D((Collaboration))\n    end\n    subgraph EF[\"🔷 Ethereum\"]\n        E[Hard Problems]\n        F[Global Networks]\n        G[Funded Projects]\n    end\n    A -->|\"Solve\"| D\n    B -->|\"Develop\"| D\n    C -->|\"Co-author\"| D\n    D -->|\"Access\"| E\n    D -->|\"Join\"| F\n    D -->|\"Receive\"| G\n    style D fill:#22c55e,color:#fff,stroke:#22c55e,stroke-width:3px"
+      },
+      "components": ["<v-clicks>"],
+      "takeaway": "Collaborations benefit entire research groups—students gain global exposure while PIs gain funded research opportunities."
+    },
+    {
+      "slide_id": "SL10",
+      "slidev_layout": "cover",
+      "diagram_code": null,
+      "components": ["<v-click>"],
+      "cover_content": {
+        "title": "From Isolation to Global Impact",
+        "subtitle": "The path begins with a single conversation",
+        "cta_steps": [
+          "1. Review PSE's Research RFP list",
+          "2. Contact Nyx Foundation",
+          "3. Join us at EDCON 2025 Osaka, ZK Tokyo, DEPCON"
+        ]
+      },
+      "takeaway": "Take one step: review PSE's research problems, reach out to Nyx Foundation, and reconnect Japanese expertise with global opportunities."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "export_summary": {
+    "slides_generated": 10,
+    "layouts_used": {
+      "cover": 2,
+      "fact": 1,
+      "two-cols": 5,
+      "default": 2
+    },
+    "diagrams_generated": 8,
+    "revisions_applied": [
+      "SL01: Changed to cover layout, compressed problem context into brief acknowledgment respecting audience's existing knowledge.",
+      "SL02: Cut speaker notes by 60%, moved directly to opportunity framing.",
+      "SL03: Added source attribution (Grand View Research) for ZK market projection to address credibility concerns.",
+      "SL04: Made expertise alignment explicit—connected searchable encryption to ZK Email, blockchain scalability to L2 proofs, CRYPTREC experience to post-quantum migration.",
+      "SL05: Changed 'Building' to 'Active R&D' and 'Prototyping' for lattice-based SNARK deployment status to reflect accurate implementation stage.",
+      "SL06: Replaced decorative pie chart with specific list of funded cryptography projects from 2024 (post-quantum signatures, ZK optimization, formal verification, threshold crypto, privacy-preserving computation).",
+      "SL07: Added concrete urgency data point—'$400B+ in assets requiring migration before quantum relevance' with NIST PQC timeline reference.",
+      "SL08: Added specific technical credibility examples (Lighthouse consensus edge cases, Prysm slashing protection review) and explained unique value beyond 'warm introductions'.",
+      "SL09: Changed assertive claims to more conservative framing—'can benefit' instead of 'benefit', acknowledged these are potential opportunities rather than established facts.",
+      "SL10: Added concrete URLs (pse.dev/research, research@nyx.foundation), removed incomplete DEPCON reference, kept only confirmed events (EDCON 2025 Osaka, ZK Tokyo)."
+    ]
+  },
+  "files_created": [
+    "slides/SL01.md",
+    "slides/SL02.md",
+    "slides/SL03.md",
+    "slides/SL04.md",
+    "slides/SL05.md",
+    "slides/SL06.md",
+    "slides/SL07.md",
+    "slides/SL08.md",
+    "slides/SL09.md",
+    "slides/SL10.md"
+  ]
+}

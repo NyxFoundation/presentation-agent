@@ -1,89 +1,74 @@
+# DEPCON Hakodate オープニングトーク
 
 ---
-# Presentation Raw Input Template
-Use this file to dump all your raw notes, ideas, and information about the presentation you want to create. The AI agent will parse this and structure it.
+
+## 本プレゼンテーションについて (The Big Idea)
+
+本日のプレゼンテーションは、SCIS2026のサイドイベント「DEPCON Hakodate」のオープニングとして、日本の暗号・セキュリティ研究コミュニティの皆様に対し、**イーサリアム（Ethereum）研究への参加を強く奨励する**ことを目的としています。我々、Nyx Foundationは、学歴や職種、所属の垣根を越えて日本の研究者が一致団結し、世界最高水準の研究成果を達成することで、オープンな未来を共に築き上げることを目指しています。このビジョンを実現するため、我々は世界中から研究予算を確保し、それを日本の優秀な研究者に分配する活動に尽力します。本トークを通じて、皆様に我々のコミュニティへの参加を呼びかけ、共に研究を推進していく仲間を募りたいと考えています。
+
+## 現状の課題 (Background / Status Quo)
+
+日本の研究エコシステムが直面している最大の課題は、**研究予算の継続的な削減**です。国立大学の運営費交付金は、法人化（2004年）以降の年1%の効率化係数により累積約1,400億円が削減されました [1]。科研費や学振（日本学術振興会特別研究員制度）をはじめとする公的研究資金は年々厳しさを増しており、限られたパイを奪い合う競争が激化しています。文部科学省の白書によれば、日本の論文数の世界ランクは20年前の第2位から第4位に、注目度の高い論文（Top10%補正論文数）のランクは第4位から第10位へと低下しています [2]。この構造的な問題は、研究者たちに深刻な分断をもたらしています。
+
+予算の制約は、研究者間の**横のつながりを希薄にする**大きな要因となっています。私自身、修士課程に在籍していた際、同分野の他大学の学生と交流する機会はほとんどありませんでした。研究費の確保に追われ、共同研究や分野横断的な取り組みに割くリソースがないのが現実です。NIRA総合研究開発機構の報告書は、日本の研究者が国際的な研究プラットフォームから孤立しつつあり、「放置すれば日本の科学そのものが衰退する」と警鐘を鳴らしています [3]。結果として、優秀な研究者が孤立し、一人で研究に取り組むケースが非常に多くなっています。我々は最近、富山県で5年間もの間、たった一人で高性能なEVM（Ethereum Virtual Machine）コンパイラを開発している優れたエンジニアに出会いました。Haskellで記述されたそのコンパイラは、高度な形式検証と最適化機能を備えており、彼の才能と情熱には感服させられます。しかし、このような才能が個々に点在し、連携されていないのが現状です。
+
+さらに、予算削減は**アカデミアと産業界の間のギャップ**をも拡大させています。大学は現場の実需を十分に理解する余裕がなく、企業は学術研究の可能性を軽視しがちです。企業の研究所も、多くは自社の利益追求が目的となり、真に社会が必要とする根源的な問題から乖離してしまう傾向があります。各々がそれぞれの領域に留まっていては、社会全体にとっての「最重要な問題」を特定し、それに正面から取り組むことは困難です。
+
+そして、この状況の中で、**日本でイーサリアム研究に取り組む人が極めて少ない**という現実があります。今年のSCIS参加者の皆様の中で、イーサリアムが掲げる最重要課題、例えば次期アップグレードの名称やその内容をご存知の方は、果たしてどれほどいらっしゃるでしょうか。しかし、私はこれを悲観的に捉えてはいません。**むしろ、これは巨大なチャンスです。** イーサリアムは数兆円規模の資産が動く世界的なシステムであり、魅力的な研究テーマの宝庫です。競争相手が少ない今こそ、この分野に飛び込み、世界をリードする研究成果を出す絶好の機会なのです。
+
+## DEPCON Hakodateの意義 (Why This Event Matters)
+
+このDEPCON Hakodate開催の意義は、**多様な人々が集まる場所をつくること、そのものにあります**。大学教授、大学院生、企業の研究職、イーサリアム財団の研究者、台湾のイーサリアムコミュニティなど、異なるバックグラウンドを持つ参加者が一堂に会するこの場は、まさに分断を乗り越えるための実践です。
+
+我々は、参加者の皆様が思想や意見、情報をシェアし合い、新たなコラボレーションやアイデアをはぐくむ場所をつくり続けてきました。このイベントを通じて、Nyx Foundationと直接関係がなくても、皆様同士の新しい友人関係が生まれたり、研究成果の向上につながることを心から願っています。研究者の孤立という課題に対する我々の答えは、まさにこのような「つながりの場」を継続的に提供することなのです。
+
+## 我々が目指すもの (Goal / Vision)
+
+我々Nyx Foundationの使命は、これらの課題を解決し、**日本の全ての研究者が所属や立場に関係なく「最重要な問題」に挑戦できる土台を築くこと**です。私たちは、年功序列ではなく、若く意欲的な才能が最大の成果を出せる環境を構築します。イーサリアム財団（Ethereum Foundation）をはじめとする海外の主要プロジェクトが提示する最新の研究テーマや研究助成金（グラント）の情報を積極的に共有し、コミュニティ全体でそれらの課題に共同で取り組み、世界を驚かせるような偉大な発明と成果を生み出していきます。そして、次世代を担う若い研究者を世界レベルの研究者として育成し、グローバルな舞台へ輩出することを目指します。これは、個々の勝利ではなく、**協力してみんなで勝つ**という思想に基づいています。
+
+## 皆様へのお願い (The Ask / Call to Action)
+
+このビジョンを実現するため、皆様に具体的な行動をお願いしたく思います。それは、**我々のコミュニティに参加し、共に研究を推進すること**です。
+
+その第一歩として、イーサリアム財団のPSE（Privacy and Scaling Explorations）チームが最近公開した研究提案依頼（RFP）リストをご覧ください [4]。ここに挙げられているテーマは、イーサリアムエコシステムが今まさに解決を必要としている最重要課題の一覧です。これらは単なる研究テーマに留まらず、採択されれば研究助成金を得ながら、自身の研究成果として世界に発表できる絶好の機会を意味します。
+
+もし、この中に一つでも興味を引くテーマがあれば、ぜひ我々にお声がけください。Nyx Foundationは、これまでイーサリアムクライアント実装における20件以上の脆弱性報告や、イーサリアム財団の形式検証合宿での招待講演など、数多くの実績を積み重ねてきました。イーサリアムに関する深い知見とネットワークを活かし、皆様の研究を全力でサポートすることをお約束します。皆様が持つ暗号技術やセキュリティに関する専門知識と、我々のイーサリアムに関する専門知識を融合させ、共に最高の研究成果を創り上げましょう。
+
+## 主要な情報とデータ (Key Facts, Data, and Numbers)
+
+| 指標 | データ |
+|------|--------|
+| 国立大学運営費交付金の累積削減額 | 約1,400億円（2004年以降） |
+| 日本の論文数世界ランク | 第2位 → 第4位（20年間で低下） |
+| Top10%補正論文数世界ランク | 第4位 → 第10位（20年間で低下） |
+| Nyx Foundation脆弱性報告実績 | 20件以上 |
+
+- **Ethereum PSE Research RFP List:** イーサリアムが直面する最重要課題と研究助成金の機会がまとめられています。
+  - URL: https://github.com/ethereum/iptf-map/blob/master/rfps/README.md
+
+## 関係者 (Team / Stakeholders)
+
+- **主催:** Nyx Foundation
+
+- **協力:** SCIS2026, DEPCON Hakodate 参加者
+  - 大学教授、大学院生、企業研究職
+  - イーサリアム財団研究者
+  - 台湾イーサリアムコミュニティ
+
+## 結びの言葉
+
+私自身、この壁を打破するために外の世界へ飛び出しました。ZK Tokyoというコミュニティを運営し、イーサリアム財団と共同研究を行い、そしてこのNyx Foundationを設立しました。一人や数人で研究する時代は終わりを告げようとしています。これからは、仲間と活発に議論し、協力し合いながら研究を進める場所が不可欠です。
+
+皆様も、自らの人生の扉を開き、オープンマインドで「最重要な問題とは何か」を問い続け、その解決に情熱を燃やしませんか。Nyx Foundationは、そのためのプラットフォームです。ぜひ我々の活動に参加し、共にオープンな未来を築き上げていきましょう。
+
 ---
 
-## What is this about? (The Big Idea)
+### 参考文献
 
-<!-- Describe the core idea, project, or proposal you want to present. -->
+[1] 文部科学省科学技術・学術政策研究所. 国立大学運営費交付金の推移に関する各種報告書.
 
-## What's the current situation? (Background / Status Quo)
+[2] 文部科学省. "第１章 我が国の研究力の現状と課題". 令和4年版 科学技術・イノベーション白書. https://www.mext.go.jp/b_menu/hakusho/html/hpaa202201/1421221_00005.html
 
-<!-- Provide context. What is the current state of affairs? What is the problem or opportunity? -->
+[3] 國領二郎. "孤立する日本の研究プラットフォーム―放置すれば日本の科学そのものが衰退する". NIRA総合研究開発機構, 2015年5月. https://www.nira.or.jp/paper/opinion-paper/2015/15.html
 
-## What do you want to achieve? (Goal / Vision)
-
-<!-- What does success look like? What is the desired outcome after the presentation? -->
-
-## What are you asking for? (The Ask / Call to Action)
-
-<!-- Be specific. What do you need from the audience? Budget? Approval? Partnership? -->
-
-## Key Facts, Data, and Numbers
-
-<!-- List any important statistics, metrics, or data points that support your case. -->
-
-## Who is involved? (Team / Stakeholders)
-
-<!-- List key people, organizations, or partners involved in this project. -->
-
-## Any constraints or considerations?
-
-<!-- Are there budget limits, deadlines, or other constraints the presentation should address? -->
-
-## Other Notes
-
-### 1. Organization (Nyx Foundation)
-
-#### 1.1 Basic Info
-- Name: Nyx Foundation
-- Website: https://nyx.foundation
-- Overview: イーサリアムに特化した私営の研究組織
-- Funding: 30名以上から総額6,000万円以上の寄付で運営
-
-#### 1.2 Philosophy / Culture
-- Ethereumは学歴・人種・年齢・所属にかかわらず成果で評価されるエコシステム
-- その価値観に共鳴する少数精鋭の若手研究者・エンジニアで構成
-- まずはイーサリアム分野で偉大な成果 → 将来的に基礎〜応用まで幅広く
-- 優秀な研究者に資源分配し、分野横断で研究して大きな成果を出す
-- 発明を増やし社会を発展、より住みやすい世の中に
-
-#### 1.3 Origin Story (Optional Narrative Hook)
-- 2年前に「研究所構想」を議論した際、Sony創立の目的の一文を理想像として掲げていた  
-  「真面目なる技術者の技能を、最高度に発揮せしむべき自由闊達にして愉快なる理想工場の建設」
-- Sony reference: https://www.sony.com/ja/SonyInfo/CorporateInfo/History/prospectus.html
-
-#### 1.4 R&D (Ethereum-focused)
-- Ethereum 3.0 に向けた Ethereum client 開発（構想）
-  - EIP仕様の形式検証 → 型自動生成 → 実装も形式検証
-  - パフォーマンスとセキュリティの両立
-  - 耐量子署名・3SFなど次世代アップグレードを含む（言及）
-- White-hat hacking / security
-  - Fusaka監査コンテストで Ethereum client 実装へ **17件の脆弱性報告**
-  - Press: https://prtimes.jp/main/html/rd/p/000000006.000170100.html
-- Application R&D
-  - 価格参照契約：現実世界の契約と、それにかかる自然状態の記述・偶発事象の予見・裁判による執行を、スマートコントラクトと予測市場で自動化する理論を構築
-  - 流動性供給分析ダッシュボード：流動性供給者ごとの損益を分析するダッシュボードを開発
-  - プライベートメンプールのMEV分析：プライベートMempoolでJIT Liquidityやサンドイッチ攻撃等のMEVがどれだけ発生し、エコシステムにどのような影響を与えているのか分析
-
-#### 1.5 Research House (Physical base)
-- 本郷でリサーチハウスを1年間運営（稼働中）
-  - チームメンバー5人が居住しながら作業
-- 南砺市にラボ建設中（クライアント開発拠点）
-  - 30人程度宿泊可能（予定）
-
-#### 1.6 Education / Community / Academia
-- ZK Tokyo（6週間の教育＋プロダクト開発サマープログラム）
-  - https://www.youtube.com/@zk-tokyo
-  - ETHTokyoで毎年複数チームが上位入賞
-  - 今年で4年目
-  - 初年・3年目はVitalikがデモに来訪
-  - 今年は東大ブロックチェーン寄附講座と共同開催
-- DEPCON（東大ブロックチェーン寄附講座とのイベント）
-  - ​https://luma.com/g64yev2s
-- DEPCON Hakodate
-  - https://luma.com/51q0qyhl
-  - SCIS2026（国内最大級の暗号・セキュリティ学会）サイドイベント
-  - 2026-01-29 函館で開催
-  - 参加者例：大学教授、学生、研究所、Ethereum Foundation、台湾Ethereumコミュニティ
+[4] Ethereum Privacy and Scaling Explorations. "IP-TF MAP RFPs". GitHub. https://github.com/ethereum/iptf-map/blob/master/rfps/README.md

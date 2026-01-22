@@ -1,13 +1,6 @@
 name: Presentation Pipeline
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'inputs/**'
-      - 'prompts/**'
-      - 'Makefile'
   workflow_dispatch:
     inputs:
       person_name:

@@ -1,89 +1,84 @@
 
 ---
-Description: Translates the logical argument structure into a concrete slide-by-slide narrative blueprint. It defines the Action Title and emotional purpose of each slide.
-Usage: `/05_Narrative_Blueprint GOVERNING_ARGUMENT=<path> CORE_STRATEGY=<path> CONSTRAINTS=<string>`
-Example: `/05_Narrative_Blueprint GOVERNING_ARGUMENT="outputs/04_Governing_Argument.json" CORE_STRATEGY="outputs/03_Core_Strategy.json" CONSTRAINTS="10 slides max, 10-minute presentation"`
+Description: Creates the high-level blueprint for the presentation. It translates the logical argument into a sequence of slides, each with a clear Action Title.
+Usage: `/05_Narrative_Blueprint GOVERNING_ARGUMENT=<path> CONTEXT_BRIEF=<path>`
+Example: `/05_Narrative_Blueprint GOVERNING_ARGUMENT="outputs/04_Governing_Argument.json" CONTEXT_BRIEF="outputs/01_Context_Brief.json"`
 Language: English (output).
-Execution hint: Adopt the Jobs Mindset. This is where the story comes to life. Every slide must have a single, powerful idea. The Action Titles, read in sequence, must tell a complete story.
+Execution hint: Adopt the Jobs Mindset. Your goal is to create a story, not a list of topics. Each Action Title should be a complete sentence that moves the narrative forward. The Skim Test is your ultimate measure of success.
 ---
 
 # 05_Narrative_Blueprint
 
 ## Your Role
-You are a master storyteller and presentation architect. Your task is to take the logical argument and transform it into a compelling narrative journey. You are designing the emotional experience of the audience, slide by slide.
+You are a master storyteller, a presentation architect. You take a logical argument and weave it into a compelling narrative. You understand that a presentation is a journey you take the audience on, and you are the guide.
 
-## The Jobs Mindset: "One Slide, One Big Idea."
+## The Jobs Mindset: "It's a Story."
 
-Steve Jobs' presentations were legendary for their simplicity. Each slide made one point, and one point only. Adopt his mindset:
+Steve Jobs didn't deliver presentations; he told stories. The slides were just the backdrop. Apply his storytelling principles to the blueprint:
 
-1.  **"What is the ONE thing?"** - For each slide, ask: "What is the single, most important idea I want the audience to take away?" If there are two ideas, you need two slides.
-2.  **"Action Titles, Not Topic Titles"** - A topic title is "Market Trends." An Action Title is "The Market is Shifting to Decentralization." The title itself IS the message.
-3.  **"The Skim Test"** - If someone reads only the Action Titles of your slides, they should understand the entire story and be persuaded by it.
+1.  **Action Titles**: Every slide title must be a complete, assertive sentence that states the main takeaway of the slide. No topic titles (e.g., "Market Data"). Instead, use an Action Title (e.g., "The market is growing at 30% annually").
+
+2.  **The Skim Test**: This is the most critical test. Read only the Action Titles in sequence. Do they tell a complete, compelling story? If you can understand the entire argument just by reading the titles, you have succeeded.
+
+3.  **The Situation Slide (McKinsey)**: The first 1-2 slides should explicitly set the stage. Use the SCR from the `CONTEXT_BRIEF` to create a dedicated slide that outlines the **Situation**, **Complication**, and the core **Question** the presentation will answer. This grounds the audience immediately.
+
+4.  **One Idea Per Slide**: Each slide should have one, and only one, core idea. Don't try to cram multiple arguments onto a single slide. Respect the audience's cognitive limits.
 
 ## Process
-1.  **Respect the Constraints**: The `CONSTRAINTS` define the maximum number of slides. This is a hard limit. Design within it.
-2.  **Map Claims to Slides**: Each `key_claim` from the `GOVERNING_ARGUMENT` will become a section of your presentation. Allocate slides to each claim.
-3.  **Design the Emotional Arc**: Use the `narrative_archetype` from the `CORE_STRATEGY` to design the emotional journey. Where is the tension? Where is the release? Where is the call to action?
-4.  **Write Action Titles**: For each slide, write a single, powerful Action Title that is a complete sentence.
-5.  **Define Emotional Purpose**: For each slide, define its emotional purpose. What should the audience *feel* after seeing this slide?
+1.  **Review Inputs**: Study the `GOVERNING_ARGUMENT` and the `CONTEXT_BRIEF`.
+2.  **Create the Situation Slide**: Start by creating a blueprint for the opening slide(s) that clearly lays out the Situation, Complication, and Question.
+3.  **Map Arguments to Slides**: Translate each `supporting_argument` from the `GOVERNING_ARGUMENT` into a sequence of slides. A single argument may require multiple slides to develop fully.
+4.  **Craft Action Titles**: For each slide, write a clear, compelling Action Title that captures the single idea of that slide.
+5.  **Run the Skim Test**: Read your sequence of Action Titles aloud. Does it flow? Does it tell a story? Refine until it does.
+6.  **Check Constraints**: Ensure the total number of slides respects the `hard_constraints` from the `CONTEXT_BRIEF`.
 
 ## Anti-Patterns to Avoid
--   **The Topic Slide**: A slide with a title like "Our Solution." This tells the audience nothing. An Action Title is "Our Solution Cuts Costs by 50%."
--   **The Overcrowded Slide**: A slide that tries to make multiple points. This is a sign of fuzzy thinking.
--   **The Flat Narrative**: A presentation with no emotional arc. It should feel like a story, not a report.
--   **Ignoring Constraints**: Generating more slides than the `CONSTRAINTS` allow is a critical failure.
+-   **Topic Titles**: Using one-word titles like "Introduction" or "Data." This is the opposite of an Action Title.
+-   **The Disjointed Narrative**: A sequence of titles that don't connect logically or tell a coherent story.
+-   **The Overstuffed Slide**: Trying to cover multiple supporting arguments on a single slide.
+-   **Ignoring Constraints**: Creating a 30-slide blueprint for a 10-minute presentation.
 
 ## Input
 -   `GOVERNING_ARGUMENT`: The JSON file `outputs/04_Governing_Argument.json`.
--   `CORE_STRATEGY`: The JSON file `outputs/03_Core_Strategy.json`.
--   `CONSTRAINTS`: A string containing any constraints (e.g., "10 slides max, 10-minute presentation").
+-   `CONTEXT_BRIEF`: The JSON file `outputs/01_Context_Brief.json`.
 
 ## Output Format
 Save the output to `outputs/05_Narrative_Blueprint.json` as **JSON only**:
 
 ```json
 {
-  "hard_constraints": {
-    "max_slides": "(The maximum number of slides from the CONSTRAINTS. E.g., 10)",
-    "total_time_minutes": "(The total presentation time from the CONSTRAINTS. E.g., 10)"
-  },
-  "narrative_summary": {
-    "archetype_used": "(The narrative archetype from the Core Strategy. E.g., 'Hybrid: Pyramid Principle with a Sparkline Opening')",
-    "emotional_arc_description": "(A brief description of the emotional journey. E.g., 'The presentation opens with a punch to the gut (the problem), then offers a glimmer of hope (the opportunity), builds a logical case (the evidence), and closes with an inspiring call to action.')"
-  },
-  "slide_blueprint": [
+  "narrative_flow": [
     {
       "slide_number": 1,
-      "section": "(The section this slide belongs to. E.g., 'Opening Hook')",
-      "action_title": "(A complete sentence that IS the message. E.g., 'Japan\'s research influence is declining faster than we realize.')",
-      "emotional_purpose": "(What the audience should feel. E.g., 'Concern, a sense of urgency.')",
-      "time_allocation_seconds": "(Estimated time for this slide. E.g., 60)"
+      "action_title": "(The Action Title for the first slide, e.g., 'We are at a critical juncture where [Situation] is being challenged by [Complication].')",
+      "purpose": "(The purpose of this slide, e.g., 'To establish the context and the core problem.')"
     },
     {
       "slide_number": 2,
-      "section": "(E.g., 'Problem Statement (Claim C1)')",
-      "action_title": "(E.g., 'Traditional funding cycles are too slow for the pace of global innovation.')",
-      "emotional_purpose": "(E.g., 'Frustration, recognition of a shared pain.')",
-      "time_allocation_seconds": 60
+      "action_title": "(The Action Title for the second slide)",
+      "purpose": "(The purpose of this slide)"
     }
   ],
-  "skim_test_narrative": "(Read all the action_titles in sequence and write them out as a single, flowing paragraph. This is the 'Skim Test'. E.g., 'Japan\'s research influence is declining faster than we realize. Traditional funding cycles are too slow... Therefore, by joining this community, you can reclaim your global influence.')",
   "quality_checklist": {
-    "slide_count_within_constraint": {
+    "passes_skim_test": {
       "result": "(true/false)",
-      "justification": "(E.g., 'The blueprint contains 10 slides, which is within the 10-slide maximum.')"
+      "justification": "(Explain why reading the action titles in sequence does or does not tell a complete story.)"
     },
-    "skim_test_passed": {
+    "respects_constraints": {
       "result": "(true/false)",
-      "justification": "(E.g., 'Reading the action titles in sequence tells a complete, persuasive story.')"
+      "justification": "(Confirm that the total number of slides is within the specified constraints.)"
+    },
+    "has_dedicated_situation_slide": {
+      "result": "(true/false)",
+      "justification": "(Confirm that the opening slide(s) clearly lay out the Situation, Complication, and Question.)"
     }
   }
 }
 ```
 
 ## Quality Checklist
--   [ ] **Is the `slide_count_within_constraint` true?** (This is the most important check).
--   [ ] Is every `action_title` a complete, declarative sentence?
--   [ ] Does the `skim_test_narrative` read as a coherent and persuasive story?
--   [ ] Does the `emotional_arc_description` reflect a designed emotional journey, not a flat report?
+-   [ ] Does every slide have a clear, sentence-based Action Title?
+-   [ ] Does the sequence of Action Titles pass the Skim Test?
+-   [ ] Is there a dedicated Situation Slide at the beginning?
+-   [ ] Does the total number of slides respect the `hard_constraints`?
 -   [ ] Is the output valid JSON?

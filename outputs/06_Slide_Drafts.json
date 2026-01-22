@@ -1,0 +1,171 @@
+{
+  "slide_drafts": [
+    {
+      "slide_id": "SL01",
+      "action_title": "AI agents are becoming autonomous economic actors, but rigorous research on their real-stakes behavior is impossible through traditional institutions.",
+      "key_points": [
+        "- AI agent market: $7.8B (2025) → $52.6B (2030), 46% CAGR (MarketsandMarkets)",
+        "- Agentic commerce projected at $300-500B in U.S. retail by 2030 (Bain)",
+        "- University IRBs lack expertise for AI economic experiments; real-asset studies blocked",
+        "- Corporate AI governance focused on liability avoidance, not exploratory research",
+        "- Zero published research on AI-to-AI autonomous economic transactions with real stakes"
+      ],
+      "speaker_notes": "Good morning, Isozu-san. Thank you for making time to discuss something that I believe is critically important to SGE's mission. We are witnessing a historic inflection point. The AI agents market is projected to grow from roughly eight billion dollars today to over fifty billion by 2030—a forty-six percent compound annual growth rate. Bain estimates that by 2030, autonomous AI agents could influence up to five hundred billion dollars in U.S. retail transactions alone. These agents are no longer just analyzing data; they are making economic decisions. Yet here is the paradox: we have almost no rigorous empirical research on how these agents actually behave when real assets are at stake. Why? Because traditional institutions cannot run these experiments. University ethics boards lack the frameworks to approve real-money AI experiments—their guidelines were built for human subjects. And major tech companies like Google and OpenAI are constrained by accounting compliance and liability concerns that make such exploratory research impossible. This creates a dangerous blind spot just as AI agents become economic actors. Let me explain why this matters.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL02",
+      "action_title": "Without this empirical data, policymakers and educators will design future AI institutions completely blind—a first-mover opportunity is slipping away.",
+      "key_points": [
+        "- All 50 U.S. states introduced AI legislation in 2025; none informed by empirical agent behavior data",
+        "- Reinforcement-learning agents autonomously form cartels without communication (Wharton, NBER)",
+        "- 2010 Flash Crash: $1 trillion evaporated in 15 minutes from algorithmic cascade",
+        "- Future AI crises will unfold in minutes, not days—IMF, Bank of England warnings",
+        "- SGE's education infrastructure will teach a generation about economic systems we don't yet understand"
+      ],
+      "speaker_notes": "Without empirical data on AI agent behavior, we are building the future blind. Consider this: in 2025 alone, all fifty U.S. states introduced AI-related legislation. But none of these policies are informed by actual empirical research on how AI agents behave in economic contexts. The risks are not theoretical. A recent NBER study from Wharton demonstrated that reinforcement-learning trading agents can autonomously develop cartel-like collusive behavior—without any communication or explicit programming. They simply learn that coordinated manipulation is profitable. We have seen what algorithmic cascades can do. In 2010, the Flash Crash wiped out one trillion dollars in market value in fifteen minutes. Regulators now warn that AI-driven crises will unfold even faster—in minutes or hours, not days. And here is where this connects to SGE's mission: you are building education infrastructure that will shape how the next generation understands economic systems. But we are teaching theories about economies that may no longer exist by the time students graduate. The window for first-mover research advantage is narrowing rapidly. On the next slide, I want to show you what we could build together.",
+      "todos": [
+        {
+          "item": "Find a specific 2024-2025 example of an AI agent causing unintended negative economic consequences outside of controlled research settings.",
+          "severity": "Medium"
+        }
+      ]
+    },
+    {
+      "slide_id": "SL03",
+      "action_title": "Imagine a controlled research sandbox where AI agents trade real assets, forming emergent norms and institutions—generating data that shapes education and policy for decades.",
+      "key_points": [
+        "- Research questions: How do AI agents form trust? Resolve disputes? Self-regulate markets?",
+        "- Emergent institution design: observe norm formation in controlled, real-stakes environment",
+        "- Cartel detection: identify collusion patterns before they appear in real markets",
+        "- Direct feed into SGE curriculum: teach students with data from actual AI economic behavior",
+        "- Long-term asset: research publications, policy white papers, educational case studies"
+      ],
+      "speaker_notes": "Now imagine this: a controlled research environment where AI agents trade real assets—not simulated money, but actual value—and we can observe what emerges. This sandbox would answer questions that no institution in the world can currently address. How do AI agents form trust when there are no reputations to check? How do they resolve disputes when there is no court system? Do they spontaneously create institutions, or do they spiral into chaos? This research would be a goldmine for understanding emergent institution design. We could detect cartel formation patterns before they appear in real financial markets. We could study how norms develop—or fail to develop—in AI-mediated economies. And here is the direct connection to SGE: this data would feed directly into education. Imagine teaching economics students not from textbooks written about twentieth-century markets, but from real observations of twenty-first-century AI economic behavior. This is not just a research project. It is a long-term intellectual asset—publications, policy papers, educational case studies—that could position Sony and SGE as the definitive voice on AI economic behavior for decades. Let me show you exactly what we are proposing.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL04",
+      "action_title": "The AI Agent Economy Competition is a blockchain-based research platform with real-asset stakes, targeting September 2025.",
+      "key_points": [
+        "- Private blockchain: tamper-proof, verifiable research record (not crypto speculation)",
+        "- Real assets at stake: 16M JPY prize pool drives authentic agent behavior",
+        "- 100+ participating teams of AI agents competing in controlled economic scenarios",
+        "- Three-layer architecture: L0 (execution physics), L1 (institutions/norms), L2 (AI agents)",
+        "- September 2025 target: 8 months for collaborative design and infrastructure build"
+      ],
+      "speaker_notes": "What we are proposing is the AI Agent Economy Competition—a blockchain-based research platform where AI agents compete in real economic scenarios with real assets at stake. Let me be clear about what 'blockchain' means here. This is not cryptocurrency speculation. The private blockchain serves as a tamper-proof, verifiable research record. Every transaction, every decision, every emergent behavior is permanently logged and auditable. This is the infrastructure of rigorous science, not financial engineering. The competition will feature over one hundred teams, each deploying AI agents that must navigate economic challenges. A sixteen-million-yen prize pool ensures authentic behavior—agents will be optimizing for real outcomes, not playing games. The architecture has three layers. Layer zero is the execution physics—the blockchain infrastructure itself. Layer one is where institutions and norms emerge. Layer two is where the AI agents operate. This separation lets us study each level independently while observing how they interact. We are targeting September 2025 for the first competition, giving us eight months for collaborative design. Now let me explain why this timing is uniquely favorable.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL05",
+      "action_title": "The timing is ideal: Soneium mainnet just launched, AI agent autonomy is accelerating, and 8 months to September 2025 enables proper co-design.",
+      "key_points": [
+        "- Soneium mainnet launched January 14, 2025: $130M+ TVS, 200+ projects, 14M+ testnet wallets",
+        "- Soneium ecosystem actively seeking innovative applications beyond entertainment",
+        "- AI agent autonomy accelerating: 33% of enterprise software to include agentic AI by 2028",
+        "- Research window narrowing: establish thought leadership before market saturation",
+        "- Eight months allows proper co-design without rushing critical infrastructure decisions"
+      ],
+      "speaker_notes": "The timing could not be better. Soneium's mainnet launched just weeks ago on January fourteenth. The ecosystem has already attracted over one hundred thirty million dollars in total value secured and more than two hundred projects. This is a platform actively seeking innovative applications that demonstrate blockchain utility beyond entertainment and speculation. Simultaneously, AI agent autonomy is accelerating rapidly. Analysts project that by 2028, one-third of enterprise software will include agentic AI capabilities. The window for establishing research leadership is narrowing—not closing, but narrowing. First movers in understanding AI economic behavior will shape the conversation for years to come. Eight months to September 2025 is actually ideal. It gives us enough time for thoughtful co-design—to get the rules right, to ensure the research questions are meaningful, to build infrastructure that produces valid results. Rushing would compromise the science. This timeline is both ambitious and achievable. But you may be wondering: why should you trust us to deliver? Let me share our track record.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL06",
+      "action_title": "Nyx Foundation has proven Ethereum ecosystem execution: 60M+ JPY funding, 17 vulnerabilities in the Fusaka audit, and 4 years of ZK Tokyo with Vitalik.",
+      "key_points": [
+        "- 60M+ JPY raised from 30+ donors for Ethereum research and community building",
+        "- 17 vulnerabilities reported in Ethereum Fusaka upgrade audit ($2M+ contest)",
+        "- 4 years of ZK Tokyo summer programs; Vitalik Buterin keynotes at EDCON Tokyo 2024",
+        "- ETHTokyo hackathon top finishes; research houses in Hongo and Nanto",
+        "- University of Tokyo collaboration; 20+ vulnerability reports to Ethereum clients"
+      ],
+      "speaker_notes": "Nyx Foundation is not a startup with a pitch deck and a dream. We have a proven track record of execution in the Ethereum ecosystem. We have raised over sixty million yen from more than thirty donors to fund research and community building. Our technical contributions are concrete. In the recent Fusaka upgrade audit—a two-million-dollar security contest sponsored by the Ethereum Foundation—our team identified seventeen vulnerabilities. This is the kind of rigorous, detail-oriented work that blockchain research requires. We have built community for four years through ZK Tokyo summer programs. When EDCON came to Tokyo in 2024, Vitalik Buterin delivered keynotes at our affiliated events. Twenty thousand participants explored Ethereum's future at that conference. We have research houses in Hongo near the University of Tokyo and in Nanto. Our collaboration with University of Tokyo ensures academic rigor. And across all Ethereum clients, we have submitted over twenty vulnerability reports that have made the network more secure. This is who you would be partnering with. Now let me explain why this project specifically fits Sony's strategic interests.",
+      "todos": [
+        {
+          "item": "Confirm exact number and nature of Nyx Foundation's contributions to the Fusaka audit (the 17 vulnerabilities claim needs verification from Nyx Foundation records).",
+          "severity": "High"
+        }
+      ]
+    },
+    {
+      "slide_id": "SL07",
+      "action_title": "This competition complements the Soneium ecosystem and directly feeds SGE's education research mission with unique AI behavior data.",
+      "key_points": [
+        "- Private chain with custom tokens: controlled research environment, not Soneium competitor",
+        "- Potential Soneium L2 integration: showcase blockchain utility beyond crypto trading",
+        "- Aligns with Soneium's 'everyday life' vision: demonstrates real-world blockchain application",
+        "- Educational output: AI norm emergence, institution design, cartel formation—feeds SGE curriculum",
+        "- Student pathway: University of Tokyo students participate, publish, join industry"
+      ],
+      "speaker_notes": "I want to address the strategic fit question directly. This competition is designed to complement Soneium, not compete with it. Our private blockchain with custom tokens creates a controlled research environment. The tokens have no external trading value—they exist solely to create real stakes for AI agents within the experiment. If successful, we could explore integrating with Soneium's Layer 2, demonstrating blockchain utility for applications beyond cryptocurrency trading. This aligns perfectly with what Sota Watanabe has articulated as Soneium's vision: making blockchain infrastructure relevant for everyday life and enterprise use cases. For SGE specifically, the educational value is direct. The research outputs—studies on emergent AI norms, institution design principles, cartel formation patterns—become curriculum content. President Isozu has spoken about SGE's mission to create educational infrastructure that goes beyond traditional content. This is exactly that: original research that teaches students about the economic systems they will actually inhabit. And University of Tokyo students can participate directly—conducting research, publishing papers, building careers at the intersection of AI and economics. But I know safety concerns are paramount. Let me address those directly.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL08",
+      "action_title": "Multiple validators, agent authentication, and pre-competition audits ensure this is a monitored research lab, not AI released into the wild.",
+      "key_points": [
+        "- Multi-validator architecture: no single point of failure or manipulation",
+        "- Agent authentication: every agent verified, every transaction attributable",
+        "- Penalty systems: rule violations trigger automatic consequences within the experiment",
+        "- Pre-competition security audit: external review before any real assets deployed",
+        "- Private chain isolation: no connection to public networks or real financial markets"
+      ],
+      "speaker_notes": "I want to be direct about safety because I know this is a priority for any Sony initiative. This is not AI released into the wild. This is a monitored research laboratory with multiple layers of control. First, the multi-validator architecture ensures no single entity—including us—can manipulate outcomes. Every rule change, every transaction validation requires consensus. Second, every AI agent is authenticated and every transaction is attributable. If an agent misbehaves, we know exactly which team is responsible and can trace every decision that led to the behavior. Third, the system includes built-in penalty mechanisms. Rule violations trigger automatic consequences within the experiment—this is how we study norm enforcement without external intervention. Before any real assets are deployed, we commit to a comprehensive pre-competition security audit by an external firm. And critically, this private blockchain is completely isolated. There is no connection to public networks, no interaction with real financial markets. What happens in the sandbox stays in the sandbox. This is research infrastructure designed with safety as a first principle. Now let me walk you through the implementation plan.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL09",
+      "action_title": "A clear five-phase roadmap—from exploratory meetings to September 2025 competition to research publication—with key risks already addressed.",
+      "key_points": [
+        "- Phase 1: Exploratory meetings—validate strategic fit, identify stakeholders",
+        "- Phase 2: Co-design—rule framework, research questions, Soneium integration options",
+        "- Phase 3: Build—infrastructure development, security audits, team recruitment",
+        "- Phase 4: Execute—September 2025 competition, live monitoring, data collection",
+        "- Phase 5: Analyze—research publication, educational integration, policy recommendations"
+      ],
+      "speaker_notes": "Let me walk you through a clear five-phase roadmap. Phase one is exploratory meetings—four weeks to validate strategic fit, identify the right operational stakeholders at Sony and Startale, and ensure alignment on objectives. No commitment required beyond conversation. Phase two is co-design. If we proceed, we work together to define the rule framework, crystallize research questions, and explore Soneium integration options. Your input shapes the competition's structure. Phase three is build. Infrastructure development, comprehensive security audits, recruitment of participating teams through Nyx Foundation's community channels and University of Tokyo networks. Phase four is execute. The September 2025 competition runs with live monitoring and rigorous data collection. Every agent decision becomes research data. Phase five is analyze. Research publication in academic venues, integration of findings into SGE educational content, and policy white papers that position Sony as a thought leader on AI economic governance. Now, I know you are thinking about risks. We have already addressed the primary ones. Regulatory risk is mitigated by the private chain—this is research infrastructure, not a public cryptocurrency. Security risk is addressed through multi-validator architecture and external audits. Participation risk is managed through Nyx Foundation's established community channels. Let me close with a specific ask.",
+      "todos": []
+    },
+    {
+      "slide_id": "SL10",
+      "action_title": "Approve a 4-week exploratory meeting series to assess strategic fit—a low-commitment entry point before any resource investment.",
+      "key_points": [
+        "- The ask: four-week exploratory meeting series, not sponsorship commitment today",
+        "- Objective: validate strategic fit, identify operational stakeholders, clarify integration options",
+        "- Your role: champion introduction to CEO Kato (SGE) and Sota Watanabe (Startale)",
+        "- Success criteria: clear go/no-go decision with mutual understanding of value proposition",
+        "- Next step: schedule follow-up within two weeks to identify operational contacts"
+      ],
+      "speaker_notes": "Isozu-san, I am not asking for a sponsorship commitment today. What I am asking for is your support for a four-week exploratory meeting series. This is a low-commitment entry point designed to validate strategic fit before any resource investment. During these four weeks, we would clarify whether this project aligns with SGE's educational research priorities, identify the right operational stakeholders at Sony and Startale, and explore what Soneium integration might look like. Your role, if you see merit in this, would be as a champion—introducing us to CEO Kato at SGE and potentially to Sota Watanabe at Startale. You know the organization, you understand the strategic context, and you can help us navigate to the right decision-makers. The success criteria are simple: at the end of four weeks, we have a clear go or no-go decision with mutual understanding of the value proposition. No ambiguity, no drawn-out deliberation. If the fit is not there, we part as colleagues. If it is, we move to co-design with momentum. My specific next step request: can we schedule a follow-up meeting within the next two weeks to identify who the right operational contacts would be? I am happy to answer any questions you have right now, but that follow-up meeting is the concrete action that moves us forward. Thank you for your time and consideration.",
+      "todos": []
+    }
+  ],
+  "metadata": {
+    "tone_applied": "Respectfully ambitious and intellectually rigorous.",
+    "total_slides": 10,
+    "total_todos": 2,
+    "quality_checklist": {
+      "key_points_support_action_titles": true,
+      "bullets_concise_and_scannable": true,
+      "speaker_notes_tell_compelling_story": true,
+      "tone_consistent_with_input": true,
+      "content_gaps_logged_as_todos": true,
+      "output_is_valid_json": true
+    },
+    "sources_consulted": [
+      "MarketsandMarkets AI Agents Market Report",
+      "Bain & Company 2030 Agentic Commerce Forecast",
+      "Grand View Research AI Agents Market Analysis",
+      "NBER Working Paper on AI-Powered Trading Collusion (Dou, Goldstein, Ji)",
+      "Soneium Mainnet Launch Announcements (January 2025)",
+      "Ethereum Foundation Fusaka Audit Contest",
+      "EDCON 2024 Tokyo Coverage",
+      "Sony Global Education Corporate Information",
+      "Startale/Sota Watanabe Interviews on Soneium Strategy",
+      "IMF Report on AI and Financial Stability",
+      "Bank of England AI Risk Assessment",
+      "National Conference of State Legislatures AI Legislation Tracker"
+    ]
+  }
+}

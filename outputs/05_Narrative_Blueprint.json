@@ -1,0 +1,170 @@
+{
+  "narrative_blueprint": {
+    "narrative_archetype_used": "Sparkline",
+    "estimated_slide_count": 10,
+    "constraint_compliance": {
+      "max_slides_allowed": 10,
+      "presentation_duration": "10 minutes",
+      "constraint_met": true
+    },
+    "slides": [
+      {
+        "slide_number": 1,
+        "slide_id": "SL01",
+        "narrative_beat": "The Hook & The Status Quo (WHAT_IS)",
+        "action_title": "AI agents are becoming autonomous economic actors, but rigorous research on their real-stakes behavior is impossible through traditional institutions.",
+        "purpose": "To establish the current state and reveal a surprising gap: despite AI agents increasingly making economic decisions, zero empirical research exists because ethics review and accounting constraints prevent universities and corporations from running these experiments.",
+        "evidence_needed": [
+          "Statistics on growth of AI agent autonomous transactions",
+          "Examples of ethics review / IRB constraints blocking real-asset AI experiments at universities",
+          "Corporate accounting/compliance barriers preventing similar experiments at Google, OpenAI"
+        ]
+      },
+      {
+        "slide_number": 2,
+        "slide_id": "SL02",
+        "narrative_beat": "The Problem / The Tension (PAIN_IMPACT)",
+        "action_title": "Without this empirical data, policymakers and educators will design future AI institutions completely blind—a first-mover opportunity is slipping away.",
+        "purpose": "To dramatize the cost of inaction: future institution design will lack empirical grounding, and the research window is narrowing as AI economics matures.",
+        "evidence_needed": [
+          "Examples of policy decisions being made without empirical AI behavior data",
+          "Timeline showing narrowing window for first-mover research advantage",
+          "Connection to Isozu's 300-year education vision—decisions made now shape long-term outcomes"
+        ]
+      },
+      {
+        "slide_number": 3,
+        "slide_id": "SL03",
+        "narrative_beat": "The Vision / The Promised Land (WHAT_COULD_BE)",
+        "action_title": "Imagine a controlled research sandbox where AI agents trade real assets, forming emergent norms and institutions—generating data that shapes education and policy for decades.",
+        "purpose": "To paint an inspiring vision of what could be: a research platform that produces unique data on AI economic behavior, informing how we teach economics, governance, and AI ethics in 2040 and beyond.",
+        "evidence_needed": [
+          "Visual concept of the research sandbox environment",
+          "Examples of research questions this data could answer (cartel formation, norm emergence, institution design)",
+          "Connection to Isozu's book vision on education transformation"
+        ]
+      },
+      {
+        "slide_number": 4,
+        "slide_id": "SL04",
+        "narrative_beat": "The Bridge / The Solution (PROPOSAL)",
+        "action_title": "The AI Agent Economy Competition is a blockchain-based research platform with real-asset stakes, targeting September 2025.",
+        "purpose": "To introduce the concrete solution: a private blockchain competition where AI agents (not humans) trade real assets, with 100+ teams and a 16M JPY prize pool, structured in a layered L0/L1/L2 framework for controlled experiments.",
+        "evidence_needed": [
+          "High-level architecture diagram (private blockchain, AI agents only)",
+          "Key parameters: 100+ teams, 16M JPY prize pool, September 2025 target",
+          "Explanation of L0/L1/L2 framework: execution physics, institutions/norms, AI agents",
+          "Frame blockchain as 'tamper-proof, verifiable research record' (not crypto jargon)"
+        ]
+      },
+      {
+        "slide_number": 5,
+        "slide_id": "SL05",
+        "narrative_beat": "The Urgency (WHY_NOW)",
+        "action_title": "The timing is ideal: Soneium mainnet just launched, AI agent autonomy is accelerating, and 8 months to September 2025 enables proper co-design.",
+        "purpose": "To create urgency by showing why this moment is uniquely favorable: Soneium ecosystem seeking applications, AI agent transactions accelerating, research window narrowing, achievable timeline with early engagement.",
+        "evidence_needed": [
+          "Soneium mainnet launch date (January 2025) and ecosystem growth metrics",
+          "Trend data on AI agent autonomous economic activity",
+          "Timeline showing 8+ months to September 2025 is sufficient for co-design"
+        ]
+      },
+      {
+        "slide_number": 6,
+        "slide_id": "SL06",
+        "narrative_beat": "The Proof / Credibility (PROOF_CREDIBILITY)",
+        "action_title": "Nyx Foundation has proven Ethereum ecosystem execution: 60M+ JPY funding, 17 vulnerabilities in the Fusaka audit, and 4 years of ZK Tokyo with Vitalik.",
+        "purpose": "To establish credibility through concrete proof points: funding track record, technical contributions (vulnerability reports), community-building (ZK Tokyo, ETHTokyo), and academic partnerships (University of Tokyo).",
+        "evidence_needed": [
+          "60M+ JPY raised from 30+ donors",
+          "17 vulnerabilities reported in Ethereum Fusaka audit",
+          "4 years of ZK Tokyo summer programs, including Vitalik visits",
+          "ETHTokyo hackathon top finishes",
+          "Research houses in Hongo and Nanto",
+          "University of Tokyo collaboration details"
+        ]
+      },
+      {
+        "slide_number": 7,
+        "slide_id": "SL07",
+        "narrative_beat": "Strategic Fit (SONEIUM_FIT + EDUCATIONAL_VALUE)",
+        "action_title": "This competition complements the Soneium ecosystem and directly feeds SGE's education research mission with unique AI behavior data.",
+        "purpose": "To pre-empt the strategic fit objection by showing: (1) private chain design complements rather than competes with Soneium, (2) potential for Soneium L2 integration, (3) demonstrates blockchain utility beyond crypto trading, (4) data on AI norms and institution design feeds back into education curriculum.",
+        "evidence_needed": [
+          "Diagram showing complementary positioning with Soneium ecosystem",
+          "Private chain with custom tokens = controlled research environment",
+          "Alignment with Soneium's 'everyday life' blockchain vision",
+          "Educational research outputs: emergent AI norms, cartel formation, institution theory",
+          "Student participation pathway via University of Tokyo",
+          "Connection to Isozu's 2040 education vision"
+        ]
+      },
+      {
+        "slide_number": 8,
+        "slide_id": "SL08",
+        "narrative_beat": "Safety & Governance (GOVERNANCE_SAFETY)",
+        "action_title": "Multiple validators, agent authentication, and pre-competition audits ensure this is a monitored research lab, not AI released into the wild.",
+        "purpose": "To address data governance, security, and human-in-the-loop concerns that a cautious corporate audience will have, showing research integrity and controlled AI behavior.",
+        "evidence_needed": [
+          "Multi-validator architecture for rule enforcement",
+          "Agent authentication and penalty systems",
+          "Pre-competition security audit commitment",
+          "Private chain = controlled environment, not public crypto",
+          "Human oversight mechanisms and boundaries"
+        ]
+      },
+      {
+        "slide_number": 9,
+        "slide_id": "SL09",
+        "narrative_beat": "The Plan (PLAN_PoC + RISK_MITIGATION)",
+        "action_title": "A clear five-phase roadmap—from exploratory meetings to September 2025 competition to research publication—with key risks already addressed.",
+        "purpose": "To show a concrete, achievable plan with milestones, while acknowledging and mitigating key risks (regulatory, security, participation).",
+        "evidence_needed": [
+          "Phase 1: Exploratory meetings (4 weeks) - strategic fit validation",
+          "Phase 2: Co-design - rule framework, Soneium integration options",
+          "Phase 3: Build - infrastructure development",
+          "Phase 4: Execute - September 2025 competition",
+          "Phase 5: Analyze - research publication",
+          "Risk mitigations: private chain for regulatory (not public crypto), multi-validator for security, Nyx community channels for participation"
+        ]
+      },
+      {
+        "slide_number": 10,
+        "slide_id": "SL10",
+        "narrative_beat": "The Call to Action (CALL_TO_ACTION)",
+        "action_title": "Approve a 4-week exploratory meeting series to assess strategic fit—a low-commitment entry point before any resource investment.",
+        "purpose": "To make the specific, low-commitment ask: not sponsorship commitment today, but a 4-week exploratory series to determine fit. Position Isozu as the champion who validates alignment and connects to operational decision-makers.",
+        "evidence_needed": [
+          "Clear statement of the ask: 4-week exploratory meeting series",
+          "What success looks like: strategic fit validated, next steps identified",
+          "Isozu's role: champion/introducer to CEO Kato at SGE, Sota Watanabe at Startale",
+          "Specific next step: schedule follow-up within 2 weeks, identify operational stakeholders"
+        ]
+      }
+    ],
+    "action_title_story_test": {
+      "description": "When read in sequence, the action titles should tell a complete, persuasive story.",
+      "story_flow": [
+        "1. AI agents are becoming autonomous economic actors, but rigorous research on their real-stakes behavior is impossible through traditional institutions.",
+        "2. Without this empirical data, policymakers and educators will design future AI institutions completely blind—a first-mover opportunity is slipping away.",
+        "3. Imagine a controlled research sandbox where AI agents trade real assets, forming emergent norms and institutions—generating data that shapes education and policy for decades.",
+        "4. The AI Agent Economy Competition is a blockchain-based research platform with real-asset stakes, targeting September 2025.",
+        "5. The timing is ideal: Soneium mainnet just launched, AI agent autonomy is accelerating, and 8 months to September 2025 enables proper co-design.",
+        "6. Nyx Foundation has proven Ethereum ecosystem execution: 60M+ JPY funding, 17 vulnerabilities in the Fusaka audit, and 4 years of ZK Tokyo with Vitalik.",
+        "7. This competition complements the Soneium ecosystem and directly feeds SGE's education research mission with unique AI behavior data.",
+        "8. Multiple validators, agent authentication, and pre-competition audits ensure this is a monitored research lab, not AI released into the wild.",
+        "9. A clear five-phase roadmap—from exploratory meetings to September 2025 competition to research publication—with key risks already addressed.",
+        "10. Approve a 4-week exploratory meeting series to assess strategic fit—a low-commitment entry point before any resource investment."
+      ],
+      "narrative_coherence_check": "The story flows from establishing the research gap (What Is) → dramatizing the cost of inaction (Pain) → painting the vision (Could Be) → introducing the solution (Proposal) → creating urgency (Why Now) → proving credibility (Proof) → addressing strategic fit (Fit) → handling safety concerns (Safety) → showing the plan (Plan) → making the ask (CTA). Each slide builds on the previous, and the sequence can stand alone as a persuasive argument."
+    },
+    "quality_checklist": {
+      "action_titles_tell_complete_story": true,
+      "all_action_titles_are_full_sentences": true,
+      "all_purposes_clear_and_aligned": true,
+      "evidence_specific_and_supportive": true,
+      "estimated_slide_count_within_constraint": true,
+      "output_is_valid_json": true
+    }
+  }
+}

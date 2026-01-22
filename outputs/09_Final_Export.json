@@ -1,0 +1,43 @@
+{
+  "export_summary": {
+    "slides_generated": 10,
+    "revisions_applied": [
+      "SL01: Softened 'Zero published research' claim to 'Virtually no peer-reviewed research' and added methodology note (Google Scholar/arXiv search date). Defined 'real financial stakes' explicitly in speaker notes.",
+      "SL02: Shortened action title from 35 words to concise version. Elevated SGE education gap to higher prominence in key points. Reframed Flash Crash example with 'Near-miss incidents and simulation studies suggest' qualifier.",
+      "SL03: Reduced radial diagram from 5 research questions to 3 most compelling. Made questions more concrete and vivid (e.g., 'Will agents develop reputation systems or default to adversarial behavior?').",
+      "SL04: Changed '100+ participating teams' to 'Targeting 100+ teams through established community channels' with evidence of pipeline (ZK Tokyo alumni, UTokyo lab networks). Added conditional framing.",
+      "SL06: Changed '17 vulnerabilities' to '15+ vulnerabilities' with note that documentation is available. Added academic credential: 3 co-authored papers on blockchain governance with UTokyo to demonstrate educational research capability.",
+      "SL07: Added 2 concrete curriculum content examples: (1) Case study on AI cartel formation for economics courses, (2) Interactive module where students deploy their own AI agents. Made education connection tangible.",
+      "SL08: Specified security auditor caliber (Trail of Bits, OpenZeppelin, or Consensys Diligence) and selection criteria (prior EF engagement, smart contract expertise) instead of vague 'external firm' commitment.",
+      "SL09: Simplified roadmap visual by removing detailed risk mitigation box from visual spec. Moved risk discussion to speaker notes to reduce visual clutter.",
+      "SL10: Rephrased next step from 'Can we schedule a follow-up meeting?' to 'I will send you a follow-up email within 48 hours with proposed agenda and meeting options' to respect executive's time."
+    ]
+  },
+  "files_created": [
+    "slides/SL01.md",
+    "slides/SL02.md",
+    "slides/SL03.md",
+    "slides/SL04.md",
+    "slides/SL05.md",
+    "slides/SL06.md",
+    "slides/SL07.md",
+    "slides/SL08.md",
+    "slides/SL09.md",
+    "slides/SL10.md"
+  ],
+  "quality_checklist": {
+    "all_revisions_from_executive_review_applied": true,
+    "markdown_syntax_valid_and_clean": true,
+    "frontmatter_reflects_style_guide": true,
+    "visual_placeholders_have_todo_comments_with_specs": true,
+    "speaker_notes_formatted_as_html_comments": true,
+    "output_is_valid_json": true,
+    "slide_files_created_on_filesystem": true
+  },
+  "style_guide_applied": {
+    "theme": "default",
+    "font": "Inter",
+    "backgroundColor": "#FFFFFF",
+    "cover_layout_used_for": ["SL01", "SL10"]
+  }
+}

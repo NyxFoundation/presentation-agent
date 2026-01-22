@@ -1,0 +1,569 @@
+{
+  "visual_designs": [
+    {
+      "slide_id": "SL01",
+      "visual_spec": {
+        "type": "Combination_Chart_with_Callout",
+        "title": "AI Agent Market Explosion Meets Research Void",
+        "primary_visual": {
+          "type": "Area_Chart",
+          "x_axis_label": "Year",
+          "y_axis_label": "Market Size (USD Billions)",
+          "data_series": [
+            {"year": 2025, "value": 7.8, "label": "$7.8B"},
+            {"year": 2026, "value": 11.4},
+            {"year": 2027, "value": 16.6},
+            {"year": 2028, "value": 24.3},
+            {"year": 2029, "value": 35.5},
+            {"year": 2030, "value": 52.6, "label": "$52.6B"}
+          ],
+          "growth_annotation": {
+            "text": "46% CAGR",
+            "position": "curve_midpoint",
+            "style": "bold_accent"
+          },
+          "source": "MarketsandMarkets"
+        },
+        "secondary_visual": {
+          "type": "Contrast_Box",
+          "position": "right_side",
+          "content": {
+            "top_section": {
+              "label": "Projected AI-Driven Commerce",
+              "value": "$300-500B",
+              "subtext": "U.S. retail by 2030 (Bain)"
+            },
+            "bottom_section": {
+              "label": "Published Research on Real-Stakes AI Economic Behavior",
+              "value": "0",
+              "style": "red_highlight",
+              "subtext": "IRBs blocked, corporations constrained"
+            }
+          }
+        },
+        "takeaway": "A half-trillion-dollar economic transformation is underway with zero empirical research guiding it."
+      }
+    },
+    {
+      "slide_id": "SL02",
+      "visual_spec": {
+        "type": "Timeline_with_Warning_Indicators",
+        "title": "Policy Built on Assumptions, Not Evidence",
+        "components": [
+          {
+            "id": "legislation_bar",
+            "type": "Horizontal_Bar",
+            "label": "50 U.S. States",
+            "value": "AI legislation introduced in 2025",
+            "annotation": "None informed by empirical AI agent behavior data",
+            "color": "warning_amber"
+          },
+          {
+            "id": "research_finding",
+            "type": "Callout_Box",
+            "icon": "warning_triangle",
+            "headline": "NBER/Wharton Finding",
+            "content": "RL trading agents autonomously form cartels without communication",
+            "implication": "Emergent collusion is a real, demonstrated risk"
+          },
+          {
+            "id": "precedent_case",
+            "type": "Case_Study_Box",
+            "event": "2010 Flash Crash",
+            "impact": "$1 Trillion",
+            "duration": "15 minutes",
+            "visual_treatment": "Downward arrow graphic",
+            "warning": "Future AI crises will unfold faster—minutes, not days"
+          },
+          {
+            "id": "sge_connection",
+            "type": "Bridge_Arrow",
+            "from": "policy_void",
+            "to": "education_gap",
+            "label": "SGE will teach economics students about systems we don't yet understand"
+          }
+        ],
+        "layout": "vertical_stack_with_connecting_arrows",
+        "takeaway": "Policymakers and educators are designing AI governance frameworks without the data they need—creating systemic blind spots."
+      }
+    },
+    {
+      "slide_id": "SL03",
+      "visual_spec": {
+        "type": "Radial_Diagram",
+        "title": "Research Sandbox: Questions Only Real Stakes Can Answer",
+        "central_element": {
+          "shape": "circle",
+          "label": "AI Agent Economy Sandbox",
+          "style": "primary_accent"
+        },
+        "radial_nodes": [
+          {
+            "id": "Q1",
+            "label": "Trust Formation",
+            "question": "How do agents form trust without reputations?",
+            "icon": "handshake"
+          },
+          {
+            "id": "Q2",
+            "label": "Dispute Resolution",
+            "question": "How do agents resolve conflicts without courts?",
+            "icon": "balance_scale"
+          },
+          {
+            "id": "Q3",
+            "label": "Self-Regulation",
+            "question": "Do agents create norms or spiral into chaos?",
+            "icon": "circular_arrows"
+          },
+          {
+            "id": "Q4",
+            "label": "Cartel Detection",
+            "question": "Can we identify collusion patterns early?",
+            "icon": "magnifying_glass"
+          },
+          {
+            "id": "Q5",
+            "label": "Institution Emergence",
+            "question": "What governance structures emerge organically?",
+            "icon": "building"
+          }
+        ],
+        "output_flows": {
+          "type": "downward_arrows",
+          "destinations": [
+            {"label": "Academic Publications", "icon": "document"},
+            {"label": "Policy White Papers", "icon": "government"},
+            {"label": "SGE Curriculum Content", "icon": "graduation_cap", "highlight": true}
+          ]
+        },
+        "takeaway": "This sandbox generates unique research data that feeds directly into education, policy, and academic leadership for decades."
+      }
+    },
+    {
+      "slide_id": "SL04",
+      "visual_spec": {
+        "type": "Layered_Architecture_Diagram",
+        "title": "AI Agent Economy Competition: Three-Layer Architecture",
+        "layers": [
+          {
+            "level": "L2",
+            "label": "AI Agents",
+            "description": "100+ teams deploy competing AI agents",
+            "color": "accent_blue",
+            "position": "top",
+            "icons": ["robot", "robot", "robot"],
+            "annotation": "Agent decision-making and strategy"
+          },
+          {
+            "level": "L1",
+            "label": "Institutions & Norms",
+            "description": "Emergent rules, trust mechanisms, dispute resolution",
+            "color": "accent_green",
+            "position": "middle",
+            "icons": ["handshake", "document", "balance"],
+            "annotation": "Where governance patterns emerge"
+          },
+          {
+            "level": "L0",
+            "label": "Execution Physics",
+            "description": "Private blockchain infrastructure",
+            "color": "accent_gray",
+            "position": "bottom",
+            "icons": ["chain_link", "lock", "server"],
+            "annotation": "Tamper-proof, verifiable research record"
+          }
+        ],
+        "key_specs": [
+          {"label": "Prize Pool", "value": "16M JPY", "purpose": "Drives authentic behavior"},
+          {"label": "Target Launch", "value": "September 2025", "purpose": "8 months for co-design"},
+          {"label": "Participating Teams", "value": "100+", "purpose": "Statistical significance"}
+        ],
+        "visual_treatment": "Horizontal stacked layers with bidirectional arrows between them",
+        "takeaway": "The three-layer separation enables rigorous study of how AI agents, norms, and infrastructure interact in real economic scenarios."
+      }
+    },
+    {
+      "slide_id": "SL05",
+      "visual_spec": {
+        "type": "Convergence_Diagram",
+        "title": "Three Trends Converging: The Window Is Now",
+        "convergence_point": {
+          "shape": "star",
+          "label": "September 2025",
+          "style": "highlight"
+        },
+        "converging_arrows": [
+          {
+            "id": "soneium",
+            "direction": "from_left",
+            "label": "Soneium Mainnet Live",
+            "data_points": [
+              "$130M+ TVS",
+              "200+ projects",
+              "14M+ testnet wallets"
+            ],
+            "date": "January 14, 2025",
+            "icon": "blockchain"
+          },
+          {
+            "id": "ai_acceleration",
+            "direction": "from_top",
+            "label": "AI Agent Autonomy Accelerating",
+            "data_points": [
+              "33% enterprise software agentic by 2028",
+              "Autonomy increasing quarterly"
+            ],
+            "icon": "trending_up"
+          },
+          {
+            "id": "research_window",
+            "direction": "from_right",
+            "label": "First-Mover Research Window",
+            "data_points": [
+              "No competitors in real-stakes AI economics research",
+              "Thought leadership up for grabs"
+            ],
+            "icon": "clock",
+            "urgency_indicator": "narrowing"
+          }
+        ],
+        "timeline_bar": {
+          "start": "Now (Jan 2025)",
+          "end": "Sept 2025",
+          "duration": "8 months",
+          "label": "Optimal co-design period"
+        },
+        "takeaway": "The infrastructure is ready, the technology is accelerating, and the research opportunity is still unclaimed—but not for long."
+      }
+    },
+    {
+      "slide_id": "SL06",
+      "visual_spec": {
+        "type": "Credential_Dashboard",
+        "title": "Nyx Foundation: Proven Ethereum Ecosystem Execution",
+        "layout": "three_column_with_metrics",
+        "columns": [
+          {
+            "header": "Funding & Community",
+            "metrics": [
+              {"value": "60M+", "unit": "JPY", "label": "Raised from 30+ donors"},
+              {"value": "4", "unit": "Years", "label": "ZK Tokyo summer programs"},
+              {"value": "20K+", "unit": "Participants", "label": "EDCON Tokyo 2024"}
+            ],
+            "highlight": "Vitalik Buterin keynotes",
+            "icon": "community"
+          },
+          {
+            "header": "Technical Contributions",
+            "metrics": [
+              {"value": "17", "unit": "Vulnerabilities", "label": "Fusaka upgrade audit"},
+              {"value": "20+", "unit": "Reports", "label": "Ethereum client security"},
+              {"value": "$2M+", "unit": "Contest", "label": "EF security program"}
+            ],
+            "highlight": "Top-tier security expertise",
+            "icon": "shield_check"
+          },
+          {
+            "header": "Academic Infrastructure",
+            "metrics": [
+              {"value": "2", "unit": "Research Houses", "label": "Hongo + Nanto"},
+              {"value": "UTokyo", "unit": "Partnership", "label": "Academic collaboration"},
+              {"value": "ETHTokyo", "unit": "Hackathon", "label": "Top finishes"}
+            ],
+            "highlight": "University of Tokyo connection",
+            "icon": "university"
+          }
+        ],
+        "credibility_statement": {
+          "position": "bottom",
+          "text": "Not a startup with a pitch deck—a proven organization with a four-year track record"
+        },
+        "takeaway": "Nyx Foundation has the funding, technical expertise, and academic relationships to execute this competition rigorously."
+      }
+    },
+    {
+      "slide_id": "SL07",
+      "visual_spec": {
+        "type": "Ecosystem_Fit_Diagram",
+        "title": "Strategic Complementarity: Competition + Soneium + SGE",
+        "layout": "venn_with_flows",
+        "entities": [
+          {
+            "id": "competition",
+            "label": "AI Agent Economy Competition",
+            "description": "Private chain, controlled research",
+            "color": "blue"
+          },
+          {
+            "id": "soneium",
+            "label": "Soneium Ecosystem",
+            "description": "Public L2, 'everyday life' vision",
+            "color": "purple"
+          },
+          {
+            "id": "sge",
+            "label": "Sony Global Education",
+            "description": "Educational infrastructure mission",
+            "color": "green"
+          }
+        ],
+        "relationships": [
+          {
+            "from": "competition",
+            "to": "soneium",
+            "label": "Demonstrates blockchain utility beyond crypto",
+            "type": "complementary",
+            "notes": "Potential L2 integration showcase"
+          },
+          {
+            "from": "competition",
+            "to": "sge",
+            "label": "Unique curriculum content",
+            "type": "feeds_into",
+            "outputs": ["AI norm emergence", "Institution design", "Cartel formation studies"]
+          },
+          {
+            "from": "soneium",
+            "to": "sge",
+            "label": "Tech education infrastructure",
+            "type": "enables"
+          }
+        ],
+        "student_pathway": {
+          "type": "flow_arrow",
+          "stages": ["UTokyo Students", "Research Participation", "Publication", "Industry Careers"],
+          "highlight": true
+        },
+        "key_clarification": {
+          "type": "callout_box",
+          "position": "bottom_left",
+          "content": "Private chain with custom tokens = controlled research environment, NOT a Soneium competitor"
+        },
+        "takeaway": "This project strengthens the entire Sony ecosystem—demonstrating Soneium utility while generating unique educational content for SGE."
+      }
+    },
+    {
+      "slide_id": "SL08",
+      "visual_spec": {
+        "type": "Security_Layer_Stack",
+        "title": "Safety by Design: Research Lab, Not Wild Experiment",
+        "metaphor": {
+          "concept": "Laboratory containment",
+          "visual": "Concentric security rings around central 'experiment zone'"
+        },
+        "layers": [
+          {
+            "ring": "outer",
+            "label": "Private Chain Isolation",
+            "description": "No connection to public networks or real financial markets",
+            "icon": "wall",
+            "color": "gray"
+          },
+          {
+            "ring": "middle_outer",
+            "label": "Pre-Competition Security Audit",
+            "description": "External review before any real assets deployed",
+            "icon": "clipboard_check",
+            "color": "blue"
+          },
+          {
+            "ring": "middle",
+            "label": "Multi-Validator Architecture",
+            "description": "No single point of failure or manipulation",
+            "icon": "nodes_connected",
+            "color": "green"
+          },
+          {
+            "ring": "middle_inner",
+            "label": "Agent Authentication",
+            "description": "Every agent verified, every transaction attributable",
+            "icon": "fingerprint",
+            "color": "teal"
+          },
+          {
+            "ring": "inner",
+            "label": "Automatic Penalty Systems",
+            "description": "Rule violations trigger in-experiment consequences",
+            "icon": "gavel",
+            "color": "amber"
+          },
+          {
+            "ring": "center",
+            "label": "AI Agent Activity",
+            "description": "Monitored, logged, contained",
+            "icon": "robot",
+            "color": "light_gray"
+          }
+        ],
+        "assurance_statement": {
+          "position": "bottom",
+          "text": "What happens in the sandbox stays in the sandbox",
+          "style": "bold"
+        },
+        "takeaway": "Five layers of security ensure this is a controlled research environment with no path to external harm."
+      }
+    },
+    {
+      "slide_id": "SL09",
+      "visual_spec": {
+        "type": "Horizontal_Roadmap",
+        "title": "Five-Phase Roadmap to September 2025",
+        "phases": [
+          {
+            "number": 1,
+            "label": "Explore",
+            "duration": "4 weeks",
+            "activities": [
+              "Validate strategic fit",
+              "Identify stakeholders",
+              "Clarify objectives"
+            ],
+            "milestone": "Go/No-Go Decision",
+            "color": "gray",
+            "current": true
+          },
+          {
+            "number": 2,
+            "label": "Co-Design",
+            "duration": "6 weeks",
+            "activities": [
+              "Define rule framework",
+              "Crystallize research questions",
+              "Explore Soneium integration"
+            ],
+            "milestone": "Design Complete",
+            "color": "blue"
+          },
+          {
+            "number": 3,
+            "label": "Build",
+            "duration": "12 weeks",
+            "activities": [
+              "Infrastructure development",
+              "Security audits",
+              "Team recruitment"
+            ],
+            "milestone": "Platform Ready",
+            "color": "green"
+          },
+          {
+            "number": 4,
+            "label": "Execute",
+            "duration": "4 weeks",
+            "activities": [
+              "September 2025 competition",
+              "Live monitoring",
+              "Data collection"
+            ],
+            "milestone": "Competition Complete",
+            "color": "purple"
+          },
+          {
+            "number": 5,
+            "label": "Analyze",
+            "duration": "Ongoing",
+            "activities": [
+              "Research publication",
+              "SGE curriculum integration",
+              "Policy white papers"
+            ],
+            "milestone": "Thought Leadership",
+            "color": "amber"
+          }
+        ],
+        "risk_mitigation_box": {
+          "position": "below_timeline",
+          "risks": [
+            {"risk": "Regulatory", "mitigation": "Private chain = research infrastructure"},
+            {"risk": "Security", "mitigation": "Multi-validator + external audit"},
+            {"risk": "Participation", "mitigation": "Nyx community + UTokyo networks"}
+          ]
+        },
+        "takeaway": "A structured path from exploratory conversations to thought leadership, with clear milestones and pre-addressed risks."
+      }
+    },
+    {
+      "slide_id": "SL10",
+      "visual_spec": {
+        "type": "Call_to_Action_Card",
+        "title": "The Ask: Four Weeks of Exploratory Meetings",
+        "primary_visual": {
+          "type": "Contrast_Comparison",
+          "left_side": {
+            "label": "NOT Asking",
+            "items": [
+              "Sponsorship commitment",
+              "Budget allocation",
+              "Public endorsement"
+            ],
+            "style": "crossed_out",
+            "color": "gray"
+          },
+          "right_side": {
+            "label": "Asking",
+            "items": [
+              "4-week exploratory meetings",
+              "Champion introduction to Kato (SGE) & Watanabe (Startale)",
+              "Your strategic guidance"
+            ],
+            "style": "highlighted",
+            "color": "green"
+          }
+        },
+        "success_criteria_box": {
+          "type": "checklist",
+          "header": "Success Criteria After 4 Weeks",
+          "items": [
+            "Clear go/no-go decision",
+            "Mutual understanding of value proposition",
+            "Identified operational stakeholders",
+            "Defined next steps (if go)"
+          ]
+        },
+        "next_step": {
+          "type": "action_box",
+          "highlight": true,
+          "content": "Schedule follow-up within 2 weeks to identify operational contacts",
+          "icon": "calendar"
+        },
+        "closing_statement": {
+          "position": "bottom_center",
+          "text": "Low commitment entry point. High potential impact.",
+          "style": "bold_italic"
+        },
+        "takeaway": "A four-week conversation costs almost nothing but opens the door to a decade of research leadership."
+      }
+    }
+  ],
+  "metadata": {
+    "design_philosophy": "Each visual is designed to make one clear point memorable. Following Gene Zelazny's principle: 'A chart should convey one idea, and one idea only.'",
+    "visual_variety": {
+      "charts": 1,
+      "diagrams": 5,
+      "dashboards": 1,
+      "roadmaps": 1,
+      "call_to_action": 1,
+      "combination": 1
+    },
+    "quality_checklist": {
+      "visual_type_matches_message": true,
+      "specs_detailed_enough_to_build": true,
+      "takeaways_state_clear_conclusions": true,
+      "all_slides_accounted_for": true,
+      "output_is_valid_json": true
+    },
+    "design_notes": [
+      "SL01: Combination chart pairs growth trajectory with stark 'zero research' contrast for emotional impact",
+      "SL02: Timeline format emphasizes urgency and connects policy gap to educational mission",
+      "SL03: Radial diagram puts research sandbox at center with questions orbiting—shows comprehensiveness",
+      "SL04: Layered architecture is industry-standard for technical audiences; three-layer separation is key concept",
+      "SL05: Convergence diagram visualizes 'perfect timing' argument with three forces meeting at one point",
+      "SL06: Dashboard format is familiar to executives; metrics-heavy for credibility establishment",
+      "SL07: Venn/ecosystem diagram shows complementary relationships—critical for 'not a competitor' message",
+      "SL08: Concentric security rings evoke laboratory containment—safety as design principle",
+      "SL09: Horizontal roadmap is standard executive format; risk box addresses objections proactively",
+      "SL10: Contrast format (NOT asking vs. Asking) lowers perceived commitment and clarifies the ask"
+    ]
+  }
+}

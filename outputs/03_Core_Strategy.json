@@ -1,0 +1,27 @@
+{
+  "narrative_framing": {
+    "villain": "The Isolation Tax",
+    "hero": "The Connected Contributor",
+    "transformation": "From a brilliant researcher fighting alone in a shrinking ecosystem to a globally connected contributor solving problems that matter—with funding, community, and recognition."
+  },
+  "governing_thought": "The crisis facing Japanese cryptography is not a lack of talent or rigor—it is a tax levied by isolation; by bridging to the Ethereum ecosystem's open research problems and funding, researchers can escape this tax and reclaim their global relevance.",
+  "core_message": {
+    "proverb": "End the Isolation. Start the Collaboration.",
+    "explanation": "Japanese cryptographers are paying an invisible 'isolation tax'—lost opportunities, irrelevant work, declining global standing—not because they lack skill, but because they lack connection. This presentation offers the bridge: a path from solitary struggle to collaborative discovery with global funding and meaningful problems."
+  },
+  "narrative_archetype": {
+    "selected_archetype": "Hybrid: Sparkline Opening + Pyramid Principle Structure",
+    "justification": "Dr. Emura and colleagues are analytical skeptics who demand logical, evidence-based arguments (Pyramid Principle). However, their deepest pain is emotional—isolation, irrelevance, watching Japan slip from 4th to 10th in cited papers. A pure logical pitch will fail to earn their attention; they've heard funding pitches before. The Sparkline technique (contrasting 'what is' with 'what could be') opens by naming the pain they already feel, creating emotional resonance before the logical case. Once their hearts are engaged, the Pyramid Principle delivers the rigorous, top-down argument their minds require: governing thought first, then supporting evidence. This hybrid honors both their need to feel understood and their need for intellectual substance."
+  },
+  "emotional_hook": {
+    "opening_type": "The Human Tragedy Story",
+    "hook_content": "Open with the Toyama engineer story: 'In Toyama Prefecture, a brilliant engineer has been building a high-performance EVM compiler—alone—for five years. Written in Haskell. Formal verification. Advanced optimization. World-class work. No one knows about it. No one is helping. No one is funding it. This is the Isolation Tax—and every researcher in this room is paying it.' This story transforms the abstract statistics into felt tragedy, immediately establishing emotional stakes before any mention of Ethereum or Nyx Foundation."
+  },
+  "constraints_summary": {
+    "hard_constraints": [
+      "10 slides maximum",
+      "10-minute presentation"
+    ],
+    "interpretation": "With 10 minutes and 10 slides, every slide must carry maximum weight—averaging 1 minute per slide. This forces ruthless simplicity: one idea per slide, no bullet-point lists, no complexity that requires explanation. The narrative must be razor-sharp. The constraint actually serves the strategy: Dr. Emura distrusts flashy marketing. A tight, dense, intellectually serious presentation with few slides signals rigor, not hype. We will use this constraint as a feature, not a limitation."
+  }
+}

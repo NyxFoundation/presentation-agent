@@ -1,0 +1,32 @@
+{
+  "persona": {
+    "name": "Dr. Keita Emura (江村 恵太)",
+    "archetype": "The Resource-Starved Rigorous Academic",
+    "worldview_and_motivations": {
+      "core_identity": "A meticulous cryptographer who measures worth through peer-reviewed publications and mathematical elegance. They see themselves as a guardian of scientific rigor in a field increasingly polluted by hype and corporate interests. Their identity is deeply tied to their academic institution and their role as a mentor.",
+      "primary_goal": "To continue producing mathematically rigorous, peer-reviewed research that advances the field—despite shrinking budgets, increasing administrative burden, and the constant pressure of grant applications that feel more like a survival game than a research enabler.",
+      "secondary_goal": "To ensure their graduate students can find meaningful research positions and to maintain Japan's historically strong reputation in cryptography on the international stage. There is a quiet patriotic pride in wanting Japanese research to matter globally.",
+      "source_of_frustration": "The relentless 1% annual efficiency cuts that have accumulated into a 140 billion yen hole. The bureaucratic overhead of grant applications that consume time better spent on actual research. The painful awareness that Japan has slipped from 4th to 10th in highly-cited papers. The isolation—working on problems alone or with a small lab, rarely interacting with researchers at other institutions, watching international collaborations happen without Japanese participation."
+    },
+    "fears_and_objections": {
+      "deepest_fear": "That the best years of Japanese cryptography are behind us. That their students will abandon academic research for corporate jobs because the ecosystem cannot support them. That their own work, conducted in increasing isolation, will become irrelevant—a niche footnote disconnected from where the field is actually moving.",
+      "immediate_objections": [
+        "Is Ethereum just another blockchain hype project? Cryptographers have seen too many 'revolutionary' systems that turned out to be mathematically trivial or poorly designed.",
+        "Will working with a 'blockchain foundation' damage my academic credibility? My peers might see this as selling out to corporate interests.",
+        "Where are the publications? If Ethereum research is so compelling, where are the CRYPTO/Eurocrypt papers? Show me the academic output.",
+        "Is this actually mathematically hard, or just engineering work dressed up as research? I didn't spend years studying lattice cryptography to optimize gas fees.",
+        "What's the catch? Free money and compelling problems sounds too good to be true. What do they actually want from me?"
+      ]
+    },
+    "communication_preferences": {
+      "preferred_style": "Dense, technical, and evidence-based. They respect presenters who can dive deep into mathematical details and who don't shy away from complexity. They prefer written arguments they can study carefully over flashy slides. They appreciate when someone acknowledges the limitations and open problems, not just the successes.",
+      "trust_signals": "Citations of top-tier venue papers (CRYPTO, Eurocrypt, Asiacrypt, ACM CCS). Name-dropping researchers they personally respect. Demonstrating deep understanding of the actual cryptographic primitives involved—not just applications. Acknowledging the importance of peer-reviewed publication. Speaking their language: 'provable security,' 'reduction to hard problem,' 'formal verification.'",
+      "red_flags": "Marketing buzzwords ('Web3 revolution,' 'decentralized future,' 'trustless systems'). Over-promising practical impact without mathematical foundations. Dismissing the importance of academic publication. Treating them as a resource to be extracted rather than a colleague to be respected. Any hint that this is about building hype rather than doing real science."
+    }
+  },
+  "strategic_summary": {
+    "how_to_win": "Do NOT pitch Ethereum. Do NOT pitch Nyx Foundation. Instead, present a diagnosis they already feel in their bones—the isolation, the funding crisis, the slipping rankings—and offer a concrete, academically respectable path forward. Frame Nyx Foundation not as a 'blockchain company' but as a research collective that happens to work on Ethereum problems. Lead with the research problems themselves (ZK-SNARKs, formal verification, post-quantum cryptography for smart contracts), not with Ethereum's market cap or ecosystem size. Emphasize that publication is expected and supported, not an afterthought. The Toyama engineer story is crucial: it transforms the abstract problem into a human tragedy they can feel. Then position the community as the solution to that isolation. Respect their autonomy—invite them to explore, don't pressure them to commit.",
+    "theme_to_emphasize": "Breaking the Isolation: From Solitary Struggle to Collaborative Discovery",
+    "killer_argument": "Ethereum Foundation's PSE team has published an RFP list of open research problems with grant funding attached—problems that require exactly the kind of mathematical rigor you've spent your career developing. This is peer-reviewed publication-quality research, not engineering work. And unlike shrinking national grants, this funding comes without the bureaucratic overhead that's consuming your research time."
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "hard_constraints": {
+    "max_slides": 10,
+    "total_time_minutes": 10
+  },
+  "narrative_summary": {
+    "archetype_used": "Hybrid: Sparkline Opening + Pyramid Principle Structure",
+    "emotional_arc_description": "The presentation opens with a gut-punch—a story of brilliant work dying in isolation (tragedy). It then zooms out to reveal this is systemic, not personal (recognition of shared pain). The emotional low point hits when we name the 'Isolation Tax.' Then hope emerges: Ethereum offers exactly what's missing (opportunity). The logical case builds with evidence of serious, fundable problems (credibility). Finally, the bridge is revealed as real and accessible today, closing with an invitation that respects autonomy (empowerment, not pressure)."
+  },
+  "slide_blueprint": [
+    {
+      "slide_number": 1,
+      "section": "Opening Hook",
+      "action_title": "A world-class compiler has been dying in silence for five years.",
+      "emotional_purpose": "Shock, curiosity, a sense of tragedy. The audience leans in, wondering: what happened?",
+      "time_allocation_seconds": 60
+    },
+    {
+      "slide_number": 2,
+      "section": "Problem Statement (Claim C1)",
+      "action_title": "This is not one engineer's failure—it is a symptom of a system.",
+      "emotional_purpose": "The tragedy is reframed as systemic. The audience begins to see themselves in the story. Recognition dawns: this could be me.",
+      "time_allocation_seconds": 60
+    },
+    {
+      "slide_number": 3,
+      "section": "Problem Statement (Claim C1)",
+      "action_title": "Japan has fallen from 4th to 10th in global research impact—and the decline continues.",
+      "emotional_purpose": "Alarm, concern. The problem is quantified. This is not anecdote; it is data. The audience's analytical minds engage.",
+      "time_allocation_seconds": 60
+    },
+    {
+      "slide_number": 4,
+      "section": "Problem Statement (Claim C1)",
+      "action_title": "We call it the Isolation Tax—and every researcher in this room is paying it.",
+      "emotional_purpose": "Naming the enemy. The abstract becomes concrete. The villain has a name. Frustration crystallizes into clarity.",
+      "time_allocation_seconds": 60
+    },
+    {
+      "slide_number": 5,
+      "section": "Opportunity (Claim C2)",
+      "action_title": "Meanwhile, Ethereum's research frontier is rich with unsolved problems—and funding.",
+      "emotional_purpose": "The first spark of hope. The contrast between 'what is' and 'what could be.' Curiosity replaces despair.",
+      "time_allocation_seconds": 60
+    },
+    {
+      "slide_number": 6,
+      "section": "Opportunity (Claim C2)",
+      "action_title": "These are not toy problems—they are publication-worthy challenges in cryptography and formal verification.",
+      "emotional_purpose": "Credibility. Respect for the audience's standards. This is not blockchain hype—this is real research. Skepticism begins to soften.",
+      "time_allocation_seconds": 60
+    },
+    {
+      "slide_number": 7,
+      "section": "Opportunity (Claim C2)",
+      "action_title": "Our team has already found 20+ vulnerabilities in Ethereum clients—rigorous work gets recognized here.",
+      "emotional_purpose": "Proof of concept. The bridge is not theoretical. Real work has been done. Trust builds.",
+      "time_allocation_seconds": 60
+    },
+    {
+      "slide_number": 8,
+      "section": "Bridge (Claim C3)",
+      "action_title": "The Nyx Foundation community exists to connect you to these problems—starting today.",
+      "emotional_purpose": "The path forward materializes. This is not abstract advice; it is a concrete invitation. Possibility becomes actionable.",
+      "time_allocation_seconds": 60
+    },
+    {
+      "slide_number": 9,
+      "section": "Bridge (Claim C3)",
+      "action_title": "At DEPCON Hakodate, professors, students, and EF researchers are already collaborating across borders.",
+      "emotional_purpose": "Social proof. Others have crossed the bridge. The fear of being the first is removed. Belonging feels within reach.",
+      "time_allocation_seconds": 60
+    },
+    {
+      "slide_number": 10,
+      "section": "Call to Action",
+      "action_title": "End the isolation. Start the collaboration.",
+      "emotional_purpose": "Empowerment and invitation. The choice is theirs. No pressure—only possibility. The audience leaves with agency, not obligation.",
+      "time_allocation_seconds": 60
+    }
+  ],
+  "skim_test_narrative": "A world-class compiler has been dying in silence for five years. This is not one engineer's failure—it is a symptom of a system. Japan has fallen from 4th to 10th in global research impact—and the decline continues. We call it the Isolation Tax—and every researcher in this room is paying it. Meanwhile, Ethereum's research frontier is rich with unsolved problems—and funding. These are not toy problems—they are publication-worthy challenges in cryptography and formal verification. Our team has already found 20+ vulnerabilities in Ethereum clients—rigorous work gets recognized here. The Nyx Foundation community exists to connect you to these problems—starting today. At DEPCON Hakodate, professors, students, and EF researchers are already collaborating across borders. End the isolation. Start the collaboration.",
+  "quality_checklist": {
+    "slide_count_within_constraint": {
+      "result": true,
+      "justification": "The blueprint contains exactly 10 slides, which meets the 10-slide maximum constraint."
+    },
+    "skim_test_passed": {
+      "result": true,
+      "justification": "Reading the action titles in sequence tells a complete, persuasive story: it opens with tragedy, names the systemic problem, quantifies the decline, names the villain (Isolation Tax), pivots to opportunity (Ethereum), establishes credibility (serious problems, proven results), presents the bridge (Nyx Foundation, DEPCON), and closes with an empowering call to action. The narrative arc is clear: Tragedy → Problem → Villain → Hope → Credibility → Bridge → Invitation."
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "scr_structure": {
+    "situation": "Japanese cryptography and security researchers possess world-class expertise, but they operate within a deteriorating research ecosystem. National university funding has been cut by approximately 140 billion yen since 2004, Japan's ranking in top-cited papers has dropped from 4th to 10th place, and researchers are increasingly isolated from each other and from global research communities.",
+    "complication": "The funding crisis has created multiple fractures: researchers lack opportunities for cross-institutional collaboration, academia and industry operate in silos, and talented individuals work in isolation without connection to broader networks. Meanwhile, Ethereum—a trillion-yen-scale global system with abundant research funding and compelling problems—remains virtually unknown to the Japanese cryptography community. Very few SCIS participants are aware of Ethereum's key research priorities.",
+    "resolution": "Nyx Foundation proposes to bridge this gap by connecting Japanese researchers with the Ethereum ecosystem. By sharing information about research grants (such as the Ethereum Foundation PSE RFP list), providing a collaborative community platform, and leveraging their deep Ethereum expertise and network, they aim to enable Japanese researchers to access global funding, tackle 'the most important problems,' and produce world-leading research outcomes together."
+  },
+  "key_facts": [
+    "National university operating grants have been cumulatively cut by approximately 140 billion yen since corporatization in 2004 (1% annual efficiency coefficient).",
+    "Japan's world ranking in total papers has dropped from 2nd to 4th place over 20 years.",
+    "Japan's ranking in Top 10% highly-cited papers has fallen from 4th to 10th place over 20 years.",
+    "Nyx Foundation has reported over 20 vulnerabilities in Ethereum client implementations.",
+    "NIRA research warns that if isolation continues, 'Japanese science itself will decline.'",
+    "Ethereum Foundation PSE team has published an RFP list with research grant opportunities.",
+    "DEPCON Hakodate brings together university professors, graduate students, corporate researchers, Ethereum Foundation researchers, and Taiwan Ethereum community members."
+  ],
+  "key_anecdotes_and_stories": [
+    {
+      "description": "The story of a talented engineer in Toyama Prefecture who has been developing a high-performance EVM (Ethereum Virtual Machine) compiler alone for 5 years. The compiler, written in Haskell, features advanced formal verification and optimization capabilities.",
+      "narrative_power": "This story powerfully illustrates the abstract problem of talent isolation. A brilliant engineer with exceptional skills and passion is working completely alone, disconnected from any community or network. It transforms the statistics about research isolation into a human story that creates emotional resonance and urgency."
+    },
+    {
+      "description": "The founder's personal experience of having almost no opportunity to interact with students from other universities in the same field during their master's program.",
+      "narrative_power": "This first-person account validates the systemic problem of researcher isolation and demonstrates that the founder speaks from direct experience, not just theory. It builds credibility and emotional connection with the audience who likely share similar experiences."
+    }
+  ],
+  "founder_story": {
+    "exists": true,
+    "summary": "The founder broke away from the traditional path to dismantle the walls isolating Japanese researchers. They founded ZK Tokyo community, conducted joint research with the Ethereum Foundation, delivered invited lectures at the EF formal verification camp, and established Nyx Foundation. The founder explicitly states: 'I myself leaped into the outside world to break down these walls.' Their motivation stems from direct experience with the isolation of the Japanese research ecosystem and a vision that 'the era of researching alone or with just a few people is coming to an end'—replaced by collaborative, discussion-driven research environments."
+  },
+  "explicit_goal": "To recruit SCIS2026 participants to join the Nyx Foundation community and collaborate on Ethereum research, specifically by exploring the Ethereum Foundation PSE RFP list and reaching out to Nyx Foundation for support.",
+  "implicit_goal": "To revitalize the Japanese research ecosystem by creating a bridge to the global Ethereum community, breaking down institutional and hierarchical barriers, enabling researchers of all backgrounds to tackle 'the most important problems,' and proving that collaborative, cross-boundary research can produce world-leading outcomes. The deeper vision is captured in the phrase: 'winning together through cooperation' rather than individual competition."
+}

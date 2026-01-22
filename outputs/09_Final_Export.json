@@ -1,0 +1,64 @@
+{
+  "export_summary": {
+    "total_slides_created": 10,
+    "revisions_applied": 5
+  },
+  "files_created": [
+    "slides/SL01.md",
+    "slides/SL02.md",
+    "slides/SL03.md",
+    "slides/SL04.md",
+    "slides/SL05.md",
+    "slides/SL06.md",
+    "slides/SL07.md",
+    "slides/SL08.md",
+    "slides/SL09.md",
+    "slides/SL10.md"
+  ],
+  "revisions_applied_detail": [
+    {
+      "slide_number": 5,
+      "original_issue": "The phrase 'trillion-yen-scale global system' emphasizes financial scale, which may trigger skepticism among academic researchers.",
+      "revision_applied": "Replaced 'trillion-yen-scale global system' with 'a global system used by millions of people, generating cryptographic challenges at a scale that no academic testbed can replicate' in both the key points and speaker notes."
+    },
+    {
+      "slide_number": 6,
+      "original_issue": "The claim that these are 'publication-worthy challenges' is asserted but not proven.",
+      "revision_applied": "Added concrete proof point to speaker notes: 'Groth16, one of the most widely-used ZK-SNARK constructions, was published at EUROCRYPT—that's the kind of research that emerges from this ecosystem.'"
+    },
+    {
+      "slide_number": 7,
+      "original_issue": "The '20+ vulnerabilities' stat lacks specificity about what kind of vulnerabilities.",
+      "revision_applied": "Added characterization to speaker notes: 'These include critical consensus-layer bugs that could have affected network security.'"
+    },
+    {
+      "slide_number": 8,
+      "original_issue": "The founder's personal transformation is mentioned in passing but never dramatized.",
+      "revision_applied": "Added first-person moment to speaker notes: 'I know this isolation personally. During my master's, I had almost no contact with researchers outside my institution. That experience is why I built this bridge. That's why I left the traditional path.'"
+    },
+    {
+      "slide_number": 9,
+      "original_issue": "DEPCON Hakodate is described but the slide doesn't convey what actually happens there.",
+      "revision_applied": "Added concrete detail to speaker notes: 'It's an unconference-style format where anyone can propose a topic and lead a discussion—no formal hierarchy, just researchers talking about problems they care about.'"
+    }
+  ],
+  "additional_enhancement": {
+    "slide_number": 10,
+    "description": "Added concrete next step to call to action per executive review observation about the soft CTA.",
+    "enhancement_applied": "Added to speaker notes: 'After this talk, I'll share a link to the PSE RFP list. Pick one problem that interests you. That's all it takes to start.'"
+  },
+  "quality_checklist": {
+    "all_revisions_applied": {
+      "result": true,
+      "justification": "All 5 required revisions from the EXECUTIVE_REVIEW have been systematically applied: (1) Slide 5 reframed from financial scale to research opportunity scale, (2) Slide 6 includes Groth16/EUROCRYPT proof point, (3) Slide 7 characterizes vulnerabilities as critical consensus-layer bugs, (4) Slide 8 includes first-person founder moment about isolation, (5) Slide 9 describes unconference-style format. Additionally, slide 10 incorporates the suggested concrete next step from the executive review's additional observations."
+    },
+    "slide_files_created_on_filesystem": {
+      "result": true,
+      "justification": "All 10 slide files (SL01.md through SL10.md) have been successfully written to the slides/ directory. Verified via filesystem listing showing all files with non-zero byte sizes ranging from 837 bytes (SL01.md) to 1520 bytes (SL09.md)."
+    },
+    "valid_slidev_markdown": {
+      "result": true,
+      "justification": "Each file contains valid Slidev Markdown with: (1) YAML frontmatter specifying layout (statement, default, two-cols, or fact), (2) Action title as H1 heading, (3) Visual content appropriate to layout (Mermaid diagrams, v-clicks, or fact display), (4) Speaker notes in HTML comment format."
+    }
+  }
+}

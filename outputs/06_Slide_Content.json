@@ -1,0 +1,188 @@
+{
+  "slide_contents": [
+    {
+      "slide_number": 1,
+      "action_title": "AI agents are becoming autonomous economic actors, but no one is studying their behavior with real stakes.",
+      "key_points": [
+        "AI agents are increasingly performing autonomous transactions without human oversight",
+        "Traditional payment systems exclude autonomous agents (no identity verification possible)",
+        "Near-zero academic papers exist on AI agent economic behavior with real-asset stakes",
+        "This creates a critical research gap as AI economic participation accelerates"
+      ],
+      "speaker_notes": "We are witnessing a fundamental shift in how economic activity occurs. AI agents are no longer just tools that assist humans—they are becoming autonomous economic actors capable of making independent decisions, executing transactions, and managing resources without human oversight. Yet there is a critical gap: no one is systematically studying how these agents behave when real stakes are involved. Traditional payment systems require human identity verification, which autonomous AI agents cannot provide. This means they cannot hold credit cards, bank accounts, or participate in conventional financial systems. Meanwhile, academic research on AI economic behavior relies almost entirely on simulations without real assets—a limitation that reduces behavioral realism. The result is that we are heading toward a future where AI agents participate significantly in our economy, but we have almost no empirical data on how they will actually behave when real value is at stake. This is not a theoretical problem—it is a research emergency that traditional institutions are structurally unable to address."
+    },
+    {
+      "slide_number": 2,
+      "action_title": "Universities and corporations face regulatory barriers that block real-asset AI economy research.",
+      "key_points": [
+        "University ethics review boards prohibit crypto-based experiments with real financial stakes",
+        "Corporate accounting rules prevent companies like Google from running AI agents with real assets",
+        "Regulatory compliance requirements create insurmountable barriers for traditional institutions",
+        "This structural constraint is why the research gap exists—not a lack of interest or capability"
+      ],
+      "speaker_notes": "The research gap in AI agent economic behavior is not caused by a lack of interest or capability among researchers. It exists because traditional institutions face structural barriers that prevent them from conducting this research. Universities must submit all research involving human subjects or financial stakes to ethics review boards, which consistently reject crypto-based experiments with real assets due to risk concerns. Corporate research labs face even more restrictive constraints: accounting rules at companies like Google, Microsoft, or OpenAI prevent them from deploying AI agents that autonomously manage real assets. The compliance and audit requirements alone would make such experiments impractical. This is why, despite the obvious importance of understanding AI economic behavior, we see almost no empirical research with real stakes. The barrier is not technical—it is institutional. Organizations that operate outside these traditional constraints are uniquely positioned to fill this gap. This is an opportunity for a first-mover to establish foundational knowledge in a field that will become increasingly important."
+    },
+    {
+      "slide_number": 3,
+      "action_title": "A first-mover research window exists now—before AI economic participation accelerates and the opportunity closes.",
+      "key_points": [
+        "AI agent autonomy is advancing rapidly—the window to establish foundational research is narrowing",
+        "First movers will shape the conceptual frameworks and methodologies for this emerging field",
+        "September 2025 target positions us ahead of inevitable mainstream attention",
+        "Those who act now gain academic credibility and influence over future institution design"
+      ],
+      "speaker_notes": "There is a time-sensitive opportunity here. AI agent capabilities are advancing rapidly, and it is only a matter of time before AI agents routinely participate in economic transactions—whether through crypto-native systems or through workarounds that bypass traditional payment infrastructure. When that happens, the organizations that have already conducted empirical research on AI economic behavior will hold a significant advantage. They will have established the conceptual frameworks, the measurement methodologies, and the foundational data that everyone else will reference. The first movers in this space will shape how we understand and regulate AI economic participation for decades to come. Our target date of September 2025 positions this research ahead of the inevitable mainstream attention that AI economic participation will attract. The question is not whether this research will happen—it will. The question is whether Sony wants to be part of establishing the foundational knowledge, or whether it will follow frameworks established by others. This is an opportunity to lead, not follow."
+    },
+    {
+      "slide_number": 4,
+      "action_title": "The AI Agent Economy Competition is a blockchain-based research platform where AI agents autonomously trade real assets.",
+      "key_points": [
+        "A closed economy where only AI agents participate—no human trading",
+        "Real assets (custom tokens on private chain) create genuine stakes for realistic behavior",
+        "16M JPY prize pool attracts 100+ competing teams developing agent strategies",
+        "Blockchain provides verifiable, tamper-proof execution history for academic analysis"
+      ],
+      "speaker_notes": "The AI Agent Economy Competition is our solution to the research gap. It is a blockchain-based research platform where AI agents—and only AI agents—participate in a closed economy, trading real assets and making autonomous decisions. Human participants develop the prompts and strategies that guide their agents, but the agents themselves execute transactions autonomously within a 60-second response time limit. The competition uses real assets in the form of custom tokens on a private blockchain, not public cryptocurrency. This creates genuine stakes that motivate realistic agent behavior while maintaining a controlled research environment. We are targeting 100+ participating teams, attracted by a 16M JPY prize pool structured to reward top performers (10M JPY first place, 4M second, 1M third, plus special prizes). The blockchain infrastructure serves a dual purpose: it enables autonomous AI transactions without traditional payment rails, and it provides a verifiable, tamper-proof execution history that can be analyzed academically. Every transaction, every state change, every agent decision is recorded on-chain and available for research analysis. This is not a simulation—it is a real economy with real consequences."
+    },
+    {
+      "slide_number": 5,
+      "action_title": "The L0/L1/L2 research framework enables systematic study of emergent norms, institutions, and AI agent behavior.",
+      "key_points": [
+        "L0 (Execution Physics): The blockchain layer that determines how transactions work",
+        "L1 (Institutions/Norms): The rules and constraints that shape agent behavior",
+        "L2 (AI Agents): The participants whose behaviors we observe and analyze",
+        "This layered approach enables controlled experiments by isolating variables at each level"
+      ],
+      "speaker_notes": "The competition is not just an event—it is a systematic research platform built on a rigorous methodological framework. We call it the L0/L1/L2 model. Layer 0 is the execution physics: the blockchain infrastructure that determines how transactions are processed, validated, and recorded. This is the unchangeable foundation. Layer 1 is institutions and norms: the rules, constraints, and reward functions that shape what agents can do and what they are incentivized to do. This is where we can experiment with different economic designs—different resource allocations, different governance models, different penalty structures. Layer 2 is the AI agents themselves: the autonomous participants whose behaviors emerge from their prompts, their learning, and their interactions with the environment and each other. By separating these layers, we can conduct controlled experiments. We can hold L0 and L2 constant while varying L1 to study how different institutional designs affect agent behavior. We can observe emergent phenomena—norm formation, cartel behavior, cooperative strategies—and trace them back to the conditions that produced them. This is how we transform a competition into a research program that generates publishable academic findings."
+    },
+    {
+      "slide_number": 6,
+      "action_title": "Research findings will inform future curriculum design for AI ethics, economic literacy, and institutional theory.",
+      "key_points": [
+        "Empirical data on AI economic behavior directly informs AI ethics curriculum development",
+        "Understanding emergent institutions in AI economies shapes economic literacy education",
+        "Aligns with Isozu-san's 2040 education transformation vision and 300-year education perspective",
+        "Sony Global Education can integrate findings into credential and learning programs"
+      ],
+      "speaker_notes": "The research value of this competition extends directly to Sony Global Education's core mission. Understanding how AI agents behave in economic contexts is not just an academic curiosity—it is essential knowledge for preparing future generations to live and work alongside increasingly autonomous AI systems. The empirical findings from this competition will inform curriculum design in multiple areas. AI ethics education needs concrete examples of how AI agents behave under different conditions, not just theoretical frameworks. Economic literacy education must evolve to address AI participation in markets and the emergent institutions that arise. Institutional theory—the study of how rules, norms, and governance structures shape behavior—gains a new experimental laboratory for testing hypotheses. This aligns directly with Isozu-san's vision for education transformation by 2040 and the longer-term perspective of building educational foundations that serve future generations. Sony Global Education is positioned to integrate these research findings into credential programs, learning platforms, and educational content—becoming a leader in preparing students for an AI-integrated economy rather than following others who establish this knowledge base."
+    },
+    {
+      "slide_number": 7,
+      "action_title": "Nyx Foundation has raised 60M+ JPY from 30+ donors and proven execution capability in the Ethereum ecosystem.",
+      "key_points": [
+        "60M+ JPY funding secured from 30+ individual donors—demonstrating community trust",
+        "Research house in Hongo (5 residents) with 30-person lab under construction in Nanto",
+        "Four years of sustained operations in the Ethereum ecosystem",
+        "Track record of delivering complex blockchain projects on schedule"
+      ],
+      "speaker_notes": "Before discussing why Nyx Foundation is the right partner for this initiative, let me establish our credibility through concrete evidence. We have raised over 60 million JPY from more than 30 individual donors—not institutional grants, but personal contributions from people who trust us to advance meaningful research in the Ethereum ecosystem. This funding model demonstrates something important: community trust earned through consistent delivery. We operate a research house in Hongo with five residents actively working on Ethereum research, and we are currently constructing a 30-person capacity lab in Nanto. These are not paper plans—they are physical investments in our research infrastructure. We have maintained sustained operations in the Ethereum ecosystem for four years, navigating multiple market cycles while continuing to deliver. This track record matters because the AI Agent Economy Competition requires an organization that can execute complex, multi-stakeholder projects over extended timelines. We have demonstrated that capability repeatedly."
+    },
+    {
+      "slide_number": 8,
+      "action_title": "Our security research credibility is validated by 17 vulnerabilities reported in the Ethereum Fusaka audit contest.",
+      "key_points": [
+        "17 vulnerabilities identified in the Fusaka Ethereum client audit contest",
+        "This places us among the top security research contributors globally",
+        "Security expertise is critical for running a blockchain-based competition with real assets",
+        "Demonstrates technical depth beyond theoretical research"
+      ],
+      "speaker_notes": "Technical credibility in blockchain security is not something that can be claimed—it must be demonstrated through verifiable results. In the Fusaka Ethereum client audit contest, Nyx Foundation researchers reported 17 vulnerabilities. This is not a minor achievement. Fusaka audits are among the most rigorous in the Ethereum ecosystem, attracting top security researchers globally. Our 17 findings place us among the leading contributors. This security expertise is directly relevant to the AI Agent Economy Competition. Running a competition where AI agents trade real assets on a blockchain requires deep understanding of potential attack vectors, exploitation techniques, and defensive architectures. We are not asking Sony to trust us with a project we are theoretically capable of executing—we are showing you that we have already proven our security research capabilities at the highest level. This track record should provide confidence that the competition infrastructure will be designed and audited to professional standards."
+    },
+    {
+      "slide_number": 9,
+      "action_title": "ZK Tokyo's 4-year track record and University of Tokyo collaboration provide academic credibility and community reach.",
+      "key_points": [
+        "ZK Tokyo: Four consecutive years of summer programs with global participation",
+        "Vitalik Buterin has visited ZK Tokyo events—validating our community standing",
+        "ETHTokyo hackathon produced top-finishing teams in global competition",
+        "University of Tokyo Blockchain Endowed Course collaboration (DEPCON) bridges academic and practitioner communities"
+      ],
+      "speaker_notes": "Beyond security research, Nyx Foundation has established itself as a central node in the Ethereum education and community ecosystem in Japan. ZK Tokyo, our flagship program, has run for four consecutive years as a summer program attracting participants from around the world. The program has been visited by Vitalik Buterin himself—a signal of our standing in the global Ethereum community. ETHTokyo, our associated hackathon, has produced teams that have placed at the top of global Ethereum competitions, demonstrating that our community engagement translates to tangible talent development. Our collaboration with the University of Tokyo Blockchain Endowed Course, through DEPCON and co-hosted events, provides the academic credibility that distinguishes serious research from speculative projects. This is not a startup with an idea—this is an established organization with proven community reach, academic partnerships, and a four-year track record of consistent delivery. When we commit to hosting a competition, we have the infrastructure, relationships, and execution capability to deliver."
+    },
+    {
+      "slide_number": 10,
+      "action_title": "The competition runs on a private chain with custom tokens—not public crypto—minimizing regulatory and reputational risk.",
+      "key_points": [
+        "Private blockchain with authenticated access—not connected to public cryptocurrency markets",
+        "Custom tokens created for the competition—no exposure to crypto price volatility",
+        "Controlled environment enables research focus without speculation concerns",
+        "Designed to complement Soneium's 'everyday life' blockchain vision, not compete with it"
+      ],
+      "speaker_notes": "A reasonable concern for Sony is whether this competition creates regulatory or reputational risk through association with cryptocurrency speculation. We have designed the competition specifically to address this concern. The competition runs on a private blockchain with authenticated access—only approved AI agents can submit transactions. This is not connected to public cryptocurrency markets or exchanges. The assets traded are custom tokens created specifically for the competition, with no connection to speculative crypto assets. There is no ICO, no token sale, no price volatility exposure. This controlled environment enables the research focus we are seeking without the speculation concerns that sometimes accompany blockchain projects. Importantly, this design complements Soneium's vision of bringing blockchain utility to everyday life, rather than competing with it. The private chain approach demonstrates practical blockchain applications for research and controlled experiments—exactly the kind of legitimate use case that strengthens the broader narrative around blockchain utility."
+    },
+    {
+      "slide_number": 11,
+      "action_title": "Human researchers monitor all agent activity and can intervene—this is controlled research, not autonomous AI release.",
+      "key_points": [
+        "Human researchers monitor all agent activity in real-time throughout the competition",
+        "Circuit breakers and intervention capabilities are built into the platform",
+        "Rule enforcement through multiple validators ensures compliance",
+        "Penalty systems deter and address rule violations by agents"
+      ],
+      "speaker_notes": "Another reasonable concern is AI safety: are we releasing autonomous AI agents to act without oversight? The answer is no. This is controlled research with human oversight, not an autonomous AI release. Human researchers monitor all agent activity in real-time throughout the competition. We have built circuit breakers into the platform that can pause or terminate agent activity if unexpected or potentially harmful behaviors emerge. Multiple validators enforce rule compliance automatically, and a penalty system addresses violations. The 60-second response time limit ensures agents operate within bounded computational cycles. This is the difference between a controlled experiment and an uncontrolled deployment. We are creating conditions where we can observe AI agent behavior while maintaining the ability to intervene at any point. The research value comes precisely from this controlled observation—we can document what happens under specific conditions because we maintain oversight and control. This approach allows us to generate valuable research data while managing the risks that would concern any responsible partner."
+    },
+    {
+      "slide_number": 12,
+      "action_title": "The phased roadmap starts with 4-week exploratory meetings and leads to a September 2025 competition launch.",
+      "key_points": [
+        "Phase 1: 4-week exploratory meetings to assess strategic fit (current ask)",
+        "Phase 2: Co-design partnership to define competition rules and structure",
+        "Phase 3: Build and security audit of competition infrastructure",
+        "Phase 4: September 2025 competition execution and live event",
+        "Phase 5: Post-competition analysis and research publication"
+      ],
+      "speaker_notes": "Let me walk you through our proposed roadmap. We are not asking Sony to commit to sponsorship today. We are proposing a phased approach that allows both organizations to validate alignment before committing significant resources. Phase 1 is what we are asking for now: a 4-week series of exploratory meetings to assess strategic fit. This is a low-commitment entry point that allows us to determine whether our goals and capabilities align. If Phase 1 confirms alignment, Phase 2 would be a co-design partnership where Sony contributes to defining competition rules, reward structures, and research priorities. This is where SGE's education expertise and Soneium's ecosystem goals can shape the competition design. Phase 3 is the build phase: developing and security-auditing the competition infrastructure. Phase 4 is the September 2025 competition execution, including live streaming and real-time visualization. Phase 5 is post-competition analysis and research publication—the academic output that creates lasting value. Each phase builds on the previous one, and each has clear milestones and exit criteria."
+    },
+    {
+      "slide_number": 13,
+      "action_title": "Clear exit criteria at each phase allow both parties to gracefully disengage if alignment is not confirmed.",
+      "key_points": [
+        "Each phase has defined exit criteria—no open-ended commitments",
+        "Either party can disengage gracefully if strategic fit is not confirmed",
+        "Low-commitment entry (exploratory meetings) protects both organizations",
+        "Progressive commitment only as alignment is validated through concrete work"
+      ],
+      "speaker_notes": "We have intentionally structured this engagement to protect both organizations. Each phase has defined exit criteria, and either party can disengage gracefully at any phase boundary if strategic fit is not confirmed. The Phase 1 exploratory meetings are specifically designed as a low-commitment entry point. If after four weeks of discussion we determine that strategic alignment is not strong enough to justify continued investment, both parties can walk away having invested only meeting time. There is no reputational risk, no sunk cost pressure, no obligation to continue. This structure reflects our genuine interest in finding a partnership that works for both parties, not in pressuring Sony into a commitment that may not serve your strategic interests. If alignment is confirmed, we move forward with increasing commitment. If not, we have both learned something valuable and can pursue other paths. This is how responsible partnerships are built."
+    },
+    {
+      "slide_number": 14,
+      "action_title": "The ask: Approve a 4-week exploratory meeting series to assess strategic fit before committing resources.",
+      "key_points": [
+        "Specific ask: Approve 4 weeks of exploratory meetings starting within the next month",
+        "Purpose: Assess strategic fit with Soneium ecosystem and SGE educational mission",
+        "Outcome: Determine whether to proceed to formal co-design partnership proposal",
+        "Commitment required: Meeting time only—no financial or resource commitment at this stage"
+      ],
+      "speaker_notes": "Our specific ask today is straightforward: approve a 4-week series of exploratory meetings to assess strategic fit between the AI Agent Economy Competition and Sony's blockchain and education initiatives. We are not asking for sponsorship commitment. We are not asking for resource allocation beyond meeting time. We are asking for the opportunity to demonstrate alignment through concrete discussions. During these meetings, we would explore how the competition could complement Soneium's ecosystem development goals, how research findings could support SGE's educational mission, and what co-design collaboration might look like if both parties see sufficient value. The outcome of these meetings would be a decision: either we proceed to a formal co-design partnership proposal with specific terms, or we determine that alignment is not strong enough and both parties pursue other priorities. This is a low-risk, high-information approach that allows Sony to evaluate the opportunity without premature commitment."
+    },
+    {
+      "slide_number": 15,
+      "action_title": "Next step: Schedule a follow-up within 2 weeks and identify operational stakeholders for co-design discussions.",
+      "key_points": [
+        "Schedule follow-up meeting within 2 weeks of this presentation",
+        "Identify operational stakeholders: Naoki Kato (SGE) or Sota Watanabe (Startale)",
+        "Define initial topics for exploratory meeting agenda",
+        "Success: Clear next steps with assigned owners and target dates"
+      ],
+      "speaker_notes": "If this proposal resonates, here are the concrete next steps we are requesting. First, schedule a follow-up meeting within two weeks of today. This maintains momentum and signals serious interest. Second, identify the operational stakeholders who should be part of co-design discussions. Based on our understanding, this would likely include Naoki Kato from Sony Global Education for educational alignment questions, or Sota Watanabe from Startale for Soneium ecosystem integration discussions. Third, we should define the initial topics for our exploratory meeting agenda—what specific questions need to be answered to determine strategic fit. Success for today's meeting would be leaving with clear next steps, assigned owners, and target dates. We believe this opportunity aligns with Sony's strategic interests in both blockchain ecosystem development and educational innovation. We are ready to demonstrate that alignment through concrete work, starting with exploratory meetings. The question is whether Sony is ready to explore this opportunity with us."
+    }
+  ],
+  "quality_checklist": {
+    "speaker_notes_written_first": {
+      "result": true,
+      "justification": "Each slide was developed by first writing complete speaker notes as prose arguments, then extracting the key points as summaries. This follows the Bezos 'narrative memo' discipline—thinking through the argument in full prose before distilling to bullet points."
+    },
+    "evidence_hierarchy_applied": {
+      "result": true,
+      "justification": "Hard data was prioritized throughout: 60M+ JPY funding from 30+ donors (Slide 7), 17 vulnerabilities in Fusaka audit (Slide 8), 4 years of ZK Tokyo (Slide 9), 16M JPY prize pool (Slide 4). Expert credibility was established through Vitalik visits and University of Tokyo collaboration. The evidence hierarchy was consciously applied with quantitative data first, expert validation second, and structural arguments third."
+    },
+    "collaborative_framing_applied": {
+      "result": true,
+      "justification": "Language throughout frames the proposal as a partnership opportunity rather than a sales pitch. Phrases like 'assess strategic fit,' 'co-design partnership,' 'both parties can disengage gracefully,' and 'complement Soneium's vision' emphasize collaboration and mutual benefit rather than one-sided requests."
+    },
+    "so_what_test_passed": {
+      "result": true,
+      "justification": "Each data point is followed by its implication. For example, '17 vulnerabilities in Fusaka audit' is immediately connected to 'This security expertise is directly relevant to running a competition with real assets.' Numbers are not presented as standalone facts but as evidence supporting specific claims."
+    }
+  }
+}

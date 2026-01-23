@@ -1,0 +1,134 @@
+{
+  "visual_designs": [
+    {
+      "slide_number": 1,
+      "visual_strategy": "Mermaid Diagram",
+      "slidev_layout": "default",
+      "diagram_code": "```mermaid\ngraph LR\n    A[AI Agents] -->|\"Autonomous\\nTransactions\"| B[Economy]\n    B -->|\"Excluded by\"| C[Traditional\\nPayment Systems]\n    B -->|\"Unstudied by\"| D[Academic\\nResearch]\n    C -->|\"No Identity\\nVerification\"| E[❌ No Access]\n    D -->|\"Simulations Only\"| F[❌ No Real Stakes]\n    \n    style A fill:#4a90d9,stroke:#2d5a87,color:#fff\n    style E fill:#e74c3c,stroke:#c0392b,color:#fff\n    style F fill:#e74c3c,stroke:#c0392b,color:#fff\n```",
+      "content_arrangement": "Action title at top. Mermaid diagram centered showing the dual problem: AI agents excluded from traditional systems AND unstudied with real stakes. The red boxes emphasize the gap.",
+      "justification": "This slide describes a structural problem with multiple interconnected barriers. A diagram shows the 'blocked pathways' more powerfully than bullet points. One message: AI agents face a double exclusion."
+    },
+    {
+      "slide_number": 2,
+      "visual_strategy": "Mermaid Diagram",
+      "slidev_layout": "default",
+      "diagram_code": "```mermaid\ngraph TD\n    subgraph \"Traditional Institutions\"\n        A[Universities] -->|\"Ethics Review\\nBoards\"| B[🚫 Blocked]\n        C[Corporations] -->|\"Accounting\\nRules\"| D[🚫 Blocked]\n        E[Research Labs] -->|\"Compliance\\nRequirements\"| F[🚫 Blocked]\n    end\n    \n    G[Real-Asset AI\\nEconomy Research] -->|\"Requires\"| A\n    G -->|\"Requires\"| C\n    G -->|\"Requires\"| E\n    \n    style B fill:#e74c3c,stroke:#c0392b,color:#fff\n    style D fill:#e74c3c,stroke:#c0392b,color:#fff\n    style F fill:#e74c3c,stroke:#c0392b,color:#fff\n    style G fill:#f39c12,stroke:#d68910,color:#fff\n```",
+      "content_arrangement": "Action title at top. Diagram centered showing three institutional pathways all leading to 'Blocked.' This visualizes why the gap exists—not lack of interest, but structural barriers.",
+      "justification": "The content describes parallel barriers across three institution types. A diagram showing all paths blocked delivers the 'structural impossibility' message instantly. One message: Traditional institutions cannot do this research."
+    },
+    {
+      "slide_number": 3,
+      "visual_strategy": "Mermaid Diagram (Timeline)",
+      "slidev_layout": "default",
+      "diagram_code": "```mermaid\ngantt\n    title First-Mover Research Window\n    dateFormat  YYYY-MM\n    axisFormat  %b %Y\n    \n    section Opportunity\n    Research Window Open       :active, a1, 2025-01, 2025-09\n    \n    section Milestones\n    Today                      :milestone, m1, 2025-01, 0d\n    Competition Launch         :milestone, m2, 2025-09, 0d\n    \n    section Risk\n    Mainstream Attention       :crit, r1, 2025-10, 2026-06\n    Window Closes              :crit, r2, 2026-06, 2027-01\n```",
+      "content_arrangement": "Action title at top. Gantt timeline showing the narrowing window—green 'opportunity' zone contrasted with red 'window closing' zone. September 2025 milestone highlighted.",
+      "justification": "Time-sensitivity is best shown through a timeline visualization. The audience sees the shrinking window at a glance. One message: Act now or lose the first-mover advantage."
+    },
+    {
+      "slide_number": 4,
+      "visual_strategy": "Mermaid Diagram",
+      "slidev_layout": "two-cols",
+      "diagram_code": "```mermaid\ngraph TD\n    A[\"100+ Teams\"] -->|\"Develop\"| B[\"AI Agent\\nStrategies\"]\n    B -->|\"Compete in\"| C[\"Closed\\nEconomy\"]\n    C -->|\"Trade\"| D[\"Real Assets\\n(Custom Tokens)\"]\n    D -->|\"Recorded on\"| E[\"Private\\nBlockchain\"]\n    E -->|\"Enables\"| F[\"Academic\\nAnalysis\"]\n    \n    style A fill:#27ae60,stroke:#1e8449,color:#fff\n    style C fill:#4a90d9,stroke:#2d5a87,color:#fff\n    style E fill:#9b59b6,stroke:#7d3c98,color:#fff\n    style F fill:#f39c12,stroke:#d68910,color:#fff\n```",
+      "content_arrangement": "Left column: Mermaid flow diagram showing the competition structure. Right column: Large '¥16M' fact highlight for prize pool. Action title spans top.",
+      "justification": "This is the core solution slide. The flow diagram shows how the system works, while the prize pool figure provides an anchor statistic. One message: This is a real, structured competition with real stakes."
+    },
+    {
+      "slide_number": 5,
+      "visual_strategy": "Mermaid Diagram",
+      "slidev_layout": "default",
+      "diagram_code": "```mermaid\ngraph TB\n    subgraph L2 [\"L2: AI Agents\"]\n        A1[Agent 1] \n        A2[Agent 2]\n        A3[Agent N...]\n    end\n    \n    subgraph L1 [\"L1: Institutions & Norms\"]\n        R1[Rules]\n        R2[Constraints]\n        R3[Rewards]\n    end\n    \n    subgraph L0 [\"L0: Execution Physics\"]\n        B1[Blockchain Infrastructure]\n    end\n    \n    L2 -->|\"Behaviors emerge from\"| L1\n    L1 -->|\"Built on\"| L0\n    \n    style L2 fill:#e8f4f8,stroke:#4a90d9\n    style L1 fill:#fef9e7,stroke:#f39c12\n    style L0 fill:#f5eef8,stroke:#9b59b6\n```",
+      "content_arrangement": "Action title at top. Three-layer diagram centered, showing clear separation between execution physics (L0), institutions (L1), and agents (L2). Arrows show dependency direction.",
+      "justification": "The L0/L1/L2 framework is inherently visual—it's a layered architecture. A diagram communicates the structure instantly. One message: Controlled experiments through layer isolation."
+    },
+    {
+      "slide_number": 6,
+      "visual_strategy": "Mermaid Diagram",
+      "slidev_layout": "default",
+      "diagram_code": "```mermaid\ngraph LR\n    A[\"Competition\\nFindings\"] -->|\"Informs\"| B[\"AI Ethics\\nCurriculum\"]\n    A -->|\"Shapes\"| C[\"Economic\\nLiteracy\"]\n    A -->|\"Advances\"| D[\"Institutional\\nTheory\"]\n    \n    B --> E[\"Sony Global\\nEducation\"]\n    C --> E\n    D --> E\n    \n    E -->|\"Supports\"| F[\"2040 Education\\nTransformation\"]\n    \n    style A fill:#4a90d9,stroke:#2d5a87,color:#fff\n    style E fill:#27ae60,stroke:#1e8449,color:#fff\n    style F fill:#f39c12,stroke:#d68910,color:#fff\n```",
+      "content_arrangement": "Action title at top. Flow diagram showing research findings flowing into three curriculum areas, converging on Sony Global Education, then supporting the 2040 vision.",
+      "justification": "The slide describes multiple pathways from research to educational impact. A convergence diagram shows how diverse findings unite in SGE's mission. One message: Research directly serves Sony's educational goals."
+    },
+    {
+      "slide_number": 7,
+      "visual_strategy": "Slidev Layout: fact + two-cols",
+      "slidev_layout": "two-cols",
+      "diagram_code": null,
+      "content_arrangement": "Left column: Large '¥60M+' as primary fact, with '30+ donors' below. Right column: '5 residents in Hongo research house' and '30-person lab under construction in Nanto.' Use icons (🏠 📍) for visual anchors.",
+      "justification": "This is a credibility slide with concrete numbers. The 'fact' treatment makes key figures memorable. No diagram needed—numbers speak for themselves. One message: Proven funding and infrastructure."
+    },
+    {
+      "slide_number": 8,
+      "visual_strategy": "Slidev Layout: fact",
+      "slidev_layout": "fact",
+      "diagram_code": null,
+      "content_arrangement": "Giant '17' as the primary fact. Subtitle: 'vulnerabilities reported in Fusaka Ethereum audit contest.' Brief line below: 'Top-tier security research credibility, verified.'",
+      "justification": "A single powerful number deserves the 'fact' layout. The audience sees '17' and understands technical credibility instantly. One message: We have proven security expertise."
+    },
+    {
+      "slide_number": 9,
+      "visual_strategy": "Styled Key Points with <v-clicks>",
+      "slidev_layout": "default",
+      "diagram_code": null,
+      "content_arrangement": "Action title at top. Four achievements revealed sequentially with <v-clicks>:\n\n<v-clicks>\n\n🎓 **4 years** of ZK Tokyo summer programs\n\n👤 **Vitalik Buterin** visited our events\n\n🏆 **ETHTokyo** hackathon → global competition winners\n\n🏛️ **University of Tokyo** collaboration (DEPCON)\n\n</v-clicks>",
+      "justification": "This slide lists distinct achievements that don't flow into each other—a rare case where styled key points work better than a diagram. The <v-clicks> reveal creates pacing. One message: Four years of consistent, recognized community leadership."
+    },
+    {
+      "slide_number": 10,
+      "visual_strategy": "Mermaid Diagram",
+      "slidev_layout": "two-cols",
+      "diagram_code": "```mermaid\ngraph TD\n    A[\"Public Crypto\\nMarkets\"] -->|\"❌ NOT\\nconnected\"| B[\"Competition\\nPlatform\"]\n    C[\"Speculation\\nRisk\"] -->|\"❌ NOT\\nexposed\"| B\n    D[\"Price\\nVolatility\"] -->|\"❌ NOT\\naffected\"| B\n    \n    E[\"Private Chain\"] -->|\"✅\"| B\n    F[\"Custom Tokens\"] -->|\"✅\"| B\n    G[\"Authenticated\\nAccess\"] -->|\"✅\"| B\n    \n    style A fill:#e74c3c,stroke:#c0392b,color:#fff\n    style C fill:#e74c3c,stroke:#c0392b,color:#fff\n    style D fill:#e74c3c,stroke:#c0392b,color:#fff\n    style E fill:#27ae60,stroke:#1e8449,color:#fff\n    style F fill:#27ae60,stroke:#1e8449,color:#fff\n    style G fill:#27ae60,stroke:#1e8449,color:#fff\n```",
+      "content_arrangement": "Left column: Diagram showing what the competition IS NOT (public crypto, speculation, volatility) with red 'blocked' connectors. Right column: What it IS (private chain, custom tokens, authenticated access) with green 'enabled' connectors.",
+      "justification": "This risk-mitigation slide benefits from visual contrast between 'what we avoid' (red) and 'what we use' (green). The diagram makes the isolation clear. One message: This is controlled research, not crypto speculation."
+    },
+    {
+      "slide_number": 11,
+      "visual_strategy": "Mermaid Diagram",
+      "slidev_layout": "default",
+      "diagram_code": "```mermaid\ngraph TD\n    A[\"AI Agents\"] -->|\"Activity\"| B[\"Blockchain\"]\n    B -->|\"Real-time\\nMonitoring\"| C[\"Human\\nResearchers\"]\n    C -->|\"Can Trigger\"| D[\"Circuit\\nBreakers\"]\n    C -->|\"Can Issue\"| E[\"Interventions\"]\n    C -->|\"Enforce via\"| F[\"Validators\"]\n    \n    D -->|\"Pause/Stop\"| A\n    E -->|\"Correct\"| A\n    F -->|\"Penalize\"| A\n    \n    style C fill:#27ae60,stroke:#1e8449,color:#fff\n    style D fill:#f39c12,stroke:#d68910,color:#fff\n    style E fill:#f39c12,stroke:#d68910,color:#fff\n    style F fill:#f39c12,stroke:#d68910,color:#fff\n```",
+      "content_arrangement": "Action title at top. Circular flow diagram showing human researchers at the center with multiple intervention pathways back to AI agents. Emphasizes control loop.",
+      "justification": "Safety is about control loops—humans watching agents and having multiple ways to intervene. A diagram shows the closed loop visually. One message: Humans maintain full control throughout."
+    },
+    {
+      "slide_number": 12,
+      "visual_strategy": "Mermaid Diagram (Timeline)",
+      "slidev_layout": "default",
+      "diagram_code": "```mermaid\ngraph LR\n    A[\"Phase 1\\n4-Week\\nExploratory\"] --> B[\"Phase 2\\nCo-Design\\nPartnership\"]\n    B --> C[\"Phase 3\\nBuild &\\nAudit\"]\n    C --> D[\"Phase 4\\nSept 2025\\nCompetition\"]\n    D --> E[\"Phase 5\\nAnalysis &\\nPublication\"]\n    \n    style A fill:#4a90d9,stroke:#2d5a87,color:#fff\n    style D fill:#27ae60,stroke:#1e8449,color:#fff\n    style E fill:#f39c12,stroke:#d68910,color:#fff\n```",
+      "content_arrangement": "Action title at top. Horizontal phase flow with Phase 1 highlighted (current ask). September 2025 milestone emphasized in green.",
+      "justification": "A phased roadmap is inherently sequential—a horizontal flow diagram is the natural representation. One message: Clear progression from low-commitment exploration to high-value execution."
+    },
+    {
+      "slide_number": 13,
+      "visual_strategy": "Mermaid Diagram",
+      "slidev_layout": "default",
+      "diagram_code": "```mermaid\ngraph TD\n    A[\"Phase 1\"] -->|\"✅ Alignment?\"| B[\"Phase 2\"]\n    A -->|\"❌ No fit\"| X1[\"Graceful Exit\"]\n    \n    B -->|\"✅ Alignment?\"| C[\"Phase 3\"]\n    B -->|\"❌ No fit\"| X2[\"Graceful Exit\"]\n    \n    C -->|\"✅ Alignment?\"| D[\"Phase 4\"]\n    C -->|\"❌ No fit\"| X3[\"Graceful Exit\"]\n    \n    D -->|\"✅ Alignment?\"| E[\"Phase 5\"]\n    \n    style X1 fill:#95a5a6,stroke:#7f8c8d,color:#fff\n    style X2 fill:#95a5a6,stroke:#7f8c8d,color:#fff\n    style X3 fill:#95a5a6,stroke:#7f8c8d,color:#fff\n    style A fill:#4a90d9,stroke:#2d5a87,color:#fff\n```",
+      "content_arrangement": "Action title at top. Decision tree showing each phase with two paths: proceed (if aligned) or exit gracefully (if not). Exit points shown in neutral gray—not failure, just off-ramp.",
+      "justification": "Exit criteria are decision points. A decision tree diagram shows the 'proceed or exit' structure clearly. One message: Every phase has a safe off-ramp—no open-ended commitment."
+    },
+    {
+      "slide_number": 14,
+      "visual_strategy": "Slidev Layout: statement",
+      "slidev_layout": "statement",
+      "diagram_code": null,
+      "content_arrangement": "Large centered text: '4 weeks of exploratory meetings'\n\nBelow in smaller text: 'Meeting time only—no financial commitment'\n\nAction title as subheader above the statement.",
+      "justification": "This is the ask slide—it should be singular and memorable. The 'statement' layout focuses attention on the one thing being requested. One message: The ask is simple—just meetings."
+    },
+    {
+      "slide_number": 15,
+      "visual_strategy": "Styled Key Points with <v-clicks>",
+      "slidev_layout": "default",
+      "diagram_code": null,
+      "content_arrangement": "Action title at top. Three clear next steps revealed with <v-clicks>:\n\n<v-clicks>\n\n📅 **Schedule follow-up** within 2 weeks\n\n👥 **Identify stakeholders**: Naoki Kato (SGE) or Sota Watanabe (Startale)\n\n📋 **Define agenda** for exploratory meetings\n\n</v-clicks>\n\nBottom: 'Success today = clear next steps with owners and dates'",
+      "justification": "Next steps are inherently a checklist. Using <v-clicks> creates a sense of progression toward commitment. One message: Three concrete actions to move forward."
+    }
+  ],
+  "quality_checklist": {
+    "bullet_points_minimized": {
+      "result": true,
+      "justification": "Out of 15 slides, only 2 use styled key points (Slides 9 and 15), and both use <v-clicks> for progressive reveal with icons for visual anchoring. Zero slides use plain bullet points. 13 slides use diagrams or specialized layouts."
+    },
+    "one_chart_one_message_applied": {
+      "result": true,
+      "justification": "Each diagram has been reviewed against the 'One Chart, One Message' rule. Every diagram includes a clear single takeaway stated in the justification field. Complex multi-part arguments were split across slides (e.g., roadmap in Slide 12 vs. exit criteria in Slide 13) rather than cramming multiple messages into one diagram."
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "narrative_flow": [
+    {
+      "slide_number": 1,
+      "action_title": "AI agents are becoming autonomous economic actors, but no one is studying their behavior with real stakes.",
+      "purpose": "Establish the Situation and Complication: a significant research gap exists because traditional institutions cannot conduct real-asset AI experiments."
+    },
+    {
+      "slide_number": 2,
+      "action_title": "Universities and corporations face regulatory barriers that block real-asset AI economy research.",
+      "purpose": "Explain WHY the gap exists: ethics review boards, corporate accounting rules, and compliance constraints prevent established institutions from leading this research."
+    },
+    {
+      "slide_number": 3,
+      "action_title": "A first-mover research window exists now—before AI economic participation accelerates and the opportunity closes.",
+      "purpose": "Create urgency: the window is narrowing, and those who act now will shape the field's foundational knowledge."
+    },
+    {
+      "slide_number": 4,
+      "action_title": "The AI Agent Economy Competition is a blockchain-based research platform where AI agents autonomously trade real assets.",
+      "purpose": "Introduce the solution: a controlled competition environment that generates unique empirical data on AI economic behavior."
+    },
+    {
+      "slide_number": 5,
+      "action_title": "The L0/L1/L2 research framework enables systematic study of emergent norms, institutions, and AI agent behavior.",
+      "purpose": "Explain the research methodology: layered framework allows isolation of variables for rigorous academic study."
+    },
+    {
+      "slide_number": 6,
+      "action_title": "Research findings will inform future curriculum design for AI ethics, economic literacy, and institutional theory.",
+      "purpose": "Connect to educational mission: align with Isozu's 2040 education vision and Sony Global Education's core purpose."
+    },
+    {
+      "slide_number": 7,
+      "action_title": "Nyx Foundation has raised 60M+ JPY from 30+ donors and proven execution capability in the Ethereum ecosystem.",
+      "purpose": "Establish credibility: demonstrate funding, community trust, and operational track record."
+    },
+    {
+      "slide_number": 8,
+      "action_title": "Our security research credibility is validated by 17 vulnerabilities reported in the Ethereum Fusaka audit contest.",
+      "purpose": "Prove technical depth: show concrete evidence of blockchain security expertise critical for the competition."
+    },
+    {
+      "slide_number": 9,
+      "action_title": "ZK Tokyo's 4-year track record and University of Tokyo collaboration provide academic credibility and community reach.",
+      "purpose": "Demonstrate sustained execution and academic partnerships: Vitalik visits, top ETHTokyo finishes, university course collaboration."
+    },
+    {
+      "slide_number": 10,
+      "action_title": "The competition runs on a private chain with custom tokens—not public crypto—minimizing regulatory and reputational risk.",
+      "purpose": "Address brand/legal concerns: controlled environment, authenticated agents, no speculation or public crypto exposure."
+    },
+    {
+      "slide_number": 11,
+      "action_title": "Human researchers monitor all agent activity and can intervene—this is controlled research, not autonomous AI release.",
+      "purpose": "Address safety concerns: human-in-the-loop boundaries, rule constraints, intervention capability."
+    },
+    {
+      "slide_number": 12,
+      "action_title": "The phased roadmap starts with 4-week exploratory meetings and leads to a September 2025 competition launch.",
+      "purpose": "Show clear path forward: Phase 1 (exploratory) → Phase 2 (co-design) → Phase 3 (build) → Phase 4 (execute) → Phase 5 (analyze)."
+    },
+    {
+      "slide_number": 13,
+      "action_title": "Clear exit criteria at each phase allow both parties to gracefully disengage if alignment is not confirmed.",
+      "purpose": "De-risk the partnership: low-commitment entry point with structured off-ramps protects both organizations."
+    },
+    {
+      "slide_number": 14,
+      "action_title": "The ask: Approve a 4-week exploratory meeting series to assess strategic fit before committing resources.",
+      "purpose": "Make the specific, low-commitment request: exploratory meetings, not sponsorship commitment."
+    },
+    {
+      "slide_number": 15,
+      "action_title": "Next step: Schedule a follow-up within 2 weeks and identify operational stakeholders for co-design discussions.",
+      "purpose": "Define concrete next action: connect with Kato (SGE) or Sota Watanabe (Startale) for operational alignment."
+    }
+  ],
+  "quality_checklist": {
+    "passes_skim_test": {
+      "result": true,
+      "justification": "Reading the Action Titles in sequence tells a complete story: (1) There's an unstudied research gap in AI agent economic behavior, (2) traditional institutions can't address it, (3) a first-mover window exists, (4) the AI Agent Economy Competition is the solution, (5) with rigorous research methodology, (6) that informs education, (7-9) Nyx has proven credibility to execute, (10-11) with proper safety and governance, (12-13) a phased roadmap with exit options, (14) requesting only exploratory meetings, (15) with clear next steps. The narrative flows logically from problem → opportunity → solution → credibility → safety → ask."
+    },
+    "respects_constraints": {
+      "result": true,
+      "justification": "The blueprint contains exactly 15 slides, matching the hard constraint of '15 slides maximum' from the decision brief. This is appropriate for a 15-minute presentation (approximately 1 minute per slide average)."
+    },
+    "has_dedicated_situation_slide": {
+      "result": true,
+      "justification": "Slides 1-3 serve as the Situation slide sequence: Slide 1 establishes the Situation (AI agents becoming economic actors) and Complication (no one studying with real stakes); Slide 2 explains why (institutional barriers); Slide 3 introduces the urgency (first-mover window). Together they ground the audience in the SCR framework before introducing the solution."
+    }
+  }
+}

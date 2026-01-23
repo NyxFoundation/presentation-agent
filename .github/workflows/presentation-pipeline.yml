@@ -3,22 +3,8 @@ name: Presentation Pipeline
 on:
   workflow_dispatch:
     inputs:
-      target:
-        description: 'Target audience - flexible format supporting single or multiple people. Examples: "礒津政明 (ソニー)" or "張一凡 (金沢大学), 江村恵太 (筑波大学)"'
-        required: false
-        default: ''
-      person_name:
-        description: '(Legacy) Single person name - use "target" instead for flexibility'
-        required: false
-        default: ''
-      company:
-        description: '(Legacy) Single company name - use "target" instead for flexibility'
-        required: false
-        default: ''
-      constraints:
-        description: 'Presentation constraints'
-        required: false
-        default: '15 slides max, 15-minute presentation'
+      # No inputs needed - all configuration is in inputs/introduction.md frontmatter
+      # This workflow is triggered manually and uses the current state of the repository
 
 jobs:
   generate-presentation:
@@ -44,58 +30,44 @@ jobs:
           which claude || echo "claude not found in PATH"
           claude --version || echo "Failed to get claude version"
 
-      # - name: Clean previous outputs
-      #   run: |
-      #     rm -rf outputs/*.json slides/*.md || true
-      #     echo "Cleaned previous outputs"
+      - name: Validate input file
+        run: make validate
+
+      - name: Extract metadata from introduction.md
+        id: extract-metadata
+        run: |
+          INPUT_FILE="inputs/introduction.md"
+
+          # Extract target_audience from YAML frontmatter
+          TARGET_AUDIENCE=$(grep -m1 "^target_audience:" "$INPUT_FILE" | sed 's/^target_audience:[[:space:]]*//' | sed 's/^"//' | sed 's/"$//')
+          echo "target_audience=${TARGET_AUDIENCE}" >> $GITHUB_OUTPUT
+
+          # Extract constraints (max_slides and max_duration_minutes)
+          MAX_SLIDES=$(grep -m1 "max_slides:" "$INPUT_FILE" | sed 's/^[[:space:]]*max_slides:[[:space:]]*//')
+          MAX_DURATION=$(grep -m1 "max_duration_minutes:" "$INPUT_FILE" | sed 's/^[[:space:]]*max_duration_minutes:[[:space:]]*//')
+          CONSTRAINTS="${MAX_SLIDES} slides max, ${MAX_DURATION}-minute presentation"
+          echo "constraints=${CONSTRAINTS}" >> $GITHUB_OUTPUT
+
+          # Extract output_language
+          OUTPUT_LANGUAGE=$(grep -m1 "^output_language:" "$INPUT_FILE" | sed 's/^output_language:[[:space:]]*//')
+          echo "output_language=${OUTPUT_LANGUAGE}" >> $GITHUB_OUTPUT
+
+          echo "Extracted metadata:"
+          echo "  Target Audience: ${TARGET_AUDIENCE}"
+          echo "  Constraints: ${CONSTRAINTS}"
+          echo "  Output Language: ${OUTPUT_LANGUAGE}"
 
       - name: Create output directories
         run: make init
 
       - name: Run full pipeline
-        run: |
-          # Determine TARGET: prefer 'target' input, fall back to legacy person_name/company
-          TARGET_INPUT="${{ github.event.inputs.target }}"
-          PERSON_NAME="${{ github.event.inputs.person_name }}"
-          COMPANY="${{ github.event.inputs.company }}"
-
-          if [ -n "$TARGET_INPUT" ]; then
-            echo "Using TARGET: $TARGET_INPUT"
-            make all \
-              TARGET="$TARGET_INPUT" \
-              CONSTRAINTS="${{ github.event.inputs.constraints || '15 slides max, 15-minute presentation' }}"
-          elif [ -n "$PERSON_NAME" ]; then
-            echo "Using legacy PERSON_NAME/COMPANY: $PERSON_NAME / $COMPANY"
-            make all \
-              PERSON_NAME="$PERSON_NAME" \
-              COMPANY="${COMPANY:-サンプル株式会社}" \
-              CONSTRAINTS="${{ github.event.inputs.constraints || '15 slides max, 15-minute presentation' }}"
-          else
-            echo "Using defaults"
-            make all \
-              TARGET="山田太郎 (サンプル株式会社)" \
-              CONSTRAINTS="${{ github.event.inputs.constraints || '15 slides max, 15-minute presentation' }}"
-          fi
+        run: make all
 
       - name: Create branch and push generated files
         id: create-branch
         run: |
           BRANCH_NAME="presentation/generated-${{ github.run_id }}-$(date +%Y%m%d-%H%M%S)"
           echo "branch_name=${BRANCH_NAME}" >> $GITHUB_OUTPUT
-
-          # Determine display target for commit message
-          TARGET_INPUT="${{ github.event.inputs.target }}"
-          PERSON_NAME="${{ github.event.inputs.person_name }}"
-          COMPANY="${{ github.event.inputs.company }}"
-
-          if [ -n "$TARGET_INPUT" ]; then
-            DISPLAY_TARGET="$TARGET_INPUT"
-          elif [ -n "$PERSON_NAME" ]; then
-            DISPLAY_TARGET="$PERSON_NAME (${COMPANY:-サンプル株式会社})"
-          else
-            DISPLAY_TARGET="山田太郎 (サンプル株式会社)"
-          fi
-          echo "display_target=${DISPLAY_TARGET}" >> $GITHUB_OUTPUT
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -104,8 +76,8 @@ jobs:
           git add outputs/ slides/
           git commit -m "Generate presentation outputs
 
-          Target: ${DISPLAY_TARGET}
-          Constraints: ${{ github.event.inputs.constraints || '15 slides max, 15-minute presentation' }}
+          Target: ${{ steps.extract-metadata.outputs.target_audience }}
+          Constraints: ${{ steps.extract-metadata.outputs.constraints }}
           Run ID: ${{ github.run_id }}"
 
           git push origin "${BRANCH_NAME}"
@@ -114,14 +86,17 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          DISPLAY_TARGET="${{ steps.create-branch.outputs.display_target }}"
+          TARGET_AUDIENCE="${{ steps.extract-metadata.outputs.target_audience }}"
+          CONSTRAINTS="${{ steps.extract-metadata.outputs.constraints }}"
 
           gh pr create \
-            --title "Presentation: ${DISPLAY_TARGET}" \
-            --body "## Generated Presentation
+            --title "Presentation: ${TARGET_AUDIENCE}" \
+            --body "$(cat <<'EOF'
+          ## Generated Presentation
 
-          **Target Audience:** ${DISPLAY_TARGET}
-          **Constraints:** ${{ github.event.inputs.constraints || '15 slides max, 15-minute presentation' }}
+          **Target Audience:** ${{ steps.extract-metadata.outputs.target_audience }}
+          **Constraints:** ${{ steps.extract-metadata.outputs.constraints }}
+          **Output Language:** ${{ steps.extract-metadata.outputs.output_language }}
 
           ### Generated Files
           - \`outputs/\` - Pipeline intermediate outputs (JSON)
@@ -133,7 +108,9 @@ jobs:
           - [ ] Verify visual designs in \`outputs/07_Visual_Designs.json\`
 
           ---
-          *Generated by Presentation Pipeline (Run ID: ${{ github.run_id }})*" \
+          *Generated by Presentation Pipeline (Run ID: ${{ github.run_id }})*
+          EOF
+          )" \
             --base main \
             --head "${{ steps.create-branch.outputs.branch_name }}"
 

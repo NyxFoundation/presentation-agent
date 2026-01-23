@@ -1,6 +1,25 @@
-# DEPCON Hakodate オープニングトーク
-
 ---
+# Target Audience
+target_audience: "SCIS2026参加者（暗号・セキュリティを研究する教授、大学院生、企業研究職、イーサリアム財団、台湾イーサリアムコミュニティ）"
+audience_type: group  # individual / group / mixed
+
+# Constraints
+constraints:
+  max_slides: 10
+  max_duration_minutes: 10
+
+# Output Language
+output_language: Japanese
+
+# Event Context (Optional)
+event:
+  name: "DEPCON Hakodate"
+  parent_event: "SCIS2026"
+  date: "2026-01-29"
+  location: "函館"
+---
+
+# DEPCON Hakodate オープニングトーク
 
 ## 本プレゼンテーションについて (The Big Idea)
 

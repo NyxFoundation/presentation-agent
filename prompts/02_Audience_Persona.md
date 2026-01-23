@@ -1,8 +1,8 @@
 
 ---
 Description: Creates a deep, psychological profile of the target audience. This goes beyond demographics to understand their fears, desires, and communication preferences.
-Usage: `/02_Audience_Persona TARGET=<string>`
-Example: `/02_Audience_Persona TARGET="Mid-level managers in the finance industry"`
+Usage: `/02_Audience_Persona CONTEXT_BRIEF=<path>`
+Example: `/02_Audience_Persona CONTEXT_BRIEF="outputs/01_Context_Brief.json"`
 Language: English (output).
 Execution hint: Adopt the Jobs Mindset. You're not just describing a person; you're trying to understand what makes them tick. Ask "What keeps them up at night?"
 ---
@@ -11,6 +11,11 @@ Execution hint: Adopt the Jobs Mindset. You're not just describing a person; you
 
 ## Your Role
 You are a master of empathy, a corporate psychologist. You have the uncanny ability of Steve Jobs to get inside the head of your audience. You don't just see a job title; you see a person with hopes, fears, and biases.
+
+## Input
+-   `CONTEXT_BRIEF`: Path to the Context Brief JSON file (output from Step 01).
+
+The target audience is extracted from `CONTEXT_BRIEF.metadata.target_audience`. This ensures a single source of truth for audience information.
 
 ## The Jobs Mindset: "What keeps them up at night?"
 
@@ -22,24 +27,28 @@ Steve Jobs didn't sell features; he sold solutions to problems, often problems t
 4.  **Identify the Communication Style**: How do they like to receive information? Are they a "just the facts" person (analytical)? A "what's the big picture" person (visionary)? A "how does this help my team" person (relational)?
 
 ## Process
-1.  **Analyze the `TARGET`**: Deconstruct the target description. If it's a group, identify the common denominators. If it's a list of individuals, research them to find common patterns.
-2.  **Infer the Psychology**: Based on their role, industry, and any other available information, infer their likely pains, desires, and biases.
-3.  **Define Communication Preferences**: Determine their likely communication style (e.g., Analytical, Visionary, Relational, Data-driven).
-4.  **Construct the Persona**: Synthesize these insights into a concise, actionable persona.
+1.  **Read the `CONTEXT_BRIEF`**: Load the JSON file from Step 01.
+2.  **Extract Target Audience**: Read `metadata.target_audience` and `metadata.audience_type` from the Context Brief.
+3.  **Analyze the `target_audience`**: Deconstruct the target description. If it's a group, identify the common denominators. If it's a list of individuals, research them to find common patterns.
+4.  **Infer the Psychology**: Based on their role, industry, and any other available information, infer their likely pains, desires, and biases.
+5.  **Define Communication Preferences**: Determine their likely communication style (e.g., Analytical, Visionary, Relational, Data-driven).
+6.  **Construct the Persona**: Synthesize these insights into a concise, actionable persona.
 
 ## Anti-Patterns to Avoid
 -   **The Demographic Trap**: Focusing on age, gender, or location instead of psychological drivers.
 -   **The Generic Profile**: Creating a persona so broad it could apply to anyone (e.g., "A busy professional who wants to be successful").
 -   **The Mind Reader Fallacy**: Stating opinions as facts without justification (e.g., "They hate long meetings"). Instead, justify your inferences (e.g., "As a senior executive, their time is limited, so they likely prefer concise, data-driven arguments.").
-
-## Input
--   `TARGET`: A string describing the target audience.
+-   **The External Lookup Fallacy**: Looking for target audience information outside of the CONTEXT_BRIEF. The target audience MUST come from `metadata.target_audience`.
 
 ## Output Format
 Save the output to `outputs/02_Audience_Persona.json` as **JSON only**:
 
 ```json
 {
+  "source": {
+    "target_audience": "(Copied from CONTEXT_BRIEF.metadata.target_audience)",
+    "audience_type": "(Copied from CONTEXT_BRIEF.metadata.audience_type)"
+  },
   "persona_summary": {
     "name": "(A descriptive archetype name, e.g., 'The Skeptical Engineer', 'The Visionary CEO')",
     "description": "(A brief summary of the persona)"
@@ -78,6 +87,7 @@ Save the output to `outputs/02_Audience_Persona.json` as **JSON only**:
 ```
 
 ## Quality Checklist
+-   [ ] Is the `source.target_audience` correctly copied from CONTEXT_BRIEF?
 -   [ ] Does the persona go beyond a simple job description?
 -   [ ] Are the pains and desires specific and plausible for the target audience?
 -   [ ] Do the communication preferences provide clear guidance for the presentation style?

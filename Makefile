@@ -4,8 +4,13 @@
 # This Makefile orchestrates the 9-step presentation generation pipeline.
 #
 # Usage:
-#   1. Edit the configuration variables below.
-#   2. Place your raw notes in `inputs/introduction.md`.
+#   1. Edit inputs/introduction.md with YAML frontmatter containing:
+#      - target_audience: Target audience description
+#      - audience_type: individual / group / mixed
+#      - constraints: { max_slides: N, max_duration_minutes: M }
+#      - output_language: Japanese / English
+#      - event: (optional) Event context
+#   2. Run `make validate` to verify the input format.
 #   3. Run `make all` to execute the entire pipeline.
 #
 # The final Slidev Markdown files will be generated in the `slides/` directory.
@@ -17,47 +22,17 @@ OUTPUT_DIR ?= outputs
 LOG_DIR ?= $(OUTPUT_DIR)/logs
 SLIDES_DIR ?= slides
 
-# --- User Inputs (Edit these for your presentation) ---
-
-# Target audience information
-# Option 1: Use TARGET for flexible audience specification (single or multiple people)
-#   Examples:
-#     - "礒津政明 (ソニーグループ株式会社)"
-#     - "張一凡 (金沢大学), 江村恵太 (筑波大学), 荒木俊輔 (茨城大学)"
-TARGET ?=
-
-# Option 2: Use PERSON_NAME and COMPANY for single-person targeting (legacy)
-PERSON_NAME ?=
-COMPANY ?=
-
-# Resolve TARGET: If TARGET is set, use it. Otherwise, construct from PERSON_NAME and COMPANY.
-ifdef TARGET
-  RESOLVED_TARGET := $(TARGET)
-else
-  ifdef PERSON_NAME
-    ifdef COMPANY
-      RESOLVED_TARGET := $(PERSON_NAME) ($(COMPANY))
-    else
-      RESOLVED_TARGET := $(PERSON_NAME)
-    endif
-  else
-    RESOLVED_TARGET := 山田太郎 (サンプル株式会社)
-  endif
-endif
-
-# Path to the raw introduction/proposal notes
+# --- User Input (Single Source of Truth) ---
+# All metadata is now in the YAML frontmatter of introduction.md
 RAW_INPUT ?= inputs/introduction.md
 
-# Presentation constraints (e.g., slide count, time limit)
-CONSTRAINTS ?= 15 slides max, 15-minute presentation
-
-# Tone for the presentation (derived from Core Strategy, can be overridden)
-TONE ?= Respectfully ambitious and intellectually rigorous.
-
-# Style guide for the final export
+# --- Visual Style (Not part of the content, so kept as Makefile variables) ---
 SLIDEV_THEME ?= default
 FONT ?= Inter
 BACKGROUND_COLOR ?= \#FFFFFF
+
+# Tone for the presentation (derived from Core Strategy, can be overridden)
+TONE ?= Respectfully ambitious and intellectually rigorous.
 
 # --- Output Files ---
 CONTEXT_OUT := $(OUTPUT_DIR)/01_Context_Brief.json
@@ -76,7 +51,7 @@ export CLAUDE_CODE_MAX_OUTPUT_TOKENS := 100000
 CLAUDE_FLAGS ?= --dangerously-skip-permissions --output-format json
 
 # --- Phony Targets ---
-.PHONY: all init clean help \
+.PHONY: all init clean help validate \
         context_analysis audience_persona core_strategy \
         governing_argument narrative_blueprint \
         slide_drafting visual_design \
@@ -102,6 +77,7 @@ help:
 	@echo ""
 	@echo "Main Targets:"
 	@echo "  all            - Run the entire 9-step pipeline from start to finish."
+	@echo "  validate       - Validate that inputs/introduction.md has required frontmatter."
 	@echo "  clean          - Remove all generated outputs."
 	@echo ""
 	@echo "Pipeline Phases and Steps:"
@@ -124,13 +100,23 @@ help:
 	@echo "    9. final_export       - Apply revisions and export to Slidev Markdown."
 	@echo ""
 	@echo "Configuration:"
-	@echo "  Edit the variables at the top of this Makefile to customize your input."
+	@echo "  All presentation metadata is configured in inputs/introduction.md frontmatter:"
 	@echo ""
-	@echo "  TARGET      - Target audience (flexible format, supports multiple people)"
-	@echo "                Example: 'John Doe (Company A), Jane Smith (Company B)'"
-	@echo "  PERSON_NAME - Single person name (legacy, use TARGET instead)"
-	@echo "  COMPANY     - Single company name (legacy, use TARGET instead)"
-	@echo "  CONSTRAINTS - Slide/time limits (default: '15 slides max, 15-minute presentation')"
+	@echo "  ---"
+	@echo "  target_audience: \"SCIS2026参加者（研究者コミュニティ）\""
+	@echo "  audience_type: group"
+	@echo "  constraints:"
+	@echo "    max_slides: 15"
+	@echo "    max_duration_minutes: 15"
+	@echo "  output_language: Japanese"
+	@echo "  event:"
+	@echo "    name: \"DEPCON Hakodate\""
+	@echo "  ---"
+	@echo ""
+	@echo "  Visual style variables (Makefile):"
+	@echo "  SLIDEV_THEME    - Slidev theme (default: 'default')"
+	@echo "  FONT            - Font family (default: 'Inter')"
+	@echo "  BACKGROUND_COLOR- Background color (default: '#FFFFFF')"
 	@echo "============================================================================"
 
 init:
@@ -139,6 +125,34 @@ init:
 clean:
 	@rm -rf $(OUTPUT_DIR) $(SLIDES_DIR)
 	@echo "Cleaned output directories."
+
+# ==============================================================================
+# Validation
+# ==============================================================================
+
+validate:
+	@echo "Validating $(RAW_INPUT)..."
+	@if [ ! -f "$(RAW_INPUT)" ]; then \
+		echo "ERROR: $(RAW_INPUT) not found"; \
+		exit 1; \
+	fi
+	@if ! grep -q "^target_audience:" "$(RAW_INPUT)"; then \
+		echo "ERROR: $(RAW_INPUT) must contain 'target_audience:' in frontmatter"; \
+		exit 1; \
+	fi
+	@if ! grep -q "^audience_type:" "$(RAW_INPUT)"; then \
+		echo "ERROR: $(RAW_INPUT) must contain 'audience_type:' in frontmatter"; \
+		exit 1; \
+	fi
+	@if ! grep -q "^constraints:" "$(RAW_INPUT)"; then \
+		echo "ERROR: $(RAW_INPUT) must contain 'constraints:' in frontmatter"; \
+		exit 1; \
+	fi
+	@if ! grep -q "^output_language:" "$(RAW_INPUT)"; then \
+		echo "ERROR: $(RAW_INPUT) must contain 'output_language:' in frontmatter"; \
+		exit 1; \
+	fi
+	@echo "Validation passed: $(RAW_INPUT) has required frontmatter fields."
 
 # ==============================================================================
 # Phase 1: Foundation
@@ -154,8 +168,7 @@ $(CONTEXT_OUT): $(PROMPTS_DIR)/01_Context_Analysis.md $(RAW_INPUT) | init
 audience_persona: $(PERSONA_OUT)
 $(PERSONA_OUT): $(PROMPTS_DIR)/02_Audience_Persona.md $(CONTEXT_OUT) | init
 	@echo "[Step 2/9] Audience Persona..."
-	@echo "  Target: $(RESOLVED_TARGET)"
-	@prompt="$$(sed -e 's|{{TARGET}}|$(RESOLVED_TARGET)|g' -e 's|{{CONTEXT_BRIEF}}|$(CONTEXT_OUT)|g' $<)"; \
+	@prompt="$$(sed -e 's|{{CONTEXT_BRIEF}}|$(CONTEXT_OUT)|g' $<)"; \
 	claude $(CLAUDE_FLAGS) -p "$$prompt" > $(LOG_DIR)/02_Audience_Persona.json
 	@if [ -f "$(PERSONA_OUT)" ]; then echo "[Step 2/9] Complete."; else echo "[Step 2/9] Warning: $(PERSONA_OUT) not found."; fi
 
@@ -178,9 +191,9 @@ $(ARGUMENT_OUT): $(PROMPTS_DIR)/04_Governing_Argument.md $(STRATEGY_OUT) $(PERSO
 	@if [ -f "$(ARGUMENT_OUT)" ]; then echo "[Step 4/9] Complete."; else echo "[Step 4/9] Warning: $(ARGUMENT_OUT) not found."; fi
 
 narrative_blueprint: $(BLUEPRINT_OUT)
-$(BLUEPRINT_OUT): $(PROMPTS_DIR)/05_Narrative_Blueprint.md $(ARGUMENT_OUT) $(STRATEGY_OUT) | init
+$(BLUEPRINT_OUT): $(PROMPTS_DIR)/05_Narrative_Blueprint.md $(ARGUMENT_OUT) $(STRATEGY_OUT) $(CONTEXT_OUT) | init
 	@echo "[Step 5/9] Narrative Blueprint..."
-	@prompt="$$(sed -e 's|{{GOVERNING_ARGUMENT}}|$(ARGUMENT_OUT)|g' -e 's|{{CORE_STRATEGY}}|$(STRATEGY_OUT)|g' -e 's|{{CONSTRAINTS}}|$(CONSTRAINTS)|g' $<)"; \
+	@prompt="$$(sed -e 's|{{GOVERNING_ARGUMENT}}|$(ARGUMENT_OUT)|g' -e 's|{{CORE_STRATEGY}}|$(STRATEGY_OUT)|g' -e 's|{{CONTEXT_BRIEF}}|$(CONTEXT_OUT)|g' $<)"; \
 	claude $(CLAUDE_FLAGS) -p "$$prompt" > $(LOG_DIR)/05_Narrative_Blueprint.json
 	@if [ -f "$(BLUEPRINT_OUT)" ]; then echo "[Step 5/9] Complete."; else echo "[Step 5/9] Warning: $(BLUEPRINT_OUT) not found."; fi
 

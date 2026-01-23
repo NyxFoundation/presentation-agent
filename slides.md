@@ -1,8 +1,8 @@
 ---
 theme: seriph
-title: スライドタイトル
+title: Nyx Foundation - 日本の研究者をイーサリアムへ
 info: |
-  スライドタイトル
+  Nyx Foundation - 日本の研究者をイーサリアムへ
 transition: slide-left
 mdc: true
 colorSchema: 'light'
@@ -39,28 +39,4 @@ src: ./slides/SL08.md
 
 ---
 src: ./slides/SL09.md
----
-
----
-src: ./slides/SL10.md
----
-
----
-src: ./slides/SL11.md
----
-
----
-src: ./slides/SL12.md
----
-
----
-src: ./slides/SL13.md
----
-
----
-src: ./slides/SL14.md
----
-
----
-src: ./slides/SL15.md
 ---

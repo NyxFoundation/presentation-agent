@@ -1,0 +1,65 @@
+{
+  "source": {
+    "target_audience": "SCIS2026参加者（暗号・セキュリティを研究する教授、大学院生、企業研究職、イーサリアム財団、台湾イーサリアムコミュニティ）",
+    "audience_type": "group"
+  },
+  "persona_summary": {
+    "name": "The Isolated Expert",
+    "description": "A highly skilled cryptography or security researcher in Japan who possesses deep technical expertise but operates in professional isolation. They are intellectually curious about emerging fields like blockchain, but cautious about venturing outside their established research domain. They feel the squeeze of declining research budgets and the frustration of working without adequate peer collaboration. They respect rigorous academic standards but secretly wonder if they're missing opportunities in the wider world."
+  },
+  "deep_psychology": {
+    "pains_and_fears": [
+      "Fear of irrelevance: 'Am I working on problems that matter to the world, or am I stuck in an academic silo?'",
+      "Funding anxiety: With cumulative 140 billion yen cuts since 2004, they worry about securing grants and sustaining their research programs",
+      "Isolation fatigue: They lack meaningful connections with researchers at other institutions, leading to duplicated efforts and missed collaboration opportunities",
+      "Career stagnation concern: Japan's declining global research rankings (from 2nd to 4th in papers, 4th to 10th in top-cited papers) make them question whether staying in Japan limits their impact",
+      "Fear of the unknown: Blockchain/Ethereum feels like a foreign territory—potentially valuable, but risky to invest time in without proper guidance",
+      "Imposter syndrome about industry: They may feel their academic expertise doesn't translate well to practical, real-world systems like Ethereum"
+    ],
+    "desires_and_aspirations": [
+      "To produce world-class research that gains international recognition and citation",
+      "To find a community of like-minded peers who understand their work and can provide intellectual stimulation",
+      "To discover new funding sources that don't require navigating the brutal competition of shrinking domestic grants",
+      "To bridge the gap between theoretical research and real-world impact—to see their work deployed in systems that matter",
+      "To mentor students effectively and give them better opportunities than the current system provides",
+      "To be recognized as a pioneer—someone who saw an opportunity before others and seized it"
+    ],
+    "biases_and_worldview": [
+      "Academic rigor is paramount: They will dismiss anything that smells like marketing hype or lacks mathematical/technical depth",
+      "Skepticism toward 'crypto': Many associate blockchain with speculation, scams, and hype—not serious research",
+      "Preference for established institutions: They trust collaboration with recognized entities (like Ethereum Foundation) over unknown startups",
+      "Risk aversion: Japanese academic culture often discourages dramatic pivots; they need social proof before making moves",
+      "Hierarchy consciousness: They respect seniority and credentials; a message from peers or respected figures carries more weight",
+      "Self-reliance as default: They're accustomed to working alone; the idea of collaborative research may feel unfamiliar or uncomfortable"
+    ]
+  },
+  "communication_preferences": {
+    "preferred_style": "Analytical",
+    "likes": [
+      "Concrete data and statistics that substantiate claims (e.g., the funding cut figures, ranking decline numbers)",
+      "Clear, logical narrative structure that builds from problem to solution",
+      "Credibility signals: track record, affiliations with recognized institutions, specific accomplishments",
+      "Relatable stories from peers who have walked this path—the Toyama engineer anecdote resonates deeply",
+      "Respect for their existing expertise—don't talk down to them or oversimplify",
+      "Actionable next steps that don't require a massive commitment upfront"
+    ],
+    "dislikes": [
+      "Vague promises without evidence ('join us and amazing things will happen!')",
+      "Marketing buzzwords and hype language that feels like a sales pitch",
+      "Dismissal of their concerns about blockchain's legitimacy",
+      "Presentations that waste time on basics they already know",
+      "Pressure tactics or urgency that feels manufactured",
+      "Ignoring the real barriers (time, risk, institutional politics) they face in pivoting their research"
+    ]
+  },
+  "quality_checklist": {
+    "is_actionable": {
+      "result": true,
+      "justification": "This persona provides clear guidance: lead with credible data, acknowledge their skepticism about crypto, use peer stories to build trust, respect their technical depth while showing them the opportunity, and offer low-barrier entry points to the community."
+    },
+    "is_specific": {
+      "result": true,
+      "justification": "The persona addresses the specific context of Japanese academic researchers facing funding cuts and isolation, their particular biases about blockchain, and their academic values—rather than generic 'researcher' traits."
+    }
+  }
+}

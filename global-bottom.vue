@@ -5,14 +5,14 @@ const isFirstSlide = computed(() => $nav.currentPage === 1)
 </script>
 
 <template>
-  <div class="nyx-footer">
-    <img src="/images/nyx_logo.svg" alt="Nyx" class="nyx-logo" />
+  <div class="zk-footer">
+    <img src="/images/zktokyo_logo.png" alt="ZK Tokyo" class="zk-logo" />
     <span v-if="!isFirstSlide" class="page-number">{{ $nav.currentPage }}</span>
   </div>
 </template>
 
 <style scoped>
-.nyx-footer {
+.zk-footer {
   position: fixed;
   bottom: 20px;
   right: 30px;
@@ -23,8 +23,8 @@ const isFirstSlide = computed(() => $nav.currentPage === 1)
   pointer-events: none;
 }
 
-.nyx-logo {
-  width: 160px;
+.zk-logo {
+  width: 72px;
   height: auto;
 }
 

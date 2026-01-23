@@ -1,0 +1,169 @@
+{
+  "visual_designs": [
+    {
+      "slide_number": 1,
+      "visual_strategy": "Full-Bleed Image with Minimal Text",
+      "slidev_layout": "cover",
+      "diagram_code": null,
+      "image_placeholders": [
+        {
+          "filename": "isolated-researcher.jpg",
+          "description": "Silhouette of a single person at a desk with multiple computer screens, surrounded by darkness, with small dots of light visible in the far distance representing other isolated researchers",
+          "purpose": "Visually convey the isolation of talented researchers who are disconnected from each other"
+        }
+      ],
+      "content_arrangement": "Background image with dark overlay. Center-aligned title in large white text: '世界レベルの才能、しかし孤立' (World-class talent, yet isolated). No bullet points. The image tells the story of isolation.",
+      "word_count": 8,
+      "passes_3_second_test": true,
+      "justification": "Opening slide needs emotional impact. A powerful image of isolation combined with a short, provocative statement creates immediate intrigue. Bullet points would kill the dramatic effect."
+    },
+    {
+      "slide_number": 2,
+      "visual_strategy": "Single Number or Word (Jobs' Favorite)",
+      "slidev_layout": "fact",
+      "diagram_code": null,
+      "image_placeholders": [],
+      "content_arrangement": "Use Slidev's `layout: fact` with the number '¥1,400億' displayed prominently in red (#ef4444) to signify the negative impact. Below it, a single line in gray (#9ca3af): '削減された運営費交付金 (2004年以降)'. Optional secondary line showing rank drops: '論文ランキング: 2位→4位'",
+      "word_count": 12,
+      "passes_3_second_test": true,
+      "justification": "The ¥1,400 billion figure is the most powerful piece of evidence. Displaying it as a single dominant number creates immediate shock value. The ranking decline serves as supporting context but remains secondary."
+    },
+    {
+      "slide_number": 3,
+      "visual_strategy": "Full-Bleed Image with Minimal Text",
+      "slidev_layout": "cover",
+      "diagram_code": null,
+      "image_placeholders": [
+        {
+          "filename": "toyama-mountains.jpg",
+          "description": "Scenic view of Toyama's mountainous landscape with a single small building or house, emphasizing geographical isolation and solitude",
+          "purpose": "Ground the anecdote in a real place and visually represent the engineer's 5-year isolated journey"
+        }
+      ],
+      "content_arrangement": "Background image of Toyama landscape with dark overlay (60% opacity). Center text: '富山、5年間、一人' (Toyama, 5 years, alone). Subtitle in smaller gray text: 'Haskell製EVMコンパイラを作り続けるエンジニア'. The stark simplicity emphasizes the loneliness of the story.",
+      "word_count": 10,
+      "passes_3_second_test": true,
+      "justification": "This is an anecdote slide—it MUST have a visual. The Jobs approach: let the image and minimal text tell the emotional story. The speaker notes carry the detailed narrative while the slide creates atmosphere."
+    },
+    {
+      "slide_number": 4,
+      "visual_strategy": "Simple Mermaid Diagram (Max 5 Nodes)",
+      "slidev_layout": "two-cols",
+      "diagram_code": "```mermaid\ngraph LR\n    A[日本の現状] -->|予算削減| B[孤立した研究者]\n    C[イーサリアム] -->|潤沢な助成金| D[グローバル協働]\n    \n    style A fill:#ef4444,color:#fff\n    style B fill:#ef4444,color:#fff\n    style C fill:#22c55e,color:#fff\n    style D fill:#22c55e,color:#fff\n```",
+      "image_placeholders": [
+        {
+          "filename": "ethereum-logo.svg",
+          "description": "Official Ethereum diamond logo in purple/violet color",
+          "purpose": "Establish Ethereum as a credible, recognizable entity and create visual association"
+        }
+      ],
+      "content_arrangement": "Left column: The Mermaid diagram showing contrast (4 nodes). Right column: Ethereum logo with text '数兆円規模の機会' and '日本からの参入者：極めて少ない' in green (#22c55e) to indicate opportunity.",
+      "word_count": 15,
+      "passes_3_second_test": true,
+      "justification": "This slide pivots from problem to opportunity. A simple 4-node diagram with red (problem) and green (opportunity) color coding instantly communicates the contrast. The Ethereum logo adds credibility."
+    },
+    {
+      "slide_number": 5,
+      "visual_strategy": "Styled Key Points with v-clicks",
+      "slidev_layout": "default",
+      "diagram_code": null,
+      "image_placeholders": [],
+      "content_arrangement": "Title: 'イーサリアムが求める専門性'. Three key research areas revealed with `<v-clicks>`: 1) '形式検証' (Formal Verification) with icon, 2) '暗号プリミティブ' (Cryptographic Primitives) with icon, 3) 'セキュリティ監査' (Security Audit) with icon. Each item styled as a large card/badge in purple (#8b5cf6). Footer text: 'PSE RFPリストで公開中' with link indicator.",
+      "word_count": 18,
+      "passes_3_second_test": true,
+      "justification": "This slide maps audience skills to opportunities. Using v-clicks with 3 large styled cards (not bullet points) creates engagement and allows the speaker to elaborate on each area. The purple color signals these as branded/important items."
+    },
+    {
+      "slide_number": 6,
+      "visual_strategy": "Single Number or Word (Jobs' Favorite)",
+      "slidev_layout": "fact",
+      "diagram_code": null,
+      "image_placeholders": [
+        {
+          "filename": "nyx-foundation-logo.svg",
+          "description": "Official Nyx Foundation logo",
+          "purpose": "Establish brand credibility and recognition"
+        }
+      ],
+      "content_arrangement": "Nyx Foundation logo at top. Dominant number: '20+' in large green (#22c55e) text. Subtitle: '発見・報告した脆弱性' (Vulnerabilities discovered and reported). Below, a simple horizontal list of credibility markers: 'イーサリアム財団 | ZK Tokyo | 共同研究' in gray text.",
+      "word_count": 12,
+      "passes_3_second_test": true,
+      "justification": "Credibility slides need proof, not promises. The '20+' number is concrete evidence. Supporting credibility markers are listed minimally below. The logo establishes the organization visually."
+    },
+    {
+      "slide_number": 7,
+      "visual_strategy": "Simple Mermaid Diagram (Max 5 Nodes)",
+      "slidev_layout": "center",
+      "diagram_code": "```mermaid\ngraph TD\n    A[あなたの研究] --> B[Nyx Foundation]\n    B --> C[助成金情報]\n    B --> D[研究相談]\n    B --> E[仲間とのつながり]\n    \n    style A fill:#8b5cf6,color:#fff\n    style B fill:#f59e0b,color:#fff\n    style C fill:#22c55e,color:#fff\n    style D fill:#22c55e,color:#fff\n    style E fill:#22c55e,color:#fff\n```",
+      "image_placeholders": [],
+      "content_arrangement": "Centered Mermaid diagram showing Nyx Foundation as the hub connecting researchers to three outputs. Title above diagram: '私たちができること'. The diagram uses 5 nodes exactly: Your Research → Nyx Foundation → (Grant Info, Research Consultation, Community). Orange for Nyx, green for benefits, purple for the researcher.",
+      "word_count": 8,
+      "passes_3_second_test": true,
+      "justification": "This slide explains Nyx's value proposition. A hub-and-spoke diagram (5 nodes) is clearer than bullet points and visually shows how Nyx Foundation serves as the connector. Color coding differentiates the researcher (you), the organization, and the benefits."
+    },
+    {
+      "slide_number": 8,
+      "visual_strategy": "Slidev Layout (statement)",
+      "slidev_layout": "statement",
+      "diagram_code": null,
+      "image_placeholders": [
+        {
+          "filename": "collaboration-network.jpg",
+          "description": "Abstract visualization of interconnected nodes forming a network, with bright connection lines against a dark background, symbolizing global collaboration",
+          "purpose": "Visually represent the paradigm shift from isolation to networked collaboration"
+        }
+      ],
+      "content_arrangement": "Use `layout: statement` with the core message: '孤独な天才の時代は終わった' (The era of the lone genius is over). Background image shows collaboration network. Single line below in gray: '協働する仲間が、世界レベルの成果を生む'.",
+      "word_count": 14,
+      "passes_3_second_test": true,
+      "justification": "This is the philosophical climax of the presentation. A powerful statement layout with minimal text and evocative background image delivers the paradigm-shift message with maximum impact. No diagrams or bullets needed."
+    },
+    {
+      "slide_number": 9,
+      "visual_strategy": "Full-Bleed Image with Minimal Text",
+      "slidev_layout": "cover",
+      "diagram_code": null,
+      "image_placeholders": [
+        {
+          "filename": "discord-qr-code.png",
+          "description": "QR code linking to Nyx Foundation Discord server, with clear scan instructions",
+          "purpose": "Enable immediate action—audience can join the community right now by scanning"
+        },
+        {
+          "filename": "nyx-foundation-logo.svg",
+          "description": "Official Nyx Foundation logo",
+          "purpose": "Brand reinforcement on the final CTA slide"
+        }
+      ],
+      "content_arrangement": "Dark background with Nyx Foundation logo at top. Center: Large QR code for Discord. Above QR: '今日、つながろう' (Connect today) in large white text. Below QR: 'Discord コミュニティに参加' in orange (#f59e0b) as the CTA color. Footer: 'DEPCON Hakodate 2024' in gray.",
+      "word_count": 10,
+      "passes_3_second_test": true,
+      "justification": "CTA slides need one clear action. The QR code enables immediate participation—no URLs to remember, no complex steps. The minimal text focuses attention on the single action: scan and join."
+    }
+  ],
+  "quality_checklist": {
+    "bullet_points_minimized": {
+      "result": true,
+      "count": 0,
+      "justification": "Out of 9 slides, zero use plain bullet points. Slide 5 uses styled cards with v-clicks (not traditional bullets). All other slides use visual strategies higher in the hierarchy: single numbers, statement layouts, diagrams, and images."
+    },
+    "one_chart_one_message_applied": {
+      "result": true,
+      "justification": "Both Mermaid diagrams (slides 4 and 7) convey exactly one message each. Slide 4: 'Japan's situation vs Ethereum opportunity (contrast)'. Slide 7: 'Nyx Foundation connects you to three benefits (hub model)'. Neither diagram requires explanation beyond a single sentence."
+    },
+    "mermaid_node_limit_respected": {
+      "result": true,
+      "max_nodes_used": 5,
+      "justification": "Slide 4 uses 4 nodes, Slide 7 uses 5 nodes. Both are within the 5-node maximum. All node labels are under 20 characters. No complex nested subgraphs are used."
+    },
+    "image_placeholders_added": {
+      "result": true,
+      "count": 7,
+      "justification": "Added image placeholders for: Slide 1 (isolated researcher), Slide 3 (Toyama landscape for anecdote), Slide 4 (Ethereum logo), Slide 6 (Nyx Foundation logo), Slide 8 (collaboration network), Slide 9 (QR code and logo). All anecdote slides and CTA slides have appropriate visual placeholders."
+    },
+    "color_consistency_maintained": {
+      "result": true,
+      "justification": "All slides follow the defined color palette: Background #0f0f0f (near-black), Primary text #ffffff (white), Secondary text #9ca3af (gray), Positive/Opportunity #22c55e (green), Negative/Problem #ef4444 (red), Brand/Highlight #8b5cf6 (purple), Accent/CTA #f59e0b (orange). Colors are used semantically: red for problems (budget cuts), green for opportunities (Ethereum, benefits), purple for brand/research, orange for CTAs."
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "final_judgment": "CONDITIONAL_PASS",
+  "overall_feedback": "This presentation is close, but not ready. The narrative arc is solid, the Toyama anecdote is powerful, and the visual design discipline is commendable—zero bullet points is exactly right. However, there are three critical issues that must be addressed before this goes live. First, the founder's personal story—the most differentiating element—is buried in speaker notes and never surfaces on any slide. This is a strategic error. Second, the visual design for slide 1 contradicts its own content: the title says '世界レベルの才能、しかし孤立' while the action title says something completely different. Pick one. Third, the 'So What?' test fails on slide 5—it reads like a capability brochure, not a story beat. Fix these three issues and you have a compelling 10-minute presentation. Fail to fix them and you have a forgettable one.",
+  "source_fidelity_check": {
+    "anecdotes_preserved": {
+      "result": true,
+      "details": "USED: The Toyama engineer anecdote (5 years building Haskell EVM compiler alone) is prominently featured on Slide 3 with full speaker notes and a dedicated visual. This is the strongest emotional moment in the presentation and is handled well. MISSED: None. The CONTEXT_BRIEF only contained one key anecdote, and it was used effectively."
+    },
+    "founder_story_preserved": {
+      "result": false,
+      "details": "CRITICAL ISSUE: The founder's personal story from the CONTEXT_BRIEF ('発表者自身、修士課程在籍時に同分野の他大学の学生と交流する機会がほとんどなく、日本の研究者の孤立を体感した。この壁を打破するために外の世界へ飛び出し、ZK Tokyoというコミュニティを運営し、イーサリアム財団と共同研究を行い、Nyx Foundationを設立した') is mentioned briefly in Slide 1 and Slide 8 speaker notes but NEVER appears on any slide itself. The founder's journey from isolated master's student to building Nyx Foundation is the emotional credibility bridge—it answers 'why should I trust you?' This story should be surfaced visually on Slide 6 (credibility slide) or added as a brief moment on Slide 8. The proverb '孤高の天才から、世界を変えるチームへ' directly reflects this journey, but the audience never sees the founder embody it."
+    }
+  },
+  "required_revisions": [
+    {
+      "slide_number": 1,
+      "issue": "Title mismatch between visual design and slide content. Visual design says '世界レベルの才能、しかし孤立' while the action title says '日本には世界レベルの暗号研究者がいる——しかし彼らは孤立している'. These convey similar ideas but the inconsistency is sloppy.",
+      "recommendation": "Align the visual design title with the action title. Use the shorter version ('世界レベルの才能、しかし孤立') on the slide visual, but ensure the speaker notes open with the fuller statement. Consistency signals preparation."
+    },
+    {
+      "slide_number": 5,
+      "issue": "Fails the 'So What?' test. This slide reads like a capability list, not a story beat. 'Ethereum wants formal verification, cryptographic primitives, security audits' tells me what they want, not why I should care. It breaks the emotional momentum built by slides 1-4.",
+      "recommendation": "Reframe the slide around the audience, not Ethereum. Change the action title to something like 'あなたのスキルが、今、世界から求められている' (Your skills are in demand globally—right now). The current framing is organization-centric; it should be audience-centric. The key points should emphasize 'YOUR expertise in X is exactly what they need' not 'They need X.'"
+    },
+    {
+      "slide_number": 6,
+      "issue": "The founder's personal story is absent from the visual design. This slide establishes Nyx Foundation's credibility with '20+ vulnerabilities', but misses the opportunity to connect emotionally. The audience is being asked to trust an organization without understanding the person behind it.",
+      "recommendation": "Add a brief founder story element to either the visual design or the content arrangement. Something like: '私自身も、かつては孤立した研究者だった' (I, too, was once an isolated researcher) with the founder's journey visualized or stated. This transforms the slide from 'trust our organization' to 'trust someone who walked your path.'"
+    },
+    {
+      "slide_number": 8,
+      "issue": "The paradigm shift message ('孤独な天才の時代は終わった') is strong, but it's disconnected from proof. The speaker notes mention the Toyama engineer again, but the slide doesn't create the visual callback. The 'collaboration network' image is generic.",
+      "recommendation": "Create a visual bookend with Slide 3. Slide 3 showed isolation (Toyama, alone). Slide 8 should show the transformation: the same concept (or person) now connected. Consider using a before/after visual concept: 'isolated researcher' → 'connected researcher' rather than an abstract network image. This closes the emotional loop."
+    },
+    {
+      "slide_number": 9,
+      "issue": "The CTA is functional but not memorable. 'Discord コミュニティに参加' is generic. Every community says this. What makes Nyx Foundation different?",
+      "recommendation": "Add a specific, tangible promise to the CTA. For example: '今週中に、助成金リストを共有します' (This week, we'll share the grant list with you) or '最初の質問に、24時間以内に回答します' (Your first question will be answered within 24 hours). A specific commitment converts better than a vague invitation."
+    }
+  ],
+  "quality_checklist": {
+    "passes_so_what_gauntlet": {
+      "result": false,
+      "justification": "8 of 9 slides pass. Slide 5 fails. When I read 'イーサリアム財団は今、形式検証・暗号プリミティブ・セキュリティ監査の研究者を求めている', my response is 'okay, so?' It tells me what Ethereum wants but doesn't connect to my emotional state as an isolated researcher. The slide breaks the spell cast by the Toyama story. Every other slide maintains the 'isolation → connection' narrative thread, but this one reads like a job posting inserted into a story."
+    },
+    "passes_clarity_test": {
+      "result": true,
+      "justification": "All slides pass the clarity test. Titles are unambiguous. Numbers are concrete (1,400億円, 20+, 5年間). Technical terms are appropriate for the audience (EVM, Haskell, 形式検証). The Mermaid diagrams are simple (4-5 nodes max) and convey single messages. No jargon that would confuse SCIS2026 attendees. The only minor ambiguity is 'PSE RFPリスト'—not all audience members will know this acronym, but the speaker notes explain it adequately."
+    }
+  }
+}

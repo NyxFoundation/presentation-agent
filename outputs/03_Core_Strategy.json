@@ -1,0 +1,28 @@
+{
+  "narrative_archetype": {
+    "chosen_archetype": "Hybrid: Sparkline + Pyramid Principle",
+    "justification": "The audience (Strategic Innovation Investors) is data-driven and time-constrained, making the Pyramid Principle essential for delivering the answer upfront. However, their deep-seated fear of being left behind and desire for competitive positioning creates an opportunity for emotional resonance. A Sparkline opening will dramatize the 'what is' (Japan's talent crisis and security vulnerability) versus 'what could be' (early access to trained cryptography talent), then immediately transition to Pyramid structure for ROI justification. This hybrid approach satisfies both the Bezos requirement for logical rigor (clear ROI, quotable statistics for internal proposals) and the Jobs requirement for emotional resonance (fear of obsolescence, hope for competitive advantage)."
+  },
+  "core_message": {
+    "full_sentence": "ZK Core Program is Japan's only proven pipeline for cryptography talent, offering sponsors exclusive early access to trained specialists who will define the next decade of privacy-preserving technology—at a fraction of the cost of traditional recruitment.",
+    "proverb": "Own the talent pipeline, own the future."
+  },
+  "dramatic_tension": {
+    "villain": "The Invisible Threat: Japan's growing talent void in advanced cryptography. While Google and Apple deploy ZKP and FHE as competitive weapons, Japanese companies scramble for the same shrinking pool of specialists. Every month without action widens the gap. The 110,000 cybersecurity professional shortage isn't just a statistic—it's your competitors' job postings going unfilled, your projects stalling, and your company falling behind global standards like EU eIDAS 2.0. The old recruitment playbook is broken.",
+    "hero": "ZK Core Program: The Talent Forge. In just 7 weeks, this program transforms capable engineers into cryptography specialists who have already built working prototypes (zk-KYC-DEX, ZK-Vote, privacy-preserving loan protocols). Sponsors don't just get branding—they get a seat at the table where Japan's next generation of cryptography talent is being created. With theme proposal rights, direct mentoring access, and first-mover recruiting advantage, sponsors become partners in solving the very talent crisis that threatens their industry."
+  },
+  "emotional_hook": {
+    "hook_type": "Surprising Statistic + Provocative Question",
+    "hook_content": "In July 2025, Google integrated Zero-Knowledge Proofs into Google Wallet for 150+ million users. In 2026, EU's eIDAS 2.0 will mandate privacy-preserving digital identity for 450 million Europeans. Meanwhile, Japan faces an 110,000-person shortage in cybersecurity professionals. The question isn't whether your company needs cryptography talent—it's whether you'll be recruiting them, or competing against the companies that trained them. ZK Core Program offers you a third option: be the company that helped create them."
+  },
+  "quality_checklist": {
+    "passes_bezos_clarity_test": {
+      "result": true,
+      "justification": "The core message passes all three criteria: (1) It is a complete sentence with subject, verb, and object. (2) It answers 'why should the audience care' by explicitly naming the benefits: exclusive early access to trained specialists at lower cost than traditional recruitment. (3) The proverb 'Own the talent pipeline, own the future' is 7 words, memorable, and captures the strategic essence of the investment."
+    },
+    "has_clear_villain_and_hero": {
+      "result": true,
+      "justification": "The villain (talent void) is personified as 'The Invisible Threat'—not abstract, but connected to real consequences the audience fears (unfilled positions, stalled projects, competitive obsolescence). The hero (ZK Core Program) is positioned not as a vendor but as 'The Talent Forge'—a partner in solving the crisis. This creates dramatic tension where inaction has consequences, and sponsorship offers salvation."
+    }
+  }
+}

@@ -1,150 +1,151 @@
 # Presentation Agent
 
-## 概要
+## Overview
 
-本パイプラインは、世界最高峰のコンサルティングファーム（McKinsey, BCG）の論理的厳密性と、伝説的なプレゼンター（Steve Jobs, Nancy Duarte）の感情的影響力を融合させた、理想的なプレゼンテーション資料作成エージェントです。
+This pipeline is an ideal presentation creation agent that combines the logical rigor of world-class consulting firms (McKinsey, BCG) with the emotional impact of legendary presenters (Steve Jobs, Nancy Duarte).
 
-## 設計思想
+## Design Philosophy
 
-本パイプラインは、以下の3つの原則を核としています。
+This pipeline is built on three core principles:
 
-1.  **戦略主導 (Strategy-First):** コンテンツ作成に着手する前に、「なぜ話すのか」「誰に話すのか」「何を伝えたいのか」を徹底的に定義します。
-2.  **論理と感情の融合 (Logic & Emotion):** ピラミッド原則に基づく論理構造と、Sparklineのような物語構造を明確に分離し、意図的に組み合わせます。
-3.  **反復的な具体化 (Iterative Refinement):** 抽象的なアイデアから具体的な成果物へと段階的に具体化し、品質を段階的に向上させます。
+1. **Strategy-First:** Before creating content, thoroughly define "why you're speaking," "who you're speaking to," and "what you want to convey."
+2. **Logic & Emotion:** Clearly separate logical structures based on the Pyramid Principle from narrative structures like Sparkline, then intentionally combine them.
+3. **Iterative Refinement:** Progressively move from abstract ideas to concrete deliverables, improving quality at each stage.
 
-## クイックスタート
+## Quick Start
 
-### 1. 入力ファイルの準備
+### 1. Prepare the Input File
 
-`inputs/introduction.md` にYAML frontmatterとプレゼンテーションの内容を記述します。
+Write the YAML frontmatter and presentation content in `inputs/introduction.md`.
 
 ```markdown
 ---
-target_audience: "テックカンファレンス2026参加者（ソフトウェアエンジニア）"
+target_audience: "Tech Conference 2026 Attendees (Software Engineers)"
 audience_type: group
 constraints:
   max_slides: 15
   max_duration_minutes: 15
-output_language: Japanese
+output_language: English
 event:
   name: "Tech Conference Tokyo"
 ---
 
-# プレゼンテーションタイトル
+# Presentation Title
 
-本文をここに記述...
+Write your content here...
 ```
 
-### 2. パイプラインの実行
+### 2. Run the Pipeline
 
 ```bash
 make all
 ```
 
-### 3. 出力の確認
+### 3. View the Output
 
 ```bash
-# Slidevで確認
+# Preview with Slidev
+bun i
 bun dev
-# http://localhost:3030 へアクセス
+# Access http://localhost:3030
 ```
 
-## 入力フォーマット
+## Input Format
 
-すべての設定は `inputs/introduction.md` のYAML frontmatterで定義します。
+All settings are defined in the YAML frontmatter of `inputs/introduction.md`.
 
-### 必須フィールド
+### Required Fields
 
-| フィールド | 説明 | 例 |
-|-----------|------|-----|
-| `target_audience` | ターゲットオーディエンス | `"山田太郎 (Example Corp)"` または `"カンファレンス参加者"` |
-| `audience_type` | オーディエンスの種類 | `individual` / `group` / `mixed` |
-| `constraints.max_slides` | 最大スライド数 | `15` |
-| `constraints.max_duration_minutes` | 最大プレゼン時間（分） | `15` |
-| `output_language` | 出力言語 | `Japanese` / `English` |
+| Field | Description | Example |
+|-------|-------------|---------|
+| `target_audience` | Target audience | `"John Doe (Example Corp)"` or `"Conference Attendees"` |
+| `audience_type` | Type of audience | `individual` / `group` / `mixed` |
+| `constraints.max_slides` | Maximum number of slides | `15` |
+| `constraints.max_duration_minutes` | Maximum presentation duration (minutes) | `15` |
+| `output_language` | Output language | `Japanese` / `English` |
 
-### オプションフィールド
+### Optional Fields
 
-| フィールド | 説明 | 例 |
-|-----------|------|-----|
-| `event.name` | イベント名 | `"DEPCON Hakodate"` |
-| `event.parent_event` | 親イベント | `"Tech Summit 2026"` |
-| `event.date` | 日付 | `"2026-01-XX"` |
-| `event.location` | 場所 | `"東京"` |
+| Field | Description | Example |
+|-------|-------------|---------|
+| `event.name` | Event name | `"Tech Conference Tokyo"` |
+| `event.parent_event` | Parent event | `"Tech Summit 2026"` |
+| `event.date` | Date | `"2026-01-XX"` |
+| `event.location` | Location | `"Tokyo"` |
 
-### audience_type の使い分け
+### audience_type Usage
 
-| タイプ | 用途 | 例 |
-|--------|------|-----|
-| `individual` | 特定の個人向けピッチ | 経営幹部への提案 |
-| `group` | 共通の特性を持つグループ | カンファレンス発表 |
-| `mixed` | 複数の特定個人 | 委員会プレゼン |
+| Type | Use Case | Example |
+|------|----------|---------|
+| `individual` | Pitch to a specific individual | Proposal to an executive |
+| `group` | Group with shared characteristics | Conference presentation |
+| `mixed` | Multiple specific individuals | Committee presentation |
 
-### 入力例
+### Input Examples
 
-#### 個人向け（Executive Pitch）
+#### Individual (Executive Pitch)
 
 ```yaml
 ---
-target_audience: "山田太郎 (Example株式会社 Chairman, Example Global Education)"
+target_audience: "John Doe (Example Inc. Chairman, Example Global Education)"
 audience_type: individual
 constraints:
   max_slides: 10
   max_duration_minutes: 20
-output_language: Japanese
+output_language: English
 ---
 ```
 
-#### グループ向け（Conference Talk）
+#### Group (Conference Talk)
 
 ```yaml
 ---
-target_audience: "テックカンファレンス2026参加者（ソフトウェアエンジニア）"
+target_audience: "Tech Conference 2026 Attendees (Software Engineers)"
 audience_type: group
 constraints:
   max_slides: 15
   max_duration_minutes: 15
-output_language: Japanese
+output_language: English
 event:
   name: "Tech Conference Tokyo"
   parent_event: "Tech Summit 2026"
 ---
 ```
 
-#### 複数人向け（Committee Presentation）
+#### Mixed (Committee Presentation)
 
 ```yaml
 ---
-target_audience: "田中花子 (A大学), 鈴木一郎 (B大学), 佐藤次郎 (C大学)"
+target_audience: "Jane Smith (University A), Bob Johnson (University B), Alice Brown (University C)"
 audience_type: mixed
 constraints:
   max_slides: 20
   max_duration_minutes: 30
-output_language: Japanese
+output_language: English
 ---
 ```
 
-## パイプライン構成
+## Pipeline Architecture
 
-パイプラインは4つのフェーズ、9つのステップで構成されます。
+The pipeline consists of 4 phases and 9 steps.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                          PHASE 1: FOUNDATION                                │
-│                        (戦略・理解フェーズ)                                   │
+│                      (Strategy & Understanding)                             │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │  ┌───────────────┐    ┌───────────────┐    ┌───────────────┐              │
 │  │ 01. Context   │───▶│ 02. Audience  │───▶│ 03. Core      │              │
 │  │    Analysis   │    │    Persona    │    │    Strategy   │              │
 │  └───────────────┘    └───────────────┘    └───────────────┘              │
-│   YAML frontmatter        ペルソナ構築          戦略定義                     │
-│   + 内容解析              (Context Briefから)                               │
+│   YAML frontmatter      Build Persona        Define Strategy               │
+│   + Content Analysis    (from Context Brief)                               │
 └─────────────────────────────────────────────────────────────────────────────┘
                                     │
                                     ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                         PHASE 2: ARCHITECTURE                               │
-│                        (構造・論証フェーズ)                                   │
+│                      (Structure & Argumentation)                            │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │  ┌───────────────────────┐    ┌───────────────────────┐                    │
 │  │ 04. Governing         │───▶│ 05. Narrative         │                    │
@@ -156,7 +157,7 @@ output_language: Japanese
                                     ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                           PHASE 3: CONTENT                                  │
-│                     (コンテンツ・ビジュアルフェーズ)                           │
+│                      (Content & Visuals)                                    │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │  ┌───────────────────────┐    ┌───────────────────────┐                    │
 │  │ 06. Slide             │───▶│ 07. Visual            │                    │
@@ -168,7 +169,7 @@ output_language: Japanese
                                     ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                        PHASE 4: POLISH & EXPORT                             │
-│                       (レビュー・エクスポートフェーズ)                         │
+│                      (Review & Export)                                      │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │  ┌───────────────────────┐    ┌───────────────────────┐                    │
 │  │ 08. Executive         │───▶│ 09. Final             │                    │
@@ -178,87 +179,87 @@ output_language: Japanese
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-## 各ステップの詳細
+## Step Details
 
 | Step | Name | Description | Key Output |
-|---|---|---|---|
-| 01 | Context Analysis | YAML frontmatterからメタデータを抽出し、内容を構造化 | `01_Context_Brief.json` |
-| 02 | Audience Persona | Context Briefからターゲットを読み取り、ペルソナを構築 | `02_Audience_Persona.json` |
-| 03 | Core Strategy | プレゼンの目的、コアメッセージ、ナラティブ構造を決定 | `03_Core_Strategy.json` |
-| 04 | Governing Argument | ピラミッド原則に基づく論理構造を構築 | `04_Governing_Argument.json` |
-| 05 | Narrative Blueprint | スライドごとのAction Titleを設計 | `05_Narrative_Blueprint.json` |
-| 06 | Slide Drafting | 各スライドの箇条書きとスピーカーノートを作成 | `06_Slide_Drafts.json` |
-| 07 | Visual Design | 各スライドのビジュアル（チャート、図）を設計 | `07_Visual_Designs.json` |
-| 08 | Executive Review | 決裁者の視点から最終レビューを実施 | `08_Executive_Review.json` |
-| 09 | Final Export | レビュー結果を反映し、Slidev形式でエクスポート | `09_Final_Export.json` |
+|------|------|-------------|------------|
+| 01 | Context Analysis | Extract metadata from YAML frontmatter and structure content | `01_Context_Brief.json` |
+| 02 | Audience Persona | Read target from Context Brief and build persona | `02_Audience_Persona.json` |
+| 03 | Core Strategy | Define presentation purpose, core message, and narrative structure | `03_Core_Strategy.json` |
+| 04 | Governing Argument | Build logical structure based on the Pyramid Principle | `04_Governing_Argument.json` |
+| 05 | Narrative Blueprint | Design Action Titles for each slide | `05_Narrative_Blueprint.json` |
+| 06 | Slide Drafting | Create bullet points and speaker notes for each slide | `06_Slide_Drafts.json` |
+| 07 | Visual Design | Design visuals (charts, diagrams) for each slide | `07_Visual_Designs.json` |
+| 08 | Executive Review | Conduct final review from decision-maker's perspective | `08_Executive_Review.json` |
+| 09 | Final Export | Apply review feedback and export in Slidev format | `09_Final_Export.json` |
 
-## 思考フレームワーク
+## Thinking Frameworks
 
-各プロンプトは、単なるルールではなく「思考フレームワーク」として設計されています。
+Each prompt is designed as a "thinking framework" rather than mere rules.
 
-### Jobs Mindset（02_Audience_Persona）
+### Jobs Mindset (02_Audience_Persona)
 > "What keeps them up at night?"
-> 
-> 聴衆の表面的な属性ではなく、深層心理（恐れ、欲求、バイアス）を理解する。
+>
+> Understand the audience's deep psychology (fears, desires, biases), not just surface attributes.
 
-### Bezos Mindset（01_Context_Analysis, 06_Slide_Drafting）
+### Bezos Mindset (01_Context_Analysis, 06_Slide_Drafting)
 > "Speaker Notes First"
-> 
-> スライドの箇条書きを書く前に、完全な文章でスピーカーノートを書く。
+>
+> Write speaker notes in complete sentences before writing slide bullet points.
 
-### McKinsey Mindset（04_Governing_Argument, 05_Narrative_Blueprint）
-> "So What?" / "Why So?" テスト
-> 
-> すべての主張が「だから何？」「なぜそう言える？」に答えられるか検証する。
+### McKinsey Mindset (04_Governing_Argument, 05_Narrative_Blueprint)
+> "So What?" / "Why So?" Test
+>
+> Verify that every claim can answer "So what?" and "Why is that true?"
 
-## 品質保証機能
+## Quality Assurance Features
 
-### 整合性チェック（01_Context_Analysis）
+### Consistency Check (01_Context_Analysis)
 
-内容とターゲットオーディエンスの整合性を自動検証します。
+Automatically validates alignment between content and target audience.
 
 ```json
 {
   "consistency_check": {
     "content_matches_declared_audience": true,
-    "inferred_audience_from_content": "カンファレンス参加者",
+    "inferred_audience_from_content": "Conference Attendees",
     "notes": "Content and declared audience are aligned."
   }
 }
 ```
 
-不整合が検出された場合：
+When inconsistency is detected:
 
 ```json
 {
   "consistency_check": {
     "content_matches_declared_audience": false,
-    "inferred_audience_from_content": "研究者コミュニティ",
+    "inferred_audience_from_content": "Research Community",
     "notes": "WARNING: Content appears to target researchers, but declared target is corporate executive."
   }
 }
 ```
 
-### Source Fidelity Check（08_Executive_Review）
+### Source Fidelity Check (08_Executive_Review)
 
-元の入力に含まれていた重要な要素（創業者ストーリー、アネクドート）が最終出力に保持されているか検証します。
+Verifies that important elements from the original input (founder stories, anecdotes) are preserved in the final output.
 
-### Evidence Quality Hierarchy（06_Slide_Drafting）
+### Evidence Quality Hierarchy (06_Slide_Drafting)
 
-証拠の品質を階層化し、優先順位を明示します。
+Prioritizes evidence quality in a clear hierarchy:
 
-1. **Hard Data**: 数値、統計、検証可能な事実
-2. **Expert Opinion**: 権威ある専門家の見解
-3. **Analogies**: 類似事例からの推論
-4. **Anecdotes**: 個別の事例やストーリー
+1. **Hard Data**: Numbers, statistics, verifiable facts
+2. **Expert Opinion**: Views from authoritative experts
+3. **Analogies**: Inferences from similar cases
+4. **Anecdotes**: Individual stories and examples
 
-## ディレクトリ構成
+## Directory Structure
 
 ```
 .
-├── Makefile                    # パイプラインオーケストレーター
-├── README.md                   # 本ファイル
-├── prompts/                    # プロンプトファイル
+├── Makefile                    # Pipeline orchestrator
+├── README.md                   # This file
+├── prompts/                    # Prompt files
 │   ├── 01_Context_Analysis.md
 │   ├── 02_Audience_Persona.md
 │   ├── 03_Core_Strategy.md
@@ -268,25 +269,25 @@ output_language: Japanese
 │   ├── 07_Visual_Design.md
 │   ├── 08_Executive_Review.md
 │   └── 09_Final_Export.md
-├── inputs/                     # ユーザー入力（単一ファイル）
-│   └── introduction.md         # YAML frontmatter + 内容
-├── outputs/                    # 生成された中間ファイル
+├── inputs/                     # User input (single file)
+│   └── introduction.md         # YAML frontmatter + content
+├── outputs/                    # Generated intermediate files
 │   ├── 01_Context_Brief.json
 │   ├── ...
-│   └── logs/                   # Claude CLI のログ
-└── slides/                     # 最終的なSlidevファイル
+│   └── logs/                   # Claude CLI logs
+└── slides/                     # Final Slidev files
 ```
 
-## Makeコマンド
+## Make Commands
 
 ```bash
-# 全ステップを実行
+# Run all steps
 make all
 
-# 入力ファイルの検証のみ
+# Validate input file only
 make validate
 
-# 個別のステップを実行
+# Run individual steps
 make context_analysis
 make audience_persona
 make core_strategy
@@ -297,72 +298,75 @@ make visual_design
 make executive_review
 make final_export
 
-# 出力をクリア
+# Clear outputs
 make clean
 
-# ヘルプを表示
+# Show help
 make help
 ```
 
-## Slidevの実行
+## Running Slidev
 
 ```bash
+# Install dependencies
 bun i
+
+# Start development server
 bun dev
 ```
 
-http://localhost:3030 へアクセス
+Access http://localhost:3030
 
-## GitHub Actionsでの実行
+## Running with GitHub Actions
 
-GitHub Actionsを使用してパイプラインを自動実行できます。
+You can automatically run the pipeline using GitHub Actions.
 
-### 前提条件
+### Prerequisites
 
-- **Self-hosted runner**: `claude` CLIがインストールされ、ログイン済みのself-hosted runnerが必要です
-- **リポジトリ権限**: `contents: write` と `pull-requests: write` 権限が必要です
+- **Self-hosted runner**: A self-hosted runner with `claude` CLI installed and logged in is required
+- **Repository permissions**: `contents: write` and `pull-requests: write` permissions are required
 
-### 実行方法
+### How to Run
 
-1. `inputs/introduction.md` にYAML frontmatterと内容を記述してコミット
-2. GitHubリポジトリの **Actions** タブを開く
-3. **Presentation Pipeline** ワークフローを選択
-4. **Run workflow** ボタンをクリック
+1. Write YAML frontmatter and content in `inputs/introduction.md` and commit
+2. Open the **Actions** tab in your GitHub repository
+3. Select the **Presentation Pipeline** workflow
+4. Click the **Run workflow** button
 
-### 動作の流れ
+### Workflow
 
-1. `inputs/introduction.md` からメタデータを抽出
-2. `make all` で全パイプラインを実行
-3. 生成されたファイルを新しいブランチにコミット
-4. Pull Requestを自動作成
+1. Extract metadata from `inputs/introduction.md`
+2. Run the full pipeline with `make all`
+3. Commit generated files to a new branch
+4. Automatically create a Pull Request
 
-### 生成されるPull Request
+### Generated Pull Request
 
-ワークフロー完了後、以下の内容を含むPRが自動作成されます：
+After workflow completion, a PR is automatically created containing:
 
-- **ブランチ名**: `presentation/generated-{run_id}-{timestamp}`
-- **含まれるファイル**:
-  - `outputs/` - パイプラインの中間出力（JSON）
-  - `slides/` - 最終的なSlidevマークダウン
+- **Branch name**: `presentation/generated-{run_id}-{timestamp}`
+- **Included files**:
+  - `outputs/` - Pipeline intermediate outputs (JSON)
+  - `slides/` - Final Slidev markdown
 
-### 環境変数
+### Environment Variables
 
-ワークフローで使用される環境変数：
+Environment variables used by the workflow:
 
-| 変数 | 説明 |
-|------|------|
-| `CLAUDE_CODE_PERMISSIONS` | `bypassPermissions` に設定（自動実行用） |
-| `CLAUDE_CODE_MAX_OUTPUT_TOKENS` | 最大出力トークン数（デフォルト: 100000） |
+| Variable | Description |
+|----------|-------------|
+| `CLAUDE_CODE_PERMISSIONS` | Set to `bypassPermissions` (for automated execution) |
+| `CLAUDE_CODE_MAX_OUTPUT_TOKENS` | Maximum output tokens (default: 100000) |
 
-### Artifactの確認
+### Checking Artifacts
 
-実行ログは **pipeline-logs** という名前のArtifactとして7日間保存されます。
+Execution logs are stored as an Artifact named **pipeline-logs** for 7 days.
 
-## 参考にした手法
+## References
 
-- **McKinsey / BCG**: ピラミッド原則、Action Titles、So What? / Why So? テスト
-- **Barbara Minto**: 「考える技術・書く技術」
-- **Nancy Duarte**: Sparkline、「What Is vs. What Could Be」
-- **Steve Jobs**: シンプルさ、ビジュアル優先、ストーリーテリング
-- **Jeff Bezos**: 6ページメモ、ナラティブ構造、Speaker Notes First
-- **Gene Zelazny**: データビジュアライゼーションの原則、1 Chart 1 Message
+- **McKinsey / BCG**: Pyramid Principle, Action Titles, So What? / Why So? Test
+- **Barbara Minto**: "The Pyramid Principle"
+- **Nancy Duarte**: Sparkline, "What Is vs. What Could Be"
+- **Steve Jobs**: Simplicity, Visual Priority, Storytelling
+- **Jeff Bezos**: 6-Page Memo, Narrative Structure, Speaker Notes First
+- **Gene Zelazny**: Data Visualization Principles, 1 Chart 1 Message

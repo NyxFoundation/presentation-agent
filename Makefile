@@ -28,7 +28,7 @@ RAW_INPUT ?= inputs/introduction.md
 
 # --- Visual Style (Not part of the content, so kept as Makefile variables) ---
 SLIDEV_THEME ?= default
-FONT ?= Inter
+FONT ?= BIZ UDPMincho
 BACKGROUND_COLOR ?= \#FFFFFF
 
 # Tone for the presentation (derived from Core Strategy, can be overridden)

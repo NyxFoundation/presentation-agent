@@ -1,0 +1,229 @@
+{
+  "visual_designs": [
+    {
+      "slide_number": 1,
+      "visual_strategy": "Full-Bleed Image with Minimal Text",
+      "slidev_layout": "cover",
+      "diagram_code": null,
+      "image_placeholders": [
+        {
+          "filename": "global-tech-wave.jpg",
+          "description": "Abstract visualization of a global technology wave or digital transformation, dark tones with purple/blue highlights",
+          "purpose": "Creates urgency and establishes the 'world is changing' theme"
+        }
+      ],
+      "content_arrangement": "Background image with centered title text. Title: 'The World Has Moved' (世界は動いた). Subtitle: 'Privacy-Preserving Tech is Now Standard'. Single provocative question at bottom: 'Will You Lead or Follow?'",
+      "word_count": 12,
+      "passes_3_second_test": true,
+      "justification": "Opening slide must create immediate emotional impact. A full-bleed image with minimal text establishes urgency without overwhelming. The single question forces engagement."
+    },
+    {
+      "slide_number": 2,
+      "visual_strategy": "Single Number or Word (Jobs' Favorite)",
+      "slidev_layout": "center",
+      "diagram_code": null,
+      "image_placeholders": [],
+      "content_arrangement": "Massive centered number '$7.5B' in primary white with green accent. Small subtitle below: 'ZKP Market by 2033'. Even smaller context line: 'from $1.3B in 2024 (CAGR 18.6%)'",
+      "word_count": 10,
+      "passes_3_second_test": true,
+      "justification": "The $7.5B market size is the single most compelling data point. Jobs-style big number creates immediate impact. The growth trajectory speaks for itself without needing a chart."
+    },
+    {
+      "slide_number": 3,
+      "visual_strategy": "Simple Mermaid Diagram (Max 5 Nodes)",
+      "slidev_layout": "default",
+      "diagram_code": "```mermaid\ngraph LR\n    subgraph TODAY[\"Today's Reality\"]\n        G[\"Google Wallet<br/>ZKP Age Verify\"]\n        A[\"Apple Photos<br/>FHE Search\"]\n    end\n    G --> U[\"Billions of<br/>Users\"]\n    A --> U\n    style G fill:#22c55e,color:#fff\n    style A fill:#22c55e,color:#fff\n    style U fill:#8b5cf6,color:#fff\n```",
+      "image_placeholders": [
+        {
+          "filename": "google-logo.svg",
+          "description": "Google logo",
+          "purpose": "Brand recognition and credibility"
+        },
+        {
+          "filename": "apple-logo.svg",
+          "description": "Apple logo",
+          "purpose": "Brand recognition and credibility"
+        }
+      ],
+      "content_arrangement": "Title at top: 'Not Future Tech. Today's Products.' Mermaid diagram centered showing Google and Apple converging to 'Billions of Users'. Logos can be placed near respective nodes.",
+      "word_count": 8,
+      "passes_3_second_test": true,
+      "justification": "A simple convergence diagram shows that two tech giants have independently chosen the same path, making the trend undeniable. 4 nodes keeps it clean."
+    },
+    {
+      "slide_number": 4,
+      "visual_strategy": "Single Number or Word (Jobs' Favorite)",
+      "slidev_layout": "center",
+      "diagram_code": null,
+      "image_placeholders": [
+        {
+          "filename": "eu-flag.svg",
+          "description": "European Union flag",
+          "purpose": "Immediate recognition of regulatory authority"
+        }
+      ],
+      "content_arrangement": "Large '2026' in red (#ef4444) as the focal point. Above it: EU flag icon. Below it: 'eIDAS 2.0 Takes Effect'. Subtext: 'Privacy-Preserving ID Becomes Mandatory'",
+      "word_count": 9,
+      "passes_3_second_test": true,
+      "justification": "The year 2026 is the critical deadline that creates urgency. Red color signals warning/urgency. The EU flag provides instant context without words."
+    },
+    {
+      "slide_number": 5,
+      "visual_strategy": "Single Number or Word (Jobs' Favorite)",
+      "slidev_layout": "center",
+      "diagram_code": null,
+      "image_placeholders": [],
+      "content_arrangement": "Massive '110,000' in red (#ef4444) centered. Small text below: 'Cybersecurity Talent Gap in Japan'. Even smaller: '79M IT workers short by 2030'",
+      "word_count": 11,
+      "passes_3_second_test": true,
+      "justification": "The 11万人 (110,000) shortage is a shocking number that tells the story instantly. Red emphasizes this as a crisis. No diagram needed - the number is the message."
+    },
+    {
+      "slide_number": 6,
+      "visual_strategy": "Simple Mermaid Diagram (Max 5 Nodes)",
+      "slidev_layout": "default",
+      "diagram_code": "```mermaid\ngraph TD\n    H[\"Hire ZK/FHE<br/>Engineers?\"] -->|\"Japan Market\"| X[\"❌ Not Found\"]\n    H -->|\"Solution\"| T[\"Train Your Own\"]\n    style H fill:#8b5cf6,color:#fff\n    style X fill:#ef4444,color:#fff\n    style T fill:#22c55e,color:#fff\n```",
+      "image_placeholders": [],
+      "content_arrangement": "Title: 'You Cannot Hire What Doesn't Exist'. Simple 3-node diagram showing the choice: hiring fails, training succeeds. The visual makes the logical conclusion obvious.",
+      "word_count": 7,
+      "passes_3_second_test": true,
+      "justification": "This binary choice diagram makes the logical conclusion inescapable: if you can't hire, you must train. 3 nodes is minimal and clear. Colors reinforce the message (red=failure, green=solution)."
+    },
+    {
+      "slide_number": 7,
+      "visual_strategy": "Styled Key Points with v-clicks",
+      "slidev_layout": "two-cols",
+      "diagram_code": null,
+      "image_placeholders": [
+        {
+          "filename": "zk-tokyo-logo.svg",
+          "description": "ZK Tokyo logo",
+          "purpose": "Brand recognition for the program"
+        },
+        {
+          "filename": "utokyo-logo.svg",
+          "description": "University of Tokyo logo",
+          "purpose": "Academic credibility signal"
+        }
+      ],
+      "content_arrangement": "Left column: 'ZK Core Program 2026' as title with ZK Tokyo + UTokyo logos stacked. Right column: Three key points with v-clicks: '6 Weeks Hybrid Format', 'Work-Compatible Schedule', 'World-Class Curriculum'",
+      "word_count": 14,
+      "passes_3_second_test": true,
+      "justification": "This is the solution introduction slide. Two-cols allows logos to establish credibility while 3 key differentiators explain the format. v-clicks control pacing."
+    },
+    {
+      "slide_number": 8,
+      "visual_strategy": "Full-Bleed Image with Minimal Text",
+      "slidev_layout": "cover",
+      "diagram_code": null,
+      "image_placeholders": [
+        {
+          "filename": "vitalik-demo-day.jpg",
+          "description": "Photo of Vitalik Buterin at ZK Core Program 2025 Demo Day (if available), or a professional conference/presentation setting",
+          "purpose": "Visual proof of world-class credibility and international attention"
+        }
+      ],
+      "content_arrangement": "Background image of Vitalik/demo day event. Overlay text: 'Vitalik Buterin Attended'. Subtitle: '2025 Final Demo Day'. This is a credibility slide - the image does the talking.",
+      "word_count": 6,
+      "passes_3_second_test": true,
+      "justification": "A photo of Vitalik at the event is worth a thousand words of credibility claims. This is the ultimate 'show don't tell' moment. Minimal text lets the image convey trust."
+    },
+    {
+      "slide_number": 9,
+      "visual_strategy": "Styled Key Points with v-clicks",
+      "slidev_layout": "default",
+      "diagram_code": null,
+      "image_placeholders": [
+        {
+          "filename": "ethtokyo-logo.svg",
+          "description": "ETHTokyo hackathon logo",
+          "purpose": "Recognizable achievement marker"
+        },
+        {
+          "filename": "ethereum-foundation-logo.svg",
+          "description": "Ethereum Foundation logo",
+          "purpose": "Prestigious grant source recognition"
+        }
+      ],
+      "content_arrangement": "Title: 'Proven Results'. Three achievement cards with v-clicks, each with icon/logo: '5+ Teams Won ETHTokyo 2025', 'EF Grant Recipients', 'International Research Publications'. Each card has green accent border.",
+      "word_count": 12,
+      "passes_3_second_test": true,
+      "justification": "These are concrete achievements that prove program value. Three distinct achievement cards with recognizable logos create credibility through evidence. v-clicks allow presenter to elaborate on each."
+    },
+    {
+      "slide_number": 10,
+      "visual_strategy": "Simple Mermaid Diagram (Max 5 Nodes)",
+      "slidev_layout": "default",
+      "diagram_code": "```mermaid\ngraph LR\n    S[\"Your<br/>Challenge\"] --> P[\"Program<br/>Participants\"]\n    P --> D[\"Demo Day<br/>Solutions\"]\n    D --> H[\"Direct<br/>Hiring Path\"]\n    style S fill:#f59e0b,color:#fff\n    style P fill:#8b5cf6,color:#fff\n    style D fill:#8b5cf6,color:#fff\n    style H fill:#22c55e,color:#fff\n```",
+      "image_placeholders": [],
+      "content_arrangement": "Title: 'Theme Proposal Rights'. Horizontal flow diagram showing: Your Challenge → Participants Work On It → Solutions Presented → Hiring Pipeline. This visualizes the unique sponsor benefit.",
+      "word_count": 6,
+      "passes_3_second_test": true,
+      "justification": "The theme proposal right is the key differentiator. A simple 4-node flow shows how sponsor challenges become hiring opportunities. Colors show the value flow (orange=your investment, purple=program magic, green=your gain)."
+    },
+    {
+      "slide_number": 11,
+      "visual_strategy": "Simple Mermaid Diagram (Max 5 Nodes)",
+      "slidev_layout": "default",
+      "diagram_code": "```mermaid\ngraph TD\n    I[\"One<br/>Investment\"] --> T[\"Talent<br/>Pipeline\"]\n    I --> R[\"R&D<br/>Insights\"]\n    I --> B[\"Tech<br/>Branding\"]\n    style I fill:#f59e0b,color:#fff\n    style T fill:#22c55e,color:#fff\n    style R fill:#22c55e,color:#fff\n    style B fill:#22c55e,color:#fff\n```",
+      "image_placeholders": [],
+      "content_arrangement": "Title: 'Triple ROI from Single Investment'. Diagram shows one investment branching to three green outcomes. Each outcome node is self-explanatory. No additional text needed.",
+      "word_count": 6,
+      "passes_3_second_test": true,
+      "justification": "The '3 benefits from 1 investment' message is perfectly suited for a branching diagram. 4 nodes total, one-to-many relationship is immediately clear. Green outcomes reinforce positive value."
+    },
+    {
+      "slide_number": 12,
+      "visual_strategy": "Styled Key Points with v-clicks",
+      "slidev_layout": "default",
+      "diagram_code": null,
+      "image_placeholders": [],
+      "content_arrangement": "Title: 'Start from ¥500K'. Three tier cards stacked vertically with v-clicks: Bronze (¥500K): '1 Theme, Logo, Demo Access' / Silver (¥1M): '3 Themes, Speaking Slot, Mixer' / Gold (¥2M): '5 Themes, Premium Exposure, Dedicated Session'. Use accent colors for tier names.",
+      "word_count": 24,
+      "passes_3_second_test": true,
+      "justification": "Pricing needs to be clear and scannable. Three tiers as distinct cards let sponsors quickly identify their fit. v-clicks allow presenter to walk through each tier. Keeping descriptions minimal avoids text overload."
+    },
+    {
+      "slide_number": 13,
+      "visual_strategy": "Full-Bleed Image with Minimal Text",
+      "slidev_layout": "cover",
+      "diagram_code": null,
+      "image_placeholders": [
+        {
+          "filename": "qr-code-sponsor.png",
+          "description": "QR code linking to sponsorship inquiry form or contact page",
+          "purpose": "Immediate action pathway for interested sponsors"
+        }
+      ],
+      "content_arrangement": "Dark background with centered QR code (white). Above QR: 'Become a ZK Core Sponsor'. Below QR: Contact email and/or URL. Single CTA statement: 'Shape the Future of Privacy Tech in Japan.'",
+      "word_count": 12,
+      "passes_3_second_test": true,
+      "justification": "Final slide must make action easy. QR code enables immediate follow-up. Minimal text focuses attention on the single CTA. Clean closing leaves professional impression."
+    }
+  ],
+  "quality_checklist": {
+    "bullet_points_minimized": {
+      "result": true,
+      "count": 0,
+      "justification": "Out of 13 slides, 0 use plain bullet points. All slides use either: single numbers (slides 2, 4, 5), Mermaid diagrams (slides 3, 6, 10, 11), full-bleed images (slides 1, 8, 13), or styled key points with v-clicks (slides 7, 9, 12). No default bullet point lists anywhere."
+    },
+    "one_chart_one_message_applied": {
+      "result": true,
+      "justification": "Each Mermaid diagram conveys exactly one message: Slide 3 = 'Tech giants have converged on this tech', Slide 6 = 'Hiring fails, training works', Slide 10 = 'Your challenge becomes your hiring pipeline', Slide 11 = 'One investment, three returns'. All messages can be stated in one sentence."
+    },
+    "mermaid_node_limit_respected": {
+      "result": true,
+      "max_nodes_used": 4,
+      "justification": "All diagrams have 4 or fewer nodes. Slide 3: 4 nodes (Google, Apple, subgraph, Users), Slide 6: 3 nodes, Slide 10: 4 nodes, Slide 11: 4 nodes. No diagram exceeds the 5-node limit."
+    },
+    "image_placeholders_added": {
+      "result": true,
+      "count": 10,
+      "justification": "Added image placeholders for: cover slide (1), Google/Apple logos (2), EU flag (1), ZK Tokyo + UTokyo logos (2), Vitalik photo (1), ETHTokyo + EF logos (2), QR code (1). All anecdote/credibility/CTA slides have appropriate visual placeholders."
+    },
+    "color_consistency_maintained": {
+      "result": true,
+      "justification": "All slides use the defined color palette: #0f0f0f (background), #ffffff (primary text), #22c55e (positive/solution - used in success states), #ef4444 (negative/problem - used in shortage numbers and deadline), #8b5cf6 (brand/program elements), #f59e0b (accent/investment). No off-palette colors specified."
+    }
+  }
+}

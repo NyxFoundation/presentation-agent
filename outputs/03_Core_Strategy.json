@@ -1,0 +1,28 @@
+{
+  "narrative_archetype": {
+    "chosen_archetype": "Hybrid: Sparkline + Pyramid Principle",
+    "justification": "The target audience — strategic technology investors at Japanese enterprises — combines analytical rigor with deep-seated fears of being left behind. A pure Pyramid Principle (answer-first) approach would satisfy their data-driven preferences but fail to emotionally engage. A pure Sparkline would feel manipulative to an ROI-focused audience. The hybrid approach opens with a Sparkline emotional contrast (the pain of 'what is' — talent shortage, competitors moving fast — versus the promise of 'what could be' — early access to world-class talent, technology leadership), then transitions to a Pyramid Principle structure for the sponsorship proposal itself (clear value proposition upfront, supported by evidence and tiers). This combination respects their time while creating the emotional urgency needed to move from consideration to action."
+  },
+  "core_message": {
+    "full_sentence": "ZK Core Program 2026への協賛は、グローバル標準となる暗号技術人材との最前線での接点を獲得し、御社を『技術で先を行く企業』として確立する、最も費用対効果の高い投資である。",
+    "proverb": "技術の波に乗る最速の切符"
+  },
+  "dramatic_tension": {
+    "villain": "「待っている間に取り残される恐怖」— GoogleやAppleがゼロ知識証明・準同型暗号を実装し、EU規制が迫る中、日本は11万人のサイバーセキュリティ人材不足を抱え、この技術領域で戦える人材の育成基盤が決定的に欠けている。競合他社が先に動けば、人材も市場も奪われる。",
+    "hero": "「ZK Core Program 2026」— 東京大学共催、Vitalik Buterin参加実績を持つ日本唯一の本格的暗号技術人材育成プログラム。スポンサー企業は『テーマ提案権』を通じて、採用市場に出る前の異能人材と直接接点を持ち、自社課題を解くユースケースを共創できる。待つのではなく、技術の波を自ら起こす側に立てる。"
+  },
+  "emotional_hook": {
+    "hook_type": "Surprising Statistic + Contrast",
+    "hook_content": "2025年、GoogleはゼロCSS/znowledgeを実装し、Appleは「サーバーでさえ解読できない」暗号技術を消費者に提供し始めた。2033年までに75億ドル市場へ成長するこの技術領域で、日本は11万人の人材不足を抱えている。世界が動いている。日本企業が『次の波』に乗るか、見送るか — その分岐点が今日この場にある。"
+  },
+  "quality_checklist": {
+    "passes_bezos_clarity_test": {
+      "result": true,
+      "justification": "Core message is a complete sentence that answers 'why should the audience care' (competitive advantage through talent access and technology branding), and is distilled into a memorable 10-word proverb ('技術の波に乗る最速の切符'). All three criteria are met."
+    },
+    "has_clear_villain_and_hero": {
+      "result": true,
+      "justification": "The villain ('being left behind while the world moves') creates urgency by connecting to the audience's deepest fear (competitors gaining advantage, talent drain). The hero ('ZK Core Program 2026') provides a concrete path to resolution through specific mechanisms (theme proposal rights, direct talent access, co-creation). The conflict is emotionally resonant yet grounded in facts."
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "governing_argument": {
+    "core_message": "ZK Core Program 2026への協賛は、グローバル標準となる暗号技術人材との最前線での接点を獲得し、御社を『技術で先を行く企業』として確立する、最も費用対効果の高い投資である。",
+    "supporting_arguments": [
+      {
+        "claim": "The cryptographic technology market is experiencing explosive growth, creating an urgent window of opportunity that will not remain open indefinitely.",
+        "evidence_strategy": "Quantitative market data (projected growth from $1.6B in 2022 to $7.5B by 2033 at 18.6% CAGR), examples of major tech companies (Google, Apple) already deploying zero-knowledge and homomorphic encryption in production, regulatory timeline pressures (EU data protection mandates)."
+      },
+      {
+        "claim": "Japan faces a critical talent gap in this domain that cannot be solved through conventional hiring channels.",
+        "evidence_strategy": "Japan's 110,000-person cybersecurity talent shortage statistics, comparison of domestic vs. global training infrastructure for advanced cryptography, analysis of why traditional recruitment cannot access this niche talent pool (they don't exist in the job market yet)."
+      },
+      {
+        "claim": "ZK Core Program 2026 offers unique, privileged access to elite talent and technology that sponsors cannot obtain elsewhere.",
+        "evidence_strategy": "Program credentials (University of Tokyo co-hosting, Vitalik Buterin participation history), exclusive sponsor benefits ('Theme Proposal Rights' for direct problem-solving collaboration, pre-market access to participants), comparison with alternative talent acquisition methods (cost, quality, timing)."
+      },
+      {
+        "claim": "Sponsorship delivers concrete, measurable ROI through multiple value channels beyond talent acquisition.",
+        "evidence_strategy": "Breakdown of sponsor benefits by tier (brand positioning at premier events, co-creation opportunities, networking with global cryptography leaders), case examples of how similar program sponsorships have translated to competitive advantage, cost-per-contact analysis vs. traditional recruitment/consulting."
+      }
+    ]
+  },
+  "quality_checklist": {
+    "is_mece": {
+      "result": true,
+      "justification": "The four arguments are MECE: (1) Market Opportunity addresses WHY NOW — the external environment creating urgency. (2) Talent Gap addresses WHY JAPAN NEEDS THIS — the internal constraint. (3) Program Uniqueness addresses WHY THIS PROGRAM — the differentiated solution. (4) Sponsor ROI addresses WHY SPONSOR — the specific value proposition for the audience. Each argument occupies a distinct logical space with no overlap, and together they form a complete causal chain from market context → problem → solution → action."
+    },
+    "passes_so_what_why_so_tests": {
+      "result": true,
+      "justification": "Top-down 'Why So?' test: Core message claims sponsorship is the most cost-effective investment. Why so? Because (4) it delivers measurable ROI. Why does it deliver ROI? Because (3) it provides unique access unavailable elsewhere. Why is that access valuable? Because (2) Japan cannot solve its talent gap conventionally. Why does the talent gap matter now? Because (1) the market is exploding and the window is closing. Bottom-up 'So What?' test: Market is growing explosively → So what? → Japan is falling behind due to talent shortage → So what? → There's a program that solves this → So what? → Sponsors get exclusive benefits and ROI → So what? → This is the highest-ROI investment for becoming a technology leader. The logic flows seamlessly in both directions."
+    }
+  }
+}

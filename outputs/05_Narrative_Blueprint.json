@@ -1,0 +1,83 @@
+{
+  "narrative_flow": [
+    {
+      "slide_number": 1,
+      "action_title": "世界はプライバシー保護技術を標準化し始めた ― 日本は今、決断を迫られている",
+      "purpose": "SCRの「状況」と「複雑化要因」を一枚で提示し、聴衆に危機感と問いを共有させる導入スライド"
+    },
+    {
+      "slide_number": 2,
+      "action_title": "暗号技術市場は2033年に75億ドル規模へ ― 今こそ参入すべき成長領域である",
+      "purpose": "Supporting Argument 1：市場の爆発的成長を数値で示し、「なぜ今か」の緊急性を裏付ける"
+    },
+    {
+      "slide_number": 3,
+      "action_title": "GoogleとAppleは既にゼロ知識証明・準同型暗号を実用化している",
+      "purpose": "Supporting Argument 1の補強：グローバルテック企業の動向を具体例で示し、技術潮流が「未来」ではなく「現在」であることを証明する"
+    },
+    {
+      "slide_number": 4,
+      "action_title": "EU eIDAS 2.0は2026年発効 ― プライバシー保護は規制要件になる",
+      "purpose": "Supporting Argument 1の補強：規制圧力という外部要因を追加し、「待つ」という選択肢がリスクであることを示す"
+    },
+    {
+      "slide_number": 5,
+      "action_title": "日本のサイバーセキュリティ人材は11万人不足している",
+      "purpose": "Supporting Argument 2への転換：国内の課題を数値で提示し、市場機会に対応できない構造的問題を浮き彫りにする"
+    },
+    {
+      "slide_number": 6,
+      "action_title": "Programmable Cryptographyの高度人材は、日本の採用市場に存在しない",
+      "purpose": "Supporting Argument 2の深掘り：通常の採用チャネルでは解決不可能な理由を説明し、新たなアプローチの必要性を示す"
+    },
+    {
+      "slide_number": 7,
+      "action_title": "ZK Core Program 2026が、日本唯一の世界水準育成基盤となる",
+      "purpose": "Supporting Argument 3：問題に対する解決策としてプログラムを提示し、その唯一性を主張する"
+    },
+    {
+      "slide_number": 8,
+      "action_title": "東京大学との共催・Vitalik Buterin氏の参加が、プログラムの信頼性を証明する",
+      "purpose": "Supporting Argument 3の補強：権威あるパートナーシップと実績でプログラムのクレデンシャルを裏付ける"
+    },
+    {
+      "slide_number": 9,
+      "action_title": "卒業生はETHTokyo入賞・国際学会発表・EF助成金獲得を達成している",
+      "purpose": "Supporting Argument 3の補強：過去の卒業生の具体的成果で「世界に通用する人材」の証拠を示す"
+    },
+    {
+      "slide_number": 10,
+      "action_title": "スポンサー企業は『テーマ提案権』で参加者と直接協働できる",
+      "purpose": "Supporting Argument 4への転換：スポンサー固有の価値として最も差別化された権利を強調する"
+    },
+    {
+      "slide_number": 11,
+      "action_title": "人材発掘・ユースケース創出・技術ブランディング ― 三つの価値が同時に得られる",
+      "purpose": "Supporting Argument 4の展開：ROIの複数チャネルを整理し、投資対効果の多面性を示す"
+    },
+    {
+      "slide_number": 12,
+      "action_title": "50万円から始められる ― 費用対効果の高い人材戦略投資である",
+      "purpose": "Supporting Argument 4の締め：具体的な価格帯を提示し、意思決定のハードルを下げる"
+    },
+    {
+      "slide_number": 13,
+      "action_title": "御社を『技術で先を行く企業』として確立する機会が、今ここにある",
+      "purpose": "クロージング：Core Messageを再提示し、行動を促すCall to Action"
+    }
+  ],
+  "quality_checklist": {
+    "passes_skim_test": {
+      "result": true,
+      "justification": "Action Titleのみを順に読むと以下のストーリーが浮かび上がる：①世界がプライバシー技術を標準化し日本は決断を迫られている→②市場は75億ドルへ成長中→③Google/Appleは実用化済み→④EUは規制化→⑤日本は人材が11万人不足→⑥高度人材は採用市場にいない→⑦ZK Core Programが唯一の育成基盤→⑧東大共催・Vitalik参加で信頼性証明→⑨卒業生は世界で成果→⑩スポンサーはテーマ提案権で協働可能→⑪三つの価値が同時に得られる→⑫50万円から開始可能→⑬今この機会を掴め。この流れは「市場機会→日本の課題→解決策→スポンサー価値→行動喚起」という完全な論理構造を持ち、タイトルだけで説得力のある物語を伝えている。"
+    },
+    "respects_constraints": {
+      "result": true,
+      "justification": "合計13スライドであり、15スライド以内の制約を満たしている。また、15分のプレゼンテーションで1スライドあたり約70秒となり、各スライドを十分に説明できる余裕がある。"
+    },
+    "has_dedicated_situation_slide": {
+      "result": true,
+      "justification": "スライド1『世界はプライバシー保護技術を標準化し始めた ― 日本は今、決断を迫られている』がSCR（Situation-Complication-Resolution）の状況と複雑化要因を一枚で凝縮して提示している。世界の技術標準化（状況）と日本が決断を迫られている（複雑化要因）を対比し、「では何をすべきか？」という問いを暗示することで、続くスライドへの期待を生み出している。"
+    }
+  }
+}

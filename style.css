@@ -39,11 +39,6 @@ th {
   display: inline-block;
 }
 
-/* ===== Two-column body spacing ===== */
-.slidev-layout .two-col-body .right-content {
-  padding-top: 1.5rem;
-}
-
 /* H2-H6 styling */
 .slidev-layout h2 {
   font-family: 'BIZ UDPMincho', serif !important;

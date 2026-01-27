@@ -22,6 +22,10 @@ src: ./slides/SL04.md
 ---
 
 ---
+src: ./slides/SL05A.md
+---
+
+---
 src: ./slides/SL05.md
 ---
 

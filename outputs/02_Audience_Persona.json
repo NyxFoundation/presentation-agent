@@ -1,0 +1,57 @@
+{
+  "source": {
+    "target_audience": "SCIS2026の発表内容や技術トレンドに興味があるセキュリティ研究者、開発者",
+    "audience_type": "group"
+  },
+  "persona_summary": {
+    "name": "The Pragmatic Security Researcher",
+    "description": "A hands-on security researcher or developer working in industry or academia in Japan, actively following the intersection of AI and cybersecurity. They attended SCIS 2026 or wish they had, and need to understand which emerging trends — LLM agents, formal verification, PQC — are worth investing their limited research and development time in. They are technically deep but time-constrained, and they value concrete evidence over hype."
+  },
+  "deep_psychology": {
+    "pains_and_fears": [
+      "Fear of investing months into an approach that turns out to be a dead end — the 4-5 month struggle reported by Waseda/RIKEN AIP resonates deeply because they have lived similar experiences.",
+      "Anxiety about falling behind the rapid AI-security convergence: the standing-room-only AI sessions signal a paradigm shift, and missing it means professional irrelevance.",
+      "Frustration with the gap between impressive demo results and production-grade reliability — they know LLM agents are brittle and worry about betting on immature technology.",
+      "Concern that their current skill set (classical crypto, network security) may be insufficient as the field pivots toward LLM-driven automation and formal methods tooling."
+    ],
+    "desires_and_aspirations": [
+      "To identify the highest-leverage research direction early — being the person in their lab or team who saw the trend before it became obvious.",
+      "To build or contribute to something that actually ships — not just publish, but produce tools or systems that practitioners use (e.g., a working LLM agent for vulnerability assessment).",
+      "To efficiently absorb the landscape without attending every session — they want a curated, trustworthy map of what matters and what doesn't.",
+      "To connect insights across sub-fields (PQC, automotive security, formal verification) and spot opportunities at the intersections."
+    ],
+    "biases_and_worldview": [
+      "Values empirical evidence and reproducibility over theoretical elegance — a working prototype trumps a beautiful proof.",
+      "Skeptical of AI hype but pragmatically open: they've seen enough failed promises to demand concrete benchmarks, yet the SCIS evidence is hard to dismiss.",
+      "Trusts the SCIS community and its peer-review culture as a quality signal — presentations accepted there carry inherent credibility.",
+      "Sees security as adversarial by nature: any proposed solution is immediately stress-tested with 'but what if an attacker...' thinking."
+    ]
+  },
+  "communication_preferences": {
+    "preferred_style": "Analytical",
+    "likes": [
+      "Concrete examples with paper/presentation IDs they can look up later (e.g., '3G3-1', '4G2-1')",
+      "Honest accounts of what didn't work and how long things actually took — the 4-5 month timeline is more valuable than a polished success story",
+      "A clear taxonomy or framework that organizes the landscape (e.g., the 4 major trends) so they can mentally file new information",
+      "Specific technical details: model names, notation choices (AT&T vs Intel), tool names (ProVerif), dataset characteristics",
+      "Actionable takeaways: what should they read, try, or explore next"
+    ],
+    "dislikes": [
+      "Vague superlatives without evidence ('AI is revolutionizing everything')",
+      "Omitting difficulties and failure modes — they distrust presentations that only show the happy path",
+      "Superficial overviews that don't go deeper than an abstract — they could read those themselves",
+      "Slides overloaded with text that the presenter simply reads aloud",
+      "Ignoring limitations or adversarial considerations of proposed approaches"
+    ]
+  },
+  "quality_checklist": {
+    "is_actionable": {
+      "result": true,
+      "justification": "The persona directly guides presentation design: use concrete session IDs, include failure stories, organize by a clear trend taxonomy, provide technical depth with specific tool/model names, and maintain an honest, evidence-first tone."
+    },
+    "is_specific": {
+      "result": true,
+      "justification": "The persona is grounded in the specific SCIS 2026 context — referencing the AI session overcrowding, the Waseda/RIKEN development timeline, and the community's peer-review trust culture. It would not apply to a generic tech audience."
+    }
+  }
+}

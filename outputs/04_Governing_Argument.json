@@ -1,0 +1,33 @@
+{
+  "governing_argument": {
+    "core_message": "SCIS 2026 revealed that AI agents and formal verification have crossed the threshold from research curiosities to practical security tools — and the researchers who act on this shift now will define the next era of cybersecurity.",
+    "supporting_arguments": [
+      {
+        "claim": "LLM-based agents have evolved from passive assistants into autonomous actors capable of executing multi-step security tasks such as vulnerability discovery and binary analysis, compressing months of manual expert work into hours.",
+        "evidence_strategy": "Concrete demos and benchmarks from SCIS 2026 AI sessions showing agent-driven vulnerability discovery, plus quantitative comparisons of time-to-result versus traditional manual analysis."
+      },
+      {
+        "claim": "Formal verification and mathematical proof tools have matured to the point where they can provide correctness guarantees for real-world cryptographic implementations, replacing hope-based assurance with machine-checked rigor.",
+        "evidence_strategy": "Case studies of formally verified cryptographic libraries presented at SCIS 2026, showing scope of properties proved and defects caught that testing missed."
+      },
+      {
+        "claim": "Post-quantum cryptography has moved from theoretical exploration to standardization and early deployment, creating an urgent migration timeline that every security researcher must understand.",
+        "evidence_strategy": "NIST PQC standardization milestones, migration roadmaps discussed at SCIS 2026, and quantitative estimates of the 'harvest now, decrypt later' threat window."
+      },
+      {
+        "claim": "These three trends are converging — AI agents accelerate formal verification workflows and PQC migration — meaning researchers who combine these capabilities will hold a compounding advantage over those who specialize in only one.",
+        "evidence_strategy": "Examples from SCIS 2026 of cross-domain work (e.g., LLM agents assisting in protocol verification or automating PQC migration audits), plus analysis of emerging research collaboration patterns across these fields."
+      }
+    ]
+  },
+  "quality_checklist": {
+    "is_mece": {
+      "result": true,
+      "justification": "The four arguments partition the landscape into three distinct capability domains (AI agents, formal verification, PQC) plus their convergence. Each domain is mutually exclusive in scope — agents address automation, formal verification addresses correctness guarantees, PQC addresses quantum-threat readiness — and the convergence argument is the only one addressing cross-domain synergies. Together they exhaustively cover the core message: the 'what' (claims 1-3) and the 'so what for researchers' (claim 4)."
+    },
+    "passes_so_what_why_so_tests": {
+      "result": true,
+      "justification": "Top-down ('Why so?'): The core message claims AI agents and formal verification crossed a practical threshold — claims 1-3 each provide domain-specific evidence of that crossing, and claim 4 explains the compounding effect. Bottom-up ('So what?'): Each individual claim (e.g., 'agents compress months to hours') answers 'so what?' with 'the field has crossed a practical threshold and researchers must act now,' which is exactly the core message."
+    }
+  }
+}

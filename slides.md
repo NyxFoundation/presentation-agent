@@ -134,6 +134,14 @@ src: ./slides/SL32.md
 ---
 
 ---
+src: ./slides/SL32_2.md
+---
+
+---
+src: ./slides/SL32_3.md
+---
+
+---
 src: ./slides/SL33.md
 ---
 

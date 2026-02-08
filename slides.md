@@ -110,6 +110,18 @@ src: ./slides/SL26.md
 ---
 
 ---
+src: ./slides/SL26_2.md
+---
+
+---
+src: ./slides/SL26_3.md
+---
+
+---
+src: ./slides/SL26_4.md
+---
+
+---
 src: ./slides/SL27.md
 ---
 

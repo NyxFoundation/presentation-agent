@@ -106,10 +106,6 @@ src: ./slides/SL25.md
 ---
 
 ---
-src: ./slides/SL26.md
----
-
----
 src: ./slides/SL26_2.md
 ---
 
@@ -119,10 +115,6 @@ src: ./slides/SL26_3.md
 
 ---
 src: ./slides/SL26_4.md
----
-
----
-src: ./slides/SL27.md
 ---
 
 ---
@@ -138,10 +130,6 @@ src: ./slides/SL30.md
 ---
 
 ---
-src: ./slides/SL31.md
----
-
----
 src: ./slides/SL32.md
 ---
 
@@ -151,10 +139,6 @@ src: ./slides/SL32_2.md
 
 ---
 src: ./slides/SL32_3.md
----
-
----
-src: ./slides/SL33.md
 ---
 
 ---

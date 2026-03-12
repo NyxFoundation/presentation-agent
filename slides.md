@@ -1,8 +1,9 @@
 ---
 theme: seriph
-title: スライドタイトル
+title: 暗号 × ブロックチェーン Study Group 2026 スポンサーシップ提案書
 info: |
-  スライドタイトル
+  東京大学ブロックチェーンイノベーション寄付講座 ブロックチェーン応用実践プログラム
+  暗号 × ブロックチェーン Study Group 2026 スポンサーシップ提案書
 transition: slide-left
 mdc: true
 colorSchema: 'light'
@@ -71,4 +72,24 @@ src: ./slides/SL16.md
 
 ---
 src: ./slides/SL17.md
+---
+
+---
+src: ./slides/SL18.md
+---
+
+---
+src: ./slides/SL19.md
+---
+
+---
+src: ./slides/SL20.md
+---
+
+---
+src: ./slides/SL21.md
+---
+
+---
+src: ./slides/SL22.md
 ---

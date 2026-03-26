@@ -1,78 +1,131 @@
-@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
 
 :root {
-  --slidev-theme-primary: #000000 !important;
-  --slidev-theme-default: #000000;
-  --slidev-theme-accent: #000000;
+  --slidev-theme-primary: #111111 !important;
+  --slidev-theme-default: #111111;
+  --slidev-theme-accent: #111111;
+  --color-danger: #d32f2f;
+  --color-safe: #0f766e;
 }
 
-/* ===== Force light mode - white background for slide content only ===== */
+/* ===== Force light mode ===== */
 .slidev-layout {
   background: #ffffff !important;
   background-color: #ffffff !important;
 }
 
-/* Global font settings */
+/* ===== Global font: Noto Sans JP ===== */
 .slidev-layout,
 .slidev-page,
-p,
-span,
-div,
-li,
-a,
-td,
-th {
-  font-family: 'Noto Sans JP', 'BIZ UDPMincho', sans-serif !important;
-  color: #000000;
+p, span, div, li, a, td, th {
+  font-family: 'Noto Sans JP', sans-serif !important;
+  color: #111111;
 }
 
-/* ===== H1 Title Styling - スタイリッシュな黒タイトル ===== */
+/* ===== H1 ===== */
 .slidev-layout h1 {
-  font-family: 'BIZ UDPMincho', serif !important;
-  color: #000000 !important;
-  font-weight: 700;
-  font-size: 2rem;
-  letter-spacing: 0.02em;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #000000;
+  font-family: 'Noto Sans JP', sans-serif !important;
+  color: #111111 !important;
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: 0.01em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #111111;
   display: inline-block;
 }
 
-/* H2-H6 styling */
-.slidev-layout h2 {
-  font-family: 'BIZ UDPMincho', serif !important;
-  color: #000000 !important;
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.slidev-layout h3 {
-  font-family: 'BIZ UDPMincho', serif !important;
-  color: #1a1a1a !important;
-  font-weight: 600;
-  font-size: 1.25rem;
-}
-
-.slidev-layout h4,
-.slidev-layout h5,
-.slidev-layout h6 {
-  font-family: 'Noto Sans JP', sans-serif !important;
-  color: #333333 !important;
-  font-weight: 500;
-}
-
-/* ===== Cover/Intro layouts - タイトルは下線なし ===== */
 .slidev-layout.cover h1,
-.slidev-layout.intro h1 {
+.slidev-layout.intro h1,
+.slidev-layout.section h1 {
   border-bottom: none;
   display: block;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-align: center;
 }
 
-/* ===== Table styling ===== */
+/* ===== H2-H3 ===== */
+.slidev-layout h2 {
+  font-family: 'Noto Sans JP', sans-serif !important;
+  color: #111111 !important;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.slidev-layout h3 {
+  font-family: 'Noto Sans JP', sans-serif !important;
+  color: #333 !important;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* ===== Danger color (attack/breach) ===== */
+.text-danger {
+  color: var(--color-danger) !important;
+}
+
+/* ===== Safe color (defense/solution) ===== */
+.text-safe {
+  color: var(--color-safe) !important;
+}
+
+/* ===== Card styles ===== */
+.card-danger {
+  background: #fef2f2;
+  border-left: 4px solid var(--color-danger);
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.card-safe {
+  background: #f0fdfa;
+  border-left: 4px solid var(--color-safe);
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.card-neutral {
+  background: #f8f8f8;
+  border-left: 4px solid #999;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+}
+
+/* ===== Banner styles ===== */
+.banner-danger {
+  background: #fef2f2;
+  border: 1px solid var(--color-danger);
+  color: var(--color-danger);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.banner-safe {
+  background: #f0fdfa;
+  border: 1px solid var(--color-safe);
+  color: var(--color-safe);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* ===== Badge styles ===== */
+.badge-danger {
+  background: var(--color-danger);
+  color: #fff;
+  padding: 0.15rem 0.6rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+/* ===== Table ===== */
 .slidev-layout table {
   border-collapse: collapse;
   width: 100%;
@@ -83,7 +136,7 @@ th {
   font-weight: 600;
   text-align: left;
   padding: 0.5rem 0.75rem;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid #111;
 }
 
 .slidev-layout td {
@@ -91,19 +144,11 @@ th {
   border-bottom: 1px solid #e0e0e0;
 }
 
-.slidev-layout tr:hover {
-  background: #fafafa;
-}
-
-/* ===== Code blocks ===== */
+/* ===== Code ===== */
 .slidev-layout pre {
   background: #f8f8f8 !important;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
-}
-
-.slidev-layout code {
-  font-family: 'JetBrains Mono', monospace;
 }
 
 /* ===== Lists ===== */
@@ -119,67 +164,26 @@ th {
 
 /* ===== Links ===== */
 .slidev-layout a {
-  color: #000000 !important;
+  color: #111 !important;
   text-decoration: underline;
-  text-underline-offset: 2px;
 }
 
-.slidev-layout a:hover {
-  opacity: 0.7;
-}
-
-/* ===== Strong/Bold ===== */
+/* ===== Strong ===== */
 .slidev-layout strong {
   font-weight: 700;
-  color: #000000;
-}
-
-/* ===== Page number styling ===== */
-.slidev-page:not(.slidev-layout-cover) .slidev-page-number {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Noto Sans JP', sans-serif !important;
-  font-size: 12px;
-  color: #666666;
-}
-
-/* Hide page number on cover layout */
-.slidev-layout-cover .slidev-page-number {
-  display: none !important;
-}
-
-/* ===== Global logo in bottom-right ===== */
-.nyx-global-logo {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 100;
-  pointer-events: none;
-}
-
-.nyx-global-logo img {
-  width: 100px;
-  height: auto;
-  opacity: 0.8;
-}
-
-/* ===== Mermaid diagrams ===== */
-.mermaid {
-  background: transparent !important;
+  color: #111;
 }
 
 /* ===== Blockquote ===== */
 .slidev-layout blockquote {
-  border-left: 3px solid #000000;
+  border-left: 3px solid #111;
   padding-left: 1rem;
   margin: 1rem 0;
   font-style: italic;
-  color: #444444;
+  color: #444;
 }
 
-/* ===== Horizontal rule ===== */
+/* ===== HR ===== */
 .slidev-layout hr {
   border: none;
   border-top: 1px solid #e0e0e0;

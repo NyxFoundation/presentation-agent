@@ -37,13 +37,13 @@ defineProps({
 
 .cover-icon {
   position: absolute;
-  top: -20px;
-  left: -30px;
+  top: -40px;
+  left: -60px;
   z-index: 0;
 }
 
 .cover-icon img {
-  width: 300px;
+  width: 500px;
   height: auto;
   opacity: 0.12;
 }

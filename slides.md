@@ -1,11 +1,10 @@
 ---
-theme: seriph
+theme: default
 title: OpenClaw + Qwen Uncensored で別の OpenClaw をハッキングしてみた
 info: |
   ClawCon LT — AI Agent 間攻撃の実験と防御
 transition: slide-left
 mdc: true
-colorSchema: 'dark'
 src: ./slides/SL01.md
 ---
 

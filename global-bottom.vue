@@ -24,7 +24,7 @@ const isFirstSlide = computed(() => $nav.currentPage === 1)
 }
 
 .nyx-logo {
-  width: 60px;
+  width: 120px;
   height: auto;
 }
 

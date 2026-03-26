@@ -6,7 +6,7 @@ const isFirstSlide = computed(() => $nav.currentPage === 1)
 
 <template>
   <div class="nyx-footer">
-    <img src="/aladdin-logo.jpg" alt="Aladdin" class="nyx-logo" />
+    <img src="/aladdin-logo-footer.png" alt="Aladdin" class="nyx-logo" />
     <span v-if="!isFirstSlide" class="page-number">{{ $nav.currentPage }}</span>
   </div>
 </template>
@@ -24,9 +24,8 @@ const isFirstSlide = computed(() => $nav.currentPage === 1)
 }
 
 .nyx-logo {
-  width: 80px;
+  width: 60px;
   height: auto;
-  border-radius: 4px;
 }
 
 .page-number {

@@ -8,6 +8,7 @@
     "export": "slidev export"
   },
   "dependencies": {
+    "@chenglou/pretext": "^0.0.3",
     "@slidev/cli": "^52.11.1",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",

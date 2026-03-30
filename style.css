@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap');
 
 :root {
   --slidev-theme-primary: #111111 !important;
@@ -188,4 +188,9 @@ p, span, div, li, a, td, th {
   border: none;
   border-top: 1px solid #e0e0e0;
   margin: 1.5rem 0;
+}
+
+/* Zen Old Mincho override */
+.zen-mincho {
+  font-family: 'Zen Old Mincho', serif !important;
 }

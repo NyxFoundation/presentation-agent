@@ -43,6 +43,18 @@ src: ./slides/SL11.md
 src: ./slides/SL12.md
 ---
 ---
+src: ./slides/SL12b.md
+---
+---
+src: ./slides/SL12c.md
+---
+---
+src: ./slides/SL12d.md
+---
+---
+src: ./slides/SL12e.md
+---
+---
 src: ./slides/SL13.md
 ---
 ---

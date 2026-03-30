@@ -8,7 +8,9 @@ layout: default
 
 <div>
   <img src="/images/ascon_demo.png" class="max-h-56 rounded shadow-sm border border-gray-200" />
-  <div class="text-xs opacity-40 mt-1 text-center">ASCONモニタリングダッシュボード</div>
+  <div class="mt-2 text-center">
+    <a href="https://ascon-proposal-presentation-agent.kingmasatojames.workers.dev/1" target="_blank" class="text-xs text-blue-600 underline">→ スポンサー提案資料を見る</a>
+  </div>
 </div>
 
 <div class="text-sm space-y-3">

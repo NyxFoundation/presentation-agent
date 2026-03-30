@@ -1,28 +1,30 @@
 <script setup>
-import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick, useSlots } from 'vue'
 import { prepareWithSegments, layoutNextLine } from '@chenglou/pretext'
 
 const props = defineProps({
-  text: { type: String, required: true },
+  title: { type: String, default: '' },
+  charSrc: { type: String, default: '/images/logo.png' },
+  charWidth: { type: Number, default: 172 },
+  charHeight: { type: Number, default: 116 },
   font: { type: String, default: '20px Noto Sans JP' },
   lineHeight: { type: Number, default: 30 },
-  charSrc: { type: String, default: '/images/character.png' },
-  charWidth: { type: Number, default: 120 },
-  charHeight: { type: Number, default: 180 },
+  speedX: { type: Number, default: 0.4 },
+  speedY: { type: Number, default: 0.2 },
+  padding: { type: Number, default: 16 },
+  textColor: { type: String, default: '#111' },
 })
 
 const containerRef = ref(null)
+const textRef = ref(null)
 const charX = ref(0)
 const charY = ref(80)
 const dragging = ref(false)
 const dragOffset = ref({ x: 0, y: 0 })
 const lines = ref([])
-// Per-row outline: for each pixel row of the image, store { left, right } of opaque area
 const outlineRows = ref([])
-// Animation
+const slotText = ref('')
 let animFrameId = null
-const speedX = 0.4
-const speedY = 0.2
 const dirX = ref(1)
 const dirY = ref(1)
 let lastLayoutX = 0
@@ -36,8 +38,8 @@ function animate() {
   const containerWidth = containerRef.value.clientWidth
   const containerHeight = containerRef.value.clientHeight
 
-  charX.value += speedX * dirX.value
-  charY.value += speedY * dirY.value
+  charX.value += props.speedX * dirX.value
+  charY.value += props.speedY * dirY.value
 
   if (charX.value + props.charWidth >= containerWidth) {
     charX.value = containerWidth - props.charWidth
@@ -55,6 +57,7 @@ function animate() {
     dirY.value = 1
   }
 
+  // Re-layout only when moved enough (reduces text flicker)
   const dx = Math.abs(charX.value - lastLayoutX)
   const dy = Math.abs(charY.value - lastLayoutY)
   if (dx >= 2 || dy >= 2) {
@@ -66,7 +69,6 @@ function animate() {
   animFrameId = requestAnimationFrame(animate)
 }
 
-// Scan the image on a canvas to find opaque pixel bounds per row, then smooth
 function buildOutline(img) {
   const canvas = document.createElement('canvas')
   canvas.width = img.naturalWidth
@@ -89,7 +91,6 @@ function buildOutline(img) {
     raw.push(left === -1 ? null : { left, right })
   }
 
-  // Smooth outline with a small window to reduce jaggedness
   const smoothRadius = 3
   const rows = []
   for (let i = 0; i < raw.length; i++) {
@@ -109,7 +110,6 @@ function buildOutline(img) {
   outlineRows.value = rows
 }
 
-// For a given text line (y range), find the opaque bounds in display coordinates
 function getOpaqueRange(lineTop, lineBottom) {
   const cTop = charY.value
   const cBottom = charY.value + props.charHeight
@@ -119,46 +119,38 @@ function getOpaqueRange(lineTop, lineBottom) {
   if (imgH === 0) return null
 
   const scaleY = imgH / props.charHeight
-
-  // Sample at the vertical center of the text line for tighter fit
   const lineCenter = (lineTop + lineBottom) / 2
   const imgRow = Math.round((lineCenter - cTop) * scaleY)
   if (imgRow < 0 || imgRow >= imgH) return null
 
   const row = outlineRows.value[imgRow]
   if (!row) return null
-  const minLeft = row.left
-  const maxRight = row.right
 
-  // Convert image pixel coords to display coords
   const imgNaturalWidth = outlineRows.value._naturalWidth
-  const dLeft = charX.value + (minLeft / imgNaturalWidth) * props.charWidth
-  const dRight = charX.value + ((maxRight + 1) / imgNaturalWidth) * props.charWidth
+  const dLeft = charX.value + (row.left / imgNaturalWidth) * props.charWidth
+  const dRight = charX.value + ((row.right + 1) / imgNaturalWidth) * props.charWidth
 
   return { left: dLeft, right: dRight }
 }
 
 function layoutText() {
-  if (!containerRef.value) return
+  if (!containerRef.value || !slotText.value) return
   const containerWidth = containerRef.value.clientWidth
-  const prepared = prepareWithSegments(props.text, props.font)
+  const prepared = prepareWithSegments(slotText.value, props.font)
 
   const result = []
   let cursor = { segmentIndex: 0, graphemeIndex: 0 }
   let y = 0
-  const padding = 4
 
   for (let i = 0; i < 400; i++) {
     const lineTop = y
     const lineBottom = y + props.lineHeight
-
     const opaque = getOpaqueRange(lineTop, lineBottom)
 
     if (opaque) {
-      const spaceLeft = opaque.left - padding
-      const spaceRight = containerWidth - opaque.right - padding
+      const spaceLeft = opaque.left - props.padding
+      const spaceRight = containerWidth - opaque.right - props.padding
 
-      // Layout left side
       if (spaceLeft > 40) {
         const leftLine = layoutNextLine(prepared, cursor, spaceLeft)
         if (!leftLine) break
@@ -166,15 +158,13 @@ function layoutText() {
         cursor = leftLine.end
       }
 
-      // Layout right side
       if (spaceRight > 40) {
         const rightLine = layoutNextLine(prepared, cursor, spaceRight)
         if (!rightLine) break
-        result.push({ text: rightLine.text, x: opaque.right + padding, y, width: rightLine.width })
+        result.push({ text: rightLine.text, x: opaque.right + props.padding, y, width: rightLine.width })
         cursor = rightLine.end
       }
 
-      // If neither side has space, use full width
       if (spaceLeft <= 40 && spaceRight <= 40) {
         const line = layoutNextLine(prepared, cursor, containerWidth)
         if (!line) break
@@ -217,6 +207,11 @@ function onMouseUp() {
 }
 
 onMounted(() => {
+  // Extract text from slot
+  if (textRef.value) {
+    slotText.value = textRef.value.textContent || ''
+  }
+
   const img = new Image()
   img.src = props.charSrc
   img.onload = () => {
@@ -238,44 +233,53 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div ref="containerRef" class="pretext-flow">
-    <!-- Character (draggable) -->
-    <img
-      :src="charSrc"
-      :style="{
-        position: 'absolute',
-        left: charX + 'px',
-        top: charY + 'px',
-        width: charWidth + 'px',
-        height: charHeight + 'px',
-        objectFit: 'contain',
-        cursor: 'grab',
-        zIndex: 10,
-        userSelect: 'none',
-      }"
-      draggable="false"
-      @mousedown="onMouseDown"
-    />
+  <div class="slidev-layout pretext-flow-layout">
+    <h1 v-if="$slidev?.nav?.currentSlideRoute?.meta?.slide?.frontmatter?.title">{{ $slidev.nav.currentSlideRoute.meta.slide.frontmatter.title }}</h1>
+    <!-- Hidden slot to extract text content -->
+    <div ref="textRef" style="display: none"><slot /></div>
 
-    <!-- Text lines rendered by pretext -->
-    <span
-      v-for="(line, i) in lines"
-      :key="i"
-      :style="{
-        position: 'absolute',
-        left: line.x + 'px',
-        top: line.y + 'px',
-        whiteSpace: 'pre',
-        font: font,
-        lineHeight: lineHeight + 'px',
-        color: '#111',
-      }"
-    >{{ line.text }}</span>
+    <div ref="containerRef" class="pretext-container">
+      <img
+        :src="charSrc"
+        :style="{
+          position: 'absolute',
+          left: charX + 'px',
+          top: charY + 'px',
+          width: charWidth + 'px',
+          height: charHeight + 'px',
+          objectFit: 'contain',
+          cursor: 'grab',
+          zIndex: 10,
+          userSelect: 'none',
+        }"
+        draggable="false"
+        @mousedown="onMouseDown"
+      />
+
+      <span
+        v-for="(line, i) in lines"
+        :key="i"
+        :style="{
+          position: 'absolute',
+          left: line.x + 'px',
+          top: line.y + 'px',
+          whiteSpace: 'pre',
+          font: font,
+          lineHeight: lineHeight + 'px',
+          color: textColor,
+        }"
+      >{{ line.text }}</span>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.pretext-flow {
+.pretext-flow-layout {
+  padding: 2rem;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.pretext-container {
   position: relative;
   width: 100%;
   height: 100%;

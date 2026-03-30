@@ -4,11 +4,17 @@ layout: default
 
 # 現在の取り組み ④ — 研究所「Nanto」建設構想
 
-<div class="grid grid-cols-2 gap-6 mt-4">
+<div class="grid grid-cols-2 gap-6 mt-2">
 
-<div>
-  <img src="/images/house_nanto.png" class="max-h-56 rounded shadow-sm border border-gray-200" />
-  <div class="text-xs opacity-40 mt-1 text-center">完成イメージ（富山県南砺市）</div>
+<div class="space-y-3">
+  <div>
+    <img src="/images/nanto_concept.png" class="max-h-44 rounded shadow-sm border border-gray-200 w-full object-cover" />
+    <div class="text-xs opacity-40 mt-1 text-center">研究所「Nanto」完成イメージ（富山県南砺市）</div>
+  </div>
+  <div>
+    <img src="/images/house_nanto.png" class="max-h-28 rounded shadow-sm border border-gray-200 w-full object-cover" />
+    <div class="text-xs opacity-40 mt-1 text-center">まず居住・シェアハウス用住宅を購入し研究を開始</div>
+  </div>
 </div>
 
 <div class="text-sm space-y-3">
@@ -26,8 +32,8 @@ layout: default
   </div>
 
   <div class="p-2 bg-gray-50 text-xs">
-    <strong>ベル研究所の教訓を踏まえた設計：</strong>単一スポンサー依存を避け、<br/>
-    独立した中立的研究機関として、現代に適合した研究所モデルを構築。
+    <strong>段階的アプローチ：</strong>まず居住・シェアハウス用の住宅を購入し、<br/>
+    研究者が集まる拠点として活用しながら、研究所の本格建設を目指す。
   </div>
 </div>
 
@@ -35,5 +41,5 @@ layout: default
 
 <!--
 Speaker Notes:
-2026年2月に発表した、富山県南砺市に建設する研究所「Nanto」の構想です。単なる建物ではなく、研究が継続的に生まれる仕組みを含んだ「研究所モデル」として設計しています。ベル研究所の教訓を踏まえ、分散的な資金設計による独立した運営を目指します。南砺市からも全面的な支援を受けています。
+2026年2月に発表した、富山県南砺市に建設する研究所「Nanto」の構想です。まずは居住・シェアハウス用の住宅を購入して研究者が集まる拠点として活用し、そこから本格的な研究所の建設を目指します。ベル研究所の教訓を踏まえ、分散的な資金設計による独立した運営を目指します。南砺市からも全面的な支援を受けています。
 -->

@@ -6,7 +6,7 @@ const isFirstSlide = computed(() => $nav.currentPage === 1)
 
 <template>
   <div class="nyx-footer">
-    <img src="/images/nyx_logo.svg" alt="Nyx" class="nyx-logo" />
+    <img src="/aladdin-logo-footer.png" alt="Aladdin" class="nyx-logo" />
     <span v-if="!isFirstSlide" class="page-number">{{ $nav.currentPage }}</span>
   </div>
 </template>
@@ -14,8 +14,8 @@ const isFirstSlide = computed(() => $nav.currentPage === 1)
 <style scoped>
 .nyx-footer {
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 12px;
+  right: 20px;
   z-index: 100;
   display: flex;
   align-items: center;
@@ -24,14 +24,14 @@ const isFirstSlide = computed(() => $nav.currentPage === 1)
 }
 
 .nyx-logo {
-  width: 160px;
+  width: 200px;
   height: auto;
 }
 
 .page-number {
-  font-family: 'BIZ UDPMincho', serif;
-  font-size: 14px;
-  color: #000000;
-  margin-left: 8px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px;
+  color: #999;
+  margin-left: 6px;
 }
 </style>

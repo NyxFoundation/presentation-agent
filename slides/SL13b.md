@@ -54,7 +54,7 @@ layout: default
     </div>
   </div>
   <div class="leading-relaxed opacity-80 text-[12px]">
-    “Nyx has proven that supporting grassroots research communities early can yield something more impactful than top-down initiatives.”
+    「草の根の研究コミュニティを早い段階で支えることが、上からの施策以上に大きな成果につながりうることを、Nyxは証明しつつある。」
   </div>
 </div>
 
@@ -64,7 +64,12 @@ layout: default
   支援者が見ているのは、<strong>短期収益よりも基盤技術・人材育成・独立した研究環境を支える価値</strong>です。Nyx Foundationは、研究成果そのものと同時に、<strong>日本から世界へ価値を返すための研究基盤</strong>として期待されています。
 </div>
 
+<div class="mt-3 text-xs opacity-60 leading-relaxed">
+  詳しい寄付者インタビュー・背景は、寄付調達報告記事をご覧ください。<br/>
+  <a href="https://x.com/NyxFoundation/status/2020733505630875936?s=20" target="_blank" class="text-blue-600 underline">→ 寄付記事・支援者インタビューを見る</a>
+</div>
+
 <!--
 Speaker Notes:
-このスライドでは、Nyx Foundationの価値を第三者の言葉で示しています。共通しているのは、短期収益ではなく、基盤技術、人材育成、若い才能が世界に届く研究環境への期待です。Nyxは研究チームであると同時に、研究基盤そのものとして支援されています。
+このスライドでは、Nyx Foundationの価値を第三者の言葉で示しています。共通しているのは、短期収益ではなく、基盤技術、人材育成、若い才能が世界に届く研究環境への期待です。Nyxは研究チームであると同時に、研究基盤そのものとして支援されています。より詳しい背景は寄付記事に誘導してください。
 -->

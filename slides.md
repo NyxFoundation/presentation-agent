@@ -19,6 +19,9 @@ src: ./slides/SL02b.md
 src: ./slides/SL03.md
 ---
 ---
+src: ./slides/SL03b.md
+---
+---
 src: ./slides/SL04.md
 ---
 ---
@@ -59,6 +62,9 @@ src: ./slides/SL12e.md
 ---
 ---
 src: ./slides/SL13.md
+---
+---
+src: ./slides/SL13b.md
 ---
 ---
 src: ./slides/SL14.md

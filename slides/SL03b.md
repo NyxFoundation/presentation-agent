@@ -49,7 +49,7 @@ layout: default
 
 </div>
 
-<div class="mt-5 text-xs opacity-50 leading-relaxed">
+<div class="mt-5 mb-10 text-xs opacity-50 leading-relaxed">
   Ethereumは目的ではなく、<strong>先端的だが実運用に近い研究フィールド</strong>です。Nyx Foundationは、そこで得られる知見を社会基盤全体へ接続していきます。
 </div>
 

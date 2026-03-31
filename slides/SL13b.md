@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# スポンサーからのコメント
+# 第三者から見た Nyx Foundation の価値
 
 <div class="grid grid-cols-2 gap-6 mt-4 text-sm">
 
@@ -15,7 +15,7 @@ layout: default
     </div>
   </div>
   <div class="leading-relaxed opacity-80 text-[12px]">
-    「Nyxの活動は単なる研究にとどまらず、次世代の優秀な研究者・技術者が世界で戦うための基盤づくりそのものだと感じました。」
+    「Nyxの活動は、次世代の優秀な研究者・技術者が世界で戦うための基盤づくりそのものだと感じました。」
   </div>
 </div>
 
@@ -28,7 +28,7 @@ layout: default
     </div>
   </div>
   <div class="leading-relaxed opacity-80 text-[12px]">
-    「夢や理想が先にあり、そのあとに資金を考える。地道に泥臭く成果を積み上げているところに強く共感しました。」
+    「夢や理想が先にあり、そのあとに資金を考える。地道に成果を積み上げているところに強く共感しました。」
   </div>
 </div>
 
@@ -41,7 +41,7 @@ layout: default
     </div>
   </div>
   <div class="leading-relaxed opacity-80 text-[12px]">
-    「既存の営利企業や縦社会に馴染めなくても、圧倒的な熱量を持つ『個』が才能を発揮できる環境を守りたいと思い、支援しました。」
+    「圧倒的な熱量を持つ『個』が、魂を売らずに才能を発揮できる環境を守りたいと思い、支援しました。」
   </div>
 </div>
 
@@ -54,17 +54,17 @@ layout: default
     </div>
   </div>
   <div class="leading-relaxed opacity-80 text-[12px]">
-    “Nyx has proven that supporting grassroots communities at their most fragile stage can yield something far more impactful than top-down initiatives.”
+    “Nyx has proven that supporting grassroots research communities early can yield something more impactful than top-down initiatives.”
   </div>
 </div>
 
 </div>
 
 <div class="mt-5 text-xs opacity-50 leading-relaxed">
-  支援の理由として多く挙がるのは、<strong>短期収益ではなく基盤技術と人材育成を支える姿勢</strong>、そして<strong>日本から世界へ価値を返す研究拠点</strong>への期待です。
+  支援者が見ているのは、<strong>短期収益よりも基盤技術・人材育成・独立した研究環境を支える価値</strong>です。Nyx Foundationは、研究成果そのものと同時に、<strong>日本から世界へ価値を返すための研究基盤</strong>として期待されています。
 </div>
 
 <!--
 Speaker Notes:
-このスライドでは、支援者の声を通じてNyx Foundationの社会的な意味を第三者視点で示しています。共通しているのは、短期収益よりも基盤技術、人材育成、草の根の研究コミュニティを支える価値への共感です。
+このスライドでは、Nyx Foundationの価値を第三者の言葉で示しています。共通しているのは、短期収益ではなく、基盤技術、人材育成、若い才能が世界に届く研究環境への期待です。Nyxは研究チームであると同時に、研究基盤そのものとして支援されています。
 -->

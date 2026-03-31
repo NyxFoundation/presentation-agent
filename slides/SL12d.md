@@ -37,6 +37,10 @@ layout: default
 
 </div>
 
+<div class="mt-4 text-[10px] opacity-50 leading-relaxed">
+  ※ ZKP：内容を明かさず正しさだけを証明する暗号技術 / FHE：暗号化したまま計算できる暗号技術 / MPC：複数者がデータを秘匿したまま共同計算する技術
+</div>
+
 <!--
 Speaker Notes:
 Merkle Japan（旧ZK Tokyo）と東京大学ブロックチェーンイノベーション寄付講座が共催する、日本唯一の「実装できる暗号技術者」育成プログラムです。ZKP・FHE・MPCを7週間で理論から実装まで習得します。2025年度にはETH Tokyoで5チーム以上が入賞する実績を残しています。

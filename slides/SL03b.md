@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Nyx Foundationが取り組む社会課題
+# 最重要の問いに、向き合う
 
 <div class="grid grid-cols-2 gap-4 mt-4">
 
@@ -50,7 +50,7 @@ layout: default
 </div>
 
 <div class="mt-4 text-[11px] opacity-50 leading-snug">
-  Ethereumは目的ではなく、<strong>先端的だが実運用に近い研究フィールド</strong>です。Nyx Foundationは、そこで得られる知見を社会基盤全体へ接続していきます。
+  本当に重要な問題は、閉じた研究室だけでは解けない。大きな問いは、世界にひらかれていたほうがいい。
 </div>
 
 <!--

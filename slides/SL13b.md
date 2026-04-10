@@ -61,7 +61,7 @@ layout: default
 </div>
 
 <div class="mt-5 text-xs opacity-50 leading-relaxed">
-  支援者が見ているのは、<strong>短期収益よりも基盤技術・人材育成・独立した研究環境を支える価値</strong>です。Nyx Foundationは、研究成果そのものと同時に、<strong>日本から世界へ価値を返すための研究基盤</strong>として期待されています。
+  支援者が見ているのは、すでに完成した人材の名簿ではない。<strong>これから世界を変える人間たちの出発点</strong>である。
 </div>
 
 <div class="mt-3 text-xs opacity-60 leading-relaxed">

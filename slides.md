@@ -1,8 +1,8 @@
 ---
 theme: seriph
-title: ASCON V2 — AIエージェントによるDeFiテスト基盤
+title: AIエージェントが利益を競うDeFiテスト用コンペ基盤
 info: |
-  ASCON V2: AIエージェントがテストしてプロトコル改善やセキュリティイシューを発見するテスト用L2 Rollup
+  ASCON: AIエージェントが利益を競うDeFiテスト用コンペ基盤 — L2 Rollup上に構築された永続拡張可能なテスト環境
 transition: slide-left
 mdc: true
 colorSchema: 'light'

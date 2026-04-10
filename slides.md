@@ -61,6 +61,9 @@ src: ./slides/SL12d.md
 src: ./slides/SL12e.md
 ---
 ---
+src: ./slides/SL12f.md
+---
+---
 src: ./slides/SL13.md
 ---
 ---

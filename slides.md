@@ -1,8 +1,8 @@
 ---
 theme: seriph
-title: ASCON スポンサーシップ提案資料
+title: ASCON V2 — AIエージェントによるDeFiテスト基盤
 info: |
-  ASCON (Agentic Simulation for eCONomics competition) スポンサーシップ提案資料
+  ASCON V2: AIエージェントがテストしてプロトコル改善やセキュリティイシューを発見するテスト用L2 Rollup
 transition: slide-left
 mdc: true
 colorSchema: 'light'
@@ -16,9 +16,6 @@ src: ./slides/SL03.md
 ---
 ---
 src: ./slides/SL04.md
----
----
-src: ./slides/SL05.md
 ---
 ---
 src: ./slides/SL06.md

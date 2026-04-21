@@ -1,37 +1,38 @@
 ---
 layout: default
 ---
-# 現在の取り組み ⑤ — 形式検証駆動開発によるイーサリアムクライアント「Verity」
+# Current Initiative 5 — "Verity": A Formally Verified Ethereum Client
+
 <div class="grid grid-cols-2 gap-6 mt-2">
 <div class="space-y-3">
   <div>
     <img src="/images/verity_logo.jpg" class="max-h-28 rounded shadow-sm border border-gray-200 w-full object-contain bg-white" />
-    <div class="text-xs opacity-40 mt-1 text-center">Ethereum次世代クライアント「Verity」</div>
+    <div class="text-xs opacity-40 mt-1 text-center">Next-generation Ethereum client "Verity"</div>
   </div>
   <div>
-    <img src="/images/verity_process.jpg" class="max-h-44 rounded shadow-sm border border-gray-200 w-full object-cover" />
-    <div class="text-xs opacity-40 mt-1 text-center">従来の開発プロセスとVerityの開発プロセスの比較</div>
+    <img src="/images/verity_process_en.svg" class="max-h-44 rounded shadow-sm border border-gray-200 w-full object-contain bg-white" />
+    <div class="text-xs opacity-40 mt-1 text-center">Comparison of traditional vs. Verity's development process</div>
   </div>
 </div>
 <div class="text-sm space-y-3">
   <div class="pl-3 border-l-4 border-black">
-    <div class="font-bold">形式検証を中核に据えた「最もセキュアなクライアント」</div>
-    <div class="opacity-60 text-xs">2026年4月発表 / Lean Consensus対応の新規独立実装</div>
+    <div class="font-bold">"The most secure client" with formal verification at its core</div>
+    <div class="opacity-60 text-xs">Announced April 2026 / New independent implementation for Lean Consensus</div>
   </div>
   <div class="space-y-2 text-xs">
-    <div>• プロトコル仕様全体を<strong>Lean4言語で形式化</strong>し、数学的に正しさを証明</div>
-    <div>• 「特定条件下でバグがない」ではなく<strong>「仕様の範囲内でバグがありえない」</strong>ことを保証</div>
-    <div>• 耐量子暗号（XMSS）への移行・<strong>zkVM「Lean Multisig」</strong>開発に参画した実績を基盤に</div>
-    <div>• EFのPQC移行チームから評価を取得、<strong>Justin Drake氏の基調講演</strong>で紹介</div>
-    <div>• 2026年10月 <strong>第二回ケンブリッジPQ Workshop</strong> への招待を受領</div>
+    <div>• Entire protocol specification <strong>formalized in Lean4</strong>, with mathematical proofs of correctness</div>
+    <div>• Guarantees not just "no bugs under certain conditions" but <strong>"impossibility of bugs within the specification"</strong></div>
+    <div>• Built on our track record with PQ cryptography (XMSS) migration and <strong>zkVM "Lean Multisig"</strong> development</div>
+    <div>• Recognized by EF's PQC migration team, featured in <strong>Justin Drake's keynote</strong></div>
+    <div>• Invited to the <strong>2nd Cambridge PQ Workshop</strong> in October 2026</div>
   </div>
   <div class="p-2 bg-gray-50 text-xs">
-    <strong>独自価値：</strong>クライアント多様性に「形式検証」という新たな軸で貢献。<br/>
-    AIコード生成時代における<strong>正しさの保証</strong>を根本から解決する。
+    <strong>Unique value:</strong> Contributing to client diversity through a new axis of "formal verification."<br/>
+    Fundamentally solving the <strong>correctness guarantee problem</strong> in the era of AI code generation.
   </div>
 </div>
 </div>
 <!--
 Speaker Notes:
-Verityは、Ethereumの次世代コンセンサス層「Lean Consensus」に対応する新規クライアントです。最大の特徴は形式検証を開発プロセスの中核に据えている点で、プロトコル仕様全体をLean4言語で形式化し、仕様そのものの正しさを数学的に証明します。従来のテストが「特定条件下でバグがない」ことを示すのに対し、形式検証は「仕様の範囲内でバグがありえない」ことを数学的に証明します。EFのPQC移行チームからも評価を得ており、Justin Drake氏の基調講演でも紹介されました。
+Verity is a new client for Ethereum's next-generation consensus layer "Lean Consensus." Its key feature is placing formal verification at the core of the development process, formalizing the entire protocol specification in Lean4 and mathematically proving its correctness. While traditional testing shows "no bugs under certain conditions," formal verification mathematically proves "impossibility of bugs within the specification." It has been recognized by EF's PQC migration team and was featured in Justin Drake's keynote.
 -->

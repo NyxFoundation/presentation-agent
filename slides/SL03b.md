@@ -2,58 +2,58 @@
 layout: default
 ---
 
-# 最重要の問いに、向き合う
+# Confronting the Most Critical Questions
 
 <div class="grid grid-cols-2 gap-4 mt-4">
 
 <div class="p-3 border border-gray-200 rounded-lg">
-  <div class="text-base mb-1">1. 耐量子計算機移行</div>
+  <div class="text-base mb-1">1. Post-Quantum Migration</div>
   <div class="text-[13px] opacity-70 leading-snug">
-    将来の量子計算機によって、現在広く使われる暗号方式が破られる可能性がある。<br/>
-    公共システムや認証基盤の安全な移行設計は、社会全体の重要課題。
+    Future quantum computers could break the cryptographic methods widely used today.<br/>
+    Designing a safe migration path for public systems and authentication infrastructure is a critical challenge for society as a whole.
   </div>
-  <div class="mt-2 text-[10px] opacity-50 leading-snug">Ethereumでの耐量子署名・形式検証研究は、現実社会の移行設計にもつながる</div>
+  <div class="mt-2 text-[10px] opacity-50 leading-snug">Post-quantum signature and formal verification research on Ethereum also informs real-world migration design</div>
 </div>
 
 <div class="p-3 border border-gray-200 rounded-lg">
-  <div class="text-base mb-1">2. サイバーセキュリティの高度化</div>
+  <div class="text-base mb-1">2. Advancing Cybersecurity</div>
   <div class="text-[13px] opacity-70 leading-snug">
-    ソフトウェアやネットワークの複雑化により、人手だけで重要な脆弱性を見つけることが難しくなっている。<br/>
-    AIを活用した監査・検証の自動化は、次世代の防御基盤として応用範囲が広い。
+    As software and networks grow more complex, finding critical vulnerabilities by manual effort alone becomes increasingly difficult.<br/>
+    AI-powered automated auditing and verification has broad applications as next-generation defense infrastructure.
   </div>
-  <div class="mt-2 text-[10px] opacity-50 leading-snug">Ethereum監査で鍛えた手法は、Web・インフラ・重要システムの検証にも展開できる</div>
+  <div class="mt-2 text-[10px] opacity-50 leading-snug">Methods refined through Ethereum auditing can be extended to web, infrastructure, and critical system verification</div>
 </div>
 
 <div class="p-3 border border-gray-200 rounded-lg">
-  <div class="text-base mb-1">3. 金融市場の公平性・透明性</div>
+  <div class="text-base mb-1">3. Financial Market Fairness & Transparency</div>
   <div class="text-[13px] opacity-70 leading-snug">
-    デジタル市場では、取引順序や情報格差によって一部参加者が有利になる構造が生まれうる。<br/>
-    公平で説明可能な市場設計は、金融とデジタル社会の両方で重要になる。
+    In digital markets, structures can emerge where some participants gain advantages through transaction ordering or information asymmetry.<br/>
+    Fair and explainable market design is becoming essential for both finance and digital society.
   </div>
-  <div class="mt-2 text-[10px] opacity-50 leading-snug">Ethereum上のMEV・DEX研究は、次世代の市場制度設計や監視にも示唆を与える</div>
+  <div class="mt-2 text-[10px] opacity-50 leading-snug">MEV and DEX research on Ethereum offers insights for next-generation market system design and regulation</div>
 </div>
 
 <div class="p-3 border-2 border-black rounded-lg bg-gray-50">
-  <div class="text-base font-bold mb-1">Nyxのアプローチ</div>
+  <div class="text-base font-bold mb-1">Nyx's Approach</div>
   <div class="text-[13px] leading-snug">
-    <strong>Ethereumという実運用に近い公開基盤</strong>を研究対象にしながら、
-    実社会でも重要になる <strong>安全性・公平性・移行可能性</strong> の課題に取り組む。
+    Using <strong>Ethereum as a live, production-grade public infrastructure</strong> as our research subject,
+    we tackle challenges in <strong>security, fairness, and migration</strong> that matter for the real world.
   </div>
   <div class="mt-2 flex flex-wrap gap-1.5 text-[10px]">
-    <div class="px-2 py-1 bg-black text-white rounded">耐量子暗号</div>
-    <div class="px-2 py-1 bg-white border border-gray-300 rounded">AIセキュリティ監査</div>
-    <div class="px-2 py-1 bg-white border border-gray-300 rounded">MEV・市場分析</div>
-    <div class="px-2 py-1 bg-white border border-gray-300 rounded">形式検証</div>
+    <div class="px-2 py-1 bg-black text-white rounded">PQ Cryptography</div>
+    <div class="px-2 py-1 bg-white border border-gray-300 rounded">AI Security Auditing</div>
+    <div class="px-2 py-1 bg-white border border-gray-300 rounded">MEV & Market Analysis</div>
+    <div class="px-2 py-1 bg-white border border-gray-300 rounded">Formal Verification</div>
   </div>
 </div>
 
 </div>
 
 <div class="mt-4 text-[11px] opacity-50 leading-snug">
-  本当に重要な問題は、閉じた研究室だけでは解けない。大きな問いは、世界にひらかれていたほうがいい。
+  Truly important problems cannot be solved in closed labs alone. Big questions are better when open to the world.
 </div>
 
 <!--
 Speaker Notes:
-このスライドでは、Nyx Foundationが扱うテーマを、実社会に接続する具体的な社会課題として示しています。耐量子計算機移行、サイバーセキュリティ、金融市場の公平性は、いずれもEthereumで先行的に現れている課題でありながら、公共システムや金融市場など広い領域に応用可能です。NyxはEthereumを、先端的で実運用に近い研究フィールドとして活用しています。
+This slide presents the themes Nyx Foundation addresses as concrete societal challenges connected to the real world. Post-quantum migration, cybersecurity, and financial market fairness are all challenges that emerge first on Ethereum but have broad applications to public systems and financial markets. Nyx leverages Ethereum as a cutting-edge, production-grade research field.
 -->

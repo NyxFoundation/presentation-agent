@@ -2,38 +2,38 @@
 layout: default
 ---
 
-# 現在の取り組み ④ — 研究所「Nanto」建設構想
+# Current Initiative 4 — Research Lab "Nanto" Construction Plan
 
 <div class="grid grid-cols-2 gap-6 mt-2">
 
 <div class="space-y-3">
   <div>
     <img src="/images/nanto_concept.png" class="max-h-44 rounded shadow-sm border border-gray-200 w-full object-cover" />
-    <div class="text-xs opacity-40 mt-1 text-center">研究所「Nanto」完成イメージ（富山県南砺市）</div>
+    <div class="text-xs opacity-40 mt-1 text-center">Concept image of Research Lab "Nanto" (Nanto City, Toyama Prefecture)</div>
   </div>
   <div>
     <img src="/images/house_nanto.png" class="max-h-28 rounded shadow-sm border border-gray-200 w-full object-cover" />
-    <div class="text-xs opacity-40 mt-1 text-center">まず居住・シェアハウス用住宅を購入し研究を開始</div>
+    <div class="text-xs opacity-40 mt-1 text-center">First step: Purchase a residence/shared house to begin research</div>
   </div>
 </div>
 
 <div class="text-sm space-y-3">
   <div class="pl-3 border-l-4 border-black">
-    <div class="font-bold">世界の第一線で活躍する研究者が結集する、独立した研究拠点</div>
-    <div class="opacity-60 text-xs">2026年2月発表 / 南砺市が全面支援</div>
+    <div class="font-bold">An independent research hub where world-class researchers converge</div>
+    <div class="opacity-60 text-xs">Announced February 2026 / Fully supported by Nanto City</div>
   </div>
 
   <div class="space-y-2 text-xs">
-    <div>• 単なる建物ではなく、<strong>研究が継続的に生まれる仕組み</strong>を含んだ「研究所モデル」</div>
-    <div>• 常駐研究者 + 国内外からの<strong>ゲスト滞在型</strong>共同研究</div>
-    <div>• <strong>AIを活用した研究基盤</strong>：事務手続きの負担軽減、研究AI補助ツールを中核に整備</div>
-    <div>• <strong>オープンサイエンス</strong>：論文のみならず方法・実装・ツールも社会に共有</div>
-    <div>• 複数の個人・組織からの<strong>分散的な資金設計</strong>で持続的に運営</div>
+    <div>• Not just a building, but a <strong>"research lab model" with mechanisms for continuous research generation</strong></div>
+    <div>• Resident researchers + <strong>guest residency-based</strong> collaborative research from Japan and abroad</div>
+    <div>• <strong>AI-powered research infrastructure</strong>: Reducing administrative burden, AI research assistant tools at the core</div>
+    <div>• <strong>Open science</strong>: Sharing not only papers but also methods, implementations, and tools with society</div>
+    <div>• Sustainable operations through <strong>distributed funding design</strong> from multiple individuals and organizations</div>
   </div>
 
   <div class="p-2 bg-gray-50 text-xs">
-    <strong>段階的アプローチ：</strong>まず居住・シェアハウス用の住宅を購入し、<br/>
-    研究者が集まる拠点として活用しながら、研究所の本格建設を目指す。
+    <strong>Phased approach:</strong> First, purchase a residential/shared house,<br/>
+    use it as a hub for researchers to gather, and work toward full-scale lab construction.
   </div>
 </div>
 
@@ -41,5 +41,5 @@ layout: default
 
 <!--
 Speaker Notes:
-2026年2月に発表した、富山県南砺市に建設する研究所「Nanto」の構想です。まずは居住・シェアハウス用の住宅を購入して研究者が集まる拠点として活用し、そこから本格的な研究所の建設を目指します。ベル研究所の教訓を踏まえ、分散的な資金設計による独立した運営を目指します。南砺市からも全面的な支援を受けています。
+Announced in February 2026, this is the plan to build Research Lab "Nanto" in Nanto City, Toyama Prefecture. We will first purchase a residential/shared house and use it as a base for researchers to gather, then work toward full-scale lab construction. Drawing lessons from Bell Labs, we aim for independent operations through distributed funding design. Nanto City is providing full support.
 -->

@@ -1,9 +1,9 @@
 ---
 theme: seriph
-title: Nyx Foundation 会社説明資料
+title: Nyx Foundation Company Overview
 info: |
-  一般社団法人 Nyx Foundation 会社説明資料
-  オープンイノベーションのための検証可能な未来を築く
+  Nyx Foundation Company Overview
+  Building a verifiable future through open innovation
 transition: slide-left
 mdc: true
 colorSchema: 'light'
@@ -35,9 +35,6 @@ src: ./slides/SL07.md
 ---
 ---
 src: ./slides/SL08.md
----
----
-src: ./slides/SL09.md
 ---
 ---
 src: ./slides/SL10.md

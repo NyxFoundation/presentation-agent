@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# 現在の取り組み ③ — 暗号×ブロックチェーン Study Group（東京大学共催）
+# Current Initiative 3 — Cryptography × Blockchain Study Group (Co-hosted with University of Tokyo)
 
 <div class="grid grid-cols-2 gap-6 mt-4">
 
@@ -13,35 +13,35 @@ layout: default
     <img src="/images/ut_blockchain.png" class="h-16" />
   </div>
   <img src="/images/vitalik-zktokyo.png" class="max-h-40 rounded shadow-sm border border-gray-200 w-full object-cover" />
-  <div class="text-xs opacity-40 mt-1 text-center">2025年度 Demo Day の様子</div>
+  <div class="text-xs opacity-40 mt-1 text-center">2025 Demo Day</div>
 </div>
 
 <div class="text-sm space-y-3">
   <div class="pl-3 border-l-4 border-black">
-    <div class="font-bold">日本唯一の「実装できる暗号技術者」育成プログラム</div>
-    <div class="opacity-60 text-xs">Merkle Japan（旧 ZK Tokyo）× 東京大学寄付講座</div>
+    <div class="font-bold">Japan's only training program for "cryptographic engineers who can implement"</div>
+    <div class="opacity-60 text-xs">Merkle Japan (formerly ZK Tokyo) × University of Tokyo Endowed Course</div>
   </div>
 
   <div class="space-y-2 text-xs">
-    <div>• <strong>ZKP / FHE / MPC</strong> を理論からゼロからの実装まで学ぶ <strong>7週間</strong> 集中プログラム</div>
-    <div>• 毎週土曜 東大講義室にて対面実施（講義2h + ホワイトボード2.5h）</div>
-    <div>• 参加見込 <strong>100名</strong>（学生 + 社会人エンジニア）</div>
-    <div>• 2026年8月〜9月開催予定（スポンサー募集中）</div>
+    <div>• An intensive <strong>7-week</strong> program covering <strong>ZKP / FHE / MPC</strong> from theory to implementation from scratch</div>
+    <div>• In-person every Saturday at University of Tokyo classrooms (2h lecture + 2.5h whiteboard sessions)</div>
+    <div>• Expected <strong>100 participants</strong> (students + professional engineers)</div>
+    <div>• Planned for August–September 2026 (sponsors welcome)</div>
   </div>
 
   <div class="p-2 bg-gray-50 text-xs">
-    <strong>2025年度実績：</strong>6週間のプログラムで <strong>ETH Tokyo 5チーム以上が入賞</strong>。<br/>
-    卒業生はNyx Foundation、Animechain、JPYC、Intmax等で活躍中。
+    <strong>2025 Results:</strong> Over <strong>5 teams won prizes at ETH Tokyo</strong> from the 6-week program.<br/>
+    Alumni are now active at Nyx Foundation, Animechain, JPYC, Intmax, and more.
   </div>
 </div>
 
 </div>
 
 <div class="mt-4 text-[10px] opacity-50 leading-relaxed">
-  ※ ZKP：内容を明かさず正しさだけを証明する暗号技術 / FHE：暗号化したまま計算できる暗号技術 / MPC：複数者がデータを秘匿したまま共同計算する技術
+  * ZKP: Cryptographic technology that proves correctness without revealing content / FHE: Cryptographic technology that enables computation on encrypted data / MPC: Technology for multiple parties to jointly compute while keeping data private
 </div>
 
 <!--
 Speaker Notes:
-Merkle Japan（旧ZK Tokyo）と東京大学ブロックチェーンイノベーション寄付講座が共催する、日本唯一の「実装できる暗号技術者」育成プログラムです。ZKP・FHE・MPCを7週間で理論から実装まで習得します。2025年度にはETH Tokyoで5チーム以上が入賞する実績を残しています。
+Co-hosted by Merkle Japan (formerly ZK Tokyo) and the University of Tokyo Blockchain Innovation Endowed Course, this is Japan's only training program for "cryptographic engineers who can implement." Participants learn ZKP, FHE, and MPC from theory to implementation over 7 weeks. In 2025, over 5 teams from the program won prizes at ETH Tokyo.
 -->

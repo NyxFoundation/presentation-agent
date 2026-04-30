@@ -4,7 +4,7 @@ import AsconCityScene from './AsconCityScene.vue'
 </script>
 
 <template>
-  <TresCanvas clear-color="#eef2f7" :antialias="true">
+  <TresCanvas clear-color="#06081a" :antialias="true">
     <AsconCityScene />
   </TresCanvas>
 </template>

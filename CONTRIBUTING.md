@@ -37,11 +37,11 @@ Claude Code session on the machine running `make all`. See the
 
 ## Branch conventions
 
-| Branch in this repo | Who can push                | Cloudflare Pages |
-|---------------------|-----------------------------|------------------|
-| `main`              | maintainers (via merge)     | production       |
-| `presentation/*`    | maintainers + pipeline bot  | preview          |
-| all other branches  | maintainers only            | not deployed     |
+| Branch in this repo | Who can push            | Cloudflare       |
+|---------------------|-------------------------|------------------|
+| `main`              | maintainers (via merge) | production       |
+| `presentation/*`    | maintainers             | preview          |
+| all other branches  | not creatable           | n/a              |
 
 External contributors open PRs from their own forks. Forks never publish to
 the upstream Cloudflare Pages project — `presentation/*` is reserved for

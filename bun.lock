@@ -3,7 +3,7 @@
   "configVersion": 0,
   "workspaces": {
     "": {
-      "name": "scis2026-security-agent-presentation",
+      "name": "presentation-agent",
       "dependencies": {
         "@slidev/cli": "^52.11.1",
         "@slidev/theme-default": "latest",

@@ -8,6 +8,12 @@ on:
 
 jobs:
   generate-presentation:
+    # Restrict who can dispatch this workflow. By default workflow_dispatch
+    # is allowed for anyone with Write access to the repo; this allowlist
+    # tightens it to named maintainers. To extend, add the GitHub username
+    # to the JSON array. For org-level enforcement, see the
+    # "Maintainer Setup" section of README.md (environment-based gate).
+    if: contains(fromJson('["grandchildrice"]'), github.actor)
     runs-on: self-hosted
 
     permissions:
@@ -73,7 +79,9 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           git checkout -b "${BRANCH_NAME}"
-          git add outputs/ slides/
+          # outputs/ and slides/ are gitignored so contributor PRs stay clean;
+          # the bot force-adds them only on `presentation/*` branches.
+          git add -f outputs/ slides/
           git commit -m "Generate presentation outputs
 
           Target: ${{ steps.extract-metadata.outputs.target_audience }}

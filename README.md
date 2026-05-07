@@ -1,8 +1,19 @@
 # Presentation Agent
 
+A Claude-driven pipeline that turns a single Markdown brief into a
+production-quality [Slidev](https://sli.dev/) deck — combining the
+logical rigor of consulting firms (McKinsey, BCG) with the narrative
+craft of presenters like Steve Jobs and Nancy Duarte.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 ## Overview
 
-This pipeline is an ideal presentation creation agent that combines the logical rigor of world-class consulting firms (McKinsey, BCG) with the emotional impact of legendary presenters (Steve Jobs, Nancy Duarte).
+You write a target audience, constraints, and raw content in
+`inputs/introduction.md`. The pipeline runs nine prompts through the
+`claude` CLI to build a persona, design the argument structure, draft
+each slide, and emit Slidev-ready Markdown — with intermediate JSON at
+every step so you can inspect (and override) any stage.
 
 ## Design Philosophy
 
@@ -362,7 +373,118 @@ Environment variables used by the workflow:
 
 Execution logs are stored as an Artifact named **pipeline-logs** for 7 days.
 
+## Contributing
+
+PRs and issues are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the
+local development workflow, branch conventions, and PR expectations.
+
+## Maintainer Setup
+
+One-time configuration the repository owner must perform on Cloudflare and
+GitHub for the branch model described in [Contributing](#contributing) to
+actually be enforced. Without these, the conventions are documentation only.
+
+### 1. Cloudflare Pages — restrict which branches deploy
+
+In the Pages project: **Settings → Builds & deployments → Branch deployments**.
+
+- **Production branch:** `main`
+- **Preview branches:** switch from "All non-production branches" to
+  **"Include only" / "Custom"** and set the pattern to `presentation/*`
+- **Pull request previews:** disable, or limit to PRs targeting
+  `presentation/*` only
+
+Result: contributor branches and fork PRs no longer spawn preview
+deployments, so the Pages quota stays predictable.
+
+### 2. GitHub — protect `presentation/**` with a ruleset
+
+**Settings → Rules → Rulesets → New branch ruleset.**
+
+- **Target:** `presentation/**`
+- **Enforcement:** Active
+- **Rules:** enable **"Restrict creations"** and **"Restrict updates"**
+  (or "Restrict pushes" in classic branch protection)
+- **Bypass list:** repository admins, plus the actor that
+  `presentation-pipeline.yml` pushes as. The default `GITHUB_TOKEN` does
+  **not** bypass rulesets automatically, so you must either (a) add the
+  GitHub Actions integration as a bypass actor, or (b) push from the
+  workflow using a PAT / fine-grained token belonging to a bypass-listed
+  account. Verify with a dry run before relying on it.
+
+Result: only maintainers and the pipeline bot can create or update branches
+under `presentation/`. Drafts from contributors cannot accidentally land in
+the deployment namespace.
+
+### 3. Self-hosted runner safety (public repo)
+
+`presentation-pipeline.yml` runs on `runs-on: self-hosted`. When the repo is
+public this needs care:
+
+- The workflow trigger is `workflow_dispatch` only, so fork PRs cannot start
+  it. Do **not** add `pull_request` triggers without rethinking this.
+- **Settings → Actions → General → Fork pull request workflows from
+  outside collaborators:** set to *"Require approval for all outside
+  collaborators"* as defense in depth.
+- Scope the self-hosted runner to this single repository (or a dedicated
+  org-level group with allowlists). Prefer ephemeral / containerized
+  runners so a malicious job cannot persist.
+- The runner needs an authenticated `claude` CLI session; treat that
+  session like a secret and rotate it if the host is ever compromised.
+
+### 4. Restrict who can dispatch the pipeline
+
+By default GitHub allows **anyone with Write access** to the repo to trigger
+`workflow_dispatch`. The pipeline runs on a self-hosted runner with an
+authenticated `claude` session, so a wider trigger surface translates
+directly into security and cost risk.
+
+The workflow ships with a code-level allowlist that gates the job on
+`github.actor`:
+
+```yaml
+# .github/workflows/presentation-pipeline.yml
+if: contains(fromJson('["grandchildrice"]'), github.actor)
+```
+
+Add additional maintainers to the JSON array as needed. Note: when a
+non-allowlisted user dispatches the workflow, the run still appears in the
+Actions tab but the job is marked **Skipped** (not Failed). This is the
+expected GitHub Actions behavior for `if:` conditions evaluating to false.
+
+For stricter
+enforcement (org-level audit, required reviewers, manual approval), wrap
+the job in an [environment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)
+configured in **Settings → Environments → New environment** with
+**Required reviewers**, then reference it from the job:
+
+```yaml
+jobs:
+  generate-presentation:
+    environment: pipeline-deploy
+    runs-on: self-hosted
+    ...
+```
+
+Each dispatch will then pause until a listed reviewer approves it.
+
+### 5. Sanity check before going public
+
+- [ ] Cloudflare Pages preview pattern set to `presentation/*` only
+- [ ] PR previews disabled (or scoped) in Cloudflare Pages
+- [ ] Branch ruleset on `presentation/**` is **Active**, with bypass list
+      verified — confirmed by a dispatched pipeline run that successfully
+      pushes and opens a PR
+- [ ] Actions setting requires approval for outside-collaborator workflows
+- [ ] Workflow `if:` allowlist contains the right maintainer usernames
+      (and/or environment gate is configured)
+- [ ] Self-hosted runner is repo-scoped and not exposed to other repos
+- [ ] `outputs/` and `slides/` are not tracked on `main`
+      (`git ls-files outputs/ slides/` returns empty)
+
 ## References
+
+The prompt design draws on the following thinkers and frameworks:
 
 - **McKinsey / BCG**: Pyramid Principle, Action Titles, So What? / Why So? Test
 - **Barbara Minto**: "The Pyramid Principle"
@@ -370,3 +492,14 @@ Execution logs are stored as an Artifact named **pipeline-logs** for 7 days.
 - **Steve Jobs**: Simplicity, Visual Priority, Storytelling
 - **Jeff Bezos**: 6-Page Memo, Narrative Structure, Speaker Notes First
 - **Gene Zelazny**: Data Visualization Principles, 1 Chart 1 Message
+
+## Acknowledgements
+
+- [Slidev](https://sli.dev/) for the slide rendering engine.
+- [Claude Code](https://claude.com/claude-code) and the `claude` CLI for
+  executing the prompts.
+- All the contributors who file issues and PRs against this project.
+
+## License
+
+Released under the [MIT License](LICENSE).

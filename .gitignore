@@ -8,3 +8,8 @@ components.d.ts
 *Zone.Identifier
 actions-runner/
 .env
+
+# Generated artifacts. Only the pipeline bot commits these (force-add
+# on `presentation/*`); contributors preview locally via `bun dev`.
+outputs/
+slides/

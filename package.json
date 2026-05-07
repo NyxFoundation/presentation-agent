@@ -1,5 +1,5 @@
 {
-  "name": "scis2026-security-agent-presentation",
+  "name": "presentation-agent",
   "type": "module",
   "private": true,
   "scripts": {

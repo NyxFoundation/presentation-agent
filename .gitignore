@@ -13,4 +13,3 @@ actions-runner/
 # a deck on a `presentation/*` branch; contributors preview locally via
 # `bun dev`.
 outputs/
-slides/

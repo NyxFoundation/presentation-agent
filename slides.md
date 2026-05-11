@@ -7,7 +7,6 @@ info: |
 transition: slide-left
 mdc: true
 colorSchema: 'light'
-download: true
 canvasWidth: 1280
 aspectRatio: 16/9
 src: ./slides/SL01.md

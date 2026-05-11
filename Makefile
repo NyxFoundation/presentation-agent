@@ -55,7 +55,8 @@ CLAUDE_FLAGS ?= --dangerously-skip-permissions --output-format json
         context_analysis audience_persona core_strategy \
         governing_argument narrative_blueprint \
         slide_drafting visual_design \
-        executive_review final_export
+        executive_review final_export \
+        polish all_polished
 
 # ==============================================================================
 # Main Targets
@@ -66,7 +67,14 @@ all: final_export
 	@echo "Pipeline complete!"
 	@echo "Final manifest: $(EXPORT_OUT)"
 	@echo "Slides directory: $(SLIDES_DIR)/"
+	@echo ""
+	@echo "Optional next step: run 'make polish' to iterate the deck"
+	@echo "through the executive rubric (build → PNG → score → fix → repeat)."
 	@echo "============================================"
+
+# Run steps 01-09 and then the recursive self-improvement loop.
+all_polished: all polish
+	@echo "Full pipeline + polish loop complete."
 
 help:
 	@echo "============================================================================"
@@ -76,7 +84,9 @@ help:
 	@echo "Usage: make [target]"
 	@echo ""
 	@echo "Main Targets:"
-	@echo "  all            - Run the entire 9-step pipeline from start to finish."
+	@echo "  all            - Run the entire 9-step generation pipeline."
+	@echo "  polish         - Run the recursive self-improvement loop on existing slides/."
+	@echo "  all_polished   - Run 'all' then 'polish' (full generation + quality loop)."
 	@echo "  validate       - Validate that inputs/introduction.md has required frontmatter."
 	@echo "  clean          - Remove all generated outputs."
 	@echo ""
@@ -98,6 +108,11 @@ help:
 	@echo "  Phase 4: Polish & Export (Review & Output)"
 	@echo "    8. executive_review   - Conduct a final 'murder board' review."
 	@echo "    9. final_export       - Apply revisions and export to Slidev Markdown."
+	@echo ""
+	@echo "  Phase 5: Quality Loop (Optional)"
+	@echo "   10. polish             - Build, export PNGs, score the 8-axis rubric,"
+	@echo "                             apply targeted fixes, and iterate up to 7 cycles"
+	@echo "                             until every axis is >= 4.5."
 	@echo ""
 	@echo "Configuration:"
 	@echo "  All presentation metadata is configured in inputs/introduction.md frontmatter:"
@@ -233,3 +248,27 @@ $(EXPORT_OUT): $(PROMPTS_DIR)/09_Final_Export.md $(DRAFTS_OUT) $(VISUALS_OUT) $(
 	prompt="$$(sed -e 's|{{SLIDE_DRAFTS}}|$(DRAFTS_OUT)|g' -e 's|{{VISUAL_DESIGNS}}|$(VISUALS_OUT)|g' -e 's|{{EXECUTIVE_REVIEW}}|$(REVIEW_OUT)|g' -e "s|{{STYLE_GUIDE}}|$$style_guide|g" $<)"; \
 	claude $(CLAUDE_FLAGS) -p "$$prompt" > $(LOG_DIR)/09_Final_Export.json
 	@if [ -f "$(EXPORT_OUT)" ]; then echo "[Step 9/9] Complete. Final manifest at $(EXPORT_OUT)"; else echo "[Step 9/9] Warning: $(EXPORT_OUT) not found."; fi
+
+# ==============================================================================
+# Phase 5: Quality Loop (Optional)
+# ==============================================================================
+
+# Build → PNG export → 8-axis rubric → targeted fixes → repeat (up to 7 cycles)
+# until every axis is >= 4.5. Modifies slides/ in place.
+#
+# Standalone: works on any deck where slides.md + slides/ exist, regardless
+# of whether the JSON outputs/ from steps 01-09 are present.
+polish: | init
+	@echo "[Step 10/10] Recursive Self-Improvement..."
+	@if [ ! -f "slides.md" ]; then \
+		echo "ERROR: slides.md not found. Run 'make all' first, or create slides.md manually."; \
+		exit 1; \
+	fi
+	@if [ ! -d "$(SLIDES_DIR)" ] || [ -z "$$(ls -A $(SLIDES_DIR) 2>/dev/null)" ]; then \
+		echo "ERROR: $(SLIDES_DIR)/ is empty. Run 'make all' first."; \
+		exit 1; \
+	fi
+	@prompt="$$(cat $(PROMPTS_DIR)/10_Recursive_Self_Improvement.md)"; \
+	claude $(CLAUDE_FLAGS) -p "$$prompt" > $(LOG_DIR)/10_Recursive_Self_Improvement.json
+	@echo "[Step 10/10] Complete. Review the report in $(LOG_DIR)/10_Recursive_Self_Improvement.json"
+	@echo "             and inspect the updated slides under $(SLIDES_DIR)/."

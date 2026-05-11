@@ -2,7 +2,9 @@
 layout: default
 ---
 
-# 現在の取り組み ④ — 研究所「Nanto」建設構想
+# ⑤ Nanto研究所 — 家から始まる発明を、地理的に広げる
+
+<div class="text-xs opacity-50 -mt-2 mb-2">本郷の家から、富山県南砺市へ。分散した拠点が、互いに接続しながら増えていく未来。</div>
 
 <div class="grid grid-cols-2 gap-6 mt-2">
 

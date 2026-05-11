@@ -2,7 +2,9 @@
 layout: default
 ---
 
-# 現在の取り組み ③ — 暗号×ブロックチェーン Study Group（東京大学共催）
+# ④ Study Group — 暗号技術者を育てる
+
+<div class="text-xs opacity-50 -mt-2 mb-2">東京大学・寄付講座との共催。日本唯一の「実装できる暗号技術者」育成プログラム。</div>
 
 <div class="grid grid-cols-2 gap-6 mt-4">
 

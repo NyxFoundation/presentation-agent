@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-# 現在の取り組み ⑤ — 形式検証駆動開発によるイーサリアムクライアント「Verity」
+# ① Verity — 「正しさを証明できる」Ethereumクライアント
+
+<div class="text-xs opacity-50 -mt-2 mb-2">AIがコードを書く時代に、人類が信じられるソフトウェアをどう作るか。</div>
 <div class="grid grid-cols-2 gap-6 mt-2">
 <div class="space-y-3">
   <div>

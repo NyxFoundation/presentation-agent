@@ -8,3 +8,5 @@ components.d.ts
 *Zone.Identifier
 actions-runner/
 .env
+exports-before/
+exports-after/

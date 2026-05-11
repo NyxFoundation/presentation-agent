@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# 第三者から見た Nyx Foundation の価値
+# 支援者の言葉 — なぜ、Nyxに賭けるのか
 
 <div class="grid grid-cols-2 gap-6 mt-4 text-sm">
 

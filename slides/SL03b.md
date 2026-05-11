@@ -2,58 +2,87 @@
 layout: default
 ---
 
-# 最重要の問いに、向き合う
+# なぜ、Ethereumから始めたか
 
-<div class="grid grid-cols-2 gap-4 mt-4">
+<div class="text-xs opacity-50 -mt-2 mb-3">未来の社会基盤の難問が、先に現れている場所だから。私たちが惹かれているのは、暗号資産ではなく「中立的でひらかれた場」としてのEthereum。</div>
 
-<div class="p-3 border border-gray-200 rounded-lg">
-  <div class="text-base mb-1">1. 耐量子計算機移行</div>
-  <div class="text-[13px] opacity-70 leading-snug">
-    将来の量子計算機によって、現在広く使われる暗号方式が破られる可能性がある。<br/>
-    公共システムや認証基盤の安全な移行設計は、社会全体の重要課題。
+<div class="grid grid-cols-2 gap-4">
+
+<div class="p-4 border border-gray-200 rounded-lg">
+  <div class="flex items-center gap-2 mb-2">
+    <div class="text-xl">🌍</div>
+    <div class="font-bold text-sm">中立的でひらかれた、世界共通の研究の場</div>
   </div>
-  <div class="mt-2 text-[10px] opacity-50 leading-snug">Ethereumでの耐量子署名・形式検証研究は、現実社会の移行設計にもつながる</div>
-</div>
-
-<div class="p-3 border border-gray-200 rounded-lg">
-  <div class="text-base mb-1">2. サイバーセキュリティの高度化</div>
-  <div class="text-[13px] opacity-70 leading-snug">
-    ソフトウェアやネットワークの複雑化により、人手だけで重要な脆弱性を見つけることが難しくなっている。<br/>
-    AIを活用した監査・検証の自動化は、次世代の防御基盤として応用範囲が広い。
+  <div class="text-[10px] opacity-60 leading-relaxed mb-2">
+    特定の企業や国家に属さず、誰でも参加できるオープンな開発文化。<br/>
+    政治や利害に縛られず、純粋に技術と研究に集中できる。<strong>Manifesto「中立・開放」</strong>と最も親和的。
   </div>
-  <div class="mt-2 text-[10px] opacity-50 leading-snug">Ethereum監査で鍛えた手法は、Web・インフラ・重要システムの検証にも展開できる</div>
-</div>
-
-<div class="p-3 border border-gray-200 rounded-lg">
-  <div class="text-base mb-1">3. 金融市場の公平性・透明性</div>
-  <div class="text-[13px] opacity-70 leading-snug">
-    デジタル市場では、取引順序や情報格差によって一部参加者が有利になる構造が生まれうる。<br/>
-    公平で説明可能な市場設計は、金融とデジタル社会の両方で重要になる。
-  </div>
-  <div class="mt-2 text-[10px] opacity-50 leading-snug">Ethereum上のMEV・DEX研究は、次世代の市場制度設計や監視にも示唆を与える</div>
-</div>
-
-<div class="p-3 border-2 border-black rounded-lg bg-gray-50">
-  <div class="text-base font-bold mb-1">Nyxのアプローチ</div>
-  <div class="text-[13px] leading-snug">
-    <strong>Ethereumという実運用に近い公開基盤</strong>を研究対象にしながら、
-    実社会でも重要になる <strong>安全性・公平性・移行可能性</strong> の課題に取り組む。
-  </div>
-  <div class="mt-2 flex flex-wrap gap-1.5 text-[10px]">
-    <div class="px-2 py-1 bg-black text-white rounded">耐量子暗号</div>
-    <div class="px-2 py-1 bg-white border border-gray-300 rounded">AIセキュリティ監査</div>
-    <div class="px-2 py-1 bg-white border border-gray-300 rounded">MEV・市場分析</div>
-    <div class="px-2 py-1 bg-white border border-gray-300 rounded">形式検証</div>
+  <div class="flex gap-2">
+    <div class="text-[9px] px-2 py-0.5 bg-black text-white rounded">中立性</div>
+    <div class="text-[9px] px-2 py-0.5 bg-gray-100 rounded">オープン</div>
+    <div class="text-[9px] px-2 py-0.5 bg-gray-100 rounded">透明性</div>
   </div>
 </div>
 
+<div class="p-4 border border-gray-200 rounded-lg">
+  <div class="flex items-center gap-2 mb-2">
+    <div class="text-xl">🛡️</div>
+    <div class="font-bold text-sm">社会に残る難問が、先に現れている</div>
+  </div>
+  <div class="text-[10px] opacity-60 leading-relaxed mb-2">
+    耐量子計算機移行、AI時代のセキュリティ監査、市場の公平性、ソフトウェアの正しさ——<br/>
+    <strong>将来あらゆる社会基盤が直面する課題が、Ethereumではすでに現実の問題</strong>として存在している。
+  </div>
+  <div class="flex gap-2">
+    <div class="text-[9px] px-2 py-0.5 bg-black text-white rounded">耐量子</div>
+    <div class="text-[9px] px-2 py-0.5 bg-gray-100 rounded">セキュリティ</div>
+    <div class="text-[9px] px-2 py-0.5 bg-gray-100 rounded">市場設計</div>
+  </div>
 </div>
 
-<div class="mt-4 text-[11px] opacity-50 leading-snug">
-  本当に重要な問題は、閉じた研究室だけでは解けない。大きな問いは、世界にひらかれていたほうがいい。
+<div class="p-4 border border-gray-200 rounded-lg">
+  <div class="flex items-center gap-2 mb-2">
+    <div class="text-xl">🌱</div>
+    <div class="font-bold text-sm">学歴・所属に関係なく、成果で評価される</div>
+  </div>
+  <div class="text-[10px] opacity-60 leading-relaxed mb-2">
+    仕様も実装も議論もすべて公開。評価されるのは肩書きではなく成果。<br/>
+    若い研究者でも、独立したチームでも、世界の最前線に直接参加できる。
+  </div>
+  <div class="flex gap-2">
+    <div class="text-[9px] px-2 py-0.5 bg-black text-white rounded">成果主義</div>
+    <div class="text-[9px] px-2 py-0.5 bg-gray-100 rounded">オープンサイエンス</div>
+    <div class="text-[9px] px-2 py-0.5 bg-gray-100 rounded">参入障壁低</div>
+  </div>
+</div>
+
+<div class="p-4 border border-gray-200 rounded-lg">
+  <div class="flex items-center gap-2 mb-2">
+    <div class="text-xl">🤝</div>
+    <div class="font-bold text-sm">世界中の異才と、同じ問いに向き合える</div>
+  </div>
+  <div class="text-[10px] opacity-60 leading-relaxed mb-2">
+    研究者、開発者、起業家、学生——国籍もバックグラウンドも違う人たちが、同じ問いに向き合う。<br/>
+    そこで生まれる交流と刺激が、Nyxの原動力になっている。
+  </div>
+  <div class="flex gap-2">
+    <div class="text-[9px] px-2 py-0.5 bg-black text-white rounded">国際コミュニティ</div>
+    <div class="text-[9px] px-2 py-0.5 bg-gray-100 rounded">多様性</div>
+    <div class="text-[9px] px-2 py-0.5 bg-gray-100 rounded">共同研究</div>
+  </div>
+</div>
+
+</div>
+
+<div class="mt-3 text-center text-[11px] opacity-60" style="font-family:'BIZ UDPMincho',serif;">
+  Ethereumは、ゴールではない。<strong>社会の難問が先に現れる「世界最大の公開実験場」</strong>として活用している。
+</div>
+
+<div class="mt-2 text-center text-[10px] opacity-40">
+  ※ Ethereum：世界中の参加者が共通ルールで記録・実行を共有するオープンなデジタル基盤
 </div>
 
 <!--
 Speaker Notes:
-このスライドでは、Nyx Foundationが扱うテーマを、実社会に接続する具体的な社会課題として示しています。耐量子計算機移行、サイバーセキュリティ、金融市場の公平性は、いずれもEthereumで先行的に現れている課題でありながら、公共システムや金融市場など広い領域に応用可能です。NyxはEthereumを、先端的で実運用に近い研究フィールドとして活用しています。
+私たちが Ethereum から始めた理由は4つあります。第一に、中立的でひらかれていて、私たちのManifestoと最も親和的な研究の場であること。第二に、社会に残る難問——耐量子移行、AI時代のセキュリティ、市場の公平性——がすでに現実の問題として現れていること。第三に、学歴や所属ではなく成果で評価される文化があること。第四に、世界中の異才と直接出会えること。Ethereumは私たちにとってゴールではなく、社会基盤の難問を先に解くための「世界最大の公開実験場」です。
 -->

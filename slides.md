@@ -1,11 +1,15 @@
 ---
 theme: seriph
-title: スライドタイトル
+title: "Advanced Cryptography Program Week 1: Programmable Cryptography Overview"
 info: |
-  スライドタイトル
+  Week 1 — Programmable Cryptography Overview
+  担当: gohan
 transition: slide-left
 mdc: true
 colorSchema: 'light'
+download: true
+canvasWidth: 1280
+aspectRatio: 16/9
 src: ./slides/SL01.md
 ---
 
@@ -15,10 +19,6 @@ src: ./slides/SL02.md
 
 ---
 src: ./slides/SL03.md
----
-
----
-src: ./slides/SL04.md
 ---
 
 ---
@@ -46,10 +46,6 @@ src: ./slides/SL10.md
 ---
 
 ---
-src: ./slides/SL11.md
----
-
----
 src: ./slides/SL12.md
 ---
 
@@ -63,4 +59,64 @@ src: ./slides/SL14.md
 
 ---
 src: ./slides/SL15.md
+---
+
+---
+src: ./slides/SL16.md
+---
+
+---
+src: ./slides/SL17.md
+---
+
+---
+src: ./slides/SL18.md
+---
+
+---
+src: ./slides/SL19.md
+---
+
+---
+src: ./slides/SL20.md
+---
+
+---
+src: ./slides/SL21.md
+---
+
+---
+src: ./slides/SL22.md
+---
+
+---
+src: ./slides/SL23.md
+---
+
+---
+src: ./slides/SL25.md
+---
+
+---
+src: ./slides/SL26.md
+---
+
+---
+src: ./slides/SL27.md
+---
+
+---
+src: ./slides/SL28.md
+---
+
+---
+src: ./slides/SL29.md
+---
+
+---
+src: ./slides/SL31.md
+---
+
+---
+src: ./slides/SL32.md
 ---

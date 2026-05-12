@@ -6,6 +6,24 @@
   --slidev-theme-accent: #000000;
 }
 
+/* Slidev v52 renders #page-root as a 2-col grid with a permanent slide-list
+   sidebar on the right. Collapse it so the slide takes the whole viewport. */
+#page-root {
+  grid-template-columns: 1fr !important;
+}
+#page-root > :not(#slide-container):not(.slidev-slide-container) {
+  display: none !important;
+}
+
+/* Slidev v52.11.1 quirk: the "Go to slide" dialog (#slidev-goto-dialog)
+   is rendered with full content (~1000px tall) but only translated 80px
+   off-screen, so its autocomplete-list bleeds down the right side of the
+   viewport and covers the slide. Hide it entirely — users can still navigate
+   via arrow keys, click, slide URL (/<n>), or the menu icon. */
+#slidev-goto-dialog {
+  display: none !important;
+}
+
 /* ===== Force light mode - white background for slide content only ===== */
 .slidev-layout {
   background: #ffffff !important;

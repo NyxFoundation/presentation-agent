@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# 数学の定理を証明するAIエージェントで世界最高性能 (ICML'25 AI for Math Workshop採択)
+# World-leading AI agent for mathematical theorem proving (ICML'25 AI for Math Workshop)
 
 <div class="flex justify-center mt-4">
   <img src="/images/pr_proveragent.png" class="max-h-96 border border-gray-200 shadow-sm" />
@@ -14,5 +14,5 @@ layout: default
 
 <!--
 Speaker Notes:
-数学の定理証明に特化したAIエージェントを開発し、State-of-the-Artの性能を達成しました。この成果はICML 2025のAI for Mathematics Workshopに採択されています。
+We built an AI agent specialized in mathematical theorem proving and achieved state-of-the-art performance. The result was accepted at the AI for Mathematics Workshop of ICML 2025.
 -->

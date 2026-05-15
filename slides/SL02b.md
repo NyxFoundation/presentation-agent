@@ -2,38 +2,38 @@
 layout: default
 ---
 
-# DeFiエクスプロイトは爆発的に増加し、RWA時代の設計需要は数兆ドル規模に拡大します
+# DeFi exploits are growing explosively, and design demand in the RWA era is expanding into the trillions of dollars
 
 <div class="grid grid-cols-2 gap-8 mt-6">
 
 <div>
-  <div class="text-xs uppercase tracking-widest opacity-40 mb-2">Problem ① — エクスプロイトの爆発</div>
+  <div class="text-xs uppercase tracking-widest opacity-40 mb-2">Problem ① — Exploits explode</div>
   <div class="text-5xl font-bold mb-1" style="font-family: 'BIZ UDPMincho', serif;">$11.9B</div>
-  <div class="text-sm opacity-50 mb-4">過去5年累計の暗号資産被害（425件）</div>
+  <div class="text-sm opacity-50 mb-4">Cumulative crypto losses over the past 5 years (425 incidents)</div>
   <div class="text-sm leading-relaxed mb-3">
-    2025年単年で <strong>$3.4B 以上</strong>が盗難。Cetus（$223M）、Balancer（$128M）など、DeFiプロトコル単体での大型エクスプロイトが続発しています。
+    Over <strong>$3.4B</strong> was stolen in 2025 alone. Large exploits at single DeFi protocols — Cetus ($223M), Balancer ($128M), and others — keep occurring back-to-back.
   </div>
   <div class="text-xs opacity-50">
-    監査・形式検証・バグバウンティを尽くしてもなお、<strong>動的・経済的な脆弱性</strong>は事前に発見できていません。
+    Even after exhausting audits, formal verification, and bug bounties, <strong>dynamic and economic vulnerabilities</strong> still go undetected in advance.
   </div>
 </div>
 
 <div>
-  <div class="text-xs uppercase tracking-widest opacity-40 mb-2">Problem ② — 設計需要の指数的拡大</div>
+  <div class="text-xs uppercase tracking-widest opacity-40 mb-2">Problem ② — Design demand grows exponentially</div>
   <div class="text-5xl font-bold mb-1" style="font-family: 'BIZ UDPMincho', serif;">$2-16T</div>
-  <div class="text-sm opacity-50 mb-4">2030年RWAトークン化市場規模（McKinsey〜BCG）</div>
+  <div class="text-sm opacity-50 mb-4">2030 RWA tokenization market size (McKinsey to BCG)</div>
   <div class="text-sm leading-relaxed mb-3">
-    RWA・ステーブルコイン・新興DeFiの拡大により、<strong>新しいDeFi設計を担う担当者が桁違いに増加</strong>します。
+    With the expansion of RWAs, stablecoins, and emerging DeFi, <strong>the number of people responsible for designing new DeFi will grow by orders of magnitude</strong>.
   </div>
   <div class="text-xs opacity-50">
-    全員がトップ監査ファームの知見を持つことは不可能。<strong>「誰でも安全にDeFiを設計できる」インフラ</strong>が求められます。
+    It is impossible for everyone to have the expertise of a top audit firm. <strong>Infrastructure where "anyone can safely design DeFi"</strong> is needed.
   </div>
 </div>
 
 </div>
 
 <div class="mt-6 pt-4 border-t border-gray-200 text-center">
-  <div class="text-base font-bold">既存のセキュリティ手段は単発・静的・人的。<strong>動的・自律的・永続的</strong>な公共財が必要です。</div>
+  <div class="text-base font-bold">Existing security measures are one-off, static, and human-driven. A <strong>dynamic, autonomous, and persistent</strong> public good is required.</div>
 </div>
 
 <SourceCite :sources="[
@@ -45,5 +45,5 @@ layout: default
 
 <!--
 Speaker Notes:
-DeFiエクスプロイトは年々大型化しており、2025年だけでも34億ドル超が盗まれています。Chainalysis・Immunefiの統計では過去5年累計119億ドル、425件以上の事件が確認されています。一方でRWAトークン化市場は2030年までにMcKinseyベースで2-4兆ドル、BCG楽観値で16兆ドルと予測され、DeFi設計を担う担当者の数は桁違いに増えます。全員がトップ監査ファームと同じ知見を持つことは不可能で、「誰もが安全にDeFiを設計できる」公共財インフラが必要となります。ASCONはこの両側面に対する解です。
+DeFi exploits have been growing larger each year, with more than $3.4B stolen in 2025 alone. Chainalysis and Immunefi statistics confirm a cumulative $11.9B in losses across 425+ incidents over the past five years. Meanwhile, the RWA tokenization market is projected to reach $2-4T by 2030 under McKinsey's base case, and as much as $16T under BCG's optimistic scenario — meaning the number of people responsible for designing DeFi will grow by orders of magnitude. It is impossible for all of them to share the expertise of top audit firms, so we need a public-goods infrastructure where "anyone can design DeFi safely." ASCON is an answer that addresses both of these sides.
 -->

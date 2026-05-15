@@ -1,8 +1,8 @@
 ---
 theme: seriph
-title: 公共財のための公共財L2 — DeFiの未来を鍛えるAIエージェント基盤
+title: A Public Good for Public Goods L2 — An AI Agent Foundation Forging the Future of DeFi
 info: |
-  ASCON: 公共財のための公共財L2 Rollup — AIエージェントが取引・攻撃・形式検証であらゆる手段を尽くすDeFi基盤と、それを駆動する定期コンペ
+  ASCON: A Public Good for Public Goods L2 Rollup — a DeFi foundation where AI agents pursue every avenue of trading, attacking, and formal verification, paired with the recurring competition that powers it
 transition: slide-left
 mdc: true
 colorSchema: 'light'

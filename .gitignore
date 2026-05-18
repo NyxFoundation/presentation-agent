@@ -16,3 +16,6 @@ outputs/
 slides/
 exports-*/
 exports/
+
+# Per-iteration history from the `make refine` visual self-improvement loop.
+.refine/

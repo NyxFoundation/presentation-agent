@@ -34,6 +34,9 @@ BACKGROUND_COLOR ?= \#FFFFFF
 # Tone for the presentation (derived from Core Strategy, can be overridden)
 TONE ?= Respectfully ambitious and intellectually rigorous.
 
+# Max iterations for the visual refinement loop (make refine / all_refined)
+REFINE_ITERS ?= 5
+
 # --- Output Files ---
 CONTEXT_OUT := $(OUTPUT_DIR)/01_Context_Brief.json
 PERSONA_OUT := $(OUTPUT_DIR)/02_Audience_Persona.json
@@ -56,7 +59,7 @@ CLAUDE_FLAGS ?= --dangerously-skip-permissions --output-format json
         governing_argument narrative_blueprint \
         slide_drafting visual_design \
         executive_review final_export \
-        polish all_polished
+        polish all_polished refine all_refined
 
 # ==============================================================================
 # Main Targets
@@ -86,7 +89,9 @@ help:
 	@echo "Main Targets:"
 	@echo "  all            - Run the entire 9-step generation pipeline."
 	@echo "  polish         - Run the recursive self-improvement loop on existing slides/."
+	@echo "  refine         - Externalized visual self-improvement loop (visually-3d method)."
 	@echo "  all_polished   - Run 'all' then 'polish' (full generation + quality loop)."
+	@echo "  all_refined    - Run 'all' then 'refine' (full generation + visual loop)."
 	@echo "  validate       - Validate that inputs/introduction.md has required frontmatter."
 	@echo "  clean          - Remove all generated outputs."
 	@echo ""
@@ -113,6 +118,11 @@ help:
 	@echo "   10. polish             - Build, export PNGs, score the 8-axis rubric,"
 	@echo "                             apply targeted fixes, and iterate up to 7 cycles"
 	@echo "                             until every axis is >= 4.5."
+	@echo "   11. refine             - Visually-3d method: a shell loop renders the deck"
+	@echo "                             to PNGs, one Claude call per iteration scores the"
+	@echo "                             rubric from the renders and edits slides, with"
+	@echo "                             per-iteration history under .refine/."
+	@echo "                             Tune with REFINE_ITERS=N (default 5)."
 	@echo ""
 	@echo "Configuration:"
 	@echo "  All presentation metadata is configured in inputs/introduction.md frontmatter:"
@@ -272,3 +282,22 @@ polish: | init
 	claude $(CLAUDE_FLAGS) -p "$$prompt" > $(LOG_DIR)/10_Recursive_Self_Improvement.json
 	@echo "[Step 10/10] Complete. Review the report in $(LOG_DIR)/10_Recursive_Self_Improvement.json"
 	@echo "             and inspect the updated slides under $(SLIDES_DIR)/."
+
+# ------------------------------------------------------------------------------
+# refine — externalized visual self-improvement loop (the visually-3d method).
+#
+# Unlike `polish` (one agentic Claude call that loops internally), `refine` runs
+# an explicit shell loop: each iteration renders the deck to per-slide PNGs,
+# invokes Claude ONCE to score the rubric from those renders and apply surgical
+# edits, then re-renders as a regression guard. Every iteration's prompt, PNGs,
+# JSONL thinking trace and a deck snapshot are kept under .refine/ for audit.
+#
+# Standalone: works on any deck where slides.md + slides/ exist.
+# Tune iteration count with REFINE_ITERS=N (default 5).
+refine:
+	@echo "[Refine] Externalized visual self-improvement loop..."
+	@sh scripts/refine.sh $(REFINE_ITERS)
+
+# Run steps 01-09, then the externalized visual refinement loop.
+all_refined: all refine
+	@echo "Full pipeline + visual refinement loop complete."

@@ -27,7 +27,10 @@ layout: default
 </div>
 
 <div class="mt-7">
-  <img src="/images/house_nanto.png" class="house-img" alt="Nyx の研究ハウス" />
+  <div class="grid grid-cols-2 gap-3">
+    <img src="/images/house_hongo.png" class="house-img" alt="Nyx 研究ハウス" />
+    <img src="/images/house_nanto.png" class="house-img" alt="Nyx 研究ハウス" />
+  </div>
   <div class="house-cap">研究者がともに住み、知識をぶつけ合う —— Nyx の研究ハウス</div>
 </div>
 

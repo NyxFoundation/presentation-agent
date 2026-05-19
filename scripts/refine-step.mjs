@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-// Parse one refinement iteration: pull the model's JSON review out of the
-// Claude stream-json event log, record it, and signal the loop via exit code.
+// Applies one refinement iteration: pulls the five-persona panel review out of
+// the Claude stream-json log, records it, and signals the loop via exit code:
 //
 //   0  applied — keep iterating
-//   10 applied — model reports convergence, stop
-//   20 stop — rubric average stopped rising (plateau)
+//   10 applied — panel reports convergence, stop
+//   20 stop — the deck score (weakest persona) stopped rising
 //   1  error — model output unusable
 //
 // Usage: node scripts/refine-step.mjs <events.jsonl> <runDir> <ii>
@@ -26,10 +26,7 @@ const fail = (msg) => {
   process.exit(1);
 };
 
-const AXES = [
-  'clarity', 'desire', 'story', 'emotional_impact', 'credibility',
-  'differentiation', 'culture', 'visual_readability', 'executive_pitch',
-];
+const PERSONAS = ['donor', 'sponsor', 'researcher', 'layperson', 'design_critic'];
 
 // --- pull the final assistant message out of the stream-json log -----------
 let result = '';
@@ -72,23 +69,22 @@ try {
   fail(`review JSON did not parse: ${e.message}`);
 }
 
-const scores = review.scores || {};
-const present = AXES.filter((a) => typeof scores[a] === 'number');
-if (present.length !== AXES.length) {
-  fail(`review is missing rubric axes: ${AXES.filter((a) => !present.includes(a)).join(', ')}`);
-}
+// --- validate the panel ----------------------------------------------------
+const panel = review.panel || {};
+const missing = PERSONAS.filter(
+  (p) => !panel[p] || typeof panel[p].score !== 'number',
+);
+if (missing.length) fail(`panel is missing scored personas: ${missing.join(', ')}`);
 
-const average =
-  typeof review.average === 'number'
-    ? review.average
-    : AXES.reduce((s, a) => s + scores[a], 0) / AXES.length;
-const minAxis = Math.min(...AXES.map((a) => scores[a]));
+const scores = PERSONAS.map((p) => panel[p].score);
+const deckScore = Math.min(...scores);
+const weakest = PERSONAS[scores.indexOf(deckScore)];
 
 // --- compare with the previous iteration -----------------------------------
 const prevPath = join(runDir, 'last-review.json');
-let prevAvg = null;
+let prevScore = null;
 try {
-  prevAvg = Number(JSON.parse(readFileSync(prevPath, 'utf8')).average);
+  prevScore = Number(JSON.parse(readFileSync(prevPath, 'utf8')).deck_score);
 } catch {
   /* first iteration */
 }
@@ -96,18 +92,20 @@ try {
 writeFileSync(join(runDir, `iter-${ii}-review.json`), JSON.stringify(review, null, 2));
 writeFileSync(prevPath, JSON.stringify(review, null, 2));
 
+// --- report ----------------------------------------------------------------
+console.log('  panel: ' + PERSONAS.map((p) => `${p} ${panel[p].score.toFixed(1)}`).join(' · '));
 console.log(
-  `  rubric: avg ${average.toFixed(2)}/5  (min axis ${minAxis.toFixed(1)})` +
-    (Number.isFinite(prevAvg) ? `  prev ${prevAvg.toFixed(2)}` : ''),
+  `  deck score: ${deckScore.toFixed(2)}/5  (weakest: ${weakest})` +
+    (Number.isFinite(prevScore) ? `  prev ${prevScore.toFixed(2)}` : ''),
 );
-if (review.critique) console.log(`  critique: ${review.critique}`);
+for (const d of panel[weakest].demands || []) console.log(`  · ${weakest} wants: ${d}`);
 for (const c of review.changelog || []) console.log(`  + ${c}`);
 for (const g of review.remaining_gaps || []) console.log(`  · gap: ${g}`);
 
 // --- loop control ----------------------------------------------------------
 if (review.verdict === 'converged') process.exit(10);
-if (Number.isFinite(prevAvg) && average <= prevAvg + 0.01) {
-  console.log('  (no rubric gain — plateau)');
+if (Number.isFinite(prevScore) && deckScore <= prevScore + 0.01) {
+  console.log('  (weakest persona did not improve — plateau)');
   process.exit(20);
 }
 process.exit(0);

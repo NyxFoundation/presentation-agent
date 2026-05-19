@@ -44,7 +44,10 @@ Improve the deck until it passes **three acceptance tests**:
    - a **consumer** audience thinks *"this could change my life — I'm
      excited"* — the slide makes a concrete better-future vivid.
    A slide that is correct but leaves the viewer feeling nothing has failed
-   this test. Every slide should lift desire, urgency, or confidence.
+   this test. Every slide should lift desire, urgency, or confidence — and it
+   must do so with **evidence the viewer can check**: a number, a track
+   record, a comparison against others. Never with a bare claim. State the
+   fact; let the viewer draw the conclusion.
 
 3. **The delivery test — "a senior leader could present it tomorrow."**
    Every slide is something an executive would be proud to stand behind:
@@ -127,7 +130,7 @@ Score each axis 1.0–5.0. Target: average ≥ 4.5 and no axis < 4.5.
 | Axis | JSON key | Full marks means |
 |---|---|---|
 | Clarity | `clarity` | A salesperson or a non-domain viewer with **zero expertise** follows every slide; jargon and acronyms are defined in plain words on first use, or cut; one idea per slide. |
-| Desire & Expectation Lift | `desire` | Every slide **raises what the viewer wants** — a sales / buyer audience leaves it thinking *"genuinely good value, a smart buy"*; a consumer thinks *"this could change my life, I'm excited"*. The deck builds want, urgency and confidence — not just understanding. A correct-but-flat slide scores low here. |
+| Desire & Expectation Lift | `desire` | Every slide **raises what the viewer wants — through evidence, not assertion.** Lift expectations with a track record, a concrete number, or a comparison against others, and let the viewer reach the conclusion themselves. A fact ("founded 6 months ago, ranked #1 in the world") earns the want; a direct claim ("you'll be ahead of competitors", "genuinely good value", "this changes your life") does NOT — it scores low even when true. The deck builds want, urgency and confidence by showing, not telling. A correct-but-flat slide also scores low here. |
 | Story | `story` | Skim test passes; the arc (hook → proof → build → close) is coherent. |
 | Emotional Impact | `emotional_impact` | The hook earns attention; the close lands and callbacks the hook. |
 | Credibility | `credibility` | Evidence is specific, sourced, traceable — never fabricated. |
@@ -158,6 +161,9 @@ Score each axis 1.0–5.0. Target: average ≥ 4.5 and no axis < 4.5.
 
 - Scoring against the markdown instead of the rendered PNGs.
 - Self-score inflation — a 5.0 with no concrete justification.
+- Raising expectations by direct assertion ("you'll be ahead of competitors",
+  "great value", "a smart buy") instead of by evidence. Replace the claim with
+  the track record, number or comparison that implies it.
 - Cosmetic loop — edits that lift no axis.
 - Big-bang rewrite — rewriting many slides instead of targeting the lowest axis.
 - Fabricating numbers, quotes, logos or partners.

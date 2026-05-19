@@ -50,6 +50,3 @@ src: ./slides/SL14b.md
 ---
 src: ./slides/SL16.md
 ---
----
-src: ./slides/SL15.md
----

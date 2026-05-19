@@ -1,0 +1,1272 @@
+{
+  "machine_name": "Ethereum as a City",
+  "assembly_instructions": "Conceptual architecture diagram of the Ethereum protocol, rendered as a city at 1x scale (bounds radius ~8.9 m, no scaling needed). Step 1: cast the ground-level EXECUTION LAYER floor slab (concrete, 13x8 m, top at y=0.3) and ring it with four perimeter concrete curbs — the root of the assembly. Step 2: pour four concrete pile-cap footings on the ground behind the slab at x=+/-4.5, z=4.3 and z=6.9, and stand a 3.85 m welded-steel support pillar on each footing. Step 3: tie the four pillar tops together with a perimeter ring-beam of four welded-steel cross-ties (front, back, left, right) just below y=3.85 so the upper deck is braced, not floating. Step 4: set the raised CONSENSUS LAYER floor slab (10x3.4 m) on the braced pillars at y=4.0 and ring it with four perimeter curbs. Step 5: on the execution slab lay the concrete ledger foundation and stand a row of six glass 'block' buildings of varying height, linked block-to-block by five copper hash links; place the dark mempool holding yard front-left with three glass pending-transaction cubes, three white smart-contract buildings front-right, and a black RPC/gateway tower at the +X edge tied to the head block by a copper bus. Step 6: on the consensus deck run a copper Beacon Chain spine down the centre and cluster eight brushed-steel validator towers in two rows of four flanking the spine, each attesting to it. Step 7: run the vertical copper Engine-API bus from the execution slab up through the consensus deck to the Beacon Chain spine. View from a raised 3/4 angle so every block, validator and district reads clearly.",
+  "metadata": {
+    "reference": "https://ethereum.org/en/developers/docs/",
+    "domain": "blockchain-protocol",
+    "thumbnail_camera": [
+      7.7,
+      8.6,
+      9.7
+    ],
+    "info": {
+      "japanese_name": "イーサリアム（都市メタファー）",
+      "english_name": "Ethereum Protocol (City Metaphor)",
+      "summary": "Ethereum is a decentralized, proof-of-stake blockchain and global compute platform; here its architecture is drawn as a city with execution and consensus districts. Each visual block is a real network block, each tower a validator staking 32 ETH.",
+      "description": "Ethereum launched on 30 July 2015 as a programmable blockchain running the Ethereum Virtual Machine (EVM). Since The Merge on 15 September 2022 it secures itself with proof-of-stake: an execution layer (which orders transactions, runs the EVM and holds account state) and a consensus layer (the Beacon Chain, which selects block proposers and finalizes blocks) operate as paired but distinct subsystems. The model splits these into two stacked districts.",
+      "description_2": "Blocks are produced once per 12-second slot, with 32 slots per 6.4-minute epoch. A validator must stake 32 ETH; roughly one million validators are active. Transactions wait in the mempool before inclusion, smart contracts are autonomous on-chain programs, and RPC/gateway nodes expose the network to applications — all represented here as named city districts wired together by copper buses.",
+      "operator": "Ethereum Foundation and a decentralized global community of node operators",
+      "contractor": "Ethereum core developer teams (Geth, Nethermind, Besu, Erigon, Prysm, Lighthouse, Teku, Nimbus)",
+      "contract_date": "2015-07-30",
+      "contract_value": "Open-source public infrastructure (no contract value)",
+      "status": "Live in production (Mainnet)",
+      "facts": [
+        {
+          "label": "Genesis",
+          "value": "30 July 2015"
+        },
+        {
+          "label": "Consensus",
+          "value": "Proof-of-Stake (since 15 Sep 2022)"
+        },
+        {
+          "label": "Slot time",
+          "value": "12 seconds"
+        },
+        {
+          "label": "Epoch",
+          "value": "32 slots (6.4 min)"
+        },
+        {
+          "label": "Validator stake",
+          "value": "32 ETH each"
+        },
+        {
+          "label": "Active validators",
+          "value": "~1,000,000"
+        },
+        {
+          "label": "Layers",
+          "value": "Execution + Consensus"
+        },
+        {
+          "label": "Virtual machine",
+          "value": "Ethereum Virtual Machine (EVM)"
+        },
+        {
+          "label": "Block gas limit",
+          "value": "~30,000,000 gas"
+        },
+        {
+          "label": "Native token",
+          "value": "ETH"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ethereum Developer Documentation",
+          "url": "https://ethereum.org/en/developers/docs/"
+        },
+        {
+          "title": "Ethereum — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Ethereum"
+        },
+        {
+          "title": "The Merge — ethereum.org",
+          "url": "https://ethereum.org/en/roadmap/merge/"
+        }
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "execution_platform",
+      "name": "Execution Layer District Floor Slab",
+      "shape": "box",
+      "position": [
+        0,
+        0.15,
+        0
+      ],
+      "size": [
+        13,
+        0.3,
+        8
+      ],
+      "material": "concrete",
+      "role": "Ground-level floor slab hosting the execution layer — the blockchain row, mempool, smart contracts and RPC node; root of the assembly.",
+      "connections": [
+        "ledger_foundation",
+        "mempool_box",
+        "smart_contract_1",
+        "smart_contract_2",
+        "smart_contract_3",
+        "rpc_node",
+        "pillar_1",
+        "pillar_2",
+        "pillar_3",
+        "pillar_4",
+        "copper_bus_riser",
+        "footing_1",
+        "footing_2",
+        "footing_3",
+        "footing_4",
+        "curb_exec_front",
+        "curb_exec_back",
+        "curb_exec_left",
+        "curb_exec_right"
+      ]
+    },
+    {
+      "id": "curb_exec_front",
+      "name": "Execution Slab Curb (front edge)",
+      "shape": "box",
+      "position": [
+        0,
+        0.5,
+        -3.85
+      ],
+      "size": [
+        13,
+        0.4,
+        0.3
+      ],
+      "material": "concrete",
+      "role": "Perimeter concrete curb stiffening the front edge of the execution-layer floor slab and marking the district boundary.",
+      "connections": [
+        "execution_platform"
+      ]
+    },
+    {
+      "id": "curb_exec_back",
+      "name": "Execution Slab Curb (back edge)",
+      "shape": "box",
+      "position": [
+        0,
+        0.5,
+        3.85
+      ],
+      "size": [
+        13,
+        0.4,
+        0.3
+      ],
+      "material": "concrete",
+      "role": "Perimeter concrete curb stiffening the back edge of the execution-layer floor slab beneath the blockchain row.",
+      "connections": [
+        "execution_platform"
+      ]
+    },
+    {
+      "id": "curb_exec_left",
+      "name": "Execution Slab Curb (left edge)",
+      "shape": "box",
+      "position": [
+        -6.35,
+        0.5,
+        0
+      ],
+      "size": [
+        0.3,
+        0.4,
+        8
+      ],
+      "material": "concrete",
+      "role": "Perimeter concrete curb stiffening the left edge of the execution-layer floor slab.",
+      "connections": [
+        "execution_platform"
+      ]
+    },
+    {
+      "id": "curb_exec_right",
+      "name": "Execution Slab Curb (right edge)",
+      "shape": "box",
+      "position": [
+        6.35,
+        0.5,
+        0
+      ],
+      "size": [
+        0.3,
+        0.4,
+        8
+      ],
+      "material": "concrete",
+      "role": "Perimeter concrete curb stiffening the right edge of the execution-layer floor slab at the RPC-gateway side.",
+      "connections": [
+        "execution_platform"
+      ]
+    },
+    {
+      "id": "consensus_platform",
+      "name": "Consensus Layer District Floor Slab",
+      "shape": "box",
+      "position": [
+        0,
+        4,
+        5.6
+      ],
+      "size": [
+        10,
+        0.3,
+        3.4
+      ],
+      "material": "concrete",
+      "role": "Raised floor slab carrying the proof-of-stake validator set and Beacon Chain spine, set above and behind the execution layer to show layer separation.",
+      "connections": [
+        "pillar_1",
+        "pillar_2",
+        "pillar_3",
+        "pillar_4",
+        "beacon_spine",
+        "validator_1",
+        "validator_2",
+        "validator_3",
+        "validator_4",
+        "validator_5",
+        "validator_6",
+        "validator_7",
+        "validator_8",
+        "copper_bus_riser",
+        "curb_con_front",
+        "curb_con_back",
+        "curb_con_left",
+        "curb_con_right"
+      ]
+    },
+    {
+      "id": "curb_con_front",
+      "name": "Consensus Deck Curb (front edge)",
+      "shape": "box",
+      "position": [
+        0,
+        4.325,
+        3.975
+      ],
+      "size": [
+        10,
+        0.35,
+        0.25
+      ],
+      "material": "concrete",
+      "role": "Perimeter parapet curb stiffening the front edge of the raised consensus deck.",
+      "connections": [
+        "consensus_platform"
+      ]
+    },
+    {
+      "id": "curb_con_back",
+      "name": "Consensus Deck Curb (back edge)",
+      "shape": "box",
+      "position": [
+        0,
+        4.325,
+        7.225
+      ],
+      "size": [
+        10,
+        0.35,
+        0.25
+      ],
+      "material": "concrete",
+      "role": "Perimeter parapet curb stiffening the back edge of the raised consensus deck.",
+      "connections": [
+        "consensus_platform"
+      ]
+    },
+    {
+      "id": "curb_con_left",
+      "name": "Consensus Deck Curb (left edge)",
+      "shape": "box",
+      "position": [
+        -4.875,
+        4.325,
+        5.6
+      ],
+      "size": [
+        0.25,
+        0.35,
+        3.4
+      ],
+      "material": "concrete",
+      "role": "Perimeter parapet curb stiffening the left edge of the raised consensus deck.",
+      "connections": [
+        "consensus_platform"
+      ]
+    },
+    {
+      "id": "curb_con_right",
+      "name": "Consensus Deck Curb (right edge)",
+      "shape": "box",
+      "position": [
+        4.875,
+        4.325,
+        5.6
+      ],
+      "size": [
+        0.25,
+        0.35,
+        3.4
+      ],
+      "material": "concrete",
+      "role": "Perimeter parapet curb stiffening the right edge of the raised consensus deck.",
+      "connections": [
+        "consensus_platform"
+      ]
+    },
+    {
+      "id": "footing_1",
+      "name": "Pillar Footing (front-left)",
+      "shape": "box",
+      "position": [
+        -4.5,
+        0.175,
+        4.3
+      ],
+      "size": [
+        0.9,
+        0.35,
+        0.9
+      ],
+      "material": "concrete",
+      "role": "Concrete pile-cap footing transferring the front-left pillar load into the ground behind the execution slab.",
+      "connections": [
+        "execution_platform",
+        "pillar_1"
+      ]
+    },
+    {
+      "id": "footing_2",
+      "name": "Pillar Footing (front-right)",
+      "shape": "box",
+      "position": [
+        4.5,
+        0.175,
+        4.3
+      ],
+      "size": [
+        0.9,
+        0.35,
+        0.9
+      ],
+      "material": "concrete",
+      "role": "Concrete pile-cap footing transferring the front-right pillar load into the ground behind the execution slab.",
+      "connections": [
+        "execution_platform",
+        "pillar_2"
+      ]
+    },
+    {
+      "id": "footing_3",
+      "name": "Pillar Footing (back-left)",
+      "shape": "box",
+      "position": [
+        -4.5,
+        0.175,
+        6.9
+      ],
+      "size": [
+        0.9,
+        0.35,
+        0.9
+      ],
+      "material": "concrete",
+      "role": "Concrete pile-cap footing transferring the back-left pillar load into the ground behind the execution slab.",
+      "connections": [
+        "execution_platform",
+        "pillar_3"
+      ]
+    },
+    {
+      "id": "footing_4",
+      "name": "Pillar Footing (back-right)",
+      "shape": "box",
+      "position": [
+        4.5,
+        0.175,
+        6.9
+      ],
+      "size": [
+        0.9,
+        0.35,
+        0.9
+      ],
+      "material": "concrete",
+      "role": "Concrete pile-cap footing transferring the back-right pillar load into the ground behind the execution slab.",
+      "connections": [
+        "execution_platform",
+        "pillar_4"
+      ]
+    },
+    {
+      "id": "pillar_1",
+      "name": "Support Pillar (front-left)",
+      "shape": "cylinder",
+      "position": [
+        -4.5,
+        1.925,
+        4.3
+      ],
+      "size": [
+        0.35,
+        3.85
+      ],
+      "material": "welded steel",
+      "role": "Welded-steel column standing on its footing, raising the consensus deck and tying it to the execution district.",
+      "connections": [
+        "execution_platform",
+        "consensus_platform",
+        "footing_1",
+        "tie_front",
+        "tie_left"
+      ]
+    },
+    {
+      "id": "pillar_2",
+      "name": "Support Pillar (front-right)",
+      "shape": "cylinder",
+      "position": [
+        4.5,
+        1.925,
+        4.3
+      ],
+      "size": [
+        0.35,
+        3.85
+      ],
+      "material": "welded steel",
+      "role": "Welded-steel column standing on its footing, raising the consensus deck and tying it to the execution district.",
+      "connections": [
+        "execution_platform",
+        "consensus_platform",
+        "footing_2",
+        "tie_front",
+        "tie_right"
+      ]
+    },
+    {
+      "id": "pillar_3",
+      "name": "Support Pillar (back-left)",
+      "shape": "cylinder",
+      "position": [
+        -4.5,
+        1.925,
+        6.9
+      ],
+      "size": [
+        0.35,
+        3.85
+      ],
+      "material": "welded steel",
+      "role": "Welded-steel column standing on its footing, raising the consensus deck and tying it to the execution district.",
+      "connections": [
+        "execution_platform",
+        "consensus_platform",
+        "footing_3",
+        "tie_back",
+        "tie_left"
+      ]
+    },
+    {
+      "id": "pillar_4",
+      "name": "Support Pillar (back-right)",
+      "shape": "cylinder",
+      "position": [
+        4.5,
+        1.925,
+        6.9
+      ],
+      "size": [
+        0.35,
+        3.85
+      ],
+      "material": "welded steel",
+      "role": "Welded-steel column standing on its footing, raising the consensus deck and tying it to the execution district.",
+      "connections": [
+        "execution_platform",
+        "consensus_platform",
+        "footing_4",
+        "tie_back",
+        "tie_right"
+      ]
+    },
+    {
+      "id": "tie_front",
+      "name": "Pillar Cross-Tie (front beam)",
+      "shape": "box",
+      "position": [
+        0,
+        3.6,
+        4.3
+      ],
+      "size": [
+        9,
+        0.25,
+        0.25
+      ],
+      "material": "welded steel",
+      "role": "Horizontal ring-beam connecting the two front pillar tops, bracing the raised consensus deck against sway.",
+      "connections": [
+        "pillar_1",
+        "pillar_2",
+        "consensus_platform"
+      ]
+    },
+    {
+      "id": "tie_back",
+      "name": "Pillar Cross-Tie (back beam)",
+      "shape": "box",
+      "position": [
+        0,
+        3.6,
+        6.9
+      ],
+      "size": [
+        9,
+        0.25,
+        0.25
+      ],
+      "material": "welded steel",
+      "role": "Horizontal ring-beam connecting the two back pillar tops, bracing the raised consensus deck against sway.",
+      "connections": [
+        "pillar_3",
+        "pillar_4",
+        "consensus_platform"
+      ]
+    },
+    {
+      "id": "tie_left",
+      "name": "Pillar Cross-Tie (left beam)",
+      "shape": "box",
+      "position": [
+        -4.5,
+        3.6,
+        5.6
+      ],
+      "size": [
+        0.25,
+        0.25,
+        2.6
+      ],
+      "material": "welded steel",
+      "role": "Horizontal ring-beam connecting the front-left and back-left pillar tops, completing the perimeter brace under the deck.",
+      "connections": [
+        "pillar_1",
+        "pillar_3",
+        "consensus_platform"
+      ]
+    },
+    {
+      "id": "tie_right",
+      "name": "Pillar Cross-Tie (right beam)",
+      "shape": "box",
+      "position": [
+        4.5,
+        3.6,
+        5.6
+      ],
+      "size": [
+        0.25,
+        0.25,
+        2.6
+      ],
+      "material": "welded steel",
+      "role": "Horizontal ring-beam connecting the front-right and back-right pillar tops, completing the perimeter brace under the deck.",
+      "connections": [
+        "pillar_2",
+        "pillar_4",
+        "consensus_platform"
+      ]
+    },
+    {
+      "id": "ledger_foundation",
+      "name": "Blockchain Ledger Foundation (base plate)",
+      "shape": "box",
+      "position": [
+        0,
+        0.425,
+        2.6
+      ],
+      "size": [
+        10,
+        0.25,
+        1.6
+      ],
+      "material": "concrete",
+      "role": "Continuous base plate on which the row of blocks stands, representing the immutable ledger they extend.",
+      "connections": [
+        "execution_platform",
+        "block_1",
+        "block_2",
+        "block_3",
+        "block_4",
+        "block_5",
+        "block_6"
+      ]
+    },
+    {
+      "id": "block_1",
+      "name": "Block N-5 Building",
+      "shape": "box",
+      "position": [
+        -3.6,
+        1.3,
+        2.6
+      ],
+      "size": [
+        1,
+        1.5,
+        1
+      ],
+      "material": "glass display",
+      "role": "Oldest visible block in the chain; a glass tower on the ledger base plate, parent of block_2.",
+      "connections": [
+        "ledger_foundation",
+        "block_2",
+        "chain_link_1"
+      ]
+    },
+    {
+      "id": "block_2",
+      "name": "Block N-4 Building",
+      "shape": "box",
+      "position": [
+        -2.16,
+        1.6,
+        2.6
+      ],
+      "size": [
+        1,
+        2.1,
+        1
+      ],
+      "material": "glass display",
+      "role": "Block building extending the chain; hashes back to block_1 and forward to block_3.",
+      "connections": [
+        "ledger_foundation",
+        "block_1",
+        "block_3",
+        "chain_link_1",
+        "chain_link_2"
+      ]
+    },
+    {
+      "id": "block_3",
+      "name": "Block N-3 Building",
+      "shape": "box",
+      "position": [
+        -0.72,
+        1.2,
+        2.6
+      ],
+      "size": [
+        1,
+        1.3,
+        1
+      ],
+      "material": "glass display",
+      "role": "Block building extending the chain; varied height shows differing transaction counts per block.",
+      "connections": [
+        "ledger_foundation",
+        "block_2",
+        "block_4",
+        "chain_link_2",
+        "chain_link_3"
+      ]
+    },
+    {
+      "id": "block_4",
+      "name": "Block N-2 Building",
+      "shape": "box",
+      "position": [
+        0.72,
+        1.8,
+        2.6
+      ],
+      "size": [
+        1,
+        2.5,
+        1
+      ],
+      "material": "glass display",
+      "role": "Tallest block building — a heavily filled block near the chain head.",
+      "connections": [
+        "ledger_foundation",
+        "block_3",
+        "block_5",
+        "chain_link_3",
+        "chain_link_4"
+      ]
+    },
+    {
+      "id": "block_5",
+      "name": "Block N-1 Building",
+      "shape": "box",
+      "position": [
+        2.16,
+        1.4,
+        2.6
+      ],
+      "size": [
+        1,
+        1.7,
+        1
+      ],
+      "material": "glass display",
+      "role": "Second-newest block building in the chain.",
+      "connections": [
+        "ledger_foundation",
+        "block_4",
+        "block_6",
+        "chain_link_4",
+        "chain_link_5"
+      ]
+    },
+    {
+      "id": "block_6",
+      "name": "Head Block Building",
+      "shape": "box",
+      "position": [
+        3.6,
+        1.5,
+        2.6
+      ],
+      "size": [
+        1,
+        1.9,
+        1
+      ],
+      "material": "glass display",
+      "role": "Current chain head; the most recently proposed block, exposed to applications via the RPC node.",
+      "connections": [
+        "ledger_foundation",
+        "block_5",
+        "chain_link_5",
+        "copper_bus_rpc"
+      ]
+    },
+    {
+      "id": "chain_link_1",
+      "name": "Hash Link 1-2",
+      "shape": "cylinder",
+      "position": [
+        -2.88,
+        1,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        1.5708
+      ],
+      "size": [
+        0.13,
+        0.65
+      ],
+      "material": "copper",
+      "role": "Copper link standing for the cryptographic hash that chains block_1 to block_2.",
+      "connections": [
+        "block_1",
+        "block_2"
+      ]
+    },
+    {
+      "id": "chain_link_2",
+      "name": "Hash Link 2-3",
+      "shape": "cylinder",
+      "position": [
+        -1.44,
+        1,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        1.5708
+      ],
+      "size": [
+        0.13,
+        0.65
+      ],
+      "material": "copper",
+      "role": "Copper link standing for the cryptographic hash that chains block_2 to block_3.",
+      "connections": [
+        "block_2",
+        "block_3"
+      ]
+    },
+    {
+      "id": "chain_link_3",
+      "name": "Hash Link 3-4",
+      "shape": "cylinder",
+      "position": [
+        0,
+        1,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        1.5708
+      ],
+      "size": [
+        0.13,
+        0.65
+      ],
+      "material": "copper",
+      "role": "Copper link standing for the cryptographic hash that chains block_3 to block_4.",
+      "connections": [
+        "block_3",
+        "block_4"
+      ]
+    },
+    {
+      "id": "chain_link_4",
+      "name": "Hash Link 4-5",
+      "shape": "cylinder",
+      "position": [
+        1.44,
+        1,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        1.5708
+      ],
+      "size": [
+        0.13,
+        0.65
+      ],
+      "material": "copper",
+      "role": "Copper link standing for the cryptographic hash that chains block_4 to block_5.",
+      "connections": [
+        "block_4",
+        "block_5"
+      ]
+    },
+    {
+      "id": "chain_link_5",
+      "name": "Hash Link 5-6",
+      "shape": "cylinder",
+      "position": [
+        2.88,
+        1,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        1.5708
+      ],
+      "size": [
+        0.13,
+        0.65
+      ],
+      "material": "copper",
+      "role": "Copper link standing for the cryptographic hash that chains block_5 to the head block.",
+      "connections": [
+        "block_5",
+        "block_6"
+      ]
+    },
+    {
+      "id": "beacon_spine",
+      "name": "Beacon Chain Spine",
+      "shape": "box",
+      "position": [
+        0,
+        4.3,
+        5.7
+      ],
+      "size": [
+        9,
+        0.3,
+        0.5
+      ],
+      "material": "copper",
+      "role": "Central consensus ledger running the length of the consensus deck — the Beacon Chain that every validator attests to and that finalizes blocks each epoch.",
+      "connections": [
+        "consensus_platform",
+        "validator_1",
+        "validator_2",
+        "validator_3",
+        "validator_4",
+        "validator_5",
+        "validator_6",
+        "validator_7",
+        "validator_8",
+        "copper_bus_riser"
+      ]
+    },
+    {
+      "id": "validator_1",
+      "name": "Validator Tower 1",
+      "shape": "cylinder",
+      "position": [
+        -3.6,
+        4.85,
+        4.9
+      ],
+      "size": [
+        0.45,
+        1.4
+      ],
+      "material": "brushed steel",
+      "role": "Proof-of-stake validator staking 32 ETH; proposes and attests blocks to the Beacon Chain spine.",
+      "connections": [
+        "consensus_platform",
+        "beacon_spine"
+      ]
+    },
+    {
+      "id": "validator_2",
+      "name": "Validator Tower 2",
+      "shape": "cylinder",
+      "position": [
+        -1.2,
+        5.05,
+        4.9
+      ],
+      "size": [
+        0.45,
+        1.8
+      ],
+      "material": "brushed steel",
+      "role": "Proof-of-stake validator staking 32 ETH; proposes and attests blocks to the Beacon Chain spine.",
+      "connections": [
+        "consensus_platform",
+        "beacon_spine"
+      ]
+    },
+    {
+      "id": "validator_3",
+      "name": "Validator Tower 3",
+      "shape": "cylinder",
+      "position": [
+        1.2,
+        4.95,
+        4.9
+      ],
+      "size": [
+        0.45,
+        1.6
+      ],
+      "material": "brushed steel",
+      "role": "Proof-of-stake validator staking 32 ETH; proposes and attests blocks to the Beacon Chain spine.",
+      "connections": [
+        "consensus_platform",
+        "beacon_spine"
+      ]
+    },
+    {
+      "id": "validator_4",
+      "name": "Validator Tower 4",
+      "shape": "cylinder",
+      "position": [
+        3.6,
+        5.15,
+        4.9
+      ],
+      "size": [
+        0.45,
+        2
+      ],
+      "material": "brushed steel",
+      "role": "Proof-of-stake validator staking 32 ETH; proposes and attests blocks to the Beacon Chain spine.",
+      "connections": [
+        "consensus_platform",
+        "beacon_spine"
+      ]
+    },
+    {
+      "id": "validator_5",
+      "name": "Validator Tower 5",
+      "shape": "cylinder",
+      "position": [
+        -3.6,
+        4.9,
+        6.5
+      ],
+      "size": [
+        0.45,
+        1.5
+      ],
+      "material": "brushed steel",
+      "role": "Proof-of-stake validator staking 32 ETH; proposes and attests blocks to the Beacon Chain spine.",
+      "connections": [
+        "consensus_platform",
+        "beacon_spine"
+      ]
+    },
+    {
+      "id": "validator_6",
+      "name": "Validator Tower 6",
+      "shape": "cylinder",
+      "position": [
+        -1.2,
+        5.25,
+        6.5
+      ],
+      "size": [
+        0.45,
+        2.2
+      ],
+      "material": "brushed steel",
+      "role": "Tallest validator in the set — proposes and attests blocks to the Beacon Chain spine.",
+      "connections": [
+        "consensus_platform",
+        "beacon_spine"
+      ]
+    },
+    {
+      "id": "validator_7",
+      "name": "Validator Tower 7",
+      "shape": "cylinder",
+      "position": [
+        1.2,
+        5,
+        6.5
+      ],
+      "size": [
+        0.45,
+        1.7
+      ],
+      "material": "brushed steel",
+      "role": "Proof-of-stake validator staking 32 ETH; proposes and attests blocks to the Beacon Chain spine.",
+      "connections": [
+        "consensus_platform",
+        "beacon_spine"
+      ]
+    },
+    {
+      "id": "validator_8",
+      "name": "Validator Tower 8",
+      "shape": "cylinder",
+      "position": [
+        3.6,
+        5.1,
+        6.5
+      ],
+      "size": [
+        0.45,
+        1.9
+      ],
+      "material": "brushed steel",
+      "role": "Proof-of-stake validator staking 32 ETH; proposes and attests blocks to the Beacon Chain spine.",
+      "connections": [
+        "consensus_platform",
+        "beacon_spine"
+      ]
+    },
+    {
+      "id": "mempool_box",
+      "name": "Mempool Holding Area",
+      "shape": "box",
+      "position": [
+        -3.8,
+        0.6,
+        -2.4
+      ],
+      "size": [
+        3.4,
+        0.6,
+        1.8
+      ],
+      "material": "dark anodized aluminum",
+      "role": "Low wide holding yard where submitted transactions wait, unconfirmed, before a validator includes them in a block.",
+      "connections": [
+        "execution_platform",
+        "pending_cube_1",
+        "pending_cube_2",
+        "pending_cube_3"
+      ]
+    },
+    {
+      "id": "pending_cube_1",
+      "name": "Pending Transaction 1",
+      "shape": "box",
+      "position": [
+        -4.7,
+        1.1,
+        -2.4
+      ],
+      "size": [
+        0.4,
+        0.4,
+        0.4
+      ],
+      "material": "glass display",
+      "role": "An individual unconfirmed transaction sitting in the mempool awaiting block inclusion.",
+      "connections": [
+        "mempool_box"
+      ]
+    },
+    {
+      "id": "pending_cube_2",
+      "name": "Pending Transaction 2",
+      "shape": "box",
+      "position": [
+        -3.8,
+        1.1,
+        -2.4
+      ],
+      "size": [
+        0.4,
+        0.4,
+        0.4
+      ],
+      "material": "glass display",
+      "role": "An individual unconfirmed transaction sitting in the mempool awaiting block inclusion.",
+      "connections": [
+        "mempool_box"
+      ]
+    },
+    {
+      "id": "pending_cube_3",
+      "name": "Pending Transaction 3",
+      "shape": "box",
+      "position": [
+        -2.9,
+        1.1,
+        -2.4
+      ],
+      "size": [
+        0.4,
+        0.4,
+        0.4
+      ],
+      "material": "glass display",
+      "role": "An individual unconfirmed transaction sitting in the mempool awaiting block inclusion.",
+      "connections": [
+        "mempool_box"
+      ]
+    },
+    {
+      "id": "smart_contract_1",
+      "name": "Smart Contract Building A",
+      "shape": "box",
+      "position": [
+        1.6,
+        1,
+        -2.4
+      ],
+      "size": [
+        1,
+        1.4,
+        1
+      ],
+      "material": "white composite",
+      "role": "An autonomous on-chain program in the smart-contract district, executed by the EVM.",
+      "connections": [
+        "execution_platform"
+      ]
+    },
+    {
+      "id": "smart_contract_2",
+      "name": "Smart Contract Building B",
+      "shape": "box",
+      "position": [
+        3.2,
+        1.45,
+        -2.4
+      ],
+      "size": [
+        1.3,
+        2.3,
+        1.3
+      ],
+      "material": "white composite",
+      "role": "A larger deployed contract — varied size shows differing code and storage footprints.",
+      "connections": [
+        "execution_platform"
+      ]
+    },
+    {
+      "id": "smart_contract_3",
+      "name": "Smart Contract Building C",
+      "shape": "box",
+      "position": [
+        4.6,
+        0.8,
+        -2.4
+      ],
+      "size": [
+        0.9,
+        1,
+        0.9
+      ],
+      "material": "white composite",
+      "role": "A small deployed contract in the smart-contract district, executed by the EVM.",
+      "connections": [
+        "execution_platform"
+      ]
+    },
+    {
+      "id": "rpc_node",
+      "name": "RPC / Gateway Node",
+      "shape": "cylinder",
+      "position": [
+        5.8,
+        1.6,
+        2.6
+      ],
+      "size": [
+        0.7,
+        2.6
+      ],
+      "material": "black composite",
+      "role": "Edge gateway tower exposing a JSON-RPC interface so wallets and dApps can read state and broadcast transactions.",
+      "connections": [
+        "execution_platform",
+        "copper_bus_rpc"
+      ]
+    },
+    {
+      "id": "copper_bus_riser",
+      "name": "Execution-Consensus Copper Bus",
+      "shape": "cylinder",
+      "position": [
+        0,
+        2.375,
+        4
+      ],
+      "size": [
+        0.16,
+        4.15
+      ],
+      "material": "copper",
+      "role": "Vertical copper bus carrying the Engine API link, feeding execution payloads up from the execution slab through the consensus deck to the Beacon Chain spine.",
+      "connections": [
+        "execution_platform",
+        "consensus_platform",
+        "beacon_spine"
+      ]
+    },
+    {
+      "id": "copper_bus_rpc",
+      "name": "RPC Access Copper Bus",
+      "shape": "cylinder",
+      "position": [
+        4.7,
+        0.7,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        1.5708
+      ],
+      "size": [
+        0.12,
+        1.7
+      ],
+      "material": "copper",
+      "role": "Copper bus linking the RPC gateway to the chain head, the path applications use to query the latest block.",
+      "connections": [
+        "rpc_node",
+        "block_6"
+      ]
+    }
+  ]
+}

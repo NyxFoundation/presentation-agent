@@ -24,7 +24,7 @@ You are invoked after step 09 has written the files. Your job is to push the dec
 </context>
 
 ## Tools You Use
-- **`Bash`** — build (`bun run build`), export PNG (`bunx slidev export --format png --output exports/cycleNN.png`), `ls`, `git status`. If `bun` is unavailable, fall back to `npx slidev ...`. If Playwright fails to launch its bundled Chromium, pass `--executable-path` to a system browser (e.g. `google-chrome-stable`).
+- **`Bash`** — build (`bun run build`), export PNG (`bunx slidev export --format png --output exports/cycleNN.png`), `ls`, `git status`. If `bun` is unavailable, fall back to `npx slidev ...`. If Playwright fails to launch its bundled Chromium, pass `--executable-path` to a system browser (e.g. `google-chrome-stable`). `slidev export` needs the `playwright-chromium` package, which is **intentionally not a package.json dependency** (its Chromium download breaks the Cloudflare build); if export reports it missing, install it locally without saving: `npm install --no-save playwright-chromium`.
 - **`Read`** — load each exported PNG (Slidev writes a directory of `1.png`, `2.png`, ... per slide), and load slide markdown files when needed.
 - **`Grep` / `Glob`** — locate specific slides by content or filename pattern.
 - **`Edit`** — make small, surgical changes to slide markdown. Prefer `Edit` over `Write` to minimize risk.
@@ -33,20 +33,21 @@ You are invoked after step 09 has written the files. Your job is to push the dec
 
 Run independent reads (PNGs, JSON inputs) in parallel.
 
-## Quality Bar — The 8-Axis Executive Rubric
+## Quality Bar — The 9-Axis Executive Rubric
 
 Score each axis 1.0–5.0. Target: **average ≥ 4.5 and no axis < 4.5**.
 
 | # | Axis | Definition |
 |---|---|---|
-| 1 | Clarity | Non-experts can follow without footnotes |
-| 2 | Story | Skim Test passes; arc is coherent |
-| 3 | Emotional Impact | Hook earns attention; close lands |
-| 4 | Credibility | Evidence is strong, specific, traceable |
-| 5 | Differentiation | The deck sounds like *this* organization |
-| 6 | Culture | Brand / manifesto / values voice is present and load-bearing |
-| 7 | Visual Readability | No overflow, no wall-of-text, titles fit one line |
-| 8 | Executive Pitch Quality | A senior leader could deliver it tomorrow |
+| 1 | Clarity | A salesperson or a non-domain viewer with **zero expertise** can follow every slide; jargon and acronyms are defined in plain words on first use, or cut |
+| 2 | Desire & Expectation Lift | Every slide **raises what the viewer wants** — a sales / buyer audience leaves it thinking "genuinely good value, a smart buy"; a consumer thinks "this could change my life, I'm excited". A correct-but-flat slide scores low here |
+| 3 | Story | Skim Test passes; arc is coherent |
+| 4 | Emotional Impact | Hook earns attention; close lands |
+| 5 | Credibility | Evidence is strong, specific, traceable |
+| 6 | Differentiation | The deck sounds like *this* organization |
+| 7 | Culture | Brand / manifesto / values voice is present and load-bearing |
+| 8 | Visual Readability | No overflow, no wall-of-text, titles fit one line |
+| 9 | Executive Pitch Quality | A senior leader could deliver it tomorrow |
 
 ## Workflow — repeat each cycle up to 7 times
 
@@ -69,6 +70,8 @@ Score each axis 1.0–5.0. Target: **average ≥ 4.5 and no axis < 4.5**.
   - Text overflow off the slide edge
   - Wall-of-text or unreadable density
   - Hook strength on the opener; resonance on the closer
+  - **Desire**: does the slide raise the viewer's expectations — would a buyer think "good value", a consumer "this changes my life"? A slide that only informs fails.
+  - **Non-domain reach**: could a salesperson or a non-expert follow it with zero background — any undefined jargon or acronym?
   - Anecdotes / manifesto echoes / public-info facts surviving from `inputs/` and `outputs/01_Context_Brief.json`
 - Cross-reference against the strategic intent in `outputs/03_Core_Strategy.json` and the gatekeeper notes in `outputs/08_Executive_Review.json` if present.
 
@@ -117,6 +120,8 @@ Emit a Markdown block to the user with:
 | Title overflow | Shorten title; move detail into the subtitle / eyebrow |
 | Dense slide | Split into two slides, or drop the weakest 1–2 elements |
 | Acronym soup | Add a one-line plain-language definition next to first use |
+| Slide informs but stirs no desire | Reframe the takeaway as a benefit the viewer *feels* — value gained for a buyer, a vivid better outcome for a consumer |
+| Jargon a non-expert can't follow | Restate in plain words a salesperson could repeat to a customer |
 | Visual rainbow | Reduce to ≤ 3 colors using the deck's existing palette |
 | Mermaid overflow | Reduce nodes to ≤ 5; split if needed |
 
@@ -137,6 +142,7 @@ Emit this at the end (in the user's language):
 
 ### Final rubric
 - Clarity ........................ X.X
+- Desire & Expectation Lift ...... X.X
 - Story .......................... X.X
 - Emotional Impact ............... X.X
 - Credibility .................... X.X

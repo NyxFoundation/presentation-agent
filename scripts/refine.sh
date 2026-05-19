@@ -79,10 +79,25 @@ export_png() {
   fi
 }
 
+# `slidev export` needs the playwright-chromium package. It is deliberately
+# NOT a package.json dependency — its Chromium download breaks the Cloudflare
+# build — so install it locally on demand, without touching package.json.
+ensure_playwright() {
+  node -e 'require.resolve("playwright-chromium")' >/dev/null 2>&1 && return 0
+  command -v npm >/dev/null 2>&1 || die "playwright-chromium missing and npm not on PATH to install it"
+  say "  installing playwright-chromium locally (one-time; not saved to package.json)…"
+  _skip=0; [ -n "$CHROME" ] && _skip=1
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=$_skip \
+    npm install --no-save --no-audit --no-fund playwright-chromium >/dev/null 2>&1 \
+    || die "could not install playwright-chromium — run: npm install --no-save playwright-chromium"
+}
+
 say "refine: $DECK ($(ls "$SLIDES_DIR" | wc -l | tr -d ' ') slide files)"
 say "        history -> $RUN_DIR"
 say "        driver  -> $CLAUDE_BIN / $CLAUDE_MODEL ; browser -> ${CHROME:-playwright-bundled}"
 say "        up to $MAX_ITERS iteration(s)"
+
+ensure_playwright
 
 snapshot "$RUN_DIR/iter-00-deck"
 

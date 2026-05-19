@@ -2,57 +2,73 @@
 layout: default
 ---
 
-# 「動いている」と「安全」は違う — それを確かめる仕組みが、壊れ始めた
+# 「動いている」と「安全」は違う — 確かめる仕組みが壊れ始めた
 
-<div class="grid grid-cols-2 gap-8 mt-5">
-
-<div>
-  <div class="text-xs uppercase tracking-widest opacity-40 mb-2">Problem ① — 被害は増え、最悪の攻撃は“対象外”</div>
-  <div class="text-5xl font-bold mb-1" style="font-family: 'BIZ UDPMincho', serif;">$3.4B</div>
-  <div class="text-sm opacity-50 mb-4">2025年単年でハッキングにより盗まれた暗号資産（Bybit単体で$1.5B）</div>
-  <div class="text-sm leading-relaxed mb-3">
-    しかも被害の大きい <strong>MEV・オラクル価格操作・取引順序操作・経済/ガバナンス攻撃</strong> は、
-    多くのバグバウンティで <strong>明示的に対象外（out of scope）</strong>。
-  </div>
-  <div class="text-xs opacity-50">
-    監査・形式検証・バグバウンティを尽くしても、<strong>最も損害の大きい動的・経済的な脆弱性</strong>を、誰も体系的には検査していません。
-  </div>
-</div>
+<div class="grid grid-cols-[0.85fr_1.15fr] gap-7 mt-6 items-center">
 
 <div>
-  <div class="text-xs uppercase tracking-widest opacity-40 mb-2">Problem ② — 人手のセキュリティ網が崩壊し始めた</div>
-  <div class="space-y-2.5">
-    <div class="pl-3 border-l-2 border-black">
-      <div class="text-sm font-bold">curl — バグバウンティを終了（2026年1月）</div>
-      <div class="text-xs opacity-60">AI生成の偽レポートが殺到。本物の脆弱性報告は約5%、6年間でAI製レポートが真の脆弱性を見つけたことは一度もない</div>
+  <div class="text-xs uppercase tracking-widest opacity-40 mb-1">2025年・暗号資産の盗難</div>
+  <div class="text-7xl font-bold leading-none" style="font-family: 'BIZ UDPMincho', serif;">$3.4B</div>
+  <div class="text-xs opacity-50 mt-2">Bybit 一件だけで $1.5B（Chainalysis 2026）</div>
+</div>
+
+<div class="oos">
+  <div class="oos-x">対象外</div>
+  <div>
+    <div class="text-sm font-bold mb-1">被害の大きい攻撃ほど、そもそも検査されていない</div>
+    <div class="flex flex-wrap gap-1.5 mb-1">
+      <span class="oos-tag">MEV</span>
+      <span class="oos-tag">オラクル価格操作</span>
+      <span class="oos-tag">取引順序の操作</span>
+      <span class="oos-tag">経済・ガバナンス攻撃</span>
     </div>
-    <div class="pl-3 border-l-2 border-gray-300">
-      <div class="text-sm font-bold">HackerOne — AI関連の脆弱性報告が前年比 +210%</div>
-      <div class="text-xs opacity-60">トリアージ（選別）する人間の処理能力が、報告の洪水に追いつかない</div>
-    </div>
-    <div class="pl-3 border-l-2 border-gray-300">
-      <div class="text-sm font-bold">Code4rena — 監査コンペ大手が事業縮小を発表（2026年5月）</div>
-      <div class="text-xs opacity-60">人手による単発・静的な監査モデルそのものが、持続性の限界に直面</div>
-    </div>
+    <div class="text-xs opacity-55">これらの動的・経済的な脆弱性は、多くのバグバウンティで <strong>明示的に out of scope</strong>。</div>
   </div>
 </div>
 
 </div>
 
-<div class="mt-5 pt-4 border-t border-gray-200 text-center">
-  <div class="text-base font-bold">静的・人的・単発のセキュリティは、最も必要なときに限界を迎えている。<strong>動的・自律的・永続的</strong>な公共財が要る。</div>
+<div class="text-xs uppercase tracking-widest opacity-40 mt-6 mb-2">しかも、守る側の「人手の網」が崩れ始めた</div>
+<div class="grid grid-cols-3 gap-4">
+  <div class="cl">
+    <div class="cl-name">curl</div>
+    <div class="cl-fact">バグバウンティ<strong>終了</strong></div>
+    <div class="cl-n">AI偽レポートが殺到。本物の報告は約5%（2026年1月）</div>
+  </div>
+  <div class="cl">
+    <div class="cl-name">HackerOne</div>
+    <div class="cl-fact">AI関連報告 <strong>+210%</strong></div>
+    <div class="cl-n">人手のトリアージが、報告の洪水に追いつかない</div>
+  </div>
+  <div class="cl">
+    <div class="cl-name">Code4rena</div>
+    <div class="cl-fact">監査コンペ大手が<strong>事業縮小</strong></div>
+    <div class="cl-n">人手・単発・静的な監査モデルが限界に（2026年5月）</div>
+  </div>
 </div>
+
+<div class="mt-5 conc">静的・人的・単発のセキュリティは限界。<strong>動的・自律・永続</strong>の公共財が要る。</div>
+
+<style>
+.oos { display: flex; gap: 12px; align-items: center; border: 2px solid #c63a3a; border-radius: 0.6rem; padding: 0.85rem 1rem; }
+.oos-x { font-family: 'BIZ UDPMincho', serif; font-size: 17px; font-weight: 700; color: #c63a3a; border: 2px solid #c63a3a; border-radius: 6px; padding: 4px 8px; flex-shrink: 0; }
+.oos-tag { font-size: 10.5px; padding: 2px 9px; border: 1px solid #d4d4d4; border-radius: 999px; }
+.cl { border: 1px solid #e5e7eb; border-top: 4px solid #c63a3a; border-radius: 0.5rem; padding: 0.7rem 0.85rem; }
+.cl-name { font-size: 12px; font-weight: 700; opacity: 0.5; letter-spacing: 0.04em; }
+.cl-fact { font-size: 16px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; margin: 0.15rem 0 0.3rem; }
+.cl-n { font-size: 10px; line-height: 1.55; opacity: 0.6; }
+.conc { text-align: center; font-size: 15px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; border-top: 2px solid #111; padding-top: 0.7rem; }
+</style>
 
 <SourceCite :sources="[
-  { label: 'Chainalysis 2026 (Crypto Theft Report)', url: 'https://www.chainalysis.com/blog/crypto-hacking-stolen-funds-2026/' },
+  { label: 'Chainalysis 2026', url: 'https://www.chainalysis.com/blog/crypto-hacking-stolen-funds-2026/' },
   { label: 'Immunefi Bug Bounty Scope (out-of-scope例)', url: 'https://immunefi.com/bug-bounty/veda/information/' },
   { label: 'curl — Death by a thousand slops', url: 'https://daniel.haxx.se/blog/2025/07/14/death-by-a-thousand-slops/' },
-  { label: 'curl ends bug bounty (BleepingComputer)', url: 'https://www.bleepingcomputer.com/news/security/curl-ending-bug-bounty-program-after-flood-of-ai-slop-reports/' },
   { label: 'HackerOne — 210% spike in AI vuln reports', url: 'https://www.hackerone.com/press-release/hackerone-report-finds-210-spike-ai-vulnerability-reports-amid-rise-ai-autonomy' },
   { label: 'Code4rena wind-down (Crypto Times)', url: 'https://www.cryptotimes.io/2026/05/13/code4rena-announces-wind-down-after-securing-billions-in-defi/' }
 ]" />
 
 <!--
 Speaker Notes:
-最初の課題です。2025年単年で、ハッキングにより34億ドル超の暗号資産が盗まれました。Bybitの一件だけで15億ドルです。しかも厄介なのは、最も損害の大きいタイプの攻撃——MEV、オラクル価格操作、取引順序の操作、経済・ガバナンス攻撃——が、多くのバグバウンティで明示的に「対象外」とされている点です。つまり、監査も形式検証もバグバウンティも尽くしているのに、一番損害の大きい動的・経済的な脆弱性を、誰も体系的には検査していない。さらに、守る側の人手のモデル自体が壊れ始めています。curlはAI生成の偽レポートの殺到に耐えきれず、2026年1月にバグバウンティを終了しました。本物の報告はわずか5%、6年間でAI製レポートが真の脆弱性を見つけたことは一度もありません。HackerOneではAI関連の脆弱性報告が前年比210%増。監査コンペ大手のCode4renaも2026年5月に事業縮小を発表しています。静的・人的・単発のセキュリティは、最も必要とされるこのタイミングで限界を迎えている。だからこそ、動的・自律的・永続的な公共財が必要なのです。
+最初の課題です。2025年単年で、ハッキングにより34億ドル超の暗号資産が盗まれました。Bybitの一件だけで15億ドルです。厄介なのは、最も損害の大きい攻撃——MEV、オラクル価格操作、取引順序の操作、経済・ガバナンス攻撃——が、多くのバグバウンティで明示的に「対象外」とされている点です。一番損害の大きい動的・経済的な脆弱性を、誰も体系的には検査していない。さらに、守る側の人手のモデル自体が壊れ始めています。curlはAI生成の偽レポートの殺到で2026年1月にバグバウンティを終了——本物の報告はわずか5%でした。HackerOneではAI関連の脆弱性報告が前年比210%増。監査コンペ大手のCode4renaも2026年5月に事業縮小を発表。静的・人的・単発のセキュリティは限界です。動的・自律・永続の公共財が要ります。
 -->

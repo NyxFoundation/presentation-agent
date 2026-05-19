@@ -33,15 +33,6 @@ src: ./slides/SL06.md
 src: ./slides/SL07.md
 ---
 ---
-src: ./slides/SL08.md
----
----
-src: ./slides/SL09.md
----
----
-src: ./slides/SL09b.md
----
----
 src: ./slides/SL10.md
 ---
 ---

@@ -4,56 +4,43 @@ layout: default
 
 # AIエージェントが実経済に出てくる — なのに、安全に試す場所がない
 
-<div class="grid grid-cols-[0.85fr_1.15fr] gap-7 mt-6 items-center">
+<div class="p4">
 
-<div>
-  <div class="text-xs uppercase tracking-widest opacity-40 mb-1">AIエージェントが仲介するB2B支出</div>
-  <div class="text-7xl font-bold leading-none" style="font-family: 'BIZ UDPMincho', serif;">$15T</div>
-  <div class="text-xs opacity-50 mt-2">2028年予測（Gartner）。2030年には金融取引の20%がプログラマブルに</div>
-</div>
-
-<div class="pay">
-  <div class="pay-flow">
-    <span class="pay-node">AI</span>
-    <span class="pay-arrow">— ¥ →</span>
-    <span class="pay-node">AI</span>
-  </div>
-  <div>
-    <div class="text-sm font-bold mb-1">AIは、人間を介さず支払い始めた</div>
-    <div class="flex flex-wrap gap-1.5 mb-1">
-      <span class="pay-tag">Google AP2（60社以上）</span>
-      <span class="pay-tag">x402（Coinbase × EF × MetaMask）</span>
+  <div class="p4-left">
+    <div class="p4-eye">もう、始まっている</div>
+    <div class="p4-big">$15T</div>
+    <div class="p4-cap">AIエージェントが仲介するB2B支出の予測（2028年・Gartner）</div>
+    <div class="p4-say">
+      Google の <strong>AP2</strong>、Coinbase × Ethereum Foundation の <strong>x402</strong> —
+      AIはすでに、人間を介さず<strong>AIに支払っている</strong>。
     </div>
-    <div class="text-xs opacity-55">AIエージェントがエージェントに決済する仕組みは、<strong>もう動いている</strong>。</div>
   </div>
-</div>
+
+  <div class="p4-right">
+    <div class="p4-eye p4-eye-r">なのに</div>
+    <div class="p4-gap">AIを安全に試せる場所が、<br/>世界に無い。</div>
+    <div class="p4-say">
+      本物のインセンティブの下でAI同士が取引・攻撃・検証し合う、<strong>公共の実環境が存在しない</strong>。
+    </div>
+    <div class="p4-warn">AI同士は欺き合える — Sumsubは2026年、「機械が機械を騙す」詐欺の急増を警告。</div>
+  </div>
 
 </div>
 
-<div class="grid grid-cols-2 gap-4 mt-6">
-  <div class="gp">
-    <div class="gp-h">エージェント同士は、欺き合える</div>
-    <div class="gp-n">Sumsubは「<strong>機械が機械を騙す</strong> agentic AI 詐欺が2026年に急増する」と警告。</div>
-  </div>
-  <div class="gp gp-hi">
-    <div class="gp-h">本番で試すしかない、という空白</div>
-    <div class="gp-n">本物のインセンティブ下で、AI同士が取引・攻撃・検証し合う<strong>公共の実環境が存在しない</strong>。</div>
-  </div>
-</div>
-
-<div class="mt-5 conc">本番にお金が流れる前に、AIを<strong>安全に戦わせ・確かめる「実環境」</strong>が要る。</div>
+<div class="p4-conc">本番にお金が流れる前に、AIを<strong>安全に戦わせ・確かめる「実環境」</strong>が要る。</div>
 
 <style>
-.pay { display: flex; gap: 14px; align-items: center; border: 2px solid #111; border-radius: 0.6rem; padding: 0.85rem 1rem; }
-.pay-flow { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
-.pay-node { font-family: 'BIZ UDPMincho', serif; font-size: 13px; font-weight: 700; border: 2px solid #111; border-radius: 50%; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; }
-.pay-arrow { font-size: 11px; font-weight: 700; opacity: 0.6; }
-.pay-tag { font-size: 10.5px; padding: 2px 9px; border: 1px solid #d4d4d4; border-radius: 999px; }
-.gp { border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 0.8rem 1rem; }
-.gp.gp-hi { border: 2px solid #111; }
-.gp-h { font-size: 14px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; margin-bottom: 0.3rem; }
-.gp-n { font-size: 11px; line-height: 1.6; opacity: 0.7; }
-.conc { text-align: center; font-size: 15px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; border-top: 2px solid #111; padding-top: 0.7rem; }
+.p4 { display: grid; grid-template-columns: 1fr 1fr; margin-top: 2.2rem; }
+.p4-left { padding-right: 2.4rem; }
+.p4-right { padding-left: 2.4rem; border-left: 1px solid #e0e0e0; }
+.p4-eye { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; opacity: 0.45; text-transform: uppercase; margin-bottom: 0.5rem; }
+.p4-eye-r { color: #c63a3a; opacity: 1; }
+.p4-big { font-family: 'BIZ UDPMincho', serif; font-size: 78px; font-weight: 700; line-height: 0.95; }
+.p4-cap { font-size: 11px; opacity: 0.5; margin-top: 0.6rem; }
+.p4-gap { font-family: 'BIZ UDPMincho', serif; font-size: 30px; font-weight: 700; line-height: 1.4; }
+.p4-say { font-size: 12px; line-height: 1.85; margin-top: 1.5rem; opacity: 0.82; }
+.p4-warn { font-size: 10.5px; line-height: 1.6; opacity: 0.7; margin-top: 1rem; padding-left: 0.8rem; border-left: 3px solid #c63a3a; }
+.p4-conc { text-align: center; font-size: 15px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; margin-top: 2.2rem; padding-top: 0.9rem; border-top: 2px solid #111; }
 </style>
 
 <SourceCite :sources="[
@@ -65,5 +52,5 @@ layout: default
 
 <!--
 Speaker Notes:
-二つ目の課題です。AIエージェントは、もう本物のお金を動かし始めています。GartnerはAIエージェントが2028年までにB2B支出の15兆ドル超を仲介し、2030年には金融取引の2割がプログラマブルになると予測。GoogleはAP2を60社以上と発表し、Coinbase・イーサリアム財団・MetaMaskのx402では、AIエージェントが人間を介さず別のエージェントに支払います。AIエージェント経済は、構想ではなく進行中の現実です。問題は二つ。一つ、自律エージェントは互いを欺き合えます。Sumsubは「機械が機械を騙す」agentic AI詐欺が2026年に急増すると警告しています。二つ、にもかかわらず、本物のインセンティブの下でAI同士が取引・攻撃・検証し合い、本番前に試される公共の実環境が存在しません。本番にお金が流れる前に、AIを安全に戦わせ、確かめる実環境が必要です。
+二つ目の課題です。左をご覧ください。AIエージェント経済は、もう始まっています。Gartnerは、AIエージェントが仲介するB2B支出が2028年までに15兆ドルに達すると予測。GoogleのAP2、Coinbase・イーサリアム財団のx402では、AIがすでに人間を介さずAIに支払っています。ところが右——AIを安全に試せる場所が、世界にありません。本物のインセンティブの下でAI同士が取引・攻撃・検証し合う、公共の実環境が存在しない。しかもAI同士は欺き合えます。Sumsubは2026年に「機械が機械を騙す」詐欺の急増を警告しています。本番にお金が流れる前に、AIを安全に戦わせ、確かめる実環境が必要です。
 -->

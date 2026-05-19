@@ -159,7 +159,10 @@ function init(descriptor) {
 
   renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' })
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-  renderer.setSize(w, h)
+  // setSize(..., false): do NOT let three write inline px width/height onto the
+  // canvas — CSS keeps it at 100% of the container so it can never overflow a
+  // grid/flex cell and break the slide layout.
+  renderer.setSize(w, h, false)
   el.appendChild(renderer.domElement)
 
   controls = new OrbitControls(camera, renderer.domElement)
@@ -177,7 +180,7 @@ function init(descriptor) {
     if (!cw || !ch) return
     camera.aspect = cw / ch
     camera.updateProjectionMatrix()
-    renderer.setSize(cw, ch)
+    renderer.setSize(cw, ch, false)
   })
   ro.observe(el)
 
@@ -244,6 +247,10 @@ onBeforeUnmount(() => {
 }
 .scene3d :deep(canvas) {
   display: block;
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
   cursor: grab;
 }
 .scene3d :deep(canvas):active {

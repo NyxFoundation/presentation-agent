@@ -1,0 +1,814 @@
+{
+  "machine_name": "House Under Threat",
+  "assembly_instructions": "Human scale, 1x (no scaling). Right-handed, +Y up; house front faces +X. Build the ground_plot first as the root, then the four fence rails on its perimeter. Raise house_body centered at origin, cap it with the two slanted roof panels meeting at the ridge, and seat the chimney on the -Z roof panel. Mount the front_door on the +X face and hang the oversized padlock (brass cylinder body + steel shackle) on it. Scatter the four identical brass keys flat on the ground just outside the door. Place the four hooded thief figures (capsule legs, box torso, sphere head, all dark) approaching from front, back, a side fence, and a corner, each on its thin path except the side thief who is climbing over the fence. Reads in five seconds: one house, one easily copied lock, keys lying everywhere, thieves closing in from all sides.",
+  "metadata": {
+    "reference": "https://en.wikipedia.org/wiki/Lock_(security_device)",
+    "domain": "cybersecurity-education",
+    "thumbnail_camera": [
+      9.1,
+      9,
+      9.1
+    ],
+    "info": {
+      "japanese_name": "狙われる家",
+      "english_name": "House Under Threat",
+      "summary": "A diorama of a single house whose front-door lock can be trivially duplicated, with thieves converging from every direction. It is a visual metaphor for weak digital security: one shared, copyable key protecting an asset under attack from all sides.",
+      "description": "The scene is a 14 m square plot with a low 0.8 m steel fence, a white 4x3x4 m house with a pitched roof, chimney, front door and three windows. An oversized brass padlock hangs on the door — deliberately large so the viewer reads 'this is the only thing guarding the house'. Four identical brass keys lie scattered on the ground beside the door, illustrating that the key has been copied and handed out so freely that anyone can pick one up. Four dark humanoid thief figures advance from the front path, the back, over a side fence, and across a corner path, demonstrating that the threat is omnidirectional. The composition maps directly onto credential security: a single reused password (the key), no second factor (one lock), and attackers probing from many entry points at once.",
+      "operator": "Security awareness training program",
+      "contractor": "Presentation Agent diorama team",
+      "contract_date": "2026-05-19",
+      "contract_value": "Educational asset",
+      "status": "In use as a teaching diorama",
+      "facts": [
+        {
+          "label": "Plot size",
+          "value": "14 x 14 m"
+        },
+        {
+          "label": "House footprint",
+          "value": "4 x 4 m, 3 m walls"
+        },
+        {
+          "label": "Roof ridge height",
+          "value": "4.2 m"
+        },
+        {
+          "label": "Fence height",
+          "value": "0.8 m (low, climbable)"
+        },
+        {
+          "label": "Padlock body",
+          "value": "0.28 m radius cylinder (oversized)"
+        },
+        {
+          "label": "Copied keys",
+          "value": "4 identical units on the ground"
+        },
+        {
+          "label": "Thief figures",
+          "value": "4, approaching from 4 directions"
+        },
+        {
+          "label": "Access paths",
+          "value": "3 thin paths + 1 fence climb"
+        },
+        {
+          "label": "Part count",
+          "value": "34 parts"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Lock (security device) — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Lock_(security_device)"
+        },
+        {
+          "title": "Padlock — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Padlock"
+        },
+        {
+          "title": "Multi-factor authentication — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Multi-factor_authentication"
+        }
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "ground_plot",
+      "name": "Ground Plot",
+      "shape": "box",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "size": [
+        14,
+        0.2,
+        14
+      ],
+      "material": "concrete",
+      "role": "Square ground parcel; the root structural element on which the house, fence, paths, keys and figures all stand.",
+      "connections": [
+        "fence_front",
+        "fence_back",
+        "fence_left",
+        "fence_right",
+        "house_body",
+        "path_front",
+        "path_back",
+        "path_corner",
+        "key_1",
+        "key_2",
+        "key_3",
+        "key_4",
+        "thief_a_legs",
+        "thief_b_legs",
+        "thief_c_legs",
+        "thief_d_legs"
+      ]
+    },
+    {
+      "id": "fence_front",
+      "name": "Front Fence Rail",
+      "shape": "box",
+      "position": [
+        6,
+        0.4,
+        0
+      ],
+      "size": [
+        0.15,
+        0.8,
+        12.3
+      ],
+      "material": "welded steel",
+      "role": "Low perimeter fence on the front (+X) side of the plot — short enough to step over.",
+      "connections": [
+        "ground_plot"
+      ]
+    },
+    {
+      "id": "fence_back",
+      "name": "Back Fence Rail",
+      "shape": "box",
+      "position": [
+        -6,
+        0.4,
+        0
+      ],
+      "size": [
+        0.15,
+        0.8,
+        12.3
+      ],
+      "material": "welded steel",
+      "role": "Low perimeter fence on the back (-X) side of the plot.",
+      "connections": [
+        "ground_plot"
+      ]
+    },
+    {
+      "id": "fence_left",
+      "name": "Side Fence Rail (port)",
+      "shape": "box",
+      "position": [
+        0,
+        0.4,
+        6
+      ],
+      "size": [
+        12.3,
+        0.8,
+        0.15
+      ],
+      "material": "welded steel",
+      "role": "Low perimeter fence on the +Z side — the rail one thief is climbing over.",
+      "connections": [
+        "ground_plot"
+      ]
+    },
+    {
+      "id": "fence_right",
+      "name": "Side Fence Rail (starboard)",
+      "shape": "box",
+      "position": [
+        0,
+        0.4,
+        -6
+      ],
+      "size": [
+        12.3,
+        0.8,
+        0.15
+      ],
+      "material": "welded steel",
+      "role": "Low perimeter fence on the -Z side of the plot.",
+      "connections": [
+        "ground_plot"
+      ]
+    },
+    {
+      "id": "path_front",
+      "name": "Front Path",
+      "shape": "box",
+      "position": [
+        4,
+        0.02,
+        0
+      ],
+      "size": [
+        4,
+        0.04,
+        1
+      ],
+      "material": "brushed steel",
+      "role": "Thin walkway from the front fence to the door, the route of the front thief.",
+      "connections": [
+        "ground_plot"
+      ]
+    },
+    {
+      "id": "path_back",
+      "name": "Back Path",
+      "shape": "box",
+      "position": [
+        -4,
+        0.02,
+        0
+      ],
+      "size": [
+        4,
+        0.04,
+        1
+      ],
+      "material": "brushed steel",
+      "role": "Thin walkway approaching the house from the rear, the route of the back thief.",
+      "connections": [
+        "ground_plot"
+      ]
+    },
+    {
+      "id": "path_corner",
+      "name": "Corner Path",
+      "shape": "box",
+      "position": [
+        3,
+        0.02,
+        3
+      ],
+      "rotation": [
+        0,
+        0.785,
+        0
+      ],
+      "size": [
+        5,
+        0.04,
+        0.9
+      ],
+      "material": "brushed steel",
+      "role": "Diagonal walkway from the front-right corner, the route of the corner thief.",
+      "connections": [
+        "ground_plot"
+      ]
+    },
+    {
+      "id": "house_body",
+      "name": "House Body",
+      "shape": "box",
+      "position": [
+        0,
+        1.5,
+        0
+      ],
+      "size": [
+        4,
+        3,
+        4
+      ],
+      "material": "white composite",
+      "role": "Main four-wall body of the house; the structural core carrying the roof, door and windows.",
+      "connections": [
+        "ground_plot",
+        "roof_panel_pz",
+        "roof_panel_nz",
+        "front_door",
+        "window_left",
+        "window_right",
+        "window_side"
+      ]
+    },
+    {
+      "id": "roof_panel_pz",
+      "name": "Roof Panel (+Z slope)",
+      "shape": "box",
+      "position": [
+        0,
+        3.6,
+        1.1
+      ],
+      "rotation": [
+        0.5,
+        0,
+        0
+      ],
+      "size": [
+        4.6,
+        0.18,
+        2.5
+      ],
+      "material": "welded steel",
+      "role": "One slanted face of the pitched roof, sloping down toward +Z from the ridge.",
+      "connections": [
+        "house_body",
+        "roof_panel_nz"
+      ]
+    },
+    {
+      "id": "roof_panel_nz",
+      "name": "Roof Panel (-Z slope)",
+      "shape": "box",
+      "position": [
+        0,
+        3.6,
+        -1.1
+      ],
+      "rotation": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        4.6,
+        0.18,
+        2.5
+      ],
+      "material": "welded steel",
+      "role": "The opposite slanted roof face, sloping down toward -Z; meets the +Z panel at the ridge.",
+      "connections": [
+        "house_body",
+        "roof_panel_pz",
+        "chimney"
+      ]
+    },
+    {
+      "id": "chimney",
+      "name": "Chimney",
+      "shape": "box",
+      "position": [
+        -1,
+        4.6,
+        -0.7
+      ],
+      "size": [
+        0.6,
+        1.6,
+        0.6
+      ],
+      "material": "concrete",
+      "role": "Brick chimney rising through the -Z roof slope — an iconic silhouette cue that this is a house.",
+      "connections": [
+        "roof_panel_nz"
+      ]
+    },
+    {
+      "id": "front_door",
+      "name": "Front Door",
+      "shape": "box",
+      "position": [
+        2.06,
+        1,
+        0
+      ],
+      "size": [
+        0.12,
+        2,
+        1
+      ],
+      "material": "black composite",
+      "role": "The single front door on the +X face — the only guarded entry point, fitted with the padlock.",
+      "connections": [
+        "house_body",
+        "padlock_body"
+      ]
+    },
+    {
+      "id": "window_left",
+      "name": "Front Window (port)",
+      "shape": "box",
+      "position": [
+        2.05,
+        1.9,
+        1.3
+      ],
+      "size": [
+        0.1,
+        1,
+        0.9
+      ],
+      "material": "glass display",
+      "role": "Glazed window flanking the door on the +Z side of the front face.",
+      "connections": [
+        "house_body"
+      ]
+    },
+    {
+      "id": "window_right",
+      "name": "Front Window (starboard)",
+      "shape": "box",
+      "position": [
+        2.05,
+        1.9,
+        -1.3
+      ],
+      "size": [
+        0.1,
+        1,
+        0.9
+      ],
+      "material": "glass display",
+      "role": "Glazed window flanking the door on the -Z side of the front face.",
+      "connections": [
+        "house_body"
+      ]
+    },
+    {
+      "id": "window_side",
+      "name": "Side Window",
+      "shape": "box",
+      "position": [
+        0,
+        1.9,
+        2.05
+      ],
+      "size": [
+        0.9,
+        1,
+        0.1
+      ],
+      "material": "glass display",
+      "role": "Glazed window on the +Z wall, completing the recognizable house facade.",
+      "connections": [
+        "house_body"
+      ]
+    },
+    {
+      "id": "padlock_body",
+      "name": "Padlock Body",
+      "shape": "cylinder",
+      "position": [
+        2.25,
+        1,
+        0
+      ],
+      "size": [
+        0.28,
+        0.6
+      ],
+      "material": "brass",
+      "role": "Oversized padlock body hanging on the door — deliberately huge to read as the house's sole defense.",
+      "connections": [
+        "front_door",
+        "padlock_shackle"
+      ]
+    },
+    {
+      "id": "padlock_shackle",
+      "name": "Padlock Shackle",
+      "shape": "torus",
+      "position": [
+        2.25,
+        1.42,
+        0
+      ],
+      "rotation": [
+        0,
+        1.5708,
+        0
+      ],
+      "size": [
+        0.2,
+        0.06
+      ],
+      "material": "brushed steel",
+      "role": "The U-shaped steel shackle ring on top of the padlock body, facing the viewer.",
+      "connections": [
+        "padlock_body"
+      ]
+    },
+    {
+      "id": "key_1",
+      "name": "Copied Key 1",
+      "shape": "capsule",
+      "position": [
+        2.8,
+        0.06,
+        0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        1.5708
+      ],
+      "size": [
+        0.05,
+        0.4
+      ],
+      "material": "brass",
+      "role": "One of four identical keys lying on the ground by the door — showing the key has been freely copied.",
+      "connections": [
+        "ground_plot"
+      ]
+    },
+    {
+      "id": "key_2",
+      "name": "Copied Key 2",
+      "shape": "capsule",
+      "position": [
+        3.2,
+        0.06,
+        -0.3
+      ],
+      "rotation": [
+        0,
+        0.7,
+        1.5708
+      ],
+      "size": [
+        0.05,
+        0.4
+      ],
+      "material": "brass",
+      "role": "Second identical copied key, scattered near the door.",
+      "connections": [
+        "ground_plot"
+      ]
+    },
+    {
+      "id": "key_3",
+      "name": "Copied Key 3",
+      "shape": "capsule",
+      "position": [
+        2.7,
+        0.06,
+        -0.9
+      ],
+      "rotation": [
+        0,
+        -0.5,
+        1.5708
+      ],
+      "size": [
+        0.05,
+        0.4
+      ],
+      "material": "brass",
+      "role": "Third identical copied key, dropped on the ground beside the entrance.",
+      "connections": [
+        "ground_plot"
+      ]
+    },
+    {
+      "id": "key_4",
+      "name": "Copied Key 4",
+      "shape": "capsule",
+      "position": [
+        3.5,
+        0.06,
+        0.9
+      ],
+      "rotation": [
+        0,
+        1.1,
+        1.5708
+      ],
+      "size": [
+        0.05,
+        0.4
+      ],
+      "material": "brass",
+      "role": "Fourth identical copied key — the cluster makes clear the key is far too easy to duplicate.",
+      "connections": [
+        "ground_plot"
+      ]
+    },
+    {
+      "id": "thief_a_legs",
+      "name": "Front Thief — Legs",
+      "shape": "capsule",
+      "position": [
+        5,
+        0.48,
+        0
+      ],
+      "size": [
+        0.13,
+        0.7
+      ],
+      "material": "black composite",
+      "role": "Lower body of the thief advancing up the front path toward the door.",
+      "connections": [
+        "ground_plot",
+        "thief_a_torso"
+      ]
+    },
+    {
+      "id": "thief_a_torso",
+      "name": "Front Thief — Torso",
+      "shape": "box",
+      "position": [
+        5,
+        1.36,
+        0
+      ],
+      "size": [
+        0.5,
+        0.8,
+        0.32
+      ],
+      "material": "black composite",
+      "role": "Torso of the front thief, a dark humanoid figure approaching from +X.",
+      "connections": [
+        "thief_a_legs",
+        "thief_a_head"
+      ]
+    },
+    {
+      "id": "thief_a_head",
+      "name": "Front Thief — Head",
+      "shape": "sphere",
+      "position": [
+        5,
+        1.96,
+        0
+      ],
+      "size": [
+        0.2
+      ],
+      "material": "black composite",
+      "role": "Head of the front thief, completing the recognizable intruder silhouette.",
+      "connections": [
+        "thief_a_torso"
+      ]
+    },
+    {
+      "id": "thief_b_legs",
+      "name": "Back Thief — Legs",
+      "shape": "capsule",
+      "position": [
+        -5,
+        0.48,
+        0
+      ],
+      "size": [
+        0.13,
+        0.7
+      ],
+      "material": "black composite",
+      "role": "Lower body of the thief approaching the house from the rear (-X).",
+      "connections": [
+        "ground_plot",
+        "thief_b_torso"
+      ]
+    },
+    {
+      "id": "thief_b_torso",
+      "name": "Back Thief — Torso",
+      "shape": "box",
+      "position": [
+        -5,
+        1.36,
+        0
+      ],
+      "size": [
+        0.5,
+        0.8,
+        0.32
+      ],
+      "material": "black composite",
+      "role": "Torso of the back thief, attacking the unguarded rear of the house.",
+      "connections": [
+        "thief_b_legs",
+        "thief_b_head"
+      ]
+    },
+    {
+      "id": "thief_b_head",
+      "name": "Back Thief — Head",
+      "shape": "sphere",
+      "position": [
+        -5,
+        1.96,
+        0
+      ],
+      "size": [
+        0.2
+      ],
+      "material": "black composite",
+      "role": "Head of the back thief.",
+      "connections": [
+        "thief_b_torso"
+      ]
+    },
+    {
+      "id": "thief_c_legs",
+      "name": "Side Thief — Legs",
+      "shape": "capsule",
+      "position": [
+        1.5,
+        0.48,
+        5.4
+      ],
+      "size": [
+        0.13,
+        0.7
+      ],
+      "material": "black composite",
+      "role": "Lower body of the thief who has just climbed over the +Z side fence.",
+      "connections": [
+        "ground_plot",
+        "thief_c_torso"
+      ]
+    },
+    {
+      "id": "thief_c_torso",
+      "name": "Side Thief — Torso",
+      "shape": "box",
+      "position": [
+        1.5,
+        1.36,
+        5.4
+      ],
+      "size": [
+        0.5,
+        0.8,
+        0.32
+      ],
+      "material": "black composite",
+      "role": "Torso of the side thief, demonstrating that even the low fence is no barrier.",
+      "connections": [
+        "thief_c_legs",
+        "thief_c_head"
+      ]
+    },
+    {
+      "id": "thief_c_head",
+      "name": "Side Thief — Head",
+      "shape": "sphere",
+      "position": [
+        1.5,
+        1.96,
+        5.4
+      ],
+      "size": [
+        0.2
+      ],
+      "material": "black composite",
+      "role": "Head of the side thief.",
+      "connections": [
+        "thief_c_torso"
+      ]
+    },
+    {
+      "id": "thief_d_legs",
+      "name": "Corner Thief — Legs",
+      "shape": "capsule",
+      "position": [
+        4,
+        0.48,
+        4
+      ],
+      "size": [
+        0.13,
+        0.7
+      ],
+      "material": "black composite",
+      "role": "Lower body of the thief advancing along the diagonal corner path.",
+      "connections": [
+        "ground_plot",
+        "thief_d_torso"
+      ]
+    },
+    {
+      "id": "thief_d_torso",
+      "name": "Corner Thief — Torso",
+      "shape": "box",
+      "position": [
+        4,
+        1.36,
+        4
+      ],
+      "size": [
+        0.5,
+        0.8,
+        0.32
+      ],
+      "material": "black composite",
+      "role": "Torso of the corner thief, the fourth attacker closing in from a different angle.",
+      "connections": [
+        "thief_d_legs",
+        "thief_d_head"
+      ]
+    },
+    {
+      "id": "thief_d_head",
+      "name": "Corner Thief — Head",
+      "shape": "sphere",
+      "position": [
+        4,
+        1.96,
+        4
+      ],
+      "size": [
+        0.2
+      ],
+      "material": "black composite",
+      "role": "Head of the corner thief, completing the ring of intruders around the house.",
+      "connections": [
+        "thief_d_torso"
+      ]
+    }
+  ]
+}

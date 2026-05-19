@@ -18,14 +18,18 @@ layout: default
 
   <div class="rt-col">
     <div class="rt-when">発見があり次第</div>
-    <div class="rt-cond">脆弱性・不均衡が見つかれば書ける</div>
+    <div class="rt-cond">脆弱性・不均衡・攻撃データが集まれば</div>
     <div class="rt-item">
       <div class="rt-h">DeFiの設計改善提案</div>
-      <div class="rt-n">Trader AIの挙動から特定プロトコルの不均衡・最適パラメータが見つかれば、改善提案として論文化し当該プロジェクトへ届ける。</div>
+      <div class="rt-n">Trader AIの挙動から不均衡や最適パラメータが見つかれば、改善提案として論文化し当該プロジェクトへ届ける。</div>
     </div>
     <div class="rt-item">
       <div class="rt-h">ゼロデイの発見・報告</div>
-      <div class="rt-n">Hacker AIが未知の脆弱性（ゼロデイ）を発見すれば、責任ある開示と事例研究としてまとめる。</div>
+      <div class="rt-n">Hacker AIが未知の脆弱性（ゼロデイ）を発見すれば、責任ある開示と事例研究にまとめる。</div>
+    </div>
+    <div class="rt-item">
+      <div class="rt-h">能動的サイバー防御のデータセット</div>
+      <div class="rt-n">攻撃に関わる「動的なデータ」は世に不足している。本物の利益を賭けて攻撃し続けるErisから実攻撃データを採取し、能動的サイバー防御の研究用データセットとして公開する。</div>
     </div>
   </div>
 
@@ -51,9 +55,9 @@ layout: default
 .rt-when { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: #fff; background: #9aa1ad; display: inline-block; padding: 3px 12px; border-radius: 999px; margin: 0.3rem 0 0.1rem; }
 .rt-when-sure { background: #111; }
 .rt-cond { font-size: 10px; opacity: 0.5; margin-bottom: 0.7rem; }
-.rt-item { margin-top: 0.7rem; }
-.rt-h { font-size: 14px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; }
-.rt-n { font-size: 10.5px; line-height: 1.7; opacity: 0.72; margin-top: 0.25rem; }
+.rt-item { margin-top: 0.55rem; }
+.rt-h { font-size: 13.5px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; }
+.rt-n { font-size: 10px; line-height: 1.65; opacity: 0.72; margin-top: 0.22rem; }
 .rt-tag { font-size: 10px; font-weight: 700; margin-top: 0.5rem; }
 </style>
 

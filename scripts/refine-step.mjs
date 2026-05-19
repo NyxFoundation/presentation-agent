@@ -27,7 +27,7 @@ const fail = (msg) => {
 };
 
 const AXES = [
-  'clarity', 'story', 'emotional_impact', 'credibility',
+  'clarity', 'desire', 'story', 'emotional_impact', 'credibility',
   'differentiation', 'culture', 'visual_readability', 'executive_pitch',
 ];
 

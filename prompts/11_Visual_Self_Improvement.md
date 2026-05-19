@@ -46,7 +46,7 @@ I, as this person, be satisfied — and moved to act?"
 | `sponsor` | 企業のスポンサー判断者（懐疑的） | 具体的な見返り、ROI、固い証拠、**妥当な比較** | 比較がかみ合わない／直接的な主張で証拠が薄い／見返りが曖昧 |
 | `researcher` | 同分野の研究者 | 本物の研究アジェンダ、中身、誇張のなさ | 誇張・バズワード／技術的主張が空疎 |
 | `layperson` | 非ドメインの一般聴衆（専門知識ゼロ） | 予備知識なしで追えること | 専門用語・略語が未定義／前提知識を要求される |
-| `design_critic` | デザイン／エディトリアル批評家 | 直感性、視覚的階層、最小限の文字 | 文字が多い／段落で済ませた図／視覚階層が弱い |
+| `design_critic` | デザイン／エディトリアル批評家 | 直感性、視線誘導(eye-flow)、十分大きく高コントラストな文字(高齢者でも読める)、視覚的階層、最小限の文字 | 文字が多い／小さすぎ・薄すぎて高齢者に読めない文字／段落で済ませた図／視線の流れが定まらず焦点が複数あるレイアウト |
 
 **The deck's score is the minimum of the five.** The loop converges only when
 *every* persona is satisfied.
@@ -90,6 +90,10 @@ Two rules every persona enforces:
   could carry faster must not be left as a paragraph.
 - **Comparisons must be apt.** Both sides on the *same axis*, A against its
   real alternative B. A mismatched comparison weakens persuasion.
+- **Legible & eye-flow.** Every element must be large and high-contrast
+  enough for an elderly viewer — no faint, sub-legible type. Each slide has
+  one clear focal point, and the layout guides the eye along a single path
+  (title → key visual → support); competing focal points are a defect.
 
 ---
 

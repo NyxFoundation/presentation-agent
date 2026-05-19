@@ -26,8 +26,9 @@ layout: default
 
 </div>
 
-<div class="mt-9 p-3.5 border-2 border-black text-center text-base" style="font-family:'BIZ UDPMincho',serif;">
-  本物の嵐の中で叩かれて、生き残ったものだけが、本物の知識になる。
+<div class="mt-7">
+  <img src="/images/house_nanto.png" class="house-img" alt="Nyx の研究ハウス" />
+  <div class="house-cap">研究者がともに住み、知識をぶつけ合う —— Nyx の研究ハウス</div>
 </div>
 
 <style>
@@ -44,6 +45,8 @@ layout: default
 .craft svg { width: 48px; height: 48px; color: #111; }
 .craft-h { font-size: 19px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; }
 .craft-n { font-size: 12.5px; opacity: 0.72; line-height: 1.75; }
+.house-img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; display: block; }
+.house-cap { font-size: 11px; opacity: 0.55; text-align: center; margin-top: 0.45rem; }
 </style>
 
 <!--

@@ -1,6 +1,6 @@
 {
   "machine_name": "Ethereum as a City",
-  "assembly_instructions": "Conceptual architecture diagram of the Ethereum protocol, rendered as a city at 1x scale (bounds radius ~8.9 m, no scaling needed). Step 1: cast the ground-level EXECUTION LAYER floor slab (concrete, 13x8 m, top at y=0.3) and ring it with four perimeter concrete curbs — the root of the assembly. Step 2: pour four concrete pile-cap footings on the ground behind the slab at x=+/-4.5, z=4.3 and z=6.9, and stand a 3.85 m welded-steel support pillar on each footing. Step 3: tie the four pillar tops together with a perimeter ring-beam of four welded-steel cross-ties (front, back, left, right) just below y=3.85 so the upper deck is braced, not floating. Step 4: set the raised CONSENSUS LAYER floor slab (10x3.4 m) on the braced pillars at y=4.0 and ring it with four perimeter curbs. Step 5: on the execution slab lay the concrete ledger foundation and stand a row of six glass 'block' buildings of varying height, linked block-to-block by five copper hash links; place the dark mempool holding yard front-left with three glass pending-transaction cubes, three white smart-contract buildings front-right, and a black RPC/gateway tower at the +X edge tied to the head block by a copper bus. Step 6: on the consensus deck run a copper Beacon Chain spine down the centre and cluster eight brushed-steel validator towers in two rows of four flanking the spine, each attesting to it. Step 7: run the vertical copper Engine-API bus from the execution slab up through the consensus deck to the Beacon Chain spine. View from a raised 3/4 angle so every block, validator and district reads clearly.",
+  "assembly_instructions": "Conceptual architecture diagram of the Ethereum protocol, rendered as a city at 1x scale (bounds radius ~8.9 m, no scaling needed). Step 1: cast the ground-level EXECUTION LAYER floor slab (concrete, 13x8 m, top at y=0.3) and ring it with four perimeter concrete curbs — the root of the assembly. Step 2: pour four concrete pile-cap footings on the ground behind the slab at x=+/-4.5, z=4.3 and z=6.9, and stand a 3.85 m welded-steel support pillar on each footing. Step 3: tie the four pillar tops together with a perimeter ring-beam of four welded-steel cross-ties and run two welded-steel joists across the deck underside so the upper deck is fully framed, not floating. Step 4: set the raised CONSENSUS LAYER floor slab (10x3.4 m) on the braced pillars and joists at y=4.0 and ring it with four perimeter curbs. Step 5: on the execution slab lay the concrete ledger foundation and stand a row of six glass 'block' buildings of varying height, linked block-to-block by five copper hash links; build the dark mempool holding yard front-left as a floor plate with three perimeter walls (front, left, right) left open toward the viewer, holding three glass pending-transaction cubes; place three white smart-contract buildings front-right and a black RPC/gateway tower at the +X edge tied to the head block by a copper bus. Step 6: stand the Ethereum diamond monument (concrete plinth + lower inverted glass cone + upper glass cone) at the front-centre edge of the execution slab as the city landmark. Step 7: on the consensus deck run a copper Beacon Chain spine down the centre and cluster eight tapered brushed-steel validator towers in two rows of four flanking the spine, ring each tower base with a copper staked-ETH token and cap each with a copper attestation beacon. Step 8: run the vertical copper Engine-API riser from the execution slab up through the consensus deck and join it to the Beacon Chain spine with a short horizontal copper Engine-API link; finally install the inclined access stair with its two stringers from the execution slab up to the consensus deck front edge. View from a raised 3/4 angle so every block, validator and district reads clearly.",
   "metadata": {
     "reference": "https://ethereum.org/en/developers/docs/",
     "domain": "blockchain-protocol",
@@ -97,7 +97,7 @@
       "role": "Ground-level floor slab hosting the execution layer — the blockchain row, mempool, smart contracts and RPC node; root of the assembly.",
       "connections": [
         "ledger_foundation",
-        "mempool_box",
+        "mempool_floor",
         "smart_contract_1",
         "smart_contract_2",
         "smart_contract_3",
@@ -114,7 +114,9 @@
         "curb_exec_front",
         "curb_exec_back",
         "curb_exec_left",
-        "curb_exec_right"
+        "curb_exec_right",
+        "eth_logo_plinth",
+        "layer_stair"
       ]
     },
     {
@@ -198,6 +200,71 @@
       ]
     },
     {
+      "id": "eth_logo_plinth",
+      "name": "Ethereum Monument Plinth",
+      "shape": "box",
+      "position": [
+        0,
+        0.65,
+        -3
+      ],
+      "size": [
+        1.6,
+        0.7,
+        1.6
+      ],
+      "material": "concrete",
+      "role": "Concrete pedestal at the front-centre of the execution district carrying the Ethereum diamond monument that identifies the city.",
+      "connections": [
+        "execution_platform",
+        "eth_logo_lower"
+      ]
+    },
+    {
+      "id": "eth_logo_lower",
+      "name": "Ethereum Diamond — Lower Pyramid",
+      "shape": "cone",
+      "position": [
+        0,
+        1.7,
+        -3
+      ],
+      "rotation": [
+        0,
+        0,
+        3.14159
+      ],
+      "size": [
+        0.85,
+        1.4
+      ],
+      "material": "glass display",
+      "role": "Downward-pointing lower half of the Ethereum logo gem, its apex resting on the plinth — the iconic mark naming the machine.",
+      "connections": [
+        "eth_logo_plinth",
+        "eth_logo_upper"
+      ]
+    },
+    {
+      "id": "eth_logo_upper",
+      "name": "Ethereum Diamond — Upper Pyramid",
+      "shape": "cone",
+      "position": [
+        0,
+        2.9,
+        -3
+      ],
+      "size": [
+        0.85,
+        1
+      ],
+      "material": "glass display",
+      "role": "Upward-pointing upper half of the Ethereum logo gem, completing the diamond silhouette that makes the city instantly recognizable as Ethereum.",
+      "connections": [
+        "eth_logo_lower"
+      ]
+    },
+    {
       "id": "consensus_platform",
       "name": "Consensus Layer District Floor Slab",
       "shape": "box",
@@ -231,7 +298,18 @@
         "curb_con_front",
         "curb_con_back",
         "curb_con_left",
-        "curb_con_right"
+        "curb_con_right",
+        "joist_deck_1",
+        "joist_deck_2",
+        "layer_stair",
+        "staked_eth_1",
+        "staked_eth_2",
+        "staked_eth_3",
+        "staked_eth_4",
+        "staked_eth_5",
+        "staked_eth_6",
+        "staked_eth_7",
+        "staked_eth_8"
       ]
     },
     {
@@ -312,6 +390,50 @@
       "role": "Perimeter parapet curb stiffening the right edge of the raised consensus deck.",
       "connections": [
         "consensus_platform"
+      ]
+    },
+    {
+      "id": "joist_deck_1",
+      "name": "Consensus Deck Joist (left)",
+      "shape": "box",
+      "position": [
+        -2.5,
+        3.72,
+        5.6
+      ],
+      "size": [
+        0.3,
+        0.35,
+        3.3
+      ],
+      "material": "welded steel",
+      "role": "Welded-steel joist running front-to-back under the consensus deck slab, carrying deck load between the front and back ring-beams.",
+      "connections": [
+        "consensus_platform",
+        "tie_front",
+        "tie_back"
+      ]
+    },
+    {
+      "id": "joist_deck_2",
+      "name": "Consensus Deck Joist (right)",
+      "shape": "box",
+      "position": [
+        2.5,
+        3.72,
+        5.6
+      ],
+      "size": [
+        0.3,
+        0.35,
+        3.3
+      ],
+      "material": "welded steel",
+      "role": "Welded-steel joist running front-to-back under the consensus deck slab, carrying deck load between the front and back ring-beams.",
+      "connections": [
+        "consensus_platform",
+        "tie_front",
+        "tie_back"
       ]
     },
     {
@@ -576,6 +698,84 @@
         "pillar_2",
         "pillar_4",
         "consensus_platform"
+      ]
+    },
+    {
+      "id": "layer_stair",
+      "name": "Inter-Layer Access Stair",
+      "shape": "box",
+      "position": [
+        4.8,
+        2.17,
+        2
+      ],
+      "rotation": [
+        -0.7854,
+        0,
+        0
+      ],
+      "size": [
+        1.2,
+        0.18,
+        5.4
+      ],
+      "material": "welded steel",
+      "role": "45-degree inclined access flight rising from the execution slab to the consensus deck front edge, the legible route between the execution and consensus districts.",
+      "connections": [
+        "execution_platform",
+        "consensus_platform",
+        "stair_stringer_left",
+        "stair_stringer_right"
+      ]
+    },
+    {
+      "id": "stair_stringer_left",
+      "name": "Access Stair Stringer (left)",
+      "shape": "box",
+      "position": [
+        4.25,
+        2.17,
+        2
+      ],
+      "rotation": [
+        -0.7854,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.55,
+        5.4
+      ],
+      "material": "welded steel",
+      "role": "Welded-steel side stringer carrying the left edge of the inclined access flight between the two districts.",
+      "connections": [
+        "layer_stair"
+      ]
+    },
+    {
+      "id": "stair_stringer_right",
+      "name": "Access Stair Stringer (right)",
+      "shape": "box",
+      "position": [
+        5.35,
+        2.17,
+        2
+      ],
+      "rotation": [
+        -0.7854,
+        0,
+        0
+      ],
+      "size": [
+        0.12,
+        0.55,
+        5.4
+      ],
+      "material": "welded steel",
+      "role": "Welded-steel side stringer carrying the right edge of the inclined access flight between the two districts.",
+      "connections": [
+        "layer_stair"
       ]
     },
     {
@@ -896,7 +1096,8 @@
         "validator_6",
         "validator_7",
         "validator_8",
-        "copper_bus_riser"
+        "copper_bus_riser",
+        "engine_api_link"
       ]
     },
     {
@@ -909,14 +1110,17 @@
         4.9
       ],
       "size": [
-        0.45,
+        0.3,
+        0.46,
         1.4
       ],
       "material": "brushed steel",
       "role": "Proof-of-stake validator staking 32 ETH; proposes and attests blocks to the Beacon Chain spine.",
       "connections": [
         "consensus_platform",
-        "beacon_spine"
+        "beacon_spine",
+        "validator_cap_1",
+        "staked_eth_1"
       ]
     },
     {
@@ -929,14 +1133,17 @@
         4.9
       ],
       "size": [
-        0.45,
+        0.3,
+        0.46,
         1.8
       ],
       "material": "brushed steel",
       "role": "Proof-of-stake validator staking 32 ETH; proposes and attests blocks to the Beacon Chain spine.",
       "connections": [
         "consensus_platform",
-        "beacon_spine"
+        "beacon_spine",
+        "validator_cap_2",
+        "staked_eth_2"
       ]
     },
     {
@@ -949,14 +1156,17 @@
         4.9
       ],
       "size": [
-        0.45,
+        0.3,
+        0.46,
         1.6
       ],
       "material": "brushed steel",
       "role": "Proof-of-stake validator staking 32 ETH; proposes and attests blocks to the Beacon Chain spine.",
       "connections": [
         "consensus_platform",
-        "beacon_spine"
+        "beacon_spine",
+        "validator_cap_3",
+        "staked_eth_3"
       ]
     },
     {
@@ -969,14 +1179,17 @@
         4.9
       ],
       "size": [
-        0.45,
+        0.3,
+        0.46,
         2
       ],
       "material": "brushed steel",
       "role": "Proof-of-stake validator staking 32 ETH; proposes and attests blocks to the Beacon Chain spine.",
       "connections": [
         "consensus_platform",
-        "beacon_spine"
+        "beacon_spine",
+        "validator_cap_4",
+        "staked_eth_4"
       ]
     },
     {
@@ -989,14 +1202,17 @@
         6.5
       ],
       "size": [
-        0.45,
+        0.3,
+        0.46,
         1.5
       ],
       "material": "brushed steel",
       "role": "Proof-of-stake validator staking 32 ETH; proposes and attests blocks to the Beacon Chain spine.",
       "connections": [
         "consensus_platform",
-        "beacon_spine"
+        "beacon_spine",
+        "validator_cap_5",
+        "staked_eth_5"
       ]
     },
     {
@@ -1009,14 +1225,17 @@
         6.5
       ],
       "size": [
-        0.45,
+        0.3,
+        0.46,
         2.2
       ],
       "material": "brushed steel",
       "role": "Tallest validator in the set — proposes and attests blocks to the Beacon Chain spine.",
       "connections": [
         "consensus_platform",
-        "beacon_spine"
+        "beacon_spine",
+        "validator_cap_6",
+        "staked_eth_6"
       ]
     },
     {
@@ -1029,14 +1248,17 @@
         6.5
       ],
       "size": [
-        0.45,
+        0.3,
+        0.46,
         1.7
       ],
       "material": "brushed steel",
       "role": "Proof-of-stake validator staking 32 ETH; proposes and attests blocks to the Beacon Chain spine.",
       "connections": [
         "consensus_platform",
-        "beacon_spine"
+        "beacon_spine",
+        "validator_cap_7",
+        "staked_eth_7"
       ]
     },
     {
@@ -1049,37 +1271,447 @@
         6.5
       ],
       "size": [
-        0.45,
+        0.3,
+        0.46,
         1.9
       ],
       "material": "brushed steel",
       "role": "Proof-of-stake validator staking 32 ETH; proposes and attests blocks to the Beacon Chain spine.",
       "connections": [
         "consensus_platform",
-        "beacon_spine"
+        "beacon_spine",
+        "validator_cap_8",
+        "staked_eth_8"
       ]
     },
     {
-      "id": "mempool_box",
-      "name": "Mempool Holding Area",
+      "id": "staked_eth_1",
+      "name": "Staked-ETH Ring (validator 1)",
+      "shape": "torus",
+      "position": [
+        -3.6,
+        4.25,
+        4.9
+      ],
+      "rotation": [
+        1.5708,
+        0,
+        0
+      ],
+      "size": [
+        0.5,
+        0.1
+      ],
+      "material": "copper",
+      "role": "Copper ring encircling validator 1's base, representing the 32 ETH the operator must lock up as collateral to run the validator.",
+      "connections": [
+        "consensus_platform",
+        "validator_1"
+      ]
+    },
+    {
+      "id": "staked_eth_2",
+      "name": "Staked-ETH Ring (validator 2)",
+      "shape": "torus",
+      "position": [
+        -1.2,
+        4.25,
+        4.9
+      ],
+      "rotation": [
+        1.5708,
+        0,
+        0
+      ],
+      "size": [
+        0.5,
+        0.1
+      ],
+      "material": "copper",
+      "role": "Copper ring encircling validator 2's base, representing the 32 ETH locked as the validator's stake.",
+      "connections": [
+        "consensus_platform",
+        "validator_2"
+      ]
+    },
+    {
+      "id": "staked_eth_3",
+      "name": "Staked-ETH Ring (validator 3)",
+      "shape": "torus",
+      "position": [
+        1.2,
+        4.25,
+        4.9
+      ],
+      "rotation": [
+        1.5708,
+        0,
+        0
+      ],
+      "size": [
+        0.5,
+        0.1
+      ],
+      "material": "copper",
+      "role": "Copper ring encircling validator 3's base, representing the 32 ETH locked as the validator's stake.",
+      "connections": [
+        "consensus_platform",
+        "validator_3"
+      ]
+    },
+    {
+      "id": "staked_eth_4",
+      "name": "Staked-ETH Ring (validator 4)",
+      "shape": "torus",
+      "position": [
+        3.6,
+        4.25,
+        4.9
+      ],
+      "rotation": [
+        1.5708,
+        0,
+        0
+      ],
+      "size": [
+        0.5,
+        0.1
+      ],
+      "material": "copper",
+      "role": "Copper ring encircling validator 4's base, representing the 32 ETH locked as the validator's stake.",
+      "connections": [
+        "consensus_platform",
+        "validator_4"
+      ]
+    },
+    {
+      "id": "staked_eth_5",
+      "name": "Staked-ETH Ring (validator 5)",
+      "shape": "torus",
+      "position": [
+        -3.6,
+        4.25,
+        6.5
+      ],
+      "rotation": [
+        1.5708,
+        0,
+        0
+      ],
+      "size": [
+        0.5,
+        0.1
+      ],
+      "material": "copper",
+      "role": "Copper ring encircling validator 5's base, representing the 32 ETH locked as the validator's stake.",
+      "connections": [
+        "consensus_platform",
+        "validator_5"
+      ]
+    },
+    {
+      "id": "staked_eth_6",
+      "name": "Staked-ETH Ring (validator 6)",
+      "shape": "torus",
+      "position": [
+        -1.2,
+        4.25,
+        6.5
+      ],
+      "rotation": [
+        1.5708,
+        0,
+        0
+      ],
+      "size": [
+        0.5,
+        0.1
+      ],
+      "material": "copper",
+      "role": "Copper ring encircling validator 6's base, representing the 32 ETH locked as the validator's stake.",
+      "connections": [
+        "consensus_platform",
+        "validator_6"
+      ]
+    },
+    {
+      "id": "staked_eth_7",
+      "name": "Staked-ETH Ring (validator 7)",
+      "shape": "torus",
+      "position": [
+        1.2,
+        4.25,
+        6.5
+      ],
+      "rotation": [
+        1.5708,
+        0,
+        0
+      ],
+      "size": [
+        0.5,
+        0.1
+      ],
+      "material": "copper",
+      "role": "Copper ring encircling validator 7's base, representing the 32 ETH locked as the validator's stake.",
+      "connections": [
+        "consensus_platform",
+        "validator_7"
+      ]
+    },
+    {
+      "id": "staked_eth_8",
+      "name": "Staked-ETH Ring (validator 8)",
+      "shape": "torus",
+      "position": [
+        3.6,
+        4.25,
+        6.5
+      ],
+      "rotation": [
+        1.5708,
+        0,
+        0
+      ],
+      "size": [
+        0.5,
+        0.1
+      ],
+      "material": "copper",
+      "role": "Copper ring encircling validator 8's base, representing the 32 ETH locked as the validator's stake.",
+      "connections": [
+        "consensus_platform",
+        "validator_8"
+      ]
+    },
+    {
+      "id": "validator_cap_1",
+      "name": "Validator 1 Attestation Beacon",
+      "shape": "sphere",
+      "position": [
+        -3.6,
+        5.65,
+        4.9
+      ],
+      "size": [
+        0.2
+      ],
+      "material": "copper",
+      "role": "Copper attestation beacon atop validator 1, emitting the signed attestation the validator broadcasts each 12-second slot.",
+      "connections": [
+        "validator_1"
+      ]
+    },
+    {
+      "id": "validator_cap_2",
+      "name": "Validator 2 Attestation Beacon",
+      "shape": "sphere",
+      "position": [
+        -1.2,
+        6.05,
+        4.9
+      ],
+      "size": [
+        0.2
+      ],
+      "material": "copper",
+      "role": "Copper attestation beacon atop validator 2, emitting the signed attestation the validator broadcasts each 12-second slot.",
+      "connections": [
+        "validator_2"
+      ]
+    },
+    {
+      "id": "validator_cap_3",
+      "name": "Validator 3 Attestation Beacon",
+      "shape": "sphere",
+      "position": [
+        1.2,
+        5.85,
+        4.9
+      ],
+      "size": [
+        0.2
+      ],
+      "material": "copper",
+      "role": "Copper attestation beacon atop validator 3, emitting the signed attestation the validator broadcasts each 12-second slot.",
+      "connections": [
+        "validator_3"
+      ]
+    },
+    {
+      "id": "validator_cap_4",
+      "name": "Validator 4 Attestation Beacon",
+      "shape": "sphere",
+      "position": [
+        3.6,
+        6.25,
+        4.9
+      ],
+      "size": [
+        0.2
+      ],
+      "material": "copper",
+      "role": "Copper attestation beacon atop validator 4, emitting the signed attestation the validator broadcasts each 12-second slot.",
+      "connections": [
+        "validator_4"
+      ]
+    },
+    {
+      "id": "validator_cap_5",
+      "name": "Validator 5 Attestation Beacon",
+      "shape": "sphere",
+      "position": [
+        -3.6,
+        5.75,
+        6.5
+      ],
+      "size": [
+        0.2
+      ],
+      "material": "copper",
+      "role": "Copper attestation beacon atop validator 5, emitting the signed attestation the validator broadcasts each 12-second slot.",
+      "connections": [
+        "validator_5"
+      ]
+    },
+    {
+      "id": "validator_cap_6",
+      "name": "Validator 6 Attestation Beacon",
+      "shape": "sphere",
+      "position": [
+        -1.2,
+        6.45,
+        6.5
+      ],
+      "size": [
+        0.2
+      ],
+      "material": "copper",
+      "role": "Copper attestation beacon atop validator 6 — the tallest tower — emitting its signed attestation each 12-second slot.",
+      "connections": [
+        "validator_6"
+      ]
+    },
+    {
+      "id": "validator_cap_7",
+      "name": "Validator 7 Attestation Beacon",
+      "shape": "sphere",
+      "position": [
+        1.2,
+        5.95,
+        6.5
+      ],
+      "size": [
+        0.2
+      ],
+      "material": "copper",
+      "role": "Copper attestation beacon atop validator 7, emitting the signed attestation the validator broadcasts each 12-second slot.",
+      "connections": [
+        "validator_7"
+      ]
+    },
+    {
+      "id": "validator_cap_8",
+      "name": "Validator 8 Attestation Beacon",
+      "shape": "sphere",
+      "position": [
+        3.6,
+        6.15,
+        6.5
+      ],
+      "size": [
+        0.2
+      ],
+      "material": "copper",
+      "role": "Copper attestation beacon atop validator 8, emitting the signed attestation the validator broadcasts each 12-second slot.",
+      "connections": [
+        "validator_8"
+      ]
+    },
+    {
+      "id": "mempool_floor",
+      "name": "Mempool Holding Yard Floor",
       "shape": "box",
       "position": [
         -3.8,
-        0.6,
+        0.35,
         -2.4
       ],
       "size": [
         3.4,
-        0.6,
+        0.1,
         1.8
       ],
       "material": "dark anodized aluminum",
-      "role": "Low wide holding yard where submitted transactions wait, unconfirmed, before a validator includes them in a block.",
+      "role": "Floor plate of the open mempool holding yard where submitted transactions wait, unconfirmed, before a validator includes them in a block.",
       "connections": [
         "execution_platform",
+        "mempool_wall_front",
+        "mempool_wall_left",
+        "mempool_wall_right",
         "pending_cube_1",
         "pending_cube_2",
         "pending_cube_3"
+      ]
+    },
+    {
+      "id": "mempool_wall_front",
+      "name": "Mempool Yard Wall (front edge)",
+      "shape": "box",
+      "position": [
+        -3.8,
+        0.7,
+        -3.225
+      ],
+      "size": [
+        3.4,
+        0.7,
+        0.15
+      ],
+      "material": "dark anodized aluminum",
+      "role": "Front perimeter wall of the mempool yard; the rear (camera-facing) side is left open as a cutaway so pending transactions are visible.",
+      "connections": [
+        "mempool_floor"
+      ]
+    },
+    {
+      "id": "mempool_wall_left",
+      "name": "Mempool Yard Wall (left edge)",
+      "shape": "box",
+      "position": [
+        -5.425,
+        0.7,
+        -2.4
+      ],
+      "size": [
+        0.15,
+        0.7,
+        1.8
+      ],
+      "material": "dark anodized aluminum",
+      "role": "Left perimeter wall of the open mempool holding yard.",
+      "connections": [
+        "mempool_floor"
+      ]
+    },
+    {
+      "id": "mempool_wall_right",
+      "name": "Mempool Yard Wall (right edge)",
+      "shape": "box",
+      "position": [
+        -2.175,
+        0.7,
+        -2.4
+      ],
+      "size": [
+        0.15,
+        0.7,
+        1.8
+      ],
+      "material": "dark anodized aluminum",
+      "role": "Right perimeter wall of the open mempool holding yard.",
+      "connections": [
+        "mempool_floor"
       ]
     },
     {
@@ -1088,7 +1720,7 @@
       "shape": "box",
       "position": [
         -4.7,
-        1.1,
+        0.6,
         -2.4
       ],
       "size": [
@@ -1097,9 +1729,9 @@
         0.4
       ],
       "material": "glass display",
-      "role": "An individual unconfirmed transaction sitting in the mempool awaiting block inclusion.",
+      "role": "An individual unconfirmed transaction sitting on the mempool floor awaiting block inclusion.",
       "connections": [
-        "mempool_box"
+        "mempool_floor"
       ]
     },
     {
@@ -1108,7 +1740,7 @@
       "shape": "box",
       "position": [
         -3.8,
-        1.1,
+        0.6,
         -2.4
       ],
       "size": [
@@ -1117,9 +1749,9 @@
         0.4
       ],
       "material": "glass display",
-      "role": "An individual unconfirmed transaction sitting in the mempool awaiting block inclusion.",
+      "role": "An individual unconfirmed transaction sitting on the mempool floor awaiting block inclusion.",
       "connections": [
-        "mempool_box"
+        "mempool_floor"
       ]
     },
     {
@@ -1128,7 +1760,7 @@
       "shape": "box",
       "position": [
         -2.9,
-        1.1,
+        0.6,
         -2.4
       ],
       "size": [
@@ -1137,9 +1769,9 @@
         0.4
       ],
       "material": "glass display",
-      "role": "An individual unconfirmed transaction sitting in the mempool awaiting block inclusion.",
+      "role": "An individual unconfirmed transaction sitting on the mempool floor awaiting block inclusion.",
       "connections": [
-        "mempool_box"
+        "mempool_floor"
       ]
     },
     {
@@ -1236,10 +1868,36 @@
         4.15
       ],
       "material": "copper",
-      "role": "Vertical copper bus carrying the Engine API link, feeding execution payloads up from the execution slab through the consensus deck to the Beacon Chain spine.",
+      "role": "Vertical copper bus carrying the Engine API link, feeding execution payloads up from the execution slab through the consensus deck toward the Beacon Chain spine.",
       "connections": [
         "execution_platform",
         "consensus_platform",
+        "beacon_spine",
+        "engine_api_link"
+      ]
+    },
+    {
+      "id": "engine_api_link",
+      "name": "Engine-API Link Beam",
+      "shape": "cylinder",
+      "position": [
+        0,
+        4.3,
+        4.85
+      ],
+      "rotation": [
+        1.5708,
+        0,
+        0
+      ],
+      "size": [
+        0.14,
+        1.7
+      ],
+      "material": "copper",
+      "role": "Short horizontal copper member physically joining the vertical Engine-API riser to the Beacon Chain spine — the Engine API by which the consensus layer drives the execution layer.",
+      "connections": [
+        "copper_bus_riser",
         "beacon_spine"
       ]
     },

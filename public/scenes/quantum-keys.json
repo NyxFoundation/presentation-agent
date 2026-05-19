@@ -1,6 +1,6 @@
 {
   "machine_name": "Post-Quantum Key Migration Vault",
-  "assembly_instructions": "Conceptual presentation model, 1x scale, meters, +X forward / +Y up / +Z port, right-handed. Build order: (1) cast the concrete base_pad as the structural root. (2) Set the vault wall on it: floor_sill first, then the two end posts and the mid divider, then the back_plate, capped by the top_lintel; bolt the two header label plates onto the lintel front face. (3) Seat the 3x2 grid of brass legacy lock cylinders in the starboard bay, press a brass escutcheon ring onto each face, and insert the withdrawn brass key (blade + bow) into lock 6. (4) Seat the 2x2 grid of dark-anodized PQC lock modules in the port bay, fit each with a glass lattice indicator panel, and recess an ML-KEM keyway slot into each panel. (5) Stand the two welded-steel gantry legs, span them with the conveyor beam, and weld a diagonal knee-brace at each leg-to-beam joint; hang the carriage on the beam, bolt the migration gripper under it, and load the in-transit glass key module into the gripper. (6) Stand the brushed-steel distribution hub and dome on the pad, then run five copper links out to the five white-composite door nodes. The whole mechanism is left open — no covers — so every lock and the conveyor read at a glance.",
+  "assembly_instructions": "Conceptual presentation model, 1x scale, meters, +X forward / +Y up / +Z port, right-handed. Build order: (1) cast the concrete base_pad as the structural root. (2) Set the vault wall on it: floor_sill first, then the two end posts and the mid divider; bolt the three stacked back panels in sequence (back_panel_lower, then press back_seam_1 into its top joint, back_panel_mid, then press back_seam_2 into its top joint, back_panel_upper) so each seam plate caps a panel joint; cap the stack with the top_lintel; press six vault_bolt heads in a row across the upper panel band; bolt the two header label plates onto the lintel front face. (3) Seat the 3x2 grid of brass legacy lock cylinders in the starboard bay, press a brass escutcheon ring onto each face, and insert the withdrawn brass key (blade + bow) into lock 6. (4) Seat the 2x2 grid of dark-anodized PQC lock modules in the port bay, fit each with a glass lattice indicator panel, and recess an ML-KEM keyway slot into each panel. (5) Bolt the two gantry foot baseplates to the pad, stand the welded-steel gantry legs on them, span the legs with the conveyor beam, weld a diagonal knee-brace at each leg-to-beam joint, and mount the brass migration_arrow on the beam pointing toward the PQC bay; ride the carriage on the beam on two trolley wheels, bolt the migration gripper under it, and clamp the in-transit dark-anodized key module (with its glass transit panel) into the gripper. (6) Stand the brushed-steel distribution hub on the pad, cap it with the status dome and beacon sphere, then run five copper links out to the five white-composite door nodes. The whole mechanism is left open — no covers — so every lock and the conveyor read at a glance.",
   "metadata": {
     "reference": "https://csrc.nist.gov/projects/post-quantum-cryptography",
     "domain": "post-quantum-cryptography",
@@ -59,6 +59,10 @@
         {
           "label": "PQC modules modelled",
           "value": "4 lattice KEM units"
+        },
+        {
+          "label": "Vault wall structure",
+          "value": "3-panel framed skeleton, 6 m tall"
         }
       ],
       "sources": [
@@ -93,41 +97,17 @@
         11
       ],
       "material": "concrete",
-      "role": "Ground slab that the vault wall, gantry legs, distribution hub and all door nodes stand on; structural root of the graph.",
+      "role": "Ground slab that the vault wall, gantry feet, distribution hub and all door nodes stand on; structural root of the graph.",
       "connections": [
         "floor_sill",
-        "gantry_leg_legacy",
-        "gantry_leg_pqc",
+        "gantry_foot_legacy",
+        "gantry_foot_pqc",
         "hub_core",
         "node_bank",
         "node_hospital",
         "node_3",
         "node_4",
         "node_5"
-      ]
-    },
-    {
-      "id": "back_plate",
-      "name": "Vault Wall Back Plate",
-      "shape": "box",
-      "position": [
-        0,
-        3,
-        0
-      ],
-      "size": [
-        0.3,
-        6,
-        10
-      ],
-      "material": "welded steel",
-      "role": "Rear face of the vault wall into which all lock cylinders and PQC modules are seated.",
-      "connections": [
-        "floor_sill",
-        "top_lintel",
-        "post_left",
-        "post_right",
-        "mid_divider"
       ]
     },
     {
@@ -148,10 +128,122 @@
       "role": "Lower horizontal frame member carrying the weight of the vault wall down to the pad.",
       "connections": [
         "base_pad",
-        "back_plate",
+        "back_panel_lower",
         "post_left",
         "post_right",
         "mid_divider"
+      ]
+    },
+    {
+      "id": "back_panel_lower",
+      "name": "Vault Wall Back Panel (Lower)",
+      "shape": "box",
+      "position": [
+        0,
+        1.25,
+        0
+      ],
+      "size": [
+        0.3,
+        1.65,
+        10
+      ],
+      "material": "welded steel",
+      "role": "Lowest of three stacked back-wall panels; carries the lower row of legacy lock cylinders and bolts to the floor sill below.",
+      "connections": [
+        "floor_sill",
+        "back_seam_1",
+        "post_left",
+        "post_right",
+        "mid_divider"
+      ]
+    },
+    {
+      "id": "back_seam_1",
+      "name": "Wall Panel Seam Plate (Lower/Mid)",
+      "shape": "box",
+      "position": [
+        0.17,
+        2.12,
+        0
+      ],
+      "size": [
+        0.04,
+        0.12,
+        10
+      ],
+      "material": "brushed steel",
+      "role": "Brushed-steel recessed seam plate covering the joint between the lower and middle back panels, making the three-panel framed skeleton read as distinct members.",
+      "connections": [
+        "back_panel_lower",
+        "back_panel_mid"
+      ]
+    },
+    {
+      "id": "back_panel_mid",
+      "name": "Vault Wall Back Panel (Middle)",
+      "shape": "box",
+      "position": [
+        0,
+        3,
+        0
+      ],
+      "size": [
+        0.3,
+        1.65,
+        10
+      ],
+      "material": "welded steel",
+      "role": "Middle stacked back-wall panel separated from its neighbours by seam plates; carries the lower row of PQC lock modules.",
+      "connections": [
+        "back_seam_2"
+      ]
+    },
+    {
+      "id": "back_seam_2",
+      "name": "Wall Panel Seam Plate (Mid/Upper)",
+      "shape": "box",
+      "position": [
+        0.17,
+        3.88,
+        0
+      ],
+      "size": [
+        0.04,
+        0.12,
+        10
+      ],
+      "material": "brushed steel",
+      "role": "Brushed-steel recessed seam plate covering the joint between the middle and upper back panels, marking the panel segmentation in the ISO view.",
+      "connections": [
+        "back_panel_mid",
+        "back_panel_upper"
+      ]
+    },
+    {
+      "id": "back_panel_upper",
+      "name": "Vault Wall Back Panel (Upper)",
+      "shape": "box",
+      "position": [
+        0,
+        4.75,
+        0
+      ],
+      "size": [
+        0.3,
+        1.65,
+        10
+      ],
+      "material": "welded steel",
+      "role": "Top stacked back-wall panel; carries the upper rows of legacy cylinders and PQC modules, the vault-bolt band and the top lintel.",
+      "connections": [
+        "top_lintel",
+        "vault_bolt_1",
+        "vault_bolt_2",
+        "vault_bolt_3",
+        "vault_bolt_4",
+        "vault_bolt_5",
+        "vault_bolt_6"
       ]
     },
     {
@@ -171,7 +263,6 @@
       "material": "welded steel",
       "role": "Upper horizontal frame member tying the two end posts and mid divider together.",
       "connections": [
-        "back_plate",
         "post_left",
         "post_right",
         "mid_divider",
@@ -196,8 +287,6 @@
       "material": "brushed steel",
       "role": "Vertical end post bounding the post-quantum bay of the vault wall.",
       "connections": [
-        "back_plate",
-        "floor_sill",
         "top_lintel"
       ]
     },
@@ -218,8 +307,6 @@
       "material": "brushed steel",
       "role": "Vertical end post bounding the legacy-key bay of the vault wall.",
       "connections": [
-        "back_plate",
-        "floor_sill",
         "top_lintel"
       ]
     },
@@ -240,8 +327,6 @@
       "material": "brushed steel",
       "role": "Central vertical post separating the legacy-key bay from the post-quantum bay.",
       "connections": [
-        "back_plate",
-        "floor_sill",
         "top_lintel"
       ]
     },
@@ -286,6 +371,150 @@
       ]
     },
     {
+      "id": "vault_bolt_1",
+      "name": "Vault Locking Bolt Head 1",
+      "shape": "cylinder",
+      "position": [
+        0.24,
+        5.15,
+        -4
+      ],
+      "rotation": [
+        0,
+        0,
+        1.5708
+      ],
+      "size": [
+        0.1,
+        0.16
+      ],
+      "material": "forged steel",
+      "role": "Protruding forged-steel locking-bolt head on the upper wall band, the iconic vault hardware that fills the steel above the lock grids.",
+      "connections": [
+        "back_panel_upper"
+      ]
+    },
+    {
+      "id": "vault_bolt_2",
+      "name": "Vault Locking Bolt Head 2",
+      "shape": "cylinder",
+      "position": [
+        0.24,
+        5.15,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        1.5708
+      ],
+      "size": [
+        0.1,
+        0.16
+      ],
+      "material": "forged steel",
+      "role": "Protruding forged-steel locking-bolt head on the upper wall band of the legacy bay.",
+      "connections": [
+        "back_panel_upper"
+      ]
+    },
+    {
+      "id": "vault_bolt_3",
+      "name": "Vault Locking Bolt Head 3",
+      "shape": "cylinder",
+      "position": [
+        0.24,
+        5.15,
+        -0.8
+      ],
+      "rotation": [
+        0,
+        0,
+        1.5708
+      ],
+      "size": [
+        0.1,
+        0.16
+      ],
+      "material": "forged steel",
+      "role": "Protruding forged-steel locking-bolt head on the upper wall band near the bay divider.",
+      "connections": [
+        "back_panel_upper"
+      ]
+    },
+    {
+      "id": "vault_bolt_4",
+      "name": "Vault Locking Bolt Head 4",
+      "shape": "cylinder",
+      "position": [
+        0.24,
+        5.15,
+        0.8
+      ],
+      "rotation": [
+        0,
+        0,
+        1.5708
+      ],
+      "size": [
+        0.1,
+        0.16
+      ],
+      "material": "forged steel",
+      "role": "Protruding forged-steel locking-bolt head on the upper wall band of the PQC bay.",
+      "connections": [
+        "back_panel_upper"
+      ]
+    },
+    {
+      "id": "vault_bolt_5",
+      "name": "Vault Locking Bolt Head 5",
+      "shape": "cylinder",
+      "position": [
+        0.24,
+        5.15,
+        2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        1.5708
+      ],
+      "size": [
+        0.1,
+        0.16
+      ],
+      "material": "forged steel",
+      "role": "Protruding forged-steel locking-bolt head on the upper wall band of the PQC bay.",
+      "connections": [
+        "back_panel_upper"
+      ]
+    },
+    {
+      "id": "vault_bolt_6",
+      "name": "Vault Locking Bolt Head 6",
+      "shape": "cylinder",
+      "position": [
+        0.24,
+        5.15,
+        4
+      ],
+      "rotation": [
+        0,
+        0,
+        1.5708
+      ],
+      "size": [
+        0.1,
+        0.16
+      ],
+      "material": "forged steel",
+      "role": "Protruding forged-steel locking-bolt head at the port end of the upper wall band.",
+      "connections": [
+        "back_panel_upper"
+      ]
+    },
+    {
       "id": "legacy_lock_1",
       "name": "Legacy RSA/ECC Lock Cylinder 1",
       "shape": "cylinder",
@@ -306,7 +535,7 @@
       "material": "brass",
       "role": "Small old-style key cylinder storing one legacy RSA/ECC keypair; compact because legacy keys are only hundreds of bytes.",
       "connections": [
-        "back_plate",
+        "back_panel_lower",
         "escutcheon_1"
       ]
     },
@@ -331,7 +560,7 @@
       "material": "brass",
       "role": "Small old-style key cylinder storing one legacy RSA/ECC keypair.",
       "connections": [
-        "back_plate",
+        "back_panel_lower",
         "escutcheon_2"
       ]
     },
@@ -356,7 +585,7 @@
       "material": "brass",
       "role": "Small old-style key cylinder storing one legacy RSA/ECC keypair.",
       "connections": [
-        "back_plate",
+        "back_panel_lower",
         "escutcheon_3"
       ]
     },
@@ -381,7 +610,7 @@
       "material": "brass",
       "role": "Small old-style key cylinder storing one legacy RSA/ECC keypair.",
       "connections": [
-        "back_plate",
+        "back_panel_upper",
         "escutcheon_4"
       ]
     },
@@ -406,7 +635,7 @@
       "material": "brass",
       "role": "Small old-style key cylinder storing one legacy RSA/ECC keypair.",
       "connections": [
-        "back_plate",
+        "back_panel_upper",
         "escutcheon_5"
       ]
     },
@@ -431,7 +660,7 @@
       "material": "brass",
       "role": "Small old-style key cylinder storing one legacy RSA/ECC keypair; the next slot scheduled for migration, shown with its physical key withdrawn.",
       "connections": [
-        "back_plate",
+        "back_panel_upper",
         "escutcheon_6",
         "key_blade"
       ]
@@ -642,7 +871,7 @@
       "material": "dark anodized aluminum",
       "role": "Bulky post-quantum lock module holding an ML-KEM lattice keypair; large to convey the multi-kilobyte key size.",
       "connections": [
-        "back_plate",
+        "back_panel_mid",
         "pqc_panel_1",
         "pqc_keyway_1"
       ]
@@ -664,7 +893,7 @@
       "material": "dark anodized aluminum",
       "role": "Bulky post-quantum lock module holding an ML-KEM lattice keypair.",
       "connections": [
-        "back_plate",
+        "back_panel_mid",
         "pqc_panel_2",
         "pqc_keyway_2"
       ]
@@ -686,7 +915,7 @@
       "material": "dark anodized aluminum",
       "role": "Bulky post-quantum lock module holding an ML-KEM lattice keypair.",
       "connections": [
-        "back_plate",
+        "back_panel_upper",
         "pqc_panel_3",
         "pqc_keyway_3"
       ]
@@ -708,7 +937,7 @@
       "material": "dark anodized aluminum",
       "role": "Bulky post-quantum lock module holding an ML-KEM lattice keypair; empty slot awaiting the module now in transit.",
       "connections": [
-        "back_plate",
+        "back_panel_upper",
         "pqc_panel_4",
         "pqc_keyway_4"
       ]
@@ -874,6 +1103,46 @@
       ]
     },
     {
+      "id": "gantry_foot_legacy",
+      "name": "Gantry Foot Baseplate (Legacy Side)",
+      "shape": "cylinder",
+      "position": [
+        1.2,
+        0.16,
+        -4
+      ],
+      "size": [
+        0.35,
+        0.12
+      ],
+      "material": "welded steel",
+      "role": "Bolted-down circular baseplate that anchors the legacy-side gantry leg to the concrete pad and spreads its load.",
+      "connections": [
+        "base_pad",
+        "gantry_leg_legacy"
+      ]
+    },
+    {
+      "id": "gantry_foot_pqc",
+      "name": "Gantry Foot Baseplate (PQC Side)",
+      "shape": "cylinder",
+      "position": [
+        1.2,
+        0.16,
+        3.6
+      ],
+      "size": [
+        0.35,
+        0.12
+      ],
+      "material": "welded steel",
+      "role": "Bolted-down circular baseplate that anchors the PQC-side gantry leg to the concrete pad and spreads its load.",
+      "connections": [
+        "base_pad",
+        "gantry_leg_pqc"
+      ]
+    },
+    {
       "id": "gantry_leg_legacy",
       "name": "Gantry Leg (Legacy Side)",
       "shape": "cylinder",
@@ -889,7 +1158,7 @@
       "material": "welded steel",
       "role": "Vertical support leg of the migration gantry on the legacy-bay end.",
       "connections": [
-        "base_pad",
+        "gantry_foot_legacy",
         "gantry_beam",
         "knee_brace_legacy"
       ]
@@ -910,7 +1179,7 @@
       "material": "welded steel",
       "role": "Vertical support leg of the migration gantry on the post-quantum-bay end.",
       "connections": [
-        "base_pad",
+        "gantry_foot_pqc",
         "gantry_beam",
         "knee_brace_pqc"
       ]
@@ -979,12 +1248,37 @@
         0.4,
         8
       ],
-      "material": "welded steel",
+      "material": "dark anodized aluminum",
       "role": "Horizontal rail spanning both bays along which the migration carriage travels.",
       "connections": [
         "gantry_leg_legacy",
         "gantry_leg_pqc",
-        "carriage"
+        "carriage",
+        "migration_arrow"
+      ]
+    },
+    {
+      "id": "migration_arrow",
+      "name": "Migration Direction Arrow",
+      "shape": "cone",
+      "position": [
+        1.2,
+        6.95,
+        1.6
+      ],
+      "rotation": [
+        1.5708,
+        0,
+        0
+      ],
+      "size": [
+        0.2,
+        0.6
+      ],
+      "material": "brass",
+      "role": "Brass directional arrowhead mounted on the conveyor beam, pointing from the legacy bay toward the PQC bay to mark the legacy->PQC re-keying travel direction.",
+      "connections": [
+        "gantry_beam"
       ]
     },
     {
@@ -1005,7 +1299,59 @@
       "role": "Trolley riding the gantry beam that grips and transports a key module from the legacy bay to the PQC bay.",
       "connections": [
         "gantry_beam",
+        "carriage_wheel_fwd",
+        "carriage_wheel_aft",
         "migration_gripper"
+      ]
+    },
+    {
+      "id": "carriage_wheel_fwd",
+      "name": "Carriage Trolley Wheel (Forward)",
+      "shape": "torus",
+      "position": [
+        1.2,
+        6.5,
+        -0.05
+      ],
+      "rotation": [
+        0,
+        1.5708,
+        0
+      ],
+      "size": [
+        0.14,
+        0.05
+      ],
+      "material": "forged steel",
+      "role": "Forward grooved trolley wheel that straddles the conveyor beam and lets the carriage roll toward the legacy bay.",
+      "connections": [
+        "carriage",
+        "gantry_beam"
+      ]
+    },
+    {
+      "id": "carriage_wheel_aft",
+      "name": "Carriage Trolley Wheel (Aft)",
+      "shape": "torus",
+      "position": [
+        1.2,
+        6.5,
+        0.45
+      ],
+      "rotation": [
+        0,
+        1.5708,
+        0
+      ],
+      "size": [
+        0.14,
+        0.05
+      ],
+      "material": "forged steel",
+      "role": "Aft grooved trolley wheel that straddles the conveyor beam and lets the carriage roll toward the PQC bay.",
+      "connections": [
+        "carriage",
+        "gantry_beam"
       ]
     },
     {
@@ -1043,10 +1389,31 @@
         0.8,
         0.7
       ],
-      "material": "glass display",
-      "role": "A key being re-issued mid-migration, held by the gripper above the bay divider for inspectability.",
+      "material": "dark anodized aluminum",
+      "role": "A PQC key module being re-issued mid-migration, clamped by the gripper above the bay divider — sized to match the destination PQC modules so the legacy-to-PQC re-keying step reads at a glance.",
       "connections": [
-        "migration_gripper"
+        "migration_gripper",
+        "transit_panel"
+      ]
+    },
+    {
+      "id": "transit_panel",
+      "name": "In-Transit Module Indicator Panel",
+      "shape": "box",
+      "position": [
+        1.58,
+        5.28,
+        0.2
+      ],
+      "size": [
+        0.06,
+        0.5,
+        0.5
+      ],
+      "material": "glass display",
+      "role": "Glass status panel on the in-transit module, blinking to mark it as the key currently being migrated between bays.",
+      "connections": [
+        "key_module_in_transit"
       ]
     },
     {
@@ -1091,7 +1458,26 @@
       "material": "glass display",
       "role": "Tapered glass cap on the distribution hub indicating migration status.",
       "connections": [
-        "hub_core"
+        "hub_core",
+        "hub_beacon"
+      ]
+    },
+    {
+      "id": "hub_beacon",
+      "name": "Hub Status Beacon",
+      "shape": "sphere",
+      "position": [
+        4.5,
+        3,
+        0
+      ],
+      "size": [
+        0.22
+      ],
+      "material": "glass display",
+      "role": "Glowing beacon sphere atop the hub dome that signals when a re-keying batch is being distributed to the endpoint nodes.",
+      "connections": [
+        "hub_cap"
       ]
     },
     {

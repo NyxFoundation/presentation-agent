@@ -1,6 +1,6 @@
 {
   "machine_name": "DeFi Capital Flows",
-  "assembly_instructions": "Built as an open flow-network diagram at conceptual 1x scale (meters), laid out left-to-right so capital reads as moving from sources to sinks. (1) Lay the base_platform as the rooted ground plate. (2) Stand the three liquidity-pool tanks on it at x=-5 (z=+2.2, 0, -2.2), drop a fluid-level disk into each to show uneven reserves, cap each with a torus rim, and mount an external glass sight-tube with a float bead on the +Z face so the reserve level reads from outside. (3) Build the AMM as an open chamber: set amm_core floor deck, raise the -X wall (amm_leftwall) and -Z wall (amm_backwall), stand the two front corner posts, and run the central amm_shaft up the middle; leave the +X and +Z faces open so the interior shows. (4) Place the two reserve columns inside — tall reserve_x and short reserve_y — to display the x·y=k invariant. (5) Route the three inflow pipes into amm_leftwall, thick for ETH/USDC and medium for DAI. (6) Cap the shaft with the rotor disk and its two crossed paddles. (7) Run pipe_amm_fee from the AMM right into fee_junction_main (carried on junction_main_post); branch a thin pipe to fee_junction_lp (on junction_lp_post) and a thick pipe to the vault. (8) Return the thin LP-fee pipe along z=-2.6 back into the USDC pool, carried on three short steel brackets down to the platform, closing the loop. (9) Build the lending vault as a cutaway: rear shell, floor, one side wall, with three stacked capital ingots and a borrower-ledger pillar inside, framed by the circular vault door. (10) Feed the vault output into the yield_manifold header (carried on two posts), wrap a brass saddle collar at each of the five tap points, and fan it out through five thin pipes to four white recipient wallets and one taller brass protocol-treasury vault resting on a shelf supported by two legs.",
+  "assembly_instructions": "Built as an open flow-network diagram at conceptual 1x scale (meters), laid out left-to-right so capital reads as moving from sources to sinks. (1) Lay base_platform as a thin rooted concrete floor plate and frame its rim with the four perimeter kerb members. (2) Stand the three liquidity-pool tanks on it at x=-5 (z=+2.2, 0, -2.2), drop a fluid-level disk into each to show uneven reserves, cap each with a torus rim, and mount an external glass sight-tube with a float bead on the +Z face so the reserve level reads from outside. (3) Build the AMM as an open chamber: set amm_core floor deck, raise the -X wall (amm_leftwall) and -Z wall (amm_backwall), stand the two front corner posts, run the central amm_shaft up the middle, tie the posts and inflow wall together with three top rails, and add two diagonal knee-braces so the rotor frame is fully triangulated; leave the +X and +Z faces open so the interior shows. (4) Place the two reserve columns inside — tall reserve_x and short reserve_y — to display the x·y=k invariant. (5) Route the three inflow pipes into amm_leftwall, thick for ETH/USDC and medium for DAI. (6) Cap the shaft with the rotor disk and its two crossed paddles. (7) Run pipe_amm_fee from the AMM right into fee_junction_main (carried on junction_main_post, topped by a handwheel split-valve); branch a thin pipe to fee_junction_lp (on junction_lp_post, also valve-topped) and a thick pipe to the vault. (8) Return the thin LP-fee pipe along z=-2.6 back into the USDC pool, carried on three short steel brackets down to the platform, closing the loop. (9) Build the lending vault as a cutaway: rear shell, floor, one side wall with a corner gusset, a front corner post and a top lintel framing the open face, with three stacked capital ingots and a borrower-ledger pillar inside, framed by the circular vault door. (10) Feed the vault output into the yield_manifold header (carried on two posts), wrap a brass saddle collar at each of the five tap points, and fan it out through five thin pipes to four white recipient wallets and one taller brass protocol-treasury vault resting on a shelf supported by two legs.",
   "metadata": {
     "reference": "https://en.wikipedia.org/wiki/Decentralized_finance",
     "domain": "decentralized-finance",
@@ -58,7 +58,7 @@
         },
         {
           "label": "Model part count",
-          "value": "71 parts"
+          "value": "85 parts"
         }
       ],
       "sources": [
@@ -84,21 +84,25 @@
   "parts": [
     {
       "id": "base_platform",
-      "name": "Flow-network base plate",
+      "name": "Flow-network floor plate",
       "shape": "box",
       "position": [
         1.6,
-        -0.1,
+        -0.06,
         0
       ],
       "size": [
         16,
-        0.2,
+        0.12,
         7
       ],
       "material": "concrete",
-      "role": "Grounds the diagram and roots the connection graph; all tanks, the AMM, vault and support posts stand on it.",
+      "role": "Thin rooted concrete floor plate of the diagram; all tanks, the AMM, vault, kerb frame and support posts stand on it.",
       "connections": [
+        "kerb_front",
+        "kerb_back",
+        "kerb_left",
+        "kerb_right",
         "pool_eth",
         "pool_dai",
         "pool_usdc",
@@ -107,6 +111,7 @@
         "junction_lp_post",
         "lending_vault",
         "vault_floor",
+        "vault_post_front",
         "manifold_post_a",
         "manifold_post_b",
         "recipient_leg_a",
@@ -114,6 +119,86 @@
         "lp_bracket_a",
         "lp_bracket_b",
         "lp_bracket_c"
+      ]
+    },
+    {
+      "id": "kerb_front",
+      "name": "Base perimeter kerb (+Z edge)",
+      "shape": "box",
+      "position": [
+        1.6,
+        0.06,
+        3.4
+      ],
+      "size": [
+        16,
+        0.24,
+        0.2
+      ],
+      "material": "concrete",
+      "role": "Perimeter kerb member running along the +Z edge of the floor plate, framing the deck and stiffening its rim.",
+      "connections": [
+        "base_platform"
+      ]
+    },
+    {
+      "id": "kerb_back",
+      "name": "Base perimeter kerb (-Z edge)",
+      "shape": "box",
+      "position": [
+        1.6,
+        0.06,
+        -3.4
+      ],
+      "size": [
+        16,
+        0.24,
+        0.2
+      ],
+      "material": "concrete",
+      "role": "Perimeter kerb member running along the -Z edge of the floor plate, framing the deck and stiffening its rim.",
+      "connections": [
+        "base_platform"
+      ]
+    },
+    {
+      "id": "kerb_left",
+      "name": "Base perimeter kerb (-X edge)",
+      "shape": "box",
+      "position": [
+        -6.3,
+        0.06,
+        0
+      ],
+      "size": [
+        0.2,
+        0.24,
+        7
+      ],
+      "material": "concrete",
+      "role": "Perimeter kerb member closing the -X end of the floor plate behind the liquidity-pool tanks.",
+      "connections": [
+        "base_platform"
+      ]
+    },
+    {
+      "id": "kerb_right",
+      "name": "Base perimeter kerb (+X edge)",
+      "shape": "box",
+      "position": [
+        9.5,
+        0.06,
+        0
+      ],
+      "size": [
+        0.2,
+        0.24,
+        7
+      ],
+      "material": "concrete",
+      "role": "Perimeter kerb member closing the +X end of the floor plate behind the recipient wallets.",
+      "connections": [
+        "base_platform"
       ]
     },
     {
@@ -552,7 +637,9 @@
         "amm_core",
         "pipe_eth_amm",
         "pipe_dai_amm",
-        "pipe_usdc_amm"
+        "pipe_usdc_amm",
+        "amm_rail_side_a",
+        "amm_rail_side_b"
       ]
     },
     {
@@ -593,7 +680,10 @@
       "role": "Front corner column carrying the rotor deck and bracing the open +Z face of the AMM chamber.",
       "connections": [
         "amm_core",
-        "amm_rotor"
+        "amm_rotor",
+        "amm_rail_front",
+        "amm_rail_side_a",
+        "amm_knee_a"
       ]
     },
     {
@@ -614,7 +704,127 @@
       "role": "Front corner column carrying the rotor deck and bracing the open -Z face of the AMM chamber.",
       "connections": [
         "amm_core",
-        "amm_rotor"
+        "amm_rotor",
+        "amm_rail_front",
+        "amm_rail_side_b",
+        "amm_knee_b"
+      ]
+    },
+    {
+      "id": "amm_rail_front",
+      "name": "AMM frame top rail (front)",
+      "shape": "box",
+      "position": [
+        1.15,
+        3.3,
+        0
+      ],
+      "size": [
+        0.3,
+        0.3,
+        5.4
+      ],
+      "material": "dark anodized aluminum",
+      "role": "Top rail along Z tying the two AMM front corner posts together, framing the open +X face beneath the rotor.",
+      "connections": [
+        "amm_post_front_a",
+        "amm_post_front_b"
+      ]
+    },
+    {
+      "id": "amm_rail_side_a",
+      "name": "AMM frame top rail (+Z side)",
+      "shape": "box",
+      "position": [
+        -0.1,
+        3.3,
+        2.55
+      ],
+      "size": [
+        2.6,
+        0.3,
+        0.3
+      ],
+      "material": "dark anodized aluminum",
+      "role": "Top side rail running from the +Z front post back to the inflow wall, completing the AMM chamber frame.",
+      "connections": [
+        "amm_post_front_a",
+        "amm_leftwall",
+        "amm_knee_a"
+      ]
+    },
+    {
+      "id": "amm_rail_side_b",
+      "name": "AMM frame top rail (-Z side)",
+      "shape": "box",
+      "position": [
+        -0.1,
+        3.3,
+        -2.55
+      ],
+      "size": [
+        2.6,
+        0.3,
+        0.3
+      ],
+      "material": "dark anodized aluminum",
+      "role": "Top side rail running from the -Z front post back to the inflow wall, completing the AMM chamber frame.",
+      "connections": [
+        "amm_post_front_b",
+        "amm_leftwall",
+        "amm_knee_b"
+      ]
+    },
+    {
+      "id": "amm_knee_a",
+      "name": "AMM frame knee-brace (+Z)",
+      "shape": "box",
+      "position": [
+        0.78,
+        3,
+        2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0.785
+      ],
+      "size": [
+        0.18,
+        0.95,
+        0.18
+      ],
+      "material": "dark anodized aluminum",
+      "role": "Diagonal knee-brace triangulating the +Z front corner post to its top side rail so the rotor deck is stiffly carried.",
+      "connections": [
+        "amm_post_front_a",
+        "amm_rail_side_a"
+      ]
+    },
+    {
+      "id": "amm_knee_b",
+      "name": "AMM frame knee-brace (-Z)",
+      "shape": "box",
+      "position": [
+        0.78,
+        3,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0.785
+      ],
+      "size": [
+        0.18,
+        0.95,
+        0.18
+      ],
+      "material": "dark anodized aluminum",
+      "role": "Diagonal knee-brace triangulating the -Z front corner post to its top side rail so the rotor deck is stiffly carried.",
+      "connections": [
+        "amm_post_front_b",
+        "amm_rail_side_b"
       ]
     },
     {
@@ -792,8 +1002,33 @@
       "connections": [
         "pipe_amm_fee",
         "junction_main_post",
+        "fee_valve_main",
         "pipe_fee_split",
         "pipe_fee_vault"
+      ]
+    },
+    {
+      "id": "fee_valve_main",
+      "name": "Main junction split-valve wheel",
+      "shape": "torus",
+      "position": [
+        2.8,
+        2.25,
+        0
+      ],
+      "rotation": [
+        1.5708,
+        0,
+        0
+      ],
+      "size": [
+        0.3,
+        0.05
+      ],
+      "material": "brass",
+      "role": "Brass handwheel valve on top of the main junction setting the fee-split ratio between the vault feed and the LP return.",
+      "connections": [
+        "fee_junction_main"
       ]
     },
     {
@@ -836,7 +1071,32 @@
       "connections": [
         "pipe_fee_split",
         "junction_lp_post",
+        "fee_valve_lp",
         "pipe_lp_return"
+      ]
+    },
+    {
+      "id": "fee_valve_lp",
+      "name": "LP junction split-valve wheel",
+      "shape": "torus",
+      "position": [
+        2.8,
+        2.05,
+        -2.6
+      ],
+      "rotation": [
+        1.5708,
+        0,
+        0
+      ],
+      "size": [
+        0.25,
+        0.04
+      ],
+      "material": "brass",
+      "role": "Brass handwheel valve on top of the LP junction metering the recycled liquidity-provider fee flow.",
+      "connections": [
+        "fee_junction_lp"
       ]
     },
     {
@@ -1022,6 +1282,7 @@
         "pipe_fee_vault",
         "vault_wall_z",
         "vault_door",
+        "vault_lintel",
         "capital_ingot_1",
         "borrower_ledger",
         "pipe_vault_yield"
@@ -1045,7 +1306,8 @@
       "role": "Thick steel floor of the lending vault on which the deposited capital ingots are stacked.",
       "connections": [
         "base_platform",
-        "capital_ingot_1"
+        "capital_ingot_1",
+        "vault_gusset"
       ]
     },
     {
@@ -1065,6 +1327,75 @@
       "material": "forged steel",
       "role": "The -Z side wall of the lending vault, the only side wall kept so the interior reads as a cutaway.",
       "connections": [
+        "lending_vault",
+        "vault_gusset"
+      ]
+    },
+    {
+      "id": "vault_gusset",
+      "name": "Lending vault floor-to-wall gusset",
+      "shape": "box",
+      "position": [
+        5.4,
+        0.62,
+        -0.65
+      ],
+      "rotation": [
+        0.785,
+        0,
+        0
+      ],
+      "size": [
+        1.5,
+        0.18,
+        0.8
+      ],
+      "material": "forged steel",
+      "role": "Diagonal gusset bracing the lending-vault side wall to its steel floor at the inner corner.",
+      "connections": [
+        "vault_floor",
+        "vault_wall_z"
+      ]
+    },
+    {
+      "id": "vault_post_front",
+      "name": "Lending vault front corner post",
+      "shape": "box",
+      "position": [
+        6.2,
+        2,
+        1.05
+      ],
+      "size": [
+        0.3,
+        4,
+        0.3
+      ],
+      "material": "forged steel",
+      "role": "Front corner post bracing the open +X/+Z corner of the cutaway vault and carrying the top lintel down to the base plate.",
+      "connections": [
+        "base_platform",
+        "vault_lintel"
+      ]
+    },
+    {
+      "id": "vault_lintel",
+      "name": "Lending vault top lintel",
+      "shape": "box",
+      "position": [
+        6.2,
+        3.85,
+        -0.05
+      ],
+      "size": [
+        0.3,
+        0.3,
+        2.4
+      ],
+      "material": "forged steel",
+      "role": "Top header beam spanning the front corner post to the rear shell, closing the vault frame across its open face.",
+      "connections": [
+        "vault_post_front",
         "lending_vault"
       ]
     },
@@ -1162,7 +1493,7 @@
       "position": [
         5.6,
         1.2,
-        0.8
+        0.85
       ],
       "size": [
         0.3,

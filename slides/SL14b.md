@@ -48,21 +48,21 @@ layout: default
 
 </div>
 
-<div class="mt-5 pl-4 border-l-4 border-black text-sm">
+<div class="mt-3 pl-4 border-l-4 border-black text-sm">
   <strong>The first edition alone yields several guaranteed research results.</strong> The more discoveries accumulate, the further the output extends.
 </div>
 
 <style>
-.rt3 { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 14px; margin-top: 1.5rem; }
-.rt-col { border: 1px solid #e5e7eb; border-radius: 0.55rem; padding: 0.55rem 0.9rem 0.9rem; }
+.rt3 { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 12px; margin-top: 1rem; }
+.rt-col { border: 1px solid #e5e7eb; border-radius: 0.55rem; padding: 0.45rem 0.8rem 0.7rem; }
 .rt-col-sure { border: 2.5px solid #111; }
-.rt-when { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: #fff; background: #9aa1ad; display: inline-block; padding: 3px 12px; border-radius: 999px; margin: 0.3rem 0 0.1rem; }
+.rt-when { font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; color: #fff; background: #9aa1ad; display: inline-block; padding: 2px 11px; border-radius: 999px; margin: 0.25rem 0 0.1rem; }
 .rt-when-sure { background: #111; }
-.rt-cond { font-size: 10px; opacity: 0.5; margin-bottom: 0.7rem; }
-.rt-item { margin-top: 0.55rem; }
-.rt-h { font-size: 13.5px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; }
-.rt-n { font-size: 10px; line-height: 1.65; opacity: 0.72; margin-top: 0.22rem; }
-.rt-tag { font-size: 10px; font-weight: 700; margin-top: 0.5rem; }
+.rt-cond { font-size: 9.5px; opacity: 0.5; margin-bottom: 0.5rem; }
+.rt-item { margin-top: 0.42rem; }
+.rt-h { font-size: 12.5px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; }
+.rt-n { font-size: 9.5px; line-height: 1.5; opacity: 0.72; margin-top: 0.2rem; }
+.rt-tag { font-size: 9.5px; font-weight: 700; margin-top: 0.4rem; }
 </style>
 
 <!--

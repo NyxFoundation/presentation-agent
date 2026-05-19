@@ -28,7 +28,7 @@ layout: default
 
 </div>
 
-<div class="text-xs uppercase tracking-widest opacity-40 mt-6 mb-2">And the human defense net itself has begun to collapse</div>
+<div class="text-xs uppercase tracking-widest opacity-40 mt-7 mb-3">And the human defense net itself has begun to collapse</div>
 <div class="grid grid-cols-3 gap-4">
   <div class="cl">
     <div class="cl-name">curl</div>
@@ -47,17 +47,14 @@ layout: default
   </div>
 </div>
 
-<div class="mt-5 conc">Static, human, one-shot security has hit its limit. We need a <strong>dynamic, autonomous, permanent</strong> public good.</div>
-
 <style>
 .oos { display: flex; gap: 12px; align-items: center; border: 2px solid #c63a3a; border-radius: 0.6rem; padding: 0.85rem 1rem; }
 .oos-x { font-family: 'BIZ UDPMincho', serif; font-size: 13px; font-weight: 700; color: #c63a3a; border: 2px solid #c63a3a; border-radius: 6px; padding: 4px 8px; flex-shrink: 0; text-align: center; line-height: 1.2; }
 .oos-tag { font-size: 10.5px; padding: 2px 9px; border: 1px solid #d4d4d4; border-radius: 999px; }
-.cl { border: 1px solid #e5e7eb; border-top: 4px solid #c63a3a; border-radius: 0.5rem; padding: 0.7rem 0.85rem; }
+.cl { border: 1px solid #e5e7eb; border-top: 4px solid #c63a3a; border-radius: 0.5rem; padding: 0.6rem 0.8rem; }
 .cl-name { font-size: 12px; font-weight: 700; opacity: 0.5; letter-spacing: 0.04em; }
 .cl-fact { font-size: 15px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; margin: 0.15rem 0 0.3rem; }
 .cl-n { font-size: 10px; line-height: 1.55; opacity: 0.6; }
-.conc { text-align: center; font-size: 15px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; border-top: 2px solid #111; padding-top: 0.7rem; }
 </style>
 
 <SourceCite :sources="[

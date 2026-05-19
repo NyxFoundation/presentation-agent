@@ -30,17 +30,17 @@ layout: default
 <div class="p4-conc">Before real money flows, we need a <strong>real environment to let AI fight — and be verified — safely</strong>.</div>
 
 <style>
-.p4 { display: grid; grid-template-columns: 1fr 1fr; margin-top: 2.2rem; }
+.p4 { display: grid; grid-template-columns: 1fr 1fr; margin-top: 1.6rem; }
 .p4-left { padding-right: 2.4rem; }
 .p4-right { padding-left: 2.4rem; border-left: 1px solid #e0e0e0; }
-.p4-eye { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; opacity: 0.45; text-transform: uppercase; margin-bottom: 0.5rem; }
+.p4-eye { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; opacity: 0.45; text-transform: uppercase; margin-bottom: 0.45rem; }
 .p4-eye-r { color: #c63a3a; opacity: 1; }
-.p4-big { font-family: 'BIZ UDPMincho', serif; font-size: 78px; font-weight: 700; line-height: 0.95; }
-.p4-cap { font-size: 11px; opacity: 0.5; margin-top: 0.6rem; }
-.p4-gap { font-family: 'BIZ UDPMincho', serif; font-size: 27px; font-weight: 700; line-height: 1.4; }
-.p4-say { font-size: 12px; line-height: 1.85; margin-top: 1.5rem; opacity: 0.82; }
-.p4-warn { font-size: 10.5px; line-height: 1.6; opacity: 0.7; margin-top: 1rem; padding-left: 0.8rem; border-left: 3px solid #c63a3a; }
-.p4-conc { text-align: center; font-size: 15px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; margin-top: 2.2rem; padding-top: 0.9rem; border-top: 2px solid #111; }
+.p4-big { font-family: 'BIZ UDPMincho', serif; font-size: 66px; font-weight: 700; line-height: 0.95; }
+.p4-cap { font-size: 11px; opacity: 0.5; margin-top: 0.5rem; }
+.p4-gap { font-family: 'BIZ UDPMincho', serif; font-size: 26px; font-weight: 700; line-height: 1.4; }
+.p4-say { font-size: 11.5px; line-height: 1.75; margin-top: 1rem; opacity: 0.82; }
+.p4-warn { font-size: 10.5px; line-height: 1.6; opacity: 0.7; margin-top: 0.8rem; padding-left: 0.8rem; border-left: 3px solid #c63a3a; }
+.p4-conc { text-align: center; font-size: 15px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; margin-top: 1.4rem; padding-top: 0.7rem; border-top: 2px solid #111; }
 </style>
 
 <SourceCite :sources="[

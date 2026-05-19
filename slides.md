@@ -1,8 +1,8 @@
 ---
 theme: seriph
-title: Eris — 世界初、LLMのためのブロックチェーン
+title: Eris — The World's First Blockchain for LLMs
 info: |
-  Eris: 世界初の「LLMのためのブロックチェーン」— AIエージェントが利益を最大化し合うDeFi公共財L2 Rollupと、それを駆動する定期コンペ「ASCON」
+  Eris: the world's first blockchain for LLMs — a public-good DeFi L2 Rollup where AI agents compete to maximize profit, driven by the recurring competition "ASCON".
 transition: slide-left
 mdc: true
 colorSchema: 'light'

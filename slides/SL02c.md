@@ -2,32 +2,32 @@
 layout: default
 ---
 
-# AIエージェントが実経済に出てくる — なのに、安全に試す場所がない
+# AI agents are entering the real economy — yet there is nowhere safe to test them
 
 <div class="p4">
 
   <div class="p4-left">
-    <div class="p4-eye">もう、始まっている</div>
+    <div class="p4-eye">Already underway</div>
     <div class="p4-big">$15T</div>
-    <div class="p4-cap">AIエージェントが仲介するB2B支出の予測（2028年・Gartner）</div>
+    <div class="p4-cap">Forecast B2B spend intermediated by AI agents (2028, Gartner)</div>
     <div class="p4-say">
-      Google の <strong>AP2</strong>、Coinbase × Ethereum Foundation の <strong>x402</strong> —
-      AIはすでに、人間を介さず<strong>AIに支払っている</strong>。
+      Google's <strong>AP2</strong> and the Coinbase × Ethereum Foundation <strong>x402</strong> —
+      AI already <strong>pays AI</strong>, with no human in the loop.
     </div>
   </div>
 
   <div class="p4-right">
-    <div class="p4-eye p4-eye-r">なのに</div>
-    <div class="p4-gap">AIを安全に試せる場所が、<br/>世界に無い。</div>
+    <div class="p4-eye p4-eye-r">And yet</div>
+    <div class="p4-gap">There is nowhere in the world<br/>to test AI safely.</div>
     <div class="p4-say">
-      本物のインセンティブの下でAI同士が取引・攻撃・検証し合う、<strong>公共の実環境が存在しない</strong>。
+      No <strong>public, real environment</strong> exists where AI agents trade, attack and verify each other under real incentives.
     </div>
-    <div class="p4-warn">AI同士は欺き合える — Sumsubは2026年、「機械が機械を騙す」詐欺の急増を警告。</div>
+    <div class="p4-warn">AI agents can deceive each other — Sumsub warns of a 2026 surge in "machines deceiving machines" fraud.</div>
   </div>
 
 </div>
 
-<div class="p4-conc">本番にお金が流れる前に、AIを<strong>安全に戦わせ・確かめる「実環境」</strong>が要る。</div>
+<div class="p4-conc">Before real money flows, we need a <strong>real environment to let AI fight — and be verified — safely</strong>.</div>
 
 <style>
 .p4 { display: grid; grid-template-columns: 1fr 1fr; margin-top: 2.2rem; }
@@ -37,7 +37,7 @@ layout: default
 .p4-eye-r { color: #c63a3a; opacity: 1; }
 .p4-big { font-family: 'BIZ UDPMincho', serif; font-size: 78px; font-weight: 700; line-height: 0.95; }
 .p4-cap { font-size: 11px; opacity: 0.5; margin-top: 0.6rem; }
-.p4-gap { font-family: 'BIZ UDPMincho', serif; font-size: 30px; font-weight: 700; line-height: 1.4; }
+.p4-gap { font-family: 'BIZ UDPMincho', serif; font-size: 27px; font-weight: 700; line-height: 1.4; }
 .p4-say { font-size: 12px; line-height: 1.85; margin-top: 1.5rem; opacity: 0.82; }
 .p4-warn { font-size: 10.5px; line-height: 1.6; opacity: 0.7; margin-top: 1rem; padding-left: 0.8rem; border-left: 3px solid #c63a3a; }
 .p4-conc { text-align: center; font-size: 15px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; margin-top: 2.2rem; padding-top: 0.9rem; border-top: 2px solid #111; }
@@ -52,5 +52,5 @@ layout: default
 
 <!--
 Speaker Notes:
-二つ目の課題です。左をご覧ください。AIエージェント経済は、もう始まっています。Gartnerは、AIエージェントが仲介するB2B支出が2028年までに15兆ドルに達すると予測。GoogleのAP2、Coinbase・イーサリアム財団のx402では、AIがすでに人間を介さずAIに支払っています。ところが右——AIを安全に試せる場所が、世界にありません。本物のインセンティブの下でAI同士が取引・攻撃・検証し合う、公共の実環境が存在しない。しかもAI同士は欺き合えます。Sumsubは2026年に「機械が機械を騙す」詐欺の急増を警告しています。本番にお金が流れる前に、AIを安全に戦わせ、確かめる実環境が必要です。
+The second problem. Look at the left. The AI-agent economy has already begun. Gartner forecasts that B2B spend intermediated by AI agents will reach $15T by 2028. With Google's AP2 and the Coinbase / Ethereum Foundation x402, AI already pays AI with no human in the loop. But on the right — there is nowhere in the world to test AI safely. No public, real environment exists where AI agents trade, attack and verify each other under real incentives. And AI agents can deceive each other: Sumsub warns of a 2026 surge in "machines deceiving machines" fraud. Before real money flows, we need a real environment to let AI fight — and be verified — safely.
 -->

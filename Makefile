@@ -59,7 +59,8 @@ CLAUDE_FLAGS ?= --dangerously-skip-permissions --output-format json
         governing_argument narrative_blueprint \
         slide_drafting visual_design \
         executive_review final_export \
-        polish all_polished refine all_refined
+        polish all_polished refine all_refined \
+        scene scene-improve
 
 # ==============================================================================
 # Main Targets
@@ -90,6 +91,8 @@ help:
 	@echo "  all            - Run the entire 9-step generation pipeline."
 	@echo "  polish         - Run the recursive self-improvement loop on existing slides/."
 	@echo "  refine         - Externalized visual self-improvement loop (visually-3d method)."
+	@echo "  scene          - Generate + self-improve an interactive 3D model for a slide."
+	@echo "  scene-improve  - Re-run the 3D self-improvement loop on an existing scene."
 	@echo "  all_polished   - Run 'all' then 'polish' (full generation + quality loop)."
 	@echo "  all_refined    - Run 'all' then 'refine' (full generation + visual loop)."
 	@echo "  validate       - Validate that inputs/introduction.md has required frontmatter."
@@ -301,3 +304,33 @@ refine:
 # Run steps 01-09, then the externalized visual refinement loop.
 all_refined: all refine
 	@echo "Full pipeline + visual refinement loop complete."
+
+# ------------------------------------------------------------------------------
+# 3D scenes — generate an interactive 3D model and embed it live in a slide.
+#
+# `make scene` generates a visually-3d MachineSceneDescriptor with Claude, then
+# runs the recursive self-improvement loop (render PNG -> VLM visual critique
+# -> improved descriptor) on it. The result lands at public/scenes/<id>.json;
+# drop `<Scene3D src="/scenes/<id>.json" />` into any slide to render it live
+# and orbit-able. Tune the loop with SCENE_ITERS=N (default 4).
+#
+#   make scene SCENE_ID=cpu SCENE_NAME="CPU die floorplan" \
+#              SCENE_HINT="Cores, shared L3 cache, memory controllers, ..."
+#   make scene-improve SCENE_ID=cpu     # re-run the loop on an existing scene
+SCENE_ITERS ?= 4
+
+scene:
+	@if [ -z "$(SCENE_ID)" ] || [ -z "$(SCENE_NAME)" ] || [ -z "$(SCENE_HINT)" ]; then \
+		echo 'usage: make scene SCENE_ID=<id> SCENE_NAME="<name>" SCENE_HINT="<description>"'; \
+		exit 1; \
+	fi
+	@echo "[Scene] Generating 3D scene '$(SCENE_ID)'..."
+	@node scripts/scene-generate.mjs "$(SCENE_ID)" "$(SCENE_NAME)" "$(SCENE_HINT)"
+	@echo "[Scene] Recursive self-improvement (visual feedback loop)..."
+	@sh scripts/scene-improve.sh "$(SCENE_ID)" $(SCENE_ITERS)
+	@echo "[Scene] Done. Embed it in a slide with:"
+	@echo "          <Scene3D src=\"/scenes/$(SCENE_ID).json\" />"
+
+scene-improve:
+	@if [ -z "$(SCENE_ID)" ]; then echo 'usage: make scene-improve SCENE_ID=<id>'; exit 1; fi
+	@sh scripts/scene-improve.sh "$(SCENE_ID)" $(SCENE_ITERS)

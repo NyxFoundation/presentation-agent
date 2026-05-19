@@ -8,5 +8,14 @@ components.d.ts
 *Zone.Identifier
 actions-runner/
 .env
-exports-before/
-exports-after/
+
+# Generated artifacts. Maintainers force-add these only when publishing
+# a deck on a `presentation/*` branch; contributors preview locally via
+# `bun dev`.
+outputs/
+slides/
+exports-*/
+exports/
+
+# Per-iteration history from the `make refine` visual self-improvement loop.
+.refine/

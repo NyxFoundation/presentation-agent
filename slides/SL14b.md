@@ -2,66 +2,62 @@
 layout: default
 ---
 
-# コンペの先へ — Erisが生み出し続ける、4つの研究テーマ
+# コンペの先へ — Erisが生む研究成果（確実なものから、将来のものまで）
 
-<div class="text-sm opacity-65 -mt-2 mb-5">
-  コンペは一度きりのイベントではありません。常時稼働するErisから、研究成果が継続的に生まれます。
-</div>
+<div class="rt3">
 
-<div class="rt-grid">
-
-  <div class="rt">
-    <div class="rt-no" style="color:#1f8a64">①</div>
-    <div>
-      <div class="rt-h">DeFiの設計改善提案</div>
-      <div class="rt-n">Trader AIの膨大な経済挙動から、人間の設計者が気づけない不均衡・最適パラメータを抽出し、各プロトコルへ具体的な改善案として届ける。</div>
-      <div class="rt-in">入力 — Trader AIの取引ログ</div>
-    </div>
-  </div>
-
-  <div class="rt">
-    <div class="rt-no" style="color:#5b4fc6">②</div>
-    <div>
+  <div class="rt-col rt-col-sure">
+    <div class="rt-when rt-when-sure">確実に出る</div>
+    <div class="rt-cond">コンペ開催そのものが生む成果</div>
+    <div class="rt-item">
       <div class="rt-h">新たなセキュリティ基盤</div>
-      <div class="rt-n">HackerとVerifierの終わりなき攻防から、動的・経済的な攻撃に耐える設計パターンと標準を体系化し、業界の共有資産にする。</div>
-      <div class="rt-in">入力 — 攻撃 × 形式検証の対戦記録</div>
+      <div class="rt-n">ASCONを開催し、Hacker × Verifier の攻防データを取得 — それ自体から<strong>「動的・経済的な攻撃に耐えるDeFi設計パターンとベンチマーク」を論文化</strong>できる。</div>
+      <div class="rt-tag">→ コンペを開けば、必ず研究成果になる</div>
     </div>
   </div>
 
-  <div class="rt">
-    <div class="rt-no" style="color:#c63a3a">③</div>
-    <div>
-      <div class="rt-h">ゼロデイの先回り発見</div>
-      <div class="rt-n">本番に人々のお金が流れる前に、未知の脆弱性（ゼロデイ）をErisの実環境で先に表出させ、責任ある形で報告する。</div>
-      <div class="rt-in">入力 — Hacker AIの常時攻撃</div>
+  <div class="rt-col">
+    <div class="rt-when">発見があり次第</div>
+    <div class="rt-cond">脆弱性・不均衡が見つかれば書ける</div>
+    <div class="rt-item">
+      <div class="rt-h">DeFiの設計改善提案</div>
+      <div class="rt-n">Trader AIの挙動から特定プロトコルの不均衡・最適パラメータが見つかれば、改善提案として論文化し当該プロジェクトへ届ける。</div>
+    </div>
+    <div class="rt-item">
+      <div class="rt-h">ゼロデイの発見・報告</div>
+      <div class="rt-n">Hacker AIが未知の脆弱性（ゼロデイ）を発見すれば、責任ある開示と事例研究としてまとめる。</div>
     </div>
   </div>
 
-  <div class="rt">
-    <div class="rt-no" style="color:#b7791f">④</div>
-    <div>
+  <div class="rt-col">
+    <div class="rt-when">将来的に</div>
+    <div class="rt-cond">データ蓄積の先に広がる</div>
+    <div class="rt-item">
       <div class="rt-h">AIエージェント経済の分析</div>
-      <div class="rt-n">AI同士の取引・共謀・詐欺の一次データから、これから来る「AIエージェント経済」の挙動とリスクを解明する。</div>
-      <div class="rt-in">入力 — 全エージェントの相互作用</div>
+      <div class="rt-n">コンペを重ねデータが蓄積したら、AI同士の取引・共謀・詐欺の大規模分析へ発展させ、来たる「AIエージェント経済」の挙動とリスクを解明する。</div>
     </div>
   </div>
 
 </div>
 
 <div class="mt-5 pl-4 border-l-4 border-black text-sm">
-  成果は<strong>データセットと論文として公開</strong>され、回を重ねるごとに公共財として積み上がります。
+  <strong>第1回コンペの開催だけで、セキュリティ基盤の論文という確実な成果</strong>が生まれます。発見が重なるほど、成果はその先へ広がります。
 </div>
 
 <style>
-.rt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 26px; }
-.rt { display: flex; gap: 12px; align-items: flex-start; }
-.rt-no { font-family: 'BIZ UDPMincho', serif; font-size: 30px; font-weight: 700; line-height: 1; flex-shrink: 0; }
-.rt-h { font-size: 15px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; }
-.rt-n { font-size: 11px; line-height: 1.7; opacity: 0.72; margin-top: 0.3rem; }
-.rt-in { font-size: 9.5px; opacity: 0.45; margin-top: 0.4rem; letter-spacing: 0.03em; }
+.rt3 { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 14px; margin-top: 1.5rem; }
+.rt-col { border: 1px solid #e5e7eb; border-radius: 0.55rem; padding: 0.55rem 0.9rem 0.9rem; }
+.rt-col-sure { border: 2.5px solid #111; }
+.rt-when { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: #fff; background: #9aa1ad; display: inline-block; padding: 3px 12px; border-radius: 999px; margin: 0.3rem 0 0.1rem; }
+.rt-when-sure { background: #111; }
+.rt-cond { font-size: 10px; opacity: 0.5; margin-bottom: 0.7rem; }
+.rt-item { margin-top: 0.7rem; }
+.rt-h { font-size: 14px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; }
+.rt-n { font-size: 10.5px; line-height: 1.7; opacity: 0.72; margin-top: 0.25rem; }
+.rt-tag { font-size: 10px; font-weight: 700; margin-top: 0.5rem; }
 </style>
 
 <!--
 Speaker Notes:
-ASCONというコンペは、一度きりのイベントではありません。コンペで集まったAIが常駐し、Erisは常時稼働し続けます。そこから、4つの研究テーマが継続的に生まれます。①DeFiの設計改善提案。Trader AIの膨大な取引ログから、人間の設計者が気づけない不均衡や最適パラメータを抽出し、各プロトコルへ具体的な改善案として届けます。②新たなセキュリティ基盤。HackerとVerifierの終わりなき攻防から、動的・経済的な攻撃に耐える設計パターンと標準を体系化します。③ゼロデイの先回り発見。本番に人々のお金が流れる前に、未知の脆弱性をErisの実環境で先に表出させ、責任ある形で報告します。④AIエージェント経済の分析。AI同士の取引・共謀・詐欺の一次データから、これから来るAIエージェント経済の挙動とリスクを解明します。これらの成果はデータセットと論文として公開され、回を重ねるごとに公共財として積み上がっていきます。
+コンペの先に生まれる研究成果を、確度の高い順に整理しました。一番左、これは確実に出る成果です。ASCONを開催し、HackerとVerifierの攻防データを取得すること自体から、「動的・経済的な攻撃に耐えるDeFi設計パターンとベンチマーク」という論文が書けます。つまり、コンペを開催しさえすれば、これは必ず研究成果になります。真ん中は、発見があり次第、書ける成果です。Trader AIの挙動から特定プロトコルの不均衡が見つかれば、設計改善提案として論文化し、当該プロジェクトへ届けます。Hacker AIが未知の脆弱性、ゼロデイを見つければ、責任ある開示と事例研究にまとめます。一番右は、将来的な発展です。コンペを重ねてデータが蓄積したら、AI同士の取引・共謀・詐欺の大規模分析へと広げ、来たるAIエージェント経済の挙動とリスクを解明していきます。重要なのは、第1回の開催だけでも、セキュリティ基盤の論文という確実な成果が生まれるという点です。
 -->

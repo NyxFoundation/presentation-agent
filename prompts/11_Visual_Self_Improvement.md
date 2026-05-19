@@ -130,13 +130,13 @@ Score each axis 1.0–5.0. Target: average ≥ 4.5 and no axis < 4.5.
 | Axis | JSON key | Full marks means |
 |---|---|---|
 | Clarity | `clarity` | A salesperson or a non-domain viewer with **zero expertise** follows every slide; jargon and acronyms are defined in plain words on first use, or cut; one idea per slide. |
-| Desire & Expectation Lift | `desire` | Every slide **raises what the viewer wants — through evidence, not assertion.** Lift expectations with a track record, a concrete number, or a comparison against others, and let the viewer reach the conclusion themselves. A fact ("founded 6 months ago, ranked #1 in the world") earns the want; a direct claim ("you'll be ahead of competitors", "genuinely good value", "this changes your life") does NOT — it scores low even when true. The deck builds want, urgency and confidence by showing, not telling. A correct-but-flat slide also scores low here. |
+| Desire & Expectation Lift | `desire` | Every slide **raises what the viewer wants — through evidence, not assertion.** Lift expectations with a track record, a concrete number, or a comparison against others, and let the viewer reach the conclusion themselves. A fact ("founded 6 months ago, ranked #1 in the world") earns the want; a direct claim ("you'll be ahead of competitors", "genuinely good value", "this changes your life") does NOT — it scores low even when true. **Comparisons must be apt:** the two sides sit on the *same axis* and are genuinely like-for-like (A against its real alternative B). A mismatched comparison — a decline measured one way set against an opportunity measured another — weakens persuasion and scores low; fix the comparison target so the like-for-like is obvious. The deck builds want by showing, not telling. A correct-but-flat slide also scores low here. |
 | Story | `story` | Skim test passes; the arc (hook → proof → build → close) is coherent. |
 | Emotional Impact | `emotional_impact` | The hook earns attention; the close lands and callbacks the hook. |
 | Credibility | `credibility` | Evidence is specific, sourced, traceable — never fabricated. |
 | Differentiation | `differentiation` | The deck sounds like *this* organization, not a template. |
 | Culture | `culture` | Brand / manifesto / values voice is present and load-bearing. |
-| Visual Readability | `visual_readability` | No overflow, no wall-of-text, every title fits one line. |
+| Visual Readability | `visual_readability` | No overflow, no wall-of-text, every title fits one line. **Show, don't tell:** an idea a chart, timeline, icon, number or diagram could carry faster must NOT be left as a paragraph — the slide *shows* it; prose is only the connective minimum. A slide that is mostly sentences when it could be mostly visual scores low. |
 | Executive Pitch Quality | `executive_pitch` | A senior leader could deliver it tomorrow. |
 
 ---
@@ -166,6 +166,10 @@ Score each axis 1.0–5.0. Target: average ≥ 4.5 and no axis < 4.5.
   the track record, number or comparison that implies it.
 - Cosmetic loop — edits that lift no axis.
 - Big-bang rewrite — rewriting many slides instead of targeting the lowest axis.
+- Leaving an idea as a paragraph when an icon, chart, timeline, diagram or a
+  single big number would carry it faster — convert text to a visual.
+- A comparison whose two sides are not on the same axis / not genuinely
+  comparable. Re-pick the comparison target so it is true like-for-like.
 - Fabricating numbers, quotes, logos or partners.
 - Declaring `converged` while a render still shows overflow or a wrapped title.
 - Committing or pushing to git (the loop and the user own that).

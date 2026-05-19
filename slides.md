@@ -1,8 +1,8 @@
 ---
 theme: seriph
-title: ASCON — 世界初、LLMのためのブロックチェーン
+title: Eris — 世界初、LLMのためのブロックチェーン
 info: |
-  ASCON: 世界初の「LLMのためのブロックチェーン」— AIエージェントが取引・攻撃・形式検証で鍛え合うDeFi公共財L2 Rollupと、それを駆動する定期コンペ
+  Eris: 世界初の「LLMのためのブロックチェーン」— AIエージェントが利益を最大化し合うDeFi公共財L2 Rollupと、それを駆動する定期コンペ「ASCON」
 transition: slide-left
 mdc: true
 colorSchema: 'light'

@@ -11,7 +11,7 @@ layout: default
       <img src="/images/eris_logo.png" alt="Eris" />
     </div>
     <div class="rd-name">Eris</div>
-    <div class="rd-desc">イーサリアム実装と<br/>分散システムの土台</div>
+    <div class="rd-desc">街を支える土台<br/>イーサリアム本体の研究</div>
   </div>
 
   <div class="rd-card">
@@ -19,7 +19,7 @@ layout: default
       <img src="/images/speca_logo.png" alt="SPECA" />
     </div>
     <div class="rd-name">SPECA</div>
-    <div class="rd-desc">AIエージェントによる<br/>自動セキュリティ監査</div>
+    <div class="rd-desc">AIで街を守る<br/>自動でコードの穴を見つける</div>
   </div>
 
   <div class="rd-card">
@@ -27,30 +27,30 @@ layout: default
       <img src="/images/verity_logo.jpg" alt="Verity" />
     </div>
     <div class="rd-name">Verity</div>
-    <div class="rd-desc">形式検証と<br/>耐量子暗号への移行</div>
+    <div class="rd-desc">数学で「正しさ」を証明<br/>次世代の暗号への移行</div>
   </div>
 
   <div class="rd-card">
     <div class="rd-logo-box rd-defi-mark">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 10h5l3-5 3 10 3-5h5"/><path d="M4 17h16" opacity="0.4"/></svg>
-      <div class="rd-defi-text">DeFi Analytics</div>
+      <div class="rd-defi-text">Market Lab</div>
     </div>
-    <div class="rd-name">DeFi Analytics</div>
-    <div class="rd-desc">MEVと分配の偏りを<br/>定量し、市場を設計</div>
+    <div class="rd-name">Market Lab</div>
+    <div class="rd-desc">お金の流れの偏りを測り<br/>より公平な市場を設計</div>
   </div>
 
 </div>
 
 <div class="rd-achievements">
-  <div class="ach-h">RESEARCH &amp; DEVELOPMENT — TRACK RECORD</div>
+  <div class="ach-h">設立から半年あまりの研究実績</div>
   <div class="grid grid-cols-4 gap-2.5">
     <div class="ach">
       <div class="ach-fig">#1</div>
-      <div class="ach-t"><b>Sherlock 監査コンテスト</b><br/>世界1位</div>
+      <div class="ach-t"><b>セキュリティ監査コンテスト</b><br/>世界1位</div>
     </div>
     <div class="ach">
-      <div class="ach-fig">5<span class="ach-fig-u">本+</span></div>
-      <div class="ach-t"><b>国際学会 採択</b><br/>査読付き論文</div>
+      <div class="ach-fig">5<span class="ach-fig-u">件</span></div>
+      <div class="ach-t"><b>国際学会で論文採択</b><br/>査読付き</div>
     </div>
     <div class="ach">
       <div class="ach-fig ach-fig-img"><img src="/images/partners/ef_horizontal.png" alt="Ethereum Foundation" /></div>
@@ -58,7 +58,7 @@ layout: default
     </div>
     <div class="ach">
       <div class="ach-fig ach-fig-tx">Cambridge</div>
-      <div class="ach-t"><b>EF Retreat 招待</b><br/>ケンブリッジ大で発表</div>
+      <div class="ach-t"><b>イーサリアム財団の合宿に招待</b><br/>ケンブリッジ大で発表</div>
     </div>
   </div>
 </div>
@@ -103,5 +103,6 @@ layout: default
 
 <!--
 Speaker Notes:
-Nyx Foundation の研究は4本柱です。Eris ——イーサリアム実装と分散システムの土台を扱う研究。SPECA ——AIエージェントが自動でセキュリティ監査を行い、攻撃の自律化に先回りする研究。Verity ——形式検証で「動く」と「正しい」のギャップを数学で埋め、同時に耐量子暗号への安全な移行を進める研究。DeFi Analytics ——MEVや分配の偏りを定量化し、より公平な市場設計の原理をオンチェーンで取り出す研究。これらは先ほどの4つの嵐に一対一で対応しています。実績としては、Sherlock のスマートコントラクト監査コンテストで世界1位、国際学会の査読付き論文採択が5本以上、イーサリアム財団の研究助成金に採択、そしてイーサリアム財団のリトリートに招待されてケンブリッジ大学で研究発表を行いました。論文と実装の両方で、世界の最前線に立っています。
+Nyx Foundation の研究は4本柱です。Eris ——街を支える土台、イーサリアム本体そのものの研究。SPECA ——AIで街を守る研究で、AIが自動でコードの穴を見つけてくれます。Verity ——プログラムが「正しい」ことを数学で証明し、同時に次世代の暗号への安全な移行を進めます。Market Lab ——お金の流れの偏りを測り、より公平な市場を設計する研究。この4本は、先ほどの4つの嵐に一つずつ対応しています。研究の実績としては、セキュリティ監査の世界コンテストで1位、国際学会への査読付き論文採択が5件、イーサリアム財団の研究助成金に採択、そしてイーサリアム財団の合宿に招待され、ケンブリッジ大学で研究発表を行いました。論文と実装の両方で、世界の最前線に立っています。
 -->
+

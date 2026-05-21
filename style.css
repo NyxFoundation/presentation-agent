@@ -26,7 +26,7 @@ th {
   color: #000000;
 }
 
-/* ===== H1 Title Styling - スタイリッシュな黒タイトル ===== */
+/* ===== H1 Title Styling - stylish black title ===== */
 .slidev-layout h1 {
   font-family: 'BIZ UDPMincho', serif !important;
   color: #000000 !important;
@@ -63,7 +63,7 @@ th {
   font-weight: 500;
 }
 
-/* ===== Cover/Intro layouts - タイトルは下線なし ===== */
+/* ===== Cover/Intro layouts - no underline on title ===== */
 .slidev-layout.cover h1,
 .slidev-layout.intro h1 {
   border-bottom: none;

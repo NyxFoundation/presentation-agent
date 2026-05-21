@@ -1,6 +1,6 @@
 ---
 # Target Audience
-target_audience: "ZK Core Program 2026 スポンサー候補企業"
+target_audience: "Prospective sponsor companies for ZK Core Program 2026"
 audience_type: group
 
 # Constraints
@@ -9,154 +9,154 @@ constraints:
   max_duration_minutes: 20
 
 # Output Language
-output_language: Japanese
+output_language: English
 
 # Event Context (Optional)
 event:
   name: "ZK Core Program 2026"
   parent_event: ""
   date: "2026"
-  location: "オンライン & 東京"
+  location: "Online & Tokyo"
 ---
 
-# ZK Core Program 2026 スポンサー提案資料
+# ZK Core Program 2026 — Sponsorship Proposal
 
-## 本プレゼンテーションについて (The Big Idea)
+## About This Presentation (The Big Idea)
 
-本資料は、2026年に開催される「ZK Core Program 2026」へのスポンサーシップをご提案するものです。このプログラムは、日本の**Programmable Cryptography（ZK、FHE、MPC等の暗号技術）**分野において、理論から実践までを深く理解し、世界レベルで活躍できるスキルを持つ異才を発掘・育成することを目的としています。ご協賛いただくことで、貴社の技術ブランディング向上、優秀な人材との早期接触、そして未来のユースケース創出に直接的に貢献できる、ユニークな機会をご提供します。
+This deck is a sponsorship proposal for the "ZK Core Program 2026," to be held in 2026. The program's mission is to find and grow exceptional talent in Japan's **Programmable Cryptography** field (ZK, FHE, MPC and related technologies) — talent capable of understanding these technologies deeply from theory through to practice and competing at a world-class level. By sponsoring, your company gets a unique opportunity to elevate its technical brand, gain early access to top-tier engineers, and directly contribute to creating future use cases.
 
-## 現状の課題 (Background / Status Quo)
+## Background / Status Quo
 
-日本社会は、デジタルトランスフォーメーション（DX）の加速という大きな変革期にありますが、その裏側で**サイバーセキュリティリスクは爆発的に増大し、今や経営と経済安全保障を揺るがす国家的課題**となっています。独立行政法人情報処理推進機構（IPA）が発表した「情報セキュリティ10大脅威 2025」では、「ランサムウェアによる被害」や「サプライチェーンの弱点を悪用した攻撃」が10年近くにわたり上位を占め続けており、企業活動の根幹を脅かす深刻なリスクとして定着しています [1]。実際、2024年には上場企業だけで189件、1,500万人分以上の個人情報漏洩が報告されるなど [2]、インシデントは後を絶ちません。
+Japan is in the middle of a major transformation driven by accelerating digital transformation (DX). At the same time, **cybersecurity risk has exploded into a national-scale issue that threatens corporate management and economic security**. In the Information-technology Promotion Agency's (IPA) "Top 10 Information Security Threats 2025," "damage from ransomware" and "attacks exploiting supply-chain weak points" have been near the top of the list for nearly a decade — entrenched risks that strike at the foundation of corporate activity [1]. In 2024 alone, 189 incidents at listed companies in Japan leaked the personal data of more than 15 million people, and incidents continue unabated [2].
 
-この「プライバシーとデータ活用の両立」というジレンマは、もはや一企業の問題ではなく、国際競争力を左右するテーマです。欧州連合（EU）では、2026年にも発効が見込まれる「eIDAS 2.0」規則により、プライバシーを高度に保護したデジタルIDウォレットの提供が義務化されるなど、**プライバシー保護技術はグローバル市場における新たなスタンダード**となりつつあります [3]。
+This dilemma — how to reconcile privacy with the use of data — is no longer a single-company problem; it now shapes international competitiveness. In the European Union, the eIDAS 2.0 regulation expected to take effect in 2026 will mandate the provision of digital ID wallets with strong privacy protection, and **privacy-preserving technologies are quickly becoming the new global standard** [3].
 
-このような大きな潮流の中で、世界の巨大テック企業はすでに行動を起こしています。Googleは2025年、プライバシーを保護しながら年齢確認を可能にするため、ゼロ知識証明（ZKP）技術をGoogle Walletに統合し、その基盤技術をオープンソース化しました [4]。Appleもまた、準同型暗号（FHE）といった技術を活用し、ユーザーの検索内容や個人情報をサーバー側でさえ解読できない形で、写真検索や発信者番号表示といった機能を提供しています [5]。
+Against this backdrop, the world's largest tech companies are already acting. In 2025, Google integrated zero-knowledge proof (ZKP) technology into Google Wallet to enable privacy-preserving age verification, and open-sourced the underlying tech [4]. Apple has likewise shipped features such as photo search and caller-ID lookup using fully homomorphic encryption (FHE), in a way that even the server cannot decrypt user queries or personal data [5].
 
-彼らの動きは、単なる機能追加ではありません。**デジタル社会における信頼のインフラを再定義するための戦略的投資**です。事実、ゼロ知識証明技術の市場は2024年の約13億ドルから、2033年には75億ドルを超える規模に成長すると予測されており [6]、Programmable Cryptographyが次世代の巨大な産業領域であることは疑いようがありません。この分野への取り組みは「まだ早い」どころか、**日本の産業競争力を維持・向上させるために不可欠な、待ったなしの課題**なのです。
+These moves are not just feature additions. They are **strategic investments to redefine the trust infrastructure of digital society**. The ZKP market is forecast to grow from roughly USD 1.3B in 2024 to over USD 7.5B by 2033 [6], and Programmable Cryptography is unmistakably the next massive industrial frontier. Far from being premature, engaging with this field is **an urgent task essential to maintaining and improving Japan's industrial competitiveness**.
 
-## ZK TokyoとCore Programの意義 (Why This Event Matters)
+## Why ZK Tokyo and the Core Program Matter
 
-増大するサイバーリスクと激化する国際競争。これらの国家的課題に立ち向かう上で、最も重要な鍵を握るのは、間違いなく**次世代の技術を担う高度な専門人材**です。しかし、その育成は日本の最も苦手とするところであり、人材不足は危機的な状況にあります。経済産業省の報告によれば、国内のサイバーセキュリティ人材は約11万人も不足しており [7]、IT人材全体では2030年に最大で約79万人が不足すると予測されています [8]。
+Rising cyber risk and intensifying international competition. To meet these national challenges, the most important asset is, without question, **highly specialized talent capable of carrying the next generation of technology**. Yet developing that talent is something Japan struggles with, and the shortage has reached critical levels. According to METI, Japan is short roughly 110,000 cybersecurity professionals [7], and the IT workforce as a whole is projected to be short by as much as 790,000 by 2030 [8].
 
-この深刻な人材ギャップを埋め、日本のデジタル社会の未来を切り拓く。それこそが、**「ZK Core Program」が持つ真の意義**です。我々のプログラムは、単なる暗号応用技術者の育成に留まりません。デジタルインフラの根幹を支え、プライバシーとイノベーションを両立できる、**世界レベルの異能を育てるための、日本で最も刺激的で実践的な場所**です。
+Closing that severe talent gap and shaping the future of Japan's digital society — that is the **true significance of the "ZK Core Program."** Our program does not just train engineers who apply cryptography. It is **the most stimulating and hands-on environment in Japan for cultivating world-class talent** that can support core digital infrastructure and reconcile privacy with innovation.
 
-ZK Tokyoは、過去3年間にわたり、日本の暗号技術コミュニティを牽引するハブとして機能してきました。2025年にはイーサリアム創設者Vitalik Buterin氏を招聘し、SMBC日興証券やRISC Zeroといった国内外のトッププレイヤーと共同イベントを開催するなど、アカデミアと産業、そして世界を繋ぐ架け橋としての役割を担っています。本プログラムの卒業生が、イーサリアム財団との共同研究や国際学会での発表といった目覚ましい活躍を遂げているのは、我々の取り組みが日本の枠を越え、**世界に通用する価値**を生み出していることの証左に他なりません。
+For the past three years, ZK Tokyo has served as the hub driving Japan's cryptography community. In 2025, we hosted Ethereum founder Vitalik Buterin, and we have co-hosted events with top players from Japan and abroad such as SMBC Nikko Securities and RISC Zero — bridging academia, industry, and the global ecosystem. The fact that our alumni go on to collaborate with the Ethereum Foundation and present at international conferences is direct evidence that our work creates **value that translates beyond Japan**.
 
-## 2025年度プログラムの成功：理論と協調のシナジー
+## The 2025 Program's Success: The Synergy of Theory and Collaboration
 
-本プログラムの有効性は、2025年度の実績によって証明されています。プログラムは、**オンラインでの教材配布と、週末のオフラインでのグループワークを組み合わせたハイブリッド形式**を採用しました。
+The 2025 results prove the program's effectiveness. The program ran in a **hybrid format combining online distribution of materials with offline group work on weekends**.
 
-> 参加者は平日にオンラインで配布されるテキストベースの教材で理論を自習し、週末にオフラインで一堂に会します。そして、**ホワイトボードセッション形式の濃密なグループワーク**を通じて、学んだ知識をぶつけ合い、議論を深め、共に課題を解決していきます。この「個の学習」と「集団の知性」を融合させるサイクルこそが、本プログラムの成功の核心です。
+> Participants self-studied theory on weekdays using text-based materials distributed online, then gathered offline on weekends. Through **intense, whiteboard-format group work**, they applied that knowledge against each other, deepened the discussion, and solved problems together. It is precisely this cycle — fusing "individual learning" with "collective intelligence" — that sits at the core of the program's success.
 
-この形式により、参加者同士の深い相互理解と信頼関係が醸成され、わずか6週間という短期間で、複雑な暗号理論の学習を達成し、極めて質の高い最終成果物を生み出す原動力となりました。
+This format built deep mutual understanding and trust between participants, and powered the completion of complex cryptographic theory and the delivery of exceptionally high-quality final outputs in just six weeks.
 
-**2025年度の主な最終成果物:**
+**Major final outputs from 2025:**
 
-| プロジェクト名 | 概要 |
+| Project | Summary |
 |---|---|
-| **zk-KYC-DEX** | ゼロ知識証明を活用し、個人情報を秘匿したまま本人確認（KYC）を可能にする分散型取引所（DEX）のプロトタイプ。 |
-| **DeFi個人向け無担保ローン** | 信用情報機関のデータとZKPを組み合わせ、プライバシーを保護しつつ信用確認を行う、実用的な個人向け無担保ローンプロトコル。 |
-| **ZK-Vote** | ゼロ知識証明を活用し、投票者の身元や投票内容を完全に秘匿する、安全かつ公正な匿名DAO投票システム。 |
-| **法人ウォレット** | 商業登記電子証明書を活用し、法人の実在証明とウォレット操作の意思確認をオフラインまたはスマートコントラクト上で実現。 |
+| **zk-KYC-DEX** | A DEX prototype that uses ZK proofs to perform KYC while keeping personal data private. |
+| **DeFi unsecured personal lending** | A realistic unsecured personal lending protocol that combines credit-bureau data with ZKP for privacy-preserving credit checks. |
+| **ZK-Vote** | A safe, fair anonymous DAO voting system that uses ZKP to fully conceal voter identity and ballot contents. |
+| **Corporate Wallet** | Proof of corporate existence and intent-of-operation for wallet actions using commercial-registry digital certificates, executed offline or on-chain. |
 
-これらの成果は、参加者の技術力の高さだけでなく、**理論を実践に結びつけ、協調を通じてイノベーションを創出する**という本プログラムの設計思想そのものの有効性を物語っています。
+These outputs speak not just to the participants' technical strength but also to the soundness of the program's design philosophy: **connecting theory to practice and driving innovation through collaboration**.
 
-## 2026年度 開催要項
+## 2026 Program Overview
 
-### 1. 学習内容：理論と実践の融合
+### 1. Curriculum: Theory Meets Practice
 
-本プログラムでは、ZKP（ゼロ知識証明）やFHE（完全準同型暗号）、MPC（セキュアマルチパーティ計算）といった最先端の暗号技術を、単なる「ブラックボックス」として利用するのではなく、その根底にある**数学的構造を自らの手で再構築する**ことを通じて、本質的な理解を深めます。参加者は、抽象的な理論を具体的なコードに落とし込むプロセスを繰り返し体験することで、最終的にはプライバシー保護や計算の正当性を確立したシステムをゼロから設計・実装する能力を習得します。
+Rather than treating leading-edge cryptography — ZKP (zero-knowledge proofs), FHE (fully homomorphic encryption), MPC (secure multi-party computation) — as a "black box," our program deepens essential understanding by **rebuilding the underlying mathematical structures by hand**. Through repeated cycles of translating abstract theory into concrete code, participants ultimately gain the ability to design and implement, from scratch, systems that guarantee privacy and computational integrity.
 
-### 2. 対象者と推奨スキル
+### 2. Target Audience and Recommended Skills
 
-本プログラムは、強い意欲を持つ以下のような人材を対象としています。
+The program targets highly motivated individuals such as:
 
-- **暗号技術の実装力を高めたいエンジニア:** ZKや秘密計算の概念は理解しているが、ライブラリの内部ロジックや暗号回路を自ら構築できるようになりたい方。
-- **プロトコル設計者・研究者:** 新しい分散型システムやプライバシー保護技術を、数学的根拠に基づいてゼロから設計・提案したい方。
+- **Engineers who want to strengthen their cryptography implementation skills:** People who understand ZK and secure computation conceptually but want to be able to build the internal logic of libraries and cryptographic circuits themselves.
+- **Protocol designers and researchers:** People who want to design and propose new distributed systems and privacy-preserving technologies from scratch, grounded in mathematical reasoning.
 
-プログラムの性質上、参加者には以下の知識とスキルセットを備えていることを推奨します。
+Because of the nature of the program, we recommend that participants have the following knowledge and skill set.
 
-| カテゴリ | スキル詳細 | 必須/推奨 |
+| Category | Skill detail | Required / Recommended |
 |---|---|---|
-| **プログラミングスキル** | PythonやTypeScript等での開発経験、メモリ管理や計算量に関する基礎知識。 | **必須** |
-| **数学の基礎知識** | 初等整数論（剰余演算、群・環・体）、線形代数、多項式演算の基礎。 | 推奨 |
-| **コンピュータサイエンス** | 論理ゲートと回路、計算モデル（命令セット、データフロー）の基礎理解。 | 推奨 |
-| **暗号学への関心** | 公開鍵暗号、ハッシュ関数、電子署名の役割の理解と、週1回の対面セッション及び自習への強いコミットメント。 | **必須** |
+| **Programming skills** | Development experience in Python, TypeScript, etc.; basic understanding of memory management and computational complexity. | **Required** |
+| **Mathematical foundations** | Elementary number theory (modular arithmetic, groups/rings/fields), linear algebra, basics of polynomial arithmetic. | Recommended |
+| **Computer science** | Logic gates and circuits; basic understanding of computational models (instruction sets, data flow). | Recommended |
+| **Interest in cryptography** | Understanding of the role of public-key cryptography, hash functions, and digital signatures, plus strong commitment to a weekly in-person session and self-study. | **Required** |
 
-### 3. スケジュールとカリキュラム
+### 3. Schedule and Curriculum
 
-プログラムは7週間にわたって実施されます。Week 1で全体像と応用事例を提示し、参加者の知的好奇心を刺激した上で、各論へと掘り下げていきます。理論レクチャーと実装課題を並行して進め、週1回の対面セッションでグループでの議論や設計を深めます。
+The program runs for 7 weeks. Week 1 presents the big picture and example applications to spark intellectual curiosity, after which we dive into specific topics. Theory lectures and implementation assignments run in parallel, and a weekly in-person session deepens group discussion and design work.
 
-| 週 | テーマ | 理論レクチャー | 実装課題 | 対面セッション |
+| Week | Theme | Theory lecture | Implementation assignment | In-person session |
 |---|---|---|---|---|
-| 1 | Programmable Cryptography | ZK/MPC/FHEの全体像と相互補完性。計算の「回路」抽象化理論。 | 基本的な算術演算を「回路」として表現・実行するコードの実装。 | ユースケース特定ワークショップ |
-| 2 | MPC | 秘密分散法、OT、Garbled Circuits。 | 秘密分散、加算・乗算プロトコルのRust実装。 | プロジェクトチーム組成 |
-| 3 | ZKP I (算術化) | 多項式を用いた計算の変換。R1CSの数学的構造。 | 計算ロジックをR1CS形式の行列に変換するコードの作成。 | 設計レビュー |
-| 4 | ZKP II (多項式コミットメント) | KZGやIPA等のコミットメント・スキーム。 | 楕円曲線を用いた多項式コミットメントと検証ロジックの実装。 | ホワイトボードセッション |
-| 5 | ZKP III (Plonkishな制約体系) | 順列証明とコピー制約。Lookup Tablesの基礎理論。 | 回路内のワイヤの一致（コピー制約）を確認するプロトコルの実装。 | 中間発表 |
-| 6 | FHE | 格子暗号、LWE問題。準同型演算とノイズ管理。 | LWE暗号の暗号化・復号、および復号しない状態での加算・乗算ロジックの実装。 | 技術統合の壁打ち |
-| 7 | Advanced Topics & Demo | Verifiable FHE, Folding, zkVM等の最先端動向。 | これまで学んだ技術を統合し、プロトコルとして完結・最適化。 | **Demo Day** |
+| 1 | Programmable Cryptography | Big-picture view of ZK/MPC/FHE and how they complement each other. The theory of "circuits" as an abstraction for computation. | Implement code that expresses and executes basic arithmetic operations as a "circuit." | Use-case identification workshop |
+| 2 | MPC | Secret sharing, OT, Garbled Circuits. | Implement secret sharing and addition/multiplication protocols in Rust. | Project team formation |
+| 3 | ZKP I (Arithmetization) | Transforming computation using polynomials. The mathematical structure of R1CS. | Write code that converts computation logic into R1CS-format matrices. | Design review |
+| 4 | ZKP II (Polynomial commitments) | Commitment schemes such as KZG and IPA. | Implement polynomial commitment and verification logic using elliptic curves. | Whiteboard session |
+| 5 | ZKP III (Plonk-style constraint systems) | Permutation arguments and copy constraints. The basics of lookup tables. | Implement a protocol that verifies wire equality (copy constraints) within a circuit. | Mid-term presentation |
+| 6 | FHE | Lattice-based cryptography, the LWE problem, homomorphic operations, and noise management. | Implement LWE encryption and decryption, plus addition and multiplication logic on ciphertexts (no decryption). | Technical integration office hours |
+| 7 | Advanced Topics & Demo | The cutting edge — Verifiable FHE, Folding, zkVM, etc. | Integrate everything learned so far into a complete, optimized protocol. | **Demo Day** |
 
-最終成果物は、**ETH Global Tokyoでの発表**や、**スポンサー企業様への限定デモ**といった形で公開する機会を設けます。
+Final outputs will be shared with the world via formats such as **presentations at ETH Global Tokyo** and **private demos for sponsor companies**.
 
-### 4. 2025年度からの改善点
+### 4. Improvements from 2025
 
-2026年度は、昨年度の成功を踏まえ、以下の点を改善・強化します。
+For 2026, we are improving and strengthening the program based on the successes of the previous year:
 
-- **グループプロジェクトの導入:** プログラム全体を通して一つのテーマに取り組むグループプロジェクトを導入。最初の2週間でメンバーをシャッフルし、Week 3からチームを固定してプロジェクトを推進します。
-- **応用事例との接続強化:** 理論が実世界でどう応用されるかを具体的に示すため、例えば「Plonk」を学ぶ週には、実際にPlonkを利用しているサービスを分析する、といったケーススタディを取り入れます。
-- **最終成果物の具体化:** 「zkVMを実装する」といった具体的な最終課題やテーマを初期段階で提示し、技術探求意欲の高い参加者のモチベーションを最大化します。
+- **Introducing group projects:** A single theme will be carried through the entire program as a group project. Members will be shuffled in the first two weeks, then locked in from Week 3 to drive the project forward.
+- **Stronger connection to applied examples:** To make clear how theory plays out in the real world, we will, for instance, study services that actually use Plonk during the week we cover Plonk.
+- **Concrete final deliverables:** We will present concrete final assignments and themes (e.g., "implement a zkVM") at the very beginning, to maximize motivation for the most technically ambitious participants.
 
-## 皆様へのお願い (The Ask / Call to Action)
+## The Ask / Call to Action
 
-この先進的なプログラムをさらに発展させるため、貴社にスポンサーとしてご参画いただきたく、ここにお願い申し上げます。スポンサーシップは、単なる資金提供ではありません。貴社には、**参加者が取り組む成果物のテーマをご提案いただく**権利をご提供します。参加者は提示されたテーマの中から自身の興味に合うものを選択し、プログラムを通じて開発に取り組みます。
+To further evolve this leading-edge program, we are inviting your company to participate as a sponsor. Sponsorship is more than funding. It gives your company the right to **propose the themes that participants tackle as their final outputs**. Participants then choose, from the themes you propose, the one that best fits their interest and develop it through the program.
 
-これは、**実践的なインターンシップ**に近い形式です。貴社は、参加者に対して直接プレゼンテーションやメンタリングを行う機会を得られ、ZK Tokyoの講師陣がカリキュラムと成果物完成までを強力にサポートします。これにより、貴社は以下の価値を享受できます。
+The format is close to a **practical internship**. Your company gets to present directly to participants and mentor them, and the ZK Tokyo instructors provide strong support across the curriculum and through to the completion of the final outputs. As a sponsor, you gain the following:
 
-- **人材育成と早期発掘:** ポテンシャルの高い若手エンジニアとの直接的な接点
-- **ユースケース創出:** 貴社の事業領域に関連する新たな技術的応用例の探求
-- **サービスの周知:** 技術コミュニティにおける貴社の認知度とブランドイメージの向上
+- **Talent development and early discovery:** Direct touchpoints with high-potential young engineers
+- **Use-case creation:** Exploration of new technical applications relevant to your business domain
+- **Brand visibility:** Higher recognition and brand image within the technical community
 
-**スポンサーシッププラン:**
-- **50万円:** 1テーマ提案権
-- **100万円:** 3テーマ提案権
-- **200万円:** 5テーマ提案権
+**Sponsorship plans:**
+- **JPY 500K:** Propose 1 theme
+- **JPY 1M:** Propose 3 themes
+- **JPY 2M:** Propose 5 themes
 
-魅力的なテーマ設定については、我々ZK Tokyoが共同で検討・策定をサポートします。
+ZK Tokyo will work with you to scope and shape compelling themes.
 
-## 関係者 (Team / Stakeholders)
+## Team / Stakeholders
 
-- **主催:** ZK Tokyo ([X/Twitter](https://x.com/zk_tokyo), [YouTube](https://www.youtube.com/@zk-tokyo), [Telegram](https://t.me/+mqLG9CwMPB8zNDY1))
-- **共催:** 東京大学 ブロックチェーンイノベーション寄附講座
-- **協力:** スポンサー企業各社
+- **Host:** ZK Tokyo ([X/Twitter](https://x.com/zk_tokyo), [YouTube](https://www.youtube.com/@zk-tokyo), [Telegram](https://t.me/+mqLG9CwMPB8zNDY1))
+- **Co-host:** The University of Tokyo Blockchain Innovation Endowed Chair
+- **Cooperation:** Sponsor companies
 
-## 結びの言葉
+## Closing
 
-ZK Core Programは、日本の技術力を底上げし、次世代のイノベーターを世界の舞台へ送り出すための、他に類を見ないプラットフォームです。貴社がこのムーブメントに加わることは、単なる投資ではなく、未来のテクノロジーエコシステムを共に創造するパートナーシップの始まりを意味します。ぜひ、我々と共に、日本の、そして世界の未来を担う異能の才能を育てていきませんか。ご連絡を心よりお待ちしております。
+The ZK Core Program is a one-of-a-kind platform for raising the bar of Japan's technical capability and sending the next generation of innovators onto the world stage. Joining this movement is not just an investment; it marks the start of a partnership to co-create the technology ecosystem of the future. We hope you will join us in growing the exceptional talent that will shape the future of Japan and the world. We look forward to hearing from you.
 
 ---
 
-### 参考文献
+### References
 
-[1] 独立行政法人情報処理推進機構（IPA）. "情報セキュリティ10大脅威 2025". https://www.ipa.go.jp/security/10threats/10threats2025.html (参照日: 2026-01-23)
+[1] Information-technology Promotion Agency (IPA). "Top 10 Information Security Threats 2025." https://www.ipa.go.jp/security/10threats/10threats2025.html (accessed 2026-01-23)
 
-[2] 株式会社東京商工リサーチ. "2024年『上場企業の個人情報漏えい・紛失事故』調査". 2025-01-21. https://www.tsr-net.co.jp/data/detail/1200872_1527.html (参照日: 2026-01-23)
+[2] Tokyo Shoko Research, Ltd. "2024 Survey on Personal Information Leakage and Loss Incidents at Listed Companies." 2025-01-21. https://www.tsr-net.co.jp/data/detail/1200872_1527.html (accessed 2026-01-23)
 
-[3] European Commission. "European Digital Identity". https://commission.europa.eu/strategy-and-policy/priorities-2019-2024/europe-fit-digital-age/european-digital-identity_en (参照日: 2026-01-23)
+[3] European Commission. "European Digital Identity." https://commission.europa.eu/strategy-and-policy/priorities-2019-2024/europe-fit-digital-age/european-digital-identity_en (accessed 2026-01-23)
 
-[4] Google. "Opening up ‘Zero-Knowledge Proof’ technology to promote privacy in age assurance". The Keyword. 2025-07-03. https://blog.google/innovation-and-ai/technology/safety-security/opening-up-zero-knowledge-proof-technology-to-promote-privacy-in-age-assurance/ (参照日: 2026-01-23)
+[4] Google. "Opening up 'Zero-Knowledge Proof' technology to promote privacy in age assurance." The Keyword. 2025-07-03. https://blog.google/innovation-and-ai/technology/safety-security/opening-up-zero-knowledge-proof-technology-to-promote-privacy-in-age-assurance/ (accessed 2026-01-23)
 
-[5] Apple. "Combining Machine Learning and Homomorphic Encryption in the Apple Ecosystem". Apple Machine Learning Research. 2024-10-24. https://machinelearning.apple.com/research/homomorphic-encryption (参照日: 2026-01-23)
+[5] Apple. "Combining Machine Learning and Homomorphic Encryption in the Apple Ecosystem." Apple Machine Learning Research. 2024-10-24. https://machinelearning.apple.com/research/homomorphic-encryption (accessed 2026-01-23)
 
-[6] Grand View Research. "Zero Knowledge Proof Market Size | Industry Report, 2033". 2024. https://www.grandviewresearch.com/industry-analysis/zero-knowledge-proof-market-report (参照日: 2026-01-23)
+[6] Grand View Research. "Zero Knowledge Proof Market Size | Industry Report, 2033." 2024. https://www.grandviewresearch.com/industry-analysis/zero-knowledge-proof-market-report (accessed 2026-01-23)
 
-[7] 経済産業省. "「サイバーセキュリティ人材の育成促進に向けた検討会最終取りまとめ」を公表しました". 2025-05-14. https://www.meti.go.jp/press/2025/05/20250514002/20250514002.html (参照日: 2026-01-23)
+[7] Ministry of Economy, Trade and Industry (METI). "Final Report Released by the Study Group on Promoting the Development of Cybersecurity Talent." 2025-05-14. https://www.meti.go.jp/press/2025/05/20250514002/20250514002.html (accessed 2026-01-23)
 
-[8] 経済産業省. "IT人材需給に関する調査". 2019-04-25. https://www.meti.go.jp/policy/it_policy/jinzai/houkokusho.pdf (参照日: 2026-01-23)
+[8] Ministry of Economy, Trade and Industry (METI). "Survey on IT Talent Supply and Demand." 2019-04-25. https://www.meti.go.jp/policy/it_policy/jinzai/houkokusho.pdf (accessed 2026-01-23)
 
-**関連リンク:**
-- **Core Program 2025 教材:** [https://github.com/zk-tokyo/core-program](https://github.com/zk-tokyo/core-program)
-- **Core Program 2025 最終成果物:** [https://github.com/zk-tokyo/core-program/tree/main/final-projects](https://github.com/zk-tokyo/core-program/tree/main/final-projects)
-- **Core Program 2025 ショーケース:** [https://www.youtube.com/watch?v=j1u1cyjfilo&list=PLvKRWMWw-Dsa4BGplLe1YYgRpiio72FgY](https://www.youtube.com/watch?v=j1u1cyjfilo&list=PLvKRWMWw-Dsa4BGplLe1YYgRpiio72FgY)
-- **Core Program 2025 講義動画:** [https://www.youtube.com/watch?v=KGoIeuBKxB4&list=PLvKRWMWw-Dsai7hPewIS2LYnZHS4Z_W2Z](https://www.youtube.com/watch?v=KGoIeuBKxB4&list=PLvKRWMWw-Dsai7hPewIS2LYnZHS4Z_W2Z)
+**Related links:**
+- **Core Program 2025 materials:** [https://github.com/zk-tokyo/core-program](https://github.com/zk-tokyo/core-program)
+- **Core Program 2025 final outputs:** [https://github.com/zk-tokyo/core-program/tree/main/final-projects](https://github.com/zk-tokyo/core-program/tree/main/final-projects)
+- **Core Program 2025 showcase:** [https://www.youtube.com/watch?v=j1u1cyjfilo&list=PLvKRWMWw-Dsa4BGplLe1YYgRpiio72FgY](https://www.youtube.com/watch?v=j1u1cyjfilo&list=PLvKRWMWw-Dsa4BGplLe1YYgRpiio72FgY)
+- **Core Program 2025 lectures:** [https://www.youtube.com/watch?v=KGoIeuBKxB4&list=PLvKRWMWw-Dsai7hPewIS2LYnZHS4Z_W2Z](https://www.youtube.com/watch?v=KGoIeuBKxB4&list=PLvKRWMWw-Dsai7hPewIS2LYnZHS4Z_W2Z)

@@ -1,9 +1,9 @@
 ---
 theme: seriph
-title: 暗号 × ブロックチェーン Study Group 2026
+title: Cryptography x Blockchain Study Group 2026
 info: |
-  東京大学ブロックチェーンイノベーション寄付講座 ブロックチェーン応用実践プログラム
-  暗号 × ブロックチェーン Study Group 2026 プログラム案内
+  The University of Tokyo Blockchain Innovation Endowed Chair — Blockchain Applied Practice Program
+  Cryptography x Blockchain Study Group 2026 — Program Overview
 transition: slide-left
 mdc: true
 colorSchema: 'light'

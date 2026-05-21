@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# AI agents are entering the real economy — yet there is nowhere safe to test them
+# No practical testbed for the AI-agent economy
 
 <div class="p4">
 

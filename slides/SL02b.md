@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# "It runs" is not "it's safe" — the machinery for verifying that is breaking down
+# The security-audit model is breaking down
 
 <div class="grid grid-cols-[0.85fr_1.15fr] gap-7 mt-6 items-center">
 

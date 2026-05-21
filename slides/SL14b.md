@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Beyond the competition — research Eris produces, from certain to future
+# Research the competition produces
 
 <div class="rt3">
 

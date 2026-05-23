@@ -2,147 +2,88 @@
 layout: default
 ---
 
-# Current Finance のコード地図 ─ ADL が走るまで
+# 顧客Aは健全だった ─ それでも清算された経路
 
-<div class="text-xs opacity-60 mb-3">Sui上のレバレッジLending ／ <span class="font-mono">market.move</span> (1,301行) ／ Sherlock contest #312</div>
+<div class="text-xs opacity-60 mb-2">Current Finance (Sui レバレッジLending) ／ Sherlock contest #312 ／ <span class="font-mono">market.move :546–582</span></div>
 
-<div class="relative">
+<div class="grid grid-cols-2 gap-3">
 
-<div class="grid grid-cols-9 items-center gap-0">
-
-<div class="col-span-1 border border-gray-400 rounded bg-gray-50 px-1 py-1.5 text-center">
-<div class="text-[9px] font-bold opacity-60">STEP 1</div>
-<div class="text-[11px] font-bold leading-tight">ポジション作成</div>
-<code class="text-[8px] opacity-50 block leading-tight mt-0.5">handle_new_<br/>obligation</code>
+<div class="border-2 border-blue-600 rounded-lg p-2 bg-blue-50 shadow">
+<div class="flex items-center justify-between mb-1.5">
+<div class="text-xs font-bold text-blue-800">顧客 A</div>
+<div class="text-[10px] bg-blue-600 text-white px-2 py-0.5 rounded">eMode Group A (LST)</div>
 </div>
 
-<div class="col-span-1 text-center text-2xl opacity-30 font-bold">→</div>
-
-<div class="col-span-1 border border-gray-400 rounded bg-gray-50 px-1 py-1.5 text-center">
-<div class="text-[9px] font-bold opacity-60">STEP 2</div>
-<div class="text-[11px] font-bold leading-tight">担保を預ける</div>
-<code class="text-[8px] opacity-50 block leading-tight mt-0.5">handle_mint</code>
+<div class="flex items-center gap-2 mb-1">
+<div class="bg-blue-600 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full flex-shrink-0">1</div>
+<div class="flex-1 text-xs">担保差入 <span class="font-mono font-bold">stSUI 50M</span></div>
 </div>
 
-<div class="col-span-1 text-center text-2xl opacity-30 font-bold">→</div>
-
-<div class="col-span-1 border border-gray-400 rounded bg-gray-50 px-1 py-1.5 text-center">
-<div class="text-[9px] font-bold opacity-60">STEP 3</div>
-<div class="text-[11px] font-bold leading-tight">借入 (eMode)</div>
-<code class="text-[8px] opacity-50 block leading-tight mt-0.5">handle_borrow</code>
+<div class="flex items-center gap-2 mb-1.5">
+<div class="bg-blue-600 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full flex-shrink-0">2</div>
+<div class="flex-1 text-xs">借入 <span class="font-mono font-bold">USDC 30M</span></div>
 </div>
 
-<div class="col-span-1 text-center text-2xl opacity-30 font-bold">→</div>
-
-<div class="col-span-1 border-2 border-red-700 rounded bg-red-50 px-1 py-1.5 text-center relative shadow-md">
-<div class="absolute -top-2 right-0.5 bg-red-700 text-white text-[8px] font-bold px-1 py-0.5 rounded shadow">問題関数</div>
-<div class="text-[9px] font-bold text-red-700">STEP 4</div>
-<div class="text-[11px] font-bold leading-tight">ADL 実行</div>
-<code class="text-[8px] opacity-60 block leading-tight mt-0.5">handle_debt_<br/>auto_deleverage</code>
+<div class="bg-emerald-600 text-white text-center py-1 rounded text-[11px] font-bold">
+✓ Group A 借入 30M &lt; 閾値 50M
+</div>
 </div>
 
-<div class="col-span-1 text-center text-2xl opacity-30 font-bold">→</div>
-
-<div class="col-span-1 border border-gray-400 rounded bg-gray-50 px-1 py-1.5 text-center">
-<div class="text-[9px] font-bold opacity-60">STEP 5</div>
-<div class="text-[11px] font-bold leading-tight">停止判定</div>
-<code class="text-[8px] opacity-50 block leading-tight mt-0.5">try_stop_<br/>borrow_deleverage</code>
+<div class="border-2 border-gray-500 rounded-lg p-2 bg-gray-50 shadow">
+<div class="flex items-center justify-between mb-1.5">
+<div class="text-xs font-bold text-gray-700">顧客 B</div>
+<div class="text-[10px] bg-gray-600 text-white px-2 py-0.5 rounded">eMode Group B (ETH)</div>
 </div>
 
+<div class="flex items-center gap-2 mb-1">
+<div class="bg-gray-600 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full flex-shrink-0">1</div>
+<div class="flex-1 text-xs">担保差入 <span class="font-mono font-bold">wETH 100M</span></div>
 </div>
 
-<div class="absolute left-0 right-0" style="top: 100%;">
-<div class="grid grid-cols-9">
-<div class="col-span-6"></div>
-<div class="col-span-1 flex flex-col items-center pt-1">
-<div class="text-[9px] text-red-700 font-bold tracking-wider">拡大</div>
-<div class="text-red-700 text-lg leading-none">▼</div>
+<div class="flex items-center gap-2 mb-1.5">
+<div class="bg-gray-600 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full flex-shrink-0">2</div>
+<div class="flex-1 text-xs">借入 <span class="font-mono font-bold">USDC 80M</span></div>
 </div>
-<div class="col-span-2"></div>
+
+<div class="bg-gray-500 text-white text-center py-1 rounded text-[11px] font-bold">
+別グループ・顧客A と無関係
 </div>
 </div>
 
 </div>
 
-<div class="grid grid-cols-2 gap-3 mt-12">
+<div class="relative h-5">
+<svg viewBox="0 0 400 20" class="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+<path d="M 100 0 L 200 20 M 300 0 L 200 20" stroke="#374151" stroke-width="1.5" fill="none"/>
+<polygon points="200,20 195,12 205,12" fill="#374151"/>
+</svg>
+<div class="absolute left-1/2 -translate-x-1/2 top-0.5 text-[10px] bg-white px-2 text-gray-600">二人とも USDC を借りた</div>
+</div>
 
-<div class="border-2 border-gray-300 rounded p-2 bg-gradient-to-br from-gray-50 to-white">
+<div class="rounded-lg py-2 px-4 text-center" style="background:#111827; color:#ffffff;">
+<div class="text-[11px] font-mono mb-0.5" style="color:#9ca3af;">同じ USDC reserve に合算される</div>
+<div class="text-3xl font-bold font-mono" style="color:#ffffff;">30M + 80M = 110M USDC</div>
+</div>
 
-<div class="text-[10px] font-bold tracking-wider opacity-70 mb-1.5">ステップ4 の中身 ─ 3つの管理ポイント</div>
+<div class="text-center text-2xl text-gray-600 leading-none my-0.5">↓</div>
 
-<div class="space-y-1">
-
+<div class="border-2 border-red-700 bg-red-50 rounded-lg py-1.5 px-3 shadow">
 <div class="flex items-center gap-2">
-<div class="text-[10px] font-mono opacity-50 w-10">:575</div>
-<div class="flex-1 h-6 bg-emerald-200 border-l-4 border-emerald-600 rounded-sm flex items-center px-2">
-<div class="text-[10px] font-bold text-emerald-900">✓ 登録</div>
-<div class="text-[10px] ml-auto opacity-70">グループ別</div>
+<div class="text-[10px] font-mono bg-red-700 text-white px-2 py-0.5 rounded flex-shrink-0">market.move :580</div>
+<div class="text-sm font-mono">
+<span class="text-red-700 font-bold">reserve.debt() 110M</span> &gt; Group A 閾値 50M → <span class="text-red-700 font-bold">ADL 発動</span>
 </div>
 </div>
-
-<div class="flex items-center gap-2">
-<div class="text-[10px] font-mono opacity-50 w-10">:580</div>
-<div class="flex-1 h-7 bg-red-200 border-l-4 border-red-700 rounded-sm flex items-center px-2 shadow-md">
-<div class="text-[11px] font-bold text-red-900">❌ 実行ガード</div>
-<div class="text-[11px] font-bold text-red-700 ml-auto">reserve 全体</div>
-</div>
+<div class="text-[10px] opacity-70 mt-0.5 pl-1">本来あるべき判定: Group A の借入 30M &lt; 50M → 発動せず</div>
 </div>
 
-<div class="flex items-center gap-2">
-<div class="text-[10px] font-mono opacity-50 w-10">:686</div>
-<div class="flex-1 h-6 bg-emerald-200 border-l-4 border-emerald-600 rounded-sm flex items-center px-2">
-<div class="text-[10px] font-bold text-emerald-900">✓ 停止</div>
-<div class="text-[10px] ml-auto opacity-70">グループ別</div>
-</div>
-</div>
+<div class="text-center text-2xl text-red-700 leading-none my-0.5">↓</div>
 
-</div>
-
-<div class="mt-2 text-[10px] text-center opacity-70 leading-tight border-t pt-1">
-<span class="font-bold">3 箇所のうち 1 箇所だけ</span>が違う粒度を見ている
-</div>
-
-</div>
-
-<div class="border-2 border-gray-300 rounded p-2 bg-gradient-to-br from-gray-50 to-white">
-
-<div class="text-[10px] font-bold tracking-wider opacity-70 mb-1.5">攻撃データフロー</div>
-
-<div class="grid grid-cols-2 gap-2">
-<div class="border border-blue-500 bg-blue-50 rounded p-1 text-center">
-<div class="text-[9px] font-bold text-blue-800">顧客A (Group A)</div>
-<div class="text-sm font-bold font-mono">30M</div>
-<div class="text-[8px] text-emerald-700 font-bold">健全 (&lt;50M)</div>
-</div>
-<div class="border border-gray-500 bg-gray-100 rounded p-1 text-center">
-<div class="text-[9px] font-bold text-gray-700">顧客B (Group B)</div>
-<div class="text-sm font-bold font-mono">80M</div>
-<div class="text-[8px] opacity-60">無関係</div>
-</div>
-</div>
-
-<div class="grid grid-cols-2 -my-0.5">
-<div class="text-right text-lg leading-none text-gray-500">↘</div>
-<div class="text-left text-lg leading-none text-gray-500">↙</div>
-</div>
-
-<div class="bg-gray-900 text-white text-center py-1 rounded">
-<div class="text-[8px] opacity-70 font-mono">reserve.debt()  ← :580 が読む</div>
-<div class="text-base font-bold font-mono">110M USDC</div>
-</div>
-
-<div class="text-center text-sm leading-none text-gray-500 my-0.5">↓</div>
-
-<div class="border-2 border-red-700 bg-red-100 rounded p-1 text-center">
-<div class="text-[9px] opacity-70">:580 比較</div>
-<div class="text-xs font-bold font-mono text-red-700">110M &gt; 50M = TRUE</div>
-<div class="text-[9px] text-red-700 font-bold">→ Group A に ADL 発動 (誤)</div>
-</div>
-
-</div>
-
+<div class="bg-red-700 text-white rounded-lg py-2 px-4 text-center shadow-lg">
+<div class="text-base font-bold leading-tight">❌ 顧客 A の <span class="font-mono">stSUI 50M</span> 担保が強制清算</div>
+<div class="text-[11px] opacity-90 mt-0.5">健全な借り手なのに、別グループの借入額のせいで巻き添え</div>
 </div>
 
 <!--
-Current Financeのコード全体像です。market.move約1,300行ですが、ユーザが触る経路は上のパイプラインの5ステップ。ポジション作成、担保、借入、ADL実行、停止判定。問題があるのはステップ4のhandle_debt_auto_deleverage。その関数を拡大鏡で覗いたのが下段。左下、関数の中に3つの管理ポイントがある。575行が登録、580行が実行ガード、686行が停止。本来3つともグループ別の借入額を見るべきところ、580行だけがreserve全体を見ていた。右下が攻撃データフロー。顧客Aが30M借りる、別グループの顧客Bが80M借りる、同じUSDC reserveに合算され110M。580行はこの110Mを読んで、Group Aの閾値50Mと比較してしまう。本来は顧客Aの借入30Mを見て30M < 50Mで発動しないはずが、110M > 50Mで誤発動。Group Aの健全な顧客Aが巻き添え清算されます。次のスライドで、3つの管理ポイントを実コードで並べて読みます。
+顧客Aは健全だったのになぜ清算されたかというシナリオです。Current FinanceはSui上のレバレッジLending。左、顧客AはeMode Group A、LSTグループに所属。stSUIを担保50M入れて、USDCを30M借りる。Group AのADL閾値は50M、借入30Mは下回って健全。右、顧客Bは別グループのGroup B、ETHグループ。wETHを担保100M入れて、USDCを80M借りる。顧客Aとは別の世界です。ここからが重要、二人とも借りたのはUSDC。同じUSDC reserveに合算され、reserve.debt()が110Mに膨らむ。バグ箇所のmarket.move 580行目はこの110Mを読んで、Group Aの閾値50Mと比較し、ADLを発動してしまう。本来は顧客Aの借入30Mを見て、30M < 50Mで発動しないはず。結果、顧客Aの健全な担保stSUIが強制清算される。これが、皆様にDeFiセキュリティの肌感を持っていただきたい1枚です。次のスライドで、なぜこの誤発動が起きたのか、コードの3つの管理ポイントを並べて読みます。
 -->

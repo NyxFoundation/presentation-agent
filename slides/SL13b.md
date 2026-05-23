@@ -4,105 +4,139 @@ layout: default
 
 # Current Finance のコード地図 ─ ADL が走るまで
 
-<div class="text-xs opacity-60 mb-2">Sui上のレバレッジLending ／ <span class="font-mono">market.move</span> (1,301行) ／ Sherlock contest #312</div>
+<div class="text-xs opacity-60 mb-3">Sui上のレバレッジLending ／ <span class="font-mono">market.move</span> (1,301行) ／ Sherlock contest #312</div>
 
-<div class="grid grid-cols-2 gap-4 mt-1">
+<div class="relative">
 
-<!-- LEFT: user flow with function mapping -->
-<div>
-<div class="text-xs font-bold tracking-wider mb-1 opacity-70">ユーザフロー × 担当関数</div>
+<div class="grid grid-cols-9 items-center gap-0">
+
+<div class="col-span-1 border border-gray-400 rounded bg-gray-50 px-1 py-1.5 text-center">
+<div class="text-[9px] font-bold opacity-60">STEP 1</div>
+<div class="text-[11px] font-bold leading-tight">ポジション作成</div>
+<code class="text-[8px] opacity-50 block leading-tight mt-0.5">handle_new_<br/>obligation</code>
+</div>
+
+<div class="col-span-1 text-center text-2xl opacity-30 font-bold">→</div>
+
+<div class="col-span-1 border border-gray-400 rounded bg-gray-50 px-1 py-1.5 text-center">
+<div class="text-[9px] font-bold opacity-60">STEP 2</div>
+<div class="text-[11px] font-bold leading-tight">担保を預ける</div>
+<code class="text-[8px] opacity-50 block leading-tight mt-0.5">handle_mint</code>
+</div>
+
+<div class="col-span-1 text-center text-2xl opacity-30 font-bold">→</div>
+
+<div class="col-span-1 border border-gray-400 rounded bg-gray-50 px-1 py-1.5 text-center">
+<div class="text-[9px] font-bold opacity-60">STEP 3</div>
+<div class="text-[11px] font-bold leading-tight">借入 (eMode)</div>
+<code class="text-[8px] opacity-50 block leading-tight mt-0.5">handle_borrow</code>
+</div>
+
+<div class="col-span-1 text-center text-2xl opacity-30 font-bold">→</div>
+
+<div class="col-span-1 border-2 border-red-700 rounded bg-red-50 px-1 py-1.5 text-center relative shadow-md">
+<div class="absolute -top-2 right-0.5 bg-red-700 text-white text-[8px] font-bold px-1 py-0.5 rounded shadow">問題関数</div>
+<div class="text-[9px] font-bold text-red-700">STEP 4</div>
+<div class="text-[11px] font-bold leading-tight">ADL 実行</div>
+<code class="text-[8px] opacity-60 block leading-tight mt-0.5">handle_debt_<br/>auto_deleverage</code>
+</div>
+
+<div class="col-span-1 text-center text-2xl opacity-30 font-bold">→</div>
+
+<div class="col-span-1 border border-gray-400 rounded bg-gray-50 px-1 py-1.5 text-center">
+<div class="text-[9px] font-bold opacity-60">STEP 5</div>
+<div class="text-[11px] font-bold leading-tight">停止判定</div>
+<code class="text-[8px] opacity-50 block leading-tight mt-0.5">try_stop_<br/>borrow_deleverage</code>
+</div>
+
+</div>
+
+<div class="absolute left-0 right-0" style="top: 100%;">
+<div class="grid grid-cols-9">
+<div class="col-span-6"></div>
+<div class="col-span-1 flex flex-col items-center pt-1">
+<div class="text-[9px] text-red-700 font-bold tracking-wider">拡大</div>
+<div class="text-red-700 text-lg leading-none">▼</div>
+</div>
+<div class="col-span-2"></div>
+</div>
+</div>
+
+</div>
+
+<div class="grid grid-cols-2 gap-3 mt-12">
+
+<div class="border-2 border-gray-300 rounded p-2 bg-gradient-to-br from-gray-50 to-white">
+
+<div class="text-[10px] font-bold tracking-wider opacity-70 mb-1.5">ステップ4 の中身 ─ 3つの管理ポイント</div>
 
 <div class="space-y-1">
 
-<div class="flex items-center gap-2 border border-gray-300 rounded p-1.5 bg-gray-50">
-  <div class="bg-gray-600 text-white font-bold w-6 h-6 flex items-center justify-center rounded-full text-xs flex-shrink-0">1</div>
-  <div class="flex-1 min-w-0">
-    <div class="text-xs font-bold leading-tight">ポジション作成</div>
-    <code class="text-[10px] opacity-70">handle_new_obligation</code>
-  </div>
-  <div class="text-[10px] font-mono opacity-50">:243</div>
-</div>
-
-<div class="text-center text-[10px] opacity-30 leading-none">↓</div>
-
-<div class="flex items-center gap-2 border border-gray-300 rounded p-1.5 bg-gray-50">
-  <div class="bg-gray-600 text-white font-bold w-6 h-6 flex items-center justify-center rounded-full text-xs flex-shrink-0">2</div>
-  <div class="flex-1 min-w-0">
-    <div class="text-xs font-bold leading-tight">担保を預ける</div>
-    <code class="text-[10px] opacity-70">handle_mint</code>
-  </div>
-  <div class="text-[10px] font-mono opacity-50">:258</div>
-</div>
-
-<div class="text-center text-[10px] opacity-30 leading-none">↓</div>
-
-<div class="flex items-center gap-2 border border-gray-300 rounded p-1.5 bg-gray-50">
-  <div class="bg-gray-600 text-white font-bold w-6 h-6 flex items-center justify-center rounded-full text-xs flex-shrink-0">3</div>
-  <div class="flex-1 min-w-0">
-    <div class="text-xs font-bold leading-tight">借入 (eMode グループ指定)</div>
-    <code class="text-[10px] opacity-70">handle_borrow</code>
-  </div>
-  <div class="text-[10px] font-mono opacity-50">:366</div>
-</div>
-
-<div class="text-center text-[10px] opacity-30 leading-none">↓</div>
-
-<div class="flex items-center gap-2 border-2 border-red-700 rounded p-1.5 bg-red-50 relative">
-  <div class="absolute -right-2 -top-2 bg-red-700 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full shadow">問題関数</div>
-  <div class="bg-red-700 text-white font-bold w-6 h-6 flex items-center justify-center rounded-full text-xs flex-shrink-0">4</div>
-  <div class="flex-1 min-w-0">
-    <div class="text-xs font-bold leading-tight text-red-700">ADL 実行 (強制縮退)</div>
-    <code class="text-[10px] opacity-70">handle_debt_auto_deleverage</code>
-  </div>
-  <div class="text-[10px] font-mono opacity-50">:546</div>
-</div>
-
-<div class="text-center text-[10px] opacity-30 leading-none">↓</div>
-
-<div class="flex items-center gap-2 border border-gray-300 rounded p-1.5 bg-gray-50">
-  <div class="bg-gray-600 text-white font-bold w-6 h-6 flex items-center justify-center rounded-full text-xs flex-shrink-0">5</div>
-  <div class="flex-1 min-w-0">
-    <div class="text-xs font-bold leading-tight">停止判定</div>
-    <code class="text-[10px] opacity-70">try_stop_borrow_deleverage</code>
-  </div>
-  <div class="text-[10px] font-mono opacity-50">:685</div>
-</div>
-
+<div class="flex items-center gap-2">
+<div class="text-[10px] font-mono opacity-50 w-10">:575</div>
+<div class="flex-1 h-6 bg-emerald-200 border-l-4 border-emerald-600 rounded-sm flex items-center px-2">
+<div class="text-[10px] font-bold text-emerald-900">✓ 登録</div>
+<div class="text-[10px] ml-auto opacity-70">グループ別</div>
 </div>
 </div>
 
-<!-- RIGHT: zoom into the problem function + attack path overlay -->
-<div>
-
-<div class="text-xs font-bold tracking-wider mb-1 opacity-70">ステップ 4 を開いた中身 ─ <span class="text-red-700">3つの管理ポイント</span></div>
-
-<div class="border-2 border-red-700 rounded bg-white p-2 mb-2">
-  <div class="text-[10px] opacity-60 mb-1">handle_debt_auto_deleverage の内側</div>
-  <div class="text-[10px] space-y-0.5 font-mono leading-tight">
-    <div class="flex"><span class="opacity-50 w-12">:575</span><span class="text-emerald-700">✓ 登録</span><span class="ml-2 opacity-70">グループ別</span></div>
-    <div class="flex bg-red-100 rounded px-1"><span class="opacity-50 w-12">:580</span><span class="text-red-700 font-bold">❌ 実行</span><span class="ml-2 opacity-70">reserve 全体</span></div>
-    <div class="flex"><span class="opacity-50 w-12">:686</span><span class="text-emerald-700">✓ 停止</span><span class="ml-2 opacity-70">グループ別</span></div>
-  </div>
+<div class="flex items-center gap-2">
+<div class="text-[10px] font-mono opacity-50 w-10">:580</div>
+<div class="flex-1 h-7 bg-red-200 border-l-4 border-red-700 rounded-sm flex items-center px-2 shadow-md">
+<div class="text-[11px] font-bold text-red-900">❌ 実行ガード</div>
+<div class="text-[11px] font-bold text-red-700 ml-auto">reserve 全体</div>
+</div>
 </div>
 
-<div class="text-xs font-bold tracking-wider mb-1 opacity-70 mt-3">攻撃経路 ─ どの段で何が起きるか</div>
+<div class="flex items-center gap-2">
+<div class="text-[10px] font-mono opacity-50 w-10">:686</div>
+<div class="flex-1 h-6 bg-emerald-200 border-l-4 border-emerald-600 rounded-sm flex items-center px-2">
+<div class="text-[10px] font-bold text-emerald-900">✓ 停止</div>
+<div class="text-[10px] ml-auto opacity-70">グループ別</div>
+</div>
+</div>
 
-<div class="text-[11px] space-y-1">
-  <div class="flex gap-2 items-start">
-    <div class="bg-blue-700 text-white font-bold w-4 h-4 flex items-center justify-center rounded text-[9px] flex-shrink-0 mt-0.5">3</div>
-    <div>顧客A (Group A) 借入 <span class="font-mono font-bold">30M</span> ／ 顧客B (Group B) 借入 <span class="font-mono font-bold">80M</span></div>
-  </div>
-  <div class="flex gap-2 items-start">
-    <div class="bg-gray-700 text-white font-bold w-4 h-4 flex items-center justify-center rounded text-[9px] flex-shrink-0 mt-0.5">↓</div>
-    <div>同じ USDC reserve に合算 → <code class="font-mono font-bold">reserve.debt() = 110M</code></div>
-  </div>
-  <div class="flex gap-2 items-start">
-    <div class="bg-red-700 text-white font-bold w-4 h-4 flex items-center justify-center rounded text-[9px] flex-shrink-0 mt-0.5">4</div>
-    <div class="text-red-700 font-bold">:580 が 110M &gt; 50M で誤発動 (本来 30M &lt; 50M で発動せず)</div>
-  </div>
-  <div class="flex gap-2 items-start mt-1 border-t-2 border-red-700 pt-1">
-    <div class="text-red-700 font-bold flex-1">❌ Group A の健全な顧客Aが強制清算 ─ 次スライドで詳細</div>
-  </div>
+</div>
+
+<div class="mt-2 text-[10px] text-center opacity-70 leading-tight border-t pt-1">
+<span class="font-bold">3 箇所のうち 1 箇所だけ</span>が違う粒度を見ている
+</div>
+
+</div>
+
+<div class="border-2 border-gray-300 rounded p-2 bg-gradient-to-br from-gray-50 to-white">
+
+<div class="text-[10px] font-bold tracking-wider opacity-70 mb-1.5">攻撃データフロー</div>
+
+<div class="grid grid-cols-2 gap-2">
+<div class="border border-blue-500 bg-blue-50 rounded p-1 text-center">
+<div class="text-[9px] font-bold text-blue-800">顧客A (Group A)</div>
+<div class="text-sm font-bold font-mono">30M</div>
+<div class="text-[8px] text-emerald-700 font-bold">健全 (&lt;50M)</div>
+</div>
+<div class="border border-gray-500 bg-gray-100 rounded p-1 text-center">
+<div class="text-[9px] font-bold text-gray-700">顧客B (Group B)</div>
+<div class="text-sm font-bold font-mono">80M</div>
+<div class="text-[8px] opacity-60">無関係</div>
+</div>
+</div>
+
+<div class="grid grid-cols-2 -my-0.5">
+<div class="text-right text-lg leading-none text-gray-500">↘</div>
+<div class="text-left text-lg leading-none text-gray-500">↙</div>
+</div>
+
+<div class="bg-gray-900 text-white text-center py-1 rounded">
+<div class="text-[8px] opacity-70 font-mono">reserve.debt()  ← :580 が読む</div>
+<div class="text-base font-bold font-mono">110M USDC</div>
+</div>
+
+<div class="text-center text-sm leading-none text-gray-500 my-0.5">↓</div>
+
+<div class="border-2 border-red-700 bg-red-100 rounded p-1 text-center">
+<div class="text-[9px] opacity-70">:580 比較</div>
+<div class="text-xs font-bold font-mono text-red-700">110M &gt; 50M = TRUE</div>
+<div class="text-[9px] text-red-700 font-bold">→ Group A に ADL 発動 (誤)</div>
 </div>
 
 </div>
@@ -110,5 +144,5 @@ layout: default
 </div>
 
 <!--
-Current Financeのコード全体像です。market.move約1,300行のうち、ユーザが触る経路は5ステップ。ポジション作成、担保預け、借入(eModeグループ指定)、ADL実行、停止判定。それぞれ担当関数が1つずつあって、コードを横並びに読めば1本道です。問題はステップ4のhandle_debt_auto_deleverage。この1つの関数の中に3つの管理ポイントがある。575行が登録、580行が実行、686行が停止。本来3つともグループ別の借入額を見るべきところ、実行ガード580行だけがreserve全体を見ていた。攻撃経路もこのフロー図に重なります。顧客Aと顧客Bが別グループで借りる、同じreserveに合算される、ステップ4で誤発動、Group Aの健全な顧客Aが巻き添え清算。次のスライドで、3つの管理ポイントを並べて読みます。
+Current Financeのコード全体像です。market.move約1,300行ですが、ユーザが触る経路は上のパイプラインの5ステップ。ポジション作成、担保、借入、ADL実行、停止判定。問題があるのはステップ4のhandle_debt_auto_deleverage。その関数を拡大鏡で覗いたのが下段。左下、関数の中に3つの管理ポイントがある。575行が登録、580行が実行ガード、686行が停止。本来3つともグループ別の借入額を見るべきところ、580行だけがreserve全体を見ていた。右下が攻撃データフロー。顧客Aが30M借りる、別グループの顧客Bが80M借りる、同じUSDC reserveに合算され110M。580行はこの110Mを読んで、Group Aの閾値50Mと比較してしまう。本来は顧客Aの借入30Mを見て30M < 50Mで発動しないはずが、110M > 50Mで誤発動。Group Aの健全な顧客Aが巻き添え清算されます。次のスライドで、3つの管理ポイントを実コードで並べて読みます。
 -->

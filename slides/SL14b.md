@@ -24,8 +24,8 @@ layout: default
     <span class="text-xs opacity-60">Bug 2 ／ グループ管理の不整合</span>
     <span class="text-xs opacity-60 ml-auto">CVSS 7.4</span>
   </div>
-  <div class="text-lg font-bold leading-snug mb-1">3箇所の管理、1箇所だけ違う基準 <span class="text-xs opacity-60 font-normal">(前スライドで詳説)</span></div>
-  <div class="text-sm opacity-80 leading-relaxed">健全なユーザーの<span class="font-bold">巻き添え清算</span> (CWE-840)</div>
+  <div class="text-lg font-bold leading-snug mb-1">顧客Aを見るべき場所で、銀行全体を見ていた</div>
+  <div class="text-sm opacity-80 leading-relaxed">健全な顧客の<span class="font-bold">巻き添え清算</span> (CWE-840)</div>
 </div>
 
 </div>

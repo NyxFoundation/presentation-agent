@@ -70,20 +70,28 @@
 
   <!-- ========== USDC RESERVE VAULT (center) ========== -->
   <g transform="translate(340, 220)" filter="url(#shadow)">
+    <!-- coin stacks OUTSIDE the vault, on the sides -->
+    <g transform="translate(-18, 55)">
+      <circle cx="0" cy="0" r="11" fill="#fbbf24" stroke="#92400e" stroke-width="1.5"/>
+      <text x="0" y="4" text-anchor="middle" font-size="13" font-weight="700" fill="#92400e">$</text>
+      <circle cx="-4" cy="14" r="8" fill="#fbbf24" stroke="#92400e" stroke-width="1.2"/>
+    </g>
+    <g transform="translate(318, 55)">
+      <circle cx="0" cy="0" r="11" fill="#fbbf24" stroke="#92400e" stroke-width="1.5"/>
+      <text x="0" y="4" text-anchor="middle" font-size="13" font-weight="700" fill="#92400e">$</text>
+      <circle cx="4" cy="14" r="8" fill="#fbbf24" stroke="#92400e" stroke-width="1.2"/>
+    </g>
+    <!-- lid -->
     <path d="M 10 30 Q 150 0 290 30" fill="#374151" stroke="#000" stroke-width="2.5"/>
+    <text x="150" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">USDC reserve</text>
+    <!-- body -->
     <rect x="10" y="30" width="280" height="80" rx="6" fill="#1f2937" stroke="#000" stroke-width="2.5"/>
-    <line x1="10" y1="55" x2="290" y2="55" stroke="#000" stroke-width="2"/>
-    <rect x="135" y="48" width="30" height="22" rx="3" fill="#fbbf24" stroke="#000" stroke-width="1.5"/>
-    <circle cx="150" cy="62" r="3.5" fill="#000"/>
-    <line x1="150" y1="62" x2="150" y2="68" stroke="#000" stroke-width="2"/>
-    <circle cx="40" cy="88" r="10" fill="#fbbf24" stroke="#92400e" stroke-width="1.5"/>
-    <text x="40" y="93" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">$</text>
-    <circle cx="60" cy="98" r="7" fill="#fbbf24" stroke="#92400e" stroke-width="1"/>
-    <circle cx="260" cy="88" r="10" fill="#fbbf24" stroke="#92400e" stroke-width="1.5"/>
-    <text x="260" y="93" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">$</text>
-    <circle cx="240" cy="98" r="7" fill="#fbbf24" stroke="#92400e" stroke-width="1"/>
-    <text x="150" y="83" text-anchor="middle" font-size="12" font-weight="700" fill="#e5e7eb">USDC reserve</text>
-    <text x="150" y="103" text-anchor="middle" font-size="22" font-weight="900" fill="#fbbf24" font-family="monospace">30M + 80M = 110M</text>
+    <!-- small lock on lid edge -->
+    <rect x="138" y="26" width="24" height="16" rx="2" fill="#fbbf24" stroke="#000" stroke-width="1.2"/>
+    <circle cx="150" cy="34" r="2.5" fill="#000"/>
+    <!-- big amount text, centered with breathing room -->
+    <text x="150" y="80" text-anchor="middle" font-size="24" font-weight="900" fill="#fbbf24" font-family="monospace">30M + 80M</text>
+    <text x="150" y="103" text-anchor="middle" font-size="22" font-weight="900" fill="#fef3c7" font-family="monospace">= 110M</text>
   </g>
 
   <!-- ========== SCALE / JUDGMENT (:580) ========== -->

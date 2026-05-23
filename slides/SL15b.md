@@ -4,7 +4,7 @@ layout: default
 
 # 研究者を萎縮させる3つの仕組み
 
-<img src="/images/charts/researcher_penalties.png" class="mx-auto block mt-4" style="height:320px;" alt="報告コスト → 凍結ペナルティ → 萎縮効果" />
+<img :src="'/images/charts/researcher_penalties.png'" class="mx-auto block mt-4" style="height:320px;" alt="報告コスト → 凍結ペナルティ → 萎縮効果" />
 
 <div class="text-center mt-6 text-base">
   真剣な研究者ほど『確実に通る報告しか出さない』方向へ

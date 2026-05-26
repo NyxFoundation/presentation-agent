@@ -46,7 +46,7 @@ layout: default
       <li>上位提出物</li>
       <li>proof / replay artifact</li>
       <li>技術解説</li>
-      <li>コード共有</li>
+      <li>許諾済み実装</li>
     </ul>
   </div>
 

@@ -1,0 +1,83 @@
+name: Bug report
+description: Report something the pipeline gets wrong (a stage fails, output is malformed, slides look broken, etc.)
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report. The most useful
+        report is one that lets a maintainer reproduce the problem in a
+        few minutes — please include enough detail for that.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: One or two sentences describing what went wrong.
+      placeholder: "Step 06_Slide_Drafting fails with a JSON parse error when..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: |
+        Ideally include a minimal `inputs/introduction.md` (frontmatter +
+        a few paragraphs) that triggers the bug. Trim anything not
+        needed to reproduce.
+      placeholder: |
+        1. Place the attached `introduction.md` in `inputs/`
+        2. Run `make all`
+        3. Observe the failure at step ...
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: "Step 06 should produce a valid 06_Slide_Drafts.json."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include any error messages.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: |
+        Paste the relevant section from `outputs/logs/` (the Claude CLI
+        log for the failing step). Trim aggressively — only the part
+        around the failure.
+      render: shell
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, `bun --version`, `claude --version`, and anything else relevant.
+      placeholder: |
+        - OS: macOS 14.5
+        - bun: 1.1.x
+        - claude: 0.x.x
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-flight checks
+      options:
+        - label: I searched existing issues and could not find a duplicate.
+          required: true

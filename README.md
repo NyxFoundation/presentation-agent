@@ -1,8 +1,19 @@
 # Presentation Agent
 
+A Claude-driven pipeline that turns a single Markdown brief into a
+production-quality [Slidev](https://sli.dev/) deck — combining the
+logical rigor of consulting firms (McKinsey, BCG) with the narrative
+craft of presenters like Steve Jobs and Nancy Duarte.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 ## Overview
 
-This pipeline is an ideal presentation creation agent that combines the logical rigor of world-class consulting firms (McKinsey, BCG) with the emotional impact of legendary presenters (Steve Jobs, Nancy Duarte).
+You write a target audience, constraints, and raw content in
+`inputs/introduction.md`. The pipeline runs nine prompts through the
+`claude` CLI to build a persona, design the argument structure, draft
+each slide, and emit Slidev-ready Markdown — with intermediate JSON at
+every step so you can inspect (and override) any stage.
 
 ## Design Philosophy
 
@@ -317,52 +328,60 @@ bun dev
 
 Access http://localhost:3030
 
-## Running with GitHub Actions
+## Contributing
 
-You can automatically run the pipeline using GitHub Actions.
+PRs and issues are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the
+local development workflow, branch conventions, and PR expectations.
 
-### Prerequisites
+## Maintainer Setup
 
-- **Self-hosted runner**: A self-hosted runner with `claude` CLI installed and logged in is required
-- **Repository permissions**: `contents: write` and `pull-requests: write` permissions are required
+One-time configuration the repository owner must perform on Cloudflare and
+GitHub for the branch model described in [Contributing](#contributing) to
+actually be enforced. Without these, the conventions are documentation only.
 
-### How to Run
+### 1. Cloudflare — branch deployment scope
 
-1. Write YAML frontmatter and content in `inputs/introduction.md` and commit
-2. Open the **Actions** tab in your GitHub repository
-3. Select the **Presentation Pipeline** workflow
-4. Click the **Run workflow** button
+Deployment is via Cloudflare Workers Builds (Git integration). The
+dashboard offers a binary toggle for non-production branch builds, which
+combined with the GitHub ruleset in §2 is sufficient:
 
-### Workflow
+- **Production branch:** `main`
+- **Non-production branch builds:** keep ON. Once §2 is active and any
+  stale branches have been cleaned up, the only non-prod branches that
+  can exist in upstream are `presentation/*`, so this deploys exactly
+  the right set.
 
-1. Extract metadata from `inputs/introduction.md`
-2. Run the full pipeline with `make all`
-3. Commit generated files to a new branch
-4. Automatically create a Pull Request
+Note: fork PRs do not push to upstream branches (they live in
+`refs/pull/N/head`), so they cannot trigger Cloudflare auto-deploys.
 
-### Generated Pull Request
+### 2. GitHub — restrict branch creation in upstream
 
-After workflow completion, a PR is automatically created containing:
+**Settings → Rules → Rulesets → New branch ruleset.**
 
-- **Branch name**: `presentation/generated-{run_id}-{timestamp}`
-- **Included files**:
-  - `outputs/` - Pipeline intermediate outputs (JSON)
-  - `slides/` - Final Slidev markdown
+- **Target:** `~ALL` (all branches)
+- **Enforcement:** Active
+- **Rules:** **"Restrict creations"**, **"Restrict updates"**,
+  **"Restrict deletions"**
+- **Bypass list:** `OrganizationAdmin` (maintainers do all branch creation
+  manually, including pushing `presentation/*` decks they want to publish)
 
-### Environment Variables
+Result: only maintainers can create, update, or delete branches in upstream.
+Fork PRs from contributors don't create upstream branches at all (they live
+in `refs/pull/N/head`), so the deployment namespace stays clean by design.
 
-Environment variables used by the workflow:
+### 3. Sanity check before going public
 
-| Variable | Description |
-|----------|-------------|
-| `CLAUDE_CODE_PERMISSIONS` | Set to `bypassPermissions` (for automated execution) |
-| `CLAUDE_CODE_MAX_OUTPUT_TOKENS` | Maximum output tokens (default: 100000) |
-
-### Checking Artifacts
-
-Execution logs are stored as an Artifact named **pipeline-logs** for 7 days.
+- [ ] Cloudflare branch deployment scope verified — only `main` and any
+      existing `presentation/*` branches are deploying
+- [ ] Branch ruleset is **Active**, with `OrganizationAdmin` in bypass
+- [ ] `outputs/` and `slides/` are not tracked on `main`
+      (`git ls-files outputs/ slides/` returns empty)
+- [ ] Stale non-`presentation/*` branches in upstream have been triaged
+      (deleted or renamed under `presentation/`)
 
 ## References
+
+The prompt design draws on the following thinkers and frameworks:
 
 - **McKinsey / BCG**: Pyramid Principle, Action Titles, So What? / Why So? Test
 - **Barbara Minto**: "The Pyramid Principle"
@@ -370,3 +389,14 @@ Execution logs are stored as an Artifact named **pipeline-logs** for 7 days.
 - **Steve Jobs**: Simplicity, Visual Priority, Storytelling
 - **Jeff Bezos**: 6-Page Memo, Narrative Structure, Speaker Notes First
 - **Gene Zelazny**: Data Visualization Principles, 1 Chart 1 Message
+
+## Acknowledgements
+
+- [Slidev](https://sli.dev/) for the slide rendering engine.
+- [Claude Code](https://claude.com/claude-code) and the `claude` CLI for
+  executing the prompts.
+- All the contributors who file issues and PRs against this project.
+
+## License
+
+Released under the [MIT License](LICENSE).

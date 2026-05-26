@@ -65,10 +65,10 @@ layout: default
 .ip-table { display: flex; flex-direction: column; border: 1px solid #d4d4d4; border-radius: 0.55rem; overflow: hidden; margin-top: 1rem; }
 .ip-row { display: grid; grid-template-columns: 1.25fr 1fr 1.25fr 1.35fr; border-top: 1px solid #ececec; }
 .ip-row:first-child { border-top: none; }
-.ip-head { background: #111; color: #fff; font-weight: 700; letter-spacing: 0.08em; }
+.ip-head { background: #111; }
+.ip-head div { color: #fff !important; font-weight: 700; letter-spacing: 0.08em; font-size: 10.5px; }
 .ip-row div { padding: 0.55rem 0.7rem; font-size: 11.5px; line-height: 1.55; border-right: 1px solid #ececec; }
 .ip-row div:last-child { border-right: none; }
-.ip-head div { font-size: 10.5px; }
 .ip-principle { margin-top: 1rem; border-left: 4px solid #111; padding-left: 1rem; font-size: 13px; line-height: 1.7; }
 </style>
 

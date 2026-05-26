@@ -8,7 +8,7 @@ layout: default
 
   <div class="sp-card sp-card-main">
     <div class="sp-label">Role</div>
-    <div class="sp-title">スポンサーとして参加する</div>
+    <div class="sp-title">スポンサーとして参加</div>
     <div class="sp-text">
       主催・運営は Nyx Foundation が担い、スポンサー企業は選択プランに応じて、成果物・分析・露出・製品組み込み・人材接点を得る。
     </div>

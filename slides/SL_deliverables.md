@@ -33,14 +33,15 @@ layout: default
 </div>
 
 <style>
-.dv-table { display: flex; flex-direction: column; border: 1px solid #d4d4d4; border-radius: 0.55rem; overflow: hidden; margin-top: 1rem; }
+.dv-table { display: flex; flex-direction: column; border: 1px solid #d4d4d4; border-radius: 0.55rem; overflow: hidden; margin-top: 0.7rem; }
 .dv-row { display: grid; grid-template-columns: 1.6fr 0.7fr 0.85fr 0.95fr 0.95fr; border-top: 1px solid #ececec; }
 .dv-row:first-child { border-top: none; }
-.dv-head { background: #111; color: #fff; font-weight: 700; font-size: 11px; letter-spacing: 0.08em; }
-.dv-row div { padding: 0.45rem 0.7rem; font-size: 12px; line-height: 1.45; border-right: 1px solid #ececec; display: flex; align-items: center; justify-content: center; text-align: center; }
+.dv-head { background: #111; }
+.dv-head div { color: #fff !important; font-weight: 700; font-size: 11px; letter-spacing: 0.08em; }
+.dv-row div { padding: 0.3rem 0.7rem; font-size: 11.5px; line-height: 1.4; border-right: 1px solid #ececec; display: flex; align-items: center; justify-content: center; text-align: center; }
 .dv-row div:first-child { justify-content: flex-start; text-align: left; font-weight: 600; }
 .dv-row div:last-child { border-right: none; }
-.dv-note { margin-top: 0.9rem; padding-left: 1rem; border-left: 4px solid #111; font-size: 12px; line-height: 1.7; opacity: 0.82; }
+.dv-note { margin-top: 0.7rem; padding-left: 1rem; border-left: 4px solid #111; font-size: 11.5px; line-height: 1.65; opacity: 0.82; }
 </style>
 
 <!--

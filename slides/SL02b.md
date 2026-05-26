@@ -2,73 +2,64 @@
 layout: default
 ---
 
-# セキュリティ監査の仕組みは壊れ始めている
+# 本番では、AIに権限を渡してから試せない4つのリスク
 
-<div class="grid grid-cols-[0.85fr_1.15fr] gap-7 mt-6 items-center">
-
-<div>
-  <div class="text-xs uppercase tracking-widest opacity-40 mb-1">2025年・暗号資産の盗難</div>
-  <div class="text-7xl font-bold leading-none" style="font-family: 'BIZ UDPMincho', serif;">$3.4B</div>
-  <div class="text-xs opacity-50 mt-2">Bybit 一件だけで $1.5B（Chainalysis 2026）</div>
-</div>
-
-<div class="oos">
-  <div class="oos-x">対象外</div>
-  <div>
-    <div class="text-sm font-bold mb-1">被害の大きい攻撃ほど、そもそも検査されていない</div>
-    <div class="flex flex-wrap gap-1.5 mb-1">
-      <span class="oos-tag">MEV</span>
-      <span class="oos-tag">オラクル価格操作</span>
-      <span class="oos-tag">取引順序の操作</span>
-      <span class="oos-tag">経済・ガバナンス攻撃</span>
-    </div>
-    <div class="text-xs opacity-55">これらの動的・経済的な脆弱性は、多くのバグバウンティで <strong>明示的に out of scope</strong>。</div>
+<div class="rk4">
+  <div class="rk4-card">
+    <div class="rk4-icon">①</div>
+    <div class="rk4-h">短期利益偏重</div>
+    <div class="rk4-n">長期の安全よりも、目先の利益が大きい行動をAIが選ぶ。<br/><span class="rk4-ex">例: 高リスク・高リターンの裁定や貸付に資金を寄せる</span></div>
+  </div>
+  <div class="rk4-card">
+    <div class="rk4-icon">②</div>
+    <div class="rk4-h">権限逸脱</div>
+    <div class="rk4-n">与えられた範囲を超えてAIが資産を動かす、契約を呼ぶ、ルールを変更する。<br/><span class="rk4-ex">例: 想定外のAPIや外部システムに連鎖的にアクセス</span></div>
+  </div>
+  <div class="rk4-card">
+    <div class="rk4-icon">③</div>
+    <div class="rk4-h">ルールの抜け道利用</div>
+    <div class="rk4-n">仕様の隙間や条件分岐の境界を、AIが利益化のために突く。<br/><span class="rk4-ex">例: タイミング差・端数計算・優先順位の抜け穴</span></div>
+  </div>
+  <div class="rk4-card">
+    <div class="rk4-icon">④</div>
+    <div class="rk4-h">監査不能性</div>
+    <div class="rk4-n">なぜAIがその判断をしたのか、どのログを残せば再現・検証できるかが不明確。<br/><span class="rk4-ex">例: 障害後に「誰が」「なぜ」を追跡できない</span></div>
   </div>
 </div>
 
-</div>
-
-<div class="text-xs uppercase tracking-widest opacity-40 mt-6 mb-2">しかも、守る側の「人手の網」が崩れ始めた</div>
-<div class="grid grid-cols-3 gap-4">
-  <div class="cl">
-    <div class="cl-name">curl</div>
-    <div class="cl-fact">バグバウンティ<strong>終了</strong></div>
-    <div class="cl-n">AI偽レポートが殺到。本物の報告は約5%（2026年1月）</div>
-  </div>
-  <div class="cl">
-    <div class="cl-name">HackerOne</div>
-    <div class="cl-fact">AI関連報告 <strong>+210%</strong></div>
-    <div class="cl-n">人手のトリアージが、報告の洪水に追いつかない</div>
-  </div>
-  <div class="cl">
-    <div class="cl-name">Code4rena</div>
-    <div class="cl-fact">監査コンペ大手が<strong>事業縮小</strong></div>
-    <div class="cl-n">人手・単発・静的な監査モデルが限界に（2026年5月）</div>
+<div class="rk4-evidence">
+  <div class="rk4-ev-eye">既に類似リスクが顕在化している領域</div>
+  <div class="rk4-ev-row">
+    <div class="rk4-ev-num">$3.4B</div>
+    <div class="rk4-ev-txt"><b>DeFi被害（2025年・Chainalysis）</b> — 経済的攻撃・ルールの抜け道・自動化された利益最大化が組み合わさった結果。AIエージェントが汎用業務に入れば、同じ構造のリスクが <b>金融以外にも</b> 広がる。</div>
   </div>
 </div>
 
-<div class="mt-5 conc">静的・人的・単発のセキュリティは限界。<strong>動的・自律・永続</strong>の公共財が要る。</div>
-
-<style>
-.oos { display: flex; gap: 12px; align-items: center; border: 2px solid #c63a3a; border-radius: 0.6rem; padding: 0.85rem 1rem; }
-.oos-x { font-family: 'BIZ UDPMincho', serif; font-size: 17px; font-weight: 700; color: #c63a3a; border: 2px solid #c63a3a; border-radius: 6px; padding: 4px 8px; flex-shrink: 0; }
-.oos-tag { font-size: 10.5px; padding: 2px 9px; border: 1px solid #d4d4d4; border-radius: 999px; }
-.cl { border: 1px solid #e5e7eb; border-top: 4px solid #c63a3a; border-radius: 0.5rem; padding: 0.7rem 0.85rem; }
-.cl-name { font-size: 12px; font-weight: 700; opacity: 0.5; letter-spacing: 0.04em; }
-.cl-fact { font-size: 16px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; margin: 0.15rem 0 0.3rem; }
-.cl-n { font-size: 10px; line-height: 1.55; opacity: 0.6; }
-.conc { text-align: center; font-size: 15px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; border-top: 2px solid #111; padding-top: 0.7rem; }
-</style>
+<div class="rk4-conc">AIは <b>本番に出してから</b> 直すには、影響範囲が大きすぎる。事前に <b>安全に失敗させる場所</b> が要る。</div>
 
 <SourceCite :sources="[
-  { label: 'Chainalysis 2026', url: 'https://www.chainalysis.com/blog/crypto-hacking-stolen-funds-2026/' },
-  { label: 'Immunefi Bug Bounty Scope (out-of-scope例)', url: 'https://immunefi.com/bug-bounty/veda/information/' },
-  { label: 'curl — Death by a thousand slops', url: 'https://daniel.haxx.se/blog/2025/07/14/death-by-a-thousand-slops/' },
+  { label: 'Chainalysis 2026 (Crypto Theft Report)', url: 'https://www.chainalysis.com/blog/crypto-hacking-stolen-funds-2026/' },
   { label: 'HackerOne — 210% spike in AI vuln reports', url: 'https://www.hackerone.com/press-release/hackerone-report-finds-210-spike-ai-vulnerability-reports-amid-rise-ai-autonomy' },
-  { label: 'Code4rena wind-down (Crypto Times)', url: 'https://www.cryptotimes.io/2026/05/13/code4rena-announces-wind-down-after-securing-billions-in-defi/' }
+  { label: 'Sumsub Identity Fraud Report 2025-2026', url: 'https://www.prnewswire.com/news-releases/sumsubs-annual-report-fraud-shifts-to-complex-multi-step-schemes-in-2025-agentic-ai-scams-poised-to-surge-in-2026-302625287.html' }
 ]" />
+
+<style>
+.rk4 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 1.2rem; }
+.rk4-card { border: 1px solid #e5e7eb; border-left: 4px solid #c63a3a; border-radius: 0.5rem; padding: 0.65rem 0.9rem; position: relative; }
+.rk4-icon { position: absolute; top: 0.6rem; right: 0.85rem; font-family: 'BIZ UDPMincho', serif; font-size: 22px; font-weight: 700; color: #c63a3a; opacity: 0.55; }
+.rk4-h { font-size: 14px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; margin-bottom: 0.3rem; }
+.rk4-n { font-size: 10.5px; line-height: 1.65; opacity: 0.85; }
+.rk4-ex { display: inline-block; margin-top: 0.2rem; font-size: 9.5px; opacity: 0.6; }
+.rk4-evidence { margin-top: 0.95rem; border: 1px solid #d4d4d4; border-radius: 0.5rem; padding: 0.55rem 0.85rem; background: #fafafa; }
+.rk4-ev-eye { font-size: 9.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.5; margin-bottom: 0.25rem; }
+.rk4-ev-row { display: grid; grid-template-columns: 110px 1fr; align-items: center; gap: 14px; }
+.rk4-ev-num { font-family: 'BIZ UDPMincho', serif; font-size: 32px; font-weight: 700; line-height: 1; color: #c63a3a; }
+.rk4-ev-txt { font-size: 10.5px; line-height: 1.7; opacity: 0.85; }
+.rk4-ev-txt b { font-weight: 700; opacity: 1; }
+.rk4-conc { margin-top: 0.95rem; text-align: center; font-size: 14px; font-weight: 700; font-family: 'BIZ UDPMincho', serif; padding-top: 0.6rem; border-top: 2px solid #111; }
+</style>
 
 <!--
 Speaker Notes:
-最初の課題です。2025年単年で、ハッキングにより34億ドル超の暗号資産が盗まれました。Bybitの一件だけで15億ドルです。厄介なのは、最も損害の大きい攻撃——MEV、オラクル価格操作、取引順序の操作、経済・ガバナンス攻撃——が、多くのバグバウンティで明示的に「対象外」とされている点です。一番損害の大きい動的・経済的な脆弱性を、誰も体系的には検査していない。さらに、守る側の人手のモデル自体が壊れ始めています。curlはAI生成の偽レポートの殺到で2026年1月にバグバウンティを終了——本物の報告はわずか5%でした。HackerOneではAI関連の脆弱性報告が前年比210%増。監査コンペ大手のCode4renaも2026年5月に事業縮小を発表。静的・人的・単発のセキュリティは限界です。動的・自律・永続の公共財が要ります。
+AIエージェントを本番に出す前に、必ず試しておかなければならない4つのリスクがあります。①短期利益偏重——長期の安全より目先の利益が大きい行動をAIが選ぶ。②権限逸脱——与えられた範囲を超えて資産を動かす、契約を呼ぶ、ルールを変える。③ルールの抜け道利用——仕様の境界や条件分岐の隙間を利益化のために突く。④監査不能性——なぜそう判断したのか、どのログがあれば再現・検証できるのか、追跡できない。これらはAIエージェント特有のリスクですが、同じ構造の被害は既にDeFi領域で年間34億ドル規模で発生しています。経済的攻撃・ルールの抜け道・自動化された利益最大化が組み合わさった結果です。AIエージェントが業務領域に広がれば、同じ構造のリスクが金融以外にも展開します。本番に出してから直すには、影響範囲が大きすぎる。事前に安全に失敗させる場所が要ります。
 -->

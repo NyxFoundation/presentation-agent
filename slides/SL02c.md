@@ -11,7 +11,7 @@ layout: default
     <div class="p4-big">$15T</div>
     <div class="p4-cap">AIエージェントが仲介するB2B支出の予測（2028年・Gartner）</div>
     <div class="p4-say">
-      Google の <strong>AP2</strong>、Coinbase × Ethereum Foundation の <strong>x402</strong> —
+      Google の <strong>AP2</strong>（AIエージェント間決済規格）、Coinbase × Ethereum Foundation の <strong>x402</strong>（HTTP上の自動課金規格）—
       AIはすでに、人間を介さず<strong>AIに支払っている</strong>。
     </div>
   </div>

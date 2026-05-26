@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# 「動いている」と「安全」は違う — 確かめる仕組みが壊れ始めた
+# セキュリティ監査の仕組みは壊れ始めている
 
 <div class="grid grid-cols-[0.85fr_1.15fr] gap-7 mt-6 items-center">
 

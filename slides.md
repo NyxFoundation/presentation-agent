@@ -68,6 +68,3 @@ src: ./slides/SL20.md
 ---
 src: ./slides/SL21.md
 ---
----
-src: ./slides/SL22.md
----

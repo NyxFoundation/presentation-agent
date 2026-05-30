@@ -90,10 +90,10 @@ const tableCells = [
         </marker>
       </defs>
 
-      <!-- ============ Program (left column) ============ -->
+      <!-- ============ Program (left column, light theme) ============ -->
       <g class="jt-prog">
         <rect x="50" y="30" width="220" height="190" rx="8"
-              fill="#0f172a" stroke="#475569" stroke-width="2"/>
+              fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
         <text x="160" y="55" text-anchor="middle" class="jt-prog-title">RISC-V program</text>
         <g class="jt-prog-code">
           <text x="68" y="88"  class="jt-asm">main:</text>
@@ -263,28 +263,28 @@ const tableCells = [
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-/* Program panel */
+/* Program panel (light theme) */
 .jt-prog-title {
   font-size: 14px;
-  fill: #cbd5e1;
-  font-weight: 700;
+  fill: #475569;
+  font-weight: 800;
   letter-spacing: 0.08em;
   font-family: 'JetBrains Mono', monospace;
 }
 .jt-asm {
   font-size: 14px;
-  fill: #94a3b8;
+  fill: #6b7280;
   font-weight: 700;
   font-family: 'JetBrains Mono', monospace;
 }
 .jt-asm-line {
   font-size: 13px;
-  fill: #e2e8f0;
+  fill: #1f2937;
   font-family: 'JetBrains Mono', monospace;
 }
 .jt-asm-op {
-  fill: #fcd34d;
-  font-weight: 700;
+  fill: #b45309;
+  font-weight: 800;
 }
 
 .jt-wire {

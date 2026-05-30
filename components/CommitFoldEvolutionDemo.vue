@@ -53,14 +53,14 @@ type Milestone = {
 }
 
 const milestones: Milestone[] = [
-  { id: 'kzg',     track: 'commit', year: '~2010', x: 230,  bornAt: 0, label: 'KZG',           sub: 'pairing  (trusted setup)',  type: 'trusted' },
-  { id: 'halo',    track: 'fold',   year: '~2020', x: 230,  bornAt: 0, label: 'Halo2',         sub: 'accumulation + Plonkish',   type: 'trusted' },
+  { id: 'kzg',     track: 'commit', year: '~2010', x: 230,  bornAt: 0, label: 'KZG',           sub: 'pairing / trusted setup',   type: 'trusted' },
+  { id: 'halo',    track: 'fold',   year: '~2020', x: 230,  bornAt: 0, label: 'Halo2',         sub: 'accumulation',              type: 'trusted' },
   { id: 'fri',     track: 'commit', year: '~2017', x: 410,  bornAt: 1, label: 'FRI / Ligero',  sub: 'hash-based',                type: 'hash' },
-  { id: 'nova',    track: 'fold',   year: '~2022', x: 410,  bornAt: 1, label: 'Nova',          sub: 'folding scheme (CRYPTO 22)',type: 'hash' },
-  { id: 'brake',   track: 'commit', year: '2023',  x: 600,  bornAt: 2, label: 'Brakedown',     sub: 'linear-time, field-agnostic', type: 'hash' },
-  { id: 'base',    track: 'commit', year: '2024',  x: 800,  bornAt: 3, label: 'BaseFold',      sub: '2024+',                      type: 'hash' },
-  { id: 'lat',     track: 'fold',   year: '2025',  x: 800,  bornAt: 3, label: 'LatticeFold+',  sub: 'eprint 2025/247',           type: 'lattice' },
-  { id: 'hfold',   track: 'fold',   year: '25-26', x: 1000, bornAt: 4, label: 'hash-based folding', sub: 'IVC, full hash stack',  type: 'hash' },
+  { id: 'nova',    track: 'fold',   year: '~2022', x: 410,  bornAt: 1, label: 'Nova',          sub: 'folding scheme',            type: 'hash' },
+  { id: 'brake',   track: 'commit', year: '2023',  x: 600,  bornAt: 2, label: 'Brakedown',     sub: 'linear-time',               type: 'hash' },
+  { id: 'base',    track: 'commit', year: '2024',  x: 800,  bornAt: 3, label: 'BaseFold',      sub: 'hash-based',                type: 'hash' },
+  { id: 'lat',     track: 'fold',   year: '2025',  x: 800,  bornAt: 3, label: 'LatticeFold+',  sub: 'lattice-based',             type: 'lattice' },
+  { id: 'hfold',   track: 'fold',   year: '25-26', x: 1000, bornAt: 4, label: 'hash-based folding', sub: 'IVC / full hash stack', type: 'hash' },
 ]
 
 function isVisible(m: Milestone) { return phase.value >= m.bornAt }
@@ -90,14 +90,16 @@ const foldTrack   = computed(() => milestones.filter(m => m.track === 'fold'))
         </marker>
       </defs>
 
-      <!-- Track labels -->
-      <rect x="20" y="50" width="90" height="60" rx="6" fill="#fffbeb" stroke="#fcd34d" stroke-width="2"/>
-      <text x="65" y="80" text-anchor="middle" class="cf-track-label">Commit-</text>
-      <text x="65" y="98" text-anchor="middle" class="cf-track-label">ment</text>
+      <!-- Track labels (compact pills aligned with timelines) -->
+      <g class="cf-track-pill cf-track-pill-commit">
+        <rect x="20" y="70" width="92" height="22" rx="11" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.5"/>
+        <text x="66" y="86" text-anchor="middle" class="cf-track-label">commitment</text>
+      </g>
 
-      <rect x="20" y="170" width="90" height="60" rx="6" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="2"/>
-      <text x="65" y="200" text-anchor="middle" class="cf-track-label cf-track-label-fold">Folding</text>
-      <text x="65" y="218" text-anchor="middle" class="cf-track-label cf-track-label-fold">/ IVC</text>
+      <g class="cf-track-pill cf-track-pill-fold">
+        <rect x="20" y="190" width="92" height="22" rx="11" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.5"/>
+        <text x="66" y="206" text-anchor="middle" class="cf-track-label cf-track-label-fold">folding/IVC</text>
+      </g>
 
       <!-- Timeline horizontal lines -->
       <line x1="120" y1="80" x2="1150" y2="80" class="cf-track-line"/>
@@ -187,12 +189,12 @@ const foldTrack   = computed(() => milestones.filter(m => m.track === 'fold'))
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-/* Track labels */
+/* Track labels (compact pill style) */
 .cf-track-label {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 800;
   fill: #78350f;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.04em;
 }
 .cf-track-label-fold { fill: #5b21b6; }

@@ -1,145 +1,113 @@
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
+// 2-track timeline: commitment schemes + proving systems.
+// Latest milestones from 2024-2025 academic publications and zkVM usage.
+type Track = 'commit' | 'prove'
+type ColorType = 'classic' | 'hash' | 'modern'
 
-const totalPhases = 6
-
-function getInitialPhase(): { phase: number; play: boolean } {
-  if (typeof window === 'undefined') return { phase: 0, play: true }
-  const p = new URLSearchParams(window.location.search)
-  const raw = p.get('phase') ?? p.get('stage')
-  if (raw == null) return { phase: 0, play: true }
-  const s = parseInt(raw, 10)
-  if (!Number.isNaN(s) && s >= 0 && s < totalPhases) return { phase: s, play: false }
-  return { phase: 0, play: true }
-}
-
-const initial = getInitialPhase()
-const phase = ref(initial.phase)
-const phaseDurations = [3500, 4500, 4500, 4500, 5000, 5500]
-const isPlaying = ref(initial.play)
-let timeoutId: ReturnType<typeof setTimeout> | null = null
-
-function scheduleNext() {
-  if (timeoutId) { clearTimeout(timeoutId); timeoutId = null }
-  if (!isPlaying.value) return
-  timeoutId = setTimeout(advance, phaseDurations[phase.value])
-}
-function advance() {
-  phase.value = (phase.value + 1) % totalPhases
-  scheduleNext()
-}
-onMounted(() => { if (isPlaying.value) scheduleNext() })
-onBeforeUnmount(() => { if (timeoutId) clearTimeout(timeoutId) })
-
-const captions = [
-  { code: 'commitment: KZG (pairing, trusted setup)  ‖  folding: Halo2 (accumulation)', note: '~2019: pairing-based 全盛、setup ceremony が前提' },
-  { code: '+ FRI / Ligero (hash-based)   /   Nova (folding scheme)',                    note: '2017-22: hash-based の系譜と「folding」という新概念が立ち上がる' },
-  { code: '+ Brakedown (linear-time, field-agnostic)',                                  note: '2023: linear-time prover、field の自由度' },
-  { code: '+ BaseFold (2024)   /   LatticeFold+ (2025)',                                note: '2024-25: hash-based commitment と lattice-based folding が成熟' },
-  { code: '+ hash-based folding (2025-26) → IVC / recursion 全層 hash-based',          note: '2025-26: setup-free + post-quantum へ統合' },
-  { code: '✓ commitment + folding + 証明系  3 軸すべてが  hash-based / setup-free',     note: '10 年前の SNARK 常識は通用しない' },
-]
-
-// timeline: which milestones are visible at each phase
 type Milestone = {
   id: string;
-  track: 'commit' | 'fold';
+  track: Track;
   year: string;
   x: number;
-  bornAt: number; // phase at which it becomes visible
   label: string;
   sub: string;
-  type: 'trusted' | 'hash' | 'lattice';
+  type: ColorType;
 }
 
 const milestones: Milestone[] = [
-  { id: 'kzg',     track: 'commit', year: '~2010', x: 230,  bornAt: 0, label: 'KZG',           sub: 'pairing / trusted setup',   type: 'trusted' },
-  { id: 'halo',    track: 'fold',   year: '~2020', x: 230,  bornAt: 0, label: 'Halo2',         sub: 'accumulation',              type: 'trusted' },
-  { id: 'fri',     track: 'commit', year: '~2017', x: 410,  bornAt: 1, label: 'FRI / Ligero',  sub: 'hash-based',                type: 'hash' },
-  { id: 'nova',    track: 'fold',   year: '~2022', x: 410,  bornAt: 1, label: 'Nova',          sub: 'folding scheme',            type: 'hash' },
-  { id: 'brake',   track: 'commit', year: '2023',  x: 600,  bornAt: 2, label: 'Brakedown',     sub: 'linear-time',               type: 'hash' },
-  { id: 'base',    track: 'commit', year: '2024',  x: 800,  bornAt: 3, label: 'BaseFold',      sub: 'hash-based',                type: 'hash' },
-  { id: 'lat',     track: 'fold',   year: '2025',  x: 800,  bornAt: 3, label: 'LatticeFold+',  sub: 'lattice-based',             type: 'lattice' },
-  { id: 'hfold',   track: 'fold',   year: '25-26', x: 1000, bornAt: 4, label: 'hash-based folding', sub: 'IVC / full hash stack', type: 'hash' },
+  // ===== Commitment track =====
+  { id: 'kzg',       track: 'commit', year: '2010', x: 175, label: 'KZG',        sub: 'pairing / trusted setup', type: 'classic' },
+  { id: 'fri',       track: 'commit', year: '2017', x: 340, label: 'FRI',        sub: 'hash-based',              type: 'hash'    },
+  { id: 'brakedown', track: 'commit', year: '2023', x: 505, label: 'Brakedown',  sub: 'linear-time',             type: 'hash'    },
+  { id: 'basefold',  track: 'commit', year: '2024', x: 670, label: 'BaseFold',   sub: 'multilinear / field-agnostic', type: 'modern' },
+  { id: 'binius',    track: 'commit', year: '2024', x: 835, label: 'Binius',     sub: 'small-field (binary)',    type: 'modern'  },
+  { id: 'whir',      track: 'commit', year: '2024', x: 1000, label: 'WHIR',      sub: 'fast verifier (RS prox.)', type: 'modern' },
+
+  // ===== Proving system track =====
+  { id: 'groth16',   track: 'prove',  year: '2016', x: 175, label: 'Groth16',     sub: 'pairing SNARK',          type: 'classic' },
+  { id: 'stark',     track: 'prove',  year: '2018', x: 340, label: 'STARK',       sub: 'hash-based, no setup',   type: 'hash'    },
+  { id: 'plonk',     track: 'prove',  year: '2019', x: 470, label: 'PLONK',       sub: 'universal SNARK',        type: 'hash'    },
+  { id: 'halo2',     track: 'prove',  year: '2020', x: 600, label: 'Halo2',       sub: 'accumulation / recursion', type: 'hash'  },
+  { id: 'nova',      track: 'prove',  year: '2022', x: 730, label: 'Nova',        sub: 'folding scheme (IVC)',   type: 'hash'    },
+  { id: 'jolt',      track: 'prove',  year: '2024', x: 870, label: 'Jolt',        sub: 'sumcheck + Lasso lookups', type: 'modern' },
+  { id: 'hypernova', track: 'prove',  year: '2024', x: 1020, label: 'HyperNova',  sub: '+ ProtoStar / CycleFold', type: 'modern' },
 ]
 
-function isVisible(m: Milestone) { return phase.value >= m.bornAt }
-function isNew(m: Milestone) { return phase.value === m.bornAt && m.bornAt > 0 }
+const commitTrack = milestones.filter(m => m.track === 'commit')
+const proveTrack  = milestones.filter(m => m.track === 'prove')
 
-const commitTrack = computed(() => milestones.filter(m => m.track === 'commit'))
-const foldTrack   = computed(() => milestones.filter(m => m.track === 'fold'))
+// zkVMs and what they combine (current state)
+const zkvms = [
+  { name: 'Jolt',  recipe: 'Sumcheck + Lasso',     extra: '(+ Binius / Zeromorph)',  hue: 'amber'  },
+  { name: 'SP1',   recipe: 'Plonky3 + FRI',        extra: 'Succinct Labs',           hue: 'green'  },
+  { name: 'RISC0', recipe: 'STARK + FRI',          extra: 'RISC Zero',               hue: 'blue'   },
+  { name: 'Nexus', recipe: 'HyperNova + CycleFold', extra: 'Nexus Labs',             hue: 'purple' },
+]
 </script>
 
 <template>
   <div class="cf-root">
-    <!-- Caption strip -->
+    <!-- Caption -->
     <div class="cf-cap">
-      <transition name="cf-fade" mode="out-in">
-        <div :key="phase" class="cf-cap-inner">
-          <code class="cf-code">{{ captions[phase].code }}</code>
-          <div class="cf-note">{{ captions[phase].note }}</div>
-        </div>
-      </transition>
+      <div class="cf-cap-title">commitment schemes と proving systems の進化</div>
+      <div class="cf-cap-sub">10 年で pairing/setup-heavy → hash-based, sumcheck-based, small-field へ ─ 現代 zkVM はこれらの組み合わせ</div>
     </div>
 
-    <!-- Main SVG -->
-    <svg class="cf-svg" viewBox="0 0 1200 360" preserveAspectRatio="xMidYMid meet">
+    <!-- Main SVG: 2 timelines + zkVM strip -->
+    <svg class="cf-svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet">
       <defs>
         <marker id="cf-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
           <path d="M 0,0 L 10,5 L 0,10 z" fill="#94a3b8"/>
         </marker>
       </defs>
 
-      <!-- Track labels (compact pills aligned with timelines) -->
+      <!-- Track 1 label: commitment -->
       <g class="cf-track-pill cf-track-pill-commit">
-        <rect x="20" y="70" width="92" height="22" rx="11" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.5"/>
-        <text x="66" y="86" text-anchor="middle" class="cf-track-label">commitment</text>
+        <rect x="18" y="78" width="120" height="22" rx="11" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.5"/>
+        <text x="78" y="94" text-anchor="middle" class="cf-track-label">commitment</text>
       </g>
 
-      <g class="cf-track-pill cf-track-pill-fold">
-        <rect x="20" y="190" width="92" height="22" rx="11" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.5"/>
-        <text x="66" y="206" text-anchor="middle" class="cf-track-label cf-track-label-fold">folding/IVC</text>
+      <!-- Timeline 1 -->
+      <line x1="150" y1="89" x2="1150" y2="89" class="cf-track-line"/>
+      <line x1="1110" y1="89" x2="1145" y2="89" class="cf-arrow-end" marker-end="url(#cf-ar)"/>
+
+      <!-- Commitment cards (above line) -->
+      <g v-for="m in commitTrack" :key="m.id" :class="['cf-node', `cf-type-${m.type}`]">
+        <line :x1="m.x" y1="89" :x2="m.x" y2="68" class="cf-stub"/>
+        <rect :x="m.x - 72" y="14" width="144" height="54" rx="8" class="cf-card-bg"/>
+        <text :x="m.x" y="36" text-anchor="middle" class="cf-card-title">{{ m.label }}</text>
+        <text :x="m.x" y="55" text-anchor="middle" class="cf-card-sub">{{ m.sub }}</text>
+        <text :x="m.x" y="110" text-anchor="middle" class="cf-year">{{ m.year }}</text>
       </g>
 
-      <!-- Timeline horizontal lines -->
-      <line x1="120" y1="80" x2="1150" y2="80" class="cf-track-line"/>
-      <line x1="120" y1="200" class="cf-track-line" x2="1150" y2="200"/>
-
-      <!-- Commitment milestones -->
-      <g v-for="m in commitTrack" :key="m.id" class="cf-node"
-         :class="[`cf-type-${m.type}`, { 'is-visible': isVisible(m), 'is-new': isNew(m) }]">
-        <line :x1="m.x" y1="80" :x2="m.x" y2="48" class="cf-stub"/>
-        <rect :x="m.x - 78" y="20" width="156" height="56" rx="8" class="cf-card-bg"/>
-        <text :x="m.x" y="42" text-anchor="middle" class="cf-card-title">{{ m.label }}</text>
-        <text :x="m.x" y="62" text-anchor="middle" class="cf-card-sub">{{ m.sub }}</text>
-        <text :x="m.x" y="100" text-anchor="middle" class="cf-year">{{ m.year }}</text>
+      <!-- Track 2 label: proving system -->
+      <g class="cf-track-pill cf-track-pill-prove">
+        <rect x="18" y="195" width="120" height="22" rx="11" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.5"/>
+        <text x="78" y="211" text-anchor="middle" class="cf-track-label cf-track-label-prove">proving system</text>
       </g>
 
-      <!-- Folding milestones -->
-      <g v-for="m in foldTrack" :key="m.id" class="cf-node"
-         :class="[`cf-type-${m.type}`, { 'is-visible': isVisible(m), 'is-new': isNew(m) }]">
-        <line :x1="m.x" y1="200" :x2="m.x" y2="232" class="cf-stub"/>
-        <rect :x="m.x - 78" y="240" width="156" height="56" rx="8" class="cf-card-bg"/>
-        <text :x="m.x" y="262" text-anchor="middle" class="cf-card-title">{{ m.label }}</text>
-        <text :x="m.x" y="282" text-anchor="middle" class="cf-card-sub">{{ m.sub }}</text>
-        <text :x="m.x" y="222" text-anchor="middle" class="cf-year">{{ m.year }}</text>
+      <!-- Timeline 2 -->
+      <line x1="150" y1="206" x2="1150" y2="206" class="cf-track-line"/>
+      <line x1="1110" y1="206" x2="1145" y2="206" class="cf-arrow-end" marker-end="url(#cf-ar)"/>
+
+      <!-- Proving system cards (below line) -->
+      <g v-for="m in proveTrack" :key="m.id" :class="['cf-node', `cf-type-${m.type}`]">
+        <text :x="m.x" y="195" text-anchor="middle" class="cf-year">{{ m.year }}</text>
+        <line :x1="m.x" y1="206" :x2="m.x" y2="227" class="cf-stub"/>
+        <rect :x="m.x - 65" y="232" width="130" height="54" rx="8" class="cf-card-bg"/>
+        <text :x="m.x" y="254" text-anchor="middle" class="cf-card-title">{{ m.label }}</text>
+        <text :x="m.x" y="273" text-anchor="middle" class="cf-card-sub">{{ m.sub }}</text>
       </g>
 
-      <!-- direction arrow at end -->
-      <line x1="1110" y1="80" x2="1145" y2="80" class="cf-arrow-end" marker-end="url(#cf-ar)"/>
-      <line x1="1110" y1="200" x2="1145" y2="200" class="cf-arrow-end" marker-end="url(#cf-ar)"/>
+      <!-- zkVM combinations strip (bottom) -->
+      <text x="78" y="320" class="cf-zkvm-label">現代 zkVMs ＝ 組み合わせ</text>
 
-      <!-- Summary band (final phase) -->
-      <transition name="cf-fade">
-        <g v-if="phase >= 5" class="cf-summary">
-          <rect x="120" y="320" width="1030" height="38" rx="6"
-                fill="#dcfce7" stroke="#059669" stroke-width="2"
-                style="filter: drop-shadow(0 0 8px rgba(5,150,105,0.35));"/>
-          <text x="635" y="346" text-anchor="middle" class="cf-summary-text">
-            証明系 + commitment + folding  ─  3 軸すべてが  hash-based / setup-free / post-quantum
-          </text>
-        </g>
-      </transition>
+      <g v-for="(v, i) in zkvms" :key="v.name" :class="['cf-zkvm', `cf-zkvm-${v.hue}`]">
+        <rect :x="170 + i * 250" y="332" width="230" height="74" rx="8" class="cf-zkvm-bg"/>
+        <text :x="170 + i * 250 + 18" y="357" class="cf-zkvm-name">{{ v.name }}</text>
+        <text :x="170 + i * 250 + 18" y="378" class="cf-zkvm-recipe">= {{ v.recipe }}</text>
+        <text :x="170 + i * 250 + 18" y="395" class="cf-zkvm-extra">{{ v.extra }}</text>
+      </g>
     </svg>
   </div>
 </template>
@@ -150,7 +118,7 @@ const foldTrack   = computed(() => milestones.filter(m => m.track === 'fold'))
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   font-family: 'Noto Sans JP', sans-serif;
   color: #111827;
 }
@@ -160,26 +128,21 @@ const foldTrack   = computed(() => milestones.filter(m => m.track === 'fold'))
   background: #eef2ff;
   border: 1px solid #c7d2fe;
   border-radius: 0.5rem;
-  min-height: 52px;
-  display: flex;
-  align-items: center;
-}
-.cf-cap-inner {
   display: flex;
   flex-direction: column;
   gap: 3px;
-  width: 100%;
 }
-.cf-code {
-  font-family: 'JetBrains Mono', monospace;
+.cf-cap-title {
   font-size: 16px;
+  font-weight: 800;
   color: #1e1b4b;
-  font-weight: 700;
+  font-family: 'BIZ UDPMincho', serif;
 }
-.cf-note {
-  font-size: 14px;
+.cf-cap-sub {
+  font-size: 13px;
   color: #4338ca;
   font-weight: 600;
+  font-family: 'BIZ UDPMincho', serif;
 }
 
 .cf-svg {
@@ -189,7 +152,7 @@ const foldTrack   = computed(() => milestones.filter(m => m.track === 'fold'))
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-/* Track labels (compact pill style) */
+/* Track labels */
 .cf-track-label {
   font-size: 12px;
   font-weight: 800;
@@ -197,8 +160,9 @@ const foldTrack   = computed(() => milestones.filter(m => m.track === 'fold'))
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.04em;
 }
-.cf-track-label-fold { fill: #5b21b6; }
+.cf-track-label-prove { fill: #5b21b6; }
 
+/* Track lines */
 .cf-track-line {
   stroke: #cbd5e1;
   stroke-width: 2;
@@ -211,59 +175,81 @@ const foldTrack   = computed(() => milestones.filter(m => m.track === 'fold'))
 }
 
 /* Milestone cards */
-.cf-node { opacity: 0; transition: opacity 0.6s ease, transform 0.6s ease; }
-.cf-node.is-visible { opacity: 1; }
-.cf-node.is-new .cf-card-bg {
-  filter: drop-shadow(0 0 10px rgba(220, 38, 38, 0.5));
-  stroke-width: 3 !important;
-}
 .cf-stub {
   stroke: #94a3b8;
-  stroke-width: 1.8;
+  stroke-width: 1.5;
 }
-
 .cf-card-bg {
   fill: white;
   stroke-width: 2;
-  transition: fill 0.5s, stroke 0.5s, stroke-width 0.5s, filter 0.5s;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.06));
 }
-.cf-type-trusted .cf-card-bg { fill: #fef2f2; stroke: #f87171; }
-.cf-type-hash .cf-card-bg    { fill: #f0fdf4; stroke: #86efac; }
-.cf-type-lattice .cf-card-bg { fill: #ecfeff; stroke: #67e8f9; }
+/* color by type/era */
+.cf-type-classic .cf-card-bg { fill: #fef2f2; stroke: #f87171; }
+.cf-type-hash    .cf-card-bg { fill: #f0fdf4; stroke: #86efac; }
+.cf-type-modern  .cf-card-bg { fill: #ecfeff; stroke: #67e8f9; }
 
 .cf-card-title {
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 800;
   fill: #1f2937;
   font-family: 'BIZ UDPMincho', serif;
 }
 .cf-card-sub {
-  font-size: 12px;
+  font-size: 11px;
   fill: #475569;
   font-weight: 600;
   font-family: 'JetBrains Mono', monospace;
 }
 
 .cf-year {
-  font-size: 12px;
+  font-size: 11px;
   fill: #94a3b8;
   font-weight: 700;
   font-family: 'JetBrains Mono', monospace;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
 }
 
-/* Summary */
-.cf-summary-text {
-  font-size: 16px;
+/* zkVM strip */
+.cf-zkvm-label {
+  font-size: 13px;
   font-weight: 800;
-  fill: #064e3b;
+  fill: #4338ca;
   font-family: 'BIZ UDPMincho', serif;
 }
-
-/* Transitions */
-.cf-fade-enter-active, .cf-fade-leave-active {
-  transition: opacity 0.4s ease, transform 0.4s ease;
+.cf-zkvm-bg {
+  fill: white;
+  stroke-width: 2;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.06));
 }
-.cf-fade-enter-from { opacity: 0; transform: translateY(4px); }
-.cf-fade-leave-to { opacity: 0; transform: translateY(-4px); }
+.cf-zkvm-amber  .cf-zkvm-bg { fill: #fffbeb; stroke: #fcd34d; }
+.cf-zkvm-green  .cf-zkvm-bg { fill: #f0fdf4; stroke: #86efac; }
+.cf-zkvm-blue   .cf-zkvm-bg { fill: #eff6ff; stroke: #93c5fd; }
+.cf-zkvm-purple .cf-zkvm-bg { fill: #f5f3ff; stroke: #c4b5fd; }
+
+.cf-zkvm-name {
+  font-size: 18px;
+  font-weight: 900;
+  fill: #1f2937;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.02em;
+}
+.cf-zkvm-amber  .cf-zkvm-name { fill: #b45309; }
+.cf-zkvm-green  .cf-zkvm-name { fill: #047857; }
+.cf-zkvm-blue   .cf-zkvm-name { fill: #1d4ed8; }
+.cf-zkvm-purple .cf-zkvm-name { fill: #6d28d9; }
+
+.cf-zkvm-recipe {
+  font-size: 12.5px;
+  font-weight: 700;
+  fill: #1f2937;
+  font-family: 'JetBrains Mono', monospace;
+}
+.cf-zkvm-extra {
+  font-size: 11px;
+  fill: #6b7280;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-style: italic;
+}
 </style>

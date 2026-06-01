@@ -15,41 +15,41 @@ type Milestone = {
   era: Era;
 }
 
-// ===== Row 1: 2010-2023 歴史 =====
+// ===== Row 1: 2010-2023 歴史 (cards shifted right to leave label margin) =====
 const row1: Milestone[] = [
   // commitment (above)
-  { id: 'kzg',       side: 'commit', year: '2010', x: 230,  label: 'KZG',        sub: 'pairing / setup',  era: 'classic' },
-  { id: 'fri',       side: 'commit', year: '2017', x: 580,  label: 'FRI',        sub: 'hash-based',       era: 'hash'    },
-  { id: 'brakedown', side: 'commit', year: '2023', x: 980,  label: 'Brakedown',  sub: 'linear-time',      era: 'hash'    },
+  { id: 'kzg',       side: 'commit', year: '2010', x: 280,  label: 'KZG',        sub: 'pairing / setup',  era: 'classic' },
+  { id: 'fri',       side: 'commit', year: '2017', x: 620,  label: 'FRI',        sub: 'hash-based',       era: 'hash'    },
+  { id: 'brakedown', side: 'commit', year: '2023', x: 1020, label: 'Brakedown',  sub: 'linear-time',      era: 'hash'    },
   // proving (below)
-  { id: 'groth16',   side: 'prove',  year: '2016', x: 220,  label: 'Groth16',    sub: 'pairing SNARK',    era: 'classic' },
-  { id: 'stark',     side: 'prove',  year: '2018', x: 410,  label: 'STARK',      sub: 'hash-based',       era: 'hash'    },
-  { id: 'plonk',     side: 'prove',  year: '2019', x: 600,  label: 'PLONK',      sub: 'universal',        era: 'hash'    },
-  { id: 'halo2',     side: 'prove',  year: '2020', x: 790,  label: 'Halo2',      sub: 'accumulation',     era: 'hash'    },
-  { id: 'nova',      side: 'prove',  year: '2022', x: 990,  label: 'Nova',       sub: 'folding / IVC',    era: 'fold'    },
+  { id: 'groth16',   side: 'prove',  year: '2016', x: 270,  label: 'Groth16',    sub: 'pairing SNARK',    era: 'classic' },
+  { id: 'stark',     side: 'prove',  year: '2018', x: 460,  label: 'STARK',      sub: 'hash-based',       era: 'hash'    },
+  { id: 'plonk',     side: 'prove',  year: '2019', x: 650,  label: 'PLONK',      sub: 'universal',        era: 'hash'    },
+  { id: 'halo2',     side: 'prove',  year: '2020', x: 840,  label: 'Halo2',      sub: 'accumulation',     era: 'hash'    },
+  { id: 'nova',      side: 'prove',  year: '2022', x: 1030, label: 'Nova',       sub: 'folding / IVC',    era: 'fold'    },
 ]
 const row1Commit = row1.filter(m => m.side === 'commit')
 const row1Prove  = row1.filter(m => m.side === 'prove')
 
 // ===== Row 2: 2024-2026 最新 (zoomed, per-research blocks) =====
 const row2: Milestone[] = [
-  // commitment (above, 6 cards - 160 spacing, 150 wide)
-  { id: 'basefold',  side: 'commit', year: '2024', x: 200,  label: 'BaseFold',   sub: 'multilinear FRI',     era: 'modern' },
-  { id: 'binius',    side: 'commit', year: '2024', x: 360,  label: 'Binius',     sub: 'small-field (binary)',era: 'modern' },
-  { id: 'whir',      side: 'commit', year: '2024', x: 520,  label: 'WHIR',       sub: 'fast verifier',       era: 'modern' },
-  { id: 'fribin',    side: 'commit', year: '2024', x: 680,  label: 'FRI-Binius', sub: 'combo (binary)',      era: 'modern' },
-  { id: 'frivail',   side: 'commit', year: '2025', x: 840,  label: 'FRIVail',    sub: 'DAS application',     era: 'latest' },
-  { id: 'longfellow',side: 'commit', year: '2024', x: 1020, label: 'Longfellow', sub: 'Ligero MPC-in-the-head', era: 'modern' },
+  // commitment (above, 6 cards - 150 spacing, 140 wide)
+  { id: 'basefold',  side: 'commit', year: '2024', x: 260,  label: 'BaseFold',   sub: 'multilinear FRI',     era: 'modern' },
+  { id: 'binius',    side: 'commit', year: '2024', x: 410,  label: 'Binius',     sub: 'small-field (binary)',era: 'modern' },
+  { id: 'whir',      side: 'commit', year: '2024', x: 560,  label: 'WHIR',       sub: 'fast verifier',       era: 'modern' },
+  { id: 'fribin',    side: 'commit', year: '2024', x: 710,  label: 'FRI-Binius', sub: 'combo (binary)',      era: 'modern' },
+  { id: 'frivail',   side: 'commit', year: '2025', x: 870,  label: 'FRIVail',    sub: 'DAS application',     era: 'latest' },
+  { id: 'longfellow',side: 'commit', year: '2024', x: 1050, label: 'Longfellow', sub: 'Ligero MPC-in-the-head', era: 'modern' },
 
-  // proving (below, 8 cards - 130 spacing, 115 wide)
-  { id: 'hypernova', side: 'prove',  year: '2023', x: 180,  label: 'HyperNova',  sub: 'multi-folding',       era: 'fold'   },
-  { id: 'protostar', side: 'prove',  year: '2023', x: 310,  label: 'ProtoStar',  sub: 'generic folding',     era: 'fold'   },
-  { id: 'cyclefold', side: 'prove',  year: '2024', x: 440,  label: 'CycleFold',  sub: 'cycle of curves',     era: 'modern' },
-  { id: 'jolt',      side: 'prove',  year: '2024', x: 570,  label: 'Jolt',       sub: 'sumcheck + Lasso',    era: 'modern' },
-  { id: 'neut',      side: 'prove',  year: '2024', x: 700,  label: 'NeutronNova',sub: 'zero-check folding',  era: 'modern' },
-  { id: 'mova',      side: 'prove',  year: '2024', x: 830,  label: 'Mova',       sub: 'no error commit',     era: 'modern' },
-  { id: 'stwo',      side: 'prove',  year: '2025', x: 960,  label: 'Stwo',       sub: 'Circle STARK / M31',  era: 'latest' },
-  { id: 'latfold',   side: 'prove',  year: '2025', x: 1090, label: 'LatticeFold+', sub: 'post-quantum',      era: 'latest' },
+  // proving (below, 8 cards - 125 spacing, 108 wide)
+  { id: 'hypernova', side: 'prove',  year: '2023', x: 240,  label: 'HyperNova',  sub: 'multi-folding',       era: 'fold'   },
+  { id: 'protostar', side: 'prove',  year: '2023', x: 365,  label: 'ProtoStar',  sub: 'generic folding',     era: 'fold'   },
+  { id: 'cyclefold', side: 'prove',  year: '2024', x: 490,  label: 'CycleFold',  sub: 'cycle of curves',     era: 'modern' },
+  { id: 'jolt',      side: 'prove',  year: '2024', x: 615,  label: 'Jolt',       sub: 'sumcheck + Lasso',    era: 'modern' },
+  { id: 'neut',      side: 'prove',  year: '2024', x: 740,  label: 'NeutronNova',sub: 'zero-check folding',  era: 'modern' },
+  { id: 'mova',      side: 'prove',  year: '2024', x: 865,  label: 'Mova',       sub: 'no error commit',     era: 'modern' },
+  { id: 'stwo',      side: 'prove',  year: '2025', x: 990,  label: 'Stwo',       sub: 'Circle STARK / M31',  era: 'latest' },
+  { id: 'latfold',   side: 'prove',  year: '2025', x: 1115, label: 'LatticeFold+', sub: 'post-quantum',      era: 'latest' },
 ]
 const row2Commit = row2.filter(m => m.side === 'commit')
 const row2Prove  = row2.filter(m => m.side === 'prove')
@@ -73,23 +73,23 @@ const row2Prove  = row2.filter(m => m.side === 'prove')
       <text x="40" y="92" class="cf-side-label cf-side-commit">commitment</text>
       <text x="40" y="225" class="cf-side-label cf-side-prove">proving system</text>
 
-      <!-- Commit cards (above) -->
+      <!-- Commit cards (above, 160 wide) -->
       <g v-for="m in row1Commit" :key="m.id" :class="['cf-node', `cf-era-${m.era}`]">
         <line :x1="m.x" y1="135" :x2="m.x" y2="108" class="cf-stub"/>
-        <rect :x="m.x - 85" y="40" width="170" height="68" rx="9" class="cf-card-bg"/>
+        <rect :x="m.x - 80" y="40" width="160" height="68" rx="9" class="cf-card-bg"/>
         <text :x="m.x" y="68" text-anchor="middle" class="cf-card-title">{{ m.label }}</text>
         <text :x="m.x" y="92" text-anchor="middle" class="cf-card-sub">{{ m.sub }}</text>
         <text :x="m.x" y="156" text-anchor="middle" class="cf-year">{{ m.year }}</text>
       </g>
 
-      <!-- Row 1 timeline -->
-      <line x1="150" y1="135" x2="1150" y2="135" class="cf-track-line"/>
-      <line x1="1115" y1="135" x2="1148" y2="135" class="cf-arrow-end" marker-end="url(#cf-ar)"/>
+      <!-- Row 1 timeline (starts after label margin) -->
+      <line x1="195" y1="135" x2="1180" y2="135" class="cf-track-line"/>
+      <line x1="1145" y1="135" x2="1178" y2="135" class="cf-arrow-end" marker-end="url(#cf-ar)"/>
 
-      <!-- Prove cards (below) -->
+      <!-- Prove cards (below, 150 wide) -->
       <g v-for="m in row1Prove" :key="m.id" :class="['cf-node', `cf-era-${m.era}`]">
         <line :x1="m.x" y1="135" :x2="m.x" y2="168" class="cf-stub"/>
-        <rect :x="m.x - 80" y="170" width="160" height="68" rx="9" class="cf-card-bg"/>
+        <rect :x="m.x - 75" y="170" width="150" height="68" rx="9" class="cf-card-bg"/>
         <text :x="m.x" y="198" text-anchor="middle" class="cf-card-title">{{ m.label }}</text>
         <text :x="m.x" y="222" text-anchor="middle" class="cf-card-sub">{{ m.sub }}</text>
       </g>
@@ -105,23 +105,23 @@ const row2Prove  = row2.filter(m => m.side === 'prove')
       <text x="40" y="358" class="cf-side-label cf-side-commit">commitment</text>
       <text x="40" y="490" class="cf-side-label cf-side-prove">proving system</text>
 
-      <!-- Commit cards (above, 150 wide for 6-in-a-row) -->
+      <!-- Commit cards (above, 140 wide for 6-in-a-row) -->
       <g v-for="m in row2Commit" :key="m.id" :class="['cf-node', `cf-era-${m.era}`]">
         <line :x1="m.x" y1="408" :x2="m.x" y2="382" class="cf-stub"/>
-        <rect :x="m.x - 75" y="312" width="150" height="68" rx="9" class="cf-card-bg"/>
+        <rect :x="m.x - 70" y="312" width="140" height="68" rx="9" class="cf-card-bg"/>
         <text :x="m.x" y="340" text-anchor="middle" class="cf-card-title">{{ m.label }}</text>
         <text :x="m.x" y="364" text-anchor="middle" class="cf-card-sub-md">{{ m.sub }}</text>
         <text :x="m.x" y="427" text-anchor="middle" class="cf-year cf-year-latest">{{ m.year }}</text>
       </g>
 
-      <!-- Row 2 timeline -->
-      <line x1="150" y1="408" x2="1180" y2="408" class="cf-track-line cf-track-line-latest"/>
-      <line x1="1145" y1="408" x2="1178" y2="408" class="cf-arrow-end cf-arrow-end-latest" marker-end="url(#cf-ar)"/>
+      <!-- Row 2 timeline (starts after label margin) -->
+      <line x1="195" y1="408" x2="1185" y2="408" class="cf-track-line cf-track-line-latest"/>
+      <line x1="1150" y1="408" x2="1183" y2="408" class="cf-arrow-end cf-arrow-end-latest" marker-end="url(#cf-ar)"/>
 
-      <!-- Prove cards (below, 115 wide for 8-in-a-row) -->
+      <!-- Prove cards (below, 108 wide for 8-in-a-row) -->
       <g v-for="m in row2Prove" :key="m.id" :class="['cf-node', `cf-era-${m.era}`]">
         <line :x1="m.x" y1="408" :x2="m.x" y2="440" class="cf-stub"/>
-        <rect :x="m.x - 58" y="442" width="116" height="68" rx="9" class="cf-card-bg"/>
+        <rect :x="m.x - 54" y="442" width="108" height="68" rx="9" class="cf-card-bg"/>
         <text :x="m.x" y="468" text-anchor="middle" class="cf-card-title-sm">{{ m.label }}</text>
         <text :x="m.x" y="492" text-anchor="middle" class="cf-card-sub-sm">{{ m.sub }}</text>
       </g>

@@ -20,6 +20,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js'
 
 const props = defineProps({
   src: { type: String, default: '' },
@@ -94,6 +95,8 @@ function build(descriptor) {
       roughness: phys.roughness,
     })
     const mesh = new THREE.Mesh(buildGeometry(part.shape, part.size), mat)
+    mesh.castShadow = true
+    mesh.receiveShadow = true
     mesh.position.set(part.position[0] || 0, part.position[1] || 0, part.position[2] || 0)
     if (Array.isArray(part.rotation)) {
       mesh.rotation.set(part.rotation[0] || 0, part.rotation[1] || 0, part.rotation[2] || 0)
@@ -147,20 +150,57 @@ function init(descriptor) {
     camera.position.set(center.x + d, center.y + d * 0.7, center.z + d)
   }
 
-  // lights
-  scene3.add(new THREE.AmbientLight(0xffffff, 0.55))
-  scene3.add(new THREE.HemisphereLight(0xbcd3ff, 0x202326, 0.5))
-  const key = new THREE.DirectionalLight(0xffffff, 1.1)
-  key.position.set(center.x + 8, center.y + 12, center.z + 6)
+  // lighting — soft ambient + a shadow-casting key light
+  scene3.add(new THREE.AmbientLight(0xffffff, 0.28))
+  scene3.add(new THREE.HemisphereLight(0xbcd3ff, 0x141619, 0.45))
+  const key = new THREE.DirectionalLight(0xffffff, 2.6)
+  key.position.set(center.x + radius * 1.6, center.y + radius * 2.4, center.z + radius * 1.2)
+  key.target.position.copy(center)
+  key.castShadow = true
+  key.shadow.mapSize.set(2048, 2048)
+  key.shadow.camera.near = radius * 0.1
+  key.shadow.camera.far = radius * 14
+  const sh = radius * 2
+  key.shadow.camera.left = -sh
+  key.shadow.camera.right = sh
+  key.shadow.camera.top = sh
+  key.shadow.camera.bottom = -sh
+  key.shadow.bias = -0.0006
+  key.shadow.radius = 5
   scene3.add(key)
-  const fill = new THREE.PointLight(0xffffff, 0.35)
-  fill.position.set(center.x - 8, center.y + 4, center.z - 8)
+  scene3.add(key.target)
+  const fill = new THREE.DirectionalLight(0xa9c3ff, 0.5)
+  fill.position.set(center.x - radius * 2, center.y + radius, center.z - radius * 1.6)
   scene3.add(fill)
+
+  // a shadow-catching ground so the model is grounded, not floating
+  const ground = new THREE.Mesh(
+    new THREE.PlaneGeometry(radius * 40, radius * 40),
+    new THREE.ShadowMaterial({ opacity: 0.3 }),
+  )
+  ground.rotation.x = -Math.PI / 2
+  ground.position.set(center.x, box.min.y - radius * 0.01, center.z)
+  ground.receiveShadow = true
+  scene3.add(ground)
 
   renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' })
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-  renderer.setSize(w, h)
+  renderer.shadowMap.enabled = true
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap
+  renderer.toneMapping = THREE.ACESFilmicToneMapping
+  renderer.toneMappingExposure = 1.05
+  // setSize(..., false): do NOT let three write inline px width/height onto the
+  // canvas — CSS keeps it at 100% of the container so it can never overflow a
+  // grid/flex cell and break the slide layout.
+  renderer.setSize(w, h, false)
   el.appendChild(renderer.domElement)
+
+  // image-based lighting — gives metal/glass real reflections instead of a
+  // flat, cheap-looking shade.
+  const pmrem = new THREE.PMREMGenerator(renderer)
+  scene3.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture
+  scene3.environmentIntensity = 0.5
+  pmrem.dispose()
 
   controls = new OrbitControls(camera, renderer.domElement)
   controls.target.copy(center)
@@ -177,7 +217,7 @@ function init(descriptor) {
     if (!cw || !ch) return
     camera.aspect = cw / ch
     camera.updateProjectionMatrix()
-    renderer.setSize(cw, ch)
+    renderer.setSize(cw, ch, false)
   })
   ro.observe(el)
 
@@ -244,6 +284,10 @@ onBeforeUnmount(() => {
 }
 .scene3d :deep(canvas) {
   display: block;
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
   cursor: grab;
 }
 .scene3d :deep(canvas):active {

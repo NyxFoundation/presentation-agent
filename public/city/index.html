@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>City — Nyx Foundation</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; overflow: hidden; background: #05070c; }
+  #c { display: block; width: 100vw; height: 100vh; touch-action: none; cursor: grab; }
+  #c:active { cursor: grabbing; }
+  #err {
+    position: absolute; inset: 0; display: none; place-items: center;
+    color: #ff9c9c; font: 12px/1.6 monospace; white-space: pre-wrap;
+    padding: 24px; background: rgba(20, 6, 6, 0.92);
+  }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="err"></div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module">
+  import { startCity } from './engine.js'
+  const variant = (new URLSearchParams(location.search).get('v') || 'base').toLowerCase()
+  try {
+    startCity(document.getElementById('c'), variant)
+  } catch (e) {
+    const el = document.getElementById('err')
+    el.style.display = 'grid'
+    el.textContent = 'ERROR: ' + (e && e.stack ? e.stack : e)
+  }
+  window.addEventListener('error', (e) => {
+    const el = document.getElementById('err')
+    el.style.display = 'grid'
+    el.textContent = 'ERROR: ' + (e.message || e)
+  })
+</script>
+</body>
+</html>

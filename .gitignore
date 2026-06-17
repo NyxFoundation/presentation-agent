@@ -13,3 +13,11 @@ actions-runner/
 # a deck on a `presentation/*` branch; contributors preview locally via
 # `bun dev`.
 outputs/
+exports-*/
+exports/
+
+# Per-iteration history from the `make refine` visual self-improvement loop.
+.refine/
+
+# Ad-hoc PNG render dumps from local preview/debugging.
+dist-png/

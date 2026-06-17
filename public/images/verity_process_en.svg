@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#333">Development Process Comparison</text>
+
+  <!-- Traditional Process Section -->
+  <rect x="40" y="60" width="1120" height="200" rx="8" fill="#FFF8E1" stroke="#E6A817" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="70" y="92" font-size="16" font-weight="bold" fill="#E6A817">Traditional Development Process</text>
+
+  <!-- Traditional boxes -->
+  <rect x="80" y="120" width="160" height="60" rx="6" fill="#FFE082" stroke="#E6A817" stroke-width="1.5"/>
+  <text x="160" y="147" text-anchor="middle" font-size="13" font-weight="600" fill="#333">Natural Language</text>
+  <text x="160" y="165" text-anchor="middle" font-size="13" font-weight="600" fill="#333">Specification</text>
+
+  <line x1="240" y1="150" x2="300" y2="150" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+
+  <rect x="300" y="120" width="160" height="60" rx="6" fill="#FFE082" stroke="#E6A817" stroke-width="1.5"/>
+  <text x="380" y="147" text-anchor="middle" font-size="13" font-weight="600" fill="#333">Implementation</text>
+  <text x="380" y="165" text-anchor="middle" font-size="13" font-weight="600" fill="#333">(Coding)</text>
+
+  <line x1="460" y1="150" x2="520" y2="150" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+
+  <rect x="520" y="120" width="160" height="60" rx="6" fill="#FFE082" stroke="#E6A817" stroke-width="1.5"/>
+  <text x="600" y="147" text-anchor="middle" font-size="13" font-weight="600" fill="#333">Testing</text>
+  <text x="600" y="165" text-anchor="middle" font-size="13" font-weight="600" fill="#333">(Partial Verification)</text>
+
+  <line x1="680" y1="150" x2="760" y2="150" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+
+  <rect x="760" y="120" width="160" height="60" rx="6" fill="#FFCDD2" stroke="#E57373" stroke-width="1.5"/>
+  <text x="840" y="147" text-anchor="middle" font-size="13" font-weight="600" fill="#333">Bug Discovery</text>
+  <text x="840" y="165" text-anchor="middle" font-size="13" font-weight="600" fill="#333">→ Patch</text>
+
+  <!-- Rework arrow -->
+  <path d="M 840 180 C 840 220, 600 220, 600 180" fill="none" stroke="#E53935" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+  <text x="720" y="232" text-anchor="middle" font-size="13" font-weight="600" fill="#E53935">Rework</text>
+
+  <!-- Warning label -->
+  <text x="970" y="148" font-size="12" fill="#E53935">⚠ Issues found</text>
+  <text x="970" y="166" font-size="12" fill="#E53935">after testing</text>
+
+  <!-- Verity Process Section -->
+  <rect x="40" y="280" width="1120" height="200" rx="8" fill="#E3F2FD" stroke="#42A5F5" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="70" y="312" font-size="16" font-weight="bold" fill="#1E88E5">Verity's Development Process</text>
+
+  <!-- Verity boxes -->
+  <rect x="80" y="340" width="160" height="60" rx="6" fill="#BBDEFB" stroke="#42A5F5" stroke-width="1.5"/>
+  <text x="160" y="367" text-anchor="middle" font-size="13" font-weight="600" fill="#333">Protocol</text>
+  <text x="160" y="385" text-anchor="middle" font-size="13" font-weight="600" fill="#333">Specification</text>
+
+  <line x1="240" y1="370" x2="300" y2="370" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+
+  <rect x="300" y="340" width="180" height="60" rx="6" fill="#BBDEFB" stroke="#42A5F5" stroke-width="1.5"/>
+  <text x="390" y="367" text-anchor="middle" font-size="13" font-weight="600" fill="#333">Formalization</text>
+  <text x="390" y="385" text-anchor="middle" font-size="13" font-weight="600" fill="#333">in Lean</text>
+
+  <line x1="480" y1="370" x2="540" y2="370" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+
+  <rect x="540" y="340" width="180" height="60" rx="6" fill="#BBDEFB" stroke="#42A5F5" stroke-width="1.5"/>
+  <text x="630" y="367" text-anchor="middle" font-size="13" font-weight="600" fill="#333">Mathematical</text>
+  <text x="630" y="385" text-anchor="middle" font-size="13" font-weight="600" fill="#333">Verification (Proof)</text>
+
+  <line x1="720" y1="370" x2="780" y2="370" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+
+  <rect x="780" y="340" width="160" height="60" rx="6" fill="#C8E6C9" stroke="#66BB6A" stroke-width="1.5"/>
+  <text x="860" y="367" text-anchor="middle" font-size="13" font-weight="600" fill="#333">Verified</text>
+  <text x="860" y="385" text-anchor="middle" font-size="13" font-weight="600" fill="#333">Implementation</text>
+
+  <!-- Check label -->
+  <text x="990" y="365" font-size="12" fill="#2E7D32">✓ Correctness guaranteed</text>
+  <text x="990" y="383" font-size="12" fill="#2E7D32">at design stage</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#E53935"/>
+    </marker>
+  </defs>
+</svg>

@@ -37,6 +37,10 @@ src: ./slides/SL08.md
 ---
 
 ---
+src: ./slides/SL08b.md
+---
+
+---
 src: ./slides/SL09.md
 ---
 

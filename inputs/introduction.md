@@ -1,93 +1,162 @@
 ---
 # Target Audience
-target_audience: "SCIS2026参加者（暗号・セキュリティを研究する教授、大学院生、企業研究職、イーサリアム財団、台湾イーサリアムコミュニティ）"
-audience_type: group  # individual / group / mixed
+target_audience: "Prospective sponsor companies for ZK Core Program 2026"
+audience_type: group
 
 # Constraints
 constraints:
-  max_slides: 10
-  max_duration_minutes: 10
+  max_slides: 25
+  max_duration_minutes: 20
 
 # Output Language
-output_language: Japanese
+output_language: English
 
 # Event Context (Optional)
 event:
-  name: "DEPCON Hakodate"
-  parent_event: "SCIS2026"
-  date: "2026-01-29"
-  location: "函館"
+  name: "ZK Core Program 2026"
+  parent_event: ""
+  date: "2026"
+  location: "Online & Tokyo"
 ---
 
-# DEPCON Hakodate オープニングトーク
+# ZK Core Program 2026 — Sponsorship Proposal
 
-## 本プレゼンテーションについて (The Big Idea)
+## About This Presentation (The Big Idea)
 
-本日のプレゼンテーションは、SCIS2026のサイドイベント「DEPCON Hakodate」のオープニングとして、日本の暗号・セキュリティ研究コミュニティの皆様に対し、**イーサリアム（Ethereum）研究への参加を強く奨励する**ことを目的としています。我々、Nyx Foundationは、学歴や職種、所属の垣根を越えて日本の研究者が一致団結し、世界最高水準の研究成果を達成することで、オープンな未来を共に築き上げることを目指しています。このビジョンを実現するため、我々は世界中から研究予算を確保し、それを日本の優秀な研究者に分配する活動に尽力します。本トークを通じて、皆様に我々のコミュニティへの参加を呼びかけ、共に研究を推進していく仲間を募りたいと考えています。
+This deck is a sponsorship proposal for the "ZK Core Program 2026," to be held in 2026. The program's mission is to find and grow exceptional talent in Japan's **Programmable Cryptography** field (ZK, FHE, MPC and related technologies) — talent capable of understanding these technologies deeply from theory through to practice and competing at a world-class level. By sponsoring, your company gets a unique opportunity to elevate its technical brand, gain early access to top-tier engineers, and directly contribute to creating future use cases.
 
-## 現状の課題 (Background / Status Quo)
+## Background / Status Quo
 
-日本の研究エコシステムが直面している最大の課題は、**研究予算の継続的な削減**です。国立大学の運営費交付金は、法人化（2004年）以降の年1%の効率化係数により累積約1,400億円が削減されました [1]。科研費や学振（日本学術振興会特別研究員制度）をはじめとする公的研究資金は年々厳しさを増しており、限られたパイを奪い合う競争が激化しています。文部科学省の白書によれば、日本の論文数の世界ランクは20年前の第2位から第4位に、注目度の高い論文（Top10%補正論文数）のランクは第4位から第10位へと低下しています [2]。この構造的な問題は、研究者たちに深刻な分断をもたらしています。
+Japan is in the middle of a major transformation driven by accelerating digital transformation (DX). At the same time, **cybersecurity risk has exploded into a national-scale issue that threatens corporate management and economic security**. In the Information-technology Promotion Agency's (IPA) "Top 10 Information Security Threats 2025," "damage from ransomware" and "attacks exploiting supply-chain weak points" have been near the top of the list for nearly a decade — entrenched risks that strike at the foundation of corporate activity [1]. In 2024 alone, 189 incidents at listed companies in Japan leaked the personal data of more than 15 million people, and incidents continue unabated [2].
 
-予算の制約は、研究者間の**横のつながりを希薄にする**大きな要因となっています。私自身、修士課程に在籍していた際、同分野の他大学の学生と交流する機会はほとんどありませんでした。研究費の確保に追われ、共同研究や分野横断的な取り組みに割くリソースがないのが現実です。NIRA総合研究開発機構の報告書は、日本の研究者が国際的な研究プラットフォームから孤立しつつあり、「放置すれば日本の科学そのものが衰退する」と警鐘を鳴らしています [3]。結果として、優秀な研究者が孤立し、一人で研究に取り組むケースが非常に多くなっています。我々は最近、富山県で5年間もの間、たった一人で高性能なEVM（Ethereum Virtual Machine）コンパイラを開発している優れたエンジニアに出会いました。Haskellで記述されたそのコンパイラは、高度な形式検証と最適化機能を備えており、彼の才能と情熱には感服させられます。しかし、このような才能が個々に点在し、連携されていないのが現状です。
+This dilemma — how to reconcile privacy with the use of data — is no longer a single-company problem; it now shapes international competitiveness. In the European Union, the eIDAS 2.0 regulation expected to take effect in 2026 will mandate the provision of digital ID wallets with strong privacy protection, and **privacy-preserving technologies are quickly becoming the new global standard** [3].
 
-さらに、予算削減は**アカデミアと産業界の間のギャップ**をも拡大させています。大学は現場の実需を十分に理解する余裕がなく、企業は学術研究の可能性を軽視しがちです。企業の研究所も、多くは自社の利益追求が目的となり、真に社会が必要とする根源的な問題から乖離してしまう傾向があります。各々がそれぞれの領域に留まっていては、社会全体にとっての「最重要な問題」を特定し、それに正面から取り組むことは困難です。
+Against this backdrop, the world's largest tech companies are already acting. In 2025, Google integrated zero-knowledge proof (ZKP) technology into Google Wallet to enable privacy-preserving age verification, and open-sourced the underlying tech [4]. Apple has likewise shipped features such as photo search and caller-ID lookup using fully homomorphic encryption (FHE), in a way that even the server cannot decrypt user queries or personal data [5].
 
-そして、この状況の中で、**日本でイーサリアム研究に取り組む人が極めて少ない**という現実があります。今年のSCIS参加者の皆様の中で、イーサリアムが掲げる最重要課題、例えば次期アップグレードの名称やその内容をご存知の方は、果たしてどれほどいらっしゃるでしょうか。しかし、私はこれを悲観的に捉えてはいません。**むしろ、これは巨大なチャンスです。** イーサリアムは数兆円規模の資産が動く世界的なシステムであり、魅力的な研究テーマの宝庫です。競争相手が少ない今こそ、この分野に飛び込み、世界をリードする研究成果を出す絶好の機会なのです。
+These moves are not just feature additions. They are **strategic investments to redefine the trust infrastructure of digital society**. The ZKP market is forecast to grow from roughly USD 1.3B in 2024 to over USD 7.5B by 2033 [6], and Programmable Cryptography is unmistakably the next massive industrial frontier. Far from being premature, engaging with this field is **an urgent task essential to maintaining and improving Japan's industrial competitiveness**.
 
-## DEPCON Hakodateの意義 (Why This Event Matters)
+## Why ZK Tokyo and the Core Program Matter
 
-このDEPCON Hakodate開催の意義は、**多様な人々が集まる場所をつくること、そのものにあります**。大学教授、大学院生、企業の研究職、イーサリアム財団の研究者、台湾のイーサリアムコミュニティなど、異なるバックグラウンドを持つ参加者が一堂に会するこの場は、まさに分断を乗り越えるための実践です。
+Rising cyber risk and intensifying international competition. To meet these national challenges, the most important asset is, without question, **highly specialized talent capable of carrying the next generation of technology**. Yet developing that talent is something Japan struggles with, and the shortage has reached critical levels. According to METI, Japan is short roughly 110,000 cybersecurity professionals [7], and the IT workforce as a whole is projected to be short by as much as 790,000 by 2030 [8].
 
-我々は、参加者の皆様が思想や意見、情報をシェアし合い、新たなコラボレーションやアイデアをはぐくむ場所をつくり続けてきました。このイベントを通じて、Nyx Foundationと直接関係がなくても、皆様同士の新しい友人関係が生まれたり、研究成果の向上につながることを心から願っています。研究者の孤立という課題に対する我々の答えは、まさにこのような「つながりの場」を継続的に提供することなのです。
+Closing that severe talent gap and shaping the future of Japan's digital society — that is the **true significance of the "ZK Core Program."** Our program does not just train engineers who apply cryptography. It is **the most stimulating and hands-on environment in Japan for cultivating world-class talent** that can support core digital infrastructure and reconcile privacy with innovation.
 
-## 我々が目指すもの (Goal / Vision)
+For the past three years, ZK Tokyo has served as the hub driving Japan's cryptography community. In 2025, we hosted Ethereum founder Vitalik Buterin, and we have co-hosted events with top players from Japan and abroad such as SMBC Nikko Securities and RISC Zero — bridging academia, industry, and the global ecosystem. The fact that our alumni go on to collaborate with the Ethereum Foundation and present at international conferences is direct evidence that our work creates **value that translates beyond Japan**.
 
-我々Nyx Foundationの使命は、これらの課題を解決し、**日本の全ての研究者が所属や立場に関係なく「最重要な問題」に挑戦できる土台を築くこと**です。私たちは、年功序列ではなく、若く意欲的な才能が最大の成果を出せる環境を構築します。イーサリアム財団（Ethereum Foundation）をはじめとする海外の主要プロジェクトが提示する最新の研究テーマや研究助成金（グラント）の情報を積極的に共有し、コミュニティ全体でそれらの課題に共同で取り組み、世界を驚かせるような偉大な発明と成果を生み出していきます。そして、次世代を担う若い研究者を世界レベルの研究者として育成し、グローバルな舞台へ輩出することを目指します。これは、個々の勝利ではなく、**協力してみんなで勝つ**という思想に基づいています。
+## The 2025 Program's Success: The Synergy of Theory and Collaboration
 
-## 皆様へのお願い (The Ask / Call to Action)
+The 2025 results prove the program's effectiveness. The program ran in a **hybrid format combining online distribution of materials with offline group work on weekends**.
 
-このビジョンを実現するため、皆様に具体的な行動をお願いしたく思います。それは、**我々のコミュニティに参加し、共に研究を推進すること**です。
+> Participants self-studied theory on weekdays using text-based materials distributed online, then gathered offline on weekends. Through **intense, whiteboard-format group work**, they applied that knowledge against each other, deepened the discussion, and solved problems together. It is precisely this cycle — fusing "individual learning" with "collective intelligence" — that sits at the core of the program's success.
 
-その第一歩として、イーサリアム財団のPSE（Privacy and Scaling Explorations）チームが最近公開した研究提案依頼（RFP）リストをご覧ください [4]。ここに挙げられているテーマは、イーサリアムエコシステムが今まさに解決を必要としている最重要課題の一覧です。これらは単なる研究テーマに留まらず、採択されれば研究助成金を得ながら、自身の研究成果として世界に発表できる絶好の機会を意味します。
+This format built deep mutual understanding and trust between participants, and powered the completion of complex cryptographic theory and the delivery of exceptionally high-quality final outputs in just six weeks.
 
-もし、この中に一つでも興味を引くテーマがあれば、ぜひ我々にお声がけください。Nyx Foundationは、これまでイーサリアムクライアント実装における20件以上の脆弱性報告や、イーサリアム財団の形式検証合宿での招待講演など、数多くの実績を積み重ねてきました。イーサリアムに関する深い知見とネットワークを活かし、皆様の研究を全力でサポートすることをお約束します。皆様が持つ暗号技術やセキュリティに関する専門知識と、我々のイーサリアムに関する専門知識を融合させ、共に最高の研究成果を創り上げましょう。
+**Major final outputs from 2025:**
 
-## 主要な情報とデータ (Key Facts, Data, and Numbers)
+| Project | Summary |
+|---|---|
+| **zk-KYC-DEX** | A DEX prototype that uses ZK proofs to perform KYC while keeping personal data private. |
+| **DeFi unsecured personal lending** | A realistic unsecured personal lending protocol that combines credit-bureau data with ZKP for privacy-preserving credit checks. |
+| **ZK-Vote** | A safe, fair anonymous DAO voting system that uses ZKP to fully conceal voter identity and ballot contents. |
+| **Corporate Wallet** | Proof of corporate existence and intent-of-operation for wallet actions using commercial-registry digital certificates, executed offline or on-chain. |
 
-| 指標 | データ |
-|------|--------|
-| 国立大学運営費交付金の累積削減額 | 約1,400億円（2004年以降） |
-| 日本の論文数世界ランク | 第2位 → 第4位（20年間で低下） |
-| Top10%補正論文数世界ランク | 第4位 → 第10位（20年間で低下） |
-| Nyx Foundation脆弱性報告実績 | 20件以上 |
+These outputs speak not just to the participants' technical strength but also to the soundness of the program's design philosophy: **connecting theory to practice and driving innovation through collaboration**.
 
-- **Ethereum PSE Research RFP List:** イーサリアムが直面する最重要課題と研究助成金の機会がまとめられています。
-  - URL: https://github.com/ethereum/iptf-map/blob/master/rfps/README.md
+## 2026 Program Overview
 
-## 関係者 (Team / Stakeholders)
+### 1. Curriculum: Theory Meets Practice
 
-- **主催:** Nyx Foundation
+Rather than treating leading-edge cryptography — ZKP (zero-knowledge proofs), FHE (fully homomorphic encryption), MPC (secure multi-party computation) — as a "black box," our program deepens essential understanding by **rebuilding the underlying mathematical structures by hand**. Through repeated cycles of translating abstract theory into concrete code, participants ultimately gain the ability to design and implement, from scratch, systems that guarantee privacy and computational integrity.
 
-- **協力:** SCIS2026, DEPCON Hakodate 参加者
-  - 大学教授、大学院生、企業研究職
-  - イーサリアム財団研究者
-  - 台湾イーサリアムコミュニティ
+### 2. Target Audience and Recommended Skills
 
-## 結びの言葉
+The program targets highly motivated individuals such as:
 
-私自身、この壁を打破するために外の世界へ飛び出しました。ZK Tokyoというコミュニティを運営し、イーサリアム財団と共同研究を行い、そしてこのNyx Foundationを設立しました。一人や数人で研究する時代は終わりを告げようとしています。これからは、仲間と活発に議論し、協力し合いながら研究を進める場所が不可欠です。
+- **Engineers who want to strengthen their cryptography implementation skills:** People who understand ZK and secure computation conceptually but want to be able to build the internal logic of libraries and cryptographic circuits themselves.
+- **Protocol designers and researchers:** People who want to design and propose new distributed systems and privacy-preserving technologies from scratch, grounded in mathematical reasoning.
 
-皆様も、自らの人生の扉を開き、オープンマインドで「最重要な問題とは何か」を問い続け、その解決に情熱を燃やしませんか。Nyx Foundationは、そのためのプラットフォームです。ぜひ我々の活動に参加し、共にオープンな未来を築き上げていきましょう。
+Because of the nature of the program, we recommend that participants have the following knowledge and skill set.
+
+| Category | Skill detail | Required / Recommended |
+|---|---|---|
+| **Programming skills** | Development experience in Python, TypeScript, etc.; basic understanding of memory management and computational complexity. | **Required** |
+| **Mathematical foundations** | Elementary number theory (modular arithmetic, groups/rings/fields), linear algebra, basics of polynomial arithmetic. | Recommended |
+| **Computer science** | Logic gates and circuits; basic understanding of computational models (instruction sets, data flow). | Recommended |
+| **Interest in cryptography** | Understanding of the role of public-key cryptography, hash functions, and digital signatures, plus strong commitment to a weekly in-person session and self-study. | **Required** |
+
+### 3. Schedule and Curriculum
+
+The program runs for 7 weeks. Week 1 presents the big picture and example applications to spark intellectual curiosity, after which we dive into specific topics. Theory lectures and implementation assignments run in parallel, and a weekly in-person session deepens group discussion and design work.
+
+| Week | Theme | Theory lecture | Implementation assignment | In-person session |
+|---|---|---|---|---|
+| 1 | Programmable Cryptography | Big-picture view of ZK/MPC/FHE and how they complement each other. The theory of "circuits" as an abstraction for computation. | Implement code that expresses and executes basic arithmetic operations as a "circuit." | Use-case identification workshop |
+| 2 | MPC | Secret sharing, OT, Garbled Circuits. | Implement secret sharing and addition/multiplication protocols in Rust. | Project team formation |
+| 3 | ZKP I (Arithmetization) | Transforming computation using polynomials. The mathematical structure of R1CS. | Write code that converts computation logic into R1CS-format matrices. | Design review |
+| 4 | ZKP II (Polynomial commitments) | Commitment schemes such as KZG and IPA. | Implement polynomial commitment and verification logic using elliptic curves. | Whiteboard session |
+| 5 | ZKP III (Plonk-style constraint systems) | Permutation arguments and copy constraints. The basics of lookup tables. | Implement a protocol that verifies wire equality (copy constraints) within a circuit. | Mid-term presentation |
+| 6 | FHE | Lattice-based cryptography, the LWE problem, homomorphic operations, and noise management. | Implement LWE encryption and decryption, plus addition and multiplication logic on ciphertexts (no decryption). | Technical integration office hours |
+| 7 | Advanced Topics & Demo | The cutting edge — Verifiable FHE, Folding, zkVM, etc. | Integrate everything learned so far into a complete, optimized protocol. | **Demo Day** |
+
+Final outputs will be shared with the world via formats such as **presentations at ETH Global Tokyo** and **private demos for sponsor companies**.
+
+### 4. Improvements from 2025
+
+For 2026, we are improving and strengthening the program based on the successes of the previous year:
+
+- **Introducing group projects:** A single theme will be carried through the entire program as a group project. Members will be shuffled in the first two weeks, then locked in from Week 3 to drive the project forward.
+- **Stronger connection to applied examples:** To make clear how theory plays out in the real world, we will, for instance, study services that actually use Plonk during the week we cover Plonk.
+- **Concrete final deliverables:** We will present concrete final assignments and themes (e.g., "implement a zkVM") at the very beginning, to maximize motivation for the most technically ambitious participants.
+
+## The Ask / Call to Action
+
+To further evolve this leading-edge program, we are inviting your company to participate as a sponsor. Sponsorship is more than funding. It gives your company the right to **propose the themes that participants tackle as their final outputs**. Participants then choose, from the themes you propose, the one that best fits their interest and develop it through the program.
+
+The format is close to a **practical internship**. Your company gets to present directly to participants and mentor them, and the ZK Tokyo instructors provide strong support across the curriculum and through to the completion of the final outputs. As a sponsor, you gain the following:
+
+- **Talent development and early discovery:** Direct touchpoints with high-potential young engineers
+- **Use-case creation:** Exploration of new technical applications relevant to your business domain
+- **Brand visibility:** Higher recognition and brand image within the technical community
+
+**Sponsorship plans:**
+- **JPY 500K:** Propose 1 theme
+- **JPY 1M:** Propose 3 themes
+- **JPY 2M:** Propose 5 themes
+
+ZK Tokyo will work with you to scope and shape compelling themes.
+
+## Team / Stakeholders
+
+- **Host:** ZK Tokyo ([X/Twitter](https://x.com/zk_tokyo), [YouTube](https://www.youtube.com/@zk-tokyo), [Telegram](https://t.me/+mqLG9CwMPB8zNDY1))
+- **Co-host:** The University of Tokyo Blockchain Innovation Endowed Chair
+- **Cooperation:** Sponsor companies
+
+## Closing
+
+The ZK Core Program is a one-of-a-kind platform for raising the bar of Japan's technical capability and sending the next generation of innovators onto the world stage. Joining this movement is not just an investment; it marks the start of a partnership to co-create the technology ecosystem of the future. We hope you will join us in growing the exceptional talent that will shape the future of Japan and the world. We look forward to hearing from you.
 
 ---
 
-### 参考文献
+### References
 
-[1] 文部科学省科学技術・学術政策研究所. 国立大学運営費交付金の推移に関する各種報告書.
+[1] Information-technology Promotion Agency (IPA). "Top 10 Information Security Threats 2025." https://www.ipa.go.jp/security/10threats/10threats2025.html (accessed 2026-01-23)
 
-[2] 文部科学省. "第１章 我が国の研究力の現状と課題". 令和4年版 科学技術・イノベーション白書. https://www.mext.go.jp/b_menu/hakusho/html/hpaa202201/1421221_00005.html
+[2] Tokyo Shoko Research, Ltd. "2024 Survey on Personal Information Leakage and Loss Incidents at Listed Companies." 2025-01-21. https://www.tsr-net.co.jp/data/detail/1200872_1527.html (accessed 2026-01-23)
 
-[3] 國領二郎. "孤立する日本の研究プラットフォーム―放置すれば日本の科学そのものが衰退する". NIRA総合研究開発機構, 2015年5月. https://www.nira.or.jp/paper/opinion-paper/2015/15.html
+[3] European Commission. "European Digital Identity." https://commission.europa.eu/strategy-and-policy/priorities-2019-2024/europe-fit-digital-age/european-digital-identity_en (accessed 2026-01-23)
 
-[4] Ethereum Privacy and Scaling Explorations. "IP-TF MAP RFPs". GitHub. https://github.com/ethereum/iptf-map/blob/master/rfps/README.md
+[4] Google. "Opening up 'Zero-Knowledge Proof' technology to promote privacy in age assurance." The Keyword. 2025-07-03. https://blog.google/innovation-and-ai/technology/safety-security/opening-up-zero-knowledge-proof-technology-to-promote-privacy-in-age-assurance/ (accessed 2026-01-23)
+
+[5] Apple. "Combining Machine Learning and Homomorphic Encryption in the Apple Ecosystem." Apple Machine Learning Research. 2024-10-24. https://machinelearning.apple.com/research/homomorphic-encryption (accessed 2026-01-23)
+
+[6] Grand View Research. "Zero Knowledge Proof Market Size | Industry Report, 2033." 2024. https://www.grandviewresearch.com/industry-analysis/zero-knowledge-proof-market-report (accessed 2026-01-23)
+
+[7] Ministry of Economy, Trade and Industry (METI). "Final Report Released by the Study Group on Promoting the Development of Cybersecurity Talent." 2025-05-14. https://www.meti.go.jp/press/2025/05/20250514002/20250514002.html (accessed 2026-01-23)
+
+[8] Ministry of Economy, Trade and Industry (METI). "Survey on IT Talent Supply and Demand." 2019-04-25. https://www.meti.go.jp/policy/it_policy/jinzai/houkokusho.pdf (accessed 2026-01-23)
+
+**Related links:**
+- **Core Program 2025 materials:** [https://github.com/zk-tokyo/core-program](https://github.com/zk-tokyo/core-program)
+- **Core Program 2025 final outputs:** [https://github.com/zk-tokyo/core-program/tree/main/final-projects](https://github.com/zk-tokyo/core-program/tree/main/final-projects)
+- **Core Program 2025 showcase:** [https://www.youtube.com/watch?v=j1u1cyjfilo&list=PLvKRWMWw-Dsa4BGplLe1YYgRpiio72FgY](https://www.youtube.com/watch?v=j1u1cyjfilo&list=PLvKRWMWw-Dsa4BGplLe1YYgRpiio72FgY)
+- **Core Program 2025 lectures:** [https://www.youtube.com/watch?v=KGoIeuBKxB4&list=PLvKRWMWw-Dsai7hPewIS2LYnZHS4Z_W2Z](https://www.youtube.com/watch?v=KGoIeuBKxB4&list=PLvKRWMWw-Dsai7hPewIS2LYnZHS4Z_W2Z)

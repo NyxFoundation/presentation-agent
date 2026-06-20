@@ -1,8 +1,9 @@
 ---
 theme: seriph
-title: スライドタイトル
+title: Cryptography x Blockchain Study Group 2026
 info: |
-  スライドタイトル
+  The University of Tokyo Blockchain Innovation Endowed Chair — Blockchain Applied Practice Program
+  Cryptography x Blockchain Study Group 2026 — Program Overview
 transition: slide-left
 mdc: true
 colorSchema: 'light'
@@ -54,6 +55,18 @@ src: ./slides/SL12.md
 ---
 
 ---
+src: ./slides/SL16.md
+---
+
+---
+src: ./slides/SL19.md
+---
+
+---
+src: ./slides/SL20.md
+---
+
+---
 src: ./slides/SL13.md
 ---
 
@@ -63,4 +76,28 @@ src: ./slides/SL14.md
 
 ---
 src: ./slides/SL15.md
+---
+
+---
+src: ./slides/SL17.md
+---
+
+---
+src: ./slides/SL18.md
+---
+
+---
+src: ./slides/SL24.md
+---
+
+---
+src: ./slides/SL21.md
+---
+
+---
+src: ./slides/SL22.md
+---
+
+---
+src: ./slides/SL23.md
 ---

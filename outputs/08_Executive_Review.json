@@ -1,0 +1,80 @@
+{
+  "final_judgment": "CONDITIONAL_PASS",
+  "overall_feedback": "This presentation is competent but not exceptional. It hits the major beats correctly—problem, solution, benefits, pricing—but lacks the surgical precision and emotional punch that transforms a good pitch into an unforgettable one. The strategic architecture is sound: the SCR structure works, the MECE argument holds, and the evidence is credible. However, I found three categories of issues that must be addressed before this goes in front of sponsors: (1) The opening fails to create sufficient urgency—Slide 1 dumps statistics without a human hook; (2) Slides 9-12 describing sponsor benefits blur together into a forgettable wall of 'you get this, you get that'—these need sharper differentiation; (3) The pricing slide (15) is functional but uninspired—it doesn't anchor the value or create urgency to act. Fix these, and you have a presentation that will close deals. Leave them, and sponsors will nod politely and never call back.",
+  "source_fidelity_check": {
+    "anecdotes_preserved": {
+      "result": true,
+      "details": "All key anecdotes from CONTEXT_BRIEF have been faithfully incorporated: (1) 2025 hybrid learning format with whiteboard sessions—Slides 5-6; (2) zk-KYC-DEX prototype—Slide 6; (3) ZK-Vote anonymous voting system—Slide 6; (4) Privacy-preserving loan protocol—Slide 6; (5) Corporate wallet with commercial registration certificates—Slide 6; (6) Graduate achievements including Ethereum Foundation collaboration and international conference presentations—Slide 7; (7) Google Wallet ZKP integration July 2025—Slide 2. No critical anecdotes were lost."
+    },
+    "founder_story_preserved": {
+      "result": true,
+      "details": "The CONTEXT_BRIEF notes 'founder_story' was 'Not explicitly mentioned' in source materials but identifies ZK Tokyo's 3-year track record as the organizational narrative. This is faithfully captured in Slide 8, including Vitalik Buterin invitation, SMBC Nikko Securities partnership, and RISC Zero collaboration. The 'bridge between academia, industry, and the world' positioning is preserved in the speaker notes."
+    }
+  },
+  "required_revisions": [
+    {
+      "slide_number": 1,
+      "issue": "The opening slide dumps four statistics with no narrative hook. It tells but doesn't show. A sponsor executive will see '110,000' and think 'another policy report'—not 'I need to act now.'",
+      "recommendation": "Lead with a concrete human story or provocative question before the statistics. Consider: 'Last month, a Fortune 500 company in Tokyo cancelled their ZKP initiative because they couldn't find a single engineer who could implement it. That company could be your competitor—or it could be you.' Then reveal the 110,000 figure as the systemic explanation."
+    },
+    {
+      "slide_number": 2,
+      "issue": "The Mermaid diagram shows Japan at a 'decision point' but the visual doesn't convey stakes. '日本企業取り残し?' with a question mark reads as abstract, not urgent.",
+      "recommendation": "Change '日本企業取り残し?' to a declarative statement that forces acknowledgment: '日本: 標準化から脱落中'. Remove the question mark—the data already proves this is happening, not hypothetical."
+    },
+    {
+      "slide_number": 6,
+      "issue": "Four project names are listed but their business relevance to sponsor companies is not immediately clear. 'zk-KYC-DEX' means nothing to a non-crypto-native executive.",
+      "recommendation": "Add one-line business context to each project card. Instead of just 'zk-KYC-DEX', show 'zk-KYC-DEX: 個人情報を開示せずに本人確認'. Make the business problem solved visible at a glance."
+    },
+    {
+      "slide_number": 9,
+      "issue": "The 'テーマ提案権' slide explains the mechanism but doesn't make the strategic value visceral. It reads like a feature spec, not a strategic advantage.",
+      "recommendation": "Add a concrete example in the speaker notes and consider adding it as a visual: 'For example, if your company is exploring ZKP for supply chain traceability, you propose that theme—and graduates working on YOUR use case become YOUR natural talent pool.'"
+    },
+    {
+      "slide_number": 10,
+      "issue": "This slide and Slides 9, 11, 12 feel interchangeable—all 'sponsor benefits' that blend together. The 7-week mentoring relationship is undersold.",
+      "recommendation": "Quantify the relationship: '7週間 = 35時間以上の直接接触'. Compare explicitly to standard recruiting: 'A typical interview process gives you 2-3 hours. Mentoring gives you 35+.' Make the magnitude unmistakable."
+    },
+    {
+      "slide_number": 13,
+      "issue": "The cost comparison uses '年収800万円' as the base, which may feel low for senior cryptography talent. The comparison could seem to understate the real delta.",
+      "recommendation": "Use a range: '年収800-1200万円のエンジニアの場合、紹介手数料は200-420万円'. This prevents sophisticated sponsors from mentally discounting your ROI claim."
+    },
+    {
+      "slide_number": 15,
+      "issue": "The pricing slide is purely functional. It lists options but creates no urgency or anchoring effect. There's no 'limited availability' signal.",
+      "recommendation": "Add scarcity signal: 'スポンサー枠: 残り〇社' or '2026年度は10社限定'. If there truly is limited capacity, say so. Also consider visually highlighting the 100万円 tier as 'Most Popular' or 'Best Value' to guide decision-making."
+    },
+    {
+      "slide_number": 16,
+      "issue": "The closing CTA is generic. 'お問い合わせください' creates friction. The QR code is good but needs reinforcement.",
+      "recommendation": "Offer a specific next step: '30分のオンライン説明会を毎週開催中—QRコードからご予約'. Reduce the commitment required for first action. Also add a deadline if one exists: 'スポンサー申込締切: 2026年X月X日'."
+    }
+  ],
+  "quality_checklist": {
+    "passes_so_what_gauntlet": {
+      "result": true,
+      "justification": "Every slide advances the argument. Slides 1-3 establish urgent problem. Slide 4 introduces solution. Slides 5-8 prove credibility. Slides 9-12 articulate sponsor-specific value. Slides 13-14 justify economics. Slides 15-16 enable action. No slide exists merely to fill space. However, Slides 9-12 would benefit from sharper differentiation—while each passes the 'So What?' test individually, as a group they risk becoming background noise."
+    },
+    "passes_clarity_test": {
+      "result": false,
+      "justification": "Three areas of ambiguity identified: (1) Technical jargon on Slide 6—'zk-KYC-DEX' and similar project names require crypto-native knowledge to parse; (2) Slide 2 diagram label '日本企業取り残し?' uses a question mark where a statement would be clearer; (3) Pricing slide doesn't clarify what 'テーマ提案権' practically entails—a non-technical sponsor executive may not understand what proposing a 'theme' actually means without the speaker notes."
+    }
+  },
+  "additional_observations": {
+    "strengths": [
+      "Strategic architecture is sound—SCR structure effectively builds tension before resolution",
+      "Evidence hierarchy is well-applied—hard data from government sources and named companies (Google, Apple, SMBC) creates credibility",
+      "Visual design avoids bullet points entirely and uses diagrams effectively",
+      "Speaker notes are comprehensive and would enable confident delivery",
+      "All source anecdotes preserved—no fidelity loss from brief to final content"
+    ],
+    "missed_opportunities": [
+      "The Vitalik Buterin photo (Slide 8) should be more prominent—this is your most recognizable credibility asset and it's buried in a slide about organizational history",
+      "No competitor comparison—sponsors will wonder 'why not train internally or use [alternative]?' A preemptive objection handler would strengthen the case",
+      "The 2030 talent shortage projection (79万人) is mentioned in Slide 1 but not leveraged in the closing urgency—'Act now or face the 2030 gap' would create timeline pressure"
+    ]
+  }
+}

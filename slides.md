@@ -1,9 +1,10 @@
 ---
 theme: seriph
-title: スライドタイトル
+title: Agentic Hacking Cup — スポンサーシップのご案内
 info: |
-  スライドタイトル
-transition: slide-left
+  Agentic Hacking Cup スポンサーシップのご案内
+  一般社団法人 Nyx Foundation
+transition: none
 mdc: true
 colorSchema: 'light'
 src: ./slides/SL01.md
@@ -64,3 +65,36 @@ src: ./slides/SL14.md
 ---
 src: ./slides/SL15.md
 ---
+
+---
+src: ./slides/SL16.md
+---
+
+---
+src: ./slides/SL16b.md
+---
+
+---
+src: ./slides/SL17.md
+---
+
+---
+src: ./slides/SL18.md
+---
+
+---
+src: ./slides/SL19.md
+---
+
+---
+src: ./slides/SL20.md
+---
+
+---
+src: ./slides/SL21.md
+---
+
+---
+src: ./slides/SL22.md
+---
+

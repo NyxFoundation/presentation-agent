@@ -1,0 +1,28 @@
+{
+  "narrative_archetype": {
+    "chosen_archetype": "Hybrid: Sparkline + Pyramid Principle",
+    "justification": "The audience ('The Isolated Expert') has an analytical communication preference and responds to data-driven arguments (Pyramid Principle), but they are also emotionally exhausted by isolation and funding cuts. A pure logical approach would be dismissed as another dry academic pitch. The Sparkline structure creates the emotional pull by contrasting the painful 'what is' (isolation, declining rankings, scattered talent) with the inspiring 'what could be' (community, global funding, world-class impact). Opening with emotional resonance breaks through their skepticism about blockchain, then transitioning to the logical Pyramid structure (answer first: 'Ethereum is your opportunity', then evidence: funding data, Nyx track record) satisfies their need for rigor. This hybrid respects their intelligence while speaking to their hidden desires."
+  },
+  "core_message": {
+    "full_sentence": "Japanese cryptography researchers possess world-class expertise, but isolation and funding cuts are wasting that talent—Nyx Foundation offers a bridge to Ethereum's untapped research funding and a community that transforms solitary genius into collective impact.",
+    "proverb": "孤高の天才から、世界を変えるチームへ"
+  },
+  "dramatic_tension": {
+    "villain": "The system of isolation—20 years of cumulative 140 billion yen funding cuts have not only starved research budgets but destroyed the connective tissue between researchers. Brilliant minds like the Toyama engineer spend years working alone, their potential scattered and uncombined. Japan's research rankings are falling (2nd→4th in papers, 4th→10th in top-cited), not because of lack of talent, but because that talent is fragmented and trapped in silos. The real enemy is the assumption that research must be solitary struggle.",
+    "hero": "Nyx Foundation and the Ethereum ecosystem—a community that breaks down the walls between universities, industries, and borders. Ethereum offers what domestic funding cannot: international research grants from organizations actively seeking collaborators, a global network of peers, and problems worth solving (securing trillions of yen in assets). Nyx Foundation, with its 20+ vulnerability discoveries and direct connections to Ethereum Foundation, serves as the guide who can navigate researchers from isolation into this new world."
+  },
+  "emotional_hook": {
+    "hook_type": "Powerful Anecdote",
+    "hook_content": "In Toyama Prefecture, there is an engineer who has spent five years—alone—building one of the most sophisticated EVM compilers in existence. Written in Haskell. Formal verification. Advanced optimization. World-class work. Five years. Alone. When I met him, I didn't feel admiration—I felt heartbreak. Because I know there are dozens of researchers like him scattered across Japan, each brilliant, each isolated, each wondering if anyone else cares about what they're building. Today, I want to talk about ending that isolation."
+  },
+  "quality_checklist": {
+    "passes_bezos_clarity_test": {
+      "result": true,
+      "justification": "The core message is a complete sentence that clearly states the problem (isolation and funding cuts wasting talent), the opportunity (Ethereum's untapped research funding), and the solution (Nyx Foundation as bridge and community). It directly answers 'why should I care?' for the audience. The proverb '孤高の天才から、世界を変えるチームへ' (From solitary genius to world-changing team) captures the transformation in 10 words and is memorable in Japanese, the presentation language."
+    },
+    "has_clear_villain_and_hero": {
+      "result": true,
+      "justification": "The villain (isolation, the system that fragments talent, declining rankings) is tangible and emotionally resonant for this audience who lives it daily. The hero (Nyx Foundation + Ethereum ecosystem) offers a specific escape route. The conflict is not about Ethereum being technically superior—it's about connection versus isolation, which reframes the pitch from 'adopt this technology' to 'join this community,' directly addressing the audience's deepest pain point."
+    }
+  }
+}

@@ -57,6 +57,13 @@ reference disagree, `CLAUDE.md` wins.
 - **SVG text is styled via CSS classes, not SVG attributes** (attributes collide
   with Slidev's global CSS). Decide a `viewBox`, scale only with outer
   `max-width`.
+- **Logo / footer chrome.** Content slides show the Nyx logo + page number
+  bottom-right (`global-bottom.vue`). Cover (title) and closing center a logo at
+  the bottom and hide that corner footer (avoid a duplicate Nyx mark) — generic
+  default is Nyx-only; a deck pairs its product logo with Nyx side-by-side, no
+  divider (`.nx-cobrand`). Decide first/last vs. middle with `$nav` **in the
+  template** (`currentPage === 1 || currentPage === $nav.total`); referencing
+  `$nav` from `<script setup>` misfires on every page.
 - **Japanese decks omit English `.ja` subtext.** Cut small explanatory text
   rather than shrink it.
 - **No blank lines inside an HTML block** (`mdc: true` lets a blank line

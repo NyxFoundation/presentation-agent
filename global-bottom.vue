@@ -1,13 +1,9 @@
-<script setup>
-import { computed } from 'vue'
-
-const isFirstSlide = computed(() => $nav.currentPage === 1)
-</script>
-
 <template>
-  <div class="nyx-footer">
+  <!-- 表紙(1)と最終ページは下部中央の Eris × Nyx ロックアップを使うため右下フッターを隠す。
+       $nav はテンプレート内でのみ確実に解決するため、ここで判定する -->
+  <div class="nyx-footer" v-if="$nav.currentPage !== 1 && $nav.currentPage !== $nav.total">
     <img src="/images/nyx_logo.svg" alt="Nyx" class="nyx-logo" />
-    <span v-if="!isFirstSlide" class="page-number">{{ $nav.currentPage }}</span>
+    <span class="page-number">{{ $nav.currentPage }}</span>
   </div>
 </template>
 

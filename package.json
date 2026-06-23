@@ -1,5 +1,5 @@
 {
-  "name": "presentation-agent",
+  "name": "scis2026-security-agent-presentation",
   "type": "module",
   "private": true,
   "scripts": {
@@ -11,6 +11,8 @@
     "@slidev/cli": "^52.11.1",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
+    "@tresjs/cientos": "^5.7.0",
+    "@tresjs/core": "^5.8.0",
     "three": "^0.184.0",
     "vue": "^3.5.26"
   }

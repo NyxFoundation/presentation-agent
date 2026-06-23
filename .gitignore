@@ -20,4 +20,4 @@ exports/
 .refine/
 
 # Ad-hoc PNG render dumps from local preview/debugging.
-dist-png/
+dist-png*/

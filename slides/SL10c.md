@@ -3,9 +3,9 @@ layout: default
 ---
 
 <div class="nx-kicker">インサイト ／ Eris</div>
-<h1 class="nx-display">本物の敵対競争だから、<em>理論が現実に現れた</em>。</h1>
+<h1 class="nx-display">賢いAIでも、<em>経済の法則からは逃げられない</em>。</h1>
 
-<div class="cv"><svg class="cv-svg" viewBox="0 0 980 400" preserveAspectRatio="xMidYMid meet"><line x1="190" y1="200" x2="790" y2="200" class="qm-axis"/><line x1="490" y1="36" x2="490" y2="364" class="qm-axis"/><text x="180" y="205" class="qm-axlbl" text-anchor="end">協調・単体</text><text x="800" y="205" class="qm-axlbl" text-anchor="start">敵対競争</text><text x="490" y="28" class="qm-axlbl" text-anchor="middle">モデル</text><text x="490" y="384" class="qm-axlbl" text-anchor="middle">現実</text><circle cx="338" cy="86" r="4.5" class="qm-dot"/><text x="338" y="112" class="qm-name" text-anchor="middle">LLM 経済シミュ</text><text x="338" y="131" class="qm-find" text-anchor="middle">AIの群れからバブル・暴落が創発</text><text x="338" y="149" class="qm-tag" text-anchor="middle">TwinMarket · ABM-LLM</text><circle cx="642" cy="86" r="4.5" class="qm-dot"/><text x="642" y="112" class="qm-name" text-anchor="middle">経済モデルの古典</text><text x="642" y="131" class="qm-find" text-anchor="middle">競争で混雑し、効率が落ちる</text><text x="642" y="149" class="qm-tag" text-anchor="middle">Minority Game · El Farol</text><circle cx="338" cy="250" r="4.5" class="qm-dot"/><text x="338" y="276" class="qm-name" text-anchor="middle">AI trading bot</text><text x="338" y="295" class="qm-find" text-anchor="middle">儲け口を狙うが、競争で枯れる</text><text x="338" y="313" class="qm-tag" text-anchor="middle">TradingAgents · AlphaAgent</text><circle cx="642" cy="276" r="15" class="qm-eris-halo"/><circle cx="642" cy="276" r="11" class="qm-eris-ring"/><circle cx="642" cy="276" r="4.5" class="qm-eris-core"/><text x="642" y="309" class="qm-eris" text-anchor="middle">Eris</text><text x="642" y="328" class="qm-eris-desc" text-anchor="middle">本物の敵対競争で、理論を再現</text></svg></div>
+<div class="cv"><svg class="cv-svg" viewBox="0 0 980 400" preserveAspectRatio="xMidYMid meet"><line x1="190" y1="200" x2="790" y2="200" class="qm-axis"/><line x1="490" y1="36" x2="490" y2="364" class="qm-axis"/><text x="180" y="205" class="qm-axlbl" text-anchor="end">協調・単体</text><text x="800" y="205" class="qm-axlbl" text-anchor="start">敵対競争</text><text x="490" y="28" class="qm-axlbl" text-anchor="middle">モデル</text><text x="490" y="384" class="qm-axlbl" text-anchor="middle">現実</text><circle cx="338" cy="86" r="4.5" class="qm-dot"/><text x="338" y="112" class="qm-name" text-anchor="middle">LLM 経済シミュ</text><text x="338" y="131" class="qm-find" text-anchor="middle">AIの群れからバブル・暴落が創発</text><text x="338" y="149" class="qm-tag" text-anchor="middle">TwinMarket · ABM-LLM</text><circle cx="642" cy="86" r="4.5" class="qm-dot"/><text x="642" y="112" class="qm-name" text-anchor="middle">経済モデルの古典</text><text x="642" y="131" class="qm-find" text-anchor="middle">競争で混雑し、効率が落ちる</text><text x="642" y="149" class="qm-tag" text-anchor="middle">Minority Game · El Farol</text><circle cx="338" cy="250" r="4.5" class="qm-dot"/><text x="338" y="276" class="qm-name" text-anchor="middle">AI trading bot</text><text x="338" y="295" class="qm-find" text-anchor="middle">儲け口を狙うが、競争で枯れる</text><text x="338" y="313" class="qm-tag" text-anchor="middle">TradingAgents · AlphaAgent</text><rect x="508" y="246" width="268" height="94" rx="10" class="qm-eris-card"/><image href="/logos/eris_logo.svg" x="600" y="256" width="84" height="31"/><text x="642" y="307" class="qm-eris-desc" text-anchor="middle">本物の敵対競争で、理論を再現</text><text x="642" y="326" class="qm-eris-why" text-anchor="middle">── 勝つAIほど、危ない取引を減らしたから</text></svg></div>
 
 <SourceCite :sources="[
   { label: 'TradingAgents — AI trading bot（arXiv 2412.20138）', url: 'https://arxiv.org/abs/2412.20138' },
@@ -24,11 +24,9 @@ layout: default
 .qm-name { font-family: var(--font-jp-serif); font-size: 14px; font-weight: 700; fill: var(--ink); }
 .qm-find { font-family: var(--font-jp-serif); font-size: 12px; fill: var(--ink-dim); }
 .qm-tag { font-family: var(--font-mono); font-size: 9px; fill: var(--ink-faint); letter-spacing: 0.01em; }
-.qm-eris-halo { fill: var(--accent-soft); }
-.qm-eris-ring { fill: none; stroke: var(--accent); stroke-width: 2; }
-.qm-eris-core { fill: var(--accent); }
-.qm-eris { font-family: var(--font-jp-serif); font-size: 18px; font-weight: 800; fill: var(--accent); }
-.qm-eris-desc { font-family: var(--font-jp-serif); font-size: 12.5px; font-weight: 600; fill: var(--accent); }
+.qm-eris-card { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; }
+.qm-eris-desc { font-family: var(--font-jp-serif); font-size: 12.5px; font-weight: 700; fill: var(--accent); }
+.qm-eris-why { font-family: var(--font-jp-serif); font-size: 11px; fill: var(--ink-dim); }
 </style>
 
 <!--

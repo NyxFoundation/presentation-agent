@@ -70,12 +70,16 @@ restore() {
   cp -r "$1/$SLIDES_DIR/." "$SLIDES_DIR/"
 }
 
-# export the current deck to a directory of per-slide PNGs
+# export the current deck to a directory of per-slide PNGs.
+# --per-slide / --wait-until none / --wait: a deck with live <Scene3D> 3D
+# never reaches network-idle (the WebGL animation loop runs forever), so the
+# default export hangs; these flags screenshot each slide after a fixed wait.
 export_png() {
+  _common="--format png --output $1 --per-slide --wait-until none --wait 5000"
   if [ -n "$CHROME" ]; then
-    $SLIDEV export "$DECK" --format png --output "$1" --executable-path "$CHROME" > "$2" 2>&1
+    $SLIDEV export "$DECK" $_common --executable-path "$CHROME" > "$2" 2>&1
   else
-    $SLIDEV export "$DECK" --format png --output "$1" > "$2" 2>&1
+    $SLIDEV export "$DECK" $_common > "$2" 2>&1
   fi
 }
 

@@ -40,13 +40,13 @@ Score each axis 1.0–5.0. Target: **average ≥ 4.5 and no axis < 4.5**.
 | # | Axis | Definition |
 |---|---|---|
 | 1 | Clarity | A salesperson or a non-domain viewer with **zero expertise** can follow every slide; jargon and acronyms are defined in plain words on first use, or cut |
-| 2 | Desire & Expectation Lift | Every slide **raises what the viewer wants** — a sales / buyer audience leaves it thinking "genuinely good value, a smart buy"; a consumer thinks "this could change my life, I'm excited". A correct-but-flat slide scores low here |
+| 2 | Desire & Expectation Lift | Every slide **raises what the viewer wants — through evidence, not assertion**: a track record, a concrete number, or a comparison against others that lets the viewer reach the conclusion themselves. A direct claim ("you'll be ahead", "great value") scores low even when true. **Comparisons must be apt** — both sides on the *same axis*, A against its real alternative B; a mismatched comparison weakens persuasion. A correct-but-flat slide also scores low |
 | 3 | Story | Skim Test passes; arc is coherent |
 | 4 | Emotional Impact | Hook earns attention; close lands |
 | 5 | Credibility | Evidence is strong, specific, traceable |
 | 6 | Differentiation | The deck sounds like *this* organization |
 | 7 | Culture | Brand / manifesto / values voice is present and load-bearing |
-| 8 | Visual Readability | No overflow, no wall-of-text, titles fit one line |
+| 8 | Visual Readability | No overflow, no wall-of-text, titles fit one line. **Show, don't tell** — an idea a chart, timeline, icon or single big number could carry faster is not left as a paragraph; a mostly-prose slide that could be mostly visual scores low |
 | 9 | Executive Pitch Quality | A senior leader could deliver it tomorrow |
 
 ## Workflow — repeat each cycle up to 7 times
@@ -121,6 +121,9 @@ Emit a Markdown block to the user with:
 | Dense slide | Split into two slides, or drop the weakest 1–2 elements |
 | Acronym soup | Add a one-line plain-language definition next to first use |
 | Slide informs but stirs no desire | Reframe the takeaway as a benefit the viewer *feels* — value gained for a buyer, a vivid better outcome for a consumer |
+| Expectation raised by a direct claim | Replace the assertion with the track record, number or comparison that implies it — let the reader conclude |
+| Idea left as a paragraph | Convert it to a chart, timeline, icon or a single big number — show, don't tell |
+| Comparison sides don't match | Re-pick the comparison target so both sides are the same axis, true like-for-like |
 | Jargon a non-expert can't follow | Restate in plain words a salesperson could repeat to a customer |
 | Visual rainbow | Reduce to ≤ 3 colors using the deck's existing palette |
 | Mermaid overflow | Reduce nodes to ≤ 5; split if needed |

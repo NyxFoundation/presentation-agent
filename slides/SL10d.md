@@ -2,35 +2,25 @@
 layout: default
 ---
 
-<div class="nx-kicker">考察 ／ Eris</div>
-<h1 class="nx-display">AIエージェントは、<em>botと何が違うか</em>。</h1>
-<div class="dc-wrap"><div class="dc-card"><div class="dc-num">論点 ①</div><div class="dc-head">速さでなく、適応</div><div class="dc-line">tx の速さは bot 並み（考える分むしろ低頻度）</div><div class="dc-line">でも、起きた事ごとに学んで戦略を直す</div><div class="dc-line">→ 想定外の急変・新手に強いはず</div><div class="dc-punch">bot は“速さ”、AIは“適応”で勝つ</div></div><div class="dc-card"><div class="dc-num">論点 ②</div><div class="dc-head">多様性とコストの経済学</div><div class="dc-line">幅広く戦略を探せるが、トークンを多く食う</div><div class="dc-line">→ 勝ち筋を真似て効率化／特化 ⇒ 結局多様化</div><div class="dc-line">鍵は「データ取得とコンテキスト管理の効率」</div><div class="dc-punch">＝ AIエージェント開発の課題と地続き</div></div></div>
-<div class="dc-foot"><b>どちらも仮説。</b> この現実の環境（Eris）でこそ、<em>確かめにいける</em>。</div>
+<div class="nx-kicker">Next Step ／ Eris</div>
+<h1 class="nx-display">次に問うべき、<em>4つの論点</em>。</h1>
+<div class="ns-grid"><div class="ns-card"><div class="ns-num">01</div><div class="ns-body"><div class="ns-q">botと何が違うか？</div><div class="ns-e">速さでなく“適応”。起きた事ごとに学び、想定外の急変に強い。</div></div></div><div class="ns-card"><div class="ns-num">02</div><div class="ns-body"><div class="ns-q">戦略の多様化はどう起きるか？</div><div class="ns-e">探索はトークンを食う → 模倣や特化で効率化 → 結局多様化。鍵はデータとコンテキストの効率。</div></div></div><div class="ns-card"><div class="ns-num">03</div><div class="ns-body"><div class="ns-q">守りのAIに、どんな認証・権限を渡すか？</div><div class="ns-e">自制するAIに、身元確認（KYA）・権限・委任の範囲をどう設計するか。</div></div></div><div class="ns-card"><div class="ns-num">04</div><div class="ns-body"><div class="ns-q">役割の多様化は、何をもたらすか？</div><div class="ns-e">ハッカーAI、別の手段で稼ぐAI、大きなαを一度だけ狙うAI… 役割が増えると系はどうなる。</div></div></div></div>
 
 <style>
-.dc-wrap { display: flex; gap: 1.5rem; justify-content: center; max-width: 900px; margin: 1.1rem auto 0; }
-.dc-card { flex: 1; background: #fff; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 10px; padding: 0.9rem 1.2rem 1rem; }
-.dc-num { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: var(--accent); }
-.dc-head { font-family: var(--font-jp-serif); font-size: 19px; font-weight: 800; color: var(--ink); margin: 0.12rem 0 0.6rem; }
-.dc-line { font-family: var(--font-jp-serif); font-size: 14px; line-height: 1.72; color: var(--ink-dim); }
-.dc-punch { font-family: var(--font-jp-serif); font-size: 14.5px; font-weight: 700; color: var(--accent); border-top: 1px solid var(--line); margin-top: 0.6rem; padding-top: 0.55rem; }
-.dc-foot { display: block; max-width: 900px; margin: 1rem auto 0; padding: 0.55rem 0.95rem; background: var(--bg-2); border-left: 2px solid var(--accent); font-family: var(--font-jp-serif); font-size: 15px; color: var(--ink-dim); text-align: center; }
-.dc-foot b { color: var(--ink); font-weight: 700; }
-.dc-foot em { color: var(--accent); font-style: normal; font-weight: 700; }
+.ns-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.3rem; max-width: 884px; margin: 1.15rem auto 0; }
+.ns-card { display: flex; gap: 0.8rem; background: #fff; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 10px; padding: 0.85rem 1.1rem 0.95rem; }
+.ns-num { font-family: var(--font-mono); font-size: 21px; font-weight: 700; color: var(--accent); line-height: 1.1; flex-shrink: 0; }
+.ns-body { flex: 1; }
+.ns-q { font-family: var(--font-jp-serif); font-size: 16px; font-weight: 800; color: var(--ink); margin-bottom: 0.3rem; }
+.ns-e { font-family: var(--font-jp-serif); font-size: 13px; line-height: 1.62; color: var(--ink-dim); }
 </style>
 
 <!--
 Speaker Notes:
-- p15 までの「測ったこと」から一段、ここは「考察・仮説」。AIエージェントだから生まれる論点を2つ
-- 論点①（速さでなく適応／vs bot）:
-  - tx 頻度は bot と同等か、reasoning latency でむしろ低頻度になりうる
-  - だが各イベントで学習して戦略を自己改善する＝bot にない性質
-  - よって想定外の事象（相場の急変・新種の攻撃・regime 変化）への対応力が高いはず
-  - トレードオフとして言う：bot は「安定して速い」場で勝ち、エージェントは「世界が変わる」場で勝つ。Eris に regime ショックや新イベントを入れて LLMエージェント vs ルールbot を比較すれば検証できる
-- 論点②（多様性とトークン経済）:
-  - 幅広く戦略を探すメタ能力が高いが、普通にやるとトークン消費が大きい
-  - → 勝ち筋をミラトレして効率化、あるいは特化 ⇒ 結局は戦略が多様化する、という仮説
-  - 突き詰めると勝負はデータ取得の効率化とコンテキスト管理 ＝ 計算/情報の効率が競争上の一次資源になる
-  - それは実際の AIエージェント開発のボトルネックそのもの。Eris は「エージェント開発の課題が、競争適応度として可視化される実験場」
-- どちらも未測定の仮説。p15 の「現実の検証環境」で実際に測れる、という前向きな締め
+- Eris セクションの締め＝Next Step。p15（現実×敵対競争で理論を再現）を土台に、ここから問う4つ
+- 論点①（botと何が違うか）：tx 頻度は bot 並み/低頻度だが、各イベントで学び戦略を自己改善＝bot にない適応力。想定外（regime 変化・新手）に強いはず。bot は「安定して速い」場、エージェントは「世界が変わる」場で勝つ
+- 論点②（戦略の多様化）：幅広く戦略を探すメタ能力はトークンを食う → 勝ち筋のミラトレで効率化／特化 ⇒ 結局多様化。突き詰めるとデータ取得とコンテキスト管理の効率＝実際のAIエージェント開発のボトルネックと地続き
+- 論点③（守りのAIへの認証・権限）：自制する（守りに入る）AIに、身元確認（KYA, ERC-8004）・権限管理・委任範囲をどう設計するか＝意図側（事前設計）の問い。デッキの 意図/検証 ループに接続
+- 論点④（役割の多様化）：ハッカーAI、別手段で利益最大化するAI、一時的にプライスインパクトの大きい α を一回だけ狙うAI 等、役割が増えると系全体（脆弱性・流動性）はどう変わるか
+- いずれも Eris（本物の検証環境）で測りにいける、で締める
 -->

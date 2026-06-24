@@ -3,40 +3,36 @@ layout: default
 ---
 
 <div class="nx-kicker">インサイト ／ Eris</div>
-<h1 class="nx-display">賢いAIほど、<em>新しい儲けより〈守り〉</em>を選ぶ。</h1>
+<h1 class="nx-display">作り物でない市場で、<em>理論を再現した</em>。</h1>
 
-<div class="cv"><svg class="cv-svg" viewBox="0 0 980 408" preserveAspectRatio="xMidYMid meet"><defs><marker id="fl-ar" markerWidth="10" markerHeight="10" refX="6.5" refY="3.4" orient="auto"><path d="M0,0 L7,3.4 L0,6.8 Z" fill="var(--accent)"/></marker></defs><rect x="22" y="68" width="280" height="304" rx="10" class="p-box"/><text x="40" y="98" class="p-head">① 先行研究で言われてきた</text><line x1="40" y1="108" x2="284" y2="108" class="p-rule"/><text x="40" y="146" class="p-find">儲け口は、競争ですぐ枯れる</text><text x="40" y="163" class="p-tag">AIに売買させる研究</text><text x="40" y="206" class="p-find">バブルや暴落がひとりでに起きる</text><text x="40" y="223" class="p-tag">市場をAIで丸ごと再現</text><text x="40" y="266" class="p-find">儲けの奪い合いは早い者勝ち</text><text x="40" y="283" class="p-tag">経済モデルの古典</text><line x1="304" y1="220" x2="346" y2="220" class="flow-arrow" marker-end="url(#fl-ar)"/><rect x="300" y="204" width="50" height="16" rx="3" class="flow-chip"/><text x="325" y="216" class="flow-lbl" text-anchor="middle">本物の市場で</text><rect x="350" y="68" width="280" height="304" rx="10" class="p-box-hl"/><text x="368" y="98" class="p-head-a">② Eris が本物の市場で確かめた</text><line x1="368" y1="108" x2="612" y2="108" class="p-rule-a"/><text x="368" y="144" class="p-body">① の予測を、本物の DeFi 市場で再現。</text><text x="368" y="186" class="p-body">敵対競争 ＋ 本物の損益・失敗tx で、</text><text x="368" y="204" class="p-body">自己改善の〈向き〉を初めて実測。</text><text x="368" y="256" class="p-result">→ 賢いAIも〈守り〉に入る</text><text x="368" y="278" class="p-sub">新しい儲けより、危ない手を控える</text><line x1="632" y1="220" x2="674" y2="220" class="flow-arrow" marker-end="url(#fl-ar)"/><rect x="628" y="204" width="50" height="16" rx="3" class="flow-chip"/><text x="653" y="216" class="flow-lbl" text-anchor="middle">次の問いへ</text><rect x="678" y="68" width="280" height="304" rx="10" class="p-box-fwd"/><text x="696" y="98" class="p-head-a">③ Eris なら、これも測れる</text><line x1="696" y1="108" x2="940" y2="108" class="p-rule-a"/><text x="696" y="146" class="p-body">理論では言われるが、</text><text x="696" y="164" class="p-body">まだ誰も測っていないこと：</text><text x="696" y="206" class="p-q">「みんなが同時に守ったら、</text><text x="696" y="224" class="p-q">　市場は一気に細る？」</text><text x="696" y="268" class="p-fwd">→ Eris なら、実際に測れる。</text></svg></div>
+<div class="cv"><svg class="cv-svg" viewBox="0 0 980 400" preserveAspectRatio="xMidYMid meet"><defs><marker id="fl-ar" markerWidth="10" markerHeight="10" refX="6.5" refY="3.4" orient="auto"><path d="M0,0 L7,3.4 L0,6.8 Z" fill="var(--accent)"/></marker></defs><rect x="24" y="64" width="300" height="120" rx="10" class="p-box"/><text x="40" y="90" class="p-head">AI trading bot 研究</text><text x="40" y="116" class="p-body">個のリターン（Sharpe 等）を競う</text><text x="40" y="139" class="p-limit">系全体（マクロ）は見ない</text><text x="40" y="170" class="p-tag">TradingAgents · AlphaAgent</text><rect x="24" y="210" width="300" height="120" rx="10" class="p-box"/><text x="40" y="236" class="p-head">LLM 経済シミュ研究</text><text x="40" y="262" class="p-body">作り物の市場で創発を見せる</text><text x="40" y="285" class="p-limit">検証は擬似的・現実に転移しにくい</text><text x="40" y="316" class="p-tag">TwinMarket · ABM-LLM</text><line x1="324" y1="124" x2="596" y2="152" class="flow-arrow" marker-end="url(#fl-ar)"/><line x1="324" y1="270" x2="596" y2="254" class="flow-arrow" marker-end="url(#fl-ar)"/><rect x="402" y="112" width="118" height="17" rx="3" class="flow-chip"/><text x="461" y="124" class="flow-lbl" text-anchor="middle">＋ 系全体＝マクロ</text><rect x="400" y="246" width="124" height="17" rx="3" class="flow-chip"/><text x="462" y="258" class="flow-lbl" text-anchor="middle">＋ 本物の機構・転移</text><rect x="600" y="92" width="356" height="224" rx="10" class="p-box-hl"/><text x="622" y="126" class="p-eris-h">Eris</text><text x="622" y="158" class="p-body">本物の DeFi 機構で、AIエージェント</text><text x="622" y="178" class="p-body">同士の敵対競争を再現。</text><text x="622" y="216" class="p-eris-big">→ 理論を再現した</text><text x="622" y="250" class="p-sub">alpha decay・crowding・〈守り〉が、</text><text x="622" y="268" class="p-sub">本物の機構から “創発” した。</text><line x1="24" y1="350" x2="956" y2="350" class="foot-div"/><text x="24" y="371" class="nov-h">DeFi だからできた</text><text x="172" y="371" class="nov">── 作り物のマクロは“仮定”が混じる。本物の機構から創発したマクロは、現実に転移する。</text></svg></div>
 
 <style>
 .cv { display: flex; justify-content: center; margin-top: 0.4rem; }
 .cv-svg { width: 100%; max-width: 940px; height: auto; }
 .p-box { fill: #fff; stroke: var(--line-strong); stroke-width: 1.2; }
 .p-box-hl { fill: var(--bg-2); stroke: var(--accent); stroke-width: 2; }
-.p-box-fwd { fill: #fff; stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 6 4; }
-.p-head { font-family: var(--font-jp-serif); font-size: 13px; font-weight: 700; fill: var(--ink-dim); }
-.p-head-a { font-family: var(--font-jp-serif); font-size: 13px; font-weight: 700; fill: var(--accent); }
-.p-rule { stroke: var(--line); stroke-width: 1; }
-.p-rule-a { stroke: var(--accent-line); stroke-width: 1; }
-.p-find { font-family: var(--font-jp-serif); font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+.p-head { font-family: var(--font-jp-serif); font-size: 13px; font-weight: 700; fill: var(--ink); }
+.p-body { font-family: var(--font-jp-serif); font-size: 12.5px; fill: var(--ink-dim); }
+.p-limit { font-family: var(--font-jp-serif); font-size: 12px; fill: var(--severe); }
 .p-tag { font-family: var(--font-mono); font-size: 9px; fill: var(--ink-faint); letter-spacing: 0.02em; }
-.p-body { font-family: var(--font-jp-serif); font-size: 12px; fill: var(--ink-dim); }
-.p-result { font-family: var(--font-jp-serif); font-size: 15px; font-weight: 800; fill: var(--accent); }
-.p-sub { font-family: var(--font-jp-serif); font-size: 10px; fill: var(--ink-dim); }
-.p-q { font-family: var(--font-jp-serif); font-size: 12px; fill: var(--ink); }
-.p-fwd { font-family: var(--font-jp-serif); font-size: 14px; font-weight: 800; fill: var(--accent); }
+.p-eris-h { font-family: var(--font-mono); font-size: 13px; font-weight: 700; fill: var(--accent); letter-spacing: 0.18em; }
+.p-eris-big { font-family: var(--font-jp-serif); font-size: 21px; font-weight: 800; fill: var(--accent); }
+.p-sub { font-family: var(--font-jp-serif); font-size: 11px; fill: var(--ink-dim); }
 .flow-arrow { stroke: var(--accent); stroke-width: 2.2; fill: none; }
 .flow-chip { fill: var(--bg); }
-.flow-lbl { font-family: var(--font-jp-serif); font-size: 10px; font-weight: 700; fill: var(--accent); }
+.flow-lbl { font-family: var(--font-jp-serif); font-size: 11px; font-weight: 700; fill: var(--accent); }
+.foot-div { stroke: var(--line); stroke-width: 1; }
+.nov-h { font-family: var(--font-mono); font-size: 10px; font-weight: 700; fill: var(--accent); letter-spacing: 0.04em; }
+.nov { font-family: var(--font-jp-serif); font-size: 11.5px; fill: var(--ink-dim); }
 </style>
 
 <!--
 Speaker Notes:
-- 構造を「収束」から「左→右の流れ」に変更：先行研究（理論・部分実証）→ Eris が本物の市場で再現＋実測 → 理論止まりも Eris で測れる（前向き）
-- ① 先行研究（平易化／正確な中身は口頭）:
-  - AIに売買させる研究（TradingAgents 2412.20138 / AlphaAgent 2502.16789）：α はすぐ decay。多くは backtest 止まり
-  - 市場をAIで再現（TwinMarket 2025 / ABM-LLM 2510.12189）：バブル・群集が創発。報酬は擬似的
-  - 経済モデルの古典（Minority Game: Challet–Zhang 1997 / El Farol: Arthur 1994）：希少資源の競争＝crowding・分散縮小
-- ② Eris の貢献＝「再現」かつ「強化」：①の予測を本物の DeFi 市場（敵対競争・MEV・本物の PnL/revert・Self–Frozen 統制）で再現し、さらに「自己改善の“向き”」という新しい量を実測。結果＝賢いAIも守り（リスク削減・取引の選別）に入る
-- ③ 前向き：理論では言われるが未測定のこと（自制の相関＝一斉退避・流動性枯れ）も、Eris は実機で測れる。severe の不安でなく、capability として提示
-- 正直な穴：n 小・1 regime・0.00 戦略の正体未確定・operator が LLM か heuristic か
+- p15 の主張：本物の DeFi オンチェーンで AIエージェント同士の敵対競争を再現 → 理論（alpha decay・crowding・〈守り〉）を再現。かつ先行2系統を超える
+- vs AI trading bot 研究（TradingAgents 2412.20138 / AlphaAgent 2502.16789）：個のリターンしか見ない → Eris は系全体＝マクロも可視化
+- vs LLM 経済シミュ研究（TwinMarket 2025 / ABM-LLM 2510.12189）：作り物の市場で創発は見せるが検証は擬似的・転移しにくい → Eris は本物の機構・本物の検証・現実への転移
+- DeFi だからできたこと（footer・認識論キッカー）：シミュのマクロは作った人の“仮定”が半分仕込まれる。DeFi のマクロは本物のコントラクト機構（AMM式・清算・MEV入札・gas・revert）から“創発”する。だから理論の再現が本物の証拠になり、現実に転移する
+- 正直な範囲：Eris は本物のコントラクトコード＋実行意味論で動く“閉じた経済”。「本物の機構・本物の検証」までは強く言え、「mainnet で実マネー」とは言い過ぎない（外部流動性まで現実かは設計次第）
+- 考察・仮説（AIエージェントならではの戦略性／多様性とトークン経済）は次ページ p16 へ
 -->

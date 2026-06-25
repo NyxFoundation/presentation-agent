@@ -1,13 +1,9 @@
-<script setup>
-import { computed } from 'vue'
-
-const isFirstSlide = computed(() => $nav.currentPage === 1)
-</script>
-
 <template>
+  <!-- 本文スライド: 右下に Merkle Japan ロゴ＋ページ番号 (1 ページ目はページ番号なし)。
+       $nav はテンプレート内でのみ確実に解決する（script setup 内だと全ページで誤作動する）。 -->
   <div class="mj-footer">
     <img src="/images/merklejapan_logo.png" alt="Merkle Japan" class="mj-logo" />
-    <span v-if="!isFirstSlide" class="page-number">{{ $nav.currentPage }}</span>
+    <span v-if="$nav.currentPage !== 1" class="page-number">{{ $nav.currentPage }}</span>
   </div>
 </template>
 

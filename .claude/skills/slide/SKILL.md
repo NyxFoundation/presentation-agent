@@ -41,10 +41,29 @@ reference disagree, `CLAUDE.md` wins.
   — it must be readable by an elderly viewer in a projected room.
 - **Heading structure is fixed.** `nx-kicker` (`01 ／ 日本語`, mono uppercase) →
   `nx-display` h1 with the *core* phrase wrapped in `<em>` (italic Cormorant,
-  accent blue). `<em>` marks the sentence's core, not mere emphasis.
+  accent blue). `<em>` marks the sentence's core, not mere emphasis. The h1 must
+  fit **one line** — shorten rather than wrap. No `──` em-dash spam; avoid
+  declarative hype / military metaphors in titles and kickers (青天井・希少・本丸・
+  既成事実). Kickers are plain section words (背景／現状／課題／答え, コンペ／カンファレンス).
+  `BIZ UDPMincho` is **wordmark-only** — never for headings, numbers, or buttons.
+- **One concept = one word, deck-wide.** Don't drift terms (e.g. Trust は「信頼」で
+  統一し「信用」と混ぜない). Read a strategy/type from **position + arrows + edge
+  labels**, not a separate legend — minimize legends.
+- **Diagram hygiene.** Arrowheads are filled triangles (`M0,0 L7,3.5 L0,7 Z`),
+  not open "hand-drawn" strokes. Nodes/chips are **opaque** (translucent
+  `accent-soft` lets the lines behind bleed through — use an opaque pale tint).
+  No persistent pulse/blink animation — it reads as product UI, not an editorial
+  deck.
 - **SVG text is styled via CSS classes, not SVG attributes** (attributes collide
   with Slidev's global CSS). Decide a `viewBox`, scale only with outer
   `max-width`.
+- **Logo / footer chrome.** Content slides show the Nyx logo + page number
+  bottom-right (`global-bottom.vue`). Cover (title) and closing center a logo at
+  the bottom and hide that corner footer (avoid a duplicate Nyx mark) — generic
+  default is Nyx-only; a deck pairs its product logo with Nyx side-by-side, no
+  divider (`.nx-cobrand`). Decide first/last vs. middle with `$nav` **in the
+  template** (`currentPage === 1 || currentPage === $nav.total`); referencing
+  `$nav` from `<script setup>` misfires on every page.
 - **Japanese decks omit English `.ja` subtext.** Cut small explanatory text
   rather than shrink it.
 - **No blank lines inside an HTML block** (`mdc: true` lets a blank line
@@ -81,3 +100,10 @@ yourself in-conversation.
 - Set-membership (A ⊂ B) drawn as side-by-side boxes — use nested shapes.
 - Editing the markdown without ever looking at the rendered PNG.
 - Big-bang rewrite of a slide that already works; bundling unrelated edits.
+- A title that wraps to two lines, or leans on `──` / hype words / military
+  metaphors; using `BIZ UDPMincho` for a heading or number.
+- Stacking flat info blocks (facts row + chips + grid) with no single focal
+  point — pick a hero; a left context-card + right timeline beats a 2-up grid.
+- A color legend the diagram could encode via arrows/position/edge-labels.
+- Translucent nodes that let lines bleed through; open "hand-drawn" arrowheads;
+  persistent pulse/blink animation.

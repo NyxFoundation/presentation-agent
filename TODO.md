@@ -28,7 +28,7 @@
 
 ## p11 (slides/SL16.md) — 削除
 
-- [ ] 合成パターンはここでの説明は不要なので**スライドごと削除** (slides.md の include も外す)。
+- [x] 合成パターンはここでの説明は不要なので**スライドごと削除** (slides.md の include も外す)。
 
 ## p12-15 (slides/SL17.md, SL18.md, SL20.md, SL21.md) — ナラティブ化
 

@@ -73,10 +73,6 @@ src: ./slides/SL15.md
 ---
 
 ---
-src: ./slides/SL16.md
----
-
----
 src: ./slides/SL17.md
 ---
 

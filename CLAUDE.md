@@ -484,3 +484,14 @@ done
 | Lazarus 等の attacker icon を盛り盛り入れる | clutter。攻撃の起点が必要なら 1 つ控えめに、または speaker notes だけで充分 |
 | viewBox 高さを 460+ にして title/footer と衝突 | viewBox 400-430 が安全 |
 | bottom phase bar (caption + dots + ⏸▶) を付ける | UI が「panel-thinking」を呼び込み、視線が図から逃げる。phase 進行は上部 code-strip と actor color 変化だけで伝える (§15.10) |
+
+## 16. 静的アーキ図 (matplotlib → PNG)
+
+時間進行のない 1 枚静止画のアーキテクチャ図 (侵害瞬間のスナップショット・トポロジ・依存マップ) は、`figures/<name>.py` (matplotlib) で生成し `public/images/` に出力する。トリガーは「静的アーキ図」「アーキテクチャ図を生成/修正」「Python で図を」等 — **必読**: `.claude/skills/arch-diagram/SKILL.md`。
+
+要点 (詳細はスキル本文):
+- スクリプトは **必ず `figures/` に置く** (scratchpad 放置禁止)。実行は `uv run --with matplotlib python3 figures/<name>.py`
+- フォント床: **pt ≒ canvas px** (max-h-440 表示時)。主要ラベル 15pt / サブ 13pt 未満禁止
+- 枠なし・凡例なし。ゴースト破線=不在、赤=攻撃経路専用 (**被害者ノードは中立色+赤の損失ラベル**)
+- 配線はラベルを貫通させない (白 bbox `on_line` / 合流トランク)。リーダー線は対象の真上から垂直に着地
+- 参照実装: `figures/kelp_arch.py` (SL08b)

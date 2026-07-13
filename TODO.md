@@ -4,7 +4,7 @@
 
 ## p6 (slides/SL09.md) — Proof-of-Exploit 図の差分化
 
-- [ ] p4 (SL08b) の KelpDAO アーキ図からの**技術差分がわかる図**に更新する。
+- [x] p4 (SL08b) の KelpDAO アーキ図からの**技術差分がわかる図**に更新する。
       p4 と同じ actor 配置・同じ設計語彙 (`/arch-diagram` スキル、`figures/kelp_arch.py` ベース) で描き、
       「何が追加されたか」(ZK Verifier / Circuit-Breaker 等) だけが新要素として浮き上がる構成にする。
 

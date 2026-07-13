@@ -43,7 +43,7 @@
 
 ## p17 (slides/SL23.md) — ライブデモ
 
-- [ ] ライブデモを追加する。
+- [x] ライブデモを追加する。(実演シーケンス + 会場参加用 QR: google/longfellow-zk + フォールバック手順)
 
 ## p18-23 (slides/SL25.md, SL26.md, SL27.md, SL28.md, SL29.md, SL31.md) — 講義向け改善
 

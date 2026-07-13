@@ -32,9 +32,10 @@
 
 ## p12-15 (slides/SL17.md, SL18.md, SL20.md, SL21.md) — ナラティブ化
 
-- [ ] p3 (SL07) のように**ナラティブとなる「実用性の変化グラフ」**を表示する構成に変える。
+- [x] p3 (SL07) のように**ナラティブとなる「実用性の変化グラフ」**を表示する構成に変える。
       グラフ上に具体的なプロジェクトのロゴ・名前を入れる (ロゴは `public/logos/` + 実寸逆算 zoom)。
-- [ ] 具体的な技術の説明はここでは省略する。
+      (figures/trend_{frontier,sumcheck,commit,longfellow}.py + trend_common.py)
+- [x] 具体的な技術の説明はここでは省略する。(技術詳細は speaker notes と SL19 に移設)
 
 ## p16 (slides/SL22.md) — ZK Bridge の位置づけ変更
 

@@ -19,7 +19,7 @@
 
 ## p8 (slides/SL12.md) — 静的図化
 
-- [ ] 場面ごとのアニメーションをやめて**静的な図**にする (`/arch-diagram` スキル)。
+- [x] 場面ごとのアニメーションをやめて**静的な図**にする (`/arch-diagram` スキル)。(figures/proof_meanings.py)
 
 ## p10 (slides/SL15.md) — Programmable Cryptography 図
 

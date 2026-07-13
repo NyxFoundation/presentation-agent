@@ -1,66 +1,10 @@
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
-
-const totalPhases = 3
-
-function getInitialPhase(): { phase: number; play: boolean } {
-  if (typeof window === 'undefined') return { phase: 0, play: true }
-  const p = new URLSearchParams(window.location.search)
-  const raw = p.get('phase') ?? p.get('stage')
-  if (raw == null) return { phase: 0, play: true }
-  const s = parseInt(raw, 10)
-  if (!Number.isNaN(s) && s >= 0 && s < totalPhases) return { phase: s, play: false }
-  return { phase: 0, play: true }
-}
-
-const initial = getInitialPhase()
-const phase = ref(initial.phase)
-const phaseDurations = [4000, 5000, 6000]
-const isPlaying = ref(initial.play)
-let timeoutId: ReturnType<typeof setTimeout> | null = null
-
-function scheduleNext() {
-  if (timeoutId) { clearTimeout(timeoutId); timeoutId = null }
-  if (!isPlaying.value) return
-  timeoutId = setTimeout(advance, phaseDurations[phase.value])
-}
-function advance() {
-  phase.value = (phase.value + 1) % totalPhases
-  scheduleNext()
-}
-onMounted(() => { if (isPlaying.value) scheduleNext() })
-onBeforeUnmount(() => { if (timeoutId) clearTimeout(timeoutId) })
-
-const captions = [
-  { code: 'Stage 1 — Source : 用途別の高級言語コード  (ZK 系 / MPC 系 / FHE 系)',
-    note: '宣言する syntax (#[private], #[party], #[encrypted]) で「何を隠すか」が変わる' },
-  { code: 'Stage 2 — Compile : 用途を問わず Circuit に集約',
-    note: 'gates + wires ─ ZK/MPC/FHE 共通の中間表現 (arithmetic / boolean / その他)' },
-  { code: 'Stage 3 — Execute : 暗号 backend に乗って実行可能なプログラムに',
-    note: '同じ pipeline ─ Source の syntax だけが用途で分岐する' },
-]
-
-const showCompile  = computed(() => phase.value >= 1)
-const showCircuit  = computed(() => phase.value >= 1)
-const showRun      = computed(() => phase.value >= 2)
-const showExec     = computed(() => phase.value >= 2)
-
-const compileFlow  = computed(() => phase.value === 1)
-const runFlow      = computed(() => phase.value === 2)
+// phase 機構なし — 3 ステージ常時アクティブ + 粒子が常時循環する
+// (SL14 と同じ「どの瞬間で切り取っても全体が説明できる」設計)
 </script>
 
 <template>
   <div class="cc-root">
-    <!-- Caption strip -->
-    <div class="cc-cap">
-      <transition name="cc-fade" mode="out-in">
-        <div :key="phase" class="cc-cap-inner">
-          <code class="cc-code">{{ captions[phase].code }}</code>
-          <div class="cc-note">{{ captions[phase].note }}</div>
-        </div>
-      </transition>
-    </div>
-
     <!-- Main SVG: full-height 3 stages -->
     <svg class="cc-svg" viewBox="0 0 1200 410" preserveAspectRatio="xMidYMid meet">
       <defs>
@@ -125,11 +69,25 @@ const runFlow      = computed(() => phase.value === 2)
       <!-- ==========================================================
            Convergent compile arrows: 3 → hub → circuit
            ========================================================== -->
-      <g class="cc-compile-zone" :class="{ 'is-active': showCompile }">
+      <g class="cc-compile-zone is-active">
         <!-- 3 fan-in curves toward central hub at (385, 213) -->
         <path d="M 320,89 C 355,89 365,200 385,213" class="cc-compile-edge cc-edge-zk"/>
         <path d="M 320,213 L 385,213" class="cc-compile-edge cc-edge-mpc"/>
         <path d="M 320,335 C 355,335 365,225 385,213" class="cc-compile-edge cc-edge-fhe"/>
+
+        <!-- traveling particles per source language (常時循環)。
+             ラベルより先に描画してテキストが粒子の上に乗るようにする -->
+        <g>
+          <circle r="5.5" class="cc-particle cc-p-zk">
+            <animateMotion dur="1.8s" repeatCount="indefinite" path="M 320,89 C 355,89 365,200 385,213"/>
+          </circle>
+          <circle r="5.5" class="cc-particle cc-p-mpc">
+            <animateMotion dur="1.8s" begin="-0.6s" repeatCount="indefinite" path="M 320,213 L 385,213"/>
+          </circle>
+          <circle r="5.5" class="cc-particle cc-p-fhe">
+            <animateMotion dur="1.8s" begin="-1.2s" repeatCount="indefinite" path="M 320,335 C 355,335 365,225 385,213"/>
+          </circle>
+        </g>
 
         <!-- compile hub (gear) -->
         <circle cx="385" cy="213" r="18" class="cc-compile-hub"/>
@@ -142,19 +100,6 @@ const runFlow      = computed(() => phase.value === 2)
 
         <!-- single arrow out -->
         <line x1="403" y1="213" x2="440" y2="213" class="cc-arrow-line" marker-end="url(#cc-ar)"/>
-
-        <!-- traveling particles per source language -->
-        <g v-if="compileFlow">
-          <circle r="5.5" class="cc-particle cc-p-zk">
-            <animateMotion dur="1.8s" repeatCount="indefinite" path="M 320,89 C 355,89 365,200 385,213"/>
-          </circle>
-          <circle r="5.5" class="cc-particle cc-p-mpc">
-            <animateMotion dur="1.8s" begin="-0.6s" repeatCount="indefinite" path="M 320,213 L 385,213"/>
-          </circle>
-          <circle r="5.5" class="cc-particle cc-p-fhe">
-            <animateMotion dur="1.8s" begin="-1.2s" repeatCount="indefinite" path="M 320,335 C 355,335 365,225 385,213"/>
-          </circle>
-        </g>
       </g>
 
       <!-- ==========================================================
@@ -162,7 +107,7 @@ const runFlow      = computed(() => phase.value === 2)
            ========================================================== -->
       <text x="625" y="20" text-anchor="middle" class="cc-stage-label">2. CIRCUIT  ─  共通の中間表現</text>
 
-      <g class="cc-circuit" :class="{ 'is-active': showCircuit }">
+      <g class="cc-circuit is-active">
         <!-- container -->
         <rect x="450" y="32" width="370" height="361" rx="12" class="cc-circuit-bg"/>
 
@@ -219,13 +164,14 @@ const runFlow      = computed(() => phase.value === 2)
       <!-- ==========================================================
            Run arrow
            ========================================================== -->
-      <g class="cc-arrow-g" :class="{ 'is-active': showRun }">
-        <text x="864" y="195" text-anchor="middle" class="cc-arrow-label">run</text>
-        <text x="864" y="218" text-anchor="middle" class="cc-arrow-sub">prover / protocol</text>
-        <text x="864" y="232" text-anchor="middle" class="cc-arrow-sub">/ FHE eval</text>
+      <g class="cc-arrow-g is-active">
+        <text x="864" y="190" text-anchor="middle" class="cc-arrow-label">run</text>
+        <text x="864" y="210" text-anchor="middle" class="cc-arrow-sub">prover</text>
+        <text x="864" y="224" text-anchor="middle" class="cc-arrow-sub">protocol</text>
+        <text x="864" y="238" text-anchor="middle" class="cc-arrow-sub">FHE eval</text>
         <line x1="827" y1="247" x2="900" y2="247" class="cc-arrow-line" marker-end="url(#cc-ar-green)"/>
 
-        <g v-if="runFlow">
+        <g>
           <circle r="6" class="cc-particle cc-p-green">
             <animateMotion dur="1.6s" repeatCount="indefinite" path="M 827,247 L 900,247"/>
           </circle>
@@ -237,7 +183,7 @@ const runFlow      = computed(() => phase.value === 2)
            ========================================================== -->
       <text x="1040" y="20" text-anchor="middle" class="cc-stage-label">3. EXECUTABLE  ─  共通</text>
 
-      <g class="cc-exec" :class="{ 'is-active': showExec }">
+      <g class="cc-exec is-active">
         <rect x="910" y="32" width="260" height="361" rx="12" class="cc-exec-bg"/>
 
         <!-- laptop (bigger, centered top) -->
@@ -295,33 +241,6 @@ const runFlow      = computed(() => phase.value === 2)
   gap: 6px;
   font-family: 'Noto Sans JP', sans-serif;
   color: #111827;
-}
-
-.cc-cap {
-  padding: 9px 16px;
-  background: #eef2ff;
-  border: 1px solid #c7d2fe;
-  border-radius: 0.5rem;
-  min-height: 52px;
-  display: flex;
-  align-items: center;
-}
-.cc-cap-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  width: 100%;
-}
-.cc-code {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 15px;
-  color: #1e1b4b;
-  font-weight: 700;
-}
-.cc-note {
-  font-size: 14px;
-  color: #4338ca;
-  font-weight: 600;
 }
 
 .cc-svg {
@@ -422,6 +341,10 @@ const runFlow      = computed(() => phase.value === 2)
   fill: #6b7280;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 600;
+  /* 白のハローで背後の配線がテキストを貫通しないようにする */
+  paint-order: stroke;
+  stroke: white;
+  stroke-width: 4px;
 }
 .cc-arrow-line {
   stroke: #475569;
@@ -551,10 +474,4 @@ const runFlow      = computed(() => phase.value === 2)
   font-weight: 700;
 }
 
-/* Transitions */
-.cc-fade-enter-active, .cc-fade-leave-active {
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-.cc-fade-enter-from { opacity: 0; transform: translateY(4px); }
-.cc-fade-leave-to { opacity: 0; transform: translateY(-4px); }
 </style>

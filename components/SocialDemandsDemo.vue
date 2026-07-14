@@ -92,7 +92,7 @@ const columns = [
           <feGaussianBlur stdDeviation="4"/>
         </filter>
         <marker id="hd-d3-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto">
-          <path d="M 0,0 L 10,5 L 0,10 z" fill="#7c3aed"/>
+          <path d="M 0,0 L 10,5 L 0,10 z" fill="#64748b"/>
         </marker>
       </defs>
 
@@ -193,18 +193,18 @@ const columns = [
           <g transform="translate(310, 240)" class="hd-d1-sourcecode">
             <!-- Document with folded corner -->
             <path d="M -28,-36 L 18,-36 L 30,-24 L 30,32 L -28,32 Z"
-                  fill="white" stroke="#10b981" stroke-width="2"/>
-            <path d="M 18,-36 L 18,-24 L 30,-24" fill="white" stroke="#10b981" stroke-width="2"/>
+                  fill="white" stroke="#f59e0b" stroke-width="2"/>
+            <path d="M 18,-36 L 18,-24 L 30,-24" fill="white" stroke="#f59e0b" stroke-width="2"/>
             <!-- Code lines (varied widths to mimic code) -->
-            <line x1="-22" y1="-22" x2="6" y2="-22" stroke="#059669" stroke-width="2"/>
-            <line x1="-22" y1="-14" x2="14" y2="-14" stroke="#10b981" stroke-width="2"/>
-            <line x1="-18" y1="-6" x2="0" y2="-6" stroke="#10b981" stroke-width="2"/>
-            <line x1="-22" y1="2" x2="12" y2="2" stroke="#059669" stroke-width="2"/>
-            <line x1="-18" y1="10" x2="6" y2="10" stroke="#10b981" stroke-width="2"/>
-            <line x1="-22" y1="18" x2="-2" y2="18" stroke="#059669" stroke-width="2"/>
-            <line x1="-22" y1="26" x2="10" y2="26" stroke="#10b981" stroke-width="2"/>
+            <line x1="-22" y1="-22" x2="6" y2="-22" stroke="#d97706" stroke-width="2"/>
+            <line x1="-22" y1="-14" x2="14" y2="-14" stroke="#f59e0b" stroke-width="2"/>
+            <line x1="-18" y1="-6" x2="0" y2="-6" stroke="#f59e0b" stroke-width="2"/>
+            <line x1="-22" y1="2" x2="12" y2="2" stroke="#d97706" stroke-width="2"/>
+            <line x1="-18" y1="10" x2="6" y2="10" stroke="#f59e0b" stroke-width="2"/>
+            <line x1="-22" y1="18" x2="-2" y2="18" stroke="#d97706" stroke-width="2"/>
+            <line x1="-22" y1="26" x2="10" y2="26" stroke="#f59e0b" stroke-width="2"/>
             <!-- ✓ stamp (green badge) -->
-            <circle cx="22" cy="22" r="11" fill="#10b981" stroke="#065f46" stroke-width="2"/>
+            <circle cx="22" cy="22" r="11" fill="#f59e0b" stroke="#92400e" stroke-width="2"/>
             <path d="M 17,22 L 21,26 L 27,18" stroke="white" stroke-width="2.5" fill="none"
                   stroke-linecap="round" stroke-linejoin="round"/>
           </g>
@@ -216,28 +216,28 @@ const columns = [
           <!-- 2 top nodes -->
           <!-- CONSENSUS NODE (top-left) -->
           <g transform="translate(85, 130)" class="hd-d2-node">
-            <rect x="-36" y="-26" width="72" height="52" rx="26" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+            <rect x="-36" y="-26" width="72" height="52" rx="26" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
             <!-- validator dots (network) -->
-            <circle cx="-22" cy="-12" r="3" fill="#2563eb"/>
-            <circle cx="-8" cy="-15" r="3" fill="#2563eb"/>
-            <circle cx="8" cy="-13" r="3" fill="#2563eb"/>
-            <circle cx="22" cy="-12" r="3" fill="#2563eb"/>
-            <circle cx="-16" cy="0" r="3" fill="#2563eb"/>
-            <circle cx="0" cy="-2" r="3" fill="#2563eb"/>
-            <circle cx="16" cy="0" r="3" fill="#2563eb"/>
-            <circle cx="-22" cy="13" r="3" fill="#2563eb"/>
-            <circle cx="-6" cy="14" r="3" fill="#2563eb"/>
-            <circle cx="10" cy="13" r="3" fill="#2563eb"/>
-            <circle cx="22" cy="14" r="3" fill="#2563eb"/>
+            <circle cx="-22" cy="-12" r="3" fill="#475569"/>
+            <circle cx="-8" cy="-15" r="3" fill="#475569"/>
+            <circle cx="8" cy="-13" r="3" fill="#475569"/>
+            <circle cx="22" cy="-12" r="3" fill="#475569"/>
+            <circle cx="-16" cy="0" r="3" fill="#475569"/>
+            <circle cx="0" cy="-2" r="3" fill="#475569"/>
+            <circle cx="16" cy="0" r="3" fill="#475569"/>
+            <circle cx="-22" cy="13" r="3" fill="#475569"/>
+            <circle cx="-6" cy="14" r="3" fill="#475569"/>
+            <circle cx="10" cy="13" r="3" fill="#475569"/>
+            <circle cx="22" cy="14" r="3" fill="#475569"/>
             <!-- mesh lines -->
-            <line x1="-22" y1="-12" x2="-8" y2="-15" stroke="#60a5fa" stroke-width="0.7"/>
-            <line x1="-8" y1="-15" x2="8" y2="-13" stroke="#60a5fa" stroke-width="0.7"/>
-            <line x1="8" y1="-13" x2="22" y2="-12" stroke="#60a5fa" stroke-width="0.7"/>
-            <line x1="-16" y1="0" x2="0" y2="-2" stroke="#60a5fa" stroke-width="0.7"/>
-            <line x1="0" y1="-2" x2="16" y2="0" stroke="#60a5fa" stroke-width="0.7"/>
-            <line x1="-22" y1="13" x2="-6" y2="14" stroke="#60a5fa" stroke-width="0.7"/>
-            <line x1="-6" y1="14" x2="10" y2="13" stroke="#60a5fa" stroke-width="0.7"/>
-            <line x1="10" y1="13" x2="22" y2="14" stroke="#60a5fa" stroke-width="0.7"/>
+            <line x1="-22" y1="-12" x2="-8" y2="-15" stroke="#94a3b8" stroke-width="0.7"/>
+            <line x1="-8" y1="-15" x2="8" y2="-13" stroke="#94a3b8" stroke-width="0.7"/>
+            <line x1="8" y1="-13" x2="22" y2="-12" stroke="#94a3b8" stroke-width="0.7"/>
+            <line x1="-16" y1="0" x2="0" y2="-2" stroke="#94a3b8" stroke-width="0.7"/>
+            <line x1="0" y1="-2" x2="16" y2="0" stroke="#94a3b8" stroke-width="0.7"/>
+            <line x1="-22" y1="13" x2="-6" y2="14" stroke="#94a3b8" stroke-width="0.7"/>
+            <line x1="-6" y1="14" x2="10" y2="13" stroke="#94a3b8" stroke-width="0.7"/>
+            <line x1="10" y1="13" x2="22" y2="14" stroke="#94a3b8" stroke-width="0.7"/>
           </g>
           <text x="85" y="190" text-anchor="middle" class="hd-d2-actor-label">Consensus Node</text>
           <text x="85" y="206" text-anchor="middle" class="hd-d2-actor-label-sub">(validators)</text>
@@ -250,9 +250,9 @@ const columns = [
             <rect x="-26" y="-7" width="52" height="9" rx="1.5" fill="#475569"/>
             <rect x="-26" y="5" width="52" height="9" rx="1.5" fill="#475569"/>
             <!-- LEDs -->
-            <circle cx="-20" cy="-14.5" r="1.6" fill="#10b981"/>
-            <circle cx="-20" cy="-2.5" r="1.6" fill="#10b981"/>
-            <circle cx="-20" cy="9.5" r="1.6" fill="#10b981"/>
+            <circle cx="-20" cy="-14.5" r="1.6" fill="#f59e0b"/>
+            <circle cx="-20" cy="-2.5" r="1.6" fill="#f59e0b"/>
+            <circle cx="-20" cy="9.5" r="1.6" fill="#f59e0b"/>
             <!-- "EVM" label inside -->
             <text x="6" y="-12" text-anchor="middle" class="hd-d2-rack-text">EVM</text>
             <text x="6" y="0" text-anchor="middle" class="hd-d2-rack-text">OP</text>
@@ -324,26 +324,26 @@ const columns = [
 
           <!-- $ flow institution → DeFi -->
           <line x1="100" y1="130" x2="270" y2="130" class="hd-d3-flow-wire"/>
-          <text class="hd-d3-money hd-d3-money-mini" font-family="JetBrains Mono" font-weight="900" fill="#10b981">$</text>
-          <text class="hd-d3-money hd-d3-money-mini hd-d3-money-2" font-family="JetBrains Mono" font-weight="900" fill="#10b981">$</text>
+          <text class="hd-d3-money hd-d3-money-mini" font-family="JetBrains Mono" font-weight="900" fill="#f59e0b">$</text>
+          <text class="hd-d3-money hd-d3-money-mini hd-d3-money-2" font-family="JetBrains Mono" font-weight="900" fill="#f59e0b">$</text>
 
           <!-- DeFi protocol (right) -->
           <g transform="translate(310, 130)" class="hd-d3-defi">
             <!-- gear teeth (slow spin) -->
             <g class="hd-d3-gear-spin">
-              <rect x="-3" y="-28" width="6" height="7" fill="#7c3aed"/>
-              <rect x="-3" y="21" width="6" height="7" fill="#7c3aed"/>
-              <rect x="-28" y="-3" width="7" height="6" fill="#7c3aed"/>
-              <rect x="21" y="-3" width="7" height="6" fill="#7c3aed"/>
-              <rect x="-20" y="-20" width="6" height="6" fill="#7c3aed" transform="rotate(45)"/>
-              <rect x="14" y="-20" width="6" height="6" fill="#7c3aed" transform="rotate(45)"/>
-              <rect x="-20" y="14" width="6" height="6" fill="#7c3aed" transform="rotate(45)"/>
-              <rect x="14" y="14" width="6" height="6" fill="#7c3aed" transform="rotate(45)"/>
+              <rect x="-3" y="-28" width="6" height="7" fill="#64748b"/>
+              <rect x="-3" y="21" width="6" height="7" fill="#64748b"/>
+              <rect x="-28" y="-3" width="7" height="6" fill="#64748b"/>
+              <rect x="21" y="-3" width="7" height="6" fill="#64748b"/>
+              <rect x="-20" y="-20" width="6" height="6" fill="#64748b" transform="rotate(45)"/>
+              <rect x="14" y="-20" width="6" height="6" fill="#64748b" transform="rotate(45)"/>
+              <rect x="-20" y="14" width="6" height="6" fill="#64748b" transform="rotate(45)"/>
+              <rect x="14" y="14" width="6" height="6" fill="#64748b" transform="rotate(45)"/>
             </g>
-            <circle cx="0" cy="0" r="22" fill="#faf5ff" stroke="#7c3aed" stroke-width="2.5"/>
-            <path d="M -9,-7 A 11,11 0 0,1 9,-7" stroke="#7c3aed" stroke-width="2.2"
+            <circle cx="0" cy="0" r="22" fill="#f8fafc" stroke="#64748b" stroke-width="2.5"/>
+            <path d="M -9,-7 A 11,11 0 0,1 9,-7" stroke="#64748b" stroke-width="2.2"
                   fill="none" marker-end="url(#hd-d3-arrow)"/>
-            <path d="M 9,7 A 11,11 0 0,1 -9,7" stroke="#7c3aed" stroke-width="2.2"
+            <path d="M 9,7 A 11,11 0 0,1 -9,7" stroke="#64748b" stroke-width="2.2"
                   fill="none" marker-end="url(#hd-d3-arrow)"/>
           </g>
           <text x="310" y="195" text-anchor="middle" class="hd-d3-actor-label">DeFi (Aave / Uniswap)</text>
@@ -428,8 +428,8 @@ const columns = [
 /* ===== Top hook ===== */
 .hd-hook {
   padding: 10px 16px;
-  background: linear-gradient(90deg, #eef2ff 0%, #fffbeb 100%);
-  border: 1px solid #c7d2fe;
+  background: linear-gradient(90deg, #f8fafc 0%, #fffbeb 100%);
+  border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -445,13 +445,13 @@ const columns = [
   font-weight: 900;
   letter-spacing: 0.18em;
   color: white;
-  background: #1e1b4b;
+  background: #1e293b;
 }
 .hd-hook-text {
   font-size: 17px;
   font-weight: 700;
-  color: #1e1b4b;
-  font-family: 'BIZ UDPMincho', serif;
+  color: #1e293b;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .hd-hook-em {
   color: #b45309;
@@ -498,27 +498,27 @@ const columns = [
 }
 
 /* per-column color */
-.hd-col-p .hd-col-header { fill: #7c3aed; }
-.hd-col-p .hd-col-bg     { stroke: #c4b5fd; }
-.hd-col-p .hd-num        { fill: #7c3aed; }
-.hd-col-p .hd-trend-em   { fill: #6d28d9; }
-.hd-col-p .hd-ev-tag     { fill: #7c3aed; }
-.hd-col-p .hd-stat       { fill: #6d28d9; }
-.hd-col-p .hd-answer-arrow { fill: #7c3aed; }
-.hd-col-p .hd-answer     { fill: #4c1d95; }
-.hd-col-p .hd-pill-bg    { fill: #faf5ff; stroke: #c4b5fd; }
-.hd-col-p .hd-pill-text-mini { fill: #5b21b6; }
+.hd-col-p .hd-col-header { fill: #64748b; }
+.hd-col-p .hd-col-bg     { stroke: #cbd5e1; }
+.hd-col-p .hd-num        { fill: #64748b; }
+.hd-col-p .hd-trend-em   { fill: #475569; }
+.hd-col-p .hd-ev-tag     { fill: #64748b; }
+.hd-col-p .hd-stat       { fill: #475569; }
+.hd-col-p .hd-answer-arrow { fill: #64748b; }
+.hd-col-p .hd-answer     { fill: #1e293b; }
+.hd-col-p .hd-pill-bg    { fill: #f8fafc; stroke: #cbd5e1; }
+.hd-col-p .hd-pill-text-mini { fill: #334155; }
 
-.hd-col-g .hd-col-header { fill: #059669; }
-.hd-col-g .hd-col-bg     { stroke: #6ee7b7; }
-.hd-col-g .hd-num        { fill: #059669; }
-.hd-col-g .hd-trend-em   { fill: #047857; }
-.hd-col-g .hd-ev-tag     { fill: #059669; }
-.hd-col-g .hd-stat       { fill: #047857; }
-.hd-col-g .hd-answer-arrow { fill: #059669; }
-.hd-col-g .hd-answer     { fill: #064e3b; }
-.hd-col-g .hd-pill-bg    { fill: #f0fdf4; stroke: #6ee7b7; }
-.hd-col-g .hd-pill-text-mini { fill: #065f46; }
+.hd-col-g .hd-col-header { fill: #d97706; }
+.hd-col-g .hd-col-bg     { stroke: #fcd34d; }
+.hd-col-g .hd-num        { fill: #d97706; }
+.hd-col-g .hd-trend-em   { fill: #b45309; }
+.hd-col-g .hd-ev-tag     { fill: #d97706; }
+.hd-col-g .hd-stat       { fill: #b45309; }
+.hd-col-g .hd-answer-arrow { fill: #d97706; }
+.hd-col-g .hd-answer     { fill: #78350f; }
+.hd-col-g .hd-pill-bg    { fill: #fffbeb; stroke: #fcd34d; }
+.hd-col-g .hd-pill-text-mini { fill: #92400e; }
 
 .hd-col-a .hd-col-header { fill: #d97706; }
 .hd-col-a .hd-col-bg     { stroke: #fcd34d; }
@@ -547,32 +547,32 @@ const columns = [
   stroke-dasharray: 3 3;
 }
 .hd-d1-bg-sc {
-  fill: #ecfdf5;
-  stroke: #6ee7b7;
+  fill: #fffbeb;
+  stroke: #fcd34d;
   stroke-width: 1;
   stroke-dasharray: 3 3;
 }
 
 /* Actor labels */
 .hd-d1-actor-label {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 800;
   fill: #374151;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.04em;
 }
 .hd-d1-actor-label-ok {
-  fill: #065f46;
+  fill: #92400e;
 }
 .hd-d2-actor-label {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 800;
   fill: #374151;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.04em;
 }
 .hd-d2-actor-label-sub {
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 600;
   fill: #6b7280;
   font-family: 'JetBrains Mono', monospace;
@@ -614,10 +614,10 @@ const columns = [
 
 /* Worry bubble labels (Col 3) */
 .hd-d3-worry-label {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 900;
   fill: #991b1b;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .hd-d3-worry-q {
   font-size: 16px;
@@ -643,14 +643,14 @@ const columns = [
   fill: #dc2626;
 }
 .hd-d2-arrow-label {
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 800;
   fill: #991b1b;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.04em;
 }
 .hd-d2-rack-text {
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 900;
   fill: white;
   font-family: 'JetBrains Mono', monospace;
@@ -676,7 +676,7 @@ const columns = [
   width: 100%;
   height: 100%;
   background: white;
-  border: 2px solid #7c3aed;
+  border: 2px solid #d97706;
   border-radius: 6px;
   overflow: hidden;
   font-family: 'Noto Sans JP', sans-serif;
@@ -688,8 +688,8 @@ const columns = [
   font-size: 10px;
 }
 .hd-d3-tx-header {
-  background: #7c3aed;
-  color: white;
+  background: #fef3c7;
+  color: #92400e;
   padding: 5px 10px;
   display: flex;
   justify-content: space-between;
@@ -710,7 +710,7 @@ const columns = [
   padding: 8px 10px;
   flex: 1;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.4;
 }
 .hd-d3-tx-body-compact {
@@ -745,7 +745,7 @@ const columns = [
   min-width: 58px;
 }
 .hd-d3-tx-value {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 800;
   color: #1f2937;
 }
@@ -767,7 +767,7 @@ const columns = [
 
 /* On-chain connector (institution+DeFi → TX card) */
 .hd-d3-onchain-line {
-  stroke: #7c3aed;
+  stroke: #64748b;
   stroke-width: 2;
   stroke-dasharray: 4 3;
   animation: hd-d3-onchain-flow 1s linear infinite;
@@ -776,12 +776,12 @@ const columns = [
   to { stroke-dashoffset: -14; }
 }
 .hd-d3-onchain-head {
-  fill: #7c3aed;
+  fill: #64748b;
 }
 .hd-d3-onchain-label {
   font-size: 10px;
   font-weight: 800;
-  fill: #5b21b6;
+  fill: #334155;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.06em;
 }
@@ -816,10 +816,10 @@ const columns = [
   height: 14px;
 }
 .hd-d3-bubble-title {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 900;
   color: #991b1b;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 0.02em;
 }
 .hd-d3-bubble-sub {
@@ -879,7 +879,7 @@ const columns = [
   font-size: 12px;
   font-weight: 900;
   fill: #991b1b;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 0.04em;
 }
 
@@ -898,7 +898,7 @@ const columns = [
   to { stroke-dashoffset: -14; }
 }
 .hd-d2-data {
-  fill: #10b981;
+  fill: #f59e0b;
   filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.6));
 }
 /* Particles from Consensus → zkVM and Execution → zkVM */
@@ -1000,7 +1000,7 @@ const columns = [
 
 /* Evidence (不安) */
 .hd-ev-tag {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 900;
   letter-spacing: 0.14em;
   font-family: 'JetBrains Mono', monospace;
@@ -1059,7 +1059,7 @@ const columns = [
 
 /* Concrete fact */
 .hd-fact-tag {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 900;
   letter-spacing: 0.16em;
   font-family: 'JetBrains Mono', monospace;
@@ -1099,7 +1099,7 @@ const columns = [
   font-family: 'Noto Sans JP', sans-serif;
 }
 .hd-stat-src {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   fill: #9ca3af;
   font-family: 'JetBrains Mono', monospace;
@@ -1113,8 +1113,8 @@ const columns = [
   opacity: 0.65;
   animation: hd-ray-flow 1.6s linear infinite;
 }
-.hd-ray-p { stroke: #a78bfa; }
-.hd-ray-g { stroke: #34d399; }
+.hd-ray-p { stroke: #94a3b8; }
+.hd-ray-g { stroke: #fbbf24; }
 .hd-ray-a { stroke: #fbbf24; }
 @keyframes hd-ray-flow {
   to { stroke-dashoffset: -20; }
@@ -1125,13 +1125,13 @@ const columns = [
   filter: drop-shadow(0 0 5px currentColor);
 }
 .hd-particle-p {
-  fill: #7c3aed;
-  color: #7c3aed;
+  fill: #64748b;
+  color: #64748b;
   animation: hd-flow-p 2.4s linear infinite;
 }
 .hd-particle-g {
-  fill: #059669;
-  color: #059669;
+  fill: #d97706;
+  color: #d97706;
   animation: hd-flow-g 2.4s linear infinite;
 }
 .hd-particle-a {
@@ -1194,7 +1194,7 @@ const columns = [
   font-size: 22px;
   font-weight: 900;
   fill: #92400e;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 0.04em;
 }
 
@@ -1205,12 +1205,12 @@ const columns = [
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .hd-climax {
   font-size: 17px;
   font-weight: 700;
-  color: #1e1b4b;
+  color: #1e293b;
   letter-spacing: 0.02em;
   text-align: center;
 }

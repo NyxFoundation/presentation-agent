@@ -241,8 +241,8 @@ const currentCaption = computed(() => captions[phase.value])
 /* ===== Caption ===== */
 .fq-caption {
   padding: 9px 16px;
-  background: #eef2ff;
-  border: 1px solid #c7d2fe;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
   min-height: 42px;
   display: flex;
@@ -260,18 +260,18 @@ const currentCaption = computed(() => captions[phase.value])
   font-weight: 900;
   letter-spacing: 0.04em;
   color: white;
-  background: #4f46e5;
+  background: #475569;
 }
 .fq-cap-tag.is-t  { background: #6b7280; }
-.fq-cap-tag.is-q1 { background: #2563eb; }
-.fq-cap-tag.is-q2 { background: #dc2626; }
+.fq-cap-tag.is-q1 { background: #475569; }
+.fq-cap-tag.is-q2 { background: #334155; }
 .fq-cap-tag.is-q3 { background: #d97706; }
-.fq-cap-tag.is-r  { background: #059669; }
+.fq-cap-tag.is-r  { background: #d97706; }
 .fq-cap-code {
   font-family: 'JetBrains Mono', monospace;
   font-size: 15px;
   font-weight: 700;
-  color: #1e1b4b;
+  color: #1e293b;
 }
 .fq-cap-enter-active, .fq-cap-leave-active {
   transition: opacity .35s ease, transform .35s ease;
@@ -290,7 +290,7 @@ const currentCaption = computed(() => captions[phase.value])
 /* ===== Q2 spotlight ===== */
 .fq-q2-spot {
   fill: rgba(254, 215, 170, 0.35);
-  stroke: #f97316;
+  stroke: #d97706;
   stroke-width: 2.5;
   stroke-dasharray: 6 3;
   animation: fq-spot-pulse 1.6s ease-in-out infinite;
@@ -306,8 +306,8 @@ const currentCaption = computed(() => captions[phase.value])
 .fq-q-text {
   font-size: 17px;
   font-weight: 700;
-  fill: #1e1b4b;
-  font-family: 'BIZ UDPMincho', serif;
+  fill: #1e293b;
+  font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 0.02em;
 }
 .fq-q-text-verdict {
@@ -318,13 +318,13 @@ const currentCaption = computed(() => captions[phase.value])
 
 /* ===== Label bands ===== */
 .fq-band-smbc rect {
-  fill: #1d4ed8;
-  stroke: #1e40af;
+  fill: #475569;
+  stroke: #334155;
   stroke-width: 1.5;
 }
 .fq-band-match rect {
-  fill: #047857;
-  stroke: #065f46;
+  fill: #b45309;
+  stroke: #92400e;
   stroke-width: 1.5;
 }
 .fq-band-eyebrow {
@@ -338,7 +338,7 @@ const currentCaption = computed(() => captions[phase.value])
   font-size: 26px;
   font-weight: 900;
   fill: white;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 0.04em;
 }
 .fq-band-sub {
@@ -362,12 +362,12 @@ const currentCaption = computed(() => captions[phase.value])
   stroke-width: 2;
 }
 .fq-cell-smbc.is-filled .fq-cell-bg {
-  stroke: #2563eb;
-  fill: #eff6ff;
+  stroke: #475569;
+  fill: #f8fafc;
 }
 .fq-cell-match.is-filled .fq-cell-bg {
-  stroke: #059669;
-  fill: #ecfdf5;
+  stroke: #d97706;
+  fill: #fffbeb;
 }
 .fq-cell.is-key .fq-cell-bg {
   stroke-width: 3;
@@ -381,7 +381,7 @@ const currentCaption = computed(() => captions[phase.value])
 }
 .fq-cell-em {
   font-weight: 900;
-  fill: #b91c1c;
+  fill: #1e293b;
   font-size: 17px;
 }
 
@@ -397,15 +397,15 @@ const currentCaption = computed(() => captions[phase.value])
   transition: stroke .5s, fill .5s, stroke-dasharray .5s, filter .5s;
 }
 .fq-verdict-smbc.is-on .fq-verdict-bg {
-  fill: #dbeafe;
-  stroke: #1d4ed8;
+  fill: #f1f5f9;
+  stroke: #475569;
   stroke-width: 3;
   stroke-dasharray: 0;
   filter: drop-shadow(0 0 8px rgba(29, 78, 216, 0.5));
 }
 .fq-verdict-match.is-on .fq-verdict-bg {
-  fill: #d1fae5;
-  stroke: #047857;
+  fill: #fef3c7;
+  stroke: #b45309;
   stroke-width: 3;
   stroke-dasharray: 0;
   filter: drop-shadow(0 0 8px rgba(4, 120, 87, 0.5));
@@ -416,8 +416,8 @@ const currentCaption = computed(() => captions[phase.value])
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.06em;
 }
-.fq-verdict-smbc .fq-verdict-big  { fill: #1d4ed8; }
-.fq-verdict-match .fq-verdict-big { fill: #047857; }
+.fq-verdict-smbc .fq-verdict-big  { fill: #475569; }
+.fq-verdict-match .fq-verdict-big { fill: #b45309; }
 .fq-verdict-sub {
   font-size: 13px;
   font-weight: 700;

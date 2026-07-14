@@ -73,8 +73,8 @@ const traps = [
     tag: '罠 #2', cat: '[安全性]',
     title: 'soundness ≠ zero-knowledge — 両方独立に壊れうる',
     trapLines: [
-      '実例: Semaphore signal hash bug',
-      'public input "signalHash" が回路内で実際に使われていなかった',
+      '証明の中身を、後から書き換えられてしまうバグ',
+      '実例: Semaphore signal hash bug — public input "signalHash" が回路内で実際に使われていなかった',
       'attacker は proof 取得後に signalHash を書き換えて任意 signal 偽装',
     ],
     fixLines: [
@@ -86,8 +86,8 @@ const traps = [
     tag: '罠 #3', cat: '[安全性]',
     title: 'Fiat-Shamir の Random Oracle instantiation',
     trapLines: [
+      'ハッシュ関数の選び方次第で、理論的に安全なはずの証明が実際には破られる',
       'KRS25 (eprint 2025/611) — GKR-based SNARK の現実的攻撃',
-      'ハッシュ選択 / transcript design を雑に扱うと突破される',
       '「論文は安全」≠「実装は安全」',
     ],
     fixLines: [
@@ -317,8 +317,8 @@ const currentTrap = computed(() => traps[phase.value])
 /* ===== Caption ===== */
 .dt-caption {
   padding: 9px 16px;
-  background: #eef2ff;
-  border: 1px solid #c7d2fe;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
   min-height: 42px;
   display: flex;
@@ -334,18 +334,18 @@ const currentTrap = computed(() => traps[phase.value])
   font-weight: 900;
   letter-spacing: 0.04em;
   color: white;
-  background: #4f46e5;
+  background: #475569;
 }
 .dt-cap-tag.is-p  { background: #6b7280; }
 .dt-cap-tag.is-t1 { background: #d97706; }
 .dt-cap-tag.is-t2 { background: #dc2626; }
 .dt-cap-tag.is-t3 { background: #dc2626; }
-.dt-cap-tag.is-ok { background: #059669; }
+.dt-cap-tag.is-ok { background: #d97706; }
 .dt-cap-code {
   font-family: 'JetBrains Mono', monospace;
   font-size: 15px;
   font-weight: 700;
-  color: #1e1b4b;
+  color: #1e293b;
 }
 .dt-cap-enter-active, .dt-cap-leave-active {
   transition: opacity .35s ease, transform .35s ease;
@@ -371,14 +371,14 @@ const currentTrap = computed(() => traps[phase.value])
 .dt-stage-num {
   font-size: 14px;
   font-weight: 900;
-  fill: #6366f1;
+  fill: #475569;
   font-family: 'JetBrains Mono', monospace;
 }
 .dt-stage-title {
   font-size: 17px;
   font-weight: 700;
   fill: #111827;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .dt-stage-sub {
   font-size: 12px;
@@ -388,8 +388,8 @@ const currentTrap = computed(() => traps[phase.value])
 }
 
 .dt-stage.dt-stage-ok .dt-stage-bg {
-  fill: #f0fdf4;
-  stroke: #10b981;
+  fill: #fffbeb;
+  stroke: #f59e0b;
 }
 .dt-stage.is-trap-1 .dt-stage-bg {
   fill: #fffbeb;
@@ -405,15 +405,15 @@ const currentTrap = computed(() => traps[phase.value])
   filter: drop-shadow(0 0 7px rgba(220, 38, 38, 0.6));
 }
 .dt-stage.is-fixed .dt-stage-bg {
-  fill: #ecfdf5;
-  stroke: #059669;
+  fill: #fffbeb;
+  stroke: #d97706;
   stroke-width: 2.5;
 }
 
 /* Verify stage states */
 .dt-stage-verify.is-ok .dt-stage-bg {
-  fill: #ecfdf5;
-  stroke: #10b981;
+  fill: #fffbeb;
+  stroke: #f59e0b;
   stroke-width: 2.5;
 }
 .dt-stage-verify.is-warn .dt-stage-bg {
@@ -436,7 +436,7 @@ const currentTrap = computed(() => traps[phase.value])
   font-weight: 900;
   font-size: 13px;
 }
-.dt-stage-verify.is-ok .dt-stage-sub     { fill: #059669; }
+.dt-stage-verify.is-ok .dt-stage-sub     { fill: #d97706; }
 .dt-stage-verify.is-warn .dt-stage-sub   { fill: #b45309; }
 .dt-stage-verify.is-broken .dt-stage-sub { fill: #991b1b; }
 
@@ -466,8 +466,8 @@ const currentTrap = computed(() => traps[phase.value])
 
 /* OK badge on fixed stages */
 .dt-ok-circle {
-  fill: #059669;
-  stroke: #065f46;
+  fill: #d97706;
+  stroke: #92400e;
   stroke-width: 1.5;
 }
 .dt-ok-text {
@@ -490,8 +490,8 @@ const currentTrap = computed(() => traps[phase.value])
   stroke-width: 1.2;
 }
 .dt-col-head-bg-fix {
-  fill: #ecfdf5;
-  stroke: #6ee7b7;
+  fill: #fffbeb;
+  stroke: #fcd34d;
   stroke-width: 1.2;
 }
 .dt-col-head-tag {
@@ -504,7 +504,7 @@ const currentTrap = computed(() => traps[phase.value])
 .dt-col-head-tag-fix {
   font-size: 17px;
   font-weight: 900;
-  fill: #065f46;
+  fill: #92400e;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.06em;
 }
@@ -519,13 +519,13 @@ const currentTrap = computed(() => traps[phase.value])
   font-size: 17px;
   font-weight: 800;
   fill: #111827;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .dt-col-title-fix {
   font-size: 16px;
   font-weight: 800;
-  fill: #065f46;
-  font-family: 'BIZ UDPMincho', serif;
+  fill: #92400e;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .dt-col-line {
   font-size: 14px;
@@ -548,8 +548,8 @@ const currentTrap = computed(() => traps[phase.value])
 
 /* ===== Fixed-row summary ===== */
 .dt-fixed-bg {
-  fill: #ecfdf5;
-  stroke: #10b981;
+  fill: #fffbeb;
+  stroke: #f59e0b;
   stroke-width: 2.5;
   stroke-dasharray: 0;
   filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.35));
@@ -557,20 +557,20 @@ const currentTrap = computed(() => traps[phase.value])
 .dt-fixed-head {
   font-size: 22px;
   font-weight: 900;
-  fill: #065f46;
-  font-family: 'BIZ UDPMincho', serif;
+  fill: #92400e;
+  font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 0.04em;
 }
 .dt-fixed-sub {
   font-size: 14px;
   font-weight: 700;
-  fill: #047857;
+  fill: #b45309;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.06em;
 }
 .dt-pill-circle {
-  fill: #10b981;
-  stroke: #065f46;
+  fill: #f59e0b;
+  stroke: #92400e;
   stroke-width: 2;
 }
 .dt-pill-num {
@@ -582,14 +582,14 @@ const currentTrap = computed(() => traps[phase.value])
 .dt-pill-cat {
   font-size: 13px;
   font-weight: 800;
-  fill: #047857;
+  fill: #b45309;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.04em;
 }
 .dt-pill-title {
   font-size: 15px;
   font-weight: 700;
-  fill: #064e3b;
+  fill: #78350f;
   font-family: 'Noto Sans JP', sans-serif;
 }
 .dt-fixed-enter-active { transition: opacity .5s ease, transform .5s ease; }

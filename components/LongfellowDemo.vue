@@ -74,7 +74,7 @@ const verifierAccept = computed(() => phase.value >= 4)
           <path d="M 0,0 L 10,5 L 0,10 z" fill="#b45309"/>
         </marker>
         <marker id="lf-ar-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-          <path d="M 0,0 L 10,5 L 0,10 z" fill="#059669"/>
+          <path d="M 0,0 L 10,5 L 0,10 z" fill="#d97706"/>
         </marker>
       </defs>
 
@@ -184,7 +184,7 @@ const verifierAccept = computed(() => phase.value >= 4)
         <g v-if="showVerifyOk" class="lf-wire-proof">
           <line x1="745" y1="170" x2="950" y2="170" class="lf-wire-green"
                 marker-end="url(#lf-ar-green)"/>
-          <rect x="795" y="148" width="155" height="20" rx="3" fill="#dcfce7" stroke="#059669" stroke-width="1.5"/>
+          <rect x="795" y="148" width="155" height="20" rx="3" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
           <text x="872" y="163" text-anchor="middle" class="lf-wire-label-g">π : age ≥ 18  ✓</text>
         </g>
       </transition>
@@ -193,27 +193,27 @@ const verifierAccept = computed(() => phase.value >= 4)
       <transition name="lf-fade">
         <g v-if="showDeployStat" class="lf-deploy">
           <rect x="60" y="260" width="1090" height="86" rx="8"
-                fill="#f0fdf4" stroke="#059669" stroke-width="2"/>
+                fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
           <text x="80" y="284" class="lf-deploy-label">DEPLOYMENT STATUS</text>
           <g class="lf-deploy-chips">
             <g transform="translate(80, 300)">
-              <rect x="0" y="0" width="190" height="30" rx="5" fill="white" stroke="#86efac" stroke-width="1.5"/>
+              <rect x="0" y="0" width="190" height="30" rx="5" fill="white" stroke="#fcd34d" stroke-width="1.5"/>
               <text x="95" y="20" text-anchor="middle" class="lf-chip-text">Google Wallet ▸ deploy 済</text>
             </g>
             <g transform="translate(290, 300)">
-              <rect x="0" y="0" width="170" height="30" rx="5" fill="white" stroke="#86efac" stroke-width="1.5"/>
+              <rect x="0" y="0" width="170" height="30" rx="5" fill="white" stroke="#fcd34d" stroke-width="1.5"/>
               <text x="85" y="20" text-anchor="middle" class="lf-chip-text">Bumble ▸ 認証稼働</text>
             </g>
             <g transform="translate(480, 300)">
-              <rect x="0" y="0" width="200" height="30" rx="5" fill="white" stroke="#86efac" stroke-width="1.5"/>
+              <rect x="0" y="0" width="200" height="30" rx="5" fill="white" stroke="#fcd34d" stroke-width="1.5"/>
               <text x="100" y="20" text-anchor="middle" class="lf-chip-text">EUDI Wallet ▸ 採用検討</text>
             </g>
             <g transform="translate(700, 300)">
-              <rect x="0" y="0" width="195" height="30" rx="5" fill="white" stroke="#86efac" stroke-width="1.5"/>
+              <rect x="0" y="0" width="195" height="30" rx="5" fill="white" stroke="#fcd34d" stroke-width="1.5"/>
               <text x="97" y="20" text-anchor="middle" class="lf-chip-text">IETF CFRG ▸ 標準化議論</text>
             </g>
             <g transform="translate(915, 300)">
-              <rect x="0" y="0" width="225" height="30" rx="5" fill="white" stroke="#86efac" stroke-width="1.5"/>
+              <rect x="0" y="0" width="225" height="30" rx="5" fill="white" stroke="#fcd34d" stroke-width="1.5"/>
               <text x="112" y="20" text-anchor="middle" class="lf-chip-text">Trail of Bits + Ligero 監査済</text>
             </g>
           </g>
@@ -236,8 +236,8 @@ const verifierAccept = computed(() => phase.value >= 4)
 
 .lf-cap {
   padding: 9px 16px;
-  background: #eef2ff;
-  border: 1px solid #c7d2fe;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
   min-height: 52px;
   display: flex;
@@ -252,12 +252,12 @@ const verifierAccept = computed(() => phase.value >= 4)
 .lf-code {
   font-family: 'JetBrains Mono', monospace;
   font-size: 17px;
-  color: #1e1b4b;
+  color: #1e293b;
   font-weight: 700;
 }
 .lf-note {
   font-size: 14px;
-  color: #4338ca;
+  color: #475569;
   font-weight: 600;
 }
 
@@ -271,7 +271,7 @@ const verifierAccept = computed(() => phase.value >= 4)
 .lf-band-label {
   font-size: 13px;
   font-weight: 700;
-  fill: #4f46e5;
+  fill: #475569;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.08em;
 }
@@ -293,21 +293,21 @@ const verifierAccept = computed(() => phase.value >= 4)
   fill: #f9fafb;
 }
 .lf-verifier.is-accept .lf-node-bg {
-  fill: #dcfce7;
-  stroke: #059669;
+  fill: #fef3c7;
+  stroke: #d97706;
   stroke-width: 3;
   filter: drop-shadow(0 0 8px rgba(5, 150, 105, 0.5));
 }
 
 .lf-icon-fill { fill: #475569; transition: fill 0.5s; }
 .lf-shield-fill { fill: #475569; transition: fill 0.5s; }
-.lf-verifier.is-accept .lf-shield-fill { fill: #059669; }
+.lf-verifier.is-accept .lf-shield-fill { fill: #d97706; }
 
 .lf-node-title {
   font-size: 19px;
   font-weight: 700;
   fill: #111827;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .lf-node-sub {
   font-size: 14px;
@@ -321,7 +321,7 @@ const verifierAccept = computed(() => phase.value >= 4)
   font-size: 16px;
   font-weight: 800;
   fill: #78350f;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .lf-vc-sub {
   font-size: 12px;
@@ -339,7 +339,7 @@ const verifierAccept = computed(() => phase.value >= 4)
   fill: none;
 }
 .lf-wire-green {
-  stroke: #059669;
+  stroke: #d97706;
   stroke-width: 2.5;
   stroke-dasharray: 6 3;
   animation: lf-flow 1s linear infinite;
@@ -354,7 +354,7 @@ const verifierAccept = computed(() => phase.value >= 4)
 }
 .lf-wire-label-g {
   font-size: 13px;
-  fill: #064e3b;
+  fill: #78350f;
   font-weight: 800;
   font-family: 'JetBrains Mono', monospace;
 }
@@ -374,14 +374,14 @@ const verifierAccept = computed(() => phase.value >= 4)
 .lf-deploy-label {
   font-size: 13px;
   font-weight: 800;
-  fill: #047857;
+  fill: #b45309;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.08em;
 }
 .lf-chip-text {
   font-size: 12px;
   font-weight: 700;
-  fill: #065f46;
+  fill: #92400e;
   font-family: 'JetBrains Mono', monospace;
 }
 

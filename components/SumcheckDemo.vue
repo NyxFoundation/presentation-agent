@@ -32,12 +32,12 @@ onMounted(() => { if (isPlaying.value) scheduleNext() })
 onBeforeUnmount(() => { if (timeoutId) clearTimeout(timeoutId) })
 
 const captions = [
-  { code: 'H = Σ_{x∈{0,1}³} f(x₁, x₂, x₃)', note: '主張: 多変数多項式の総和' },
-  { code: 'P → V :  g₁(X) = Σ_{x₂,x₃} f(X, x₂, x₃)', note: 'Round 1 — 1 変数 X についての partial sum' },
-  { code: 'V → P :  r₁  ←$  𝔽    /    check  g₁(0)+g₁(1) = H', note: 'Round 1 challenge — verifier がランダム点を返す' },
-  { code: 'P → V :  g₂(X) = Σ_{x₃} f(r₁, X, x₃)', note: 'Round 2 — r₁ を固定して同じ操作' },
-  { code: 'P → V :  g₃(X) = f(r₁, r₂, X)', note: 'Round 3 — 残り 1 変数' },
-  { code: '✓  V evaluates  f(r₁, r₂, r₃)  at single point', note: 'soundness error ≤ d·n / |𝔽|  (Schwartz-Zippel)' },
+  { code: 'H = Σ f(x₁, x₂, x₃)', note: '巨大な計算の合計 H が正しい、と信じてもらいたい' },
+  { code: 'Round 1: prover が「1 変数だけ残した要約」を送る', note: '全部を見せず、1 次元だけ圧縮して見せる' },
+  { code: 'verifier がランダムな点を 1 つ選んで送り返す', note: 'ここで嘘をつくと、あとで必ず矛盾が出る' },
+  { code: 'Round 2: 同じやり取りをもう 1 変数分', note: '変数が 1 つずつ減っていく' },
+  { code: 'Round 3: 残り 1 変数まで圧縮', note: '最後は 1 点だけ実際に計算すればよい' },
+  { code: '✓ 検証成立 — 1 点の計算だけで全体を確信', note: '巨大な計算を、ごくわずかな通信で検証できる' },
 ]
 
 const verifierAccepted = computed(() => phase.value === 5)
@@ -113,7 +113,7 @@ const pinnedVars = computed(() => {
           <path d="M 0,0 L 10,5 L 0,10 z" fill="#b45309"/>
         </marker>
         <marker id="sc-arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-          <path d="M 0,0 L 10,5 L 0,10 z" fill="#059669"/>
+          <path d="M 0,0 L 10,5 L 0,10 z" fill="#d97706"/>
         </marker>
       </defs>
 
@@ -134,7 +134,7 @@ const pinnedVars = computed(() => {
         <g transform="translate(960, 70)">
           <!-- shield icon -->
           <path d="M 0,-13 L 11,-8 L 11,5 Q 11,14 0,16 Q -11,14 -11,5 L -11,-8 Z"
-                :fill="verifierAccepted ? '#059669' : '#475569'"/>
+                :fill="verifierAccepted ? '#d97706' : '#475569'"/>
           <path v-if="verifierAccepted" d="M -4,2 L 0,6 L 6,-3"
                 stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
         </g>
@@ -203,8 +203,8 @@ const pinnedVars = computed(() => {
 
 .sc-formula {
   padding: 10px 16px;
-  background: #eef2ff;
-  border: 1px solid #c7d2fe;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
   min-height: 56px;
   display: flex;
@@ -219,12 +219,12 @@ const pinnedVars = computed(() => {
 .sc-code {
   font-family: 'JetBrains Mono', 'Menlo', monospace;
   font-size: 18px;
-  color: #1e1b4b;
+  color: #1e293b;
   font-weight: 700;
 }
 .sc-note {
   font-size: 15px;
-  color: #4338ca;
+  color: #475569;
   font-weight: 600;
 }
 
@@ -243,10 +243,10 @@ const pinnedVars = computed(() => {
   transition: fill 0.4s, stroke 0.4s, filter 0.4s;
 }
 .sc-side-bg-p { fill: #fff7ed; stroke: #fdba74; }
-.sc-side-bg-v { fill: #f0fdf4; stroke: #86efac; }
+.sc-side-bg-v { fill: #fffbeb; stroke: #fcd34d; }
 .sc-side-bg-v.is-accepted {
-  fill: #dcfce7;
-  stroke: #059669;
+  fill: #fef3c7;
+  stroke: #d97706;
   stroke-width: 3;
   filter: drop-shadow(0 0 8px rgba(5, 150, 105, 0.5));
 }
@@ -254,7 +254,7 @@ const pinnedVars = computed(() => {
   font-size: 19px;
   font-weight: 700;
   fill: #111827;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .sc-side-sub {
   font-size: 14px;
@@ -278,8 +278,8 @@ const pinnedVars = computed(() => {
   stroke-dasharray: 0;
 }
 .sc-lane.is-done .sc-lane-bg {
-  fill: #f0fdf4;
-  stroke: #86efac;
+  fill: #fffbeb;
+  stroke: #fcd34d;
 }
 
 .sc-round-label {
@@ -305,7 +305,7 @@ const pinnedVars = computed(() => {
   fill: none;
 }
 .sc-wire-v {
-  stroke: #059669;
+  stroke: #d97706;
   stroke-width: 2;
   stroke-dasharray: 5 3;
   animation: sc-flow-rev 0.9s linear infinite;
@@ -320,8 +320,8 @@ const pinnedVars = computed(() => {
   stroke-width: 1.5;
 }
 .sc-msg-box-v {
-  fill: #f0fdf4;
-  stroke: #059669;
+  fill: #fffbeb;
+  stroke: #d97706;
   stroke-width: 1.5;
 }
 .sc-msg-text {
@@ -329,7 +329,7 @@ const pinnedVars = computed(() => {
   font-weight: 700;
 }
 .sc-msg-text-p { font-size: 15px; fill: #78350f; }
-.sc-msg-text-v { font-size: 14px; fill: #064e3b; }
+.sc-msg-text-v { font-size: 14px; fill: #78350f; }
 
 /* Final eval */
 .sc-final-bg {
@@ -340,13 +340,13 @@ const pinnedVars = computed(() => {
   transition: fill 0.5s, stroke 0.5s;
 }
 .sc-final.is-active .sc-final-bg {
-  fill: #dcfce7;
-  stroke: #059669;
+  fill: #fef3c7;
+  stroke: #d97706;
   stroke-dasharray: 0;
   stroke-width: 2;
 }
 .sc-final-label { fill: #475569; }
-.sc-final.is-active .sc-final-label { fill: #064e3b; }
+.sc-final.is-active .sc-final-label { fill: #78350f; }
 .sc-final-eval {
   fill: white;
   stroke: #cbd5e1;
@@ -355,7 +355,7 @@ const pinnedVars = computed(() => {
 }
 .sc-final.is-active .sc-final-eval {
   fill: white;
-  stroke: #059669;
+  stroke: #d97706;
   stroke-width: 2;
   filter: drop-shadow(0 0 6px rgba(5, 150, 105, 0.4));
 }
@@ -366,7 +366,7 @@ const pinnedVars = computed(() => {
   font-family: 'JetBrains Mono', monospace;
   transition: fill 0.5s;
 }
-.sc-final.is-active .sc-final-text { fill: #064e3b; }
+.sc-final.is-active .sc-final-text { fill: #78350f; }
 
 /* Dim indicator */
 .sc-dim-label {
@@ -387,8 +387,8 @@ const pinnedVars = computed(() => {
   stroke: #b45309;
 }
 .sc-dim-cell.is-current {
-  fill: #059669;
-  stroke: #047857;
+  fill: #d97706;
+  stroke: #b45309;
 }
 
 /* Transitions */

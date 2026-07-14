@@ -68,7 +68,7 @@ const runFlow      = computed(() => phase.value === 2)
           <path d="M 0,0 L 10,5 L 0,10 z" fill="#475569"/>
         </marker>
         <marker id="cc-ar-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-          <path d="M 0,0 L 10,5 L 0,10 z" fill="#059669"/>
+          <path d="M 0,0 L 10,5 L 0,10 z" fill="#d97706"/>
         </marker>
       </defs>
 
@@ -247,12 +247,12 @@ const runFlow      = computed(() => phase.value === 2)
           <!-- screen -->
           <rect x="-72" y="-40" width="144" height="80" rx="2" fill="#f1f5f9"/>
           <!-- mock app UI -->
-          <rect x="-68" y="-36" width="136" height="10" rx="2" fill="#059669"/>
+          <rect x="-68" y="-36" width="136" height="10" rx="2" fill="#d97706"/>
           <rect x="-66" y="-18" width="100" height="6" rx="1" fill="#cbd5e1"/>
           <rect x="-66" y="-6"  width="80" height="6" rx="1" fill="#cbd5e1"/>
           <rect x="-66" y="6"   width="110" height="6" rx="1" fill="#cbd5e1"/>
           <rect x="-66" y="18"  width="60" height="6" rx="1" fill="#cbd5e1"/>
-          <rect x="-66" y="30"  width="48" height="10" rx="2" fill="#3b82f6"/>
+          <rect x="-66" y="30"  width="48" height="10" rx="2" fill="#64748b"/>
           <!-- laptop base -->
           <path d="M -90,46 L 90,46 L 80,54 L -80,54 Z" fill="#475569"/>
         </g>
@@ -278,7 +278,7 @@ const runFlow      = computed(() => phase.value === 2)
         <line x1="1120" y1="252" x2="1090" y2="200" class="cc-use-arrow" marker-end="url(#cc-ar)"/>
 
         <!-- backend label at bottom -->
-        <rect x="940" y="332" width="200" height="48" rx="7" fill="white" stroke="#86efac" stroke-width="1.8"/>
+        <rect x="940" y="332" width="200" height="48" rx="7" fill="white" stroke="#fcd34d" stroke-width="1.8"/>
         <text x="1040" y="352" text-anchor="middle" class="cc-exec-label">backend が裏で動く</text>
         <text x="1040" y="370" text-anchor="middle" class="cc-exec-sub">(ZK / MPC / FHE …)</text>
       </g>
@@ -299,8 +299,8 @@ const runFlow      = computed(() => phase.value === 2)
 
 .cc-cap {
   padding: 9px 16px;
-  background: #eef2ff;
-  border: 1px solid #c7d2fe;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
   min-height: 52px;
   display: flex;
@@ -315,12 +315,12 @@ const runFlow      = computed(() => phase.value === 2)
 .cc-code {
   font-family: 'JetBrains Mono', monospace;
   font-size: 15px;
-  color: #1e1b4b;
+  color: #1e293b;
   font-weight: 700;
 }
 .cc-note {
   font-size: 14px;
-  color: #4338ca;
+  color: #475569;
   font-weight: 600;
 }
 
@@ -335,7 +335,7 @@ const runFlow      = computed(() => phase.value === 2)
 .cc-stage-label {
   font-size: 12px;
   font-weight: 800;
-  fill: #4338ca;
+  fill: #475569;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.08em;
 }
@@ -347,21 +347,21 @@ const runFlow      = computed(() => phase.value === 2)
   filter: drop-shadow(0 2px 5px rgba(15,23,42,0.2));
 }
 .cc-mini-zk .cc-mini-bg  { stroke: #fcd34d; }
-.cc-mini-mpc .cc-mini-bg { stroke: #67e8f9; }
-.cc-mini-fhe .cc-mini-bg { stroke: #c4b5fd; }
+.cc-mini-mpc .cc-mini-bg { stroke: #cbd5e1; }
+.cc-mini-fhe .cc-mini-bg { stroke: #fcd34d; }
 
 .cc-mini-tb { fill: #1e293b; }
 .cc-mini-fname {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   fill: #94a3b8;
   font-family: 'JetBrains Mono', monospace;
 }
 .cc-tag-zk  { fill: #b45309; }
-.cc-tag-mpc { fill: #0e7490; }
-.cc-tag-fhe { fill: #6d28d9; }
+.cc-tag-mpc { fill: #475569; }
+.cc-tag-fhe { fill: #b45309; }
 .cc-tag-txt {
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 900;
   fill: white;
   font-family: 'JetBrains Mono', monospace;
@@ -374,15 +374,15 @@ const runFlow      = computed(() => phase.value === 2)
   fill: #e2e8f0;
   font-weight: 600;
 }
-.cc-kw       { fill: #c084fc; font-weight: 800; }
-.cc-fn       { fill: #60a5fa; font-weight: 700; }
+.cc-kw       { fill: #94a3b8; font-weight: 800; }
+.cc-fn       { fill: #94a3b8; font-weight: 700; }
 .cc-priv     { fill: #fbbf24; font-weight: 700; }
-.cc-pub      { fill: #34d399; font-weight: 700; }
-.cc-mpc-attr { fill: #22d3ee; font-weight: 700; }
-.cc-fhe-attr { fill: #a78bfa; font-weight: 700; }
+.cc-pub      { fill: #fbbf24; font-weight: 700; }
+.cc-mpc-attr { fill: #fbbf24; font-weight: 700; }
+.cc-fhe-attr { fill: #fbbf24; font-weight: 700; }
 .cc-var      { fill: #fcd34d; }
-.cc-num      { fill: #fb923c; }
-.cc-type     { fill: #f472b6; }
+.cc-num      { fill: #cbd5e1; }
+.cc-type     { fill: #cbd5e1; }
 .cc-punc     { fill: #94a3b8; }
 .cc-comment  { fill: #64748b; font-style: italic; }
 
@@ -395,8 +395,8 @@ const runFlow      = computed(() => phase.value === 2)
   stroke-dasharray: 4 3;
 }
 .cc-edge-zk  { stroke: #d97706; }
-.cc-edge-mpc { stroke: #0891b2; }
-.cc-edge-fhe { stroke: #7c3aed; }
+.cc-edge-mpc { stroke: #475569; }
+.cc-edge-fhe { stroke: #d97706; }
 
 .cc-compile-hub {
   fill: #fff7ed;
@@ -413,12 +413,12 @@ const runFlow      = computed(() => phase.value === 2)
 .cc-arrow-label {
   font-size: 14px;
   font-weight: 800;
-  fill: #1e1b4b;
+  fill: #1e293b;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.04em;
 }
 .cc-arrow-sub {
-  font-size: 11px;
+  font-size: 12px;
   fill: #6b7280;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 600;
@@ -433,9 +433,9 @@ const runFlow      = computed(() => phase.value === 2)
   filter: drop-shadow(0 0 4px currentColor);
 }
 .cc-p-zk     { fill: #d97706; }
-.cc-p-mpc    { fill: #0891b2; }
-.cc-p-fhe    { fill: #7c3aed; }
-.cc-p-green  { fill: #059669; }
+.cc-p-mpc    { fill: #475569; }
+.cc-p-fhe    { fill: #d97706; }
+.cc-p-green  { fill: #d97706; }
 
 /* Arrow group (run) */
 .cc-arrow-g { opacity: 0.4; transition: opacity 0.5s; }
@@ -471,8 +471,8 @@ const runFlow      = computed(() => phase.value === 2)
   stroke-width: 1.8;
 }
 .cc-output-node {
-  fill: #059669;
-  stroke: #065f46;
+  fill: #d97706;
+  stroke: #92400e;
   stroke-width: 2.5;
   filter: drop-shadow(0 0 8px rgba(5,150,105,0.5));
 }
@@ -489,8 +489,8 @@ const runFlow      = computed(() => phase.value === 2)
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 .cc-gate-add-bg {
-  fill: #dbeafe;
-  stroke: #2563eb;
+  fill: #f1f5f9;
+  stroke: #475569;
 }
 .cc-gate-text {
   font-size: 34px;
@@ -504,7 +504,7 @@ const runFlow      = computed(() => phase.value === 2)
   fill: none;
 }
 .cc-wire-final {
-  stroke: #059669;
+  stroke: #d97706;
   stroke-width: 2.5;
 }
 .cc-circuit-note {
@@ -520,8 +520,8 @@ const runFlow      = computed(() => phase.value === 2)
 .cc-exec { opacity: 0.55; transition: opacity 0.5s; }
 .cc-exec.is-active { opacity: 1; }
 .cc-exec-bg {
-  fill: #f0fdf4;
-  stroke: #86efac;
+  fill: #fffbeb;
+  stroke: #fcd34d;
   stroke-width: 2.5;
   filter: drop-shadow(0 2px 8px rgba(5,150,105,0.2));
 }
@@ -541,12 +541,12 @@ const runFlow      = computed(() => phase.value === 2)
 .cc-exec-label {
   font-size: 13px;
   font-weight: 800;
-  fill: #064e3b;
+  fill: #78350f;
   font-family: 'JetBrains Mono', monospace;
 }
 .cc-exec-sub {
   font-size: 12px;
-  fill: #047857;
+  fill: #b45309;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 700;
 }

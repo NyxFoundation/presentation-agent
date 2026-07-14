@@ -35,7 +35,7 @@ const captions = [
   { code: 'Source chain  ←→  Destination chain   (no RPC trust)',                     note: '事前: ZK light client コントラクトが destination に deploy 済' },
   { code: 'User  burns  rsETH   on  source.block_N',                                  note: 'source chain で event 発生 — Kelp と同じトリガ' },
   { code: 'Prover  reads  source.state @ block_N   (cryptographic root)',             note: 'state root と Merkle proof から状態を取得 ─ RPC の応答は使わない' },
-  { code: 'π  =  ZK { source.state @ block_N  ∧  burn(amount) ⊆ state }',             note: 'state proof を off-chain で生成 (Sumcheck 系 or zkVM)' },
+  { code: 'π  =  ZK { source.state @ block_N  ∧  burn(amount) ⊆ state }',             note: 'state proof は任意の ZKP で理論上生成可能。代表実装は Sumcheck 系や zkVM' },
   { code: 'destination.LightClient.verify(π)   →   ✓ on-chain',                        note: 'RPC ノードが嘘をついても proof が通らない ─ 暗号的に検証' },
   { code: 'release(user, amount)   /   if  KelpDAO  had  this :  not  exploitable',   note: '午後ホワイトボード議論: RPC が同じく侵害されたら? — 講師の突っ込み弾' },
 ]
@@ -71,7 +71,7 @@ const kelpContrast    = computed(() => phase.value === 5)
           <path d="M 0,0 L 10,5 L 0,10 z" fill="#b45309"/>
         </marker>
         <marker id="zb-ar-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-          <path d="M 0,0 L 10,5 L 0,10 z" fill="#059669"/>
+          <path d="M 0,0 L 10,5 L 0,10 z" fill="#d97706"/>
         </marker>
       </defs>
 
@@ -204,7 +204,7 @@ const kelpContrast    = computed(() => phase.value === 5)
           <line x1="690" y1="290" x2="850" y2="190"
                 class="zb-wire-green" marker-end="url(#zb-ar-green)"/>
           <rect x="700" y="232" width="120" height="22" rx="3"
-                fill="#dcfce7" stroke="#059669" stroke-width="1.5"/>
+                fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
           <text x="760" y="248" text-anchor="middle" class="zb-wire-label-g">π : state proof</text>
         </g>
       </transition>
@@ -246,8 +246,8 @@ const kelpContrast    = computed(() => phase.value === 5)
 
 .zb-cap {
   padding: 9px 16px;
-  background: #eef2ff;
-  border: 1px solid #c7d2fe;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
   min-height: 52px;
   display: flex;
@@ -262,12 +262,12 @@ const kelpContrast    = computed(() => phase.value === 5)
 .zb-code {
   font-family: 'JetBrains Mono', monospace;
   font-size: 17px;
-  color: #1e1b4b;
+  color: #1e293b;
   font-weight: 700;
 }
 .zb-note {
   font-size: 14px;
-  color: #4338ca;
+  color: #475569;
   font-weight: 600;
 }
 
@@ -281,7 +281,7 @@ const kelpContrast    = computed(() => phase.value === 5)
 .zb-chain-label {
   font-size: 13px;
   font-weight: 700;
-  fill: #4f46e5;
+  fill: #475569;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.12em;
 }
@@ -306,20 +306,20 @@ const kelpContrast    = computed(() => phase.value === 5)
   stroke-width: 2.5;
 }
 .zb-node.is-ok .zb-node-bg {
-  fill: #dcfce7;
-  stroke: #059669;
+  fill: #fef3c7;
+  stroke: #d97706;
   stroke-width: 3;
   filter: drop-shadow(0 0 8px rgba(5, 150, 105, 0.4));
 }
 .zb-node.is-released .zb-node-bg {
-  fill: #dcfce7;
-  stroke: #059669;
+  fill: #fef3c7;
+  stroke: #d97706;
   stroke-width: 3;
 }
 
 .zb-prover { color: #94a3b8; transition: color 0.5s; }
 .zb-prover.is-reading { color: #b45309; }
-.zb-prover.is-proving { color: #059669; }
+.zb-prover.is-proving { color: #d97706; }
 .zb-prover.is-proving .zb-node-bg,
 .zb-prover.is-reading .zb-node-bg {
   fill: #fffbeb;
@@ -328,19 +328,19 @@ const kelpContrast    = computed(() => phase.value === 5)
   filter: drop-shadow(0 0 8px rgba(217, 119, 6, 0.3));
 }
 .zb-prover.is-proving .zb-node-bg {
-  fill: #f0fdf4;
-  stroke: #059669;
+  fill: #fffbeb;
+  stroke: #d97706;
 }
 
 .zb-icon-fill { fill: #475569; }
 .zb-shield-fill { fill: #475569; transition: fill 0.5s; }
-.zb-node.is-ok .zb-shield-fill { fill: #059669; }
+.zb-node.is-ok .zb-shield-fill { fill: #d97706; }
 
 .zb-node-title {
   font-size: 18px;
   font-weight: 700;
   fill: #111827;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .zb-node-sub {
   font-size: 13px;
@@ -352,7 +352,7 @@ const kelpContrast    = computed(() => phase.value === 5)
   font-size: 18px;
   font-weight: 700;
   fill: #111827;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .zb-prover-sub {
   font-size: 13px;
@@ -377,7 +377,7 @@ const kelpContrast    = computed(() => phase.value === 5)
   fill: none;
 }
 .zb-wire-green {
-  stroke: #059669;
+  stroke: #d97706;
   stroke-width: 2.5;
   stroke-dasharray: 6 3;
   animation: zb-flow 0.9s linear infinite;
@@ -393,7 +393,7 @@ const kelpContrast    = computed(() => phase.value === 5)
 }
 .zb-wire-label-g {
   font-size: 13px;
-  fill: #064e3b;
+  fill: #78350f;
   font-weight: 800;
   font-family: 'JetBrains Mono', monospace;
 }
@@ -403,7 +403,7 @@ const kelpContrast    = computed(() => phase.value === 5)
   font-size: 16px;
   font-weight: 800;
   fill: #7f1d1d;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .zb-contrast-line {
   font-size: 13px;
@@ -412,7 +412,7 @@ const kelpContrast    = computed(() => phase.value === 5)
   font-family: 'JetBrains Mono', monospace;
 }
 .zb-emph-bad { fill: #dc2626; font-weight: 800; }
-.zb-emph-good { fill: #059669; font-weight: 800; }
+.zb-emph-good { fill: #d97706; font-weight: 800; }
 .zb-italic { font-style: italic; fill: #b91c1c; }
 
 /* Transitions */

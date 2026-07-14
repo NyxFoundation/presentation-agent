@@ -32,12 +32,12 @@ onMounted(() => { if (isPlaying.value) scheduleNext() })
 onBeforeUnmount(() => { if (timeoutId) clearTimeout(timeoutId) })
 
 const captions = [
-  { code: 'RISC-V program  P  →  exec  →  trace  T_P',                       note: 'CPU step を 1 つずつ追う ─ 任意の Rust / C プログラム' },
-  { code: 'each CPU step  t_i  ←→  entry in lookup table  T (RISC-V ops)',  note: 'Jolt の中核設計: 全命令を巨大 lookup table に圧縮' },
-  { code: 'Lasso :  prove  ∀i  ( t_i ∈ T )   in time  ∝  log|T|',           note: 'lookup argument — |T| に依存しない時間で会員性を証明' },
-  { code: 'Sumcheck  verifies  Lasso  bundle  with  Fiat-Shamir',           note: '基盤プロトコル — 多項式の総和を verifier に確信させる' },
-  { code: '✓  Groth16 / PLONK 比  2x  faster prover    (zkVM via lookups)', note: 'プログラムを書き直さずに証明できる' },
-  { code: '⚠ precompute T のメモリ要求が大きい — mobile / IoT には不向き',     note: '罠 #1: 制約系・証明系の選択は後から変えられない' },
+  { code: 'RISC-V program → 実行 → trace', note: '手を加えず書いたプログラムを 1 ステップずつ追う' },
+  { code: '各ステップを、早見表(lookup table)の 1 エントリに置き換える', note: 'Jolt の中核アイデア: 命令を全部表にしておく' },
+  { code: 'Lasso: 表のどこを引いたか、まとめて証明', note: '表が大きくても証明の手間は増えにくい' },
+  { code: 'Sumcheck がその証明を検証する', note: '前のスライドの仕組みが、ここで使われている' },
+  { code: '✓ zkVM 証明成立 — Groth16 / PLONK 比 2 倍速い', note: 'プログラムを書き直さずに証明できる' },
+  { code: '⚠ 実装上の注意', note: '早見表のために大きなメモリが必要 — mobile / IoT には不向き' },
 ]
 
 const showTrace        = computed(() => phase.value >= 1)
@@ -141,7 +141,7 @@ const tableCells = [
 
       <!-- ============ Lookup table (bottom) ============ -->
       <g class="jt-table-band">
-        <text x="290" y="240" class="jt-band-label">Lookup Table T  (RISC-V ops, |T| ≈ 2³² entries)</text>
+        <text x="290" y="240" class="jt-band-label">Lookup Table T — 全 RISC-V 命令を先に埋め込み済</text>
       </g>
 
       <g class="jt-table">
@@ -153,20 +153,17 @@ const tableCells = [
                 class="jt-cell-bg"/>
           <text :x="c.x + 30" y="307" text-anchor="middle" class="jt-cell-text">{{ c.label }}</text>
         </g>
-        <text x="555" y="354" text-anchor="middle" class="jt-table-foot">
-          全 RISC-V 命令を埋め込み済
-        </text>
       </g>
 
       <!-- ============ Lasso bundle ring ============ -->
       <transition name="jt-fade">
         <g v-if="showLassoBundle" class="jt-lasso">
           <rect x="850" y="100" width="190" height="80" rx="10"
-                fill="#ecfeff" stroke="#0891b2" stroke-width="2.5"
+                fill="#f8fafc" stroke="#475569" stroke-width="2.5"
                 style="filter: drop-shadow(0 0 8px rgba(8, 145, 178, 0.4));"/>
           <text x="945" y="128" text-anchor="middle" class="jt-lasso-title">Lasso</text>
           <text x="945" y="148" text-anchor="middle" class="jt-lasso-sub">lookup argument</text>
-          <text x="945" y="168" text-anchor="middle" class="jt-lasso-sub">∝ log|T|</text>
+          <text x="945" y="168" text-anchor="middle" class="jt-lasso-sub">表が大きくても速い</text>
         </g>
       </transition>
 
@@ -181,7 +178,7 @@ const tableCells = [
       <transition name="jt-fade">
         <g v-if="showSumcheck" class="jt-sumcheck">
           <rect x="1060" y="100" width="120" height="80" rx="10"
-                fill="#f5f3ff" stroke="#7c3aed" stroke-width="2.5"
+                fill="#fffbeb" stroke="#d97706" stroke-width="2.5"
                 style="filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.4));"/>
           <text x="1120" y="128" text-anchor="middle" class="jt-sc-title">Sumcheck</text>
           <text x="1120" y="148" text-anchor="middle" class="jt-sc-sub">verifies</text>
@@ -196,7 +193,7 @@ const tableCells = [
       <transition name="jt-fade">
         <g v-if="showAccept" class="jt-accept">
           <rect x="850" y="265" width="330" height="100" rx="10"
-                fill="#dcfce7" stroke="#059669" stroke-width="3"
+                fill="#fef3c7" stroke="#d97706" stroke-width="3"
                 style="filter: drop-shadow(0 0 10px rgba(5, 150, 105, 0.5));"/>
           <text x="1015" y="295" text-anchor="middle" class="jt-accept-title">✓ zkVM proof</text>
           <text x="1015" y="320" text-anchor="middle" class="jt-accept-sub">Groth16 / PLONK 比 2x faster prover</text>
@@ -231,8 +228,8 @@ const tableCells = [
 
 .jt-cap {
   padding: 9px 16px;
-  background: #eef2ff;
-  border: 1px solid #c7d2fe;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
   min-height: 52px;
   display: flex;
@@ -247,12 +244,12 @@ const tableCells = [
 .jt-code {
   font-family: 'JetBrains Mono', monospace;
   font-size: 17px;
-  color: #1e1b4b;
+  color: #1e293b;
   font-weight: 700;
 }
 .jt-note {
   font-size: 14px;
-  color: #4338ca;
+  color: #475569;
   font-weight: 600;
 }
 
@@ -364,12 +361,12 @@ const tableCells = [
 .jt-lasso-title {
   font-size: 19px;
   font-weight: 800;
-  fill: #155e75;
-  font-family: 'BIZ UDPMincho', serif;
+  fill: #1e293b;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .jt-lasso-sub {
   font-size: 13px;
-  fill: #0e7490;
+  fill: #475569;
   font-weight: 600;
   font-family: 'JetBrains Mono', monospace;
 }
@@ -378,12 +375,12 @@ const tableCells = [
 .jt-sc-title {
   font-size: 18px;
   font-weight: 800;
-  fill: #5b21b6;
-  font-family: 'BIZ UDPMincho', serif;
+  fill: #92400e;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .jt-sc-sub {
   font-size: 12px;
-  fill: #6d28d9;
+  fill: #b45309;
   font-weight: 600;
   font-family: 'JetBrains Mono', monospace;
 }
@@ -391,21 +388,21 @@ const tableCells = [
 /* Accept */
 .jt-accept-title {
   font-size: 22px;
-  fill: #064e3b;
+  fill: #78350f;
   font-weight: 900;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .jt-accept-sub {
   font-size: 14px;
-  fill: #047857;
+  fill: #b45309;
   font-weight: 700;
   font-family: 'JetBrains Mono', monospace;
 }
 .jt-accept-sub-em {
   font-size: 14px;
-  fill: #065f46;
+  fill: #92400e;
   font-weight: 700;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 /* Warn */
@@ -413,7 +410,7 @@ const tableCells = [
   font-size: 17px;
   fill: #7f1d1d;
   font-weight: 800;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .jt-warn-sub {
   font-size: 13px;

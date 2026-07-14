@@ -305,8 +305,8 @@ const codeFragments = computed(() => {
 /* ===== Code strip ===== */
 .pm-config {
   padding: 10px 16px;
-  background: #eef2ff;
-  border: 1px solid #c7d2fe;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
   min-height: 44px;
   display: flex;
@@ -316,7 +316,7 @@ const codeFragments = computed(() => {
   font-family: 'JetBrains Mono', monospace;
   font-size: 17px;
   font-weight: 600;
-  color: #1e1b4b;
+  color: #1e293b;
 }
 
 /* ===== SVG ===== */
@@ -338,11 +338,11 @@ const codeFragments = computed(() => {
   transition: fill 0.5s, stroke 0.5s, stroke-width 0.5s, filter 0.5s;
 }
 .pm-panel-math.is-active .pm-panel-bg {
-  stroke: #7c3aed; stroke-width: 3; fill: #faf5ff;
+  stroke: #475569; stroke-width: 3; fill: #f8fafc;
   filter: drop-shadow(0 0 10px rgba(124, 58, 237, 0.4));
 }
 .pm-panel-info.is-active .pm-panel-bg {
-  stroke: #0d9488; stroke-width: 3; fill: #f0fdfa;
+  stroke: #475569; stroke-width: 3; fill: #f8fafc;
   filter: drop-shadow(0 0 10px rgba(13, 148, 136, 0.4));
 }
 .pm-panel-comp.is-active .pm-panel-bg {
@@ -359,17 +359,17 @@ const codeFragments = computed(() => {
   font-size: 32px;
   font-weight: 900;
   fill: #94a3b8;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
   transition: fill 0.5s;
 }
-.pm-panel-math.is-active .pm-panel-num { fill: #7c3aed; }
-.pm-panel-info.is-active .pm-panel-num { fill: #0d9488; }
+.pm-panel-math.is-active .pm-panel-num { fill: #475569; }
+.pm-panel-info.is-active .pm-panel-num { fill: #475569; }
 .pm-panel-comp.is-active .pm-panel-num { fill: #d97706; }
 .pm-panel-title {
   font-size: 20px;
   font-weight: 700;
   fill: #1f2937;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .pm-panel-subtitle {
   font-size: 13px;
@@ -390,10 +390,10 @@ const codeFragments = computed(() => {
   font-size: 15px;
   font-weight: 700;
   fill: #1f2937;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .pm-math-sublabel {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   fill: #64748b;
   font-family: 'JetBrains Mono', monospace;
@@ -407,27 +407,27 @@ const codeFragments = computed(() => {
   font-size: 13px;
   font-weight: 600;
   fill: #94a3b8;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
   transition: fill 0.4s;
 }
 .pm-panel-math.is-active .pm-math-bg {
-  stroke: #a78bfa;
-  fill: #f5f3ff;
+  stroke: #94a3b8;
+  fill: #f8fafc;
 }
 .pm-panel-math.is-active .pm-math-theorem .pm-math-bg {
-  stroke: #7c3aed;
+  stroke: #475569;
   stroke-width: 2.5;
-  fill: #ede9fe;
+  fill: #f1f5f9;
   filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.55));
   animation: pm-glow-pulse 2s ease-in-out infinite;
 }
 .pm-panel-math.is-active .pm-math-arrow {
-  stroke: #7c3aed;
+  stroke: #475569;
   stroke-width: 2.5;
   stroke-dasharray: 5 3;
   animation: pm-flow-line 1.5s linear infinite;
 }
-.pm-panel-math.is-active .pm-math-note-text { fill: #7c3aed; }
+.pm-panel-math.is-active .pm-math-note-text { fill: #475569; }
 @keyframes pm-flow-line { to { stroke-dashoffset: -16; } }
 @keyframes pm-glow-pulse {
   0%, 100% { filter: drop-shadow(0 0 6px rgba(124, 58, 237, 0.5)); }
@@ -448,7 +448,7 @@ const codeFragments = computed(() => {
   font-size: 14px;
   font-weight: 700;
   fill: #1f2937;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .pm-wire {
   stroke: #cbd5e1;
@@ -487,20 +487,20 @@ const codeFragments = computed(() => {
   letter-spacing: 0.04em;
   transition: fill 0.4s;
 }
-.pm-panel-info.is-active .pm-proof-hex { fill: #0f766e; }
+.pm-panel-info.is-active .pm-proof-hex { fill: #475569; }
 .pm-panel-comp.is-active .pm-proof-hex { fill: #b45309; }
 .pm-assume-none .pm-assume-bg {
-  fill: #ecfdf5;
-  stroke: #059669;
+  fill: #fffbeb;
+  stroke: #d97706;
   filter: drop-shadow(0 0 5px rgba(5, 150, 105, 0.45));
 }
-.pm-assume-none .pm-assume-text { fill: #047857; }
+.pm-assume-none .pm-assume-text { fill: #b45309; }
 .pm-assume-hard .pm-assume-bg {
-  fill: #fef2f2;
-  stroke: #dc2626;
+  fill: #f1f5f9;
+  stroke: #64748b;
   filter: drop-shadow(0 0 5px rgba(220, 38, 38, 0.4));
 }
-.pm-assume-hard .pm-assume-text { fill: #991b1b; }
+.pm-assume-hard .pm-assume-text { fill: #334155; }
 
 /* Verify-logic box (specific check formula, single-line) */
 .pm-verify-bg {
@@ -517,8 +517,8 @@ const codeFragments = computed(() => {
   letter-spacing: 0.02em;
 }
 .pm-panel-info.is-active .pm-verify-bg {
-  stroke: #0d9488;
-  fill: #f0fdfa;
+  stroke: #475569;
+  fill: #f8fafc;
   filter: drop-shadow(0 0 5px rgba(13, 148, 136, 0.35));
 }
 .pm-panel-comp.is-active .pm-verify-bg {
@@ -529,8 +529,8 @@ const codeFragments = computed(() => {
 
 /* OK chip on Verifier (small green check) */
 .pm-ok-circle {
-  fill: #059669;
-  stroke: #047857;
+  fill: #d97706;
+  stroke: #b45309;
   stroke-width: 1.5;
   filter: drop-shadow(0 0 5px rgba(5, 150, 105, 0.6));
 }
@@ -540,11 +540,11 @@ const codeFragments = computed(() => {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.pm-panel-info.is-active .pm-actor-bg  { stroke: #0d9488; fill: #f0fdfa; }
-.pm-panel-info.is-active .pm-wire       { stroke: #0d9488; stroke-width: 2.5; }
+.pm-panel-info.is-active .pm-actor-bg  { stroke: #475569; fill: #f8fafc; }
+.pm-panel-info.is-active .pm-wire       { stroke: #475569; stroke-width: 2.5; }
 .pm-panel-info.is-active .pm-actor-icon,
-.pm-panel-info.is-active .pm-actor-shield { fill: #0d9488; }
-.pm-panel-info.is-active .pm-wire-label { fill: #0f766e; }
+.pm-panel-info.is-active .pm-actor-shield { fill: #475569; }
+.pm-panel-info.is-active .pm-wire-label { fill: #475569; }
 .pm-panel-comp.is-active .pm-actor-bg  { stroke: #d97706; fill: #fffbeb; }
 .pm-panel-comp.is-active .pm-wire       { stroke: #d97706; stroke-width: 2.5; }
 .pm-panel-comp.is-active .pm-actor-icon,
@@ -561,18 +561,18 @@ const codeFragments = computed(() => {
 .pm-adv-inf {
   font-size: 26px;
   font-weight: 900;
-  fill: #f87171;
+  fill: #94a3b8;
   font-family: 'JetBrains Mono', monospace;
 }
 .pm-adv-label {
   font-size: 12px;
   font-weight: 700;
   fill: #475569;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .pm-panel-info.is-active .pm-adv-bg,
 .pm-panel-comp.is-active .pm-adv-bg {
-  stroke: #dc2626;
+  stroke: #64748b;
   stroke-width: 2.5;
 }
 .pm-panel-info.is-active .pm-adv-inf {
@@ -581,11 +581,11 @@ const codeFragments = computed(() => {
 }
 
 /* clock for computational adversary */
-.pm-clock-face   { stroke: #f87171; stroke-width: 1.8; transition: stroke 0.4s; }
-.pm-clock-center { fill: #f87171; transition: fill 0.4s; }
-.pm-clock-min    { stroke: #f87171; stroke-width: 1.8; stroke-linecap: round;
+.pm-clock-face   { stroke: #94a3b8; stroke-width: 1.8; transition: stroke 0.4s; }
+.pm-clock-center { fill: #94a3b8; transition: fill 0.4s; }
+.pm-clock-min    { stroke: #94a3b8; stroke-width: 1.8; stroke-linecap: round;
                    transform-origin: 0 0; transition: stroke 0.4s; }
-.pm-clock-hr     { stroke: #f87171; stroke-width: 1.8; stroke-linecap: round;
+.pm-clock-hr     { stroke: #94a3b8; stroke-width: 1.8; stroke-linecap: round;
                    transform-origin: 0 0; transition: stroke 0.4s; }
 .pm-panel-comp.is-active .pm-clock-min { animation: pm-clock-tick 2.4s linear infinite; }
 .pm-panel-comp.is-active .pm-clock-hr  { animation: pm-clock-tick 12s linear infinite; }
@@ -599,7 +599,7 @@ const codeFragments = computed(() => {
 .pm-adv-cross-text {
   font-size: 13px;
   font-weight: 800;
-  fill: #dc2626;
+  fill: #64748b;
   font-family: 'JetBrains Mono', monospace;
   filter: drop-shadow(0 0 4px rgba(220, 38, 38, 0.5));
   animation: pm-blink 1.4s ease-in-out infinite;
@@ -626,15 +626,15 @@ const codeFragments = computed(() => {
   font-size: 13px;
   font-weight: 600;
   fill: #64748b;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
-.pm-panel-math.is-active .pm-tag-prop { stroke: #7c3aed; fill: #f5f3ff; }
-.pm-panel-info.is-active .pm-tag-prop { stroke: #0d9488; fill: #f0fdfa; }
+.pm-panel-math.is-active .pm-tag-prop { stroke: #475569; fill: #f8fafc; }
+.pm-panel-info.is-active .pm-tag-prop { stroke: #475569; fill: #f8fafc; }
 .pm-panel-comp.is-active .pm-tag-prop { stroke: #d97706; fill: #fffbeb; }
 
 /* ===== Particles ===== */
 .pm-particle-info {
-  fill: #0d9488;
+  fill: #475569;
   filter: drop-shadow(0 0 6px rgba(13, 148, 136, 0.8));
   animation: pm-fly 2s linear infinite;
 }
@@ -660,8 +660,8 @@ const codeFragments = computed(() => {
 .pm-here-text {
   font-size: 17px;
   font-weight: 900;
-  fill: #7c2d12;
-  font-family: 'BIZ UDPMincho', serif;
+  fill: #374151;
+  font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 0.04em;
 }
 

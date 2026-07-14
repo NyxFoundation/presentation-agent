@@ -4,17 +4,22 @@ type Pattern = {
   app: string;
   recipe: string;
   desc: string;
-  hue: 'amber' | 'cyan' | 'purple' | 'pink' | 'blue' | 'green';
 }
 
-const patterns: Pattern[] = [
-  { index: '①', app: 'Longfellow',         recipe: 'ZK ∘ ECDSA(mDOC)',         desc: '既存 ID 標準 (mDOC / JWT) を ZK 化',     hue: 'amber'  },
-  { index: '②', app: 'Verifiable FHE',     recipe: 'ZK + FHE',                  desc: 'FHE の計算正しさを ZK で保証',            hue: 'purple' },
-  { index: '③', app: 'threshold FHE',      recipe: 'MPC + FHE',                 desc: 'FHE の鍵を MPC で分散管理',              hue: 'cyan'   },
-  { index: '④', app: 'zkML',               recipe: 'ZK + ML',                   desc: 'ML 推論の正しさを暗号的に証明',           hue: 'pink'   },
-  { index: '⑤', app: 'mpcML',              recipe: 'MPC + ML',                  desc: '各人の学習データを秘匿しつつ共同学習',     hue: 'cyan'   },
-  { index: '⑥', app: 'Multisig op proof',  recipe: 'ZK + Multisig',             desc: 'Multisig 操作を秘匿しつつ正しさ証明',     hue: 'blue'   },
-  { index: '⑦', app: 'ZK Light Client',    recipe: 'ZK + Bridge',               desc: 'cross-chain state を ZK proof で受け渡し', hue: 'green'  },
+// Hero = 3 patterns this lecture actually revisits later (foreshadowing)
+// Identity is read by position + label, not by color (all hero cards share the one accent hue)
+const heroPatterns: Pattern[] = [
+  { index: '①', app: 'Longfellow',      recipe: 'ZK ∘ ECDSA(mDOC)', desc: '既存 ID 標準 (mDOC / JWT) を ZK 化。この後すぐ登場' },
+  { index: '②', app: 'Verifiable FHE',  recipe: 'ZK + FHE',          desc: 'FHE の計算正しさを ZK で保証' },
+  { index: '⑦', app: 'ZK Light Client', recipe: 'ZK + Bridge',       desc: 'cross-chain state を ZK proof で受け渡し。この後すぐ登場' },
+]
+
+// Others = mentioned briefly, not revisited today (neutral — de-emphasized)
+const otherPatterns: Pattern[] = [
+  { index: '③', app: 'threshold FHE',     recipe: 'MPC + FHE',      desc: 'FHE の鍵を MPC で分散管理' },
+  { index: '④', app: 'zkML',              recipe: 'ZK + ML',        desc: 'ML 推論の正しさを暗号的に証明' },
+  { index: '⑤', app: 'mpcML',             recipe: 'MPC + ML',       desc: '各人の学習データを秘匿しつつ共同学習' },
+  { index: '⑥', app: 'Multisig op proof', recipe: 'ZK + Multisig',  desc: 'Multisig 操作を秘匿しつつ正しさ証明' },
 ]
 </script>
 
@@ -22,13 +27,13 @@ const patterns: Pattern[] = [
   <div class="cp-root">
     <!-- Top caption -->
     <div class="cp-cap">
-      <div class="cp-cap-title">7 つの代表的合成パターン</div>
-      <div class="cp-cap-sub">各 app は crypto primitive どうし、または既存 system との合成として現れる</div>
+      <div class="cp-cap-title">合成パターンの代表例 3 つ</div>
+      <div class="cp-cap-sub">crypto primitive どうし、または既存 system との組み合わせで新しい app が生まれる</div>
     </div>
 
-    <!-- Grid: 4 cols × 2 rows (last cell empty) -->
-    <div class="cp-grid">
-      <div v-for="p in patterns" :key="p.index" :class="['cp-card', `cp-card-${p.hue}`]">
+    <!-- Hero: 3 cols, larger cards -->
+    <div class="cp-grid-hero">
+      <div v-for="p in heroPatterns" :key="p.index" class="cp-card cp-card-hero">
         <div class="cp-card-head">
           <span class="cp-index">{{ p.index }}</span>
           <span class="cp-app">{{ p.app }}</span>
@@ -36,9 +41,15 @@ const patterns: Pattern[] = [
         <div class="cp-recipe">{{ p.recipe }}</div>
         <div class="cp-desc">{{ p.desc }}</div>
       </div>
-      <!-- empty slot to keep grid alignment -->
-      <div class="cp-card cp-card-ghost">
-        <div class="cp-ghost-text">…</div>
+    </div>
+
+    <!-- Others: compact chip row -->
+    <div class="cp-others-label">ほかにも: 同じ型の組み合わせ</div>
+    <div class="cp-chip-row">
+      <div v-for="p in otherPatterns" :key="p.index" class="cp-chip">
+        <span class="cp-chip-index">{{ p.index }}</span>
+        <span class="cp-chip-app">{{ p.app }}</span>
+        <span class="cp-chip-recipe">{{ p.recipe }}</span>
       </div>
     </div>
   </div>
@@ -58,8 +69,8 @@ const patterns: Pattern[] = [
 /* Top caption */
 .cp-cap {
   padding: 9px 16px;
-  background: #eef2ff;
-  border: 1px solid #c7d2fe;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -68,22 +79,21 @@ const patterns: Pattern[] = [
 .cp-cap-title {
   font-size: 17px;
   font-weight: 800;
-  color: #1e1b4b;
-  font-family: 'BIZ UDPMincho', serif;
+  color: #1e293b;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .cp-cap-sub {
   font-size: 13px;
-  color: #4338ca;
+  color: #475569;
   font-weight: 600;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
-/* Grid */
-.cp-grid {
+/* Hero grid: 3 cols, larger cards */
+.cp-grid-hero {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
 }
 
 /* Card */
@@ -101,13 +111,53 @@ const patterns: Pattern[] = [
   text-align: center;
   filter: drop-shadow(0 2px 6px rgba(0,0,0,0.06));
 }
+.cp-card-hero {
+  min-height: 150px;
+  border-width: 2.5px;
+}
 
-.cp-card-amber  { border-color: #fcd34d; background: linear-gradient(180deg, #fffbeb 0%, white 60%); }
-.cp-card-cyan   { border-color: #67e8f9; background: linear-gradient(180deg, #ecfeff 0%, white 60%); }
-.cp-card-purple { border-color: #c4b5fd; background: linear-gradient(180deg, #f5f3ff 0%, white 60%); }
-.cp-card-pink   { border-color: #fbcfe8; background: linear-gradient(180deg, #fdf2f8 0%, white 60%); }
-.cp-card-blue   { border-color: #93c5fd; background: linear-gradient(180deg, #eff6ff 0%, white 60%); }
-.cp-card-green  { border-color: #86efac; background: linear-gradient(180deg, #f0fdf4 0%, white 60%); }
+.cp-others-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9ca3af;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
+.cp-chip-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.cp-chip {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1.5px solid #e5e7eb;
+  background: #f9fafb;
+  font-size: 13px;
+}
+.cp-chip-index {
+  font-weight: 900;
+  font-family: 'JetBrains Mono', monospace;
+  color: #9ca3af;
+}
+.cp-chip-app {
+  font-weight: 800;
+  color: #374151;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.cp-chip-recipe {
+  font-family: 'JetBrains Mono', monospace;
+  color: #6b7280;
+}
+
+.cp-card {
+  border-color: #fcd34d;
+  background: linear-gradient(180deg, #fffbeb 0%, white 60%);
+}
 
 /* Card head: index + app name */
 .cp-card-head {
@@ -120,20 +170,14 @@ const patterns: Pattern[] = [
   font-size: 16px;
   font-weight: 900;
   font-family: 'JetBrains Mono', monospace;
-  color: #94a3b8;
+  color: #d97706;
 }
-.cp-card-amber  .cp-index { color: #d97706; }
-.cp-card-cyan   .cp-index { color: #0891b2; }
-.cp-card-purple .cp-index { color: #7c3aed; }
-.cp-card-pink   .cp-index { color: #db2777; }
-.cp-card-blue   .cp-index { color: #2563eb; }
-.cp-card-green  .cp-index { color: #059669; }
 
 .cp-app {
   font-size: 18px;
   font-weight: 900;
   color: #1f2937;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
   line-height: 1.2;
 }
 
@@ -152,25 +196,11 @@ const patterns: Pattern[] = [
 
 /* Description (short Japanese line) */
 .cp-desc {
-  font-size: 12.5px;
+  font-size: 13px;
   color: #475569;
-  font-family: 'BIZ UDPMincho', serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-weight: 600;
   line-height: 1.4;
   max-width: 96%;
-}
-
-/* Ghost slot */
-.cp-card-ghost {
-  border-style: dashed;
-  border-color: #e5e7eb;
-  background: #fafafa;
-  filter: none;
-}
-.cp-ghost-text {
-  font-size: 24px;
-  font-weight: 700;
-  color: #cbd5e1;
-  font-family: 'JetBrains Mono', monospace;
 }
 </style>

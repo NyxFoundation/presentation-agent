@@ -15,7 +15,8 @@ p18=SL23, p19=SL25, p20=SL26, p21=SL27, p22=SL28, p23=SL29, p24=SL31, p25=SL32
 
 ## p8 (slides/SL10b.md) — 耐量子移行 × zkVM ナラティブ
 
-- [ ] p3-7 のナラティブフローに沿わせる (WHY は時間をかける)。
+- [x] p3-7 のナラティブフローに沿わせる (WHY は時間をかける)。
+      (figures/zkvm_proving.py — log 軸の証明時間推移 + 12s 閾値 + lean Ethereum / EIP-8079 カード)
       「Ethereum の最重要問題の一つである耐量子移行。そのボトルネックが zkVM になっている」。
       zkVM の Ethereum block proving time を年ごとのグラフで出す。各数値にどの企業の製品かを
       表すアイコンを添える。12s に閾値線 (超えたら実用化)。実用化後に「耐量子移行」と

@@ -2,70 +2,53 @@
 layout: default
 ---
 
-# 社会的需要 ② — <span class="text-amber-700">Ethereum Scaling</span>
+# 社会的需要 ② — <span class="text-amber-700">耐量子移行のボトルネックは zkVM</span>
 
-<div class="mt-10 text-center text-2xl font-bold text-gray-900 leading-relaxed">
-データ層は解けた — 次のボトルネックは <span class="text-amber-700">proving cost</span>、<br/>
-証明の効率がそのまま L2 手数料を決める
+<div class="mt-1 flex justify-center">
+<img src="/images/zkvm_proving_time.png" class="max-h-[330px] w-auto object-contain" />
 </div>
 
-<div class="mt-12 flex items-stretch gap-3">
+<div class="mt-3 text-sm font-bold text-gray-700">real-time proving を前提に書かれている 2 つのロードマップ</div>
 
-<div class="flex-1 bg-white rounded-xl border border-gray-200 shadow-sm p-4">
-<div class="text-[11px] font-bold tracking-widest text-gray-400 mb-2">事実</div>
-<div class="text-3xl font-black text-gray-900 mb-1">−85%</div>
-<div class="text-xs text-gray-500 mb-3">PeerDAS による validator のデータ取得量 (750MB → 112MB/日)</div>
-<div class="text-sm text-gray-700 leading-relaxed">
-<span class="text-amber-500">&#9654;</span> Pectra (2025/5) で blob 6 → 9<br/>
-<span class="text-amber-500">&#9654;</span> Fusaka (2025/12) で PeerDAS 導入
-</div>
+<div class="mt-2 grid grid-cols-2 gap-3">
+
+<div class="bg-white rounded-xl border border-gray-200 shadow-sm p-3 text-[13px] text-gray-700 leading-relaxed">
+<div class="text-base font-bold text-gray-900 mb-1">耐量子移行 — lean Ethereum (EF, 2025/7)</div>
+コンセンサス・データ・実行の全レイヤーを<strong class="text-gray-900">ハッシュベース暗号</strong>へ置換する構想。実行層を担うのが hash-based の real-time zkVM。NIST は既存公開鍵暗号 (ECDSA 等) を <strong class="text-gray-900">2030 年非推奨 → 2035 年廃止</strong>と明記 (IR 8547)
 </div>
 
-<div class="flex items-center text-gray-300 text-3xl font-black">→</div>
-
-<div class="flex-1 bg-white rounded-xl border border-gray-200 shadow-sm p-4">
-<div class="text-[11px] font-bold tracking-widest text-gray-400 mb-2">課題</div>
-<div class="text-sm text-gray-700 leading-relaxed">
-<span class="text-amber-500">&#9654;</span> データが安くなった今、手数料の支配項は <strong class="text-gray-900">proving cost</strong> に移る<br/><br/>
-<span class="text-amber-500">&#9654;</span> L2 の競争軸は <strong class="text-gray-900">prover throughput</strong> へ (Linea / Scroll / Taiko / Succinct SP1)
-</div>
-</div>
-
-<div class="flex items-center text-gray-300 text-3xl font-black">→</div>
-
-<div class="flex-1 bg-amber-50 rounded-xl border border-amber-200 p-4">
-<div class="text-[11px] font-bold tracking-widest text-amber-700 mb-2">答え</div>
-<div class="text-sm text-gray-700 leading-relaxed">
-証明系そのものを<strong class="text-gray-900">速くする</strong><br/><br/>
-<span class="text-green-500">&#10003;</span> Sumcheck 系 zkVM (Jolt: 従来比 2x prover)<br/>
-<span class="text-green-500">&#10003;</span> folding / IVC<br/>
-<span class="text-green-500">&#10003;</span> hash-based commitment
-</div>
+<div class="bg-white rounded-xl border border-gray-200 shadow-sm p-3 text-[13px] text-gray-700 leading-relaxed">
+<div class="text-base font-bold text-gray-900 mb-1">zkVM as Smart Contract — native rollups (EIP-8079)</div>
+<strong class="text-gray-900">EXECUTE precompile</strong> で L1 バリデータ自身が zkVM 証明を検証 — rollup が独自 prover 網や security council なしで <strong class="text-gray-900">L1 のセキュリティをそのまま継承</strong>する
 </div>
 
 </div>
 
 <div class="absolute bottom-3 left-6 text-[10px] text-gray-400 leading-tight max-w-3xl">
-Sources: Ethereum.org Fusaka roadmap (Dec 2025) ｜ Arun, Setty, Thaler "Jolt: SNARKs for Virtual Machines via Lookups" (2024) ｜ Thaler "Time-Optimal Interactive Proofs for Circuit Evaluation" CRYPTO 2013
+Sources: RISC Zero "Zeth" PR (Aug 2023) ｜ Succinct "SP1 Reth" (Feb 2024) / "SP1 Hypercube" (May 2025) ｜ Brevis "Pico Prism" (Oct 2025) / "Pico Prism 2.0" (May 2026) ｜ EF Blog "Realtime Proving" (Jul 2025) / "zkEVM Security Foundations" (Dec 2025) / "lean Ethereum" (Jul 2025) ｜ NIST IR 8547 (2024) ｜ EIP-8079 "Native Rollups"
 </div>
 
 <!--
 Speaker Notes:
 
-【概要】
-社会的需要の 2 枚目。構図は前ページと同一 (メッセージ → 事実 → 課題 → 答え)。Ethereum Scaling のナラティブ: 「データ層はプロトコルアップグレードで解けた。残ったボトルネックは証明コストであり、それは暗号 (証明系) の研究がそのまま手数料に効く領域」。
+【概要 (需要 ②)】
+需要 ① はセキュリティだった。② は Ethereum 本体のロードマップ。「Ethereum の最重要問題の一つである耐量子移行 — そのボトルネックが zkVM になっている」という 1 枚。WHY のセクションなので時間をかけてよい。
 
-【事実カード】
-- Pectra (2025/5): blob 数 6 → 9。Fusaka (2025/12): PeerDAS 導入で validator が全 blob をダウンロードせずサンプリング検証 → データ取得量 85% 削減 (1 日 750MB → 112MB)。
-- 帰結として L2 手数料は post-Fusaka で 40-60% 下落予想 (データコスト部分)。
+【グラフの読み方】
+- 縦軸は Ethereum 1 ブロックの証明時間 (log)。2022 年には数時間かかっていた (RISC Zero の記述)。
+- SP1 Reth (2024/2, Succinct): 実測 41.8-64.3 分 (CPU のみ)。ここで初めて「分オーダーの実測値」が公表された。
+- SP1 Hypercube (2025/5, Succinct): mainnet 1 万ブロックの 93% を 12 秒未満、平均 10.3 秒 (RTX 4090 クラスタ)。証明系を univariate STARK から multilinear (Sumcheck 系) に全面刷新した結果。
+- Pico Prism (2025/10, Brevis): 45M gas ブロックの 99.6% を 12 秒未満、平均 6.9 秒 (RTX 5090 × 64)。Pico Prism 2.0 (2026/5) は同 99.9% ・平均 6.1 秒を RTX 5090 × 16 (マシン 2 台) で達成 — ハードウェア要件が 1/4 に。
+- 緑の帯 = 12 秒 (Ethereum の 1 スロット)。EF の公式定義は厳密には「スロット 12 秒 − 伝播 1.5 秒 → P99 で 10 秒以下」(EF Blog "Realtime Proving")。
+- EF 総括 (2025/12): 「証明レイテンシは 9 ヶ月で 16 分 → 16 秒、コストは 1/45、target hardware で全ブロックの 99% を 10 秒未満で証明」。
 
-【課題カード】
-手数料 = データコスト + proving cost + 運営マージン。データコストが 1 桁下がると、proving cost が支配項になる。L2 各社の競争軸が「どれだけ速く安く証明を作れるか」(prover throughput) に移っている: Linea Type-1、Scroll、Polygon zkEVM、Taiko、Succinct SP1。
+【12 秒を超えた (下回った) 後の世界 — 下の 2 カード】
+- 耐量子移行: lean Ethereum (Justin Drake, EF Blog 2025/7/31)。BLS 署名は楕円曲線ペアリングベースで Shor のアルゴリズムに脆弱。コンセンサス層はハッシュベース集約署名 (leanXMSS)、データ層は KZG → ハッシュベースコミットメント、実行層は hash-based real-time zkVM に置換する。つまり耐量子 Ethereum の実行層は zkVM が前提 — zkVM が 12 秒を切れないと移行計画自体が成立しない。NIST IR 8547 は従来公開鍵暗号を 2030 非推奨 / 2035 廃止としており、期限は外部から与えられている。
+- zkVM as Smart Contract: native rollups (Justin Drake, ethresear.ch 2025/1 → EIP-8079)。EXECUTE precompile で L1 バリデータが rollup の状態遷移を zkVM 証明の検証によって直接検証する。rollup は独自の fraud proof / prover 網 / security council への信頼が不要になり L1 セキュリティを継承。Optimism・Base が採用意向。
+- どちらも「real-time zkVM がある」ことを前提に書かれた公式ロードマップ / EIP。だから需要 ② の結論も聞き手に補完させる: 「zkVM の性能競争は L2 の手数料の話ではなく、Ethereum 本体の耐量子化と L1 セキュリティ継承の前提条件なのか」。
 
-【答えカード】
-証明系そのものの高速化が競争力: Sumcheck 系 (structured multilinear extension 上で concretely efficient — Thaler 2013 系。無条件に「線形時間」とは言わない)、Jolt (Sumcheck + Lasso lookup、Groth16/PLONK 比 2x prover)、folding/IVC (Nova 系)、hash-based commitment (FRI/Brakedown/BaseFold — trusted setup 不要 + hashing 高速)。技術の中身は S2-C (このあとのセクション) で扱う。ここでは「暗号研究が手数料に直結する」という経済構造だけ掴んでもらう。
-
-【講義での強調点】
-- ①のセキュリティ需要と独立に見えるが、同じ「検証可能な計算を効率よく」という要請の別経路。
-- 受講者への引き: このプログラムで学ぶ Sumcheck / Jolt は、そのまま L2 の手数料競争の最前線のスキル。
+【正確性の注意】
+- 「数時間」(2022-23) は RISC Zero の 2023/8 プレスリリースの記述 ("proofs for Ethereum blocks take many hours")。当時の単一実測値は公表されていない。
+- Zeth (2023/8) は「数分」と発表されたが正確な実測値非公表のためグラフの頂点には採用していない。
+- 各点はハードウェアが異なる (CPU → GPU クラスタ → コンシューマ GPU 16 枚)。「同一条件の推移」ではなく「最速公表値の推移」。
 -->

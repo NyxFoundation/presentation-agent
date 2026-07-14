@@ -1,56 +1,89 @@
-# TODO — ACP26 Week 1 デッキ改修
+# TODO — ACP26 Week 1 デッキ改修 (第 2 ラウンド)
 
-ページ番号は現行 `slides.md` の include 順 (2026-07-13 時点)。着手前に対応を再確認すること。
+ページ番号は現行 `slides.md` の include 順 (2026-07-14 時点):
+p1=SL01, p2=SL02, p3=SL07, p4=SL08b, p5=SL08c, p6=SL09, p7=SL10, p8=SL10b, p9=SL10c,
+p10=SL12, p11=SL14, p12=SL15, p13=SL17, p14=SL18, p15=SL20, p16=SL21, p17=SL22,
+p18=SL23, p19=SL25, p20=SL26, p21=SL27, p22=SL28, p23=SL29, p24=SL31, p25=SL32
 
-## p6 (slides/SL09.md) — Proof-of-Exploit 図の差分化
+## p7 (slides/SL10.md) — ナラティブヒート化
 
-- [x] p4 (SL08b) の KelpDAO アーキ図からの**技術差分がわかる図**に更新する。
-      p4 と同じ actor 配置・同じ設計語彙 (`/arch-diagram` スキル、`figures/kelp_arch.py` ベース) で描き、
-      「何が追加されたか」(ZK Verifier / Circuit-Breaker 等) だけが新要素として浮き上がる構成にする。
+- [ ] p3-6 の内容に自然と続く形で「Programmable Cryptography はセキュリティの足りない部分を埋める」
+      を見せる。2025 ハッキング内訳を円グラフで出し、各領域に「ZK でこう防げる」「MPC / FHE で
+      こう防げる」を添える。伝えたいことをドンと出すのではなく、客観的事実で上品に理解させ、
+      相手が「つまりこういうことなんだ！」と自分で補完する構成にする。
 
-## p7 (slides/SL10.md) — メッセージの絞り込み + ナラティブ 2 枚追加
+## p8 (slides/SL10b.md) — 耐量子移行 × zkVM ナラティブ
 
-- [x] p7 は「AI × システム運用検証」のみに絞る。p4-6 の流れを受けて
-      **「サイバーセキュリティの防御範囲を広げるために Programmable Cryptography の社会実装が必要」**
-      というメッセージだけにする。
-- [x] 次に **Ethereum Scaling のナラティブ**を同じ構図で説明するスライドを追加。(SL10b)
-- [x] その次に **既存金融・機関投資家が入っている → プライバシーとコンプラの両立を実現すればさらに使われる**
-      というナラティブのスライドを追加。(SL10c)
+- [ ] p3-7 のナラティブフローに沿わせる (WHY は時間をかける)。
+      「Ethereum の最重要問題の一つである耐量子移行。そのボトルネックが zkVM になっている」。
+      zkVM の Ethereum block proving time を年ごとのグラフで出す。各数値にどの企業の製品かを
+      表すアイコンを添える。12s に閾値線 (超えたら実用化)。実用化後に「耐量子移行」と
+      「zkVM as Smart Contract」が実現しより強固になることを、別の客観的事実で示す。
 
-## p8 (slides/SL12.md) — 静的図化
+## p9 (slides/SL10c.md) — 機関マネー TVL ナラティブ + ZK Bridge 例の移設
 
-- [x] 場面ごとのアニメーションをやめて**静的な図**にする (`/arch-diagram` スキル)。(figures/proof_meanings.py)
+- [ ] 近年の TVL 推移を全ブロックチェーンで出し、その中に機関系サービス
+      (Lighter, Tempo, Ondo, Hyperliquid, ...) がどれだけ含まれるかを示す図を出す。
+      「それらの機関マネーを 2026-27 で 10 倍にするには？？？」もグラフに添える。
+      その後に課題として「プライバシー」「コンプライアンス」をでかでかと見せる。
+      視聴者が「これが実現したら Web3 めっちゃくるやん！」と分かる構成に。
+- [ ] p17 (SL22) の ZK Bridge は、この機関マネーナラティブの「例えばこういう仕組み」の
+      一例としてここへ移動する (slides.md の include 順を変更)。
 
-## p10 (slides/SL15.md) — Programmable Cryptography 図
+## p10 (slides/SL12.md) — タイトルと図の整理
 
-- [x] 上部のステージごと説明は削除。
-- [x] p9 (SL14) のように常にぐるぐる回り続けるが、**どの場面で切り取っても説明できる図**にする。
+- [ ] 「①は adversary を想定しない——」の注釈的な行は削除。
+- [ ] タイトルは『「ゼロ知識証明」の「証明」とは何を指すか』に。
+- [ ] 図から「2026 年の社会実装はここ」を削除 (figures/proof_meanings.py)。
+- [ ] ③ の例から Longfellow を削除。
 
-## p11 (slides/SL16.md) — 削除
+## p11 (slides/SL14.md) — タイトル変更
 
-- [x] 合成パターンはここでの説明は不要なので**スライドごと削除** (slides.md の include も外す)。
+- [ ] タイトルを「ZK / MPC / FHE」に。
 
-## p12-15 (slides/SL17.md, SL18.md, SL20.md, SL21.md) — ナラティブ化
+## p12 (slides/SL15.md) — タイトル変更
 
-- [x] p3 (SL07) のように**ナラティブとなる「実用性の変化グラフ」**を表示する構成に変える。
-      グラフ上に具体的なプロジェクトのロゴ・名前を入れる (ロゴは `public/logos/` + 実寸逆算 zoom)。
-      (figures/trend_{frontier,sumcheck,commit,longfellow}.py + trend_common.py)
-- [x] 具体的な技術の説明はここでは省略する。(技術詳細は speaker notes と SL19 に移設)
+- [ ] S2-B を削除し、タイトルを
+      「Programmable Cryptography — 暗号とシステムを一体化するパラダイム」に。
 
-## p16 (slides/SL22.md) — ZK Bridge の位置づけ変更
+## p13-16 (slides/SL17/18/20/21.md) — 1 枚に統合 + 定量軸化
 
-- [x] ZK Bridge は前述の**機関投資家マネーのナラティブ**の文脈で使う (単独技術解説をやめる)。
+- [ ] p13 (SL17): 一番上の S2-C の行は削除。縦軸の「実用性」をやめ、スピード等の
+      定量的な値にする。Sumcheck 系の他に STARK 系も入れる。
+      「(既存 ID)」と「回路書き直し + ...」の注記は削除。
+      Groth16 は Sumcheck 系ではない (pairing 系) — 分類を修正する。
+- [ ] p14 (SL18) 削除 — p13 で説明を完結させる。
+- [ ] p15 (SL20) 削除 — 省略。
+- [ ] p16 (SL21) 削除 — p13 にマージ。
 
-## p17 (slides/SL23.md) — ライブデモ
+## p18 (slides/SL23.md) — デモ動画のみに
 
-- [x] ライブデモを追加する。(実演シーケンス + 会場参加用 QR: google/longfellow-zk + フォールバック手順)
+- [ ] デモ動画だけを出す。説明類はすべて削除。タイトルは「Longfellow ライブデモ」。
+- [ ] デモ用の環境レポジトリを用意する (別途)。
 
-## p18-23 (slides/SL25.md, SL26.md, SL27.md, SL28.md, SL29.md, SL31.md) — 講義向け改善
+## p19 (slides/SL25.md) — 考え方 + KelpDAO Circuit Breaker 例
 
-- [x] もっと講義用にわかりやすくする。(タイトルの amber span 統一 / SL28 の極小文字・旧スタイル解消 /
-      SL29 の 2×2 grid を横並び 4 カード化 / SL31 の図を p4 と同じ kelp_arch_static.png に統一。
-      SL26/27 のアニメ実演 2 枚は §15 準拠のため現状維持)
+- [ ] タイトルを「ProgCrypto をサービスに組み込むときの考え方」に。
+      4 つの流れを書いた上で、下に例を 1 個書く。例は p6 の KelpDAO Circuit Breaker にして、
+      「要件をこう変えたら、こういう対策になる」が視聴者に分かるようにする。
 
-## p24 (slides/SL32.md) — まとめ
+## p20-22 (slides/SL26/27/28.md) — 削除
 
-- [x] もっと簡潔にする。(5 つの道具の単一リスト + 次アクション 1 行に集約、2 カラム構成を廃止)
+- [ ] p20 (SL26) 削除 — 例は p19 に移動するので不要。
+- [ ] p21 (SL27) / p22 (SL28) 削除 — 今回は省略。
+
+## p23 (slides/SL29.md) — テーマ一覧表化
+
+- [ ] Notion「Advanced Cryptography Program Output Themes」にまとめてあるものを
+      そのまま一覧表として表示する。レクなので変な囲い・装飾・省略はしない。
+      https://app.notion.com/p/grandchildrice/Advanced-Cryptography-Program-Output-Themes-359d05af0d5a80dbbaa9dd231add14db
+
+## p24 (slides/SL31.md) — ホワイトボードセッション
+
+- [ ] タイトルを「本日のホワイトボードセッション: KelpDAO 事件を防ぐためのシステムを
+      一つ考えてください」に。Phase 1-4 のボックスと Closing Question は削除。
+      「ホワイトボードに書く内容」として 1. アーキテクチャ図、2. 要件、3. 選定技術。
+
+## p25 (slides/SL32.md) — 削除
+
+- [ ] スライドごと削除 (slides.md の include も外す)。

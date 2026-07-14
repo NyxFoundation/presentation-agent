@@ -5,7 +5,7 @@
 #
 # 設計語彙は .claude/skills/arch-diagram/SKILL.md に従う:
 #   枠なし (アイコン+ラベルのみ) / 直角配線 / ゴースト破線=不在 (①の敵対者) /
-#   赤=敵対者専用 / amber=主題 (③ 計算論的 = 2026 年の社会実装) /
+#   赤=敵対者専用 / amber=主題 (③ 計算論的 = ZK の「証明」が立つ場所) /
 #   境界バンド=③ を「我々が立つ場所」として囲う / ラベルは白 bbox で線上に座る
 #
 # 3 列とも同じ行構造 (ヘッダ → 証明の実体 → 敵対者 → 例) なので、
@@ -115,7 +115,7 @@ ax.add_patch(FancyBboxPatch((858, 72), 380, 492,
                              boxstyle="round,pad=0,rounding_size=10",
                              linewidth=1.5, edgecolor=GHOST_EDGE,
                              facecolor="none", linestyle=(0, (6, 4)), zorder=1))
-ax.text(874, 84, "2026 年の社会実装はここ", ha="left", va="center", fontsize=13,
+ax.text(874, 84, "ZK の「証明」はここ", ha="left", va="center", fontsize=13,
         fontweight="bold", color=AMBER, zorder=2)
 
 # ===================================================================== ヘッダ行
@@ -189,7 +189,7 @@ ax.text(C1, EX_Y, "例: フェルマーの最終定理", ha="center", va="center
         fontweight="bold", color=TEXT_MUTED, zorder=6)
 ax.text(C2, EX_Y, "例: One-Time Pad / Σ-protocol", ha="center", va="center", fontsize=13,
         fontweight="bold", color=TEXT_MUTED, zorder=6)
-ax.text(C3, EX_Y, "例: 電子署名 / SNARKs / Longfellow", ha="center", va="center", fontsize=13,
+ax.text(C3, EX_Y, "例: 電子署名 / SNARKs", ha="center", va="center", fontsize=13,
         fontweight="bold", color=TEXT_MUTED, zorder=6)
 
 plt.tight_layout(pad=1.0)

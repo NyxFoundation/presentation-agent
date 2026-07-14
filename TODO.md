@@ -93,4 +93,4 @@ p18=SL23, p19=SL25, p20=SL26, p21=SL27, p22=SL28, p23=SL29, p24=SL31, p25=SL32
 
 ## p25 (slides/SL32.md) — 削除
 
-- [ ] スライドごと削除 (slides.md の include も外す)。
+- [x] スライドごと削除 (slides.md の include も外す)。

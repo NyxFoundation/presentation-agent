@@ -91,7 +91,3 @@ src: ./slides/SL29.md
 ---
 src: ./slides/SL31.md
 ---
-
----
-src: ./slides/SL32.md
----

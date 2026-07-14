@@ -66,9 +66,10 @@ p18=SL23, p19=SL25, p20=SL26, p21=SL27, p22=SL28, p23=SL29, p24=SL31, p25=SL32
 
 ## p19 (slides/SL25.md) — 考え方 + KelpDAO Circuit Breaker 例
 
-- [ ] タイトルを「ProgCrypto をサービスに組み込むときの考え方」に。
+- [x] タイトルを「ProgCrypto をサービスに組み込むときの考え方」に。
       4 つの流れを書いた上で、下に例を 1 個書く。例は p6 の KelpDAO Circuit Breaker にして、
       「要件をこう変えたら、こういう対策になる」が視聴者に分かるようにする。
+      (4 問カード + 各問いへの KelpDAO の答え + 「答えが 1 つ変われば設計も変わる」行)
 
 ## p20-22 (slides/SL26/27/28.md) — 削除
 

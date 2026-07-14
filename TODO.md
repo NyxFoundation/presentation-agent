@@ -53,13 +53,15 @@ p18=SL23, p19=SL25, p20=SL26, p21=SL27, p22=SL28, p23=SL29, p24=SL31, p25=SL32
 
 ## p13-16 (slides/SL17/18/20/21.md) — 1 枚に統合 + 定量軸化
 
-- [ ] p13 (SL17): 一番上の S2-C の行は削除。縦軸の「実用性」をやめ、スピード等の
+- [x] p13 (SL17): 一番上の S2-C の行は削除。縦軸の「実用性」をやめ、スピード等の
       定量的な値にする。Sumcheck 系の他に STARK 系も入れる。
       「(既存 ID)」と「回路書き直し + ...」の注記は削除。
       Groth16 は Sumcheck 系ではない (pairing 系) — 分類を修正する。
-- [ ] p14 (SL18) 削除 — p13 で説明を完結させる。
-- [ ] p15 (SL20) 削除 — 省略。
-- [ ] p16 (SL21) 削除 — p13 にマージ。
+      (figures/prover_overhead.py — 縦軸 = prover オーバーヘッド (native 比, log)。
+      pairing = グレー / STARK・FRI = 青 / Sumcheck = amber / MPC-in-the-head は green カード)
+- [x] p14 (SL18) 削除 — p13 で説明を完結させる。(系譜の物語は SL17 speaker notes に移設)
+- [x] p15 (SL20) 削除 — 省略。
+- [x] p16 (SL21) 削除 — p13 にマージ。(trend_*.py / trend_common.py と旧 PNG も削除)
 
 ## p18 (slides/SL23.md) — デモ動画のみに
 

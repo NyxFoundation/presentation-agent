@@ -22,3 +22,4 @@ exports/
 # Ad-hoc PNG render dumps from local preview/debugging.
 dist-png/
 demo/longfellow/longfellow-zk/
+figures/__pycache__/

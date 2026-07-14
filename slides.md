@@ -65,18 +65,6 @@ src: ./slides/SL17.md
 ---
 
 ---
-src: ./slides/SL18.md
----
-
----
-src: ./slides/SL20.md
----
-
----
-src: ./slides/SL21.md
----
-
----
 src: ./slides/SL23.md
 ---
 

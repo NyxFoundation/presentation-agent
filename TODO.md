@@ -73,8 +73,10 @@ p18=SL23, p19=SL25, p20=SL26, p21=SL27, p22=SL28, p23=SL29, p24=SL31, p25=SL32
 
 ## p20-22 (slides/SL26/27/28.md) — 削除
 
-- [ ] p20 (SL26) 削除 — 例は p19 に移動するので不要。
-- [ ] p21 (SL27) / p22 (SL28) 削除 — 今回は省略。
+- [x] p20 (SL26) 削除 — 例は p19 に移動するので不要。
+- [x] p21 (SL27) / p22 (SL28) 削除 — 今回は省略。
+      (未使用になった components/{DevTraps,FourQuestions,Jolt,ProofMeanings,SocialDemands}Demo.vue と
+      4_questions.svg も削除)
 
 ## p23 (slides/SL29.md) — テーマ一覧表化
 

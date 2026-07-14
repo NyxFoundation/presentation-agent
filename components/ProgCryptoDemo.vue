@@ -1,66 +1,10 @@
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
-
-const totalPhases = 3
-
-function getInitialPhase(): { phase: number; play: boolean } {
-  if (typeof window === 'undefined') return { phase: 0, play: true }
-  const p = new URLSearchParams(window.location.search)
-  const raw = p.get('phase') ?? p.get('stage')
-  if (raw == null) return { phase: 0, play: true }
-  const s = parseInt(raw, 10)
-  if (!Number.isNaN(s) && s >= 0 && s < totalPhases) return { phase: s, play: false }
-  return { phase: 0, play: true }
-}
-
-const initial = getInitialPhase()
-const phase = ref(initial.phase)
-const phaseDurations = [4000, 5000, 6000]
-const isPlaying = ref(initial.play)
-let timeoutId: ReturnType<typeof setTimeout> | null = null
-
-function scheduleNext() {
-  if (timeoutId) { clearTimeout(timeoutId); timeoutId = null }
-  if (!isPlaying.value) return
-  timeoutId = setTimeout(advance, phaseDurations[phase.value])
-}
-function advance() {
-  phase.value = (phase.value + 1) % totalPhases
-  scheduleNext()
-}
-onMounted(() => { if (isPlaying.value) scheduleNext() })
-onBeforeUnmount(() => { if (timeoutId) clearTimeout(timeoutId) })
-
-const captions = [
-  { code: 'Stage 1 — Source : 用途別の高級言語コード  (ZK 系 / MPC 系 / FHE 系)',
-    note: '宣言する syntax (#[private], #[party], #[encrypted]) で「何を隠すか」が変わる' },
-  { code: 'Stage 2 — Compile : 用途を問わず Circuit に集約',
-    note: 'gates + wires ─ ZK/MPC/FHE 共通の中間表現 (arithmetic / boolean / その他)' },
-  { code: 'Stage 3 — Execute : 暗号 backend に乗って実行可能なプログラムに',
-    note: '同じ pipeline ─ Source の syntax だけが用途で分岐する' },
-]
-
-const showCompile  = computed(() => phase.value >= 1)
-const showCircuit  = computed(() => phase.value >= 1)
-const showRun      = computed(() => phase.value >= 2)
-const showExec     = computed(() => phase.value >= 2)
-
-const compileFlow  = computed(() => phase.value === 1)
-const runFlow      = computed(() => phase.value === 2)
+// phase 機構なし — 3 ステージ常時アクティブ + 粒子が常時循環する
+// (SL14 と同じ「どの瞬間で切り取っても全体が説明できる」設計)
 </script>
 
 <template>
   <div class="cc-root">
-    <!-- Caption strip -->
-    <div class="cc-cap">
-      <transition name="cc-fade" mode="out-in">
-        <div :key="phase" class="cc-cap-inner">
-          <code class="cc-code">{{ captions[phase].code }}</code>
-          <div class="cc-note">{{ captions[phase].note }}</div>
-        </div>
-      </transition>
-    </div>
-
     <!-- Main SVG: full-height 3 stages -->
     <svg class="cc-svg" viewBox="0 0 1200 410" preserveAspectRatio="xMidYMid meet">
       <defs>
@@ -68,7 +12,7 @@ const runFlow      = computed(() => phase.value === 2)
           <path d="M 0,0 L 10,5 L 0,10 z" fill="#475569"/>
         </marker>
         <marker id="cc-ar-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-          <path d="M 0,0 L 10,5 L 0,10 z" fill="#d97706"/>
+          <path d="M 0,0 L 10,5 L 0,10 z" fill="#059669"/>
         </marker>
       </defs>
 
@@ -125,11 +69,25 @@ const runFlow      = computed(() => phase.value === 2)
       <!-- ==========================================================
            Convergent compile arrows: 3 → hub → circuit
            ========================================================== -->
-      <g class="cc-compile-zone" :class="{ 'is-active': showCompile }">
+      <g class="cc-compile-zone is-active">
         <!-- 3 fan-in curves toward central hub at (385, 213) -->
         <path d="M 320,89 C 355,89 365,200 385,213" class="cc-compile-edge cc-edge-zk"/>
         <path d="M 320,213 L 385,213" class="cc-compile-edge cc-edge-mpc"/>
         <path d="M 320,335 C 355,335 365,225 385,213" class="cc-compile-edge cc-edge-fhe"/>
+
+        <!-- traveling particles per source language (常時循環)。
+             ラベルより先に描画してテキストが粒子の上に乗るようにする -->
+        <g>
+          <circle r="5.5" class="cc-particle cc-p-zk">
+            <animateMotion dur="1.8s" repeatCount="indefinite" path="M 320,89 C 355,89 365,200 385,213"/>
+          </circle>
+          <circle r="5.5" class="cc-particle cc-p-mpc">
+            <animateMotion dur="1.8s" begin="-0.6s" repeatCount="indefinite" path="M 320,213 L 385,213"/>
+          </circle>
+          <circle r="5.5" class="cc-particle cc-p-fhe">
+            <animateMotion dur="1.8s" begin="-1.2s" repeatCount="indefinite" path="M 320,335 C 355,335 365,225 385,213"/>
+          </circle>
+        </g>
 
         <!-- compile hub (gear) -->
         <circle cx="385" cy="213" r="18" class="cc-compile-hub"/>
@@ -142,19 +100,6 @@ const runFlow      = computed(() => phase.value === 2)
 
         <!-- single arrow out -->
         <line x1="403" y1="213" x2="440" y2="213" class="cc-arrow-line" marker-end="url(#cc-ar)"/>
-
-        <!-- traveling particles per source language -->
-        <g v-if="compileFlow">
-          <circle r="5.5" class="cc-particle cc-p-zk">
-            <animateMotion dur="1.8s" repeatCount="indefinite" path="M 320,89 C 355,89 365,200 385,213"/>
-          </circle>
-          <circle r="5.5" class="cc-particle cc-p-mpc">
-            <animateMotion dur="1.8s" begin="-0.6s" repeatCount="indefinite" path="M 320,213 L 385,213"/>
-          </circle>
-          <circle r="5.5" class="cc-particle cc-p-fhe">
-            <animateMotion dur="1.8s" begin="-1.2s" repeatCount="indefinite" path="M 320,335 C 355,335 365,225 385,213"/>
-          </circle>
-        </g>
       </g>
 
       <!-- ==========================================================
@@ -162,7 +107,7 @@ const runFlow      = computed(() => phase.value === 2)
            ========================================================== -->
       <text x="625" y="20" text-anchor="middle" class="cc-stage-label">2. CIRCUIT  ─  共通の中間表現</text>
 
-      <g class="cc-circuit" :class="{ 'is-active': showCircuit }">
+      <g class="cc-circuit is-active">
         <!-- container -->
         <rect x="450" y="32" width="370" height="361" rx="12" class="cc-circuit-bg"/>
 
@@ -219,13 +164,14 @@ const runFlow      = computed(() => phase.value === 2)
       <!-- ==========================================================
            Run arrow
            ========================================================== -->
-      <g class="cc-arrow-g" :class="{ 'is-active': showRun }">
-        <text x="864" y="195" text-anchor="middle" class="cc-arrow-label">run</text>
-        <text x="864" y="218" text-anchor="middle" class="cc-arrow-sub">prover / protocol</text>
-        <text x="864" y="232" text-anchor="middle" class="cc-arrow-sub">/ FHE eval</text>
+      <g class="cc-arrow-g is-active">
+        <text x="864" y="190" text-anchor="middle" class="cc-arrow-label">run</text>
+        <text x="864" y="210" text-anchor="middle" class="cc-arrow-sub">prover</text>
+        <text x="864" y="224" text-anchor="middle" class="cc-arrow-sub">protocol</text>
+        <text x="864" y="238" text-anchor="middle" class="cc-arrow-sub">FHE eval</text>
         <line x1="827" y1="247" x2="900" y2="247" class="cc-arrow-line" marker-end="url(#cc-ar-green)"/>
 
-        <g v-if="runFlow">
+        <g>
           <circle r="6" class="cc-particle cc-p-green">
             <animateMotion dur="1.6s" repeatCount="indefinite" path="M 827,247 L 900,247"/>
           </circle>
@@ -237,7 +183,7 @@ const runFlow      = computed(() => phase.value === 2)
            ========================================================== -->
       <text x="1040" y="20" text-anchor="middle" class="cc-stage-label">3. EXECUTABLE  ─  共通</text>
 
-      <g class="cc-exec" :class="{ 'is-active': showExec }">
+      <g class="cc-exec is-active">
         <rect x="910" y="32" width="260" height="361" rx="12" class="cc-exec-bg"/>
 
         <!-- laptop (bigger, centered top) -->
@@ -247,12 +193,12 @@ const runFlow      = computed(() => phase.value === 2)
           <!-- screen -->
           <rect x="-72" y="-40" width="144" height="80" rx="2" fill="#f1f5f9"/>
           <!-- mock app UI -->
-          <rect x="-68" y="-36" width="136" height="10" rx="2" fill="#d97706"/>
+          <rect x="-68" y="-36" width="136" height="10" rx="2" fill="#059669"/>
           <rect x="-66" y="-18" width="100" height="6" rx="1" fill="#cbd5e1"/>
           <rect x="-66" y="-6"  width="80" height="6" rx="1" fill="#cbd5e1"/>
           <rect x="-66" y="6"   width="110" height="6" rx="1" fill="#cbd5e1"/>
           <rect x="-66" y="18"  width="60" height="6" rx="1" fill="#cbd5e1"/>
-          <rect x="-66" y="30"  width="48" height="10" rx="2" fill="#64748b"/>
+          <rect x="-66" y="30"  width="48" height="10" rx="2" fill="#3b82f6"/>
           <!-- laptop base -->
           <path d="M -90,46 L 90,46 L 80,54 L -80,54 Z" fill="#475569"/>
         </g>
@@ -278,7 +224,7 @@ const runFlow      = computed(() => phase.value === 2)
         <line x1="1120" y1="252" x2="1090" y2="200" class="cc-use-arrow" marker-end="url(#cc-ar)"/>
 
         <!-- backend label at bottom -->
-        <rect x="940" y="332" width="200" height="48" rx="7" fill="white" stroke="#fcd34d" stroke-width="1.8"/>
+        <rect x="940" y="332" width="200" height="48" rx="7" fill="white" stroke="#86efac" stroke-width="1.8"/>
         <text x="1040" y="352" text-anchor="middle" class="cc-exec-label">backend が裏で動く</text>
         <text x="1040" y="370" text-anchor="middle" class="cc-exec-sub">(ZK / MPC / FHE …)</text>
       </g>
@@ -297,33 +243,6 @@ const runFlow      = computed(() => phase.value === 2)
   color: #111827;
 }
 
-.cc-cap {
-  padding: 9px 16px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.5rem;
-  min-height: 52px;
-  display: flex;
-  align-items: center;
-}
-.cc-cap-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  width: 100%;
-}
-.cc-code {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 15px;
-  color: #1e293b;
-  font-weight: 700;
-}
-.cc-note {
-  font-size: 14px;
-  color: #475569;
-  font-weight: 600;
-}
-
 .cc-svg {
   width: 100%;
   height: auto;
@@ -335,7 +254,7 @@ const runFlow      = computed(() => phase.value === 2)
 .cc-stage-label {
   font-size: 12px;
   font-weight: 800;
-  fill: #475569;
+  fill: #4338ca;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.08em;
 }
@@ -347,21 +266,21 @@ const runFlow      = computed(() => phase.value === 2)
   filter: drop-shadow(0 2px 5px rgba(15,23,42,0.2));
 }
 .cc-mini-zk .cc-mini-bg  { stroke: #fcd34d; }
-.cc-mini-mpc .cc-mini-bg { stroke: #cbd5e1; }
-.cc-mini-fhe .cc-mini-bg { stroke: #fcd34d; }
+.cc-mini-mpc .cc-mini-bg { stroke: #67e8f9; }
+.cc-mini-fhe .cc-mini-bg { stroke: #c4b5fd; }
 
 .cc-mini-tb { fill: #1e293b; }
 .cc-mini-fname {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   fill: #94a3b8;
   font-family: 'JetBrains Mono', monospace;
 }
 .cc-tag-zk  { fill: #b45309; }
-.cc-tag-mpc { fill: #475569; }
-.cc-tag-fhe { fill: #b45309; }
+.cc-tag-mpc { fill: #0e7490; }
+.cc-tag-fhe { fill: #6d28d9; }
 .cc-tag-txt {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 900;
   fill: white;
   font-family: 'JetBrains Mono', monospace;
@@ -374,15 +293,15 @@ const runFlow      = computed(() => phase.value === 2)
   fill: #e2e8f0;
   font-weight: 600;
 }
-.cc-kw       { fill: #94a3b8; font-weight: 800; }
-.cc-fn       { fill: #94a3b8; font-weight: 700; }
+.cc-kw       { fill: #c084fc; font-weight: 800; }
+.cc-fn       { fill: #60a5fa; font-weight: 700; }
 .cc-priv     { fill: #fbbf24; font-weight: 700; }
-.cc-pub      { fill: #fbbf24; font-weight: 700; }
-.cc-mpc-attr { fill: #fbbf24; font-weight: 700; }
-.cc-fhe-attr { fill: #fbbf24; font-weight: 700; }
+.cc-pub      { fill: #34d399; font-weight: 700; }
+.cc-mpc-attr { fill: #22d3ee; font-weight: 700; }
+.cc-fhe-attr { fill: #a78bfa; font-weight: 700; }
 .cc-var      { fill: #fcd34d; }
-.cc-num      { fill: #cbd5e1; }
-.cc-type     { fill: #cbd5e1; }
+.cc-num      { fill: #fb923c; }
+.cc-type     { fill: #f472b6; }
 .cc-punc     { fill: #94a3b8; }
 .cc-comment  { fill: #64748b; font-style: italic; }
 
@@ -395,8 +314,8 @@ const runFlow      = computed(() => phase.value === 2)
   stroke-dasharray: 4 3;
 }
 .cc-edge-zk  { stroke: #d97706; }
-.cc-edge-mpc { stroke: #475569; }
-.cc-edge-fhe { stroke: #d97706; }
+.cc-edge-mpc { stroke: #0891b2; }
+.cc-edge-fhe { stroke: #7c3aed; }
 
 .cc-compile-hub {
   fill: #fff7ed;
@@ -413,15 +332,19 @@ const runFlow      = computed(() => phase.value === 2)
 .cc-arrow-label {
   font-size: 14px;
   font-weight: 800;
-  fill: #1e293b;
+  fill: #1e1b4b;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.04em;
 }
 .cc-arrow-sub {
-  font-size: 12px;
+  font-size: 11px;
   fill: #6b7280;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 600;
+  /* 白のハローで背後の配線がテキストを貫通しないようにする */
+  paint-order: stroke;
+  stroke: white;
+  stroke-width: 4px;
 }
 .cc-arrow-line {
   stroke: #475569;
@@ -433,9 +356,9 @@ const runFlow      = computed(() => phase.value === 2)
   filter: drop-shadow(0 0 4px currentColor);
 }
 .cc-p-zk     { fill: #d97706; }
-.cc-p-mpc    { fill: #475569; }
-.cc-p-fhe    { fill: #d97706; }
-.cc-p-green  { fill: #d97706; }
+.cc-p-mpc    { fill: #0891b2; }
+.cc-p-fhe    { fill: #7c3aed; }
+.cc-p-green  { fill: #059669; }
 
 /* Arrow group (run) */
 .cc-arrow-g { opacity: 0.4; transition: opacity 0.5s; }
@@ -471,8 +394,8 @@ const runFlow      = computed(() => phase.value === 2)
   stroke-width: 1.8;
 }
 .cc-output-node {
-  fill: #d97706;
-  stroke: #92400e;
+  fill: #059669;
+  stroke: #065f46;
   stroke-width: 2.5;
   filter: drop-shadow(0 0 8px rgba(5,150,105,0.5));
 }
@@ -489,8 +412,8 @@ const runFlow      = computed(() => phase.value === 2)
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 .cc-gate-add-bg {
-  fill: #f1f5f9;
-  stroke: #475569;
+  fill: #dbeafe;
+  stroke: #2563eb;
 }
 .cc-gate-text {
   font-size: 34px;
@@ -504,7 +427,7 @@ const runFlow      = computed(() => phase.value === 2)
   fill: none;
 }
 .cc-wire-final {
-  stroke: #d97706;
+  stroke: #059669;
   stroke-width: 2.5;
 }
 .cc-circuit-note {
@@ -520,8 +443,8 @@ const runFlow      = computed(() => phase.value === 2)
 .cc-exec { opacity: 0.55; transition: opacity 0.5s; }
 .cc-exec.is-active { opacity: 1; }
 .cc-exec-bg {
-  fill: #fffbeb;
-  stroke: #fcd34d;
+  fill: #f0fdf4;
+  stroke: #86efac;
   stroke-width: 2.5;
   filter: drop-shadow(0 2px 8px rgba(5,150,105,0.2));
 }
@@ -541,20 +464,14 @@ const runFlow      = computed(() => phase.value === 2)
 .cc-exec-label {
   font-size: 13px;
   font-weight: 800;
-  fill: #78350f;
+  fill: #064e3b;
   font-family: 'JetBrains Mono', monospace;
 }
 .cc-exec-sub {
   font-size: 12px;
-  fill: #b45309;
+  fill: #047857;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 700;
 }
 
-/* Transitions */
-.cc-fade-enter-active, .cc-fade-leave-active {
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-.cc-fade-enter-from { opacity: 0; transform: translateY(4px); }
-.cc-fade-leave-to { opacity: 0; transform: translateY(-4px); }
 </style>

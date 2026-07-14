@@ -80,13 +80,14 @@ p18=SL23, p19=SL25, p20=SL26, p21=SL27, p22=SL28, p23=SL29, p24=SL31, p25=SL32
 
 ## p23 (slides/SL29.md) — テーマ一覧表化
 
-- [ ] Notion「Advanced Cryptography Program Output Themes」にまとめてあるものを
+- [x] Notion「Advanced Cryptography Program Output Themes」にまとめてあるものを
       そのまま一覧表として表示する。レクなので変な囲い・装飾・省略はしない。
+      (12 行のプレーン表: Intmax 4 / Nyx 4 / SMBC 日興 2 / キリフダ 1 / HODL1 追加予定)
       https://app.notion.com/p/grandchildrice/Advanced-Cryptography-Program-Output-Themes-359d05af0d5a80dbbaa9dd231add14db
 
 ## p24 (slides/SL31.md) — ホワイトボードセッション
 
-- [ ] タイトルを「本日のホワイトボードセッション: KelpDAO 事件を防ぐためのシステムを
+- [x] タイトルを「本日のホワイトボードセッション: KelpDAO 事件を防ぐためのシステムを
       一つ考えてください」に。Phase 1-4 のボックスと Closing Question は削除。
       「ホワイトボードに書く内容」として 1. アーキテクチャ図、2. 要件、3. 選定技術。
 

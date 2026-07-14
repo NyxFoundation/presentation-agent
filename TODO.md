@@ -32,18 +32,19 @@ p18=SL23, p19=SL25, p20=SL26, p21=SL27, p22=SL28, p23=SL29, p24=SL31, p25=SL32
 
 ## p10 (slides/SL12.md) — タイトルと図の整理
 
-- [ ] 「①は adversary を想定しない——」の注釈的な行は削除。
-- [ ] タイトルは『「ゼロ知識証明」の「証明」とは何を指すか』に。
-- [ ] 図から「2026 年の社会実装はここ」を削除 (figures/proof_meanings.py)。
-- [ ] ③ の例から Longfellow を削除。
+- [x] 「①は adversary を想定しない——」の注釈的な行は削除。(内容は speaker notes に移設)
+- [x] タイトルは『「ゼロ知識証明」の「証明」とは何を指すか』に。
+- [x] 図から「2026 年の社会実装はここ」を削除 (figures/proof_meanings.py)。
+      (バンドラベルは新タイトルの答えとして「ZK の「証明」はここ」に差し替え)
+- [x] ③ の例から Longfellow を削除。
 
 ## p11 (slides/SL14.md) — タイトル変更
 
-- [ ] タイトルを「ZK / MPC / FHE」に。
+- [x] タイトルを「ZK / MPC / FHE」に。
 
 ## p12 (slides/SL15.md) — タイトル変更
 
-- [ ] S2-B を削除し、タイトルを
+- [x] S2-B を削除し、タイトルを
       「Programmable Cryptography — 暗号とシステムを一体化するパラダイム」に。
 
 ## p13-16 (slides/SL17/18/20/21.md) — 1 枚に統合 + 定量軸化
@@ -58,8 +59,10 @@ p18=SL23, p19=SL25, p20=SL26, p21=SL27, p22=SL28, p23=SL29, p24=SL31, p25=SL32
 
 ## p18 (slides/SL23.md) — デモ動画のみに
 
-- [ ] デモ動画だけを出す。説明類はすべて削除。タイトルは「Longfellow ライブデモ」。
-- [ ] デモ用の環境レポジトリを用意する (別途)。
+- [x] デモ動画だけを出す。説明類はすべて削除。タイトルは「Longfellow ライブデモ」。
+      (public/videos/longfellow-demo.mp4 はプレースホルダ — 録画版に差し替えるだけで反映)
+- [x] デモ用の環境レポジトリを用意する。(demo/longfellow/ に README + setup.sh —
+      外部リポジトリに切り出す場合はこのディレクトリをそのまま移せば OK)
 
 ## p19 (slides/SL25.md) — 考え方 + KelpDAO Circuit Breaker 例
 

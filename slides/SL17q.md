@@ -3,15 +3,9 @@ layout: center
 class: text-center
 ---
 
-<div class="max-w-4xl mx-auto">
-  <div class="text-sm font-bold tracking-[0.35em] text-amber-600 mb-8">Q2 ｜ OPEN QUESTION</div>
-  <div class="text-4xl font-black text-gray-900 leading-snug">
-    あなたの身近にある<br/>
-    <span class="text-amber-700">ProgCrypto が使われているサービス</span>は？
-  </div>
-  <div class="mt-10 text-lg text-gray-500 font-medium">
-    &#9654; 隣の人と 1 つ挙げてみよう
-  </div>
+<div class="text-4xl font-black text-gray-900 max-w-4xl mx-auto leading-snug">
+あなたの身近にある<br/>
+<span class="text-amber-700">ProgCrypto が使われているサービス</span>は？
 </div>
 
 <!--

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# KelpDAO × LayerZero $292M — <span class="text-amber-700">1-of-1 DVN</span> の罠
+# KelpDAO <span class="text-amber-700">事件</span>
 
 <div class="mt-2 flex justify-center">
 <img src="/images/kelp_arch_static.png" class="max-h-[440px] w-auto object-contain" />

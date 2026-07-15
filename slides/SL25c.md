@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# パターン A を機能要件に落とす — <span class="text-amber-700">RISC Zero × Rust</span>
+# パターン A を実装する — <span class="text-amber-700">RISC Zero × Rust</span>
 
 <div class="mt-2 flex justify-center">
 <img src="/images/patternA_arch.png" class="max-h-[470px] w-auto object-contain" />

@@ -6,7 +6,9 @@
 # 設計語彙は figures/kelp_arch.py / req_map_arch.py に従う:
 #   左→右の pipeline。各ノードは実コード / ロゴ / アイコンで見せ、
 #   機能要件 (どの言語・いつ WitnessGen/Prove/Verify するか・マシン制約) を
-#   各ノードの下に添字する。Verify 通過後は 報酬支払い + 復号鍵 → プロバイダ修正 に分岐。
+#   各ノードの下に添字する。zkVM 実行は Witness Generation と Proving の
+#   2 ノードに分ける。Verify 通過後は 報酬支払い + 復号鍵 → プロバイダ修正 に分岐。
+#   各 box の中身は center 揃えで統一する。
 
 import matplotlib
 matplotlib.use("Agg")
@@ -59,109 +61,137 @@ def node_box(x, y, w, h, fc="white", ec="#e5e7eb", lw=1.4):
                                  linewidth=lw, edgecolor=ec, facecolor=fc, zorder=2))
 
 
-def req(x, y, label):
-    """機能要件の添字 (amber)。"""
-    ax.text(x, y, label, ha="center", va="top", fontsize=12, fontweight="bold",
+def title(cx, label):
+    ax.text(cx, 566, label, ha="center", va="center", fontsize=15, fontweight="bold",
+            color=TEXT_PRIMARY, zorder=6)
+
+
+def req(cx, label):
+    """機能要件の添字 (amber, center 揃え)。"""
+    ax.text(cx, 442, label, ha="center", va="top", fontsize=12, fontweight="bold",
             color=AMBER, zorder=6)
 
 
-MAIN_Y = 430
+def chip(cx, cy, glyph, color=BLUE):
+    ax.add_patch(FancyBboxPatch((cx - 15, cy - 14), 30, 28,
+                                 boxstyle="round,pad=0,rounding_size=6",
+                                 facecolor="#eff6ff", edgecolor=color, linewidth=1.8, zorder=6))
+    ax.text(cx, cy, glyph, ha="center", va="center", fontsize=15, fontweight="bold",
+            color=color, zorder=7)
+
+
+BOX_Y, BOX_H, BC = 460, 80, 500   # box 下端 / 高さ / 縦中心
+
 # ===================================================================== ① 回路記述 (Rust / RISC Zero)
-CX1, CW = 60, 340
-ax.add_patch(FancyBboxPatch((CX1, MAIN_Y - 5), CW, 118,
+CX1, CW = 40, 306
+ax.add_patch(FancyBboxPatch((CX1, BOX_Y - 8), CW, 96,
                              boxstyle="round,pad=0,rounding_size=8",
                              facecolor=CODE_BG, edgecolor="none", zorder=3))
 code = [
-    ("#[no_mangle]", "#7dd3fc"),
     ("fn main() {", "#e5e7eb"),
-    ("  let w = env::read();      // W", "#a7f3d0"),
-    ("  assert!(exploit(w, C));   // break?", "#fca5a5"),
-    ("  env::commit(&C.hash());", "#e5e7eb"),
+    ("  let w = env::read();   // W", "#a7f3d0"),
+    ("  assert!(exploit(w, C)); // break", "#fca5a5"),
+    ("  commit(C.hash());", "#e5e7eb"),
     ("}", "#e5e7eb"),
 ]
 for i, (line, col) in enumerate(code):
-    ax.text(CX1 + 16, MAIN_Y + 96 - i * 17, line, ha="left", va="center", fontsize=11.5,
+    ax.text(CX1 + 15, BOX_Y + 72 - i * 16, line, ha="left", va="center", fontsize=10.5,
             family="monospace", color=col, zorder=5)
-add_logo(f"{LOGO_DIR}/rust.png", (CX1 + CW - 52, MAIN_Y + 138), zoom=0.16)
-add_logo(f"{LOGO_DIR}/risc0.png", (CX1 + CW - 20, MAIN_Y + 138), zoom=0.085)
-ax.text(CX1 + 4, MAIN_Y + 138, "① 回路記述", ha="left", va="center", fontsize=15,
-        fontweight="bold", color=TEXT_PRIMARY, zorder=6)
-req(CX1 + CW / 2, MAIN_Y - 18, "言語: Rust (RISC Zero guest)\n証明する命題: exploit(W, C) が成立")
+CC1 = CX1 + CW / 2
+title(CC1, "① 回路記述")
+add_logo(f"{LOGO_DIR}/rust.png", (CX1 + CW - 20, 566), zoom=0.15)
+req(CC1, "言語: Rust (RISC Zero guest)\n証明する命題: exploit(W, C) が成立")
 
-# ===================================================================== ② Witness Gen + Proving
-CX2 = 470
-node_box(CX2, MAIN_Y + 6, 230, 100, fc="#ecfdf5", ec="#a7f3d0")
-add_logo(f"{LOGO_DIR}/risc0.png", (CX2 + 40, MAIN_Y + 62), zoom=0.12)
-ax.text(CX2 + 78, MAIN_Y + 74, "Witness Gen", ha="left", va="center", fontsize=14,
+# ===================================================================== ② zkVM 実行 (WitnessGen → Proving)
+BX0, BX1 = 384, 800
+ax.add_patch(FancyBboxPatch((BX0, BOX_Y - 12), BX1 - BX0, BOX_H + 24,
+                             boxstyle="round,pad=0,rounding_size=10",
+                             facecolor="#f0fdf4", edgecolor="#94a3b8", linewidth=1.5,
+                             linestyle=(0, (6, 4)), zorder=1))
+BCEN = (BX0 + BX1) / 2
+title(BCEN, "② zkVM 実行")
+add_logo(f"{LOGO_DIR}/risc0.png", (BCEN + 78, 566), zoom=0.085)
+
+# --- Witness Generation ノード
+WGX = 478
+node_box(WGX - 78, BOX_Y, 156, BOX_H, fc="#ecfdf5", ec="#a7f3d0")
+chip(WGX, BC + 18, "W", color=GREEN)
+ax.text(WGX, BC - 12, "Witness", ha="center", va="center", fontsize=13,
         fontweight="bold", color=TEXT_PRIMARY, zorder=6)
-ax.text(CX2 + 78, MAIN_Y + 50, "+ Proving", ha="left", va="center", fontsize=14,
+ax.text(WGX, BC - 28, "Generation", ha="center", va="center", fontsize=13,
         fontweight="bold", color=TEXT_PRIMARY, zorder=6)
-ax.text(CX2 + 115, MAIN_Y + 130, "② zkVM 実行", ha="center", va="center", fontsize=15,
+
+# --- Proving ノード
+PVX = 706
+node_box(PVX - 78, BOX_Y, 156, BOX_H, fc="#ecfdf5", ec="#a7f3d0")
+chip(PVX, BC + 18, "π", color=BLUE)
+ax.text(PVX, BC - 16, "Proving", ha="center", va="center", fontsize=13.5,
         fontweight="bold", color=TEXT_PRIMARY, zorder=6)
-req(CX2 + 115, MAIN_Y - 18, "同時・脆弱性発見時に実行\nクライアント上・マシン制約なし\n(時間はかかってよい)")
-straight((CX1 + CW + 6, MAIN_Y + 55), (CX2 - 8, MAIN_Y + 55))
+
+straight((WGX + 78, BC), (PVX - 78, BC), mut=14)   # WitnessGen → Proving
+req(BCEN, "同時・脆弱性発見時に実行\nクライアント上・マシン制約なし\n(時間はかかってよい)")
+straight((CX1 + CW + 4, BC), (BX0 - 6, BC))         # 回路記述 → zkVM
 
 # ===================================================================== ③ Groth16 wrap
-CX3 = 770
-node_box(CX3, MAIN_Y + 6, 190, 100, fc="white")
-# 変換アイコン: STARK proof → 小さな SNARK
-ax.add_patch(Rectangle((CX3 + 30, MAIN_Y + 40), 34, 34, facecolor="#dbeafe",
+GX0, GW = 838, 158
+node_box(GX0, BOX_Y, GW, BOX_H, fc="white")
+GCEN = GX0 + GW / 2
+# 変換アイコン: 大きな STARK proof → 小さな SNARK (center 揃え, ラベル無し)
+ax.add_patch(Rectangle((GCEN - 44, BC - 17), 34, 34, facecolor="#dbeafe",
                        edgecolor=BLUE, linewidth=2, zorder=6))
-ax.text(CX3 + 47, MAIN_Y + 57, "π", ha="center", va="center", fontsize=15,
+ax.text(GCEN - 27, BC, "π", ha="center", va="center", fontsize=15,
         fontweight="bold", color=BLUE, zorder=7)
-straight((CX3 + 70, MAIN_Y + 57), (CX3 + 96, MAIN_Y + 57), color=BLUE, lw=2.2, mut=13)
-ax.add_patch(Rectangle((CX3 + 100, MAIN_Y + 47), 20, 20, facecolor="#dbeafe",
+straight((GCEN - 6, BC), (GCEN + 18, BC), color=BLUE, lw=2.2, mut=12)
+ax.add_patch(Rectangle((GCEN + 22, BC - 10), 20, 20, facecolor="#dbeafe",
                        edgecolor=BLUE, linewidth=2, zorder=6))
-ax.text(CX3 + 138, MAIN_Y + 57, "小さく", ha="left", va="center", fontsize=13,
-        fontweight="bold", color=TEXT_MUTED, zorder=6)
-ax.text(CX3 + 95, MAIN_Y + 130, "③ Groth16 wrap", ha="center", va="center", fontsize=15,
-        fontweight="bold", color=TEXT_PRIMARY, zorder=6)
-req(CX3 + 95, MAIN_Y - 18, "STARK → Groth16 に変換\nVerification Cost 一定")
-straight((CX2 + 230 + 6, MAIN_Y + 55), (CX3 - 8, MAIN_Y + 55))
+ax.text(GCEN + 32, BC, "π", ha="center", va="center", fontsize=11,
+        fontweight="bold", color=BLUE, zorder=7)
+title(GCEN, "③ Groth16 wrap")
+req(GCEN, "STARK → Groth16 に変換\nVerification Cost 一定")
+straight((BX1 + 6, BC), (GX0 - 6, BC))              # zkVM → Groth16
 
 # ===================================================================== ④ on-chain Verify
-CX4 = 1050
-add_logo(f"{LOGO_DIR}/ethereum.png", (CX4 + 55, MAIN_Y + 56), zoom=0.14)
-ax.text(CX4 + 55, MAIN_Y + 130, "④ on-chain Verify", ha="center", va="center", fontsize=15,
-        fontweight="bold", color=TEXT_PRIMARY, zorder=6)
-req(CX4 + 55, MAIN_Y - 18, "コントラクトが verify(π)\n通れば脆弱性の存在が確定")
-straight((CX3 + 190 + 6, MAIN_Y + 55), (CX4 + 20, MAIN_Y + 55))
+VX = 1118
+add_logo(f"{LOGO_DIR}/ethereum.png", (VX, BC), zoom=0.14)
+title(VX, "④ on-chain Verify")
+straight((GX0 + GW + 6, BC), (VX - 30, BC))         # Groth16 → Verify
 
 # ===================================================================== ⑤ 分岐 (報酬 + 復号鍵)
-BR_Y = 150
-COL_Y = 300   # 要件添字の下を通す水平コレクタ
-ax.plot([CX4 + 55, CX4 + 55], [MAIN_Y + 8, COL_Y], color=GREEN, linewidth=2.4, zorder=4)
-ax.text(CX4 + 55, COL_Y + 14, "verify 通過", ha="center", va="center", fontsize=12.5,
-        fontweight="bold", color=GREEN, zorder=6,
+COL_Y = 350
+BR_C = 185         # 報酬 / 復号鍵ノードの縦中心
+# Verify から下へ (要件添字が無い列なので直下に降ろせる)
+ax.plot([VX, VX], [BC - 30, COL_Y], color=GREEN, linewidth=2.4, zorder=4)
+ax.add_patch(Circle((VX, COL_Y), 5, facecolor=GREEN, edgecolor="none", zorder=5))
+ax.text(VX, 410, "verify(π) が通れば\n脆弱性の存在が確定", ha="center", va="center",
+        fontsize=12, fontweight="bold", color=GREEN, zorder=6,
         bbox=dict(facecolor="white", edgecolor="none", pad=1))
-ax.add_patch(Circle((CX4 + 55, COL_Y), 5, facecolor=GREEN, edgecolor="none", zorder=5))
-# 左枝: 報酬支払い / 右枝: 復号鍵
-ax.plot([300, CX4 + 55], [COL_Y, COL_Y], color=GREEN, linewidth=2.4, zorder=4)
-straight((300, COL_Y), (300, BR_Y + 58), color=GREEN, lw=2.4, mut=14)
-straight((760, COL_Y), (760, BR_Y + 58), color=GREEN, lw=2.4, mut=14)
+# コレクタ + 2 枝
+ax.plot([300, VX], [COL_Y, COL_Y], color=GREEN, linewidth=2.4, zorder=4)
+straight((300, COL_Y), (300, BR_C + 40), color=GREEN, lw=2.4, mut=14)
+straight((780, COL_Y), (780, BR_C + 43), color=GREEN, lw=2.4, mut=14)
 
-# 報酬ノード
-node_box(180, BR_Y - 8, 240, 66, fc="#ecfdf5", ec="#a7f3d0")
-ax.add_patch(Circle((222, BR_Y + 25), 15, facecolor="#fbbf24", edgecolor="#d97706",
+# --- 報酬ノード (center 揃え)
+node_box(165, BR_C - 40, 270, 80, fc="#ecfdf5", ec="#a7f3d0")
+ax.add_patch(Circle((300, BR_C + 18), 15, facecolor="#fbbf24", edgecolor="#d97706",
                     linewidth=2, zorder=6))
-ax.text(222, BR_Y + 25, "¥", ha="center", va="center", fontsize=15, fontweight="bold",
+ax.text(300, BR_C + 18, "¥", ha="center", va="center", fontsize=15, fontweight="bold",
         color="white", zorder=7)
-ax.text(250, BR_Y + 25, "報酬が自動で支払われる", ha="left", va="center", fontsize=13.5,
+ax.text(300, BR_C - 18, "報酬が自動で支払われる", ha="center", va="center", fontsize=13.5,
         fontweight="bold", color=TEXT_PRIMARY, zorder=6)
 
-# 復号鍵 → プロバイダ修正ノード
-node_box(560, BR_Y - 8, 400, 66, fc="#ecfdf5", ec="#a7f3d0")
+# --- 復号鍵ノード (center 揃え)
+node_box(610, BR_C - 44, 340, 88, fc="#ecfdf5", ec="#a7f3d0")
 # 鍵アイコン
-ax.add_patch(Circle((602, BR_Y + 30), 10, facecolor="none", edgecolor=GREEN, linewidth=2.4, zorder=6))
-ax.plot([602, 602], [BR_Y + 20, BR_Y + 8], color=GREEN, linewidth=2.4, zorder=6)
-ax.plot([602, 610], [BR_Y + 12, BR_Y + 12], color=GREEN, linewidth=2.4, zorder=6)
-ax.text(624, BR_Y + 30, "復号鍵がプロバイダに渡る", ha="left", va="center", fontsize=13.5,
+ax.add_patch(Circle((780, BR_C + 24), 9, facecolor="none", edgecolor=GREEN, linewidth=2.4, zorder=6))
+ax.plot([780, 780], [BR_C + 15, BR_C + 4], color=GREEN, linewidth=2.4, zorder=6)
+ax.plot([780, 788], [BR_C + 8, BR_C + 8], color=GREEN, linewidth=2.4, zorder=6)
+ax.text(780, BR_C - 8, "復号鍵がプロバイダに渡る", ha="center", va="center", fontsize=13.5,
         fontweight="bold", color=TEXT_PRIMARY, zorder=6)
-ax.text(624, BR_Y + 8, "→ 脆弱性の内容を確認して修正できる", ha="left", va="center",
-        fontsize=12.5, fontweight="bold", color=TEXT_MUTED, zorder=6)
+ax.text(780, BR_C - 30, "→ 脆弱性を確認して修正できる", ha="center", va="center",
+        fontsize=12, fontweight="bold", color=TEXT_MUTED, zorder=6)
 
 # 見出し
-ax.text(60, 600, "パターン A の具体構成 — RISC Zero (Rust) で「脆弱性の存在」を ZK 証明する",
+ax.text(40, 610, "パターン A の具体構成 — RISC Zero (Rust) で「脆弱性の存在」を ZK 証明する",
         ha="left", va="center", fontsize=16, fontweight="bold", color=TEXT_PRIMARY, zorder=6)
 
 plt.tight_layout(pad=1.0)

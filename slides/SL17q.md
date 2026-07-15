@@ -4,8 +4,7 @@ class: text-center
 ---
 
 <div class="text-4xl font-black text-gray-900 max-w-4xl mx-auto leading-snug">
-あなたの身近にある<br/>
-<span class="text-amber-700">ProgCrypto が使われているサービス</span>は？
+<span class="text-amber-600">Q2:</span> あなたの身近にある<br/><span class="text-amber-700">ProgCrypto が使われているサービス</span>は？
 </div>
 
 <!--

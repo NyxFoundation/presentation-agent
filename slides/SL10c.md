@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# 社会的需要 ③ — <span class="text-amber-700">機関マネーはもう on-chain にいる</span>
+# 社会的需要 ④ — <span class="text-amber-700">機関マネーはもう on-chain にいる</span>
 
 <div class="mt-1 flex justify-center">
 <img src="/images/tvl_institutional.png" class="max-h-[330px] w-auto object-contain" />
@@ -31,8 +31,8 @@ Sources: DefiLlama historicalChainTvl / protocol TVL (2026/7/14 取得) ｜ rwa.
 <!--
 Speaker Notes:
 
-【概要 (需要 ③)】
-需要 ①②に続く 3 枚目。機関マネーはすでに on-chain にいる (事実) → それを 10 倍にする壁がプライバシーとコンプライアンス (事実) → 「両立できたら Web3 は一気に来る」は聞き手に補完させる。次のスライドの ZK Bridge が「例えばこういう仕組み」の一例。
+【概要 (需要 ④)】
+需要 ①②③に続く 4 枚目。機関マネーはすでに on-chain にいる (事実) → それを 10 倍にする壁がプライバシーとコンプライアンス (事実) → 「両立できたら Web3 は一気に来る」は聞き手に補完させる。次のスライドの ZK Bridge が「例えばこういう仕組み」の一例。
 
 【グラフの読み方 (左)】
 - DeFi TVL (全チェーン合計, DefiLlama): 2021/11 ピーク $177.5B → 2022 crash ($38.3B) → 2024-25 回復 ($113-116B) → 2026/7 現在 $73.1B。

@@ -13,11 +13,12 @@ p10=SL22, p11=SL12, p12=SL14, p13=SL15, p14=SL17, p15=SL23, p16=SL25, p17=SL29, 
 
 ## p8 の後 — Ethereum のプライバシー需要スライドを新設 (slides/SL10d.md)
 
-- [ ] Ethereum における需要のもう一つとして、RPC-PIR や Kohaku に代表される
+- [x] Ethereum における需要のもう一つとして、RPC-PIR や Kohaku に代表される
       プライバシー領域の拡大を示す。ユーザが tx を送信して RPC → EL → CL consensus と
       なっていく過程をアーキテクチャで示した上で、今まではどこからどこまでプライバシーが
       保たれていたのか、これからはその全体にプライバシーが必須となっている、を分かるように。
       (需要の番号は ① セキュリティ ② 耐量子 ③ プライバシー ④ 機関マネー に振り直す)
+      (figures/eth_privacy.py — before/after 2 段 + 保護範囲バー。SL10d を SL10b の直後に挿入)
 
 ## p9 (slides/SL10c.md) — 機関マネーの見せ方を bar グラフに
 

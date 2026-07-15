@@ -41,6 +41,10 @@ src: ./slides/SL10b.md
 ---
 
 ---
+src: ./slides/SL10d.md
+---
+
+---
 src: ./slides/SL10c.md
 ---
 

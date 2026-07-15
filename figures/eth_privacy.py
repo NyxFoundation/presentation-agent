@@ -5,9 +5,11 @@
 #
 # 設計語彙は .claude/skills/arch-diagram/SKILL.md + figures/kelp_arch.py に従う:
 #   枠なし (アイコン+ラベルのみ) / 直角配線・塗り矢印 / 境界バンド = on-chain 領域 /
-#   amber = 現状の露出 (可視) / green = これから足す防御 (Kohaku・PIR・shielded write・
-#   encrypted mempool) — p4→p6 と同じ「基底 + 差分」の読み方。
-#   下部の 2 本のバー = 保護範囲 (これまで: TLS 区間のみ / これから: 全区間)。
+#   amber = 現状の露出 (可視) / green = これから足す防御。
+#   保護範囲はバーではなく図内で直接可視化する:
+#     - 図中のスコープ線: green (TLS 区間 = これまで) → amber (可視のまま) の 1 本線
+#     - 図全体を囲う green 破線境界 = これから (全区間がプライバシー前提)
+#   actor: User → App (Uniswap 等) → RPC → EL → CL。Kohaku / Shutter はロゴ付き。
 
 import matplotlib
 matplotlib.use("Agg")
@@ -31,7 +33,6 @@ SURFACE = "#ffffff"
 GRAY = "#475569"
 GHOST_EDGE = "#94a3b8"
 AMBER = "#d97706"
-AMBER_SOFT = "#fbbf24"
 GREEN = "#059669"
 TEXT_PRIMARY = "#1f2937"
 TEXT_MUTED = "#6b7280"
@@ -39,8 +40,8 @@ TEXT_MUTED = "#6b7280"
 fig, ax = plt.subplots(figsize=(13.4, 6.2), dpi=200)
 fig.patch.set_facecolor(SURFACE)
 ax.set_facecolor(SURFACE)
-ax.set_xlim(0, 1260)
-ax.set_ylim(70, 578)
+ax.set_xlim(20, 1250)
+ax.set_ylim(140, 585)
 ax.axis("off")
 
 # ---------------------------------------------------------------- icon library
@@ -62,7 +63,6 @@ def icon_mini_server(cx, cy, s=22, color=GRAY):
 
 
 def icon_block(cx, cy, s=22, color=GRAY):
-    """EL client (実行エンジン): ブロック型。"""
     w = s * 1.5
     ax.add_patch(Rectangle((cx - w / 2, cy - w / 2), w, w, facecolor="white",
                             edgecolor=color, linewidth=2.2, zorder=8))
@@ -70,7 +70,6 @@ def icon_block(cx, cy, s=22, color=GRAY):
 
 
 def icon_network(cx, cy, s=22, color=GRAY):
-    """CL consensus (ノード網): 三角メッシュ。"""
     pts = [(cx, cy + s * 0.62), (cx - s * 0.72, cy - s * 0.45), (cx + s * 0.72, cy - s * 0.45)]
     for i in range(3):
         for j in range(i + 1, 3):
@@ -81,14 +80,14 @@ def icon_network(cx, cy, s=22, color=GRAY):
                             linewidth=1.5, zorder=8))
 
 
-def add_logo(path, xy, zoom, box_alignment=(0.5, 0.5)):
+def add_logo(path, xy, target_h=30.0, box_alignment=(0.5, 0.5)):
     img = mpimg.imread(path)
-    imagebox = OffsetImage(img, zoom=zoom)
-    ab = AnnotationBbox(imagebox, xy, frameon=False, zorder=9, box_alignment=box_alignment)
+    zoom = target_h / img.shape[0]
+    ab = AnnotationBbox(OffsetImage(img, zoom=zoom), xy, frameon=False, zorder=9,
+                        box_alignment=box_alignment)
     ax.add_artist(ab)
 
 
-# ---------------------------------------------------------------- primitives
 def entity(cx, cy, icon_fn, label, fontsize=15, gap=36, on_line=False, on_line_fc="white"):
     icon_fn(cx, cy)
     bbox = dict(facecolor=on_line_fc, edgecolor="none", pad=2.5) if on_line else None
@@ -103,27 +102,39 @@ def straight(p1, p2, color=GRAY, lw=2.4, ls="solid", z=4):
 
 
 # ===================================================================== 座標定数
-MAIN_Y = 420          # メインフロー行 (User → RPC → EL → CL)
-X_USER, X_RPC, X_EL, X_CL = 110, 430, 770, 1070
-BAND_FC = "#f6f9fc"   # on-chain バンド (#6366f1 α.04 相当) の合成地色
+MAIN_Y = 420
+X_USER, X_APP, X_RPC, X_EL, X_CL = 100, 320, 560, 850, 1110
+BAND_FC = "#f6f9fc"
+
+# ===================================================================== これから境界 (図全体)
+ax.add_patch(FancyBboxPatch((40, 175), 1190, 400,
+                             boxstyle="round,pad=0,rounding_size=12",
+                             linewidth=1.8, edgecolor=GREEN,
+                             facecolor="none", linestyle=(0, (6, 4)), zorder=1))
+ax.text(635, 175, "これから — 全区間がプライバシー前提に (EF ロードマップ)", ha="center",
+        va="center", fontsize=13.5, fontweight="bold", color=GREEN, zorder=12,
+        bbox=dict(facecolor="white", edgecolor="none", pad=3))
 
 # ===================================================================== on-chain バンド
-ax.add_patch(FancyBboxPatch((650, 245), 540, 245,
+ax.add_patch(FancyBboxPatch((730, 245), 470, 245,
                              boxstyle="round,pad=0,rounding_size=10",
                              linewidth=1.5, edgecolor=GHOST_EDGE,
                              facecolor="#6366f1", alpha=0.04, linestyle=(0, (6, 4)),
                              zorder=1))
-ax.add_patch(FancyBboxPatch((650, 245), 540, 245,
+ax.add_patch(FancyBboxPatch((730, 245), 470, 245,
                              boxstyle="round,pad=0,rounding_size=10",
                              linewidth=1.5, edgecolor=GHOST_EDGE,
                              facecolor="none", linestyle=(0, (6, 4)), zorder=1))
-add_logo(f"{LOGO_DIR}/ethereum.png", (676, 472), zoom=0.075)
-ax.text(694, 472, "Ethereum (on-chain)", ha="left", va="center", fontsize=13,
+add_logo(f"{LOGO_DIR}/ethereum.png", (756, 472), target_h=26)
+ax.text(774, 472, "Ethereum (on-chain)", ha="left", va="center", fontsize=13,
         fontweight="bold", color=GRAY, zorder=2)
 
 # ===================================================================== メインフロー
-entity(X_USER, MAIN_Y, lambda cx, cy: icon_person(cx, cy, s=22), "User (wallet)")
-straight((150, MAIN_Y), (X_RPC - 46, MAIN_Y), lw=2.4)
+entity(X_USER, MAIN_Y, lambda cx, cy: icon_person(cx, cy, s=22), "User")
+straight((138, MAIN_Y), (X_APP - 42, MAIN_Y), lw=2.4)
+entity(X_APP, MAIN_Y, lambda cx, cy: add_logo(f"{LOGO_DIR}/uniswap.png", (cx, cy), target_h=44),
+       "App (Uniswap 等)")
+straight((X_APP + 42, MAIN_Y), (X_RPC - 46, MAIN_Y), lw=2.4)
 entity(X_RPC, MAIN_Y, lambda cx, cy: icon_mini_server(cx, cy, s=22), "RPC provider")
 straight((X_RPC + 46, MAIN_Y), (X_EL - 44, MAIN_Y), lw=2.4)
 entity(X_EL, MAIN_Y, lambda cx, cy: icon_block(cx, cy, s=22), "EL client (mempool)",
@@ -132,12 +143,12 @@ straight((X_EL + 44, MAIN_Y), (X_CL - 44, MAIN_Y), lw=2.4)
 entity(X_CL, MAIN_Y, lambda cx, cy: icon_network(cx, cy, s=24), "CL consensus",
        on_line=True, on_line_fc=BAND_FC)
 
-# 配線ラベル: 線の上に 3 段 (gray = 何が流れるか / green = これから足す防御)
-ax.text(292, MAIN_Y + 18, "eth_call ・ sendRawTransaction", ha="center", va="center",
-        fontsize=12.5, fontweight="bold", color=TEXT_MUTED, zorder=6)
-ax.text(292, MAIN_Y + 42, "shielded write (Privacy Pools / Railgun)", ha="center", va="center",
+# 配線ラベル (App→RPC): gray = 何が流れるか / green = これから足す防御
+ax.text(440, MAIN_Y + 18, "eth_call / sendRawTx", ha="center", va="center",
+        fontsize=12, fontweight="bold", color=TEXT_MUTED, zorder=6)
+ax.text(440, MAIN_Y + 44, "shielded write (Privacy Pools / Railgun)", ha="center", va="center",
         fontsize=13, fontweight="bold", color=GREEN, zorder=6)
-ax.text(292, MAIN_Y + 64, "PIR read — 何を読んだか秘匿", ha="center", va="center",
+ax.text(440, MAIN_Y + 66, "PIR read — 何を読んだか秘匿", ha="center", va="center",
         fontsize=13, fontweight="bold", color=GREEN, zorder=6)
 
 # ===================================================================== amber = 現状の露出
@@ -150,41 +161,38 @@ ax.text(X_CL, MAIN_Y - 57, "チェーン上は全公開", ha="center", va="top",
         fontsize=13, fontweight="bold", color=AMBER, zorder=6, bbox=dict(
             facecolor=BAND_FC, edgecolor="none", pad=2.5))
 
-# ===================================================================== green = 足す防御 (差分)
-# Kohaku callout — kelp の setConfig callout と同じ形式 (プレーン 1 行 + 垂直 leader)
-CALLOUT_Y = 538
-ax.text(X_USER, CALLOUT_Y, "Kohaku (EF) — privacy 既定の wallet SDK", ha="left", va="center",
+# ===================================================================== green = 足す防御
+# Kohaku callout (EF プロジェクトなので EF/Ethereum マーク付き)
+CALLOUT_Y = 540
+add_logo(f"{LOGO_DIR}/ethereum.png", (100, CALLOUT_Y), target_h=26)
+ax.text(118, CALLOUT_Y, "Kohaku — privacy 既定の wallet SDK (EF)", ha="left", va="center",
         fontsize=14, fontweight="bold", color=GREEN, zorder=11)
-straight((X_USER, CALLOUT_Y - 16), (X_USER, MAIN_Y + 40), color=GREEN, lw=2.0,
+straight((100, CALLOUT_Y - 18), (100, MAIN_Y + 40), color=GREEN, lw=2.0,
          ls=(0, (3, 2)), z=5)
 
-ax.text(X_EL, MAIN_Y - 100, "→ encrypted mempool\n(threshold 復号)", ha="center", va="top",
+ax.text(X_EL, MAIN_Y - 102, "→ encrypted mempool", ha="center", va="top",
         fontsize=13, fontweight="bold", color=GREEN, zorder=6, bbox=dict(
             facecolor=BAND_FC, edgecolor="none", pad=2.5))
-ax.text(X_CL, MAIN_Y - 100, "→ 証明とコミットメント\nのみを公開", ha="center", va="top",
+add_logo(f"{LOGO_DIR}/shutter.png", (X_EL - 92, MAIN_Y - 133), target_h=24)
+ax.text(X_EL - 76, MAIN_Y - 133, "Shutter 型 threshold 復号", ha="left", va="center",
+        fontsize=12, fontweight="bold", color=GREEN, zorder=6, bbox=dict(
+            facecolor=BAND_FC, edgecolor="none", pad=2))
+ax.text(X_CL, MAIN_Y - 102, "→ 証明とコミットメント\nのみを公開", ha="center", va="top",
         fontsize=13, fontweight="bold", color=GREEN, zorder=6, bbox=dict(
             facecolor=BAND_FC, edgecolor="none", pad=2.5))
 
-# ===================================================================== 保護範囲バー (下部)
-BAR_X0, BAR_X1 = X_USER, 1190
-
-def coverage_bar(y, row_label, segments, labels):
-    ax.text(BAR_X0 - 18, y + 4, row_label, ha="right", va="center", fontsize=13.5,
-            fontweight="bold", color=TEXT_PRIMARY, zorder=6)
-    for x1, x2, c in segments:
-        ax.add_patch(Rectangle((x1, y), x2 - x1, 9, facecolor=c, edgecolor="none", zorder=5))
-    for x, text, c in labels:
-        ax.text(x, y - 17, text, ha="center", va="center", fontsize=12.5,
-                fontweight="bold", color=c, zorder=6)
-
-coverage_bar(200, "これまで",
-             [(BAR_X0, X_RPC, GREEN), (X_RPC, BAR_X1, AMBER_SOFT)],
-             [((BAR_X0 + X_RPC) / 2, "TLS — 通信路のみ", GREEN),
-              ((X_RPC + BAR_X1) / 2, "中身は事業者・validator・全世界に可視", AMBER)])
-
-coverage_bar(130, "これから",
-             [(BAR_X0, BAR_X1, GREEN)],
-             [((BAR_X0 + BAR_X1) / 2, "PIR + shielded write + encrypted mempool — 全区間を暗号で保護", GREEN)])
+# ===================================================================== スコープ線 (これまで)
+SCOPE_Y = 228
+ax.plot([X_USER, X_RPC], [SCOPE_Y, SCOPE_Y], color=GREEN, linewidth=4.5,
+        solid_capstyle="butt", zorder=5)
+ax.plot([X_RPC, 1195], [SCOPE_Y, SCOPE_Y], color="#fbbf24", linewidth=4.5,
+        solid_capstyle="butt", zorder=5)
+for x in (X_USER, X_RPC, 1195):
+    ax.plot([x, x], [SCOPE_Y - 7, SCOPE_Y + 7], color=GRAY, linewidth=1.6, zorder=6)
+ax.text((X_USER + X_RPC) / 2, SCOPE_Y - 24, "これまで: TLS — 通信路のみ", ha="center",
+        va="center", fontsize=13, fontweight="bold", color=GREEN, zorder=6)
+ax.text((X_RPC + 1195) / 2, SCOPE_Y - 24, "中身は事業者・validator・全世界に可視", ha="center",
+        va="center", fontsize=13, fontweight="bold", color=AMBER, zorder=6)
 
 plt.tight_layout(pad=1.0)
 plt.savefig(OUT, facecolor=SURFACE, bbox_inches="tight")

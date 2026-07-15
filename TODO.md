@@ -15,3 +15,18 @@ p8=SL10 (円グラフ), p10=SL10d (プライバシー), p11=SL10c (機関マネ�
       どう異なるかのマップ。「誰が」「何を計算する」を変えた 3 パターン。
       (figures/req_map_arch.py — KelpDAO 基底アーキ + green 差分モジュール A/B/C が
       同じ on-chain Verifier に合流する差分 diagram に刷新)
+
+## 第 6 ラウンド
+- [x] p20 (SL25b): KelpDAO の architecture diagram に対して 3 パターンを追加した
+      差分 diagram に。「誰が」「何を計算する」を変えると使う暗号が変わることを
+      視覚的に示す (figures/req_map_arch.py で実装済)。
+
+## 第 7 ラウンド
+- [x] p20 (SL25b): タイトルを「どの暗号を使うのかは、要件次第」に。
+- [x] p20 の次に p21 (SL25c) を新設: パターン A をより具体的なシステム構成に。
+      「どういう回路を書いてなにを証明するか」「どの言語 (RISC Zero / Rust)」
+      「Witness Generation・Proving・Verifying のタイミング」の機能要件。
+      WitnessGen+Proving は同時・脆弱性発見時・クライアント上 (マシン制約なし・
+      時間可)、Groth16 wrap で検証コスト一定、Verify 通過で報酬支払い + 復号鍵を
+      プロバイダに渡して修正、の pipeline アーキ図。要件を各ノードに添字、
+      ノードは実コード / ロゴ / アイコンで視覚化 (figures/patternA_arch.py)。

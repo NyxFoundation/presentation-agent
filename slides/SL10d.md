@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# ProgCrypto は<span class="text-amber-700">機関投資家が DeFi を使う</span>ための最後の鍵だ
+# ProgCrypto は<span class="text-amber-700">イーサリアムのプライバシー</span>をデフォルト化する
 
 <div class="mt-2 flex justify-center">
 <img src="/images/eth_privacy_arch.png" class="max-h-[450px] w-auto object-contain" />
@@ -16,11 +16,11 @@ Sources: Buterin "A maximally simple L1 privacy roadmap" ethereum-magicians (Apr
 Speaker Notes:
 
 【概要 (需要 ③)】
-Ethereum 側のもう一つの需要: プライバシー領域の拡大。tx の一生 (User → App (Uniswap 等の dApp frontend) → RPC → EL の mempool → CL consensus) をアーキテクチャで描くと、「暗号がどこを守っていたか」が一目で分かる。図の下のスコープ線: 緑 = これまで守られていた区間 (TLS、通信路のみ)、黄 = 中身が可視のままの区間。図全体を囲う緑の破線境界 = これから (EF ロードマップは経路全体のプライバシーを前提にしている)。
+Ethereum 側のもう一つの需要: プライバシー領域の拡大。tx の一生 (User → App (Uniswap 等の dApp frontend) → RPC → EL の mempool → CL consensus) をアーキテクチャで描くと、「暗号がどこを守っていたか」が一目で分かる。図の下のスコープ線: 緑 = これまで守られていた範囲 (TLS による通信路の暗号化 = 他ユーザーへのプライバシーのみ)、黄 = 事業者・validator には中身が見えたままの区間。図全体を囲う緑の破線境界 = これから (EF ロードマップは経路全体のプライバシーを前提にしている)。
 
 【図の読み方 — 事実の裏付け】
 - App (Uniswap 等): ユーザは通常 dApp のフロントエンド経由でチェーンに触る。フロントと RPC のどちらにもアドレス・照会内容が見える。
-- スコープ線の緑 = TLS。守られているのは「通信の中身を第三者が盗聴できない」ことだけ。
+- スコープ線の緑 = TLS。守られているのは「通信の中身を他ユーザー (第三者) が盗聴できない」ことだけ — 事業者自身には全部見える。
 - RPC provider には全部見える: PSE の PIR 研究ノート (2025/6) の一次記述 — eth_getBalance / eth_call / eth_getStorageAt は「照会アドレス・照会のタイミングと頻度・IP とデバイス指紋」を露出し、「RPC endpoint はユーザをプロファイルし deanonymize しうる」。ConsenSys は 2022/11 にプライバシーポリシーで「MetaMask がデフォルト RPC (Infura) を使う場合、IP アドレスと wallet アドレスを収集する」と自認した (収集点が RPC provider であることを事業者自身が認めた事件)。
 - EL の mempool は平文で validator に可視 (front-running / censorship の温床)。チェーン上は全公開。
 - 下のスコープ線: 緑 (暗号化) は最初の区間だけで、残りは黄色 (可視) — 「どこからどこまで」の答え。

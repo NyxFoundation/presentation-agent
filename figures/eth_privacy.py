@@ -189,7 +189,7 @@ ax.plot([X_RPC, 1195], [SCOPE_Y, SCOPE_Y], color="#fbbf24", linewidth=4.5,
         solid_capstyle="butt", zorder=5)
 for x in (X_USER, X_RPC, 1195):
     ax.plot([x, x], [SCOPE_Y - 7, SCOPE_Y + 7], color=GRAY, linewidth=1.6, zorder=6)
-ax.text((X_USER + X_RPC) / 2, SCOPE_Y - 24, "これまで: TLS — 通信路のみ", ha="center",
+ax.text((X_USER + X_RPC) / 2, SCOPE_Y - 24, "これまで: 他ユーザーへのプライバシーのみ", ha="center",
         va="center", fontsize=13, fontweight="bold", color=GREEN, zorder=6)
 ax.text((X_RPC + 1195) / 2, SCOPE_Y - 24, "中身は事業者・validator・全世界に可視", ha="center",
         va="center", fontsize=13, fontweight="bold", color=AMBER, zorder=6)

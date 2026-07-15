@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# 社会的需要 ④ — <span class="text-amber-700">機関マネーはもう on-chain にいる</span>
+# ProgCrypto は<span class="text-amber-700">機関投資家が DeFi を使う</span>ための最後の鍵だ
 
 <div class="mt-2 flex justify-center">
 <img src="/images/tvl_institutional.png" class="max-h-[450px] w-auto object-contain" />

@@ -73,6 +73,10 @@ src: ./slides/SL17.md
 ---
 
 ---
+src: ./slides/SL17q.md
+---
+
+---
 src: ./slides/SL23.md
 ---
 

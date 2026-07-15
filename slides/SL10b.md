@@ -2,24 +2,24 @@
 layout: default
 ---
 
-# 社会的需要 ② — <span class="text-amber-700">耐量子移行のボトルネックは zkVM</span>
+# ProgCrypto は<span class="text-amber-700">ブロックチェーンの耐量子移行</span>の最後の鍵だ
 
 <div class="mt-1 flex justify-center">
 <img src="/images/zkvm_proving_time.png" class="max-h-[330px] w-auto object-contain" />
 </div>
 
-<div class="mt-3 text-sm font-bold text-gray-700">real-time proving を前提に書かれている 2 つのロードマップ</div>
+<div class="mt-3 text-sm font-bold text-gray-700">ZK 中心のイーサリアム</div>
 
 <div class="mt-2 grid grid-cols-2 gap-3">
 
-<div class="bg-white rounded-xl border border-gray-200 shadow-sm p-3 text-[13px] text-gray-700 leading-relaxed">
-<div class="text-base font-bold text-gray-900 mb-1">耐量子移行 — lean Ethereum (EF, 2025/7)</div>
-コンセンサス・データ・実行の全レイヤーを<strong class="text-gray-900">ハッシュベース暗号</strong>へ置換する構想。実行層を担うのが hash-based の real-time zkVM。NIST は既存公開鍵暗号 (ECDSA 等) を <strong class="text-gray-900">2030 年非推奨 → 2035 年廃止</strong>と明記 (IR 8547)
+<div class="bg-white rounded-xl border border-gray-200 shadow-sm p-3 text-sm text-gray-700 leading-relaxed">
+<div class="text-base font-bold text-gray-900 mb-1">耐量子移行 — lean Ethereum</div>
+署名・コミットメントをハッシュベースへ。<strong class="text-gray-900">実行の検証は zkVM の ZK 証明</strong>が担う
 </div>
 
-<div class="bg-white rounded-xl border border-gray-200 shadow-sm p-3 text-[13px] text-gray-700 leading-relaxed">
-<div class="text-base font-bold text-gray-900 mb-1">zkVM as Smart Contract — native rollups (EIP-8079)</div>
-<strong class="text-gray-900">EXECUTE precompile</strong> で L1 バリデータ自身が zkVM 証明を検証 — rollup が独自 prover 網や security council なしで <strong class="text-gray-900">L1 のセキュリティをそのまま継承</strong>する
+<div class="bg-white rounded-xl border border-gray-200 shadow-sm p-3 text-sm text-gray-700 leading-relaxed">
+<div class="text-base font-bold text-gray-900 mb-1">zkVM as Smart Contract — native rollups</div>
+L1 バリデータが <strong class="text-gray-900">zkVM の証明を検証</strong>し、rollup の実行を L1 が直接保証する
 </div>
 
 </div>

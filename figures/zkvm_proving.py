@@ -57,7 +57,7 @@ for sp in ax.spines.values():
 # real-time 域 (12 秒未満)
 ax.axhspan(2.2, 12, facecolor=BAND_FC, zorder=0)
 ax.axhline(12, color=GREEN, linewidth=1.5, linestyle=(0, (5, 4)), zorder=2)
-ax.text(2022.12, 9.0, "12 秒 = Ethereum の 1 スロット ─ ここを下回れば real-time", ha="left",
+ax.text(2022.12, 9.0, "12s = 1 slot", ha="left",
         va="center", fontsize=13.5, fontweight="bold", color=GREEN, zorder=6)
 
 # y 軸目盛 (時間の直感単位)
@@ -74,7 +74,7 @@ ax.set_xticks(xticks)
 ax.set_xticklabels([str(t) for t in xticks], fontsize=13, fontweight="bold", color=TEXT_MUTED)
 ax.tick_params(axis="x", length=0, pad=8)
 
-ax.text(2022.05, 60000, "1 ブロックの証明時間 (log)", ha="left", va="center",
+ax.text(2022.05, 60000, "zkVM によるブロック証明の生成時間の推移 (log)", ha="left", va="center",
         fontsize=13, fontweight="bold", color=TEXT_FAINT)
 
 # ---------------------------------------------------------------- data

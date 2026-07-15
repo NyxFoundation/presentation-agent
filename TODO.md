@@ -31,6 +31,9 @@ p10=SL22, p11=SL12, p12=SL14, p13=SL15, p14=SL17, p15=SL23, p16=SL25, p17=SL29, 
 
 ## p14 (slides/SL17.md) — グラフを 1 個に統合
 
-- [ ] 文字が被って醜いので直す。
-- [ ] 系ごとにグラフを分けず、グラフ自体は 1 個にする。その中に
+- [x] 文字が被って醜いので直す。
+- [x] 系ごとにグラフを分けず、グラフ自体は 1 個にする。その中に
       Google, Microsoft, SP1, RISC Zero, Jolt, Sumcheck, GKR を全部詰める。
+      (上段 = 理論シェルフ: Sumcheck / GKR / Spartan・Nova (Microsoft) / Lasso /
+      Longfellow (Google)。下段 = 実装 frontier: Groth16 → RISC Zero → SP1 → Jolt。
+      理論→実装の橋を破線矢印で 1 本化)

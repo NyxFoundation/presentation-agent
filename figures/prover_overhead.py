@@ -6,7 +6,7 @@
 # 設計:
 #   - 線は 1 本だけ。1992 (Sumcheck) から 2025 (Jolt) まで降りてくる。
 #     破線区間 = 理論のみ (実装が無くオーバーヘッド計測なし)、実線区間 = 実装の最速値。
-#   - 縦軸 = prover オーバーヘッド (native 実行の何倍遅いか, log)。下ほど速い。
+#   - 縦軸 = 証明オーバーヘッド (native 実行の何倍遅いか, log)。下ほど速い。
 #   - 点の色 = 系統: グレー = pairing / 青 = STARK・FRI / amber = Sumcheck。
 #     理論点 (Sumcheck / GKR) は白抜きダイヤ。
 #   - Longfellow (Google) は zkVM と別指標のため右上の注記で併載。
@@ -55,7 +55,7 @@ def logo_at(name, x, y):
 fig, ax = plt.subplots(figsize=(13.2, 5.8), dpi=200)
 fig.patch.set_facecolor(SURFACE)
 ax.set_facecolor(SURFACE)
-ax.set_xlim(1989.5, 2029.0)
+ax.set_xlim(1989.5, 2029.6)
 ax.set_yscale("log")
 ax.set_ylim(2.4e4, 6.5e7)
 
@@ -74,7 +74,7 @@ ax.set_xticks(xticks)
 ax.set_xticklabels([str(t) for t in xticks], fontsize=13, fontweight="bold", color=TEXT_MUTED)
 ax.tick_params(axis="x", length=0, pad=8)
 
-ax.text(1990.0, 2.9e4, "prover オーバーヘッド (native 実行の何倍遅いか, log) — 下ほど速い",
+ax.text(1990.0, 2.9e4, "証明オーバーヘッド (native 実行の何倍遅いか, log) — 下ほど速い",
         ha="left", va="center", fontsize=13, fontweight="bold", color=TEXT_FAINT)
 
 # ================================================================ 1 本の線
@@ -97,43 +97,56 @@ ax.scatter([2023.4, 2024.4], [1e6, 1e6], s=110, facecolor=BLUE, edgecolor="white
 ax.scatter([2025.6], [9e4], s=125, facecolor=AMBER, edgecolor="white", linewidth=2.2, zorder=5)
 
 # ================================================================ ラベル
-ax.text(1991.2, 3.6e7, "Sumcheck (LFKN 1992)", ha="left", va="center", fontsize=14,
-        fontweight="bold", color=TEXT_PRIMARY, zorder=6)
-ax.text(2008, 3.6e7, "GKR (2008)", ha="center", va="center", fontsize=14,
+# 各点: ロゴ / 写真 → 名前 → 系統 (それ以外の文言は置かない)
+
+# Sumcheck (LFKN 1992) — Noam Nisan の写真
+logo_at("nisan.jpg", 1992, 5.2e7)
+ax.text(1990.0, 3.3e7, "Sumcheck (LFKN)", ha="left", va="center", fontsize=14,
         fontweight="bold", color=TEXT_PRIMARY, zorder=6)
 ax.text(2000, 1.32e7, "理論の時代 — 実装なし (破線)", ha="center", va="center",
         fontsize=12.5, fontweight="bold", color=TEXT_MUTED, zorder=6)
 
-ax.text(2015.3, 4.4e6, "Groth16 (2016)", ha="right", va="center", fontsize=15,
-        fontweight="bold", color=GRAY, zorder=6)
-ax.text(2015.3, 2.75e6, r"pairing 系 ｜ $10^6$-$10^7$ 倍", ha="right", va="center",
-        fontsize=12.5, fontweight="bold", color=TEXT_MUTED, zorder=6)
-
-ax.text(2018.7, 9.2e5, "Spartan / Nova", ha="right", va="center", fontsize=14,
+# GKR (2008) — Shafi Goldwasser の写真
+logo_at("goldwasser.jpg", 2008, 5.2e7)
+ax.text(2008, 3.3e7, "GKR", ha="center", va="center", fontsize=14,
         fontweight="bold", color=TEXT_PRIMARY, zorder=6)
-ax.text(2018.7, 6.2e5, "Microsoft ｜ Sumcheck 系", ha="right", va="center",
-        fontsize=12.5, fontweight="bold", color=TEXT_MUTED, zorder=6)
-logo_at("microsoft.png", 2019.5, 2.4e5)
 
-ax.text(2023.9, 3.0e6, "RISC Zero ・ SP1", ha="center", va="center", fontsize=15,
+# Longfellow (Google) — 右上に併記
+logo_at("google.png", 2024.4, 5.2e7)
+ax.text(2024.4, 3.3e7, "Longfellow (Google)", ha="center", va="center", fontsize=14,
+        fontweight="bold", color=TEXT_PRIMARY, zorder=6)
+ax.text(2024.4, 2.25e7, "MPC-in-the-head 系", ha="center", va="center", fontsize=12.5,
+        fontweight="bold", color=TEXT_MUTED, zorder=6)
+
+# Groth16 (写真・ロゴなし)
+ax.text(2015.3, 4.4e6, "Groth16", ha="right", va="center", fontsize=15,
+        fontweight="bold", color=GRAY, zorder=6)
+ax.text(2015.3, 2.85e6, "pairing 系", ha="right", va="center",
+        fontsize=12.5, fontweight="bold", color=TEXT_MUTED, zorder=6)
+
+# Spartan / Nova (Microsoft)
+logo_at("microsoft.png", 2017.9, 8.2e5)
+ax.text(2017.9, 5.0e5, "Spartan / Nova", ha="center", va="center", fontsize=13.5,
+        fontweight="bold", color=TEXT_PRIMARY, zorder=6)
+ax.text(2017.9, 3.4e5, "Sumcheck 系", ha="center", va="center",
+        fontsize=12.5, fontweight="bold", color=TEXT_MUTED, zorder=6)
+
+# RISC Zero / SP1 (STARK / FRI 系)
+ax.text(2023.65, 2.4e6, "STARK / FRI 系", ha="center", va="center", fontsize=13,
         fontweight="bold", color=BLUE, zorder=6)
-ax.text(2023.9, 1.9e6, r"STARK / FRI 系 ｜ ~$10^6$ 倍で横ばい", ha="center", va="center",
+logo_at("risc0.png", 2022.2, 6.4e5)
+ax.text(2022.2, 4.1e5, "RISC Zero", ha="center", va="center", fontsize=13.5,
+        fontweight="bold", color=TEXT_PRIMARY, zorder=6)
+logo_at("succinct.png", 2025.9, 6.4e5)
+ax.text(2025.9, 4.1e5, "SP1 (Succinct)", ha="center", va="center", fontsize=13.5,
+        fontweight="bold", color=TEXT_PRIMARY, zorder=6)
+
+# Jolt (a16z)
+logo_at("a16z.png", 2027.6, 2.2e5)
+ax.text(2027.6, 1.05e5, "Jolt (a16z)", ha="center", va="center", fontsize=14,
+        fontweight="bold", color=AMBER, zorder=6)
+ax.text(2027.6, 6.3e4, "Sumcheck 系", ha="center", va="center",
         fontsize=12.5, fontweight="bold", color=TEXT_MUTED, zorder=6)
-logo_at("risc0.png", 2022.7, 5.2e5)
-logo_at("succinct.png", 2024.9, 5.2e5)
-
-ax.text(2025.9, 3.9e4, r"Jolt ｜ Sumcheck 系 ｜ $10^5$ 倍を切る (2025)", ha="center",
-        va="center", fontsize=15, fontweight="bold", color=AMBER, zorder=6)
-logo_at("a16z.png", 2027.6, 9e4)
-ax.text(2027.6, 2.4e5, "SP1 も 2025 年に\nSumcheck 系へ (p8)", ha="center", va="center",
-        fontsize=11.5, fontweight="bold", color=TEXT_MUTED, zorder=6)
-
-# Longfellow (Google) — zkVM と別指標なので線に乗せず併記
-logo_at("google.png", 2020.2, 3.3e7)
-ax.text(2021.0, 3.3e7, "Longfellow (Google 2024) — Sumcheck 系を既存 ID へ", ha="left",
-        va="center", fontsize=13, fontweight="bold", color=TEXT_PRIMARY, zorder=6)
-ax.text(2021.0, 2.05e7, "別指標: mDL 提示証明 数百 ms (スマホ実測) ｜ Wallet 稼働",
-        ha="left", va="center", fontsize=12, fontweight="bold", color=TEXT_MUTED, zorder=6)
 
 plt.tight_layout(pad=1.0)
 plt.savefig(OUT, facecolor=SURFACE, bbox_inches="tight")

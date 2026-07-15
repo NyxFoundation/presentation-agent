@@ -4,41 +4,26 @@ layout: default
 
 # 要件が変われば、<span class="text-amber-700">使う暗号が変わる</span> — KelpDAO の例
 
-<div class="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700 text-center">
-共通の要件: <strong class="text-gray-900">AI Auditor が</strong> ｜ <strong class="text-gray-900">攻撃手順 W を事業者 / サードパーティ / 他ユーザーから隠して</strong> ｜ <strong class="text-gray-900">on-chain コントラクトが検証</strong> — 変えるのは STEP 3 (どういう計算をして) だけ
-</div>
-
-<div class="mt-6 space-y-4">
-
-<div class="flex items-stretch gap-3">
-<div class="flex-1 bg-amber-50 rounded-xl border border-amber-200 p-4 text-sm text-gray-800 flex items-center"><div><span class="text-[11px] font-bold tracking-widest text-amber-700 mr-3">パターン A</span>単独の Auditor が「W でコントラクトが壊れる」ことを計算する</div></div>
-<div class="flex items-center text-gray-300 text-2xl font-black">→</div>
-<div class="w-90 bg-white rounded-xl border border-gray-200 shadow-sm p-4 flex items-center"><div><div class="text-lg font-black text-gray-900">ZK 証明</div><div class="text-xs text-gray-500 mt-1">単一の計算者が、秘密を隠したまま正しさを証明する</div></div></div>
-</div>
-
-<div class="flex items-stretch gap-3">
-<div class="flex-1 bg-amber-50 rounded-xl border border-amber-200 p-4 text-sm text-gray-800 flex items-center"><div><span class="text-[11px] font-bold tracking-widest text-amber-700 mr-3">パターン B</span>複数の監査ノードが、互いの判定基準を隠したまま合議で計算する</div></div>
-<div class="flex items-center text-gray-300 text-2xl font-black">→</div>
-<div class="w-90 bg-white rounded-xl border border-gray-200 shadow-sm p-4 flex items-center"><div><div class="text-lg font-black text-gray-900">MPC</div><div class="text-xs text-gray-500 mt-1">複数の参加者が、入力を隠したまま共同で計算する</div></div></div>
-</div>
-
-<div class="flex items-stretch gap-3">
-<div class="flex-1 bg-amber-50 rounded-xl border border-amber-200 p-4 text-sm text-gray-800 flex items-center"><div><span class="text-[11px] font-bold tracking-widest text-amber-700 mr-3">パターン C</span>LLM が脆弱性を判定し、その推論が規定通り実行されたことまで検証する</div></div>
-<div class="flex items-center text-gray-300 text-2xl font-black">→</div>
-<div class="w-90 bg-white rounded-xl border border-gray-200 shadow-sm p-4 flex items-center"><div><div class="text-lg font-black text-gray-900">ZK + LLM (zkML)</div><div class="text-xs text-gray-500 mt-1">LLM の推論そのものを ZK で検証可能にする</div></div></div>
-</div>
-
+<div class="mt-2 flex justify-center">
+<img src="/images/req_map_arch.png" class="max-h-[460px] w-auto object-contain" />
 </div>
 
 <!--
 Speaker Notes:
 
 【概要】
-前ページの 4 ステップ要件定義の続き。同じ KelpDAO Circuit-Breaker でも、STEP 3 (どういう計算をして) の置き方を変えるだけで、使う暗号プロトコルが変わることをマップで見せる。STEP 1 (AI Auditor)・STEP 2 (W を事業者 / サードパーティ / 他ユーザーから隠す)・STEP 4 (on-chain 検証) は 3 パターンとも共通。
+前ページの 4 ステップ要件定義を、p5 で見た KelpDAO のアーキテクチャ図に戻して当てはめる 1 枚。下段は事件の基底アーキ (User → Karak L2 → DVN #1 の release() 要求) に green の Verifier + Circuit-Breaker を足した形 (p7 と同じ)。上段の green 破線モジュールが「差分」— 監査モジュールの「誰が」「何を計算する」を変えると、使う暗号が変わる。
 
-【3 パターンの読み方】
-- パターン A (基本形): 単独の Auditor が「W で壊れる」ことを計算 → 単一 prover の検証可能計算なので ZK 証明が自然な選択。検証者が on-chain なので証明が短く検証が軽い SNARK 系に絞れる。
-- パターン B: 複数の監査ノードが、互いの判定基準 (シグネチャ・検知ロジック) を開示せずに合議で判定したい → 「複数当事者が入力を隠して共同計算」は MPC の定義そのもの。threshold 合議にすれば 1 ノードの誤検知で誤遮断しない、という運用要件も同時に満たせる。
-- パターン C: 判定そのものを LLM にやらせたい。ただし「規定のモデルとプロンプトで推論された」ことまで検証しないと、攻撃者が LLM の判定を偽装できる → LLM 推論の検証可能化 = zkML (ZK + LLM)。現状は推論の完全な ZK 化はコストが高く、モデルのコミットメント + 部分検証が現実解 — と正直に言う。
-- 教訓: 技術から入るのではなく、要件 (特に「誰が計算するか」「何を隠すか」) がプロトコルを決める。午後のホワイトボードでは各グループがこの分岐を自分で辿る。
+【3 パターンの読み方 (上段の green モジュール)】
+- パターン A — ZK 証明: 誰が = 単独の AI Auditor。計算 = 「W でコントラクトが壊れる」ことを実際に実行して確かめる。出力 = ZK 証明 π (W は隠したまま)。単一 prover の検証可能計算なので ZK が自然な選択。
+- パターン B — MPC: 誰が = 複数の監査ノード。計算 = 合議での判定 (各社の判定基準・シグネチャは互いに秘匿)。出力 = threshold 署名つきの判定。「複数当事者が入力を隠して共同計算」は MPC の定義そのもの。1 ノードの誤検知で誤遮断しない、という運用要件も同時に満たせる。
+- パターン C — ZK + LLM (zkML): 誰が = LLM (推論エージェント)。計算 = 脆弱性の判定に加えて「規定のモデルとプロンプトで推論された」ことの検証。出力 = zkML 証明。検証まで入れないと攻撃者が LLM の判定を偽装できる。現状は推論の完全な ZK 化はコストが高く、モデルのコミットメント + 部分検証が現実解 — と正直に言う。
+
+【合流の意味】
+3 本の緑の配線が同じ on-chain Verifier に合流している = どのパターンを選んでも、on-chain に届くのは「検証できる証明」であることは変わらない。だから STEP 4 (誰が検証するか) は共通のまま、STEP 1 と STEP 3 の置き方だけでプロトコルが決まる。
+下段の赤い release() 要求が green の Verifier で止まり、Ethereum への線が無い (= 遮断)、流出 0 — という読み方は p7 と同じ。
+
+【講義での強調点】
+- 技術から入るのではなく、要件 (誰が計算するか・何を計算するか) がプロトコルを決める。
+- 午後のホワイトボードでは各グループがこの分岐を自分で辿る — ホワイトボードに書く「要件」と「選定技術」はこの図の上段を自作することに相当する。
 -->

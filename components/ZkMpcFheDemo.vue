@@ -62,7 +62,7 @@
           <li><span class="zm-attr-key">隠す対象</span><span class="zm-attr-val">prover の witness w</span></li>
           <li><span class="zm-attr-key">信頼前提</span><span class="zm-attr-val">Prover を信頼しなくてよい (math が保証)</span></li>
           <li><span class="zm-attr-key">敵対モデル</span><span class="zm-attr-val"><strong>Prover</strong> (偽証) ／ <strong>Verifier</strong> (witness 窃取)</span></li>
-          <li class="zm-attr-emph"><span class="zm-attr-key">主な用途</span><span class="zm-attr-val">年齢証明 — 生年月日を出さず「18 以上」を証明</span></li>
+          <li class="zm-attr-emph"><span class="zm-attr-key">用途例</span><span class="zm-attr-val">年齢証明 — 生年月日を出さず「18 以上」を証明</span></li>
         </ul>
       </div>
 
@@ -137,7 +137,7 @@
           <li><span class="zm-attr-key">隠す対象</span><span class="zm-attr-val">各参加者の入力</span></li>
           <li><span class="zm-attr-key">信頼前提</span><span class="zm-attr-val">k-of-n の party を信頼 (t 未満が corrupt)</span></li>
           <li><span class="zm-attr-key">敵対モデル</span><span class="zm-attr-val"><strong>Party</strong> (最大 t 名が逸脱: semi-honest / malicious)</span></li>
-          <li class="zm-attr-emph"><span class="zm-attr-key">主な用途</span><span class="zm-attr-val">秘密入札 — 入札額を漏らさず最高値を決定</span></li>
+          <li class="zm-attr-emph"><span class="zm-attr-key">用途例</span><span class="zm-attr-val">秘密入札 — 入札額を漏らさず最高値を決定</span></li>
         </ul>
       </div>
 
@@ -203,7 +203,7 @@
           <li><span class="zm-attr-key">隠す対象</span><span class="zm-attr-val">計算データと中間状態</span></li>
           <li><span class="zm-attr-key">信頼前提</span><span class="zm-attr-val">User の鍵管理が信頼の起点／Server にデータ機密は要求しない</span></li>
           <li><span class="zm-attr-key">敵対モデル</span><span class="zm-attr-val"><strong>盗聴者</strong> (復号・改ざん) ／ <strong>Server</strong> (計算正しさは別途, Verifiable FHE)</span></li>
-          <li class="zm-attr-emph"><span class="zm-attr-key">主な用途</span><span class="zm-attr-val">暗号文 AI 診断 — 医療データを暗号化のまま分析</span></li>
+          <li class="zm-attr-emph"><span class="zm-attr-key">用途例</span><span class="zm-attr-val">暗号文のまま機械学習・計算を委託 — 復号しない</span></li>
         </ul>
       </div>
 

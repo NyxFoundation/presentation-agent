@@ -7,7 +7,8 @@
 #   - 2025/07-2026/07 の月次積み上げ bar。下から機関系 4 サービス (色分け)、上に その他 DeFi (グレー)。
 #     データは DefiLlama API (historicalChainTvl / protocol) の各月 1 日値 (2026-07-15 取得)。
 #   - 2026/09 以降はゴースト bar (ハッチ + 半透明): 機関系が 10 倍に爆伸びするシナリオ。
-#     amber の「？？？」だけを添え、答えはスライド側に書かない。
+#     実績とシナリオを隔てる破線 = 「壁」。壁には 3 つの吹き出し
+#     (プライバシー / コンプライアンス / セキュリティ) を直接付ける。
 #   - 凡例は上部のチップ行 (色 + 名前 + 最新値) で代替。固定順・色は entity に固定。
 
 import matplotlib
@@ -119,6 +120,15 @@ ax.text(14.5, 198, "？？？", ha="center", va="center", fontsize=30,
         fontweight="900", color=AMBER, zorder=6)
 ax.text(14.5, 172, "機関系を 2026-27 で 10 倍に\n爆伸びさせるには？", ha="center", va="center",
         fontsize=14, fontweight="bold", color=AMBER, zorder=6)
+
+# 壁 (破線) に付く 3 つの吹き出し = 10 倍を阻んでいるもの
+WALL_X = 13.1
+for wy, word in [(185, "プライバシー"), (150, "コンプライアンス"), (115, "セキュリティ")]:
+    ax.text(11.9, wy, word, ha="center", va="center", fontsize=14,
+            fontweight="bold", color=TEXT_PRIMARY, zorder=8,
+            bbox=dict(boxstyle="round,pad=0.45", facecolor="white",
+                      edgecolor="#d1d5db", linewidth=1.2))
+    ax.plot([12.78, WALL_X - 0.06], [wy, wy], color="#9ca3af", linewidth=1.6, zorder=7)
 
 plt.tight_layout(pad=1.0)
 plt.savefig(OUT, facecolor=SURFACE, bbox_inches="tight")

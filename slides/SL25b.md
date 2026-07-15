@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# 要件が変われば、<span class="text-amber-700">使う暗号が変わる</span> — KelpDAO の例
+# どの暗号を使うのかは、<span class="text-amber-700">要件次第</span> — KelpDAO の例
 
 <div class="mt-2 flex justify-center">
 <img src="/images/req_map_arch.png" class="max-h-[460px] w-auto object-contain" />

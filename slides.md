@@ -89,6 +89,10 @@ src: ./slides/SL25b.md
 ---
 
 ---
+src: ./slides/SL25c.md
+---
+
+---
 src: ./slides/SL29.md
 ---
 

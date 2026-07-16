@@ -54,13 +54,13 @@
               <path d="M -5,2 L 0,7 L 7,-3" stroke="white" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
             </g>
             <text x="300" y="120" text-anchor="middle" class="zm-actor-title">Verifier</text>
-            <text x="300" y="140" text-anchor="middle" class="zm-actor-sub">✓ accept</text>
+            <text x="300" y="140" text-anchor="middle" class="zm-actor-sub">✓ 受理</text>
           </g>
         </svg>
 
         <ul class="zm-attrs">
           <li><span class="zm-attr-key">隠す対象</span><span class="zm-attr-val">prover の witness w</span></li>
-          <li><span class="zm-attr-key">信頼前提</span><span class="zm-attr-val">Prover を信頼しなくてよい (math が保証)</span></li>
+          <li><span class="zm-attr-key">信頼前提</span><span class="zm-attr-val">Prover を信頼しなくてよい (数学が保証)</span></li>
           <li><span class="zm-attr-key">敵対モデル</span><span class="zm-attr-val"><strong>Prover</strong> (偽証) ／ <strong>Verifier</strong> (witness 窃取)</span></li>
           <li class="zm-attr-emph"><span class="zm-attr-key">用途例</span><span class="zm-attr-val">年齢証明 — 生年月日を出さず「18 以上」を証明</span></li>
         </ul>
@@ -135,8 +135,8 @@
 
         <ul class="zm-attrs">
           <li><span class="zm-attr-key">隠す対象</span><span class="zm-attr-val">各参加者の入力</span></li>
-          <li><span class="zm-attr-key">信頼前提</span><span class="zm-attr-val">k-of-n の party を信頼 (t 未満が corrupt)</span></li>
-          <li><span class="zm-attr-key">敵対モデル</span><span class="zm-attr-val"><strong>Party</strong> (最大 t 名が逸脱: semi-honest / malicious)</span></li>
+          <li><span class="zm-attr-key">信頼前提</span><span class="zm-attr-val">n 台中 k を信頼 (不正が t 未満なら安全)</span></li>
+          <li><span class="zm-attr-key">敵対モデル</span><span class="zm-attr-val"><strong>参加者</strong> (最大 t 名が逸脱: 準正直／悪意)</span></li>
           <li class="zm-attr-emph"><span class="zm-attr-key">用途例</span><span class="zm-attr-val">秘密入札 — 入札額を漏らさず最高値を決定</span></li>
         </ul>
       </div>
@@ -188,7 +188,7 @@
               </g>
             </g>
             <text x="300" y="120" text-anchor="middle" class="zm-actor-title">Server</text>
-            <text x="300" y="140" text-anchor="middle" class="zm-actor-sub">blind eval</text>
+            <text x="300" y="140" text-anchor="middle" class="zm-actor-sub">見ずに計算</text>
           </g>
 
           <!-- E(f(x)) wire back (bottom) -->

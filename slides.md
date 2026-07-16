@@ -13,6 +13,54 @@ src: ./slides/SL01.md
 ---
 
 ---
+src: ./slides/PG01.md
+---
+
+---
+src: ./slides/PG02.md
+---
+
+---
+src: ./slides/PG03.md
+---
+
+---
+src: ./slides/PG04.md
+---
+
+---
+src: ./slides/PG05.md
+---
+
+---
+src: ./slides/PG06.md
+---
+
+---
+src: ./slides/PG07.md
+---
+
+---
+src: ./slides/PG08.md
+---
+
+---
+src: ./slides/PG09.md
+---
+
+---
+src: ./slides/PG10.md
+---
+
+---
+src: ./slides/PG11.md
+---
+
+---
+src: ./slides/SL29.md
+---
+
+---
 src: ./slides/SL02.md
 ---
 
@@ -94,10 +142,6 @@ src: ./slides/SL25b.md
 
 ---
 src: ./slides/SL25c.md
----
-
----
-src: ./slides/SL29.md
 ---
 
 ---

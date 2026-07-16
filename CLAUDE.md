@@ -115,20 +115,52 @@ bun run build
 ```
 
 ### B. SPA fallback サーバ起動 (`/tmp/spa_server.py`)
+
+**Range リクエスト対応必須**。非対応だと `<video>` のシークバーが動かない (`SimpleHTTPRequestHandler`
+のままだと `200` を返し `Accept-Ranges` を出さないため、ブラウザがシーク不可と判断する)。
+
 ```python
-import http.server, socketserver, os
+import http.server, os, re
+from http.server import ThreadingHTTPServer
 from pathlib import Path
 ROOT = '/home/gohan/workspace/presentation-agent/dist'
 os.chdir(ROOT)
 class H(http.server.SimpleHTTPRequestHandler):
-    def do_GET(self):
+    def _resolve(self):
         p = self.path.split('?')[0]
-        if not Path(ROOT+p).exists() or Path(ROOT+p).is_dir():
-            self.path = '/index.html'
+        fs = Path(ROOT + p)
+        if not fs.exists() or fs.is_dir():
+            self.path = '/index.html'; fs = Path(ROOT + '/index.html')
+        return fs
+    def do_GET(self):
+        fs = self._resolve(); rng = self.headers.get('Range')
+        if rng and (m := re.match(r'bytes=(\d*)-(\d*)', rng)):
+            size = fs.stat().st_size
+            start = int(m.group(1)) if m.group(1) else 0
+            end = min(int(m.group(2)) if m.group(2) else size - 1, size - 1)
+            if start > end: self.send_response(416); self.end_headers(); return
+            self.send_response(206)
+            self.send_header('Content-Type', self.guess_type(str(fs)))
+            self.send_header('Accept-Ranges', 'bytes')
+            self.send_header('Content-Range', f'bytes {start}-{end}/{size}')
+            self.send_header('Content-Length', str(end - start + 1))
+            self.end_headers()
+            with open(fs, 'rb') as f:
+                f.seek(start); self.wfile.write(f.read(end - start + 1))
+            return
         return super().do_GET()
+    def send_head(self):
+        self._ar = True; return super().send_head()
+    def end_headers(self):
+        if getattr(self, '_ar', False):
+            self.send_header('Accept-Ranges', 'bytes'); self._ar = False
+        super().end_headers()
     def log_message(self,*a): pass
-with socketserver.TCPServer(("",4002), H) as s: s.serve_forever()
+with ThreadingHTTPServer(("",4002), H) as s: s.serve_forever()
 ```
+
+> 停止するときの `pkill -f spa_server.py` は **自分のシェルにもマッチして落とす**ことがある。
+> `pgrep -f 'spa_[s]erver\.py'` のように括弧トリックで自分を除外する。
 起動:
 ```bash
 nohup python3 /tmp/spa_server.py > /tmp/spa.log 2>&1 &

@@ -13,7 +13,6 @@ actions-runner/
 # a deck on a `presentation/*` branch; contributors preview locally via
 # `bun dev`.
 outputs/
-slides/
 exports-*/
 exports/
 
@@ -22,3 +21,5 @@ exports/
 
 # Ad-hoc PNG render dumps from local preview/debugging.
 dist-png/
+demo/longfellow/longfellow-zk/
+figures/__pycache__/

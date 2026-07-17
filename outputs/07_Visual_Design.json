@@ -1,0 +1,190 @@
+{
+  "visual_designs": [
+    {
+      "slide_number": 1,
+      "visual_strategy": "Full-Bleed Image with Minimal Text",
+      "slidev_layout": "cover",
+      "diagram_code": null,
+      "image_placeholders": [
+        {
+          "filename": "scis2026-venue.jpg",
+          "description": "SCIS 2026 conference venue or a dramatic shot of a packed auditorium",
+          "purpose": "Sets the scene and establishes the conference context immediately"
+        }
+      ],
+      "content_arrangement": "Background image of conference venue. Title overlay: 'SCIS 2026: A Field at a Tipping Point'. Subtitle: 'AI Agents / Formal Verification / Post-Quantum Cryptography'. No bullet points.",
+      "word_count": 14,
+      "passes_3_second_test": true,
+      "justification": "Opening slide must grab attention instantly. A cover layout with a dramatic background image and minimal text sets the tone. The three keywords telegraph the entire talk structure."
+    },
+    {
+      "slide_number": 2,
+      "visual_strategy": "Single Number or Word",
+      "slidev_layout": "fact",
+      "diagram_code": null,
+      "image_placeholders": [
+        {
+          "filename": "standing-room-crowd.jpg",
+          "description": "A packed conference room with people standing along the walls",
+          "purpose": "Visually reinforces the 'standing-room-only' claim with emotional impact"
+        }
+      ],
+      "content_arrangement": "Layout: fact. Hero number: '20–30' with subtitle 'people standing at AI sessions'. Below: a simple bar comparison — 'AI Sessions: Packed | Traditional Sessions: Empty seats'. Background image faded behind the number.",
+      "word_count": 12,
+      "passes_3_second_test": true,
+      "justification": "The '20-30 standing' number is the most vivid data point. A fact layout makes it the unmissable centerpiece. The contrast with empty traditional sessions drives the 'paradigm shift' message home in one glance."
+    },
+    {
+      "slide_number": 3,
+      "visual_strategy": "Simple Mermaid Diagram (Max 5 Nodes)",
+      "slidev_layout": "two-cols",
+      "diagram_code": "```mermaid\ngraph LR\n  A[\"Passive\\nAssistant\"] -->|evolution| B[\"Autonomous\\nAgent\"]\n  B --> C[\"Plan\"]\n  B --> D[\"Execute\"]\n  B --> E[\"Iterate\"]\n  style A fill:#9ca3af,stroke:#fff,color:#fff\n  style B fill:#8b5cf6,stroke:#fff,color:#fff\n  style C fill:#22c55e,stroke:#fff,color:#fff\n  style D fill:#22c55e,stroke:#fff,color:#fff\n  style E fill:#22c55e,stroke:#fff,color:#fff\n```",
+      "image_placeholders": [],
+      "content_arrangement": "Left column: Diagram showing evolution from Passive Assistant to Autonomous Agent with three capabilities (Plan, Execute, Iterate). Right column: Logos/names of presenting institutions stacked vertically — Waseda/RIKEN, NPA, Fujitsu, Panasonic. Title: 'From Assistants to Autonomous Agents'.",
+      "word_count": 10,
+      "passes_3_second_test": true,
+      "justification": "The core message is an evolution — perfect for a simple flow diagram. The 5-node diagram shows the qualitative leap visually. Institution names in the right column provide credibility without bullet points."
+    },
+    {
+      "slide_number": 4,
+      "visual_strategy": "Slidev Layout (two-cols)",
+      "slidev_layout": "two-cols",
+      "diagram_code": null,
+      "image_placeholders": [],
+      "content_arrangement": "Left column: 'CHASE Project' header with 'Waseda / RIKEN AIP' subtitle, single line: 'End-to-end autonomous vulnerability discovery'. Right column: 'Binary Analysis' header with 'NPA / Police Academy' subtitle, single line: 'gpt-oss + AT&T notation = best accuracy'. A horizontal divider, then a small note: 'FCG serialized in DOT language to overcome context limits'. No bullet points — each case study is a card-style block.",
+      "word_count": 24,
+      "passes_3_second_test": true,
+      "justification": "Two concrete case studies map naturally to two columns. Card-style blocks avoid bullets while giving each project equal visual weight. The actionable finding (AT&T > Intel) is highlighted."
+    },
+    {
+      "slide_number": 5,
+      "visual_strategy": "Single Number or Word",
+      "slidev_layout": "fact",
+      "diagram_code": null,
+      "image_placeholders": [],
+      "content_arrangement": "Hero number: '4–5 months' with subtitle 'of iterative debugging to reach practical accuracy'. Below in secondary text color (#9ca3af): 'Powerful, but not plug-and-play.'",
+      "word_count": 14,
+      "passes_3_second_test": true,
+      "justification": "The honest '4-5 months' number is the slide's entire message. A fact layout makes the engineering cost viscerally clear. The subtitle adds the interpretive frame without clutter."
+    },
+    {
+      "slide_number": 6,
+      "visual_strategy": "Simple Mermaid Diagram (Max 5 Nodes)",
+      "slidev_layout": "default",
+      "diagram_code": "```mermaid\ngraph LR\n  A[\"Testing\"] -->|can find bugs| B[\"Confidence\"]\n  C[\"Formal\\nVerification\"] -->|proves correct| D[\"Mathematical\\nGuarantee\"]\n  style A fill:#ef4444,stroke:#fff,color:#fff\n  style B fill:#ef4444,stroke:#fff,color:#fff\n  style C fill:#22c55e,stroke:#fff,color:#fff\n  style D fill:#22c55e,stroke:#fff,color:#fff\n```",
+      "image_placeholders": [],
+      "content_arrangement": "Title: 'From Hope to Proof'. Diagram contrasting two paths: Testing -> Confidence (red, limited) vs. Formal Verification -> Mathematical Guarantee (green, definitive). The visual contrast between red and green instantly communicates the upgrade.",
+      "word_count": 8,
+      "passes_3_second_test": true,
+      "justification": "The slide's message is a contrast between two paradigms. A simple 4-node diagram with red vs. green coloring makes the 'upgrade' message unmistakable in under 3 seconds."
+    },
+    {
+      "slide_number": 7,
+      "visual_strategy": "Slidev Layout (two-cols)",
+      "slidev_layout": "two-cols",
+      "diagram_code": null,
+      "image_placeholders": [
+        {
+          "filename": "ntt-logo.png",
+          "description": "NTT corporate logo",
+          "purpose": "Credibility — shows major industry player using formal verification"
+        }
+      ],
+      "content_arrangement": "Left column: Three institution cards stacked — NTT (production crypto code), Ibaraki Univ. (correctness proofs), U. Tokyo (security properties). Each as a minimal card with institution name and one-line description. Right column: Large highlighted text in green (#22c55e): 'Caught defects that testing missed.' This is the single takeaway.",
+      "word_count": 18,
+      "passes_3_second_test": true,
+      "justification": "The punchline ('caught defects testing missed') deserves visual dominance. Putting it in large green text on the right while listing institutions on the left gives both credibility and impact without bullets."
+    },
+    {
+      "slide_number": 8,
+      "visual_strategy": "Simple Mermaid Diagram (Max 5 Nodes)",
+      "slidev_layout": "default",
+      "diagram_code": "```mermaid\ngraph LR\n  A[\"NIST Standards\\nML-KEM, ML-DSA\"] --> B[\"Harvest Now,\\nDecrypt Later\"]\n  B --> C[\"Urgent\\nMigration\"]\n  style A fill:#8b5cf6,stroke:#fff,color:#fff\n  style B fill:#ef4444,stroke:#fff,color:#fff\n  style C fill:#f59e0b,stroke:#fff,color:#fff\n```",
+      "image_placeholders": [],
+      "content_arrangement": "Title: 'PQC: From Someday to Now'. A 3-node horizontal flow: NIST Standards (purple) -> Harvest Now Decrypt Later threat (red) -> Urgent Migration (orange/yellow CTA color). The color progression from calm purple to alarming red to action orange tells the urgency story.",
+      "word_count": 8,
+      "passes_3_second_test": true,
+      "justification": "Three-step causal chain (standards finalized -> threat is real -> must migrate now) maps perfectly to a 3-node diagram. Color coding adds emotional urgency without words."
+    },
+    {
+      "slide_number": 9,
+      "visual_strategy": "Single Number or Word",
+      "slidev_layout": "fact",
+      "diagram_code": null,
+      "image_placeholders": [],
+      "content_arrangement": "Hero number: '8+' with subtitle 'dedicated PQC sessions — the largest topic cluster at SCIS 2026'. Below in secondary text: 'Hitachi: 2 years invested in Verifiable Credentials verification.'",
+      "word_count": 18,
+      "passes_3_second_test": true,
+      "justification": "The '8+' number powerfully conveys PQC dominance. The Hitachi detail adds industry credibility. Fact layout keeps the focus sharp."
+    },
+    {
+      "slide_number": 10,
+      "visual_strategy": "Simple Mermaid Diagram (Max 5 Nodes)",
+      "slidev_layout": "default",
+      "diagram_code": "```mermaid\ngraph TD\n  A[\"AI Agents\"] --> D[\"Compounding\\nImpact\"]\n  B[\"Formal\\nVerification\"] --> D\n  C[\"PQC\\nMigration\"] --> D\n  style A fill:#8b5cf6,stroke:#fff,color:#fff\n  style B fill:#22c55e,stroke:#fff,color:#fff\n  style C fill:#f59e0b,stroke:#fff,color:#fff\n  style D fill:#fff,stroke:#8b5cf6,color:#0f0f0f\n```",
+      "image_placeholders": [],
+      "content_arrangement": "Title: 'Convergence: Each Trend Amplifies the Others'. Diagram: three nodes (AI Agents in purple, Formal Verification in green, PQC in orange) all flowing into a central 'Compounding Impact' node. The visual immediately shows convergence without any text explanation needed.",
+      "word_count": 8,
+      "passes_3_second_test": true,
+      "justification": "Convergence is inherently spatial — three things coming together. A 4-node diagram with arrows converging to a single point is the clearest possible representation. Color-coding matches the three themes established in earlier slides."
+    },
+    {
+      "slide_number": 11,
+      "visual_strategy": "Styled Key Points with v-clicks",
+      "slidev_layout": "default",
+      "diagram_code": null,
+      "image_placeholders": [],
+      "content_arrangement": "Title: 'Your Next Steps'. Three action items revealed with <v-clicks>, each as an icon + short phrase (no bullets): '1. Build an agent prototype' / '2. Learn a proof assistant' / '3. Study the PQC migration landscape'. Below: 'Security Camp + SCIS network = your collaborative infrastructure' in accent color (#f59e0b).",
+      "word_count": 22,
+      "passes_3_second_test": true,
+      "justification": "A call-to-action slide needs concrete steps. Three v-click items keep the audience focused on one action at a time. The community reference adds emotional resonance. This is the one slide where short text items are justified."
+    },
+    {
+      "slide_number": 12,
+      "visual_strategy": "Full-Bleed Image with Minimal Text",
+      "slidev_layout": "cover",
+      "diagram_code": null,
+      "image_placeholders": [
+        {
+          "filename": "future-horizon.jpg",
+          "description": "A dramatic horizon or sunrise image suggesting a new era",
+          "purpose": "Emotional closing image that reinforces the 'defining the next era' message"
+        },
+        {
+          "filename": "qr-code-report.png",
+          "description": "QR code linking to the full report or presenter's contact info",
+          "purpose": "CTA: allows audience to access resources immediately"
+        }
+      ],
+      "content_arrangement": "Background: dramatic horizon/sunrise image. Center text overlay: 'Will you be among those who shape it?' in large white text. Bottom corner: QR code for full report access. No other text.",
+      "word_count": 10,
+      "passes_3_second_test": true,
+      "justification": "The closing slide must leave an emotional imprint. A full-bleed image with a single provocative question creates a memorable ending. The QR code provides a concrete next action without cluttering the visual."
+    }
+  ],
+  "quality_checklist": {
+    "bullet_points_minimized": {
+      "result": true,
+      "count": 0,
+      "justification": "Out of 12 slides, zero use plain bullet points. Slide 11 uses v-clicks with styled action items (not bullets). All other slides use diagrams, fact layouts, two-cols cards, or full-bleed images."
+    },
+    "one_chart_one_message_applied": {
+      "result": true,
+      "justification": "Each diagram conveys exactly one message: Slide 3 = evolution from assistant to agent, Slide 6 = testing vs. proof, Slide 8 = urgency chain, Slide 10 = convergence. All pass the 'one sentence summary' test."
+    },
+    "mermaid_node_limit_respected": {
+      "result": true,
+      "max_nodes_used": 5,
+      "justification": "Slide 3 uses 5 nodes (the maximum), Slide 6 uses 4 nodes, Slide 8 uses 3 nodes, Slide 10 uses 4 nodes. All diagrams are within the 5-node limit."
+    },
+    "image_placeholders_added": {
+      "result": true,
+      "count": 4,
+      "justification": "Added placeholders for: cover slide (venue photo), credibility slide 7 (NTT logo), closing slide (horizon image + QR code). Slides 2 also has a standing-room crowd image. Total: 4 slides with image placeholders."
+    },
+    "color_consistency_maintained": {
+      "result": true,
+      "justification": "All slides use the defined palette: purple (#8b5cf6) for AI/brand, green (#22c55e) for positive/verification, red (#ef4444) for threats/problems, orange (#f59e0b) for CTA/accent, gray (#9ca3af) for secondary text. No off-palette colors used."
+    }
+  }
+}

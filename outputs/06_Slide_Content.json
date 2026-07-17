@@ -1,0 +1,134 @@
+{
+  "slide_contents": [
+    {
+      "slide_number": 1,
+      "action_title": "Cybersecurity has long depended on scarce human expertise — SCIS 2026 revealed that the field is now crossing a tipping point.",
+      "key_points": [
+        "Vulnerability assessment, malware analysis, and protocol verification have historically required deep specialist knowledge and enormous manual effort.",
+        "SCIS 2026 showed that LLM agents, formal verification, and post-quantum cryptography are shifting from research curiosities to practical tools.",
+        "The central question for every security researcher: how do you position yourself in a field that is being reshaped by automation and mathematical rigor?"
+      ],
+      "speaker_notes": "For decades, cybersecurity has been a craft that depends on scarce human expertise. Tasks like vulnerability assessment, malware reverse-engineering, and protocol safety verification demand years of specialized training and painstaking manual labor. SCIS — Japan's largest symposium on cryptography and information security — has always served as a barometer for the field's direction. At SCIS 2026, the barometer swung hard: LLM-based agents are evolving from passive assistants into autonomous actors, formal verification is crossing from theory into production use, and post-quantum cryptography is no longer a future concern but a present-day engineering challenge. This confluence means the field is at a tipping point. The question this report addresses is straightforward: what should security researchers do about it?"
+    },
+    {
+      "slide_number": 2,
+      "action_title": "SCIS 2026 at a glance: AI sessions drew standing-room-only crowds, signaling a paradigm shift in security research.",
+      "key_points": [
+        "The 'Cybersecurity and AI' sessions had 20–30 people standing — a vivid indicator of where the community's attention has moved.",
+        "PQC commanded 8+ dedicated sessions; automotive security had 5 sessions with emerging LLM-fusion approaches.",
+        "The gap between packed AI sessions and sparsely attended traditional sessions reveals a strategic research priority shift."
+      ],
+      "speaker_notes": "Let me paint the picture of what SCIS 2026 actually felt like on the ground. The AI-related sessions were so popular that 20 to 30 attendees had to stand because every seat was taken. This is not a minor detail — it is a leading indicator of where the entire security research community believes the future lies. Meanwhile, post-quantum cryptography commanded over eight dedicated sessions, reflecting the urgency of the NIST standardization timeline. Automotive security also carved out five sessions, with novel work fusing LLMs into attack evaluation. But equally telling was the contrast: some traditional sessions had noticeably empty seats. This attendance gap is a concrete, observable signal that a paradigm shift is underway. For researchers choosing where to invest their effort, these crowd patterns matter."
+    },
+    {
+      "slide_number": 3,
+      "action_title": "LLM agents have evolved from passive assistants into autonomous actors that execute multi-step security tasks.",
+      "key_points": [
+        "LLM agents now autonomously execute multi-step security workflows — not just answering questions but taking actions.",
+        "Major institutions (Waseda/RIKEN AIP, NPA, National Police Academy, Fujitsu, Panasonic) all presented agent-based security research at SCIS 2026.",
+        "The qualitative leap: agents compress months of manual expert analysis into hours of automated execution."
+      ],
+      "speaker_notes": "The first major trend from SCIS 2026 is the qualitative leap in what LLM-based agents can do. These systems have moved beyond being sophisticated search engines or code-completion tools. They are now autonomous actors that can plan, execute, and iterate on multi-step security tasks. At SCIS 2026, this was not a niche topic — presentations from Waseda University and RIKEN AIP, the National Police Agency, the National Police Academy, Fujitsu, and Panasonic all demonstrated agent-based approaches to security problems. The key claim, supported by benchmarks presented at the conference, is that these agents can compress months of manual expert work into hours. This is not incremental improvement; it is a category change in what is possible."
+    },
+    {
+      "slide_number": 4,
+      "action_title": "Waseda/RIKEN's CHASE project and NPA's binary analysis show agents compressing months of expert work into hours.",
+      "key_points": [
+        "The CHASE project (Waseda/RIKEN AIP) built an end-to-end agent for vulnerability discovery that reached practical accuracy after intensive iterative development.",
+        "NPA research showed the gpt-oss model achieved highest performance in binary analysis, with AT&T notation outperforming Intel notation — a surprising and actionable finding.",
+        "The National Police Academy solved the LLM context-length bottleneck by serializing function call graphs (FCG) in DOT language."
+      ],
+      "speaker_notes": "Let me make the agent capability claim concrete with two standout presentations. First, the CHASE project from Waseda University and RIKEN AIP built an autonomous agent for vulnerability discovery. This is not a toy demo — it is a system designed to handle real-world vulnerability assessment end-to-end. Second, the National Police Agency presented research on LLM-driven binary analysis. A particularly striking finding was that the gpt-oss model achieved the highest performance among tested models, and that AT&T assembly notation produced more accurate results than Intel notation. This is the kind of practical, actionable insight that only comes from rigorous experimentation. Additionally, the National Police Academy tackled one of the key engineering challenges — LLM context length limitations — by serializing function call graphs in DOT language, enabling the model to reason about program structure that would otherwise exceed its context window."
+    },
+    {
+      "slide_number": 5,
+      "action_title": "Building these agents is hard — reaching practical accuracy took 4–5 months of iterative debugging.",
+      "key_points": [
+        "The CHASE project team candidly reported that reaching practical accuracy required 4–5 months of iterative debugging.",
+        "The presenter's own experience building LLM agents confirms this difficulty — identifying which component causes accuracy degradation is a core unsolved workflow problem.",
+        "This honest assessment adds credibility: agent technology is powerful but demands serious engineering investment."
+      ],
+      "speaker_notes": "It would be dishonest to present the agent revolution without acknowledging how hard it is to build these systems. The CHASE project presenters from Waseda/RIKEN AIP were refreshingly candid: reaching practical accuracy took four to five months of iterative debugging. This is not plug-and-play technology. The presenter of this report has firsthand experience with this difficulty — during the Q&A session, they asked the CHASE team directly about development processes for identifying which component causes accuracy degradation. This remains a largely unsolved workflow challenge. The honest takeaway is dual: LLM agents represent a genuine capability leap, and building reliable ones demands serious, sustained engineering effort. Researchers entering this space should budget their time and expectations accordingly."
+    },
+    {
+      "slide_number": 6,
+      "action_title": "Formal verification has matured from theory to practice, replacing hope-based assurance with machine-checked proofs.",
+      "key_points": [
+        "Formal verification now provides mathematical correctness guarantees for real-world cryptographic implementations — not just toy examples.",
+        "Tools like ProVerif have moved from academic curiosity to practical application, with a surge of concrete case studies at SCIS 2026.",
+        "The shift from 'we tested it thoroughly' to 'we proved it correct' represents a fundamental upgrade in security assurance."
+      ],
+      "speaker_notes": "The second major trend is the maturation of formal verification from a theoretical discipline into a practical engineering tool. For years, the security community has relied on testing, code review, and fuzzing to gain confidence in implementations. These methods are valuable but fundamentally limited — they can show the presence of bugs but never their absence. Formal verification changes the game entirely: instead of hoping your implementation is correct because it passed all tests, you prove it correct with machine-checked mathematical rigor. At SCIS 2026, this was not abstract philosophy. Tools like ProVerif, which verify security protocol properties, were featured in multiple concrete application case studies. The number of practical formal verification presentations has surged, indicating the field has crossed the usability threshold that kept it confined to specialists."
+    },
+    {
+      "slide_number": 7,
+      "action_title": "NTT, Ibaraki University, and U. Tokyo demonstrated formally verified cryptographic implementations at SCIS 2026.",
+      "key_points": [
+        "NTT Social Information Research Labs presented formal verification of production cryptographic code.",
+        "Ibaraki University and the University of Tokyo contributed additional case studies proving properties of real implementations.",
+        "These verified implementations caught defects that conventional testing had missed — validating the approach's practical value."
+      ],
+      "speaker_notes": "The formal verification claim is best illustrated by the concrete work presented at SCIS 2026. NTT's Social Information Research Labs demonstrated formal verification applied to production-grade cryptographic implementations — not simplified models, but real code intended for deployment. Ibaraki University and the University of Tokyo contributed additional case studies, each proving specific correctness and security properties of their implementations. The critical point is that in several cases, the formal verification process surfaced defects that extensive conventional testing had not caught. This is the strongest possible argument for the technology's value: it does not merely duplicate what testing already provides, it adds a fundamentally different layer of assurance. For organizations building cryptographic infrastructure, this is no longer optional — it is becoming the expected standard of rigor."
+    },
+    {
+      "slide_number": 8,
+      "action_title": "Post-quantum cryptography has moved from theory to standardization, creating an urgent migration timeline.",
+      "key_points": [
+        "NIST has finalized PQC standards (ML-KEM, ML-DSA), moving post-quantum cryptography from 'someday' to 'now'.",
+        "The 'harvest now, decrypt later' threat means adversaries are already collecting encrypted data to break once quantum computers mature.",
+        "Migration is an engineering challenge that touches every layer of the stack — from protocol negotiation to key management."
+      ],
+      "speaker_notes": "The third major trend is that post-quantum cryptography has decisively moved from theoretical exploration to standardization and early deployment. NIST has finalized its selection of post-quantum algorithms — ML-KEM for key encapsulation and ML-DSA for digital signatures. This is no longer a future concern; it is a present-day engineering mandate. The urgency is sharpened by the 'harvest now, decrypt later' threat model: sophisticated adversaries are already collecting encrypted traffic today with the intention of decrypting it once sufficiently powerful quantum computers become available. This means the migration clock started years ago for long-lived secrets. The challenge is not just algorithmic — it is an engineering problem that spans protocol negotiation, certificate management, key sizes, performance tuning, and backward compatibility across every layer of the technology stack."
+    },
+    {
+      "slide_number": 9,
+      "action_title": "With 8+ dedicated sessions and active ML-KEM/ML-DSA optimization work, PQC dominated SCIS 2026's agenda.",
+      "key_points": [
+        "Over 8 dedicated sessions at SCIS 2026 focused on PQC — the single largest topic cluster at the conference.",
+        "Active implementation optimization of ML-KEM and ML-DSA is underway across multiple research groups.",
+        "Hitachi has been investing in Verifiable Credentials verification for two years, signaling industry readiness for cryptographic infrastructure renewal."
+      ],
+      "speaker_notes": "The scale of PQC activity at SCIS 2026 was striking. More than eight dedicated sessions focused on post-quantum cryptography, making it the single largest topic cluster at the conference. This is not a niche interest — it reflects a community-wide recognition that migration is urgent and complex. Research groups across Japan are actively working on implementation optimization for the NIST-selected algorithms ML-KEM and ML-DSA, focusing on performance in constrained environments and integration with existing protocol stacks. Industry is moving too: Hitachi, for example, disclosed that it has been investing in Verifiable Credentials verification research for two years, with an eye toward entering the verification business. This kind of multi-year industry investment signals that PQC migration is not just an academic exercise — it is a commercial imperative that organizations are already budgeting for and building toward."
+    },
+    {
+      "slide_number": 10,
+      "action_title": "These three trends are converging — AI agents accelerate formal verification and PQC migration workflows.",
+      "key_points": [
+        "AI agents can automate the tedious parts of formal verification — proof search, lemma suggestion, and counterexample generation.",
+        "PQC migration audits — identifying every cryptographic dependency across a codebase — are a natural fit for agent automation.",
+        "The convergence multiplies impact: each trend amplifies the others rather than operating in isolation."
+      ],
+      "speaker_notes": "The three trends I have outlined — AI agents, formal verification, and post-quantum cryptography — are not independent stories. They are converging in ways that multiply their impact. Consider the intersection: formal verification is powerful but labor-intensive; AI agents can automate the tedious parts of proof construction, such as lemma suggestion, proof search, and counterexample generation. PQC migration requires auditing every cryptographic dependency in a codebase and verifying that replacements are correct — exactly the kind of systematic, exhaustive task that agents excel at. At SCIS 2026, early examples of cross-domain work were visible: researchers combining LLM assistance with protocol verification, and teams exploring automated approaches to migration auditing. The key insight is that these capabilities compound. A researcher who understands all three domains can leverage each to accelerate the others, creating a virtuous cycle that specialists in only one area cannot access."
+    },
+    {
+      "slide_number": 11,
+      "action_title": "Researchers who combine AI agents, formal verification, and PQC expertise will hold a compounding advantage.",
+      "key_points": [
+        "Cross-domain expertise creates a compounding advantage — not additive but multiplicative.",
+        "Practical next steps: build agent prototypes, learn a proof assistant, and understand the PQC migration landscape.",
+        "The Security Camp community and SCIS network provide the collaborative infrastructure to develop these skills together."
+      ],
+      "speaker_notes": "The call to action from this analysis is clear: the researchers who will have the greatest impact are those who build competence across all three domains rather than specializing narrowly in one. This is not about becoming a superficial generalist — it is about developing enough depth in AI agents, formal verification, and post-quantum cryptography to see the connections and leverage points between them. Concretely, this means building at least one agent prototype to understand the engineering challenges firsthand, learning a proof assistant or formal verification tool to appreciate what machine-checked guarantees require, and studying the PQC migration landscape to understand the engineering constraints. The Japanese security community — with its deep collaborative traditions exemplified by Security Camp and the SCIS network, where generations of researchers connect and support each other — is well positioned to cultivate this cross-domain capability collectively."
+    },
+    {
+      "slide_number": 12,
+      "action_title": "The researchers who act on this shift now will define the next era of cybersecurity.",
+      "key_points": [
+        "SCIS 2026 was not just a conference — it was a snapshot of a field in transformation.",
+        "AI agents, formal verification, and PQC are no longer future bets; they are present realities demanding action.",
+        "The window to build cross-domain expertise and shape the field's direction is open now — and it will not stay open indefinitely."
+      ],
+      "speaker_notes": "Let me close with the governing argument of this report. SCIS 2026 revealed that AI agents and formal verification have crossed the threshold from research curiosities to practical security tools. Post-quantum cryptography has moved from theory to standardization. These are not predictions about the future — they are observations about the present. The standing-room-only crowds at AI sessions, the surge in formal verification case studies, the eight-plus PQC sessions — these are not subtle signals. They are unmistakable indicators of where the field is heading. The researchers who recognize this shift and act on it now — by building cross-domain competence, by experimenting with agents and proof tools, by engaging with the PQC migration challenge — will be the ones who define the next era of cybersecurity. The question is not whether this transformation will happen. It is whether you will be among those who shape it."
+    }
+  ],
+  "quality_checklist": {
+    "speaker_notes_written_first": {
+      "result": true,
+      "justification": "Each slide was drafted by first writing the full speaker notes as a coherent prose paragraph articulating the slide's argument, and only then extracting the 3 key points as summaries of that prose. This Bezos-style 'notes first' discipline ensured that the thinking was fully developed before being condensed."
+    },
+    "evidence_hierarchy_applied": {
+      "result": true,
+      "justification": "Hard data was prioritized throughout: the 20–30 standing attendees (slide 2), 8+ PQC sessions (slide 9), 4–5 months development time (slide 5), and specific model performance findings like gpt-oss and AT&T vs Intel notation (slide 4). Expert testimony was used via specific institutional attributions (NTT, Waseda/RIKEN, NPA). The Security Camp anecdote (slide 11) was used for emotional resonance about community bonds. Analogies were used sparingly — e.g., 'barometer' for SCIS's role — to support rather than replace data."
+    }
+  }
+}

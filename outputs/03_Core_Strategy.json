@@ -1,0 +1,28 @@
+{
+  "narrative_archetype": {
+    "chosen_archetype": "Hybrid: Sparkline + Pyramid Principle",
+    "justification": "The audience is analytically minded and time-constrained (15 min), favoring a Pyramid Principle structure that leads with conclusions. However, the paradigm-shift nature of the content — standing-room-only AI sessions, LLM agents leaping from tools to autonomous actors — demands the emotional contrast of a Sparkline to convey urgency. Opening with a Sparkline hook (the visceral 'what is' vs. 'what could be') captures attention, then transitioning to a Pyramid structure (4 trends as the answer, supporting evidence underneath) respects the audience's preference for structured, evidence-first communication."
+  },
+  "core_message": {
+    "full_sentence": "SCIS 2026 revealed that AI agents and formal verification have crossed the threshold from research curiosities to practical security tools — and the researchers who act on this shift now will define the next era of cybersecurity.",
+    "proverb": "AI agents crossed the line from theory to practice."
+  },
+  "dramatic_tension": {
+    "villain": "The widening gap between the speed of AI-driven security threats and our traditional, manual, human-dependent defense methods. The status quo demands months of expert labor for vulnerability assessment and binary analysis, while attackers move at machine speed. Researchers who cling to classical approaches risk professional irrelevance as the field pivots beneath them.",
+    "hero": "The convergence of LLM agents, formal verification tools, and post-quantum cryptography — a new arsenal that automates what once required months of manual effort, proves correctness where we once relied on hope, and prepares our infrastructure for quantum threats. The hero is not a single tool but a paradigm: security automation grounded in both AI capability and mathematical rigor."
+  },
+  "emotional_hook": {
+    "hook_type": "Surprising Statistic + Powerful Anecdote",
+    "hook_content": "At SCIS 2026, the AI and cybersecurity session was so packed that 20 to 30 people stood in the back of the room — there were no seats left. Meanwhile, other sessions had visibly empty chairs. Something fundamental has shifted. In 15 minutes, I will show you exactly what that shift is and what it means for your research."
+  },
+  "quality_checklist": {
+    "passes_bezos_clarity_test": {
+      "result": true,
+      "justification": "The core message is a complete sentence stating that AI agents and formal verification have become practical tools, it answers 'why should I care' (act now or be left behind), and it has a sub-10-word proverb version."
+    },
+    "has_clear_villain_and_hero": {
+      "result": true,
+      "justification": "The villain (slow, manual, human-only defense in a machine-speed threat landscape) and the hero (the convergence of LLM agents, formal verification, and PQC as a new automated-yet-rigorous paradigm) create clear dramatic tension that maps directly to the audience's fear of falling behind and desire to identify high-leverage directions."
+    }
+  }
+}

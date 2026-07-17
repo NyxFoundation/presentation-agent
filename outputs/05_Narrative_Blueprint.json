@@ -1,0 +1,78 @@
+{
+  "narrative_flow": [
+    {
+      "slide_number": 1,
+      "action_title": "Cybersecurity has long depended on scarce human expertise — SCIS 2026 revealed that the field is now crossing a tipping point.",
+      "purpose": "Set the Situation (manual expert work is the bottleneck) and Complication (AI and formal methods are disrupting this model), framing the core question: what should researchers do now?"
+    },
+    {
+      "slide_number": 2,
+      "action_title": "SCIS 2026 at a glance: AI sessions drew standing-room-only crowds, signaling a paradigm shift in security research.",
+      "purpose": "Give the audience a vivid, concrete snapshot of the conference atmosphere to establish credibility and urgency."
+    },
+    {
+      "slide_number": 3,
+      "action_title": "LLM agents have evolved from passive assistants into autonomous actors that execute multi-step security tasks.",
+      "purpose": "Introduce the first major trend — the qualitative leap in what AI agents can do in security."
+    },
+    {
+      "slide_number": 4,
+      "action_title": "Waseda/RIKEN's CHASE project and NPA's binary analysis show agents compressing months of expert work into hours.",
+      "purpose": "Provide concrete evidence for the AI-agent claim with specific SCIS 2026 presentations and benchmarks."
+    },
+    {
+      "slide_number": 5,
+      "action_title": "Building these agents is hard — reaching practical accuracy took 4–5 months of iterative debugging.",
+      "purpose": "Add realism and credibility by acknowledging the engineering difficulty, using the presenter's own experience and the CHASE project anecdote."
+    },
+    {
+      "slide_number": 6,
+      "action_title": "Formal verification has matured from theory to practice, replacing hope-based assurance with machine-checked proofs.",
+      "purpose": "Introduce the second major trend — formal verification crossing into real-world applicability."
+    },
+    {
+      "slide_number": 7,
+      "action_title": "NTT, Ibaraki University, and U. Tokyo demonstrated formally verified cryptographic implementations at SCIS 2026.",
+      "purpose": "Provide concrete evidence with specific case studies of formal verification catching defects that testing missed."
+    },
+    {
+      "slide_number": 8,
+      "action_title": "Post-quantum cryptography has moved from theory to standardization, creating an urgent migration timeline.",
+      "purpose": "Introduce the third major trend — PQC is no longer future speculation but a present-day engineering challenge."
+    },
+    {
+      "slide_number": 9,
+      "action_title": "With 8+ dedicated sessions and active ML-KEM/ML-DSA optimization work, PQC dominated SCIS 2026's agenda.",
+      "purpose": "Show the scale of PQC activity at the conference and the 'harvest now, decrypt later' urgency."
+    },
+    {
+      "slide_number": 10,
+      "action_title": "These three trends are converging — AI agents accelerate formal verification and PQC migration workflows.",
+      "purpose": "Present the synthesis argument: the real power comes from combining these capabilities."
+    },
+    {
+      "slide_number": 11,
+      "action_title": "Researchers who combine AI agents, formal verification, and PQC expertise will hold a compounding advantage.",
+      "purpose": "Deliver the core call to action — this is not about choosing one specialty but integrating across domains."
+    },
+    {
+      "slide_number": 12,
+      "action_title": "The researchers who act on this shift now will define the next era of cybersecurity.",
+      "purpose": "Close with the governing argument's core message, leaving the audience with a clear, memorable takeaway and motivation to act."
+    }
+  ],
+  "quality_checklist": {
+    "passes_skim_test": {
+      "result": true,
+      "justification": "Reading the 12 action titles in sequence tells a complete story: (1) the field faces a tipping point, (2) SCIS 2026 proved it, (3-5) AI agents are now autonomous and powerful but hard to build, (6-7) formal verification is production-ready, (8-9) PQC is urgent and dominant, (10-11) these trends converge and reward cross-domain researchers, (12) act now or fall behind. The narrative flows from situation through evidence to call-to-action."
+    },
+    "respects_constraints": {
+      "result": true,
+      "justification": "The blueprint contains 12 slides, within the hard constraint of 15 slides maximum. At roughly 75 seconds per slide, 12 slides fit comfortably within the 15-minute time limit."
+    },
+    "has_dedicated_situation_slide": {
+      "result": true,
+      "justification": "Slides 1 and 2 together establish the Situation (manual expert work is the bottleneck in cybersecurity), the Complication (AI and formal methods are disrupting the status quo — standing-room-only crowds at AI sessions), and the implicit Question (what should researchers do about this shift?)."
+    }
+  }
+}

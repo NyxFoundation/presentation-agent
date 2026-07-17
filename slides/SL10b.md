@@ -3,37 +3,42 @@ layout: default
 ---
 
 <div class="nx-kicker">実験 ／ Eris</div>
-<h1 class="nx-display">自作シミュレータ実験: <em>設定</em></h1>
 
-<div class="lp"><svg class="lp-svg" viewBox="0 0 980 360" preserveAspectRatio="xMidYMid meet"><path d="M390,175 A100,100 0 0 1 590,175" class="lp-arc lp-arc-h"/><path d="M590,175 A100,100 0 0 1 390,175" class="lp-arc"/><path d="M0,-5 L8,0 L0,5 Z" class="lp-tri" transform="translate(419.3 245.7) rotate(45)"/><path d="M0,-5 L8,0 L0,5 Z" class="lp-tri" transform="translate(560.7 245.7) rotate(-45)"/><path d="M0,-5 L8,0 L0,5 Z" class="lp-tri lp-tri-h" transform="translate(490 75) rotate(180)"/><line x1="348" y1="175" x2="306" y2="175" class="lp-conn"/><line x1="632" y1="175" x2="674" y2="175" class="lp-conn"/><text x="300" y="116" class="lp-grp lp-grp-h" text-anchor="end">意図 ／ 調整パラメータ</text><text x="300" y="143" class="lp-item" text-anchor="end">entry 閾値（spread / gap / z）</text><text x="300" y="167" class="lp-item" text-anchor="end">size・leverage</text><text x="300" y="191" class="lp-item" text-anchor="end">slippage・fee 上限</text><text x="300" y="215" class="lp-item" text-anchor="end">LP レンジ・リスク guard</text><text x="680" y="116" class="lp-grp lp-grp-h" text-anchor="start">検証 ／ onchain state</text><text x="680" y="143" class="lp-item" text-anchor="start">約定 ／ revert 数</text><text x="680" y="167" class="lp-item" text-anchor="start">PnL</text><text x="680" y="191" class="lp-item" text-anchor="start">ポジション・残高</text><text x="680" y="215" class="lp-item" text-anchor="start">fair price からの乖離</text><circle cx="390" cy="175" r="42" class="lp-human"/><text x="390" y="171" class="lp-h" text-anchor="middle">意図</text><text x="390" y="190" class="lp-tag lp-tag-h" text-anchor="middle">LLM</text><circle cx="590" cy="175" r="42" class="lp-human"/><text x="590" y="171" class="lp-h" text-anchor="middle">検証</text><text x="590" y="190" class="lp-tag lp-tag-h" text-anchor="middle">onchain</text><circle cx="490" cy="275" r="42" class="lp-ai"/><text x="490" y="271" class="lp-h lp-h-ai" text-anchor="middle">実行</text><text x="490" y="290" class="lp-tag lp-tag-a" text-anchor="middle">tx</text><text x="490" y="338" class="lp-aisub" text-anchor="middle">署名して onchain 提出</text></svg></div>
+<div class="dg"><svg class="dg-svg" viewBox="0 0 980 340" preserveAspectRatio="xMidYMid meet"><defs><marker id="dga" markerWidth="9" markerHeight="9" refX="6.5" refY="3.4" orient="auto"><path d="M0,0 L7,3.4 L0,6.8 Z" class="dg-tri"/></marker><marker id="dgh" markerWidth="9" markerHeight="9" refX="6.5" refY="3.4" orient="auto"><path d="M0,0 L7,3.4 L0,6.8 Z" class="dg-tri-h"/></marker><marker id="dgf" markerWidth="9" markerHeight="9" refX="6.5" refY="3.4" orient="auto"><path d="M0,0 L7,3.4 L0,6.8 Z" class="dg-tri-f"/></marker></defs><rect x="110" y="30" width="350" height="196" rx="12" class="dg-box dg-box-a"/><text x="132" y="62" class="dg-tag dg-tag-a">A ／ 自己改善あり</text><rect x="520" y="30" width="350" height="196" rx="12" class="dg-box dg-box-b"/><text x="542" y="62" class="dg-tag">B ／ 固定</text><line x1="236" y1="160" x2="330" y2="160" class="dg-ed-h" marker-end="url(#dgh)"/><line x1="345" y1="136" x2="311" y2="112" class="dg-ed-h" marker-end="url(#dgh)"/><line x1="259" y1="112" x2="225" y2="136" class="dg-ed-h" marker-end="url(#dgh)"/><circle cx="205" cy="160" r="27" class="dg-n dg-n-a"/><text x="205" y="166" class="dg-nt dg-nt-a" text-anchor="middle">実行</text><circle cx="365" cy="160" r="27" class="dg-n dg-n-a"/><text x="365" y="166" class="dg-nt dg-nt-a" text-anchor="middle">検証</text><circle cx="285" cy="98" r="27" class="dg-n dg-n-a"/><text x="285" y="104" class="dg-nt dg-nt-a" text-anchor="middle">調整</text><text x="285" y="212" class="dg-cap" text-anchor="middle">結果を見て、設定を直し続ける</text><line x1="646" y1="160" x2="740" y2="160" class="dg-ed-f" marker-end="url(#dgf)"/><line x1="755" y1="136" x2="721" y2="112" class="dg-ed-f" marker-end="url(#dgf)"/><line x1="669" y1="112" x2="635" y2="136" class="dg-ed-f" marker-end="url(#dgf)"/><circle cx="615" cy="160" r="27" class="dg-n dg-n-b"/><text x="615" y="166" class="dg-nt" text-anchor="middle">実行</text><circle cx="775" cy="160" r="27" class="dg-n dg-n-g"/><text x="775" y="166" class="dg-nt dg-nt-g" text-anchor="middle">検証</text><circle cx="695" cy="98" r="27" class="dg-n dg-n-g"/><text x="695" y="104" class="dg-nt dg-nt-g" text-anchor="middle">調整</text><text x="695" y="212" class="dg-cap" text-anchor="middle">最初の設定のまま、走り続ける</text><line x1="285" y1="230" x2="285" y2="262" class="dg-ed" marker-end="url(#dga)"/><line x1="695" y1="230" x2="695" y2="262" class="dg-ed" marker-end="url(#dga)"/><rect x="110" y="268" width="760" height="54" rx="9" class="dg-mkt"/><text x="490" y="301" class="dg-mkt-t" text-anchor="middle">同じ戦略の対を、同一市場で並走させる（同じ価格・同じイベント・同じ元手）</text></svg></div>
 
 <style>
-.lp { display: flex; justify-content: center; margin-top: 0.5rem; }
-.lp-svg { width: 100%; max-width: 860px; height: auto; }
-.lp-arc { fill: none; stroke: var(--ink-faint); stroke-width: 2; }
-.lp-arc-h { stroke: var(--accent); stroke-width: 3; }
-.lp-tri { fill: var(--ink-faint); }
-.lp-tri-h { fill: var(--accent); }
-.lp-conn { stroke: var(--line-strong); stroke-width: 1; }
-.lp-human { fill: #e7ecf1; stroke: var(--accent); stroke-width: 2.4; }
-.lp-ai { fill: #fff; stroke: var(--line-strong); stroke-width: 1.6; }
-.lp-h { font-family: var(--font-jp-serif); font-size: 21px; font-weight: 700; fill: var(--accent); }
-.lp-h-ai { fill: var(--ink-dim); }
-.lp-tag { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; }
-.lp-tag-h { fill: var(--accent); }
-.lp-tag-a { fill: var(--ink-faint); }
-.lp-aisub { font-family: var(--font-jp-serif); font-size: 12px; fill: var(--ink-dim); }
-.lp-grp { font-family: var(--font-mono); font-size: 12.5px; font-weight: 700; letter-spacing: 0.06em; }
-.lp-grp-h { fill: var(--accent); }
-.lp-item { font-family: var(--font-jp-serif); font-size: 14.5px; font-weight: 500; fill: var(--ink); }
+.dg { display: flex; justify-content: center; margin-top: 3.4rem; }
+.dg-svg { width: 100%; max-width: 880px; height: auto; }
+.dg-tri { fill: var(--ink-faint); }
+.dg-tri-h { fill: var(--accent); }
+.dg-tri-f { fill: rgba(154, 149, 140, 0.45); }
+.dg-ed { stroke: var(--ink-faint); stroke-width: 1.8; }
+.dg-ed-h { stroke: var(--accent); stroke-width: 1.8; }
+.dg-ed-f { stroke: rgba(154, 149, 140, 0.45); stroke-width: 1.6; stroke-dasharray: 4 4; }
+.dg-box { fill: #fff; }
+.dg-box-a { stroke: var(--accent); stroke-width: 2.4; }
+.dg-box-b { stroke: var(--line-strong); stroke-width: 1.4; }
+.dg-tag { font-family: var(--font-mono); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; fill: var(--ink-dim); }
+.dg-tag-a { fill: var(--accent); }
+.dg-n-a { fill: #e7ecf1; stroke: var(--accent); stroke-width: 1.8; }
+.dg-n-b { fill: #fff; stroke: var(--line-strong); stroke-width: 1.6; }
+.dg-n-g { fill: #fff; stroke: var(--ink-faint); stroke-width: 1.2; stroke-dasharray: 4 4; opacity: 0.55; }
+.dg-nt { font-family: var(--font-jp-serif); font-size: 15px; font-weight: 700; fill: var(--ink-dim); }
+.dg-nt-a { fill: var(--accent); }
+.dg-nt-g { fill: var(--ink-faint); }
+.dg-cap { font-family: var(--font-jp-serif); font-size: 13.5px; font-weight: 600; fill: var(--ink-dim); }
+.dg-mkt { fill: var(--bg-2); stroke: var(--line-strong); stroke-width: 1.2; }
+.dg-mkt-t { font-family: var(--font-jp-serif); font-size: 15px; font-weight: 600; fill: var(--ink); }
 </style>
 
 <!--
 Speaker Notes:
-- p9 の「意図 → 実行 → 検証」ループを、そのまま実験設定に当てはめた図
-- 意図（LLM）：各戦略ごとに次の tx を設計。調整するパラメータは entry 閾値（spread/gap/z）・size・leverage・slippage・fee 上限・LP レンジ・リスク guard（LTV/stop/hedge/high-revert/rollback）
-- 実行（tx）：署名して onchain に提出。毎 block 実行される
-- 検証（onchain state）：約定/revert 数・PnL（self vs frozen）・ポジション・fair price 乖離をフィードバックとして読む
-- 上の青い弧 = 検証 → 意図 のフィードバック（onchain state が次の意図に効く）
-- これを 17 戦略・block 1851–2176 で回したのが次ページからの結果
+- 実験設計＝matched pair（反実仮想統制）。同じ戦略を 2 体ずつ用意する
+  - A（自己改善あり / Dynamic）：実行 → onchain の結果を検証 → パラメータを調整、のループを回し続ける
+  - B（固定 / Fixed）：同じ戦略・同じ初期設定のまま、一切直さずに走り続ける
+- 調整対象のパラメータ：entry 閾値（spread/gap/z）・size・leverage・slippage・fee 上限・LP レンジ・リスク guard（LTV/stop/hedge/high-revert/rollback）
+- 検証で読む onchain state：約定/revert 数・PnL・ポジション・残高・fair price からの乖離
+- 2 体は同一市場で並走：同じ価格系列・同じイベント・同じ元手（例：equity $49.1K スタート）
+- だから Δ ＝ A − B を取れば、市場の運・イベントの偶然は相殺され、自己改善の寄与だけが残る
+- これを 17 戦略・block 1851–2176 で回した結果が次ページ
 -->
